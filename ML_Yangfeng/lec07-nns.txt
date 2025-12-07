@@ -1,0 +1,662 @@
+CS 4774 Machine Learning
+Neural Networks
+Yangfeng Ji
+Information and Language Processing Lab
+Department of Computer Science
+University of Virginia
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+Overview
+1. From Perceptrons to MLPs
+2. From Logistic Regression to Neural Networks
+3. Expressive Power of Neural Networks
+4. Learning Neural Networks
+5. Computation Graph
+1
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+From Perceptrons to MLPs
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+Perceptrons
+▶X = ℝ𝑑
+▶Y = {−1, +1}
+▶Halfspace hypothesis class
+Hhalf = {sign(⟨𝒘, 𝒙⟩) : 𝒘∈ℝ𝑑}
+(1)
+which is an infinite hypothesis space.
+The sign function 𝑦= sign(𝑥) is defined as
+3
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+The XOR Problem
+𝑦= 𝑥1 ⊕𝑥2
+(2)
+4
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+A Multi-Layer Perceptron
+The problem can be solved by stacking three perceptrons together, for
+example,
+The new model is called Multi-Layer Perceptron (MLP).
+5
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+Geometric Interpretation
+The previous MLP can be write in the mathematical form as
+ℎ1
+=
+sign(𝑥1 + 𝑥2 −1.5)
+(3)
+ℎ2
+=
+sign(𝑥1 + 𝑥2 −0.5)
+(4)
+𝑦
+=
+sign(−ℎ1 + ℎ2 −0.5)
+(5)
+▶Each ℎ𝑖defines a classifier by deviding the input space into two
+half-spaces
+▶Equation 3 forms a non-linear classifier by combining two linear
+classifiers together
+6
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+What about Learning?
+▶Although the previous classifier is simple and intuitive, learning
+the parameters are not easy, because function sign(·) is
+non-differentiable!
+▶Solution: replace sign(·) function with the Sigmoid function 𝜎(·)
+▶For example, ℎ1 = 𝜎(𝑤1𝑥1 + 𝑤2𝑥2)
+▶In other words, transform each perceptron classifier to a logistic
+regresion classifier
+7
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+From Logistic Regression to Neu-
+ral Networks
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+Logistic Regression
+▶An unified form for 𝑦∈{−1, +1}
+𝑝(𝑌= +1 | 𝒙) =
+1
+1 + exp(−⟨𝒘, 𝒙⟩)
+(6)
+▶The sigmoid function 𝜎(𝑎) with 𝑎∈ℝ
+𝜎(𝑎) =
+1
+1 + exp(−𝑎)
+(7)
+9
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+Graphical Representation
+▶A specific example of LR
+𝑝(𝑌= 1 | 𝒙) = 𝜎(
+2
+Õ
+𝑗=1
+𝑤𝑗𝒙·,𝑗)
+(8)
+▶The graphical representation of this LR model is
+𝑥1
+𝑥2
+Input
+layer
+𝑦
+Output
+layer
+10
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+From LR to Neural Networks
+Build upon logistic regression, a simple neural network can be
+constructed as
+𝑧𝑘
+=
+𝜎(
+𝑑
+Õ
+𝑗=1
+𝑤(1)
+𝑘,𝑗𝑥·,𝑗)
+𝑘∈[𝐾]
+(9)
+𝑃(𝑦= 1 | 𝒙)
+=
+𝜎(
+𝐾
+Õ
+𝑘=1
+𝑤(𝑜)
+𝑘𝑧𝑘)
+(10)
+▶𝒙∈ℝ𝑑: 𝑑-dimensional input
+▶𝑦∈{−1, +1} (binary classification problem)
+▶{𝑤(1)
+𝑘,𝑖} and {𝑤(𝑜)
+𝑘} are two sets of the parameters, and
+▶𝐾is the number of hidden units, each of them has the same form
+as a LR.
+11
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+Mathematical Formulation
+▶Element-wise formulation
+𝑧𝑘
+=
+𝜎(
+𝑑
+Õ
+𝑗=1
+𝑤(1)
+𝑘,𝑗𝑥·,𝑗)
+𝑘∈[𝐾]
+(11)
+𝑃(𝑦= +1 | 𝒙)
+=
+𝜎(
+𝐾
+Õ
+𝑘=1
+𝑤(𝑜)
+𝑘𝑧𝑘)
+(12)
+▶Matrix-vector formulation
+𝒛
+=
+𝜎(W(1)𝒙)
+(13)
+𝑃(𝑦= +1 | 𝒙)
+=
+𝜎((𝒘(𝑜))T𝒛)
+(14)
+where W(1) ∈ℝ𝐾×𝑑and w(𝑜) ∈ℝ𝐾
+12
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+Graphical Representation
+𝑥·,1
+𝑥·,2
+Input
+layer
+𝑧1
+𝑧2
+𝑧3
+Hidden
+layer
+𝑦
+Output
+layer
+▶Depth: 2 (two-layer neural network)
+▶Width: 3 (the maximal number of units in each layer)
+Demo for solve the XOR problem
+13
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+Hypothesis Space
+The hypothesis space of neural networks is usually defined by the
+architecture of the network, which includes
+▶the nodes in the network,
+▶the connections in the network, and
+▶the activation function (e.g., 𝜎, tanh)
+𝑥·,1
+𝑥·,2
+Input
+layer
+𝑧1
+𝑧2
+𝑧3
+Hidden
+layer
+𝑦
+Output
+layer
+14
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+Other Activation Functions
+(a) Sign function
+(b) Tanh function
+(c)
+ReLU
+function
+[Jarrett et al., 2009]
+15
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+Expressive Power of Neural Net-
+works
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+Two-layer NNs with Sign Function
+Consider a neural network defined by the following functions
+𝑧𝑘
+=
+sign(
+𝑑
+Õ
+𝑗=1
+𝑤(1)
+𝑘,𝑗𝑥·,𝑗)
+𝑘∈[𝐾]
+(15)
+ℎ(𝒙)
+=
+sign(
+𝐾
+Õ
+𝑘=1
+𝑤(𝑜)
+𝑘𝑧𝑘)
+(16)
+where sign(𝑎) is the sign function.
+ℎ(𝒙) can be rewritten as
+ℎ(𝒙) = sign ©­
+«
+𝐾
+Õ
+𝑘=1
+𝑤(𝑜)
+𝑘
+· sign(
+𝑑
+Õ
+𝑗=1
+𝑤(1)
+𝑘,𝑖𝑥·,𝑗)ª®
+¬
+(17)
+17
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+Decision Boundary
+ℎ(𝒙) is defined by a combination of 𝐾linear predictors
+𝑥1
+𝑥2
+Similar conclusion applies to other activation functions. [Demo]
+[Shalev-Shwartz and Ben-David, 2014, Page 274]
+18
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+Universal Approximation Theorem
+Restrict the inputs 𝑥·,𝑗∈{−1, +1}∀𝑗∈[𝑑] as binary
+Universal Approximation Theorem
+For every 𝑑, there exists a two-layer neural network (Equations 15 –
+16), such that this hypothesis space contains all functions from
+{−1, +1}𝑑to {−1, +1}
+▶The minimal size of network that satisfies the theorem is
+exponential in 𝑑
+▶Similar results hold for 𝜎as the activation function
+[Shalev-Shwartz and Ben-David, 2014, Section 20.3]
+19
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+Learning Neural Networks
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+Neural Network Predictions
+Consider a binary classification problem with Y = {−1, +1},
+▶A two-layer neural network gives the following prediction as
+𝑃(𝑌= +1 | 𝒙) = 𝜎
+
+(𝒘(𝑜))T𝜎(W(1)𝒙)
+
+(18)
+where {𝒘(𝑜), W(1)} are the parameters
+▶Assume the ground-truth label is 𝑦, let’s introduce an empirical
+distribution
+𝑞(𝑌= 𝑦′ | 𝒙) = 𝛿(𝑦′, 𝑦) =
+
+1
+𝑦′ = 𝑦
+0
+𝑦′ ≠𝑦
+(19)
+21
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+Cross Entropy
+Given one data point, The loss function of a neural network is usually
+defined as the cross entropy of the prediction distribution 𝑝and the
+empirical distribution 𝑝
+𝐻(𝑞, 𝑝)
+=
+−𝑞(𝑌= +1 | 𝒙) log 𝑝(𝑌= +1 | 𝒙)
+−𝑞(𝑌= −1 | 𝒙) log 𝑝(𝑌= −1 | 𝒙)
+(20)
+Since 𝑞is defined with a Delta function, Depending on 𝑦, we have
+𝐻(𝑞, 𝑝) =
+
+−log 𝑝(𝑌= +1 | 𝒙)
+𝑌= +1
+−log 𝑝(𝑌= −1 | 𝒙)
+𝑌= −1
+(21)
+It is equivalent to the negative log-likelihood (NLL) function used in
+learning LR.
+22
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+ERM
+▶Given a set of training example 𝑆= {(𝒙𝑖, 𝑦𝑖)}𝑚
+𝑖=1, the loss function
+is defined as
+𝐿(𝜽) = −
+𝑚
+Õ
+𝑖=1
+log 𝑝(𝑦𝑖| 𝒙𝑖)
+(22)
+where 𝜽indicates all the parameters in a network.
+▶For example, 𝜽= {𝒘(𝑜), W(1)}, for the previously defined
+two-layer neural network
+▶Just like learning a LR, we can use gradient-based learning
+algorithm
+23
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+Gradient-based Learning
+A simple scratch of gradient-based learning1
+1. Compute the gradient of 𝜽, 𝜕𝐿(𝜽)
+𝜕𝜽
+2. Update the parameter with the gradient
+𝜽(new) ←𝜽(old) −𝜂· 𝜕𝐿(𝜽)
+𝜕𝜽
+
+𝜽=𝜽(old)
+(23)
+where 𝜂is the learning rate
+3. Go back step 1 until it converges
+1More detail will be discussed in the next lecture
+24
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+Gradient Computation
+Consider the two-layer neural network with one training example
+(𝒙, 𝑦), to further simplify the computation, we assume 𝑦= +1
+log 𝑝(𝑦| 𝒙) = log 𝜎
+
+(𝒘(𝑜))T𝜎(W(1)𝒙)
+
+(24)
+The gradient with respect to 𝒘(𝑜) is
+𝜕𝐿(𝜽)
+𝜕𝒘(𝑜)
+=
+−
+𝜕log 𝜎
+
+·
+
+𝜕𝜎
+
+·
+
+·
+𝜕𝜎
+
+(𝒘(𝑜))T𝜎(W(1)𝒙)
+
+𝜕(𝒘(𝑜))T𝜎(W(1)𝒙)
+· 𝜕(𝒘(𝑜))T𝜎(W(1)𝒙)
+𝜕𝒘(𝑜)
+=
+−
+n
+1 −𝜎
+
+(𝒘(𝑜))T𝜎(W(1)𝒙)
+ o
+· 𝜎(W(1)𝒙)
+(25)
+which is in the similar form as the LR updating equation.
+25
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+Gradient Computation (II)
+The gradient with respect to 𝑊(1) is
+𝜕𝐿(𝜽)
+𝜕W(1)
+=
+−
+𝜕log 𝜎
+
+·
+
+𝜕𝜎
+
+·
+
+·
+𝜕𝜎
+
+(𝒘(𝑜))T𝜎(W(1)𝒙)
+
+𝜕(𝒘(𝑜))T𝜎(W(1)𝒙)
+·𝜕(𝒘(𝑜))T𝜎(W(1)𝒙)
+𝜕𝜎(W(1)𝒙)
+· 𝜕𝜎(W(1)𝒙)
+𝜕W(1)𝒙
+· 𝜕W(1)𝒙
+𝜕W(1)
+(26)
+▶Both of them are the applications of the chain rule in calculus
+plus some derivatives of basic functions
+▶In the literature of neural networks, it is called the
+back-propagation algorithm [Rumelhart et al., 1986]
+26
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+Computation Graph
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+Forward Operations
+Consider the example of a two-layer neural network
+𝑃(𝑌= +1 | 𝒙) = 𝜎
+
+(𝒘(𝑜))T𝜎(W(1)𝒙)
+
+(27)
+A neural network is a composition of some basic functions and
+operations. For example
+▶𝜎(·)
+▶matrix transpose (𝒘(𝑜))T
+▶matrix-vector multiplication W(1)𝒙
+28
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+Forward Graph
+The computation graph of the two-layer neural network2
+𝒙
+W(1) · 𝒙
+W(1)
+𝜎
+(𝒘(𝑜))T𝒛
+𝒘(𝑜)
+𝜎
+𝑝(𝑌| 𝒙)
+2For simplicity, the transpose operation is ignored from the graph
+29
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+Backward Operations
+Similarly, the gradient of neural network parameters are computed
+with a series of backward operations associated with the derivative of
+some basic function. For example
+▶
+𝜕𝜎(𝑥)
+𝜕𝑥
+= 𝜎(𝑥)(1 −𝜎(𝑥))
+▶
+𝜕𝒂T𝒙
+𝜕𝒙
+= 𝒂
+▶
+𝜕log(𝑥)
+𝜕𝑥
+= 1
+𝑥
+▶
+𝜕W𝒙
+𝜕𝒙=
+
+𝒙T
+...
+𝒙T
+
+30
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+Backward Graph
+With the chain rule, gradient of the loss function with respect to any
+parameter can be computed backward step-by-step along the path
+𝒙
+W(1) · 𝒙
+W(1)
+𝜎
+(𝒘(𝑜))T𝒛
+𝒘(𝑜)
+𝜎
+−log 𝑝(𝑌| 𝒙)
+𝜕(W(1) · 𝒙)
+𝜕𝜎
+𝜕((𝒘(𝑜))T𝒛)
+𝜕𝜎
+𝜕W(1)
+𝜕𝒘(𝑜)
+31
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+Basic Operators
+Every basic operator need to be re-implemented, so it can be attached
+to the computation graph, and also have the forward/backward
+functions. For example
+32
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+Computation Graph
+Perform the forward/backward step with a graph of basic operations
+(e.g., PyTorch, Tensorflow)
+𝒙
+W(1) · 𝒙
+W(1)
+𝜎
+(𝒘(𝑜))T𝒛
+𝒘(𝑜)
+𝜎
+𝑝(𝑌| 𝒙)
+𝒙
+W(1) · 𝒙
+W(1)
+𝜎
+(𝒘(𝑜))T𝒛
+𝒘(𝑜)
+𝜎
+−log 𝑝(𝑌| 𝒙)
+𝜕(W(1) · 𝒙)
+𝜕𝜎
+𝜕((𝒘(𝑜))T𝒛)
+𝜕𝜎
+𝜕W(1)
+𝜕𝒘(𝑜)
+▶Modular implementation: implement each module with its
+forward/backward operations together
+▶Automatic differentiation: automatically run with the backward
+step
+33
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+Another Computation Graph
+Link
+34
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+Reference
+Jarrett, K., Kavukcuoglu, K., Ranzato, M., and LeCun, Y. (2009).
+What is the best multi-stage architecture for object recognition?
+In Proceedings of the 12th International Conference on Computer Vision, pages 2146–2153. IEEE.
+LeCun, Y. (2020).
+Self-supervised learning.
+Rumelhart, D. E., Hinton, G. E., and Williams, R. J. (1986).
+Learning representations by back-propagating errors.
+Nature, 323(6088):533–536.
+Shalev-Shwartz, S. and Ben-David, S. (2014).
+Understanding machine learning: From theory to algorithms.
+Cambridge university press.
+35
+
+--------------------------------------------------------------------------------
+[End of Page 36]

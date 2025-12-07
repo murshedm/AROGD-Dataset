@@ -1,0 +1,478 @@
+CS 4774 Machine Learning
+Model Selection and Validation
+Yangfeng Ji
+Information and Language Processing Lab
+Department of Computer Science
+University of Virginia
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+Overview
+1. Overview
+2. Model Validation
+3. Model Selection
+4. Model Selection in Practice
+1
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+Overview
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+Polynominals
+Polynomial regression
+(a) 𝑑= 1
+(b) 𝑑= 3
+(c) 𝑑= 15
+3
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+Model Evaluation and Selection
+Since we cannot compute the true error of any given hypothesis
+ℎ∈H
+▶How to evaluate the performance for a given model?
+▶How to select the best model among a few candidates?
+4
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+Model Validation
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+Validation Set
+The simplest way to estimate the true error of a predictor ℎ
+▶Independently sample an additional set of examples 𝑉with size
+𝑚𝑣
+𝑉= {(𝒙1, 𝑦1), . . . , (𝒙𝑚𝑣, 𝑦𝑚𝑣)}
+(1)
+▶Evaluate the predictor ℎon this validation set
+𝐿𝑉(ℎ) = |{𝑖∈[𝑚𝑣] : ℎ(𝒙) ≠𝑦𝑖}|
+𝑚𝑣
+.
+(2)
+Usually, 𝐿𝑉(ℎ) is a good approximation to 𝐿D(ℎ)
+6
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+Model Selection
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+Model Selection Procedure
+Given the training set 𝑆and the validation set 𝑉
+▶For each model configuration 𝑐, find the best hypothesis ℎ𝑐(𝒙, 𝑆)
+ℎ𝑐(𝒙, 𝑆) = argmin
+ℎ′∈H𝑐
+𝐿𝑆(ℎ′(𝒙, 𝑆))
+(3)
+8
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+Model Selection Procedure
+Given the training set 𝑆and the validation set 𝑉
+▶For each model configuration 𝑐, find the best hypothesis ℎ𝑐(𝒙, 𝑆)
+ℎ𝑐(𝒙, 𝑆) = argmin
+ℎ′∈H𝑐
+𝐿𝑆(ℎ′(𝒙, 𝑆))
+(3)
+▶With a collection of best models with different configurations
+H′ = {ℎ𝑐1(𝒙, 𝑆), . . . , ℎ𝑐𝑘(𝒙, 𝑆)}, find the overall best hypothesis
+ℎ(𝒙, 𝑆) = argmin
+ℎ′∈H′
+𝐿𝑉(ℎ′(𝒙, 𝑆))
+(4)
+8
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+Model Selection Procedure
+Given the training set 𝑆and the validation set 𝑉
+▶For each model configuration 𝑐, find the best hypothesis ℎ𝑐(𝒙, 𝑆)
+ℎ𝑐(𝒙, 𝑆) = argmin
+ℎ′∈H𝑐
+𝐿𝑆(ℎ′(𝒙, 𝑆))
+(3)
+▶With a collection of best models with different configurations
+H′ = {ℎ𝑐1(𝒙, 𝑆), . . . , ℎ𝑐𝑘(𝒙, 𝑆)}, find the overall best hypothesis
+ℎ(𝒙, 𝑆) = argmin
+ℎ′∈H′
+𝐿𝑉(ℎ′(𝒙, 𝑆))
+(4)
+▶It is similar to learn with the finite hypothesis space H′
+8
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+Model Configuration/Hyperparameters
+Consider polynomial regression
+H𝑑= {𝑤0 + 𝑤1𝑥+ · · · + 𝑤𝑑𝑥𝑑: 𝑤0, 𝑤1, . . . , 𝑤𝑑∈ℝ}
+(5)
+▶the degree of polynomials 𝑑
+▶regularization coefficient 𝜆as in 𝜆· ∥𝒘∥2
+2
+▶the bias term 𝑤0
+9
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+Model Configuration/Hyperparameters
+Consider polynomial regression
+H𝑑= {𝑤0 + 𝑤1𝑥+ · · · + 𝑤𝑑𝑥𝑑: 𝑤0, 𝑤1, . . . , 𝑤𝑑∈ℝ}
+(5)
+▶the degree of polynomials 𝑑
+▶regularization coefficient 𝜆as in 𝜆· ∥𝒘∥2
+2
+▶the bias term 𝑤0
+Additional factors during learning
+▶Optimization methods
+▶Dimensionality of inputs, etc.
+9
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+Limitation of Keeping a Validation Set
+If the validation set is
+▶small, then it could be biased and could not give a good
+approximation to the true error
+▶large, e.g., the same order of the training set, then we waste the
+information if do not use the examples for training.
+10
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+𝑘-Fold Cross Validation
+The basic procedure of 𝑘-fold cross validation:
+▶Split the whole data set into 𝑘parts
+Data
+11
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+𝑘-Fold Cross Validation
+The basic procedure of 𝑘-fold cross validation:
+▶Split the whole data set into 𝑘parts
+▶For each model configuration, run the learning procedure 𝑘
+times
+▶Each time, pick one part as validation set and the rest as training set
+Fold 1
+Fold 2
+Fold 3
+Fold 4
+Fold 5
+11
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+𝑘-Fold Cross Validation
+The basic procedure of 𝑘-fold cross validation:
+▶Split the whole data set into 𝑘parts
+▶For each model configuration, run the learning procedure 𝑘
+times
+▶Each time, pick one part as validation set and the rest as training set
+▶Take the average of 𝑘validation errors as the model error
+Fold 1
+Fold 2
+Fold 3
+Fold 4
+Fold 5
+11
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+Cross-Validation Algorithm
+1: Input: (1) training set 𝑆; (2) set of parameter values Θ; (3)
+learning algorithm 𝐴, and (4) integer 𝑘
+2: Partition 𝑆into 𝑆1, 𝑆2, . . . , 𝑆𝑘
+3: for 𝜃𝑡∈Θ do
+4:
+for 𝑖= 1, . . . , 𝑘do
+5:
+ℎ𝑖,𝜃𝑡= 𝐴(𝑆\𝑆𝑖; 𝜃𝑡)
+6:
+end for
+7:
+Err(𝜃𝑡) = 1
+𝑘
+Í𝑘
+𝑖=1 𝐿𝑆𝑖(ℎ𝑖,𝜃𝑡)
+8: end for
+9: Output: ˆ𝜃←argmin𝜃𝑡∈Θ Err(𝜃𝑡)
+In practice, 𝑘is usually 5 or 10.
+12
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+Train-Validation-Test Split
+▶Training set: used for learning with a pre-selected hypothesis
+space, such as
+▶logistic regression for classification
+▶polynomial regression with 𝑑= 15 and 𝜆= 0.1
+▶Validation set: used for selecting the best hypothesis across
+multiple hypothesis spaces
+▶Similar to learning with a finite hypothesis space H′
+▶Test set: only used for evaluating the overall best hypothesis
+13
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+Train-Validation-Test Split
+▶Training set: used for learning with a pre-selected hypothesis
+space, such as
+▶logistic regression for classification
+▶polynomial regression with 𝑑= 15 and 𝜆= 0.1
+▶Validation set: used for selecting the best hypothesis across
+multiple hypothesis spaces
+▶Similar to learning with a finite hypothesis space H′
+▶Test set: only used for evaluating the overall best hypothesis
+Typical splits on all available data
+Train
+Val
+Test
+13
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+Train-Validation-Test Split
+▶Training set: used for learning with a pre-selected hypothesis
+space, such as
+▶logistic regression for classification
+▶polynomial regression with 𝑑= 15 and 𝜆= 0.1
+▶Validation set: used for selecting the best hypothesis across
+multiple hypothesis spaces
+▶Similar to learning with a finite hypothesis space H′
+▶Test set: only used for evaluating the overall best hypothesis
+Typical splits on all available data
+Fold 1
+Fold 2
+Fold 3
+Fold 4
+Fold 5
+Test
+13
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+Model Selection in Practice
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+What To Do If A Learning Fails
+There are many elements that can help fix the learning procedure
+▶Get a larger sample
+[Shalev-Shwartz and Ben-David, 2014, Page 151]
+15
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+What To Do If A Learning Fails
+There are many elements that can help fix the learning procedure
+▶Get a larger sample
+▶Change the hypothesis class by
+▶Enlarging it
+▶Reducing it
+▶Completely changing it
+▶Changing the parameters you consider
+[Shalev-Shwartz and Ben-David, 2014, Page 151]
+15
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+What To Do If A Learning Fails
+There are many elements that can help fix the learning procedure
+▶Get a larger sample
+▶Change the hypothesis class by
+▶Enlarging it
+▶Reducing it
+▶Completely changing it
+▶Changing the parameters you consider
+▶Change the feature representation of the data (usually domain
+dependent)
+[Shalev-Shwartz and Ben-David, 2014, Page 151]
+15
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+What To Do If A Learning Fails
+There are many elements that can help fix the learning procedure
+▶Get a larger sample
+▶Change the hypothesis class by
+▶Enlarging it
+▶Reducing it
+▶Completely changing it
+▶Changing the parameters you consider
+▶Change the feature representation of the data (usually domain
+dependent)
+▶Change the optimization algorithm used to apply your learning
+rule (lecture on optimization methods)
+[Shalev-Shwartz and Ben-David, 2014, Page 151]
+15
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+Error Decomposition Using Validation
+With two additional terms
+▶𝐿𝑉(ℎ𝑆): validation error
+▶𝐿𝑆(ℎ𝑆): empirical (or training) error
+the true error of ℎ𝑆can be decomposed as
+𝐿D(ℎ𝑆) = (𝐿D(ℎ𝑆) −𝐿𝑉(ℎ𝑆))
+|                 {z                 }
+(1)
++ (𝐿𝑉(ℎ𝑆) −𝐿𝑆(ℎ𝑆))
+|                {z                }
+(2)
++ 𝐿𝑆(ℎ𝑆)
+| {z }
+(3)
+▶Item (1) is bounded by the previous theorem
+▶Item (2) is large: overfitting
+▶Item (3) is large: underfitting
+16
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+About Large 𝐿𝑆(ℎ𝑆)
+Recall that ℎ𝑆is an ERM hypothesis, aka
+ℎ𝑆∈argmin
+ℎ′∈H
+𝐿𝑆(ℎ′)
+(6)
+17
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+About Large 𝐿𝑆(ℎ𝑆)
+Recall that ℎ𝑆is an ERM hypothesis, aka
+ℎ𝑆∈argmin
+ℎ′∈H
+𝐿𝑆(ℎ′)
+(6)
+If 𝐿𝑆(ℎ𝑆) is large, it is possible that
+1. the hypothesis space His not large enough
+2. the hypothesis space is large enough, but your implementation
+has some bugs
+17
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+About Large 𝐿𝑆(ℎ𝑆)
+Recall that ℎ𝑆is an ERM hypothesis, aka
+ℎ𝑆∈argmin
+ℎ′∈H
+𝐿𝑆(ℎ′)
+(6)
+If 𝐿𝑆(ℎ𝑆) is large, it is possible that
+1. the hypothesis space His not large enough
+2. the hypothesis space is large enough, but your implementation
+has some bugs
+Q: How to distinguish these two?
+17
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+About Large 𝐿𝑆(ℎ𝑆)
+Recall that ℎ𝑆is an ERM hypothesis, aka
+ℎ𝑆∈argmin
+ℎ′∈H
+𝐿𝑆(ℎ′)
+(6)
+If 𝐿𝑆(ℎ𝑆) is large, it is possible that
+1. the hypothesis space His not large enough
+2. the hypothesis space is large enough, but your implementation
+has some bugs
+Q: How to distinguish these two?
+A: Find an existing simple baseline model
+17
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+About Large 𝐿𝑉(ℎ𝑆)
+... with a small 𝐿𝑆(ℎ𝑆), it is possible that
+1. the hypothesis space is too large
+2. you may not have enough training examples
+3. the hypothesis space is inappropriate
+18
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+About Large 𝐿𝑉(ℎ𝑆)
+... with a small 𝐿𝑆(ℎ𝑆), it is possible that
+1. the hypothesis space is too large
+2. you may not have enough training examples
+3. the hypothesis space is inappropriate
+Comments
+▶Issue 1 and 2 are easy to fix
+▶Get more data if possible, or reduce the hypothesis space
+▶How to distinguish issue 3 from 1 and 2?
+18
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+Learning Curves
+With different proportions of training examples, we can plot the
+training and validation errors
+(a)
+Figure: Examples of learning curves [Shalev-Shwartz and Ben-David, 2014,
+Page 153].
+19
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+Learning Curves
+With different proportions of training examples, we can plot the
+training and validation errors
+(a)
+(b)
+Figure: Examples of learning curves [Shalev-Shwartz and Ben-David, 2014,
+Page 153].
+19
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+Reference
+Shalev-Shwartz, S. and Ben-David, S. (2014).
+Understanding machine learning: From theory to algorithms.
+Cambridge university press.
+20
+
+--------------------------------------------------------------------------------
+[End of Page 36]

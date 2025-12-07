@@ -1,0 +1,1366 @@
+CS 4774 Machine Learning
+Introduction
+Yangfeng Ji
+Information and Language Processing Lab
+Department of Computer Science
+University of Virginia
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+Course Instructor and Teaching Assistants
+▶Instructor:
+▶Yangfeng Ji
+▶Office: Rice 510
+▶Teaching assistants
+▶Oishee Hoque
+▶Aparna Kishore
+▶Nusrat Mozumder
+▶Sanchit Sinha
+▶Dane Williamson
+Office hours will be released on the course webpage.
+1
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+Prerequisites
+▶Programming and Algorithm
+▶CS 2150 or CS 3100 with a grade of C- or better
+2
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+Prerequisites
+▶Programming and Algorithm
+▶CS 2150 or CS 3100 with a grade of C- or better
+▶Linear Algebra
+▶Math 3350 or APMA 3080 or equivalent
+2
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+Prerequisites
+▶Programming and Algorithm
+▶CS 2150 or CS 3100 with a grade of C- or better
+▶Linear Algebra
+▶Math 3350 or APMA 3080 or equivalent
+▶Probability and Statistics
+▶APMA 3100, APMA 3110, MATH 3100, or equivalent
+2
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+Goal
+The survey results (by Jan. 18, 12 PM)
+3
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+Outline
+This course will cover the basic materials on the following topics
+1. Introduction to learning theory
+2. Linear classification and regression
+3. Model selection and validation
+4. Boosting
+5. Optimization methods
+6. Neural networks (e.g., CNN, RNN, Auto-encoders, Transformers)
+4
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+Outline (II)
+The following topics will not be the emphasis of this course
+▶Statistical modeling
+▶e.g., parameter estimation, Bayesian statistics, graphical models
+5
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+Outline (II)
+The following topics will not be the emphasis of this course
+▶Statistical modeling
+▶e.g., parameter estimation, Bayesian statistics, graphical models
+▶Machine learning engineering
+▶e.g., how to implement a classifier from end to end
+▶although, we will provide some demo code for illustration
+purposes
+5
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+Outline (II)
+The following topics will not be the emphasis of this course
+▶Statistical modeling
+▶e.g., parameter estimation, Bayesian statistics, graphical models
+▶Machine learning engineering
+▶e.g., how to implement a classifier from end to end
+▶although, we will provide some demo code for illustration
+purposes
+▶Advanced topics in machine learning
+▶e.g., reinforcement learning, active learning, semi-supervised
+learning, online learning
+5
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+Textbooks
+▶Shalev-Shwartz and Ben-David. Understanding Machine Learning:
+From Theory to Algorithms. 2014
+6
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+Textbooks
+▶Shalev-Shwartz and Ben-David. Understanding Machine Learning:
+From Theory to Algorithms. 2014
+▶Goodfellow, Bengio, and Courville. Deep Learning. 2016
+6
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+Reference Books
+For students looking for additional reading materials
+▶Bishop. Pattern Recognition and Machine Learning. 2006
+▶Murphy. Machine Learning: A Probabilistic Perspective. 2012
+▶Mohri, Rostamizadeh, and Talwalkar. Foundations of Machine
+Learning. 2nd Edition. 2018
+▶Hastie, Tibshirani, and Friedman. The Elements of Statistical
+Learning (2nd Edition). 2009
+7
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+Homework and Grading Policy
+▶Homeworks (70%)
+▶Five homework assignments, 14 points each
+8
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+Homework and Grading Policy
+▶Homeworks (70%)
+▶Five homework assignments, 14 points each
+▶In-class Quiz (10%)
+▶For the instructor to get a better understanding of students’
+feedback on the lectures
+▶1 point each
+8
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+Homework and Grading Policy
+▶Homeworks (70%)
+▶Five homework assignments, 14 points each
+▶In-class Quiz (10%)
+▶For the instructor to get a better understanding of students’
+feedback on the lectures
+▶1 point each
+▶Final project (20%)
+▶There are some pre-defined problems with datasets provided
+▶Students will team up (3 – 4 students per group) to solve one
+problem
+8
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+Grading Policy
+The final grade is threshold-based instead of percentage-based
+9
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+Late Penalty
+▶Homework submission will be accepted up to 72 hours late, with
+20% deduction per 24 hours on the points as a penalty
+▶Submission will not be accepted if more than 72 hours late
+▶Make sure not submit wrong files
+▶it is students responsbility to make sure they submit the right and
+complete files for each homework
+▶It is usually better if students just turn in what they have in time
+10
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+Violation of the Honor Code
+Plagiarism, examples are
+▶in a homework submission, copying answers from others directly
+or some minor changes
+▶in a report, copying texts from a published paper (including,
+some minor changes)
+▶in a code, using someone else’s functions/implementations
+without acknowledging the contribution
+11
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+Webpages
+▶Course webpage
+http://yangfengji.net/uva-ml-undergrad/
+which contains all the information you need about this course.
+▶Canvas
+▶For homework releasing and grading
+▶For announcement, online QA, discussion, etc.
+12
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+Why Taking this Course?
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+Machine Learning Courses
+14
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+An Example Course
+Building logistic regression classifier
+15
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+Another Example
+Building a GPT model with Transformer
+16
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+What is Missing?
+17
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+What is this?
+▶What’s the definition of this classifier?
+▶What if it does not work?
+▶What are its limitations?
+18
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+What is this?
+▶What’s the definition of this classifier?
+▶What if it does not work?
+▶What are its limitations?
+In fact, if you explain how these parameters work and their effects, you can
+skip at least one third of the class lectures.
+18
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+Mathematical/Statistical Background
+To understanding machine learning, we need some mathematical and
+statistical knowledge
+19
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+Now, let’s have some fun!
+Warning: you will see lots of mathematical notations.
+20
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+Basic Linear Algebra
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+Linear Equations
+Consider the following system of equations
+4𝑥1 −5𝑥2 = −13
+−2𝑥1 + 3𝑥2 = 9
+(1)
+In matrix notation, it can be written as a more compact from
+A𝒙= 𝒃
+(2)
+with
+A =
+
+4
+−5
+−2
+3
+
+𝒙=
+
+𝑥1
+𝑥2
+
+𝒃=
+
+−13
+9
+
+(3)
+22
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+Basic Notations
+A =
+
+4
+−5
+−2
+3
+
+𝒙=
+
+𝑥1
+𝑥2
+
+𝒃=
+
+−13
+9
+
+▶A ∈ℝ𝑚×𝑛: a matrix with 𝑚rows and 𝑛columns
+▶The element on the 𝑖-th row and the 𝑗-th column is denoted as 𝑎𝑖,𝑗
+▶𝒙∈ℝ𝑛: a vector with 𝑛entries. By convention, an 𝑛-dimensional
+vector is often thought of as matrix with 𝑛rows and 1 column,
+known as a column vector.
+▶The 𝑖-th element is denoted as 𝑥𝑖
+23
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+Vector Norms
+▶A norm of a vector ∥𝒙∥is informally a measure of the “length” of
+the vector.
+▶Formally, a norm is any function 𝑓: ℝ𝑛→ℝthat satisfies four
+properties
+1. 𝑓(𝒙) ≥0 for any 𝒙∈ℝ𝑛
+2. 𝑓(𝒙) = 0 if and only if 𝒙= 0
+3. 𝑓(𝑎𝒙) = |𝑎| · 𝑓(𝒙) for any 𝒙∈ℝ𝑛
+4. 𝑓(𝒙+ 𝒚) ≤𝑓(𝒙) + 𝑓(𝒚), for any 𝒙, 𝒚∈ℝ𝑛
+24
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+ℓ2 Norm
+The ℓ2 norm of a vector 𝒙∈ℝ𝑛is defined as
+∥𝒙∥2 =
+v
+t 𝑛
+Õ
+𝑖=1
+𝑥2
+𝑖
+(4)
+x
+y
+𝒙
+∥𝒙∥2
+Question for Homework: prove ℓ2 norm satisfies all four properties
+25
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+ℓ1 Norms
+The ℓ1 norm of a vector 𝒙∈ℝ𝑛is defined as
+∥𝒙∥1 =
+𝑛
+Õ
+𝑖=1
+|𝑥𝑖|
+(5)
+26
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+Plots
+For a two-dimensional vector 𝒙= (𝑥1, 𝑥2) ∈ℝ2, which of the
+following plot is ∥𝒙∥1 = 1?
+𝑥1
+𝑥2
+(a)
+𝑥1
+𝑥2
+(b)
+𝑥1
+𝑥2
+(c)
+27
+
+--------------------------------------------------------------------------------
+[End of Page 36]
+
+Dot Product
+The dot product of 𝒙, 𝒚∈ℝ𝑛is defined as
+⟨𝒙, 𝒚⟩= 𝒙T𝒚=
+𝑛
+Õ
+𝑖=1
+𝑥𝑖𝑦𝑖
+(6)
+where 𝒙T is the transpose of 𝒙.
+▶∥𝒙∥2
+2 = ⟨𝒙, 𝒙⟩
+▶If 𝒙= (0, 0, . . . ,
+1
+|{z}
+𝑥𝑖
+, . . . , 0), then ⟨𝒙, 𝒚⟩= 𝑦𝑖
+▶If 𝒙is an unit vector (∥𝒙∥2 = 1), then ⟨𝒙, 𝒚⟩is the projection of 𝒚
+on the direction of 𝒙
+𝒙
+𝒚
+28
+
+--------------------------------------------------------------------------------
+[End of Page 37]
+
+Cauchy-Schwarz Inequality
+For all 𝒙, 𝒚∈ℝ𝑛
+|⟨𝒙, 𝒚⟩| ≤∥𝒙∥2∥𝒚∥2
+(7)
+with equality if and only if 𝒙= 𝛼𝒚with 𝛼∈ℝ
+Proof:
+Let ˜𝒙=
+𝒙
+∥𝒙∥2 and ˜𝒚=
+𝒚
+∥𝒚∥2 , then ˜𝒙and ˜𝒚are both unit vectors.
+Based on the geometric interpretation on the previous slide, we have
+⟨˜𝒙, ˜𝒚⟩≤1
+(8)
+if and only if ˜𝒙= ˜𝒚.
+29
+
+--------------------------------------------------------------------------------
+[End of Page 38]
+
+Matrix-Vector Multiplication
+Given a matrix 𝑨and a vector 𝒙, their multiplication is equivalent to
+performing a linear transformation on 𝒙
+𝑨𝒙
+(9)
+For example, consider the following matrix
+𝑨=
+
+0.5
+0
+0
+2
+
+(10)
+and three vectors
+▶𝒙T
+1 = [1, 2]
+▶𝒙T
+2 = [2, 4]
+▶𝒙T
+3 = [3, 6]
+30
+
+--------------------------------------------------------------------------------
+[End of Page 39]
+
+Matrix-Vector Multiplication
+Given a matrix 𝑨and a vector 𝒙, their multiplication is equivalent to
+performing a linear transformation on 𝒙
+𝑨𝒙
+(9)
+For example, consider the following matrix
+𝑨=
+
+0.5
+0
+0
+2
+
+(10)
+and three vectors
+▶𝒙T
+1 = [1, 2]
+▶𝒙T
+2 = [2, 4]
+▶𝒙T
+3 = [3, 6]
+This is also what the function torch.nn.Linear means
+30
+
+--------------------------------------------------------------------------------
+[End of Page 40]
+
+Two Special Matrices
+▶The identity matrix, denoted as I ∈ℝ𝑛×𝑛], is a square matrix with
+ones on the diagonal and zeros everywhere else.
+I =
+
+1
+...
+1
+
+(11)
+31
+
+--------------------------------------------------------------------------------
+[End of Page 41]
+
+Two Special Matrices
+▶The identity matrix, denoted as I ∈ℝ𝑛×𝑛], is a square matrix with
+ones on the diagonal and zeros everywhere else.
+I =
+
+1
+...
+1
+
+(11)
+▶A diagonal matrix, denoted as D = diag(𝑑1, 𝑑2, . . . , 𝑑𝑛), is a
+matrix where all non-diagonal elements are 0.
+D =
+
+𝑑1
+...
+𝑑𝑛
+
+(12)
+31
+
+--------------------------------------------------------------------------------
+[End of Page 42]
+
+Inverse
+The inverse of a square matrix A ∈ℝ𝑛×𝑛is denoted as A−1, which is
+the unique matrix such that
+𝑨−1𝑨= 𝑰= 𝑨𝑨−1
+(13)
+▶Non-square matrices do not have inverses (by definition)
+▶Not all square matrices are invertible
+▶The solution of the linear equations in Eq. (1) is 𝒙= A−1𝒃
+32
+
+--------------------------------------------------------------------------------
+[End of Page 43]
+
+Inverse (II)
+▶In matrix-vector multiplication, an inverse matrix 𝑨−1 will
+reverse the linear transformation performed by 𝑨
+𝑨−1𝑨𝒙= 𝒙
+(14)
+33
+
+--------------------------------------------------------------------------------
+[End of Page 44]
+
+Inverse (II)
+▶In matrix-vector multiplication, an inverse matrix 𝑨−1 will
+reverse the linear transformation performed by 𝑨
+𝑨−1𝑨𝒙= 𝒙
+(14)
+▶When a matrix 𝑨is not invertible, it means its linear
+transformation is not reversible
+𝑨=
+
+1
+0
+0
+0
+
+(15)
+33
+
+--------------------------------------------------------------------------------
+[End of Page 45]
+
+Orthogonal Matrices
+▶Two vectors 𝒙, 𝒚∈ℝ𝑛are orthogonal if ⟨𝒙, 𝒚⟩= 0
+𝒙
+𝒚
+34
+
+--------------------------------------------------------------------------------
+[End of Page 46]
+
+Orthogonal Matrices
+▶Two vectors 𝒙, 𝒚∈ℝ𝑛are orthogonal if ⟨𝒙, 𝒚⟩= 0
+𝒙
+𝒚
+▶A square matrix U ∈ℝ𝑛×𝑛is orthogonal, if all its columns are
+orthogonal to each other and normalized (orthonormal)
+⟨𝒖𝑖, 𝒖𝑗⟩= 0, ∥𝒖𝑖∥= 1, ∥𝒖𝑗∥= 1
+(16)
+for 𝑖, 𝑗∈[𝑛] and 𝑖≠𝑗
+34
+
+--------------------------------------------------------------------------------
+[End of Page 47]
+
+Orthogonal Matrices
+▶Two vectors 𝒙, 𝒚∈ℝ𝑛are orthogonal if ⟨𝒙, 𝒚⟩= 0
+𝒙
+𝒚
+▶A square matrix U ∈ℝ𝑛×𝑛is orthogonal, if all its columns are
+orthogonal to each other and normalized (orthonormal)
+⟨𝒖𝑖, 𝒖𝑗⟩= 0, ∥𝒖𝑖∥= 1, ∥𝒖𝑗∥= 1
+(16)
+for 𝑖, 𝑗∈[𝑛] and 𝑖≠𝑗
+▶Furthermore, UTU = I = UUT, which further implies U−1 = UT
+34
+
+--------------------------------------------------------------------------------
+[End of Page 48]
+
+A Special Case
+Consider a matrix 𝑨as
+𝑨=
+
+0
+1
+1
+0
+
+(17)
+For any 𝒙T = [𝑥1, 𝑥2], we have
+𝑨
+
+𝑥1
+𝑥2
+
+=
+
+𝑥2
+𝑥1
+
+(18)
+35
+
+--------------------------------------------------------------------------------
+[End of Page 49]
+
+A Special Case
+Consider a matrix 𝑨as
+𝑨=
+
+0
+1
+1
+0
+
+(17)
+For any 𝒙T = [𝑥1, 𝑥2], we have
+𝑨
+
+𝑥1
+𝑥2
+
+=
+
+𝑥2
+𝑥1
+
+(18)
+The is a reflection operation. Operations like this are popularly used
+in computer graphics.
+35
+
+--------------------------------------------------------------------------------
+[End of Page 50]
+
+Symmetric Matrices
+A symmetric matrix A ∈ℝ𝑛×𝑛is defined as
+AT = A
+(19)
+or, in other words,
+𝑎𝑖,𝑗= 𝑎𝑗,𝑖
+∀𝑖, 𝑗∈[𝑛]
+(20)
+Comments
+▶The identity matrix I is symmetric
+▶A diagonal matrix is symmetric
+𝒙T𝑨𝒚
+(21)
+gives each dimension a different weight (importance) when
+computing the similarity between 𝒙and 𝒚
+36
+
+--------------------------------------------------------------------------------
+[End of Page 51]
+
+Eigen Decomposition
+Every symmetric matrix A can be decomposed as
+A = UΛUT
+(22)
+with
+▶Λ =
+
+𝜆1
+...
+𝜆𝑛
+
+as a diagonal matrix
+▶Q is an orthogonal matrix
+37
+
+--------------------------------------------------------------------------------
+[End of Page 52]
+
+Eigen Decomposition
+Every symmetric matrix A can be decomposed as
+A = UΛUT
+(22)
+with
+▶Λ =
+
+𝜆1
+...
+𝜆𝑛
+
+as a diagonal matrix
+▶Q is an orthogonal matrix
+▶Consider the similarity measurement
+𝒙TA𝒚= 𝒙TUΛUT𝒚= (UT𝒙)TΛUT𝒚
+(23)
+37
+
+--------------------------------------------------------------------------------
+[End of Page 53]
+
+Eigen Decomposition
+Every symmetric matrix A can be decomposed as
+A = UΛUT
+(22)
+with
+▶Λ =
+
+𝜆1
+...
+𝜆𝑛
+
+as a diagonal matrix
+▶Q is an orthogonal matrix
+▶Consider the similarity measurement
+𝒙TA𝒚= 𝒙TUΛUT𝒚= (UT𝒙)TΛUT𝒚
+(23)
+Question for Homework: if a symmetric matrix A is invertible, show
+A−1 = UΛ−1UT with Λ−1 = diag( 1
+𝜆1 , . . . , 1
+𝜆𝑛)
+37
+
+--------------------------------------------------------------------------------
+[End of Page 54]
+
+Symmetric Positive Semidefinite Matrices
+A symmetric matrix P ∈ℝ𝑛×𝑛is positive semidefinite if and only if
+𝒙TP𝒙≥0
+(24)
+for all 𝒙∈ℝ𝑛.
+38
+
+--------------------------------------------------------------------------------
+[End of Page 55]
+
+Symmetric Positive Semidefinite Matrices
+A symmetric matrix P ∈ℝ𝑛×𝑛is positive semidefinite if and only if
+𝒙TP𝒙≥0
+(24)
+for all 𝒙∈ℝ𝑛.
+Eigen decomposition of P as
+P = UΛUT
+(25)
+with Λ = diag(𝜆1, . . . , 𝜆𝑛) and
+𝜆𝑖≥0
+(26)
+38
+
+--------------------------------------------------------------------------------
+[End of Page 56]
+
+Symmetric Positive Definite Matrices
+A symmetric matrix P ∈ℝ𝑛×𝑛is positive definite if and only if
+𝒙TP𝒙> 0
+(27)
+for all 𝒙∈ℝ𝑛.
+▶Eigen values of P, Λ = diag(𝜆1, . . . , 𝜆𝑛) with
+𝜆𝑖> 0
+(28)
+39
+
+--------------------------------------------------------------------------------
+[End of Page 57]
+
+Symmetric Positive Definite Matrices
+A symmetric matrix P ∈ℝ𝑛×𝑛is positive definite if and only if
+𝒙TP𝒙> 0
+(27)
+for all 𝒙∈ℝ𝑛.
+▶Eigen values of P, Λ = diag(𝜆1, . . . , 𝜆𝑛) with
+𝜆𝑖> 0
+(28)
+Question for Homework: if one of the eigen values 𝜆𝑖< 0, show that
+you can also find a vector 𝒙such that 𝒙TP𝒙< 0
+39
+
+--------------------------------------------------------------------------------
+[End of Page 58]
+
+Review
+The identity matrix I is
+▶a diagonal matrix?
+▶a symmetric matrix?
+▶an orthogonal matrix?
+▶a positive (semi-)definite matrix?
+40
+
+--------------------------------------------------------------------------------
+[End of Page 59]
+
+Review
+The identity matrix I is
+▶a diagonal matrix? ✓
+▶a symmetric matrix? ✓
+▶an orthogonal matrix? ✓
+▶a positive (semi-)definite matrix? ✓
+40
+
+--------------------------------------------------------------------------------
+[End of Page 60]
+
+Review of Probability Theory
+
+--------------------------------------------------------------------------------
+[End of Page 61]
+
+What is Probability?
+The probability of landing heads is 0.52
+42
+
+--------------------------------------------------------------------------------
+[End of Page 62]
+
+Two interpretations
+Frequentist Probability represents the long-run frequency of an event
+▶If we flip the coin many times, we expect it to land
+heads about 52% times
+43
+
+--------------------------------------------------------------------------------
+[End of Page 63]
+
+Two interpretations
+Frequentist Probability represents the long-run frequency of an event
+▶If we flip the coin many times, we expect it to land
+heads about 52% times
+Bayesian Probability quantifies our (un)certainty about an event
+▶We believe the coin is 52% of chance to land head
+on the next toss
+43
+
+--------------------------------------------------------------------------------
+[End of Page 64]
+
+Bayesian Interpretation
+Example scenarios of Bayesian interpretation of probability:
+44
+
+--------------------------------------------------------------------------------
+[End of Page 65]
+
+Binary Random Variables
+▶Event 𝑋. Such as
+▶the coin will lead head on the next toss
+▶it will rain tomorrow
+▶Sample space of 𝑋∈{false, true} or for simplicity {0, 1}
+45
+
+--------------------------------------------------------------------------------
+[End of Page 66]
+
+Binary Random Variables
+▶Event 𝑋. Such as
+▶the coin will lead head on the next toss
+▶it will rain tomorrow
+▶Sample space of 𝑋∈{false, true} or for simplicity {0, 1}
+▶Probability 𝑃(𝑋= 𝑥) or 𝑃(𝑥)
+▶Let 𝑋be the event that the coin will lead head on the next toss, then
+the probability from the previous example is
+𝑃(𝑋= 1) = 0.52
+(29)
+45
+
+--------------------------------------------------------------------------------
+[End of Page 67]
+
+Bernoulli Distribution
+Given the binary random variable 𝑋and
+its sample space as {0, 1}
+𝑃(𝑋= 𝑥) = 𝜃𝑥(1 −𝜃)1−𝑥
+with a single parameter 𝜃as
+𝜃= 𝑃(𝑋= 1)
+Jacob Bernoulli
+46
+
+--------------------------------------------------------------------------------
+[End of Page 68]
+
+Tossing a Coin Twice?
+▶Let 𝑋be the number of heads
+▶Sample space of 𝑋∈{0, 1, 2}
+47
+
+--------------------------------------------------------------------------------
+[End of Page 69]
+
+Tossing a Coin Twice?
+▶Let 𝑋be the number of heads
+▶Sample space of 𝑋∈{0, 1, 2}
+▶Assume we use the same coin, the probability distribution of 𝑋
+▶𝑃(𝑋= 0) = (1 −𝜃)2
+47
+
+--------------------------------------------------------------------------------
+[End of Page 70]
+
+Tossing a Coin Twice?
+▶Let 𝑋be the number of heads
+▶Sample space of 𝑋∈{0, 1, 2}
+▶Assume we use the same coin, the probability distribution of 𝑋
+▶𝑃(𝑋= 0) = (1 −𝜃)2
+▶𝑃(𝑋= 2) = 𝜃2
+47
+
+--------------------------------------------------------------------------------
+[End of Page 71]
+
+Tossing a Coin Twice?
+▶Let 𝑋be the number of heads
+▶Sample space of 𝑋∈{0, 1, 2}
+▶Assume we use the same coin, the probability distribution of 𝑋
+▶𝑃(𝑋= 0) = (1 −𝜃)2
+▶𝑃(𝑋= 2) = 𝜃2
+▶𝑃(𝑋= 1) = 𝜃(1 −𝜃) + (1 −𝜃)𝜃= 2𝜃(1 −𝜃)
+47
+
+--------------------------------------------------------------------------------
+[End of Page 72]
+
+General Case: Binomial Distribution
+Consider a general case, in which we toss the coin 𝑛times, then the
+random variable 𝑌can be formulated as a binomial distribution
+𝑃(𝑌= 𝑘) =
+𝑛
+𝑘
+
+𝜃𝑘(1 −𝜃)𝑛−𝑘
+(30)
+where
+𝑛
+𝑘
+
+=
+𝑛!
+𝑘!(𝑛−𝑘)!
+is the binomial coefficient and
+𝑛! = 𝑛· (𝑛−1) · (𝑛−2) · · · 1
+48
+
+--------------------------------------------------------------------------------
+[End of Page 73]
+
+Tossing a Dice
+How to define the corresponding random variable?
+▶𝑋∈{1, 2, 3, 4, 5, 6}
+▶𝑿∈{100000, 010000, 001000, 000100, 000010, 000001}
+49
+
+--------------------------------------------------------------------------------
+[End of Page 74]
+
+Categorical Distribution
+𝑃(𝑿= 𝒙) =
+6
+Ö
+𝑘=1
+(𝜃𝑘)𝑥𝑘
+(31)
+where
+▶𝒙= (𝑥1, 𝑥2, . . . , 𝑥6)
+▶𝑥𝑘∈{0, 1}, and
+▶{𝜃𝑘}6
+𝑘=1 are the parameters of this distribution, which is also the
+probability of side 𝑘showing up.
+50
+
+--------------------------------------------------------------------------------
+[End of Page 75]
+
+Multinomial Distribution
+Repeat the previous event 𝑛times, the corresponding probability
+distribution is modeled as
+𝑃(𝑿= 𝒙) =
+
+𝑛
+𝑥1 · · · 𝑥𝐾
+
+𝐾
+Ö
+𝑘=1
+𝜃𝑥𝑘
+𝑘
+(32)
+where 𝒙= (𝑥1, . . . , 𝑥𝐾) and each 𝑥𝑘∈{0, 1, 2, . . . , 𝑛} indicates the
+number of times that side 𝑘showing up.
+
+𝑛
+𝑥1 · · · 𝑥𝐾
+
+=
+𝑛!
+𝑥1! · · · 𝑥𝐾!
+The sum of {𝑥𝑘} follows the constraint:
+𝐾
+Õ
+𝑘=1
+𝑥𝑘= 𝑛
+51
+
+--------------------------------------------------------------------------------
+[End of Page 76]
+
+Gaussian Distribution
+A random variable 𝑋∈ℝis said to follow a normal (or Gaussian)
+distribution N(𝜇, 𝜎2) if its probability density function is given by
+𝑓(𝑥) =
+1
+√
+2𝜋𝜎2 exp
+
+−(𝑥−𝜇)2
+2𝜎2
+
+(33)
+▶𝜇: mean
+▶𝜎2: variance
+▶Probability of 𝑋∈[𝑎, 𝑏]: 𝑃(𝑎≤𝑋≤𝑏) =
+∫𝑏
+𝑎𝑓(𝑥)𝑑𝑥
+−4
+−2
+0
+2
+4
+0
+0.1
+0.2
+0.3
+0.4
+52
+
+--------------------------------------------------------------------------------
+[End of Page 77]
+
+Gaussian Distribution (II)
+𝑓(𝑥) =
+1
+√
+2𝜋𝜎2 exp
+
+−(𝑥−𝜇)2
+2𝜎2
+
+(34)
+There examples of Gaussian distributions
+−6
+−4
+−2
+0
+2
+4
+6
+8
+0
+0.1
+0.2
+0.3
+0.4
+▶Blue: N(0, 1) (standard normal distribution)
+▶Red: N(0, 2)
+▶Green: N(1, 1)
+53
+
+--------------------------------------------------------------------------------
+[End of Page 78]
+
+Gaussian Distribution (II)
+𝑓(𝑥) =
+1
+√
+2𝜋𝜎2 exp
+
+−(𝑥−𝜇)2
+2𝜎2
+
+(34)
+There examples of Gaussian distributions
+−6
+−4
+−2
+0
+2
+4
+6
+8
+0
+0.1
+0.2
+0.3
+0.4
+▶Blue: N(0, 1) (standard normal distribution)
+▶Red: N(0, 2)
+▶Green: N(1, 1)
+Question for Homework: describe a random event with the
+probabilistic language
+53
+
+--------------------------------------------------------------------------------
+[End of Page 79]
+
+Probability of Two Random Variables
+Modeling two random variables together with a joint distribution
+𝑃(𝑋, 𝑌)
+(35)
+Related concepts
+▶Independence
+▶Conditional probability and chain rule
+▶Bayes rule
+54
+
+--------------------------------------------------------------------------------
+[End of Page 80]
+
+Independence
+Definition Two random variable 𝑋and 𝑌are independent with each
+other, if we can represent the joint probability as the product of their
+marginal distributions for any values of 𝑋and 𝑌, or mathematically,
+𝑃(𝑋, 𝑌) = 𝑃(𝑋) · 𝑃(𝑌)
+(36)
+Marginal distributions
+𝑃(𝑋)
+=
+Õ
+𝑌
+𝑃(𝑋, 𝑌)
+(37)
+𝑃(𝑌)
+=
+Õ
+𝑋
+𝑃(𝑋, 𝑌)
+(38)
+55
+
+--------------------------------------------------------------------------------
+[End of Page 81]
+
+Independence
+Definition Two random variable 𝑋and 𝑌are independent with each
+other, if we can represent the joint probability as the product of their
+marginal distributions for any values of 𝑋and 𝑌, or mathematically,
+𝑃(𝑋, 𝑌) = 𝑃(𝑋) · 𝑃(𝑌)
+(36)
+Marginal distributions
+𝑃(𝑋)
+=
+Õ
+𝑌
+𝑃(𝑋, 𝑌)
+(37)
+𝑃(𝑌)
+=
+Õ
+𝑋
+𝑃(𝑋, 𝑌)
+(38)
+▶𝑋: whether it is cloudy
+▶𝑌: whether it will rain
+𝑃(𝑋∩𝑌)
+𝑋= 0
+𝑋= 1
+𝑌= 0
+0.35
+0.15
+𝑌= 1
+0.05
+0.45
+55
+
+--------------------------------------------------------------------------------
+[End of Page 82]
+
+Conditional Probability
+Conditional probability of 𝑌given 𝑋
+𝑃(𝑌| 𝑋) = 𝑃(𝑋, 𝑌)
+𝑃(𝑋)
+(39)
+Example: document classification
+▶𝑋: a document
+▶𝑌: the label of this document
+A special case: if 𝑋and 𝑌are independent
+𝑃(𝑌| 𝑋) = 𝑃(𝑌)
+(40)
+Intuitively, it means Knowing 𝑋does not provide any new information
+about 𝑌
+56
+
+--------------------------------------------------------------------------------
+[End of Page 83]
+
+Conditional Probability
+▶𝑋: whether it is cloudy
+▶𝑌: whether it will rain
+𝑃(𝑋, 𝑌)
+𝑋= 0
+𝑋= 1
+𝑌= 0
+0.35
+0.15
+𝑌= 1
+0.05
+0.45
+▶𝑃(𝑌| 𝑋= 1):
+▶𝑃(𝑌= 0 | 𝑋= 1) = 0.25,
+▶𝑃(𝑌= 1 | 𝑋= 1) = 0.75
+57
+
+--------------------------------------------------------------------------------
+[End of Page 84]
+
+Conditional Probability
+▶𝑋: whether it is cloudy
+▶𝑌: whether it will rain
+𝑃(𝑋, 𝑌)
+𝑋= 0
+𝑋= 1
+𝑌= 0
+0.35
+0.15
+𝑌= 1
+0.05
+0.45
+▶𝑃(𝑌| 𝑋= 1):
+▶𝑃(𝑌= 0 | 𝑋= 1) = 0.25,
+▶𝑃(𝑌= 1 | 𝑋= 1) = 0.75
+▶𝑃(𝑌): 𝑃(𝑌= 0) = 𝑃(𝑌= 1) = 0.5
+57
+
+--------------------------------------------------------------------------------
+[End of Page 85]
+
+Conditional Probability
+▶𝑋: whether it is cloudy
+▶𝑌: whether it will rain
+𝑃(𝑋, 𝑌)
+𝑋= 0
+𝑋= 1
+𝑌= 0
+0.35
+0.15
+𝑌= 1
+0.05
+0.45
+▶𝑃(𝑌| 𝑋= 1):
+▶𝑃(𝑌= 0 | 𝑋= 1) = 0.25,
+▶𝑃(𝑌= 1 | 𝑋= 1) = 0.75
+▶𝑃(𝑌): 𝑃(𝑌= 0) = 𝑃(𝑌= 1) = 0.5
+Question for Homework: compute conditional probability from a
+given probabilistic table
+57
+
+--------------------------------------------------------------------------------
+[End of Page 86]
+
+Multivariate Gaussian
+The probability density function of a multivariate Gaussian
+distribution N(𝝁, Σ) is defined as
+𝑓(𝒙) =
+1
+(2𝜋)𝑛/2
+1
+|Σ|1/2 exp
+
+−1
+2(𝒙−𝝁)TΣ−1(𝒙−𝝁)
+
+(41)
+where
+▶𝝁is the 𝑛-dimensional mean vector and
+▶Σ is the 𝑛× 𝑛covariance matrix.
+58
+
+--------------------------------------------------------------------------------
+[End of Page 87]
+
+Covariance Matrix Σ
+Assume 𝝁= 0, the probability density function is
+𝑓(𝒙) ∝exp
+
+−1
+2 𝒙TΣ−1𝒙
+
+(42)
+In general, Σ is required to be a symmetric positive definite matrix
+Σ = I
+𝑥1
+𝑥2
+Σ = diag(2, 1)
+𝑥1
+𝑥2
+59
+
+--------------------------------------------------------------------------------
+[End of Page 88]
+
+Sampling from Gaussians
+(a)
+(b)
+(a) : Σ = I
+(b) : Σ = diag(2, 1)
+Question for Homework: sample from a Gaussian distribution with a
+pre-defined mean and variance
+60
+
+--------------------------------------------------------------------------------
+[End of Page 89]
+
+Thank You!
+61
+
+--------------------------------------------------------------------------------
+[End of Page 90]

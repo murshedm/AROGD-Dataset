@@ -1,0 +1,794 @@
+CS 4774 Machine Learning
+CNNs and RNNs
+Yangfeng Ji
+Information and Language Processing Lab
+Department of Computer Science
+University of Virginia
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+Overview
+1. Convolutional Neural Networks
+2. Recurrent Neural Networks
+3. RNN Language Modeling
+4. Challenge of Training RNNs
+1
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+Convolutional Neural Networks
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+LeNet-5
+A classical neural network architecture designed for handwritten and
+machine-printed character recognition.
+This architecture repeat the two components twice before connecting
+with a fully-connected layer
+▶convolutional layer
+▶subsampling (pooling) layer
+[LeCun et al., 1998]
+3
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+Convolutional Operations
+1-D convolutional operation is defined as
+𝑐𝑗= 𝒎T𝒙𝑗:𝑗+𝑛−1
+(1)
+where 𝒎∈ℝ𝑛is convolutional filter with window size 𝑛, 𝒙∈ℝ𝑇
+input signal with size 𝑇, and 𝑗≤𝑇−𝑛+ 1.
+4
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+Convolutional Operations
+1-D convolutional operation is defined as
+𝑐𝑗= 𝒎T𝒙𝑗:𝑗+𝑛−1
+(1)
+where 𝒎∈ℝ𝑛is convolutional filter with window size 𝑛, 𝒙∈ℝ𝑇
+input signal with size 𝑇, and 𝑗≤𝑇−𝑛+ 1.
+Example
+With
+▶𝒎= [𝑚1, 𝑚2, 𝑚3]T, and
+▶𝒙= [𝑥1, 𝑥2, 𝑥3, 𝑥4, . . . , 𝑥𝑇]T,
+when 𝑗= 2
+𝑐2 = 𝑚1𝑥2 + 𝑚2𝑥3 + 𝑚3𝑥4
+(2)
+4
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+Convolutional Operations (II)
+An example of 1-D convolutional operations
+5
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+Pooling
+There are three popularly used pooling techniques
+▶Max pooling
+6
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+Pooling
+There are three popularly used pooling techniques
+▶Max pooling
+▶Average pooling [LeCun et al., 1998]
+▶Min pooling
+6
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+TextCNN
+A simple and effective convolutional neural network architecture for
+text classification [Kim, 2014]
+Word 
+Embedding
+Convolutional
+Filter 1
+Convolutional
+Filter 2
+Convolutional
+Filter 3
+Tanh
+Tanh
+Tanh
+Max
+Pooling
+Max
+Pooling
+Max
+Pooling
+Softmax
+Function
+▶torch.nn.Conv1d: convolutional operation on each dimension of the word
+embeddings (no cross-dimension convolution)
+▶torch.tanh
+▶torch.max: max pooling on each dimension of the word embeddings
+▶torch.cat: concatenate three vectors from max pooling to form one single vector
+▶In actual implementation, the input is a 3-D tensor instead of a 2-D matrix
+7
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+Advantages of CNNs
+Comparing to Feed-forward NNs: Parameter sharing, sparse
+connections
+Figure: (1) upper plot: convolutional layer; (2) lower plot: fully-connected
+layer.
+[Goodfellow et al., 2016]
+8
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+Recurrent Neural Networks
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+Recurrent Neural Networks (RNNs)
+A simple RNN is defined by the following recursive function
+𝒉𝑡= 𝒇(𝒙𝑡, 𝒉𝑡−1)
+(3)
+and depicted as
+· · ·
+𝒉𝑡−1
+𝒉𝑡
+· · ·
+𝒙𝑡−1
+𝒙𝑡
+where
+▶𝒉𝑡−1: hidden state at time step 𝑡−1
+▶𝒙𝑡: input at time step 𝑡
+▶𝒉𝑡: hidden state at time step 𝑡
+10
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+A Simple Transition Function
+In the simplest case, the transition function 𝒇is defined with an
+element-wise Sigmoid function and a linear transformation of 𝒙𝑡and
+𝒉𝑡−1
+𝒉𝑡= 𝒇(𝒙𝑡, 𝒉𝑡−1) = 𝝈(Wℎ𝒉𝑡−1 + W𝑖𝒙𝑡+ 𝒃)
+(4)
+where
+▶𝒙𝑡: input word embedding
+▶𝒉𝑡−1: hidden statement from previous time step
+▶Wℎ: parameter matrix for hidden states
+▶W𝑖: parameter matrix for inputs
+▶𝒃: bias term (also a parameter)
+11
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+Sigmoid Function
+A Sigmoid function with one-dimensional input 𝑥∈(−∞, ∞)
+𝜎(𝑥) =
+1
+1 −𝑒−𝑥
+The potential numeric issue caused by the Sigmoid function
+▶𝜎(𝑥) →1 with 𝑥≫6
+▶𝜎(𝑥) →0, 𝑥≪−6
+The output of the Sigmoid function will approximate a constant,
+when the input value is beyond certain ranges
+12
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+Unfolding RNNs
+We can unfold this recursive definition of a RNN
+𝒉𝑡= 𝒇(𝒙𝑡, 𝒉𝑡−1)
+(5)
+13
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+Unfolding RNNs
+We can unfold this recursive definition of a RNN
+𝒉𝑡= 𝒇(𝒙𝑡, 𝒉𝑡−1)
+(5)
+as
+𝒉0
+𝒉1
+· · ·
+𝒉𝑡−1
+𝒉𝑡
+· · ·
+𝒙1
+𝒙𝑡−1
+𝒙𝑡
+𝒉𝑡
+=
+𝒇(𝒙𝑡, 𝒇(𝒙𝑡−1, 𝒉𝑡−2))
+=
+𝒇(𝒙𝑡, 𝒇(𝒙𝑡−1, 𝒇(𝒙𝑡−2, 𝒉𝑡−3)))
+=
+· · ·
+=
+𝒇(𝒙𝑡, 𝒇(𝒙𝑡−1, 𝒇(𝒙𝑡−2, · · · 𝒇(𝒙1, 𝒉0) · · · )))
+(6)
+13
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+Base Condition
+Base condition defines the starting point of the recursive computation
+𝒉0
+𝒉1
+· · ·
+𝒙1
+𝒉𝑡= 𝒇(𝒙𝑡, 𝒇(𝒙𝑡−1, 𝒇(𝒙𝑡−2, · · · 𝒇(𝒙1, 𝒉0) · · · )))
+(7)
+▶𝒉0: zero vector or parameter
+▶𝒙1: input at time 𝑡= 1
+14
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+RNN for Sequential Prediction
+In general, RNNs can be used for any sequential modeling tasks
+𝑦1
+𝑦2
+𝑦3
+𝑦4
+𝒉0
+𝒉1
+𝒉2
+𝒉3
+𝒉4
+𝒙1
+𝒙2
+𝒙3
+𝒙4
+15
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+Sequential Modeling as Classification
+𝑦1
+𝑦2
+𝑦3
+𝑦4
+𝒉0
+𝒉1
+𝒉2
+𝒉3
+𝒉4
+𝒙1
+𝒙2
+𝒙3
+𝒙4
+▶Prediction at each time step 𝑡
+ˆ𝑦𝑡= argmax
+𝑦
+𝑃(𝑦; 𝒉𝑡)
+(8)
+16
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+Sequential Modeling as Classification
+𝑦1
+𝑦2
+𝑦3
+𝑦4
+𝒉0
+𝒉1
+𝒉2
+𝒉3
+𝒉4
+𝒙1
+𝒙2
+𝒙3
+𝒙4
+▶Prediction at each time step 𝑡
+ˆ𝑦𝑡= argmax
+𝑦
+𝑃(𝑦; 𝒉𝑡)
+(8)
+▶Loss at single time step 𝑡
+𝐿𝑡(𝑦𝑡, ˆ𝑦𝑡) = −log 𝑃(𝑦𝑡; 𝒉𝑡)
+(9)
+16
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+Sequential Modeling as Classification
+𝑦1
+𝑦2
+𝑦3
+𝑦4
+𝒉0
+𝒉1
+𝒉2
+𝒉3
+𝒉4
+𝒙1
+𝒙2
+𝒙3
+𝒙4
+▶Prediction at each time step 𝑡
+ˆ𝑦𝑡= argmax
+𝑦
+𝑃(𝑦; 𝒉𝑡)
+(8)
+▶Loss at single time step 𝑡
+𝐿𝑡(𝑦𝑡, ˆ𝑦𝑡) = −log 𝑃(𝑦𝑡; 𝒉𝑡)
+(9)
+▶The total loss
+ℓ=
+𝑇
+Õ
+𝑡=1
+𝐿𝑡(𝑦𝑡, ˆ𝑦𝑡)
+(10)
+16
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+RNN Language Modeling
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+Language Models
+A language model defines the probability of 𝑥𝑡given
+𝒙= (𝑥1, 𝑥2, . . . , 𝑥𝑡−1) as
+𝑃(𝑥𝑡| 𝑥1, . . . , 𝑥𝑡−1)
+(11)
+and the joint probability as
+𝑃(𝒙1:𝑇)
+=
+𝑃(𝑥1) · 𝑃(𝑥2 | 𝑥1)
+· · · · ·
+·𝑃(𝑥𝑇| 𝑥1, 𝑥2, . . . , 𝑥𝑇−1)
+18
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+Language Modeling with RNNs
+Using RNNs for language modeling
+𝑥1
+𝑥2
+𝑥3
+𝑥4
+■
+𝒉□
+𝒉1
+𝒉2
+𝒉3
+𝒉4
+□
+𝒙1
+𝒙2
+𝒙3
+𝒙4
+with two special tokens
+{□, 𝑥1, . . . , 𝑥𝑇, ■}
+19
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+RNN Language Models
+For a given sentence {𝑥1, . . . , 𝑥𝑡}, the input at time 𝑡is word
+embedding 𝒙𝑡
+𝑥1
+𝑥2
+𝑥3
+𝑥4
+■
+𝒉□
+𝒉1
+𝒉2
+𝒉3
+𝒉4
+□
+𝒙1
+𝒙2
+𝒙3
+𝒙4
+The probability distribution of next word 𝑋𝑡
+𝑃(𝑋𝑡= 𝑥| 𝒙1:𝑡−1) =
+exp(𝒘T
+𝑜,𝑥𝒉𝑡−1)
+Í
+𝑥′∈Vexp(𝒘T
+𝑜,𝑥′𝒉𝑡−1)
+(12)
+where
+▶𝒘𝑜,𝑥is the output weight vector (parameter) associated with
+word 𝑥
+▶Vis the word vocabulary
+20
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+Special Cases
+Similar to statistical language modeling, there are also two special
+cases that we need to consider
+𝑥1
+𝑥2
+𝑥3
+𝑥4
+■
+𝒉□
+𝒉1
+𝒉2
+𝒉3
+𝒉4
+□
+𝒙1
+𝒙2
+𝒙3
+𝒙4
+{□, 𝑥1, . . . , 𝑥𝑇, ■}
+The corresponding prediction functions are defined as
+▶At time 𝑡= 1
+𝑃(𝑋1 = 𝑥) ∝exp(𝒘T
+𝑜,𝑥𝒉□)
+(13)
+▶At time 𝑡= 𝑇
+𝑃(𝑋𝑇= ■| 𝒙1:𝑇−1) ∝exp(𝒘T
+𝑜,𝑥𝒉𝑇−1)
+(14)
+21
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+Challenge of Training RNNs
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+Objective
+The training objective for each timestep is to predict the next token in
+the text
+𝑥1
+𝑥2
+𝑥3
+𝑥4
+■
+𝒉□
+𝒉1
+𝒉2
+𝒉3
+𝒉4
+□
+𝒙1
+𝒙2
+𝒙3
+𝒙4
+▶Prediction at step 𝑡, 𝑃(𝑋𝑡= 𝑥| 𝒙1:𝑡−1) =
+exp(𝒘T
+𝑜,𝑥𝒉𝑡−1)
+Í
+𝑥′∈Vexp(𝒘T
+𝑜,𝑥′ 𝒉𝑡−1)
+▶Loss at step 𝑡, 𝐿𝑡= −log 𝑃(𝑋𝑡= 𝑥| 𝒙1:𝑡−1)
+23
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+Gradients
+Let 𝜽denote all model parameters
+𝜕ℓ
+𝜕𝜽=
+𝑇
+Õ
+𝑡=1
+𝜕𝐿𝑡
+𝜕𝜽
+(15)
+𝑥1
+𝑥2
+𝑥3
+𝑥4
+■
+𝒉□
+𝒉1
+𝒉2
+𝒉3
+𝒉4
+□
+𝒙1
+𝒙2
+𝒙3
+𝒙4
+Backpropagation Through Time [Rumelhart et al., 1985, BPTT]
+24
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+Model Parameters
+Before computing the gradient of each 𝐿𝑡with respect to model
+parameters, let us count how many parameters that we need consider
+𝑥1
+𝑥2
+𝑥3
+𝑥4
+■
+𝒉□
+𝒉1
+𝒉2
+𝒉3
+𝒉4
+□
+𝒙1
+𝒙2
+𝒙3
+𝒙4
+▶Output parameter matrix 𝑾𝑜= (𝒘𝑜,1, . . . , 𝒘𝑜,𝑉)
+25
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+Model Parameters
+Before computing the gradient of each 𝐿𝑡with respect to model
+parameters, let us count how many parameters that we need consider
+𝑥1
+𝑥2
+𝑥3
+𝑥4
+■
+𝒉□
+𝒉1
+𝒉2
+𝒉3
+𝒉4
+□
+𝒙1
+𝒙2
+𝒙3
+𝒙4
+▶Output parameter matrix 𝑾𝑜= (𝒘𝑜,1, . . . , 𝒘𝑜,𝑉)
+▶Input word embedding matrix 𝑿= (𝒙1, . . . , 𝒙𝑉)
+25
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+Model Parameters
+Before computing the gradient of each 𝐿𝑡with respect to model
+parameters, let us count how many parameters that we need consider
+𝑥1
+𝑥2
+𝑥3
+𝑥4
+■
+𝒉□
+𝒉1
+𝒉2
+𝒉3
+𝒉4
+□
+𝒙1
+𝒙2
+𝒙3
+𝒙4
+▶Output parameter matrix 𝑾𝑜= (𝒘𝑜,1, . . . , 𝒘𝑜,𝑉)
+▶Input word embedding matrix 𝑿= (𝒙1, . . . , 𝒙𝑉)
+▶Neural network parameters 𝑾ℎ, 𝑾𝑖, 𝒃
+25
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+Backpropagation Through Time
+Take time step 𝑡as an example, we can take a look the gradient
+computation of some specific parameters
+▶Output model parameter
+𝜕𝐿𝑡
+𝜕𝒘𝑜,·
+26
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+Backpropagation Through Time
+Take time step 𝑡as an example, we can take a look the gradient
+computation of some specific parameters
+▶Output model parameter
+𝜕𝐿𝑡
+𝜕𝒘𝑜,·
+▶Neural network parameters, for example 𝑾ℎ
+𝜕𝐿𝑡
+𝜕𝑾ℎ
+=
+𝑡Õ
+𝑖=1
+ 𝜕𝐿𝑡
+𝜕𝒉𝑡
+·   𝑡−1
+Ö
+𝑗=𝑖
+𝜕𝒉𝑗+1
+𝜕𝒉𝑗
+ · 𝜕𝒉𝑖
+𝜕𝑾ℎ
+	
+(16)
+Similar patterns for the other two neural network parameters 𝑾𝑖
+and 𝒃
+26
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+Backpropagation Through Time
+Take time step 𝑡as an example, we can take a look the gradient
+computation of some specific parameters
+▶Output model parameter
+𝜕𝐿𝑡
+𝜕𝒘𝑜,·
+▶Neural network parameters, for example 𝑾ℎ
+𝜕𝐿𝑡
+𝜕𝑾ℎ
+=
+𝑡Õ
+𝑖=1
+ 𝜕𝐿𝑡
+𝜕𝒉𝑡
+·   𝑡−1
+Ö
+𝑗=𝑖
+𝜕𝒉𝑗+1
+𝜕𝒉𝑗
+ · 𝜕𝒉𝑖
+𝜕𝑾ℎ
+	
+(16)
+Similar patterns for the other two neural network parameters 𝑾𝑖
+and 𝒃
+▶Word embedding 𝜕𝐿𝑡
+𝜕𝒙𝑡′
+▶E.g., word embedding 𝒙𝑡′ is the input of 𝒉𝑡if 𝑡′ ≤𝑡, so ...
+26
+
+--------------------------------------------------------------------------------
+[End of Page 36]
+
+Challenges
+For each timestep, we need to compute the gradient using the chain
+rule:
+𝜕𝐿𝑡
+𝜕𝑾ℎ
+=
+𝑡Õ
+𝑖=1
+ 𝜕𝐿𝑡
+𝜕𝒉𝑡
+·   𝑡−1
+Ö
+𝑗=𝑖
+𝜕𝒉𝑗+1
+𝜕𝒉𝑗
+ · 𝜕𝒉𝑖
+𝜕𝑾ℎ
+	
+(17)
+The chain rule of gradient will cause two potential problems in
+training RNNs
+▶vanishing gradients: 𝜕𝐿𝑡
+𝜕𝜽→0
+▶exploding gradients: 𝜕𝐿𝑡
+𝜕𝜽≥𝑀
+[Pascanu et al., 2013]
+27
+
+--------------------------------------------------------------------------------
+[End of Page 37]
+
+Exploding Gradients
+Solution: norm clipping [Pascanu et al., 2013].
+Consider the gradient 𝒈= 𝜕ℓ
+𝜕𝜽,
+ˆ𝒈←𝜏·
+𝒈
+∥𝒈∥
+(18)
+when ∥𝒈∥> 𝜏.
+▶Usually, 𝜏= 3 or 5 in practice.
+▶Smaller gradient will cause slower learning progress
+28
+
+--------------------------------------------------------------------------------
+[End of Page 38]
+
+Vanishing Gradients
+Solution:
+▶initialize parameters carefully
+▶replace hidden state transition function 𝝈(·) with other options
+𝒇(𝒙𝑡, 𝒉𝑡−1) = 𝝈(Wℎ𝒉𝑡−1 + W𝑖𝒙𝑡+ 𝒃)
+(19)
+▶LSTM [Hochreiter and Schmidhuber, 1997]
+▶GRU [Cho et al., 2014]
+29
+
+--------------------------------------------------------------------------------
+[End of Page 39]
+
+Long Short-Term Memory
+Rather than directly taking input and hidden state as simple
+transition function, LSTM relies on three cates to control how much
+information it should take from input and hidden state before
+combining them together
+𝒊𝑡
+=
+𝜎(W𝑥𝑖𝒙𝑡+ Wℎ𝑖𝒉𝑡−1 + W𝑐𝑖𝒄𝑡−1 + 𝒃𝑖)
+𝒇𝑡
+=
+𝜎(W𝑥𝑓𝒙𝑡+ Wℎ𝑓𝒉𝑡−1 + W𝑐𝑓𝒄𝑡−1 + 𝒃𝑓)
+𝒄𝑡
+=
+𝒇𝑡◦𝒄𝑡−1 + 𝒊𝑡◦tanh(W𝑥𝑐𝒙𝑡+ Wℎ𝑐𝒉𝑡−1 + 𝒃𝑐)
+𝒐𝑡
+=
+𝜎(W𝑥𝑜𝒙𝑡+ Wℎ𝑜𝒉𝑡−1 + W𝑐𝑜𝒄𝑡+ 𝒃𝑜)
+𝒉𝑡
+=
+𝒐𝑡◦tanh(𝒄𝑡)
+where ◦is the element-wise multiplication, {𝑾·} and {𝒃·} are
+parameters.
+[Graves, 2013]
+30
+
+--------------------------------------------------------------------------------
+[End of Page 40]
+
+Reference
+Cho, K., Van Merriënboer, B., Bahdanau, D., and Bengio, Y. (2014).
+On the properties of neural machine translation: Encoder-decoder approaches.
+arXiv preprint arXiv:1409.1259.
+Goodfellow, I., Bengio, Y., Courville, A., and Bengio, Y. (2016).
+Deep Learning, volume 1.
+MIT press Cambridge.
+Graves, A. (2013).
+Generating sequences with recurrent neural networks.
+arXiv preprint arXiv:1308.0850.
+Hochreiter, S. and Schmidhuber, J. (1997).
+Long short-term memory.
+Neural computation, 9(8):1735–1780.
+LeCun, Y., Bottou, L., Bengio, Y., and Haffner, P. (1998).
+Gradient-based learning applied to document recognition.
+Proceedings of the IEEE, 86(11):2278–2324.
+Pascanu, R., Mikolov, T., and Bengio, Y. (2013).
+On the difficulty of training recurrent neural networks.
+In Dasgupta, S. and McAllester, D., editors, Proceedings of the 30th International Conference on Machine Learning, volume 28 of
+Proceedings of Machine Learning Research, pages 1310–1318, Atlanta, Georgia, USA. PMLR.
+Rumelhart, D. E., Hinton, G. E., and Williams, R. J. (1985).
+Learning internal representations by error propagation.
+Technical report, California Univ San Diego La Jolla Inst for Cognitive Science.
+31
+
+--------------------------------------------------------------------------------
+[End of Page 41]

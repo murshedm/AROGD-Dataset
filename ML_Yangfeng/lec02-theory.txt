@@ -1,0 +1,1364 @@
+CS 4774 Machine Learning
+Introduction to Learning Theory
+Yangfeng Ji
+Information and Language Processing Lab
+Department of Computer Science
+University of Virginia
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+Overview
+1. A Toy Example
+2. True Classification Error
+3. Empirical Risk Minimization
+4. Finite Hypothesis Classes
+5. PAC Learning
+6. Agnostic PAC Learning
+1
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+Real-world Classification Problem
+Image classification
+14M images, 20K categories
+2
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+Real-world Classification Problem (II)
+Sentiment classification
+192K businesses, 6.6M user reviews
+3
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+Questions
+Q1 What is the first example of machine learning applications that
+you can think of?
+Q2 What are the challenges of building machine learning models for
+that application?
+4
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+Objective
+The objective of this lecture is
+to talk about the essence of machine learning without getting
+distracted by some real-world constraints.
+5
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+A Toy Example
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+Question
+Our very first machine learning example:
+Based on the following observations, try to find out the shape/size of the area
+where the positive examples come from, so we can make the best predictions
+on future observations
+𝑥1
+𝑥2
++
++
++
++
+-
+-
+-
+-
+-
+7
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+Question
+Our very first machine learning example:
+Based on the following observations, try to find out the shape/size of the area
+where the positive examples come from, so we can make the best predictions
+on future observations
+𝑥1
+𝑥2
++
++
++
++
+-
+-
+-
+-
+-
+We have to make certain assumptions, otherwise there is no way to
+answer this question.
+7
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+Hypotheses
+Given these data points, answer the following two questions:
+1. Which shape is the underlying
+distribution of red points?
+▶A triangle
+▶A rectangle
+▶A circle
+▶A shape that we (or
+probably just me) cannot
+describe
+𝑥1
+𝑥2
++
++
++
++
+-
+-
+-
+-
+-
+8
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+Hypotheses
+Given these data points, answer the following two questions:
+1. Which shape is the underlying
+distribution of red points?
+▶A triangle
+▶A rectangle
+▶A circle
+▶A shape that we (or
+probably just me) cannot
+describe
+2. What is the size of that shape?
+𝑥1
+𝑥2
++
++
++
++
+-
+-
+-
+-
+-
+8
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+Basic Concepts (I)
+Domain set or input space X: the set of all possible examples
+𝑥1
+𝑥2
++
++
++
++
+-
+-
+-
+-
+-
+▶In this case, X = ℝ2
+▶Each point 𝒙in X, 𝒙∈X, is called one example or instance.
+9
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+Basic Concepts (II)
+Label set or output space Y: the set of all possible labels
+𝑥1
+𝑥2
++
++
++
++
+-
+-
+-
+-
+-
+▶In this case, Y ∈{+, −}
+▶In this course, we often restrict the label set to be a two-element
+set, such as {+1, −1}
+10
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+Basic Concept (III)
+Training set 𝑆: a finite sequence of pairs in X× Y, represented as
+{(𝒙1, 𝑦1), (𝒙2, 𝑦2), . . . , (𝒙𝑚, 𝑦𝑚)} with size 𝑚
+𝑥1
+𝑥2
++
++
++
++
+-
+-
+-
+-
+-
+11
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+Basic Concept: Hypothesis Space
+▶Hypothesis class or hypothesis space H: a set of functions that
+map instances to labels
+▶Each element ℎin this hypothesis class is called a hypothesis
+𝑥1
+𝑥2
++
++
++
++
+-
+-
+-
+-
+-
+Figure: Two hypotheses from the Circle class.
+12
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+Basic Concept: Hypothesis Space (Cont.)
+If we represent a hypothesis by its parameter value, then each
+hypothesis corresponds one point in the hypothesis space.
+𝑥1
+𝑥2
++
++
++
++
+-
+-
+-
+-
+-
+Center 𝑥1
+Center 𝑥2
+radius
+Figure: Visualizing the Circle hypothesis class.
+13
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+Basic Concept: Machine Learners
+▶A (machine) learner is an algorithm 𝐴that can find an optimal
+hypothesis from Hbased on the training set 𝑆
+▶This optimal hypothesis is represented as 𝐴(𝑆)
+𝑥1
+𝑥2
++
++
++
++
+-
+-
+-
+-
+-
+Center 𝑥1
+Center 𝑥2
+radius
+▶A hypothesis space His learnable if such an algorithm 𝐴exists1
+1A precise definition will be provided later in this lecture.
+14
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+Why a Toy Problem?
+With a toy problem, we can have the following conveniences that we
+usually do not have with real-world problem,
+▶Do not need data pre-processing
+▶Do not need feature engineering
+▶Make some unrealistic assumptions, e.g.,
+▶Assume we know the underlying data distribution
+▶Assume we know the optimal classifier given the data distribution
+15
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+True Classification Error
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+Basic Concepts: Summary
+▶Domain set X
+▶Label set Y
+▶Training data 𝑆: the
+observations
+▶Hypothesis class H
+▶rectangle class
+▶A learner 𝐴
+▶an algorithm that finds an
+optimal hypothesis
+𝑥1
+𝑥2
++
++
++
++
+-
+-
+-
+-
+-
+17
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+Data Generation Process
+An idealized process to illustrate the relations among domain set X,
+label set Y, and the training set 𝑆
+1. the probability distribution D over the domain set X
+2. sample an instance 𝒙∈Xaccording to D
+3. annotate it using the labeling function 𝑓as 𝑦= 𝑓(𝒙)
+−6
+−4
+−2
+0
+2
+4
+6
+5 · 10−2
+0.1
+0.15
+0.2
+18
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+Example
+Assume the data distribution D over the domain set Xis defined as
+D :
+𝑝(𝑥) = 1
+2N(𝑥; 2, 1)
+|       {z       }
+component 1
++ 1
+2N(𝑥; −2, 1)
+|         {z         }
+component 2
+(1)
+The specific data generation process: for each data point
+19
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+Example
+Assume the data distribution D over the domain set Xis defined as
+D :
+𝑝(𝑥) = 1
+2N(𝑥; 2, 1)
+|       {z       }
+component 1
++ 1
+2N(𝑥; −2, 1)
+|         {z         }
+component 2
+(1)
+The specific data generation process: for each data point
+1. Randomly select one out of two Gaussian components with
+probability 50%
+19
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+Example
+Assume the data distribution D over the domain set Xis defined as
+D :
+𝑝(𝑥) = 1
+2N(𝑥; 2, 1)
+|       {z       }
+component 1
++ 1
+2N(𝑥; −2, 1)
+|         {z         }
+component 2
+(1)
+The specific data generation process: for each data point
+1. Randomly select one out of two Gaussian components with
+probability 50%
+2. Sample 𝑥from that Gaussian component
+19
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+Example
+Assume the data distribution D over the domain set Xis defined as
+D :
+𝑝(𝑥) = 1
+2N(𝑥; 2, 1)
+|       {z       }
+component 1
++ 1
+2N(𝑥; −2, 1)
+|         {z         }
+component 2
+(1)
+The specific data generation process: for each data point
+1. Randomly select one out of two Gaussian components with
+probability 50%
+2. Sample 𝑥from that Gaussian component
+3. Label 𝑥based on which component was selected at step 1
+▶Component 1: positive
+▶Component 2: negative
+19
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+Example (Cont.)
+Sampled data distribution
+20
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+Example (Cont.)
+Sampled data distribution
+True distribution
+−6
+−4
+−2
+0
+2
+4
+6
+5 · 10−2
+0.1
+0.15
+0.2
+20
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+Example (Cont.)
+Sampled data distribution
+True distribution
+−6
+−4
+−2
+0
+2
+4
+6
+5 · 10−2
+0.1
+0.15
+0.2
+In this section, we will talk about how to measure the classification
+error if we know the true data distribution.
+20
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+Classification Error with True Data Distribution
+The classification error will happen when the hypothesis ℎdoes not
+predict the correct label on a randomly generated instance 𝒙
+−6
+−4
+−2
+0
+2
+4
+6
+5 · 10−2
+0.1
+0.15
+0.2
+21
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+Example
+Re-formulate the data generation process in probabilistic language
+𝑝(𝑦= +1) = 𝑝(𝑦= −1) = 1
+2
+𝑝(𝑥| 𝑦= +1) = N(𝑥; 2, 1)
+𝑝(𝑥| 𝑦= −1) = N(𝑥; −2, 1)
+(2)
+−6
+−4
+−2
+0
+2
+4
+6
+5 · 10−2
+0.1
+0.15
+0.2
+22
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+The Bayes Predictor
+If ℎis defined as
+ℎ(𝑥) =
+
++1
+𝑝(+1 | 𝑥) ≥𝑝(−1 | 𝑥)
+−1
+otherwise
+(3)
+then what is the classification error?
+−6
+−4
+−2
+0
+2
+4
+6
+5 · 10−2
+0.1
+0.15
+0.2
+23
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+The Bayes Predictor
+If ℎis defined as
+ℎ(𝑥) =
+
++1
+𝑝(+1 | 𝑥) ≥𝑝(−1 | 𝑥)
+−1
+otherwise
+(3)
+then what is the classification error?
+−6
+−4
+−2
+0
+2
+4
+6
+5 · 10−2
+0.1
+0.15
+0.2
+The Bayes predictor: the best predictor if we know the true data
+distribution (more detail will be discussed later)
+23
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+True Error
+▶The true error of a hypothesis ℎas the probability that it does not
+predict the correct label on a randomly generated instance 𝒙
+following distribution D
+▶Definition
+𝐿D, 𝑓(ℎ) = ℙ𝒙∼D[ℎ(𝒙) ≠𝑓(𝒙)]
+(4)
+▶𝒙∼D: an instance generated following the distribution D
+▶ℎ(𝒙) ≠𝑓(𝒙): prediction from hypothesis ℎdoes not match the
+labeling function output
+▶𝐿D, 𝑓(ℎ): the error of ℎis measured with respect to D and 𝑓
+24
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+Other Names
+Definition:
+𝐿D, 𝑓(ℎ) = ℙ𝒙∼D[ℎ(𝒙) ≠𝑓(𝒙)]
+(5)
+Other names (used interchangably):
+▶the generalization error
+▶the true risk
+25
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+Comments
+Recall the definition of true risk with the data distribution D and the
+labeling function 𝑓
+𝐿D, 𝑓(ℎ) = ℙ𝒙∼D[ℎ(𝒙) ≠𝑓(𝒙)]
+(6)
+It is impossible to compute 𝐿D, 𝑓(ℎ) in practice, since we do not know
+▶the distribution of data generation D
+▶the labeling function 𝑓
+Alternative option: Empirical Risk
+26
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+Empirical Risk Minimization
+
+--------------------------------------------------------------------------------
+[End of Page 36]
+
+Empirical Risk
+The definition of the empirical risk (or, empirical error, training
+error):
+𝐿𝑆(ℎ) = |{𝑖∈[𝑚] : ℎ(𝒙𝑖) ≠𝑦𝑖}|
+𝑚
+(7)
+Notations
+▶[𝑚] = {1, 2, . . . , 𝑚} where 𝑚is the total number of instances in 𝑆
+▶{𝑖∈[𝑚] : ℎ(𝒙𝑖) ≠𝑦𝑖}: the set of instances that ℎpredicts wrong
+▶|{𝑖∈[𝑚] : ℎ(𝒙𝑖) ≠𝑦𝑖}|: the size of the set
+▶𝐿𝑆(ℎ) defines with respect to the set 𝑆
+28
+
+--------------------------------------------------------------------------------
+[End of Page 37]
+
+Example
+The empirical risk of a hypothesis ℎis defined on the training set 𝑆:
+𝐿𝑆(ℎ) = |{𝑖∈[𝑚] : ℎ(𝒙𝑖) ≠𝑦𝑖}|
+𝑚
+(8)
+Figure: 1K examples generated with the previous process.
+29
+
+--------------------------------------------------------------------------------
+[End of Page 38]
+
+Empirical Risk Minimization: Definition
+Empirical Risk Minimization (ERM): given the training set 𝑆and the
+hypothesis class H
+ℎ∈argmin
+ℎ∈H
+𝐿𝑆(ℎ)
+(9)
+▶argmin stands for the set of hypotheses in Hthat achieve the
+minimum value of 𝐿𝑆(ℎ) over H
+▶In general, there is always at least one hypothesis that makes
+𝐿𝑆(ℎ) = 0 with an unrealistically large H
+30
+
+--------------------------------------------------------------------------------
+[End of Page 39]
+
+Empirical Risk Minimization: Limitation
+For example, with an unrealistically large hypothesis class H, we can
+always minimize the empirical error and make it zero
+ℎ𝑆(𝒙) =
+
+𝑦𝑖
+if (𝒙= 𝒙𝑖) ∧(𝒙𝑖∈𝑆)
+unknown
+otherwise
+(10)
+no matter how many instances in 𝑆
+𝑥1
+𝑥2
++
++
++
++
+-
+-
+-
+-
+-
+31
+
+--------------------------------------------------------------------------------
+[End of Page 40]
+
+Empirical Risk Minimization: Limitation
+For example, with an unrealistically large hypothesis class H, we can
+always minimize the empirical error and make it zero
+ℎ𝑆(𝒙) =
+
+𝑦𝑖
+if (𝒙= 𝒙𝑖) ∧(𝒙𝑖∈𝑆)
+unknown
+otherwise
+(10)
+no matter how many instances in 𝑆
+𝑥1
+𝑥2
++
++
++
++
+-
+-
+-
+-
+-
+31
+
+--------------------------------------------------------------------------------
+[End of Page 41]
+
+Overfitting
+Although this is just an extreme case, it illustrates an important
+phenomenon, called overfitting
+𝑥1
+𝑥2
++
++
++
++
+-
+-
+-
+-
+-
+▶The performance on the training set is excellent; but on the whole
+distribution was very poor
+▶Continue our discussion on lecture 6: model selection and
+validation
+32
+
+--------------------------------------------------------------------------------
+[End of Page 42]
+
+Inductive Bias
+“A learner that makes no a priori assumptions regarding the identity of the
+target concept2 has no rational basis for classifying any unseen instances.”
+[Mitchell, 1997, Page 42]
+2labeling function, in the context of our discussion
+33
+
+--------------------------------------------------------------------------------
+[End of Page 43]
+
+Finite Hypothesis Classes
+
+--------------------------------------------------------------------------------
+[End of Page 44]
+
+A Learning Problem
+Assume we know the following information:
+▶Domain set X = [0, 1]
+▶Distribution D: the uniform distribution over X
+▶Label set Y = {−1, +1}
+▶Labeling function 𝑓
+𝑓(𝑥) =
+
+−1
+0 ≤𝑥< 𝑏
++1
+𝑏≤𝑥≤1
+(11)
+with 𝑏is unknown
+35
+
+--------------------------------------------------------------------------------
+[End of Page 45]
+
+A Learning Problem
+Assume we know the following information:
+▶Domain set X = [0, 1]
+▶Distribution D: the uniform distribution over X
+▶Label set Y = {−1, +1}
+▶Labeling function 𝑓
+𝑓(𝑥) =
+
+−1
+0 ≤𝑥< 𝑏
++1
+𝑏≤𝑥≤1
+(11)
+with 𝑏is unknown
+The learning problem is defined as
+▶Given a set of observations 𝑆= {(𝑥1, 𝑦1), . . . , (𝑥𝑚, 𝑦𝑚)}, is there a
+learning algorithm that can find a good approximation of 𝑏?
+35
+
+--------------------------------------------------------------------------------
+[End of Page 46]
+
+A Training Set 𝑆
+Consider the following training sets, each of them contains eight data
+points, can a learning algorithm find the dividing point?
+Training set 𝑆
+[Code]
+36
+
+--------------------------------------------------------------------------------
+[End of Page 47]
+
+Finite Hypothesis Class
+▶The finite hypothesis class of dividing points
+H𝑓= {ℎ𝑖: 𝑖∈[10]}
+(12)
+with each ℎ𝑖defined as
+ℎ𝑖(𝑥) =
+
+−1
+0 ≤𝑥<
+𝑖
+10
++1
+𝑖
+10 ≤𝑥≤1
+(13)
+37
+
+--------------------------------------------------------------------------------
+[End of Page 48]
+
+The Realizability Assumption
+The Realizability Assumption:
+There exists ℎ∗∈Hsuch that 𝐿D, 𝑓(ℎ∗) = 0
+[Shalev-Shwartz and Ben-David, 2014, Definition 2.1]
+Comments
+▶𝐿D, 𝑓indicates this is the true error
+▶this assumption implies 𝐿𝑆(ℎ𝑆) = 0,
+where 𝐿𝑠is the empirical risk based on the training set 𝑆and ℎ𝑆is the
+hypothesis found by minimizing the empirical risk based on 𝑆
+38
+
+--------------------------------------------------------------------------------
+[End of Page 49]
+
+A Learning Algorithm
+▶A learner: the brute force algorithm
+▶try the hypotheses one by one and find the best
+▶time complexity O(|H𝑓|)
+▶better algorithms exist, such as binary search algorithm
+39
+
+--------------------------------------------------------------------------------
+[End of Page 50]
+
+Nonrepresentative Training Set
+▶Consider the following training set (no negative example)3
+▶Introduce 𝛿∈(0, 1) to capture nonrepresentative cases. With
+probability (1 −𝛿), we have representative cases
+▶Loosely speaking, in the running example, at least 𝑆has both
+positive and negative instances
+▶(1 −𝛿) is called confidence parameter
+3Run the demo code about ten times, you may be able to see this happens once.
+40
+
+--------------------------------------------------------------------------------
+[End of Page 51]
+
+Nonperfect Predictors
+Consider the following training instances
+▶Follow the realizability assumption, there exists 𝐿𝑆(ℎ𝑆) = 0
+▶But there is no guarantee that 𝐿(D, 𝑓)(ℎ𝑆) = 0
+▶Relax the constraint as
+𝐿(D, 𝑓)(ℎ𝑆) ≤𝜖
+(14)
+where 𝜖is called accuracy parameter
+41
+
+--------------------------------------------------------------------------------
+[End of Page 52]
+
+Sample Complexity
+▶In the running example, we use 𝑚= 8
+▶Intuitively, if we increase the size of 𝑆, we will have a better
+chance to identify the labeling function 𝑓. For example, when
+𝑚= 691
+42
+
+--------------------------------------------------------------------------------
+[End of Page 53]
+
+Summary of the Issues
+1. Nonrepresentative training Set
+▶Missing critical information about the data distribution D
+2. Nonperfect predictors
+▶𝐿𝑆(ℎ𝑆) = 0, but 𝐿D, 𝑓(ℎ𝑆) ≠0
+3. Mismatch of the hypothesis space
+▶The realizability assumption is unrealistic for practical applications
+The first two issues are considered in the PAC learning model, and
+the last issue is considered in the agnostic PAC learning model.
+43
+
+--------------------------------------------------------------------------------
+[End of Page 54]
+
+PAC Learning
+
+--------------------------------------------------------------------------------
+[End of Page 55]
+
+The Realization Assumption
+Let keep this assumption in this section
+There exists ℎ∗∈Hsuch that 𝐿D, 𝑓(ℎ∗) = 0
+Comments
+▶𝐿D, 𝑓(ℎ∗) is the true error
+▶It implies, with probability 1, every ERM hypothesis 𝐿𝑆(ℎ𝑆) = 0
+▶It is a strong assumption for theoretical analysis purpose. In
+practice, we do not have a such guarantee
+45
+
+--------------------------------------------------------------------------------
+[End of Page 56]
+
+A Oversimplified Definition of PAC Learnability
+A hypothesis class His PAC learnable if there exists a learning
+algorithm with the following property:
+▶for every distribution D over Xand
+▶for every labeling function 𝑓: X →{0, 1}
+with enough training examples, the algorithm returns a hypothesis ℎ
+such that with a large probability that
+𝐿D, 𝑓(ℎ)
+(15)
+is arbitrarily small.
+46
+
+--------------------------------------------------------------------------------
+[End of Page 57]
+
+Distribution D over X
+Consider the distribution over [0, 1]
+▶Uniform distribution
+47
+
+--------------------------------------------------------------------------------
+[End of Page 58]
+
+Distribution D over X
+Consider the distribution over [0, 1]
+▶Uniform distribution
+▶Beta distributions
+𝑝(𝑥; 𝛼, 𝛽) =
+1
+𝐵(𝛼, 𝛽) 𝑥𝛼−1(1 −𝑥)𝛽−1
+(16)
+▶Many other distributions
+47
+
+--------------------------------------------------------------------------------
+[End of Page 59]
+
+Distribution D over X
+Consider the distribution over [0, 1]
+▶Uniform distribution
+▶Beta distributions
+𝑝(𝑥; 𝛼, 𝛽) =
+1
+𝐵(𝛼, 𝛽) 𝑥𝛼−1(1 −𝑥)𝛽−1
+(16)
+▶Many other distributions
+We expect that, if there exists a learning algorithm 𝐴, it should work
+with all kinds of different distributions.
+47
+
+--------------------------------------------------------------------------------
+[End of Page 60]
+
+Labeling Function 𝑓: X →{0, 1}
+For the problem of finding the dividing point, the labeling function is
+defined as
+𝑓(𝑥) =
+
+−1
+0 ≤𝑥< 𝑏
++1
+𝑏≤𝑥≤1
+(17)
+▶𝑏can be any number here, as long as it follows the realization
+assumption. In other words, the labeling function is in the
+hypothesis space 𝑓∈H
+▶We will discuss the scenario of 𝑓∉Hin next section
+48
+
+--------------------------------------------------------------------------------
+[End of Page 61]
+
+A Simplified Definition of PAC Learnability
+A hypothesis class His PAC learnable if there exists a learning
+algorithm with the following property:
+▶for every distribution D over X
+▶for every labeling function 𝑓: X →{0, 1}, and
+▶for every 𝜖, 𝛿∈(0, 1)
+with enough training examples, the algorithm returns a hypothesis ℎ
+such that, with probability of at least 1 −𝛿,
+𝐿D, 𝑓(ℎ) ≤𝜖
+(18)
+49
+
+--------------------------------------------------------------------------------
+[End of Page 62]
+
+Accuracy Parameter 𝜖
+The accuracy parameter 𝜖determines how far the output classifier
+can be from the optimal one
+A Simplified Definition
+. . .
+𝐿D, 𝑓(ℎ) ≤𝜖
+(19)
+50
+
+--------------------------------------------------------------------------------
+[End of Page 63]
+
+Accuracy Parameter 𝜖
+The accuracy parameter 𝜖determines how far the output classifier
+can be from the optimal one
+A Simplified Definition
+. . .
+𝐿D, 𝑓(ℎ) ≤𝜖
+(19)
+Approximately Correct
+50
+
+--------------------------------------------------------------------------------
+[End of Page 64]
+
+Confidence Parameter 𝛿
+The confidence parameter 𝛿indicates how likely the classifier is to
+meet the accuracy requirement
+A Simplified Definition
+. . . the algorithm returns a hypothesis ℎsuch that, with probability
+of at least 1 −𝛿(over the choice of the examples),
+𝐿(D, 𝑓)(ℎ) ≤𝜖
+(20)
+51
+
+--------------------------------------------------------------------------------
+[End of Page 65]
+
+Confidence Parameter 𝛿
+The confidence parameter 𝛿indicates how likely the classifier is to
+meet the accuracy requirement
+A Simplified Definition
+. . . the algorithm returns a hypothesis ℎsuch that, with probability
+of at least 1 −𝛿(over the choice of the examples),
+𝐿(D, 𝑓)(ℎ) ≤𝜖
+(20)
+Probably Approximately Correct (PAC)
+51
+
+--------------------------------------------------------------------------------
+[End of Page 66]
+
+Is It Necessary to Have Both Parameters?
+Cen we remove either 𝜖or 𝛿?
+▶We need 𝛿
+▶Because the training set is randomly generated, which can be
+non-representative
+52
+
+--------------------------------------------------------------------------------
+[End of Page 67]
+
+Is It Necessary to Have Both Parameters?
+Cen we remove either 𝜖or 𝛿?
+▶We need 𝛿
+▶Because the training set is randomly generated, which can be
+non-representative
+▶We need 𝜖
+▶Because we can only finite number of training examples, even
+though the training set is representative
+52
+
+--------------------------------------------------------------------------------
+[End of Page 68]
+
+PAC Learnability
+A hypothesis class His PAC learnable if there exist a function
+𝑚H(𝜖, 𝛿) : (0, 1)2 →ℕand a learning algorithm with the following
+property:
+▶for every distribution D over X,
+▶for every labeling function 𝑓: X →{0, 1}, and
+▶for every 𝜖, 𝛿∈(0, 1),
+if the realizable assumption holds wrt H,D,𝑓, then when running the
+learning algorithm on 𝑚≥𝑚H(𝜖, 𝛿) i.i.d. examples generated by D
+and labeled by 𝑓, the algorithm returns a hypothesis ℎsuch that, with
+probability of at least 1 −𝛿,
+𝐿(D, 𝑓)(ℎ) ≤𝜖
+(21)
+53
+
+--------------------------------------------------------------------------------
+[End of Page 69]
+
+Sample Complexity
+▶Sample complexity function: a function of 𝜖and 𝛿
+𝑚H(𝜖, 𝛿) : (0, 1)2 →ℕ
+(22)
+54
+
+--------------------------------------------------------------------------------
+[End of Page 70]
+
+Sample Complexity
+▶Sample complexity function: a function of 𝜖and 𝛿
+𝑚H(𝜖, 𝛿) : (0, 1)2 →ℕ
+(22)
+▶How many examples are required to guarantee a probably
+approximately correct solution
+▶many different options
+54
+
+--------------------------------------------------------------------------------
+[End of Page 71]
+
+Sample Complexity
+▶Sample complexity function: a function of 𝜖and 𝛿
+𝑚H(𝜖, 𝛿) : (0, 1)2 →ℕ
+(22)
+▶How many examples are required to guarantee a probably
+approximately correct solution
+▶many different options
+▶To be precise, 𝑚H(𝜖, 𝛿) is defined to the minimal function that
+satisfies the requirements of PAC learning with 𝜖and 𝛿
+54
+
+--------------------------------------------------------------------------------
+[End of Page 72]
+
+Finite Hypothesis Class
+Let Hbe a finite hypothesis class. Let 𝛿∈(0, 1) and 𝜖> 0 and let 𝑚be
+an integer that satisfies
+𝑚≥log(|H|/𝛿)
+𝜖
+(23)
+Then, for any labeling function 𝑓, and for any distribution D, for
+which the realizability assumption holds, with probability 1 −𝛿over
+the choice of an i.i.d. sample 𝑆of size 𝑚, we have that for every ERM
+hypothesis, ℎ𝑆, it holds that
+𝐿(D, 𝑓)(ℎ𝑆) ≤𝜖.
+(24)
+[Shalev-Shwartz and Ben-David, 2014, Corollary 2.3]
+55
+
+--------------------------------------------------------------------------------
+[End of Page 73]
+
+Example: Finding the Dividing Points
+The sample complexity of finite hypothesis space
+𝑚≥log(|H|/𝛿)
+𝜖
+(25)
+▶The size of the hypothesis space: |H| = 100
+▶Confidence parameter: 𝛿= 0.1
+▶Accuracy parameter: 𝜖= 0.01
+𝑚0 = log(|H|/𝛿)
+𝜖
+≈691
+56
+
+--------------------------------------------------------------------------------
+[End of Page 74]
+
+Agnostic PAC Learning
+
+--------------------------------------------------------------------------------
+[End of Page 75]
+
+Reconsider the Realizability Assumption
+The Realizability Assumption
+There exists ℎ∗∈Hsuch that
+𝐿(D, 𝑓)(ℎ∗) = ℙ𝑥∼D[ℎ∗(𝑥) ≠𝑓(𝑥)] = 0
+(26)
+Comment: this is a strong assumption
+▶Do we really know 𝑓?
+▶Does equation 26 also holds?
+58
+
+--------------------------------------------------------------------------------
+[End of Page 76]
+
+Example: Unrealistic assumption
+Image classification: what is the labeling function of all the images?
+14M images, 20K categories
+59
+
+--------------------------------------------------------------------------------
+[End of Page 77]
+
+Notation Revision
+▶Remove the labeling function 𝑓from the framework of PAC
+learning
+▶Modify the definitions
+▶Revise D as a joint distribution over X× Y
+▶Revise the true risk of a prediction rule ℎto be
+𝐿D(ℎ) = ℙ(𝑥,𝑦)∼D[ℎ(𝑥) ≠𝑦]
+(27)
+▶Revise the empirical risk remains the same
+𝐿𝑆(ℎ) = |{𝑖∈[𝑚] : ℎ(𝑥𝑖) ≠𝑦𝑖}|
+𝑚
+(28)
+▶No fundamental changes, just for the convenience of notations
+▶One more question that we need to answer: what the best
+hypothesis in Hcan do?
+60
+
+--------------------------------------------------------------------------------
+[End of Page 78]
+
+Agnostic PAC Learnability
+A hypothesis class His agnostic PAC learnable if there exist a
+function 𝑚H : (0, 1)2 →ℕand a learning algorithm with the
+following property:
+▶for every distribution D over X× {−1, +1} and
+▶for every 𝜖, 𝛿∈(0, 1),
+when running the learning algorithm on 𝑚≥𝑚H(𝜖, 𝛿) i.i.d. examples
+generated by D, the algorithm returns a hypothesis ℎsuch that, with
+probability of at least 1 −𝛿,
+𝐿D(ℎ) ≤min
+ℎ′∈H𝐿D(ℎ′) + 𝜖
+(29)
+61
+
+--------------------------------------------------------------------------------
+[End of Page 79]
+
+Comments
+▶In general, we have
+𝐿D(ℎ) ≤min
+ℎ′∈H𝐿D(ℎ′) + 𝜖
+(30)
+▶If the realizability assumption holds, by the definition we have
+min
+ℎ′∈H𝐿D(ℎ′) = 0
+(31)
+and then,
+𝐿D(ℎ)
+≤
+min
+ℎ′∈H𝐿D(ℎ′) + 𝜖
+=
+𝜖
+which is a special case of agnostic PAC learning
+62
+
+--------------------------------------------------------------------------------
+[End of Page 80]
+
+The Bayes Optimal Predictor
+If we know the underlying data distribution D, what will be the best
+hypothesis in agnostic PAC learning?
+63
+
+--------------------------------------------------------------------------------
+[End of Page 81]
+
+The Bayes Optimal Predictor
+If we know the underlying data distribution D, what will be the best
+hypothesis in agnostic PAC learning?
+▶The Bayes optimal predictor: given a probability distribution D
+over X× {−1, +1}, the predictor is defined as
+𝑓D(𝑥) =
+
++1
+if ℙ[𝑦= 1|𝑥] ≥1
+2
+−1
+otherwise
+(32)
+63
+
+--------------------------------------------------------------------------------
+[End of Page 82]
+
+The Bayes Optimal Predictor
+If we know the underlying data distribution D, what will be the best
+hypothesis in agnostic PAC learning?
+▶The Bayes optimal predictor: given a probability distribution D
+over X× {−1, +1}, the predictor is defined as
+𝑓D(𝑥) =
+
++1
+if ℙ[𝑦= 1|𝑥] ≥1
+2
+−1
+otherwise
+(32)
+▶No other predictor can do better: for any predictor ℎ
+𝐿D(𝑓D) ≤𝐿D(ℎ)
+(33)
+▶Exercise: The Bayes predictor defined in Eq. 32 is optimal
+63
+
+--------------------------------------------------------------------------------
+[End of Page 83]
+
+Example
+Consider the following data distribution
+D = 1
+2 B(𝑥; 4, 1)
+|       {z       }
+𝑓(𝑥)=+1
++ 1
+2 B(𝑥, 1, 4)
+|       {z       }
+𝑓(𝑥)=−1
+(34)
+where B(𝑥, 𝛼, 𝛽) is a Beta distribution with parameters 𝛼and 𝛽
+64
+
+--------------------------------------------------------------------------------
+[End of Page 84]
+
+Example
+Consider the following data distribution
+D = 1
+2 B(𝑥; 4, 1)
+|       {z       }
+𝑓(𝑥)=+1
++ 1
+2 B(𝑥, 1, 4)
+|       {z       }
+𝑓(𝑥)=−1
+(34)
+where B(𝑥, 𝛼, 𝛽) is a Beta distribution with parameters 𝛼and 𝛽
+The true error of the Bayes predictor is 𝐿D( 𝑓D) = 0.0625
+64
+
+--------------------------------------------------------------------------------
+[End of Page 85]
+
+Example (Cont.)
+With 2K training examples, we can find ℎ𝑆by minimizing the
+empirical risk 𝐿𝑆(ℎ)
+▶the empirical risk of ℎ𝑆, 𝐿𝑆(ℎ𝑆) = 0.0535 (threshold 𝑏= 0.4996)
+▶the true risk of ℎ𝑆, 𝐿D(ℎ𝑆) = 0.06250018
+▶Reference: the true error of the Bayes predictor is 𝐿D( 𝑓D) = 0.0625
+65
+
+--------------------------------------------------------------------------------
+[End of Page 86]
+
+Reference
+Mitchell, T. M. (1997).
+Machine learning.
+McGraw-Hill.
+Shalev-Shwartz, S. and Ben-David, S. (2014).
+Understanding machine learning: From theory to algorithms.
+Cambridge university press.
+66
+
+--------------------------------------------------------------------------------
+[End of Page 87]

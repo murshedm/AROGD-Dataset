@@ -1,0 +1,179 @@
+CS 4774 Machine Learning
+Lecture 11: Large Language Models
+Yangfeng Ji
+Information and Language Processing Lab
+Department of Computer Science
+University of Virginia
+1
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+Word Embeddings
+2
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+Word Embeddings
+In NLP, word embeddings are numeric representations/vectors of words 
+Simple algebraic operations can be used to measure word similarity
+For example
+: the semantic similarity between word  and 
+3
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+Skip-gram Models
+The skip-gram model provides a way of learning word embeddings
+For a given sentence with words 
+, the
+skip-gram model builds word embeddings by using every word in the
+sentence to predict its surrounding words:
+4
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+Examples
+After learning, we can use word embeddings to identify some similar words, or
+calculate their semantic relations
+Nearest words in the embedding space
+Similarity between two words
+Word analogy
+Link
+5
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+Pre-training
+The idea of pre-training in this context is to build word embeddings without
+having a pre-defined NLP application (e.g., text classification, text generation)
+These pre-trained embeddings can be used generically in many scenarios
+Some example pre-trained word embeddings
+Google Word2vec
+Stanford GloVe
+6
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+Bias in Word Embeddings
+Pre-trained word embeddings may contain unexpected bias
+Bolukbasi et al., 2016
+7
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+From Word Embeddings to Sentence
+Representations
+8
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+Simple Methods
+For a given sentence with 
+ words, some simple methods of calculating sentence
+representations with pre-trained word embeddings
+Average of word embeddings
+Convolutional neural network
+9
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+Using RNNs
+Using a bi-directional RNN
+Building a RNN from left to right, we can use 
+ to replace 
+ as
+contextualized word embeddings
+We can also build another RNN from right to left, as
+The final word embedding of word  is the concatenation of these two vectors
+10
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+ELMo
+Embeddings from language models (ELMo)
+With -layer LSTM language model, each word 
+ will have a list of
+representations
+where
+: the word embedding
+: the hidden state from the -th layer of LSTM
+11
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+ELMo (II)
+A task-specific word representation from ELMo embeddings is
+where 
+ and 
+ are task-specific parameters
+12
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+Pre-trained Language Models
+13
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+Transformer
+Vaswani et al., 2017
+14
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+BERT
+Bidirectional Encoder Representations from Transfromers
+Devlin et al., 2019
+15
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+GPT
+Generative Pre-trained Transformers
+Radford et al., 2018
+16
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+GPT 4
+In the OpenAI's report on GPT-4:
+17
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+Reinforcement Learning with Human Feedback
+18
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+Data
+We don't know what data was used to training the later GPT models, but we can
+get some idea from the data used to further improve these models (e.g., GPT-3)
+19
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+Thank You!
+20
+
+--------------------------------------------------------------------------------
+[End of Page 20]

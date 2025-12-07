@@ -1,0 +1,1099 @@
+CS 4774 Machine Learning
+Gradient-based Optimization
+Yangfeng Ji
+Information and Language Processing Lab
+Department of Computer Science
+University of Virginia
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+Overview
+1. Gradient Descent
+2. Stochastic Gradient Descent
+3. SGD with Momentum
+4. Adaptive Learning Rates
+1
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+Gradient Descent
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+Learning as Optimization
+As discussed before, learning can be viewed as optimization problem.
+▶Training set 𝑆= {(𝒙1, 𝑦1), . . . , (𝒙𝑚, 𝑦𝑚)}
+▶Empirical risk
+𝐿(ℎ𝜽, 𝑆) = 1
+𝑚
+𝑚
+Õ
+𝑖=1
+𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖)
+(1)
+where 𝑅is the risk function
+▶Learning: minimize the empirical risk
+𝜽←argmin
+𝜽′
+𝐿𝑆(ℎ𝜽′, 𝑆)
+(2)
+3
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+Learning as Optimization (II)
+Some examples of risk functions
+▶Logistic regression
+𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖) = −log 𝑝(𝑦𝑖| 𝒙𝑖; 𝜽)
+(3)
+4
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+Learning as Optimization (II)
+Some examples of risk functions
+▶Logistic regression
+𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖) = −log 𝑝(𝑦𝑖| 𝒙𝑖; 𝜽)
+(3)
+▶Linear regression
+𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖) = ∥ℎ𝜽(𝒙𝑖) −𝑦𝑖∥2
+2
+(4)
+4
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+Learning as Optimization (II)
+Some examples of risk functions
+▶Logistic regression
+𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖) = −log 𝑝(𝑦𝑖| 𝒙𝑖; 𝜽)
+(3)
+▶Linear regression
+𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖) = ∥ℎ𝜽(𝒙𝑖) −𝑦𝑖∥2
+2
+(4)
+▶Neural network
+𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖) = Cross-entropy(ℎ𝜽(𝒙𝑖), 𝑦𝑖)
+(5)
+4
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+Learning as Optimization (II)
+Some examples of risk functions
+▶Logistic regression
+𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖) = −log 𝑝(𝑦𝑖| 𝒙𝑖; 𝜽)
+(3)
+▶Linear regression
+𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖) = ∥ℎ𝜽(𝒙𝑖) −𝑦𝑖∥2
+2
+(4)
+▶Neural network
+𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖) = Cross-entropy(ℎ𝜽(𝒙𝑖), 𝑦𝑖)
+(5)
+▶Percetpron and AdaBoost can also be viewed as minimizing
+certain loss functions
+4
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+Constrained Optimization
+The dual optimization problem for SVMs of the separable cases is
+max
+𝜶
+𝑚
+Õ
+𝑖=1
+𝛼𝑖−1
+2
+𝑚
+Õ
+𝑖,𝑗=1
+𝛼𝑖𝛼𝑗𝑦𝑖𝑦𝑗⟨𝒙𝑖, 𝒙𝑗⟩
+(6)
+s.t.
+𝛼𝑖≥0
+(7)
+𝑚
+Õ
+𝑖=1
+𝛼𝑖𝑦𝑖= 0 ∀𝑖∈[𝑚]
+(8)
+5
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+Constrained Optimization
+The dual optimization problem for SVMs of the separable cases is
+max
+𝜶
+𝑚
+Õ
+𝑖=1
+𝛼𝑖−1
+2
+𝑚
+Õ
+𝑖,𝑗=1
+𝛼𝑖𝛼𝑗𝑦𝑖𝑦𝑗⟨𝒙𝑖, 𝒙𝑗⟩
+(6)
+s.t.
+𝛼𝑖≥0
+(7)
+𝑚
+Õ
+𝑖=1
+𝛼𝑖𝑦𝑖= 0 ∀𝑖∈[𝑚]
+(8)
+▶Lagrange multiplier 𝜶is also called dual variable
+▶This is an optimization problem only about 𝜶
+▶The dual problem is defined on the inner product ⟨𝒙𝑖, 𝒙𝑗⟩
+5
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+Optimization via Gradient Descent
+The basic form of an optimization problem
+min 𝑓(𝜽)
+s.t.𝜽∈𝐵
+(9)
+where 𝑓(𝜽) : ℝ𝑑→ℝis the objective function and 𝐵⊆ℝ𝑑is the
+constraint on 𝜽, which usually can be formulated as a set of
+inequalities (e.g., SVM)
+6
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+Optimization via Gradient Descent
+The basic form of an optimization problem
+min 𝑓(𝜽)
+s.t.𝜽∈𝐵
+(9)
+where 𝑓(𝜽) : ℝ𝑑→ℝis the objective function and 𝐵⊆ℝ𝑑is the
+constraint on 𝜽, which usually can be formulated as a set of
+inequalities (e.g., SVM)
+In this lecture
+▶we only focus on unconstrained optimization problem, in other
+words, 𝜽∈ℝ𝑑
+▶assume 𝑓is convex and differentiable
+6
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+Review: Gradient of a 1-D Function
+Consider the gradient of this 1-dimensional function
+𝑦= 𝑓(𝑥) = 𝑥2 −𝑥−2
+(10)
+7
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+Review: Gradient of a 2-D Function
+Now, consider a 2-dimensional function with 𝒙= (𝑥1, 𝑥2)
+𝑦= 𝑓(𝒙) = 𝑥2
+1 + 2𝑥2
+2
+(11)
+Here is the contour plot of this function
+We are going to use this as our running example
+8
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+Gradient Descent
+To learn the parameter 𝜽, the learning algorithm needs to update it
+iteratively using the following three steps
+1. Choose an initial point 𝜽(0) ∈ℝ𝑑
+2. Repeat
+𝜽(𝑡+1) ←𝜽(𝑡) −𝜂𝑡· ∇𝑓(𝜽)|𝜽=𝜽(𝑡)
+(12)
+where 𝜂𝑡is the learning rate at time 𝑡
+3. Go back step 1 until it converges
+9
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+Gradient Descent
+To learn the parameter 𝜽, the learning algorithm needs to update it
+iteratively using the following three steps
+1. Choose an initial point 𝜽(0) ∈ℝ𝑑
+2. Repeat
+𝜽(𝑡+1) ←𝜽(𝑡) −𝜂𝑡· ∇𝑓(𝜽)|𝜽=𝜽(𝑡)
+(12)
+where 𝜂𝑡is the learning rate at time 𝑡
+3. Go back step 1 until it converges
+∇𝑓(𝜽) is defined as
+∇𝑓(𝜽) =
+ 𝜕𝑓(𝜽)
+𝜕𝜃1
+, · · · , 𝜕𝑓(𝜽)
+𝜕𝜃𝑑
+
+(13)
+9
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+Gradient Descent Interpretation
+An intuitive justification of the gradient descent algorithm is to
+consider the following plot
+The direction of the gradient is the direction that the function has the
+“fastest increase”.
+10
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+Gradient Descent Interpretation (II)
+Theoretical justification
+▶First-order Taylor approximation
+𝑓(𝜽+ Δ𝜽) ≈𝑓(𝜽) + ⟨Δ𝜽, ∇𝑓⟩
+
+𝜽
+(14)
+11
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+Gradient Descent Interpretation (II)
+Theoretical justification
+▶First-order Taylor approximation
+𝑓(𝜽+ Δ𝜽) ≈𝑓(𝜽) + ⟨Δ𝜽, ∇𝑓⟩
+
+𝜽
+(14)
+▶In gradient descent, Δ𝜽= −𝜂∇𝑓
+
+𝜽
+11
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+Gradient Descent Interpretation (II)
+Theoretical justification
+▶First-order Taylor approximation
+𝑓(𝜽+ Δ𝜽) ≈𝑓(𝜽) + ⟨Δ𝜽, ∇𝑓⟩
+
+𝜽
+(14)
+▶In gradient descent, Δ𝜽= −𝜂∇𝑓
+
+𝜽
+▶Therefore, we have
+𝑓(𝜽+ Δ𝜽)
+≈
+𝑓(𝜽) + ⟨Δ𝜽, ∇𝑓⟩
+
+𝜽
+=
+𝑓(𝜽) −⟨𝜂∇𝑓, ∇𝑓⟩
+
+𝜽
+=
+𝑓(𝜽) −𝜂∥∇𝑓∥2
+2
+
+𝜽≤𝑓(𝜽)
+(15)
+11
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+Gradient Descent Interpretation (III)
+Consider the second-order Taylor approximation of 𝑓
+𝑓(𝜽′) ≈𝑓(𝜽) + ∇𝑓(𝜽)(𝜽′ −𝜽) + 1
+2(𝜽′ −𝜽)T∇2 𝑓(𝜽)(𝜽′ −𝜽)
+12
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+Gradient Descent Interpretation (III)
+Consider the second-order Taylor approximation of 𝑓
+𝑓(𝜽′) ≈𝑓(𝜽) + ∇𝑓(𝜽)(𝜽′ −𝜽) + 1
+2(𝜽′ −𝜽)T∇2 𝑓(𝜽)(𝜽′ −𝜽)
+▶The quadratic approximation of 𝑓with the following
+𝑓(𝜽′) ≈𝑓(𝜽) + ∇𝑓(𝜽)(𝜽′ −𝜽) + 1
+2𝜂(𝜽′ −𝜽)T(𝜽′ −𝜽)
+12
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+Gradient Descent Interpretation (III)
+Consider the second-order Taylor approximation of 𝑓
+𝑓(𝜽′) ≈𝑓(𝜽) + ∇𝑓(𝜽)(𝜽′ −𝜽) + 1
+2(𝜽′ −𝜽)T∇2 𝑓(𝜽)(𝜽′ −𝜽)
+▶The quadratic approximation of 𝑓with the following
+𝑓(𝜽′) ≈𝑓(𝜽) + ∇𝑓(𝜽)(𝜽′ −𝜽) + 1
+2𝜂(𝜽′ −𝜽)T(𝜽′ −𝜽)
+▶Minimize 𝑓(𝜽′) wrt 𝜽′
+𝜕𝑓(𝜽′)
+𝜕𝜽′
+≈
+∇𝑓(𝜽) + 1
+2𝜂(𝜽′ −𝜽) = 0
+⇒
+𝜽′ = 𝜽−𝜂· ∇𝑓(𝜽)
+(16)
+12
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+Gradient Descent Interpretation (III)
+Consider the second-order Taylor approximation of 𝑓
+𝑓(𝜽′) ≈𝑓(𝜽) + ∇𝑓(𝜽)(𝜽′ −𝜽) + 1
+2(𝜽′ −𝜽)T∇2 𝑓(𝜽)(𝜽′ −𝜽)
+▶The quadratic approximation of 𝑓with the following
+𝑓(𝜽′) ≈𝑓(𝜽) + ∇𝑓(𝜽)(𝜽′ −𝜽) + 1
+2𝜂(𝜽′ −𝜽)T(𝜽′ −𝜽)
+▶Minimize 𝑓(𝜽′) wrt 𝜽′
+𝜕𝑓(𝜽′)
+𝜕𝜽′
+≈
+∇𝑓(𝜽) + 1
+2𝜂(𝜽′ −𝜽) = 0
+⇒
+𝜽′ = 𝜽−𝜂· ∇𝑓(𝜽)
+(16)
+▶Gradient descent chooses the next point 𝜽′ to minimize the
+function
+12
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+Step size
+𝜽(𝑡+1) ←𝜽(𝑡) −𝜂𝑡· 𝜕𝑓(𝜽)
+𝜕𝜽
+
+𝜽=𝜽(𝑡)
+(17)
+If choose fixed step size 𝜂𝑡= 𝜂0, consider the following function
+𝑓(𝜽) = (10𝜃2
+1 + 𝜃2
+2)/2
+(a) Too small
+13
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+Step size
+𝜽(𝑡+1) ←𝜽(𝑡) −𝜂𝑡· 𝜕𝑓(𝜽)
+𝜕𝜽
+
+𝜽=𝜽(𝑡)
+(17)
+If choose fixed step size 𝜂𝑡= 𝜂0, consider the following function
+𝑓(𝜽) = (10𝜃2
+1 + 𝜃2
+2)/2
+(d) Too small
+(e) Too large
+13
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+Step size
+𝜽(𝑡+1) ←𝜽(𝑡) −𝜂𝑡· 𝜕𝑓(𝜽)
+𝜕𝜽
+
+𝜽=𝜽(𝑡)
+(17)
+If choose fixed step size 𝜂𝑡= 𝜂0, consider the following function
+𝑓(𝜽) = (10𝜃2
+1 + 𝜃2
+2)/2
+(g) Too small
+(h) Too large
+(i) Just right
+13
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+Optimal Step Sizes
+▶Exact Line Search Solve this one-dimensional subproblem
+𝑡←argmin
+𝑠≥0
+𝑓(𝜽−𝑠∇𝑓(𝜽))
+(18)
+14
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+Optimal Step Sizes
+▶Exact Line Search Solve this one-dimensional subproblem
+𝑡←argmin
+𝑠≥0
+𝑓(𝜽−𝑠∇𝑓(𝜽))
+(18)
+▶Backtracking Line Search: with parameters 0 < 𝛽< 1,
+0 < 𝛼≤1/2, and large initial value 𝜂𝑡, if
+𝑓(𝜽−𝜂∇𝑓(𝜽)) > 𝑓(𝜽) −𝛼𝜂𝑡∥∇𝑓(𝜽)∥2
+2
+(19)
+shrink 𝜂𝑡←𝛽𝜂𝑡
+14
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+Optimal Step Sizes
+▶Exact Line Search Solve this one-dimensional subproblem
+𝑡←argmin
+𝑠≥0
+𝑓(𝜽−𝑠∇𝑓(𝜽))
+(18)
+▶Backtracking Line Search: with parameters 0 < 𝛽< 1,
+0 < 𝛼≤1/2, and large initial value 𝜂𝑡, if
+𝑓(𝜽−𝜂∇𝑓(𝜽)) > 𝑓(𝜽) −𝛼𝜂𝑡∥∇𝑓(𝜽)∥2
+2
+(19)
+shrink 𝜂𝑡←𝛽𝜂𝑡
+▶Usually, this is not worth the effort, since the computational
+complexity may be too high (e.g., 𝑓is a neural network)
+14
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+Convergence Analysis
+▶𝑓is convex and differentiable, additionally
+∥∇𝑓(𝜽) −∇𝑓(𝜽′)∥2 ≤𝐿· ∥𝜽−𝜽′∥2
+(20)
+for any 𝜽, 𝜽′ ∈ℝ𝑑and 𝐿is a fixed positive value
+15
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+Convergence Analysis
+▶𝑓is convex and differentiable, additionally
+∥∇𝑓(𝜽) −∇𝑓(𝜽′)∥2 ≤𝐿· ∥𝜽−𝜽′∥2
+(20)
+for any 𝜽, 𝜽′ ∈ℝ𝑑and 𝐿is a fixed positive value
+▶Theorem: Gradient descent with fixed step size 𝜂0 ≤1/𝐿satisfies
+𝑓(𝜽(𝑡)) −𝑓∗≤
+∥𝜽(0) −𝜽∗∥2
+2
+2𝜂0𝑡
+(21)
+where 𝑓∗is the optimal value and 𝜽∗is the optimal parameter
+15
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+Convergence Analysis
+▶𝑓is convex and differentiable, additionally
+∥∇𝑓(𝜽) −∇𝑓(𝜽′)∥2 ≤𝐿· ∥𝜽−𝜽′∥2
+(20)
+for any 𝜽, 𝜽′ ∈ℝ𝑑and 𝐿is a fixed positive value
+▶Theorem: Gradient descent with fixed step size 𝜂0 ≤1/𝐿satisfies
+𝑓(𝜽(𝑡)) −𝑓∗≤
+∥𝜽(0) −𝜽∗∥2
+2
+2𝜂0𝑡
+(21)
+where 𝑓∗is the optimal value and 𝜽∗is the optimal parameter
+▶Same result holds for backtracking with 𝜂0 replaced by 𝛽/𝐿
+15
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+Stochastic Gradient Descent
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+Gradient Descent
+Given a training set {(𝒙𝑖, 𝑦𝑖)}𝑚
+𝑖=1, the loss function is defined as
+𝐿(ℎ𝜽, 𝑆) = 1
+𝑚
+𝑚
+Õ
+𝑖=1
+𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖)
+(22)
+where 𝑅is the risk function
+Examples:
+▶Logistic regression
+𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖) = −log 𝑝(𝑦𝑖| 𝒙𝑖; 𝜽)
+(23)
+▶Linear regression
+𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖) = ∥ℎ𝜽(𝒙𝑖) −𝑦𝑖∥2
+2
+(24)
+17
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+Gradient Descent (II)
+▶Consider the gradient of loss function ∇𝐿(ℎ𝜽, 𝑆)
+∇𝐿(ℎ𝜽, 𝑆) = 1
+𝑚
+𝑚
+Õ
+𝑖=1
+∇𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖)
+(25)
+18
+
+--------------------------------------------------------------------------------
+[End of Page 36]
+
+Gradient Descent (II)
+▶Consider the gradient of loss function ∇𝐿(ℎ𝜽, 𝑆)
+∇𝐿(ℎ𝜽, 𝑆) = 1
+𝑚
+𝑚
+Õ
+𝑖=1
+∇𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖)
+(25)
+▶To simplify the notation, let 𝑓𝑖(𝜽) = 𝑅(ℎ𝜽(𝒙𝑖), 𝑦𝑖) and
+𝑓(𝜽) = 𝐿(ℎ𝜽, 𝑆), then
+∇𝑓(𝜽) = 1
+𝑚
+𝑚
+Õ
+𝑖=1
+∇𝑓𝑖(𝜽)
+(26)
+18
+
+--------------------------------------------------------------------------------
+[End of Page 37]
+
+Stochastic Gradient Descent
+To learn the parameter 𝜽, we can compute the gradient with one
+training example (𝒙𝑖, 𝑦𝑖) each time step and update the parameter as
+𝜽(𝑡+1) ←𝜽(𝑡) −𝜂𝑡· ∇𝑓𝑖(𝜽)|𝜽(𝑡)
+(27)
+where
+▶𝑡: time step
+▶∇𝑓𝑖(𝜽(𝑡)) is the gradient of the single-example loss 𝐿
+▶𝜂𝑡is the learning rate (step size)
+19
+
+--------------------------------------------------------------------------------
+[End of Page 38]
+
+Stochastic?
+Compare gradient descent and stochastic gradient descent
+As each step SGD only uses the gradient from one training example,
+it can be viewed as a gradient descent method with some randomness
+20
+
+--------------------------------------------------------------------------------
+[End of Page 39]
+
+Motivation
+There are at least two motivations of using SGD
+▶SGD can be a big savings in terms of memory usage
+▶learning with large-scale data
+▶models with lots of parameters
+▶The iteration cost of SGD is independent of sample size 𝑚
+21
+
+--------------------------------------------------------------------------------
+[End of Page 40]
+
+Motivation (II)
+An empirical comparison between SGD and a batch optimization
+method (L-BFGS) on a binary classification problem with logistic
+regression [Bottou et al., 2018]
+22
+
+--------------------------------------------------------------------------------
+[End of Page 41]
+
+How to Choose an Example
+▶Cyclic Rule: choose 𝑖∈(1, 2, . . . , 𝑚) in order
+23
+
+--------------------------------------------------------------------------------
+[End of Page 42]
+
+How to Choose an Example
+▶Cyclic Rule: choose 𝑖∈(1, 2, . . . , 𝑚) in order
+▶Randomized Rule: Every iteration, choose 𝑖∈[𝑚] uniformly at
+random
+▶In practice, randomized rule is more common, since we have
+𝐸[∇𝑓𝑖(𝜽)] ≈1
+𝑚
+𝑚
+Õ
+𝑖=1
+∇𝑓𝑖(𝜽) = ∇𝑓(𝜽)
+(28)
+as an unbiased estimate of ∇𝑓(𝜽)
+▶Alternatively, shuffle the training example at the end of each
+training epoch
+23
+
+--------------------------------------------------------------------------------
+[End of Page 43]
+
+Convergence of SGD
+The convergence of SGD usually requires diminishing step sizes
+▶The usual conditions on the learning rates are
+∞
+Õ
+𝑡=1
+𝜂𝑡= ∞
+∞
+Õ
+𝑡=1
+𝜂2
+𝑡≤∞
+(29)
+[Bottou et al., 1998]
+24
+
+--------------------------------------------------------------------------------
+[End of Page 44]
+
+Convergence of SGD
+The convergence of SGD usually requires diminishing step sizes
+▶The usual conditions on the learning rates are
+∞
+Õ
+𝑡=1
+𝜂𝑡= ∞
+∞
+Õ
+𝑡=1
+𝜂2
+𝑡≤∞
+(29)
+▶A simplest function that satisfies these conditions is
+𝜂𝑡= 1
+𝑡
+(30)
+[Bottou et al., 1998]
+24
+
+--------------------------------------------------------------------------------
+[End of Page 45]
+
+SGD with Momentum
+
+--------------------------------------------------------------------------------
+[End of Page 46]
+
+Review: Vector Addition
+The parallelogram law of vector addition
+𝒄= 𝒂+ 𝒃
+(31)
+26
+
+--------------------------------------------------------------------------------
+[End of Page 47]
+
+SGD with Momentum
+Given the loss function 𝑓(𝜽) to be minimized, SGD with momentum
+is given by
+𝒗(𝑡)
+=
+𝜇𝒗(𝑡−1) + ∇𝑓(𝜽)|𝜽(𝑡−1)
+(32)
+𝜽(𝑡)
+=
+𝜽(𝑡−1) −𝜂𝑡𝒗(𝑡)
+(33)
+where
+▶𝜂𝑡is still the learning rate
+▶𝜇∈[0, 1] is the momentum coefficient. Usually, 𝜇= 0.99 or 0.999.
+27
+
+--------------------------------------------------------------------------------
+[End of Page 48]
+
+Intuitive Explanation
+(Note: the arrow show the opposite direction of the gradient)
+(a) SGD without momentum
+Figure: The effect of momentum in SGD: reduce the fluctuation (Credit:
+Genevieve B. Orr)
+28
+
+--------------------------------------------------------------------------------
+[End of Page 49]
+
+Intuitive Explanation
+(Note: the arrow show the opposite direction of the gradient)
+(a) SGD without momentum
+(b) SGD with momentum
+Figure: The effect of momentum in SGD: reduce the fluctuation (Credit:
+Genevieve B. Orr)
+28
+
+--------------------------------------------------------------------------------
+[End of Page 50]
+
+Another Example with Contour Plot
+Consider the following problem
+𝑦= 𝑥2
+1 + 10𝑥2
+2
+(34)
+𝜕𝑦
+𝜕𝑥1
+= 2𝑥1
+𝜕𝑦
+𝜕𝑥2
+= 20𝑥2
+(35)
+Note: the arrow show the opposite direction of the gradient
+29
+
+--------------------------------------------------------------------------------
+[End of Page 51]
+
+Another Example with Contour Plot (Cont.)
+Add the previous gradient reduce the fluctuation of stochastic
+gradients
+𝒗(𝑡) = 𝜇𝒗(𝑡−1) + 𝒈(𝑡−1)
+(36)
+!"($%&)
+(($%&)
+"($)
+Note: the arrow show the opposite direction of the gradient
+30
+
+--------------------------------------------------------------------------------
+[End of Page 52]
+
+Adaptive Learning Rates
+
+--------------------------------------------------------------------------------
+[End of Page 53]
+
+Basic Idea
+The basic idea of using adaptive learning rates is to make sure that
+all 𝜽𝑘’s converge roughly at the same speed
+For neural networks, the motivation of picking a different learning
+rate for each 𝜽𝑘(the 𝑘-th component of parameter 𝜽) is not
+new [LeCun et al., 2012] (the article was originally published in 1998).
+32
+
+--------------------------------------------------------------------------------
+[End of Page 54]
+
+AdaGrad
+The basic idea of AdaGrad [Duchi et al., 2011] is to modify the
+learning rate 𝜂for 𝜽𝑘by using the history of the gradients
+𝜃(𝑡)
+𝑘
+= 𝜃(𝑡−1)
+𝑘
+−
+𝜂0
+q
+𝐺(𝑡−1)
+𝑘,𝑘
++ 𝜖
+𝑔(𝑡−1)
+𝑘
+(37)
+33
+
+--------------------------------------------------------------------------------
+[End of Page 55]
+
+AdaGrad
+The basic idea of AdaGrad [Duchi et al., 2011] is to modify the
+learning rate 𝜂for 𝜽𝑘by using the history of the gradients
+𝜃(𝑡)
+𝑘
+= 𝜃(𝑡−1)
+𝑘
+−
+𝜂0
+q
+𝐺(𝑡−1)
+𝑘,𝑘
++ 𝜖
+𝑔(𝑡−1)
+𝑘
+(37)
+▶𝑔(𝑡−1)
+𝑘
+= [∇𝑓(𝜽)|𝜽(𝑡−1)]𝑘is the 𝑘-th component of ∇𝑓(𝜽)|𝜽(𝑡−1)
+▶𝐺(𝑡−1)
+𝑘,𝑘
+= Í𝑡−1
+𝑖=1(𝑔(𝑖)
+𝑘)2
+33
+
+--------------------------------------------------------------------------------
+[End of Page 56]
+
+AdaGrad
+The basic idea of AdaGrad [Duchi et al., 2011] is to modify the
+learning rate 𝜂for 𝜽𝑘by using the history of the gradients
+𝜃(𝑡)
+𝑘
+= 𝜃(𝑡−1)
+𝑘
+−
+𝜂0
+q
+𝐺(𝑡−1)
+𝑘,𝑘
++ 𝜖
+𝑔(𝑡−1)
+𝑘
+(37)
+▶𝑔(𝑡−1)
+𝑘
+= [∇𝑓(𝜽)|𝜽(𝑡−1)]𝑘is the 𝑘-th component of ∇𝑓(𝜽)|𝜽(𝑡−1)
+▶𝐺(𝑡−1)
+𝑘,𝑘
+= Í𝑡−1
+𝑖=1(𝑔(𝑖)
+𝑘)2
+▶𝜂0 is the initial learning rate
+▶𝜖is a smoothing parameter usually with order 10−6
+33
+
+--------------------------------------------------------------------------------
+[End of Page 57]
+
+AdaGrad: Intuitive Explanation
+Consider the gradient of a 2-dimensional optimization problem with
+𝜽= (𝜃1, 𝜃2)
+𝜃(𝑡)
+𝑘
+= 𝜃(𝑡−1)
+𝑘
+−
+𝜂0
+q
+𝐺(𝑡−1)
+𝑘,𝑘
++ 𝜖
+𝑔(𝑡−1)
+𝑘
+(38)
+The magnitude of gradient along 𝜃2 is often larger then 𝜃1
+34
+
+--------------------------------------------------------------------------------
+[End of Page 58]
+
+AdaGrad: Intuitive Explanation
+Consider the gradient of a 2-dimensional optimization problem with
+𝜽= (𝜃1, 𝜃2)
+𝜃(𝑡)
+𝑘
+= 𝜃(𝑡−1)
+𝑘
+−
+𝜂0
+q
+𝐺(𝑡−1)
+𝑘,𝑘
++ 𝜖
+𝑔(𝑡−1)
+𝑘
+(38)
+The magnitude of gradient along 𝜃2 is often larger then 𝜃1
+AdaGrad helps shrink step sizes along 𝜃2 that allows the procedure
+converges roughly at the same speed
+34
+
+--------------------------------------------------------------------------------
+[End of Page 59]
+
+RMSProp
+RMSProp (Root Mean Square Propagation) uses a moving average
+over the past gradients
+𝜃(𝑡)
+𝑘
+= 𝜃(𝑡−1)
+𝑘
+−
+𝜂0
+q
+𝒓(𝑡)
+𝑘+ 𝜖
+𝑔(𝑡−1)
+𝑘
+(39)
+where
+𝑟(𝑡)
+𝑘
+= 𝜌𝑟(𝑡−1)
+𝑘
++ (1 −𝜌)[𝑔(𝑡−1)
+𝑘
+]2
+(40)
+and 𝜌∈(0, 1), 𝑘is the dimension index, and 𝑡is the time stemp
+[Hinton, 2012]
+35
+
+--------------------------------------------------------------------------------
+[End of Page 60]
+
+Adam
+The Adam algorithm [Kingma and Ba, 2014] is proposed to combine
+the idea of SGD with moment and RMSProp
+36
+
+--------------------------------------------------------------------------------
+[End of Page 61]
+
+Adam
+The Adam algorithm [Kingma and Ba, 2014] is proposed to combine
+the idea of SGD with moment and RMSProp
+𝑣(𝑡)
+𝑘
+=
+𝜇𝑣(𝑡−1)
+𝑘
++ (1 −𝜇)𝑔(𝑡−1)
+𝑘
+(41)
+𝑟(𝑡)
+𝑘
+=
+𝜌𝑟(𝑡−1)
+𝑘
++ (1 −𝜌)[𝑔(𝑡−1)
+𝑘
+]2
+(42)
+ˆ𝑣(𝑡)
+𝑘
+=
+𝑣(𝑡)
+𝑘
+1 −𝜇𝑡
+(43)
+ˆ𝑟(𝑡)
+𝑘
+=
+𝑟(𝑡)
+𝑘
+1 −𝜌𝑡
+(44)
+𝜃(𝑡)
+𝑘
+=
+𝜃(𝑡−1)
+𝑘
+−𝜂0
+ˆ𝑣(𝑡)
+𝑘
+q
+ˆ𝑟(𝑡)
+𝑘
++ 𝜖
+(45)
+The default values of 𝜇and 𝜌are 0.9 and 0.999 respectively.
+36
+
+--------------------------------------------------------------------------------
+[End of Page 62]
+
+Adam
+The Adam algorithm [Kingma and Ba, 2014] is proposed to combine
+the idea of SGD with moment and RMSProp
+𝑣(𝑡)
+𝑘
+=
+𝜇𝑣(𝑡−1)
+𝑘
++ (1 −𝜇)𝑔(𝑡−1)
+𝑘
+(41)
+𝑟(𝑡)
+𝑘
+=
+𝜌𝑟(𝑡−1)
+𝑘
++ (1 −𝜌)[𝑔(𝑡−1)
+𝑘
+]2
+(42)
+(43)
+(44)
+𝜃(𝑡)
+𝑘
+=
+𝜃(𝑡−1)
+𝑘
+−𝜂0
+ˆ𝑣(𝑡)
+𝑘
+q
+ˆ𝑟(𝑡)
+𝑘
++ 𝜖
+(45)
+The default values of 𝜇and 𝜌are 0.9 and 0.999 respectively.
+36
+
+--------------------------------------------------------------------------------
+[End of Page 63]
+
+How to Choose a Optimization Algorithm?
+[Hinton, 2012, Lecture Notes in 2012]
+37
+
+--------------------------------------------------------------------------------
+[End of Page 64]
+
+Reference
+Bottou, L., Curtis, F. E., and Nocedal, J. (2018).
+Optimization methods for large-scale machine learning.
+Siam Review, 60(2):223–311.
+Bottou, L. et al. (1998).
+Online learning and stochastic approximations.
+On-line learning in neural networks, 17(9):142.
+Duchi, J., Hazan, E., and Singer, Y. (2011).
+Adaptive subgradient methods for online learning and stochastic optimization.
+Journal of machine learning research, 12(Jul):2121–2159.
+Hinton, G. (2012).
+Neural networks for machine learning.
+Lecture notes.
+Kingma, D. P. and Ba, J. (2014).
+Adam: A method for stochastic optimization.
+arXiv preprint arXiv:1412.6980.
+LeCun, Y. A., Bottou, L., Orr, G. B., and Müller, K.-R. (2012).
+Efficient backprop.
+In Neural networks: Tricks of the trade, pages 9–48. Springer.
+38
+
+--------------------------------------------------------------------------------
+[End of Page 65]

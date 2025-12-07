@@ -1,0 +1,691 @@
+CS 4774 Machine Learning
+Dimensionality Reduction
+Yangfeng Ji
+Information and Language Processing Lab
+Department of Computer Science
+University of Virginia
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+Overview
+1. Reducing Dimensions
+2. Principal Component Analysis
+3. A Different Viewpoint of PCA
+1
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+Reducing Dimensions
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+Curse of Dimensionality
+What is the volume difference between two 𝑑-dimensional balls with
+radii 𝑟1 = 1 and 𝑟2 = 0.99
+3
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+Curse of Dimensionality
+What is the volume difference between two 𝑑-dimensional balls with
+radii 𝑟1 = 1 and 𝑟2 = 0.99
+▶𝑑= 2: 1
+2𝜋(𝑟2
+1 −𝑟2
+2) ≈0.03
+▶𝑑= 3: 4
+3𝜋(𝑟3
+1 −𝑟3
+2) ≈0.12
+3
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+Curse of Dimensionality
+What is the volume difference between two 𝑑-dimensional balls with
+radii 𝑟1 = 1 and 𝑟2 = 0.99
+▶𝑑= 2: 1
+2𝜋(𝑟2
+1 −𝑟2
+2) ≈0.03
+▶𝑑= 3: 4
+3𝜋(𝑟3
+1 −𝑟3
+2) ≈0.12
+▶General form:
+𝜋𝑑/2
+Γ( 𝑑
+2 +1)(𝑟𝑑
+1 −𝑟𝑑
+2) with
+𝑟𝑑
+2 →0 when 𝑑→∞
+▶E.g., 𝑟500
+2
+= 0.00657
+3
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+Curse of Dimensionality
+What is the volume difference between two 𝑑-dimensional balls with
+radii 𝑟1 = 1 and 𝑟2 = 0.99
+▶𝑑= 2: 1
+2𝜋(𝑟2
+1 −𝑟2
+2) ≈0.03
+▶𝑑= 3: 4
+3𝜋(𝑟3
+1 −𝑟3
+2) ≈0.12
+▶General form:
+𝜋𝑑/2
+Γ( 𝑑
+2 +1)(𝑟𝑑
+1 −𝑟𝑑
+2) with
+𝑟𝑑
+2 →0 when 𝑑→∞
+▶E.g., 𝑟500
+2
+= 0.00657
+Question: what will happen if we uniformly sample from a
+𝑑-dimensional ball?
+3
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+Curse of Dimensionality (II)
+If we randomly sample 1K unit vectors from a 𝑑-dimensional space
+and calculate the the Euclidean distance between any two vectors,
+then the distance distribution looks like
+4
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+Curse of Dimensionality (II)
+If we randomly sample 1K unit vectors from a 𝑑-dimensional space
+and calculate the the Euclidean distance between any two vectors,
+then the distance distribution looks like
+Figure: 𝑑= 100
+4
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+Curse of Dimensionality (II)
+If we randomly sample 1K unit vectors from a 𝑑-dimensional space
+and calculate the the Euclidean distance between any two vectors,
+then the distance distribution looks like
+Figure: 𝑑= 500
+4
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+Curse of Dimensionality (II)
+If we randomly sample 1K unit vectors from a 𝑑-dimensional space
+and calculate the the Euclidean distance between any two vectors,
+then the distance distribution looks like
+Figure: 𝑑= 1000
+4
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+Dimensionality Reduction
+Dimensionality Reduction is the process of taking data in a high
+dimensional space and mapping it into a new space whose
+dimensionality is much smaller.
+5
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+Dimensionality Reduction
+Dimensionality Reduction is the process of taking data in a high
+dimensional space and mapping it into a new space whose
+dimensionality is much smaller.
+Mathematically, it means
+𝑓: 𝒙→˜𝒙
+(1)
+where 𝒙∈ℝ𝑑, ˜𝒙∈ℝ𝑛with 𝑛< 𝑑
+5
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+Reducing Dimensions: A toy example
+For the purpose of reducing dimensions, we can project 𝒙= (𝑥1, 𝑥2)
+into the direction along 𝑥1 or 𝑥2
+𝑥1
+𝑥2
+Question: Given these two data examples, which direction we should
+pick? 𝑥1 or 𝑥2?
+6
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+Reducing Dimensions: A toy example
+For the purpose of reducing dimensions, we can project 𝒙= (𝑥1, 𝑥2)
+into the direction along 𝑥1 or 𝑥2
+𝑥1
+𝑥2
+Question: Given these two data examples, which direction we should
+pick? 𝑥1 or 𝑥2?
+6
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+Reducing Dimensions: A toy example (II)
+There is a better solution if we are allowed to rotate the coordinate
+𝑥1
+𝑥2
+7
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+Reducing Dimensions: A toy example (II)
+There is a better solution if we are allowed to rotate the coordinate
+𝑥1
+𝑥2
+𝑢1
+𝑢2
+Pick 𝑢1, then we preserve all the variance of the examples
+7
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+Reducing Dimensions: A toy example (III)
+Consider a general case, where the examples do not lie on a perfect
+line
+[Bishop, 2006, Section 12.1]
+8
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+Reducing Dimensions: A toy example (III)
+Consider a general case, where the examples do not lie on a perfect
+line
+We can follow the same idea by finding a direction that can preserve
+most of the variance of the examples
+[Bishop, 2006, Section 12.1]
+8
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+Principal Component Analysis
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+Formulation
+Given a set of example 𝑆= {𝒙1, . . . , 𝒙𝑚}
+▶Centering the data by removing the mean ¯𝒙= 1
+𝑚
+Í𝑚
+𝑖=1 𝒙𝑖
+𝒙𝑖←𝒙𝑖−¯𝒙
+∀𝑖∈[𝑚]
+(2)
+10
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+Formulation
+Given a set of example 𝑆= {𝒙1, . . . , 𝒙𝑚}
+▶Centering the data by removing the mean ¯𝒙= 1
+𝑚
+Í𝑚
+𝑖=1 𝒙𝑖
+𝒙𝑖←𝒙𝑖−¯𝒙
+∀𝑖∈[𝑚]
+(2)
+▶Assume the direction that we would like to project the data is 𝒖,
+then the objective function is the data variance
+𝐽(𝒖) = 1
+𝑚
+𝑚
+Õ
+𝑖=1
+(𝒖T𝒙𝑖)2
+(3)
+10
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+Formulation
+Given a set of example 𝑆= {𝒙1, . . . , 𝒙𝑚}
+▶Centering the data by removing the mean ¯𝒙= 1
+𝑚
+Í𝑚
+𝑖=1 𝒙𝑖
+𝒙𝑖←𝒙𝑖−¯𝒙
+∀𝑖∈[𝑚]
+(2)
+▶Assume the direction that we would like to project the data is 𝒖,
+then the objective function is the data variance
+𝐽(𝒖) = 1
+𝑚
+𝑚
+Õ
+𝑖=1
+(𝒖T𝒙𝑖)2
+(3)
+▶Maximize 𝐽(𝒖) is trivial, if there is no constriant on 𝒖. Therefore,
+we set ∥𝒖∥2
+2 = 𝒖T𝒖= 1
+10
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+Covariance Matrix
+The definition of 𝐽(𝒖) can be written as
+𝐽(𝒖)
+=
+1
+𝑚
+𝑚
+Õ
+𝑖=1
+(𝒖T𝒙𝑖)2
+(4)
+=
+1
+𝑚
+𝑚
+Õ
+𝑖=1
+𝒖T𝒙𝑖𝒖T𝒙𝑖
+(5)
+=
+1
+𝑚
+𝑚
+Õ
+𝑖=1
+𝒖T𝒙𝑖𝒙T
+𝑖𝒖
+(6)
+=
+𝒖T 1
+𝑚
+𝑚
+Õ
+𝑖=1
+𝒙𝑖𝒙T
+𝑖
+
+𝒖
+(7)
+=
+𝒖T𝚺𝒖
+(8)
+where 𝚺is the data covariance matrix
+11
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+Optimization
+▶The optimization of finding a single direction projection is
+max
+𝒖
+𝐽(𝒖)
+=
+𝒖T𝚺𝒖
+(9)
+s.t.
+𝒖T𝒖= 1
+(10)
+12
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+Optimization
+▶The optimization of finding a single direction projection is
+max
+𝒖
+𝐽(𝒖)
+=
+𝒖T𝚺𝒖
+(9)
+s.t.
+𝒖T𝒖= 1
+(10)
+▶It can be converted to an unconstrained optimization problem
+with a Lagrange multiplier
+max
+𝒖
+
+𝒖T𝚺𝒖+ 𝜆(1 −𝒖T𝒖)	
+(11)
+12
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+Optimization
+▶The optimization of finding a single direction projection is
+max
+𝒖
+𝐽(𝒖)
+=
+𝒖T𝚺𝒖
+(9)
+s.t.
+𝒖T𝒖= 1
+(10)
+▶It can be converted to an unconstrained optimization problem
+with a Lagrange multiplier
+max
+𝒖
+
+𝒖T𝚺𝒖+ 𝜆(1 −𝒖T𝒖)	
+(11)
+▶The optimal solution is given by
+𝚺𝒖−𝜆𝒖= 0
+(12)
+𝚺𝒖= 𝜆𝒖
+(13)
+12
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+Two Observations
+There are two observations from
+𝚺𝒖= 𝜆𝒖
+(14)
+▶First, 𝜆is an eigenvalue of 𝚺and 𝒖is the corresponding
+eigenvector
+13
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+Two Observations
+There are two observations from
+𝚺𝒖= 𝜆𝒖
+(14)
+▶First, 𝜆is an eigenvalue of 𝚺and 𝒖is the corresponding
+eigenvector
+▶Second, multiplying 𝒖T on both sides, we have
+𝒖T𝚺𝒖= 𝜆
+(15)
+In order to maximize 𝐽(𝒖), 𝜆has to the largest eigenvalue 𝒖is the
+corresponding eigen vector.
+13
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+Principal Component Analysis
+▶As 𝒖indicates the first major direction that can preserve the data
+variance, it is called the first principal component
+14
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+Principal Component Analysis
+▶As 𝒖indicates the first major direction that can preserve the data
+variance, it is called the first principal component
+▶In general, with eigen decomposition, we have
+𝑼T𝚺𝑼= 𝚲
+(16)
+▶Eigenvalues 𝚲= diag(𝜆1, . . . , 𝜆𝑑)
+▶Eigenvectors 𝑼= [𝒖1, . . . , 𝒖𝑑]
+14
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+Principal Component Analysis (II)
+Assume in 𝚲= diag(𝜆1, . . . , 𝜆𝑑),
+𝜆1 ≥𝜆2 ≥· · · ≥𝜆𝑑
+(17)
+15
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+Principal Component Analysis (II)
+Assume in 𝚲= diag(𝜆1, . . . , 𝜆𝑑),
+𝜆1 ≥𝜆2 ≥· · · ≥𝜆𝑑
+(17)
+To reduce the dimensionality of 𝒙from 𝑑to 𝑛, with 𝑛< 𝑑
+▶Take the first 𝑛eigenvectors in 𝑼and form
+˜𝑼= [𝒖1, . . . , 𝒖𝑛] ∈ℝ𝑑×𝑛
+(18)
+15
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+Principal Component Analysis (II)
+Assume in 𝚲= diag(𝜆1, . . . , 𝜆𝑑),
+𝜆1 ≥𝜆2 ≥· · · ≥𝜆𝑑
+(17)
+To reduce the dimensionality of 𝒙from 𝑑to 𝑛, with 𝑛< 𝑑
+▶Take the first 𝑛eigenvectors in 𝑼and form
+˜𝑼= [𝒖1, . . . , 𝒖𝑛] ∈ℝ𝑑×𝑛
+(18)
+▶Reduce the dimensionality of 𝒙as
+˜𝒙= ˜𝑼T𝒙∈ℝ𝑛
+(19)
+15
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+Principal Component Analysis (II)
+Assume in 𝚲= diag(𝜆1, . . . , 𝜆𝑑),
+𝜆1 ≥𝜆2 ≥· · · ≥𝜆𝑑
+(17)
+To reduce the dimensionality of 𝒙from 𝑑to 𝑛, with 𝑛< 𝑑
+▶Take the first 𝑛eigenvectors in 𝑼and form
+˜𝑼= [𝒖1, . . . , 𝒖𝑛] ∈ℝ𝑑×𝑛
+(18)
+▶Reduce the dimensionality of 𝒙as
+˜𝒙= ˜𝑼T𝒙∈ℝ𝑛
+(19)
+▶The value of 𝑛can be determined by the following
+Í𝑛
+𝑖=1 𝜆𝑖
+Í𝑑
+𝑖=1 𝜆𝑖
+≈0.95
+(20)
+15
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+Reconstructing 𝒙?
+What if we want to reconstruct 𝒙(ℝ𝑑) from ˜𝒙(ℝ𝑛)?
+▶The answer is
+𝒙pca = ˜𝑼˜𝒙∈ℝ𝑑
+16
+
+--------------------------------------------------------------------------------
+[End of Page 36]
+
+Reconstructing 𝒙?
+What if we want to reconstruct 𝒙(ℝ𝑑) from ˜𝒙(ℝ𝑛)?
+▶The answer is
+𝒙pca = ˜𝑼˜𝒙∈ℝ𝑑
+▶Therefore, we have
+𝒙pca = ˜𝑼˜𝑼T𝒙
+as a reasonable approximation of 𝒙
+16
+
+--------------------------------------------------------------------------------
+[End of Page 37]
+
+Applications: Image Processing
+Reduce the dimensionality of an image dataset from 28 × 28 = 784 to
+𝑀
+(a) Original data
+[Bishop, 2006, Section 12.1]
+17
+
+--------------------------------------------------------------------------------
+[End of Page 38]
+
+Applications: Image Processing
+Reduce the dimensionality of an image dataset from 28 × 28 = 784 to
+𝑀
+(a) Original data
+(b) With the first 𝑀principal components
+[Bishop, 2006, Section 12.1]
+17
+
+--------------------------------------------------------------------------------
+[End of Page 39]
+
+A Different Viewpoint of PCA
+
+--------------------------------------------------------------------------------
+[End of Page 40]
+
+Data Reconstruction
+Another way to formulate the objective function of PCA
+min
+𝑾,𝑼
+𝑚
+Õ
+𝑖=1
+∥𝒙𝑖−𝑼𝑾𝒙𝑖∥2
+2
+(21)
+where
+▶𝑾∈ℝ𝑛×𝑑: mapping 𝒙𝑖from the original space to a
+lower-dimensional space ℝ𝑛
+▶𝑼∈ℝ𝑑×𝑛: mapping back the original space ℝ𝑑
+[Shalev-Shwartz and Ben-David, 2014, Chap 23]
+19
+
+--------------------------------------------------------------------------------
+[End of Page 41]
+
+Data Reconstruction
+Another way to formulate the objective function of PCA
+min
+𝑾,𝑼
+𝑚
+Õ
+𝑖=1
+∥𝒙𝑖−𝑼𝑾𝒙𝑖∥2
+2
+(21)
+where
+▶𝑾∈ℝ𝑛×𝑑: mapping 𝒙𝑖from the original space to a
+lower-dimensional space ℝ𝑛
+▶𝑼∈ℝ𝑑×𝑛: mapping back the original space ℝ𝑑
+▶Dimensionality reduction is performed as ˜𝒙= 𝑼𝒙, while 𝑾
+make sure the reduction does not loss much information
+[Shalev-Shwartz and Ben-David, 2014, Chap 23]
+19
+
+--------------------------------------------------------------------------------
+[End of Page 42]
+
+Optimization
+Consider the optimization problem
+min
+𝑾,𝑽
+𝑚
+Õ
+𝑖=1
+∥𝒙𝑖−𝑼𝑾𝒙𝑖∥2
+2
+(22)
+▶Let 𝑾, 𝑼be a solution of equation 24
+[Shalev-Shwartz and Ben-David, 2014, Lemma 23.1]
+▶the columns of 𝑼are orthonormal
+▶𝑾= 𝑼T
+20
+
+--------------------------------------------------------------------------------
+[End of Page 43]
+
+Optimization
+Consider the optimization problem
+min
+𝑾,𝑽
+𝑚
+Õ
+𝑖=1
+∥𝒙𝑖−𝑼𝑾𝒙𝑖∥2
+2
+(22)
+▶Let 𝑾, 𝑼be a solution of equation 24
+[Shalev-Shwartz and Ben-David, 2014, Lemma 23.1]
+▶the columns of 𝑼are orthonormal
+▶𝑾= 𝑼T
+▶The optimization problem can be simplified as
+min
+𝑼T𝑼=𝑰
+𝑚
+Õ
+𝑖=1
+∥𝒙𝑖−𝑼𝑼T𝒙𝑖∥2
+2
+(23)
+The solution will be the same.
+20
+
+--------------------------------------------------------------------------------
+[End of Page 44]
+
+Nonlinear Extension
+If we extend the both mappings to be nonlinear, then the model
+becomes a simple encoder-decoder neural network model
+min
+𝑾,𝑽
+𝑚
+Õ
+𝑖=1
+∥𝒙𝑖−tanh(𝑼· tanh(𝑾𝒙𝑖))∥2
+2
+(24)
+where
+▶˜𝒙= tanh(𝑾𝒙𝑖) is a simple encoder
+▶𝒙= tanh(𝑼˜𝒙) is a simple decoder
+▶No closed-form solutions of 𝑾, 𝑼, although the
+backpropagation algorithm still applies here
+21
+
+--------------------------------------------------------------------------------
+[End of Page 45]
+
+Reference
+Bishop, C. M. (2006).
+Pattern recognition and machine learning.
+Springer.
+Shalev-Shwartz, S. and Ben-David, S. (2014).
+Understanding machine learning: From theory to algorithms.
+Cambridge university press.
+22
+
+--------------------------------------------------------------------------------
+[End of Page 46]
