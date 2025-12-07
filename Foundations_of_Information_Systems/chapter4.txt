@@ -1,0 +1,1901 @@
+Figure 4.1 Something as simple as picking up medicine from a pharmacy entails a complex set of actions that require careful design
+by systems analysts who work in information systems development. (credit: modification of work “Controversy Surrounds
+Prescription Drug Monitoring Program” by Jiselle Macalaguin, KOMUnews/Flickr, CC BY 2.0)
+Chapter Outline
+4.1 Systems Analysis and Design for Application Development
+4.2 Defining the Business Problem and User Requirements
+4.3 Technical Design Methodologies and Practical Applications
+4.4 Designing for Mobile Devices and Other Design Considerations
+Introduction
+When you step into a pharmacy to pick up a prescription, the simple act is one point in a complex set of
+systems and actions. The system checks your prescription and ensures that it is reliable and valid. It then
+allows the pharmacist to dispense the requisite prescription and provides the notes to be printed for the
+patient and/or caregiver to ensure that the right dosage is taken for the time frame prescribed by the
+physician. In some cases, the information system also checks for allergies or other medications that may result
+in an adverse reaction for the patient. As a safety measure, this information, if available, is also provided in the
+notes provided with the prescription. This is just one example of how your daily life intersects with the design
+and development of information systems.
+4.1 Systems Analysis and Design for Application Development
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Describe the concept of systems analysis and design
+•
+Identify methodologies and tools used in systems analysis and design
+•
+Explain, compare, and contrast the software development life cycle (SDLC) and Agile software
+development
+•
+Describe the roles and responsibilities of analysis and design teams
+Systems Analysis, Design, and Development
+4
+
+The evolution of software projects from conception to implementation relies on tools that guide the design
+and ensure alignment with user needs and organizational goals. Throughout system development , the
+contributions of various teams and the methodologies they adopt play a pivotal role in shaping outcomes,
+with each phase offering unique challenges and opportunities for collaboration. To understand the concept of
+systems analysis and the design methodologies used for application development, you must also become
+familiar with the software development life cycle (SDLC) and Agile software development, as well as the roles
+and responsibilities of the analysis and design teams.
+Systems Analysis and Design
+The stepwise process for evaluating and developing information systems by understanding the needs of the
+business to improve or develop effective and efficient functioning solutions to technical challenges is called
+systems analysis and design. You may recall from Chapter 1 Fundamentals of Information Systems that
+information systems combine the people, processes, data, hardware, and software needed to collect, store,
+process, analyze, and distribute data. Examples of information systems include order processing, inventory
+control, human resource management, and sales management systems. Consider one information system you
+have probably encountered already: a prescription order process linking a prescribing doctor to a pharmacy. In
+Figure 4.2, you can view the workflow of a prescription request traveling from the prescriber through an
+electronic health record system toward the pharmacy staff and its system. In this scenario, there is an
+intermediate interaction with an e-prescription vendor’s system that is designed to translate and process that
+request so the receiving pharmacy staff can satisfy the doctor’s request for a patient’s medication.
+Figure 4.2 The prescription order process involves several systematic steps beginning with the prescriber sending a patient’s
+medicine order to an electronic health record database, which forwards it to a vendor, who then routes the order to a pharmacy’s
+internal system and staff, who finally provide the medicine to the customer. (attribution: Copyright Rice University, OpenStax, under
+CC BY 4.0 license; credit capsule: modification of work “Pill – The Noun Project” by Noelia Bravo/Wikimedia Commons, CC0 1.0; credit
+hospital sign: modification of work “Ic local hospital” by Google Inc./Wikimedia Commons, CC BY 4.0)
+Who would think there were so many steps involved with picking up a prescription from a local pharmacy?
+Starting at the doctor’s office, the physician submits a prescription order through an online ordering system to
+the patient’s preferred pharmacy. The pharmacy, upon receipt of the prescription order, processes the
+prescription accordingly by validating patient information such as insurance, reviewing the aspects of the
+116
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+order, preparing the medication, and conducting a final review before providing the patient with the
+medication and instructions for use. There are many systems at work in this scenario—systems that connect
+users (i.e., medical and pharmacy staff), hardware (i.e., computer, keyboard, central processing unit or CPU,
+and wireless routers), software (electronic health record or EHR, ePrescribe software, and pharmacy benefit
+management tools), and other devices, working together to provide services.
+Businesses initiate systems analysis and design to assess workflows, identify improvements, and create
+efficient systems. Some companies have formal processes with a task force led by a senior manager, while
+others approach systems analysis and design on an ad hoc basis. Organizations may prioritize projects using
+various criteria, tools, techniques, and input from multiple departments in order to align projects with
+business objectives. These initiatives often lead to systems analysis that can inform future design changes.
+LINK TO LEARNING
+The International Institute for Business Analysis (IIBA) is an internationally recognized organization that
+works on developing industry standard business analysis practices and resources. The IIBA, which has
+global reach, also considers a business’s mission, values, and goals to implement a systems thinking
+approach. Learn more about the IIBA’s practice of business analysis (https://openstax.org/r/
+109IIBABusinAny) from IIBA’s In the News section of their website.
+Benefits of Systems Analysis and Design
+Systems analysis and design offers several benefits to an organization, with the primary advantage being the
+identification of operational efficiencies through improvements to existing systems. This process also allows
+organizations to align their information systems with their strategic objectives, identify the risk of potential
+threats to processes early, minimize resources and costs, and improve the overall quality, efficiency,
+productivity, and usability of their systems.
+A systems analyst is a professional whose primary function is to utilize the systems analysis and design
+process to support information systems and to solve challenges associated with or posed by using the
+information systems. Systems analysts are often regarded as a conduit between information technology
+departments and business areas of the organization as they work to understand how an information system is
+used to support business functions and identify the challenges that persist and areas that need improvement.
+Although systems analysts are increasingly serving in information technology departments, they may also
+work in different areas of the business, such as operations, finance, marketing, sales, or human resources.
+Systems Analysis
+The process called systems analysis identifies the opportunities that can be discovered by examining
+business problems and develops possible solutions an organization may implement to address these
+problems. Systems analysis generally involves the following three activities: understanding the current
+business problem; determining the system requirements, constraints, and information needs; and generating
+a systems analysis report (Figure 4.3).
+4.1 • Systems Analysis and Design for Application Development
+117
+
+Figure 4.3 Understanding the current business problem; determining system requirements, constraints, and information needs; and
+generating a systems analysis report are the three basic components of systems analysis. (attribution: Copyright Rice University,
+OpenStax, under CC BY 4.0 license; credit left: modification of work “Noun Planning 1325509” by Arafat Uddin/Wikimedia Commons,
+CC BY 4.0; credit middle: modification of work “Noun Project problems icon 2417098” by Template, TH/Wikimedia Commons, CC BY
+3.0; credit right: modification of work “Noun project - Meeting with laptops” by Slava Strizh/Wikimedia Commons, CC BY 3.0)
+Understanding the Current Business Problem
+In defining the business problem, detailed information about the information system is gathered and analyzed
+using a variety of tools and techniques. To understand the business problem, the systems analyst first
+identifies stakeholders. A stakeholder is an individual or group who has a vested interest in or concern about
+a business decision. They may be internal or external to an organization and may include the community,
+government entities, employees, customers, investors, suppliers, or trade unions and associations. After
+identifying the stakeholders, the systems analyst begins the task of gathering information about the system to
+gain a better understanding of its functionalities and any challenges it currently faces. This information may
+include the purpose of the system, inputs and outputs, functional capabilities, number of users and levels of
+access, ease of use, accessibility, and challenges associated with its use.
+Common methods used to gather this information or data include:
+•
+System documentation review: The system documentation describes the system and its parts. It is used
+to understand how the system functions as well as serving as reference information. It may include
+requirements documentation, user guides, source code, architecture and design descriptions, and
+frequently asked questions (FAQs). By examining system documentation, the analyst may uncover how the
+system was originally designed to perform and changes made to the system since its initial use within the
+organization. The analyst may find that existing documentation may not be current, accurate, and/or
+complete. In that case, the analyst can work to revise and update the documentation for currency,
+accuracy, and completeness. Information-gathering may also involve examining policy documents and
+regulatory rules shaping the needs of the system.
+•
+Surveys: A survey is a common form of information gathering. It allows larger groups of users to respond
+to an inquiry about a system so they can provide insight into its use. Surveys are usually affordable to
+administer, take minimal time, and can involve a variety of stakeholders across the organization.
+•
+Interviews: The systems analyst may conduct interviews of different systems users and roles. To prepare
+for these interviews, the analyst will identify the objectives for the interview, generate and administer
+interview questions, document the results, and evaluate interview responses. Interviews may be
+structured (i.e., use the same interview questions and methods) or unstructured (i.e., involve no set format
+or predetermined questions). Interviews may take longer than other methods of information gathering
+but are useful in gaining insights that may not present themselves in surveys.
+•
+Observations: Making observations about an information system generally involves noting how users
+perform their functions through and in relation to the system and, in turn, how the system responds.
+Observations may be passive (e.g., watching users perform actions without interference or influence) or
+118
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+active (e.g., engaging with users and asking questions about the activities they perform). Web analytics or
+metrics may be used as a gauge of observations made. Inputs and outputs of the system are observed
+and then documented for further review and analysis.
+•
+Data analysis: Once the system documentation is collected, it is systematically reviewed, cleansed, sorted,
+and condensed so that conclusions and insights can be drawn to help solve business problems. Generally
+utilizing qualitative and/or quantitative/statistical analysis techniques, data analysis can be an iterative
+process where the team may need to refine the data gathering process to gain a further understanding of
+the data presented.
+Determining System Requirements, Constraints, and Information Needs
+System requirements are the capabilities stakeholders request to make a functioning system that supports
+their business needs. They can be categorized as functional, nonfunctional, business, technical, legal/
+regulatory, and/or performance related. Generally, the systems analyst will collaborate with stakeholders to
+gather these requirements. Once collected and defined, requirements are then placed in categories and
+prioritized based on criteria important to the business. As you will learn in 4.3 Technical Design Methodologies
+and Practical Applications, systems analysts may go further and develop user interface designs that give a
+representation of how system requirements interact with the data rules and roles and even the constraints of
+the system functionality.
+Access to system data about usage and functionality of the system is a key component to the user
+requirements. Reporting functionality that provides usage data at both the macro and micro levels can be
+helpful to assess both the system and the users of the system. One example of how system data serve as a key
+component of user requirements can be found in customer service call histories at data centers. Data about
+the details of a call (i.e., length, representative, day/time, reason for calling, resolution status) are usable for a
+variety of business purposes, including training, service improvements, and employee recognition. For
+example, the day and time associated with a call can point to a number of issues such as bandwidth availability
+or system processing issues, and this information can lead to changes in end-user training, needed system
+improvements, or identification of a group-specific issue. These system/user requirements and all supporting
+information are then reviewed, evaluated, and finalized with input from stakeholder users.
+ETHICS IN IS
+Values-Based Engineering
+Today, algorithms and artificial intelligence are driving the techniques used for systems analysis, design,
+and development. This can lead to ethical concerns, eroding user trust. For example, a 2023 study revealed
+that Google’s job search tools returned more higher-paying positions to men rather than job seekers of
+other gender identities. In addition, job applicant tracking systems are often found to favor words in
+résumés more closely associated with men.1 These systems have also placed nonnative speakers at a lower
+rank because of inherent bias from AI training on only one specific language.
+The process of values-based engineering (VbE) helps to address these challenges within the approaches to
+analysis, design, and development. This is accomplished by defining, prioritizing, addressing, and
+integrating values into the requirements process. VbE is applicable to both functional and nonfunctional
+requirements through tools, standards, and best practice guidelines.
+Generating a Systems Analysis Report
+The systems analyst typically provides interim feedback to stakeholders throughout the process, and the final
+1
+IBM Data and AI Team, “Shedding Light on AI Bias with Real World Examples,” IBM, October 16, 2023, https://www.ibm.com/think/
+topics/shedding-light-on-ai-bias-with-real-world-examples
+4.1 • Systems Analysis and Design for Application Development
+119
+
+step involves generating a systems analysis report. This report is likely to include recommended solutions to
+address or resolve the information system problem, and these solutions may take the form of changes in
+business processes, including systems improvements, elimination, or changes.
+LINK TO LEARNING
+A systems analysis report often takes the form of a feasibility study. Review this example of a feasibility
+study template (https://openstax.org/r/109Feasibility) that might be shared with stakeholders. It also
+features a survey asking shareholders to assess the viability of a proposed project.
+Systems Design
+A systems design is an organizational approach that aims to improve an existing system or to develop a
+newer one. This process involves doing the technical work of defining the data, interfaces, and overall
+architecture of a system based on user requirements and determining how these elements communicate with
+each other to produce a reliable, robust, and well-documented system.
+Before designs are made, the organization needs to decide whether to develop the new system or improve the
+existing one by outsourcing, buying off-the-shelf, or using in-house development. In-house systems
+development typically leads to systems design that generally includes data design, interface design, and
+process design, which could be performed in any order.
+•
+Data design: The activity of data design is when data and the actionable components resulting from the
+systems analysis process are translated from their raw formats and combined into understandable
+formats such as textual data (e.g., TXT), tabular data (e.g., spreadsheets), or images (e.g., PNG or JPEG) is
+called data design. At this stage, you can envision how the data and actionable components blend and
+create patterns, correlations, and trends into interactive systems. This is where works is done to reduce
+the complexity and improve the understanding of the information presented into usable formats.
+•
+Interface design: The process of interface design refers to designing the visual layout and functional
+elements of a product or system, and it involves using an understanding of people and processes to drive
+the final design outcomes.
+•
+Process design: The effort to further understand a business’s processes and how to improve them is called
+process design. It can support decision-making on new business ventures, expansions, and other
+business functions by breaking down the product into parts and identifying areas of operational
+efficiencies.
+Tools in Systems Analysis and Design
+Several tools play a part in systems analysis and design. Several of the most common are data dictionaries,
+simulations, pseudocode, structured English, and unified modeling language. A data dictionary is a database
+that houses the details of system data, its properties, entity relationships, and any reference documentation. A
+simulation is a model that mimics the operation of an improved or proposed system. The plain English steps
+for an algorithm or other system that cannot be used in a compiler are called pseudocode, and structured
+English is a sequence of decision rules that uses the English language with the syntax of structured
+programming and the convention of IF-THEN-ELSE. Another tool that can be used to lay out the blueprint at
+various levels in a system is a simplified modeling language called unified modeling language (UML).
+These tools are useful in creating diagrams of various system functions and relationships to gain deeper
+understanding during systems analysis. A data flow diagram (DFD) is a graphical representation of the
+information flow of a process or system. Another helpful diagram type is a UML diagram, which can show
+lower-level user interactions with the system as well as a high-level overviews of several activities working
+together in the system. A UML diagram represents a broad category of tools that are commonly used in
+120
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+systems analysis and design. These diagrams outline how a system will function from a user’s perspective, and
+they feature use cases, sequence diagrams, activity diagrams, state diagrams, and class diagrams.
+•
+Use cases: A use case describes those individuals who will use and interact with the system. In the
+scenario from Figure 4.2 of getting a prescription filled, the use case would map out how each user (the
+patient, the doctor, the pharmacy, the insurance company) interacts in the system. UML diagrams can also
+be accompanied by a written use case, which includes details about the interaction of the users with the
+system rather than simply a visual representation.
+•
+Sequence diagrams: A sequence diagram is used to illustrate a particular part of the system, not the entire
+system. They are specifically used when parts of the system must work in a certain order (Figure 4.4).
+Returning to the sample scenario, for the patient to eventually pick up their prescription, a doctor must
+first write that prescription and send that information to the pharmacy. Those system actions have to
+occur in that order. A patient cannot go to the pharmacy and get their medication prior to the prescription
+order coming from the doctor. The sequence diagram provides a general overview of the sequential
+process in the system.
+•
+Activity diagrams: An activity diagram is used to represent how several use cases are coordinated together
+in a system. They are used to visualize more complex activities in the overall system (Figure 4.5).
+•
+State diagrams: A state diagram is similar to an activity diagram; however, it is used to visualize behavior in
+a system based on the state the system is in. For example, the prescription ordering system might behave
+differently if the medication ordered by the doctor belongs to a certain class of controlled substances. The
+state diagram would then include the additional reporting procedures or other related activities that are
+required before the medication can be released to the patient (Figure 4.6).
+•
+Class diagrams: A class diagram provides the building blocks for the system. These diagrams show each
+class and its associated attributes. The diagrams also show the relationship between classes in the system.
+For example, in the prescription ordering scenario, the patient is a class with attributes such as name,
+address, and insurance provider. The pharmacy itself is also a class, with attributes that might include
+location and medications stocked.
+Figure 4.4 To easily understand how part of a system works, a sequence diagram can be helpful. This simplified sequence diagram
+shows how a patient can get a prescription. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+4.1 • Systems Analysis and Design for Application Development
+121
+
+Figure 4.5 An activity diagram illustrates complex activities in the system for better understanding. (attribution: Copyright Rice
+University, OpenStax, under CC BY 4.0 license)
+122
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+Figure 4.6 A state diagram illustrates different behaviors of the system dependent on the state the system is in. (attribution:
+Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Software Development Life Cycle and Agile Software Development
+The software development life cycle (SDLC) is a framework that defines the stages of software development,
+from its inception to its retirement, providing a blueprint of the tasks to be completed for each stage of the
+cycle (Figure 4.7). Following the recommended SDLC process will lead to a quality product that was created in a
+systematic and disciplined fashion. The six stages of the SDLC process are analysis, design, development,
+testing, deployment, and maintenance.
+1.
+Analysis: In the analysis stage, time is spent with the customer to collect relevant information needed to
+develop the product, keeping the potential design and code in mind. Business analysts and project
+managers are generally involved in this activity, especially when meetings with the customer will generate
+user requirements or aspects of a solution, stated by stakeholders, that are needed to support specific
+needs and expectations of a business process or product. Systems analysts make sure to discuss each
+aspect of the requirements with the stakeholder to remove ambiguity and to increase clarity and
+understanding.
+2.
+Design: During the design stage, the user requirements are used as inputs for the design approach. The
+4.1 • Systems Analysis and Design for Application Development
+123
+
+developer reviews this information to assess the prepared software against the requirements of the end
+users. Design specifications are created, reviewed by stakeholders, and approved for development.
+3.
+Development: The development stage is sometimes called the implementation or coding phase as this is
+where these activities begin. The design is translated into source code or computer-legible
+language—meaning the developer builds the system in a coded language using coding guidelines and
+programming tools. This stage is the longest in the SDLC life cycle.
+4.
+Testing: Once the development stage is complete, testing of the design is initiated to validate the system
+functions against the requirements and to identify any bugs or defects within the coding. Often, this
+occurs within a separate testing area, away from the development and production environment for the
+product. Developers review the feedback and fix identified problems, updating the components for
+retesting.
+5.
+Deployment: During the deployment stage, the product is released for customer or stakeholder use. Some
+testing is also completed in the production environment, which now houses the new product and the
+approved, validated coding. Documentation on product use generally accompanies this release.
+6.
+Maintenance: The maintenance stage occurs after the product is deployed and is functioning within the
+production environment, when intermittent patches and fixes may be needed to improve the usability of
+the product. Additionally, any proposed enhancements may occur during this maintenance period.
+Figure 4.7 The SDLC is a cyclical framework that defines the stages of software development, from its inception to its retirement,
+providing a blueprint of the tasks to be completed for each stage of the cycle. (attribution: Copyright Rice University, OpenStax,
+under CC BY 4.0 license)
+Agile Software Development
+Organizations continue to identify efficiencies in the software development process and are increasingly using
+124
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+the Agile methodology. Agile is an overarching term describing the iterative and incremental delivery of
+quality products and value to stakeholders using team collaboration, flexibility, and continuous planning. Agile
+software development is an adaptive approach to software development that considers uncertainty in
+changing environments and allows “Agile” teams to respond to changes quickly by delivering smaller,
+consumable work packages. The need for a software development approach that allowed for this flexibility,
+value, and collaboration was identified by a group of like-minded individuals who created the Manifesto for
+Agile Software Development, which features four Agile Manifesto values (Figure 4.8).
+Figure 4.8 The Manifesto for Agile Software Development was created by seventeen like-minded software developers whose
+combined thoughts and ideas led to the development of this adaptive approach to manage software development work. (attribution:
+Copyright Rice University, OpenStax, under CC BY 4.0 license)
+This approach emphasizes valuing certain aspects of software development over others:
+•
+Individuals’ interactions are valued over processes and tools. The Agile approach focuses on bringing the
+right stakeholders together to find a solution. Collaboration is at the forefront of the development
+process.
+•
+Working software is valued over comprehensive documentation. Although documentation is needed, the
+end goal is a functioning system that meets the needs of the stakeholders with valued-added
+documentation components. The documentation required should not get in the way of providing a
+functional system.
+•
+Customer collaboration is valued over contract negotiation. Often with negotiations, one party feels like
+the winner, while the other feels as if they lost. Agile software development utilizes collaboration
+throughout the process to build a teamwork mentality to create the most value for the stakeholders.
+•
+Responding to change is valued over following a plan. Traditional development processes often follow a
+rigid timeline where changes typically result in additional costs and delays. The Agile approach
+incorporates changes into the planning process through evaluative feedback from stakeholders. This
+often means that the timeline and plan evolve, and the development of the system evolves.
+Historically, software development has been performed using the SDLC. This approach is very systematic and
+is process oriented, moving from one stage to the next in the process. There are some parallels between the
+two methods, however. Both SDLC and Agile software development involve planning documentation, feedback,
+and testing of the system. With the Agile approach, however, there is much greater flexibility to incorporate
+changes and end-user feedback at all points in the development process. The SDLC approach can be used with
+any size project, whereas the Agile method is, at times, better suited for smaller-scale projects. With SDLC, no
+changes are typically made after the initial stages, and there is little interaction with the end user (customer).
+In contrast, end users are consulted at regular intervals in the Agile approach. Finally, with SDLC, the project
+moves through stages, whereas the Agile approach uses the term “phases” to better illustrate the fluid nature
+of the process as the development progresses.
+4.1 • Systems Analysis and Design for Application Development
+125
+
+Imagine scaling up a point-of-sale (POS) system to accommodate the needs of a new boutique, opening both
+an online storefront as well as a physical location. Fenner Street Boutique is set to open in the downtown area
+of a midsize community that has invested in attracting unique shops for residents and visitors. The boutique
+has a five-year goal to open a new location in a neighboring city with long-term plans for franchising. The POS
+system will be used for inventory control and managing both the on-site and online sales. The Agile approach
+would be particularly well-suited for such an application because there is uncertainty about the five-year goal
+and the inventory that will be sold online and in the store. The Agile approach is more suited to accommodate
+the uncertainty and will allow the business owner to incorporate needed adjustments as the business model
+develops after opening. The business owner will be involved in the development and share crucial information
+with the team about how the POS system will be used now and in the future. The process allows for the speed,
+flexibility, and creativity that is needed for growing business.
+The main tenets of the Agile Manifesto hold value for applications beyond simply software development. The
+Agile framework has migrated to a wide variety of applications in business development, including marketing,
+finance, and human resources.
+How Does Agile Development Work?
+Although the Agile approach’s process may seem unclear in its flexibility, there are central components of the
+development process that are key to success. Rather than stages or steps, the components can be best viewed
+as phases.
+•
+A first step in the development process involves planning and preparation to bring together the right
+individuals to work on the team. This team might also include key stakeholders from the organization to
+ensure their input is at the forefront of the systems development, as illustrated in Figure 4.9.
+•
+An assembled Agile team, consisting of a small group of individuals assigned to the same project or
+product, creates the plan for completing the identified requirements and a final product. The team
+identifies the features that will make up the final product and the order in which these features will be
+delivered. These features are referred to as the product backlog (or road map).
+•
+After the product backlog is established, the work of developing the software begins.
+•
+Regular meetings with the Agile team and the product owner are held to gauge the status of work in
+progress. User stories are the functional components of the work that are defined in conjunction with the
+product owner or stakeholder. Each of these stories is expected to add to the completed final product.
+Figure 4.9 shows the continuous evaluative nature of the Agile approach. The system that is eventually
+launched is developed with stakeholder input, reevaluation, and adjusting as necessary to provide a solution
+to meet the needs of the product owner.
+126
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+Figure 4.9 An Agile team manages the planning and prioritization of work to be undertaken toward a completed product, generally
+within a 1–4-week iteration. (credit: modification of work by Pietro Casanova, “Agile Processes: A Unifying Approach for the Future of
+Projects” (paper presented at PMI® Global Congress 2013 --EMEA, Istanbul, Turkey, April 24, 2013), Project Management Institute.
+https://www.pmi.org/learning/library/agile-approach-projects-market-globalization-5777)
+CAREERS IN IS
+Agile Project Manager
+Agile project managers lead Agile teams and deliver projects using the Agile methodology. Managing
+projects with an Agile method differs from traditionally managed projects as the Agile project manager
+guides the team through dynamic, fast-changing, and sometimes volatile environments with a good deal of
+uncertainty to achieve project targets. The skills required for this role include excellent communication and
+organizational skills, effective critical-thinking, the ability to work well within a team environment, and a
+strong understanding of Agile and project management processes. These positions can be found in a
+variety of organizations but are generally housed in IS departments.
+Another element of Agile project management is sprint planning. A sprint is a time-based period, generally
+between 1 and 6 weeks, that represents a delivery cycle during which the specified work is completed and
+reviewed. During these sprints, the team will have a daily meeting, often called a stand-up, generally between
+ten and thirty minutes, to discuss progress made and challenges encountered. The team will also discuss the
+design needs of the work, which may occur before or during the first sprint. Additionally, teams will break
+down large tasks into subtasks for each sprint. For each sprint, an Agile team identifies, based on the skills of
+its team members, the user stories it will work on during the sprint, and it estimates the time required for
+completion. For example, the team may decide on a two-week sprint, aiming to complete two coding tasks,
+two testing tasks, and two documentation tasks. After this, the user stories are prioritized accordingly.
+During the sprint, the team members will actively work on their assigned tasks and resolve any issues needing
+to be addressed. When an issue arises during sprints, it is added to the backlog and prioritized with the work
+already maintained in the backlog. At the completion of each sprint, the team generally has a usable and
+workable product, ready for the stakeholder or product owner to review during a sprint review meeting. Teams
+may be able to see the amount of work remaining through the use of a burndown chart, or a graphical
+representation of the work completed in a sprint and the work remaining over time. The team has a postsprint
+review to identify challenges and opportunities for the next sprint cycle. This process continues until the
+4.1 • Systems Analysis and Design for Application Development
+127
+
+backlog of work is depleted and the functional components of the product are completed. Once the backlog of
+items has been addressed, the team will hold a retrospective meeting where members will discuss the
+sprints in detail and areas of improvement to apply to future sprints.
+Advantages and Disadvantages of SDLC and Agile Software
+Development
+In determining how to approach systems analysis, the advantages and disadvantages of SDLC and Agile
+should be considered. Some aspects of the processes might be better suited for specific types of projects,
+while others may not. The flexibility required in the nature of today’s business world and how businesses
+operate might require a hybrid approach to software development that includes aspects from both SDLC and
+Agile.
+The structure in the SDLC approach can offer projects rigor, detailed documentation, a thorough examination
+of the risks and pitfalls in a design, and careful attention to budgetary considerations. However, SDLC is not
+designed for projects with a good deal of uncertainty in the beginning stages, nor is it suitable for projects in
+which unexpected changes might come up. This is where Agile software development’s more fluid approach
+can be beneficial. Through a more iterative approach and with close collaboration with end users, the design
+can be clarified, key stakeholders can be involved, and unexpected issues can be systematically tackled. Agile
+has been criticized for its lack of detailed documentation and the unpredictable costs that can result from its
+focus on speed and flexibility. But by using a hybrid approach, organizations can mitigate these weaknesses
+and utilize the strengths of each approach to meet their needs.
+Consider the scenario of developing the POS system for Fenner Street Boutique to see how the hybrid
+approach works in practice. With the ribbon cutting and website launch already scheduled, the business owner
+faces a tight deadline and is particularly concerned about staying within budget. Because the POS system will
+be crucial for inventory control, it needs to be up and running before the store opens. The SDLC approach
+helps by providing clear deadlines and documentation, ensuring the system is scalable for future growth, and
+keeping budget considerations in mind. On the other hand, the Agile approach allows the owner to stay
+involved throughout the process and adapt as needed, such as adding the finalized logo once it’s ready.
+Furthermore, as the owner is still deciding on the final inventory for both in-store and online items (including
+potential “online exclusive” products), there are uncertainties to address. Agile software development is ideal
+for handling such flexibility, giving the business owner a voice throughout the development process. In sum,
+SDLC offers the structure necessary to meet deadlines and budgets, while Agile allows the business the
+flexibility to make decisions as its vision evolves.
+Roles and Responsibilities of the Analysis and Design Teams
+Analysis and design teams may consist of several members using various tools and methods to create design-
+related solutions, such as designing a mobile application, building a website, or any other design effort. The
+size of the team will vary, as will its structure—from centralized design teams with hierarchical organization to
+flexible teams of contract resources. Both structure and size will be determined by the scope of the effort and
+the types of expertise needed. Table 4.1 lists the roles found on an analysis and design team.
+128
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+Role
+Responsibilities
+Designer
+In the early stage of software development, a designer creates and tests software solutions
+to improve on an existing system or to develop a new one. Designers may assume a general
+role on the team or may have a specialized role such as a product, visual (user interface), or
+user experience designer.
+Systems
+architect
+Systems architects are responsible for the technological and management aspects of the
+design; creating the hardware, software, and network systems; and working within
+multidisciplinary teams of experts to grasp the big picture.
+User
+experience
+(UX)
+researcher
+UX researchers conduct user testing to validate ideas slated for the design, collect user data,
+and track stakeholder feedback. This team member’s responsibilities extend to gaining an
+understanding of user behaviors, needs, and motivations via focus groups, surveys, and
+interviews to evaluate how users make use of the design solution.
+Systems
+analyst
+These professionals’ primary function is to detail the technical specifications of the system
+and lend their IT backgrounds to the technical needs of the team.
+Table 4.1 Analysis and Design Team Roles and Responsibilities The members of an analysis and design team vary by organization
+and by project. These are common members and roles.
+LINK TO LEARNING
+There are many approaches to completing a feasibility study, which is an assessment of a proposed project
+or business venture that aims to understand its strengths and weaknesses and explores its technical,
+market, operational, and financial fitness. Suppose you are hired as a consulting systems analyst to provide
+services for a financial institution that is interested in expanding services into a neighboring state. It may be
+easy to assume that the feasibility study should have more of a financial focus than a technical one, but
+other areas of consideration (such as operational, environmental, legal) are important and can impact final
+decision making. Read this article providing some insight into how to create a feasibility study
+(https://openstax.org/r/109FeasbltyStdy) to learn more.
+4.2 Defining the Business Problem and User Requirements
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Explain how to determine a business problem
+•
+Identify the tools and techniques used to define user requirements
+•
+Describe the consequences of incomplete or incorrect user requirements
+•
+Apply what you have learned about defining a business problem and user requirements
+Businesses are often challenged with finding solutions to problems affecting their operations, and such
+challenges can influence the overall health of the organization. Some problems are easily identifiable and
+readily avail themselves (such as an assembly line failure), while others require a more intricate analysis of the
+problem (declining membership, for example). In either case, before beginning any problem-solving process, it
+is important for a business to determine the exact nature of the problem it is experiencing and the extent to
+which the problem’s effects have spread through the organization.
+4.2 • Defining the Business Problem and User Requirements
+129
+
+How to Determine a Business Problem
+A business problem is any obstacle to business operations that causes variance in the expected outcome.
+These variances can have a significant impact on an organization’s bottom line, affecting its ability to maintain
+healthy operations and sustain itself among its competitors. While variance or some level of uncertainty is
+expected in business, when variances occur, business leaders need to know how to effectively address them.
+Consider the scenario that occurred during a busy holiday season in 2013, when the CIO of Target was made
+aware by the company’s security team of a security breach of its POS terminals in which the credit card
+information of customers was being compromised.2 Let’s suppose you are the CIO of a major corporation, and
+its network security is threatened by sophisticated malware. How do you determine a business problem, the
+extent of its impact, and the possible solutions that are timely, feasible, and responsive to the problem? You
+need to follow these steps to define the problem, determine and then implement solutions, and evaluate how
+the solution worked.
+1.
+Define the problem: Defining the problem can be as simple as starting with general questions to further
+explore the situation. Asking questions may elicit or uncover the general problem and may help you to
+think through the problem from a critical lens. The “five whys” refers to an iterative interrogative
+technique that can be used to explore the cause-and-effect relationships underlying a particular problem,
+and it is an example of how to approach the process of defining the problem by asking questions. The
+technique was invented by the founder of Toyota nearly a hundred years ago, gained popularity in the
+1970s, and is still used today to solve problems. The idea behind the technique is that asking questions
+may help you gain a deeper understanding of a problem. An opening question might be “Why is that a
+problem?” “Why did it happen that way?” or “Why did it happen now?” Subsequent questions are then
+posed to help further your understanding of the problem, such as: “What areas of the business is the
+problem affecting?” and “What business roles or teams are impacted?” In theory, asking continuous “why”
+questions to dig further into an issue should help to identify the problem by the fifth “why.” To add further
+value, organizations may use techniques like this to engage the help of employees, stakeholders, and
+others in defining the problem, which can lead to a more thorough and effective evaluation process,
+provide individual value to team members, and result in an effective resolution—all means by which the
+business can build opportunities for its success.
+2.
+Determine possible solutions: Once there is a good understanding of the problem, the process of
+determining possible solutions can begin. Using data collected when defining the problem plus the
+insights gained from those participating in the process, brainstorm potential solutions that may solve the
+problem. It is important to consider the “do nothing” option, along with its ramifications from a near- and
+long-term planning perspective. The solutions should consider cost, impact, time, resources, and other
+factors that qualify their viability as options.
+3.
+Assess, select, and implement a solution: Review the options presented and weigh the pros and cons of
+each. For example, suppose the organization depends on a preferred piece of hardware that is delayed
+with an international supplier. Should hardware be replaced with a lower-cost, regional option that may
+not be as reliable, or should the organization wait for the supply to come in? The cost of waiting for the
+preferred hardware may be significant, but the regional part may pose a quality risk, causing the
+organization to make amends to save the relationship. The organization should select and implement the
+option that is the most feasible and viable the—one that delivers the most benefits with minimal
+disruption.
+4.
+Evaluate the solution: How well did it work? When a solution succeeds, it is common to apply that solution
+to similar problems. But for those solutions that do not work out well, the process of defining the problem
+may need to be restarted, and solution options may need to be reevaluated. A different option may be
+selected to provide the desired result. As part of the closing process of a project, it is important to reflect
+on opportunities for improvement and catalog best—as well as next—practices. The key is to avoid making
+2
+Kevin McCoy, “Target to Pay $18.5M for 2013 Data Breach that Affected 41 Million Consumers,” USA Today, May 23, 2017,
+https://www.usatoday.com/story/money/2017/05/23/target-pay-185m-2013-data-breach-affected-consumers/102063932/
+130
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+the same mistake more than once and building on the solution that was successful through broader and
+deeper application.
+Tools and Techniques Used to Identify User Requirements
+Solving business problems requires understanding what is requested by the users or owners of the product/
+service and needed to support their business functions. The user requirements are aspects of a solution that
+are specified by stakeholders and needed to support specific needs and expectations of a business process or
+product. For example, in seeking a Human Resources Information System (HRIS), the users of this system (HR
+managers, HR support staff, organizational employees) may request features to manage hiring, employee
+performance evaluations, payroll, and employee benefits. User requirements are often recorded in
+specification documentation and can be further categorized as either functional or nonfunctional
+requirements.
+A functional requirement is the feature or function of an application that is needed for the affected business
+area to accomplish its tasks. These may include business rules, transactions, administrative functions, audit,
+authentication, authorizations to external interfaces, and reporting functions. With respect to the HRIS
+example, a functional requirement may be a simple search function that involves using an ID number to
+search for an employee and, if found, returns results relating to that employee.
+A nonfunctional requirement is an attribute of the system that enhances its functionality or operation.
+Nonfunctional requirements are often viewed as those items that describe the general properties of the
+system or how the system should behave and work. These may include performance, scalability, security,
+flexibility, operating constraints, usability, interoperability, maintainability, availability, and capacity. In the
+hiring example, HR managers would require that the HRIS system is secure from vulnerabilities and threats.
+They would also require that payroll runs smoothly and adjusts accurately for yearly tax updates, rates, and
+withholdings. All of these are nonfunctional requirements.
+Requirements are generally determined by a team of individuals including stakeholder users, analysts, and/or
+IS team members with general knowledge and expertise about the system being designed or modified.
+Administering user observations, interviews, cross-functional meetings, questionnaires or surveys,
+documentation analysis, brainstorming, and interface analyses are methods used to elicit requirements needs
+from these individuals.
+One means of storing this information is a requirements traceability matrix (RTM). Generally a spreadsheet
+or similar, the RTM is used to record each requirement along with supplemental information, such as its type
+(functional/nonfunctional), description, objective, business need/justification, priority, department, and the
+status of its development. Many organizations also use this document as a testing reference to ensure each
+requirement has been thoroughly reviewed, tested, and confirmed. In addition, the RTM helps with the
+verification and validation of the requirements/needs and wants analysis.
+Another tool used in gathering user requirements is a design diagram, which is a simplistic drawing or
+elaborate depiction that helps design teams as it is simple to understand, universally accepted, and easy to
+compare. It plays an important role in design presentations as they allow viewers to visualize systems,
+structures, and the relationships between them. There are, however disadvantages of design diagrams,
+including the time involved in creating them. Consultation with other stakeholders or further research may be
+needed to complete the design diagram, causing it to be a time-consuming process. As more specialized
+design software programs become available, design diagrams can be costly. Moreover, they can be misleading,
+inaccurate, biased, or confusing if they have been conceived incorrectly or are purposefully minimizing or
+highlighting certain aspects.
+Some design diagrams can be generally categorized as maps, charts, or graphs, while others are specific in
+type and can provide a specific view of the data being presented. Some examples include:
+4.2 • Defining the Business Problem and User Requirements
+131
+
+•
+A flowchart is a diagram that displays sequential relationships between data, systems, programs, or
+processes. They are often used by technical and nontechnical persons to document, plan, and
+communicate ideas in a simple-to-understand visual format. Flowcharts utilize specific symbols,
+diagrammatic arrows, and connectors to aid in the visualization.
+•
+User stories are explanations from the user perspective, usually written in an informal format, of specific
+systems functions. The components of user stories are referred to as the 3 Cs: cards (the user role, general
+task, and goal to be achieved), conversation (discussion with the development team in which users gain
+clarity about the user requirements), and confirmation (agreed-on acceptance criteria for satisfying the
+user requirements).
+•
+An As-Is/To-Be process map details the “current state” and “future state,” respectively, of a specific
+process or function within an information system. The As-Is process map details how things currently
+work, while the To-Be process map describes what should be done to reach the desired future state.
+•
+A use case diagram is also a visual representation of system features that displays how specific users
+interact with the specific functions of a system. These diagrams usually contain the following components:
+actors (human or any external entity), a box representing the system itself, and directional arrows that
+show the relationships between the actors and the systems that indicate the flow of data, to and from the
+system. Figure 4.10 shows a use case diagram depicting the system setup of a boutique seeking to expand
+by opening a brick-and-mortar store and online store that use the same system. Customers (actors) would
+face different decisions based on where they were making a purchase. This diagram might be
+accompanied by the written use case, which would include specifics about the account creation process
+for an online purchase and the process for in-store transactions.
+•
+A context diagram is a high-level diagram that visualizes a system or parts of a system and the
+environmental actors with which it interacts using diagrammatic arrows to display the flow of data. These
+indicate the highest level of interaction between the system and business processes.
+•
+A mind map is a free-form depiction of ideas with branches displaying the flow of information and
+thoughts, and they are generally used for brainstorming.
+Figure 4.10 A use case diagram for a boutique would outline the various aspects of the system based on whether the customer was
+an online customer or an in-store customer. (source: attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+LINK TO LEARNING
+A business requirements document (BRD) is a formal guide that gathers all the aspects of the business
+needs and details associated with a new project or program solution and its success, including the
+objectives, expectations, and the reasons why the company is in need of a solution. The BRD will help guide
+a team toward successful implementation of a solution that will meet the needs of the business. Review the
+recommended components, and access template examples (https://openstax.org/r/109BusReqDoc) to learn
+more about how to create a BRD.
+132
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+Consequences of Incorrect or Incomplete User Requirements
+The requirements-gathering process doesn’t always result in a perfect set of instructions to address the
+business problem. Often, the RTM can be fraught with missing or incorrect user requirements, and this can
+significantly impact the delivery of a final product and may cause challenges for the project team working to
+deliver the product. Not only will there be associated costs (resources, regulatory penalties, delays to market),
+but the impact may include undocumented processes, conflicting requirements, communication challenges
+with end users, and a misguided focus on the visual aspects of the design instead of the functioning elements.
+In the spirit of continuous improvement, systems analysts can iteratively address poor requirements by doing
+the following:
+1.
+Do thorough research: Increase knowledge of the business problem by understanding the factors and
+driving forces contributing to the business need. Research should focus on the context in which the
+business exists and include both internal factors (like organizational culture and business processes) and
+external factors (such as market conditions, regulatory requirements, and competitors). Ask: Are other
+organizations experiencing the same business challenges or opportunities? What are other organizations
+doing to address this? The research may validate or refute the gathered requirements, or identify new
+requirements to consider.
+2.
+Revisit the business problem or opportunity: Once the research is completed, use the knowledge gathered
+to revisit the business problem or opportunity. The situation may be viewed differently and can provide
+additional insight. Is the business problem or opportunity what was envisioned? Can the business problem
+or opportunity be spoken about more confidently to support the team? Can insights be offered that may
+support a more comprehensive requirements document?
+3.
+Conduct requirements review sessions: Initiate sessions to review the requirements with all stakeholders.
+Feedback from these sessions may elicit additional valuable input. Be sure to include visuals in the review
+sessions (data maps, flowcharts, diagrams, reports) as they can often convey information with greater
+clarity.
+4.
+Seek approval: Final review and approval from stakeholders and business owners may prove useful in
+addressing incomplete or missing requirements as well as validating the requirements gathered.
+Consider how the requirements gathering process might be applied to establishing intramural competitions at
+a university, which are often student-led initiatives. A student has been assigned responsibility for their
+college’s intramural sports leagues throughout the year. This involves setting up team registration, recording
+payments, keeping track of scores, setting up tournaments, and reserving space on campus for games. The
+leagues have been getting more popular and the old way of managing the process is no longer as effective. A
+faster, electronic process is needed. Also, as students graduate, there needs to be a plan in place to train and
+transition to a new manager. Having an app or similar type of system to manage the aspects of the league
+would be helpful. The students would need to get help from both the IT and athletics departments. It would
+also be important to get feedback from team captains or coaches as to whether they would use the app to
+register teams and track their progress through the season. Some tools that might be useful include a design
+diagram and a flowchart. The flowchart can be used to show how a team will work its way through the system
+as the league progresses to the eventual championship tournament game. Finally, a key consideration is cost.
+There is a very limited budget to develop the application, so it would be ideal to be able to access existing
+technologies in use at the college. These are just some of the considerations when designing the intramural
+app and how key stakeholder input can be incorporated into the final product.
+GLOBAL CONNECTIONS
+Requirements Gathering in Globally Dispersed Teams
+It is increasingly common for organizations to operate globally, with teams and services dispersed
+4.2 • Defining the Business Problem and User Requirements
+133
+
+internationally. When teams are spread globally in different locations, it may complicate the requirements
+gathering and software development processes, leading to inefficiencies and cost overruns. Often,
+organizations may opt for Global Software Development (GSD) services. These services enable
+knowledgeable workers in various parts of the world to develop software solutions for organizations. Unlike
+traditional teams where individuals are colocated and tasks and activities are distributed to achieve a
+common goal, GSD teams are virtual and rely heavily on communication technologies to develop software.
+There are some challenges associated with GSD services, such as lower productivity and challenges in
+communication. To ensure that the GSD process is effective, coordination across virtual teams and project
+leaders is needed.
+Defining a Business Problem and Determining User Requirements: Case
+Study
+Dr. Singh has had a thriving medical practice, Hometown Physicians Group, for several years and is looking to
+expand her practice by opening another location in a neighboring town within the next six months. Dr. Singh is
+concerned that her current practice is fraught with challenges that she does not want to carry over to the new
+practice location. These challenges include manual billing and accounting practices; the use of multiple
+operating systems, hardware, and software systems; lack of security as staff use personal devices to record
+patient visit information; and older patient records in paper files. Many of these challenges can be resolved
+with a new electronic health record (EHR) system. Such a system could also help ensure the office is in
+compliance with medical privacy regulations and using it may improve the practice’s compliance with industry
+regulations. Lastly, Dr. Singh would like her patients to be seen in either office.
+Additional information about Hometown Physicians Group:
+•
+There are twenty-five additional employees, including clinicians (doctors, nurses, and medical assistants)
+and support staff (billing and accounting, practice management, and reception).
+•
+The office must upgrade to a new EHR as the relationship with the old one will be ending in six months.
+•
+The transporting of manual files between offices needs to be eliminated, as does the practice of using
+personal devices for patient recordkeeping.
+Assume the role of the designer and user experience researcher in this scenario. Recall the designer’s role is to
+provide guidance in the early stages about the system that will meet the business needs. The user experience
+researcher is focused on making sure the system design meets the needs of the stakeholders—in this case
+study, Dr. Singh and her associates. Think about the process to accurately define the problem and which tools
+could be used to visualize the problem and the system for Hometown Physicians Group. You might consider
+whether there are other key stakeholders who might be important to include in the conversation. Consider the
+following as you work through the design process:
+•
+How would you approach the requirements gathering process?
+•
+Who are the stakeholders involved and how would you engage them in the analysis?
+•
+What tools would you use to understand the business processes and the opportunity presented?
+•
+What questions would you like to ask Dr. Singh that would assist you in your work?
+Let’s begin by defining the business problem. Keep in mind that the circumstances do not need to always be
+problematic. Instead, as is the case here, Dr. Singh has a new opportunity to expand the practice. This
+opportunity might involve some challenges, but sometimes the use of the words “business problem” implies a
+negative situation, whereas this expansion is positive. Dr. Singh has provided initial information to give context
+to the existing issues in the office’s current operations and how they may present additional challenges in the
+new business model. Begin with the five-whys method or other appropriate questions. For example, you might
+ask why the current billing system is a challenge for the office staff. You can also probe into how the different
+operating systems currently present issues.
+134
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+In addition, it would be important to engage Dr. Singh in a conversation about the other stakeholders who
+need to be included in the initial design stages, and in the testing and evaluation phases of the project. This
+could be done through a requirements review session. During these initial stages, tools such as the RTM,
+flowcharts, and use case diagrams could help you visualize the overall business problem and the system
+requirements. Moreover, it could be helpful to use a design diagram to show Dr. Singh how the current system
+functions and the relationships that currently exist.
+Once you feel confident in the business problem definition, move on to the next stage of determining possible
+solutions. During this phase, you can continue engaging with Dr. Singh and the office associates and utilizing
+some of the tools mentioned. You will want to address the user requirements (functional and nonfunctional) in
+the proposed solutions. Try to offer a couple of solutions, and for each be sure to include information such as
+cost factors, time, and training required to implement the solution. This is a good time to revisit the RTM to
+ensure that the proposed solutions meet the needs and wants of the practice. You could also consider creating
+a new design diagram to show how the proposed solutions differ from the existing system.
+Next, the project would move on to the selection and implementation phase. During this stage of the process,
+the proposed solutions are evaluated, and a final solution is selected. It is helpful to generate a pros and cons
+list for each and to engage the key stakeholders in the conversation. Ultimately, you should implement the
+option that is the most feasible and viable for the office, one that gains the most benefits with minimal
+disruption.
+The final phase is to evaluate the solution. This phase is likely to not have a specific endpoint. You might
+deploy tools for Dr. Singh to evaluate the functioning of the system on her own. But initially, the design team
+will want to evaluate how the system functions to meet the user requirements and the needs of the office
+during the transition. As the users interact with the system, it is likely that the need for improvements or
+changes will arise. You might consider establishing a process by which these system changes and
+improvements can be communicated to the design team. The feedback could be provided as the issues arise
+or be compiled and shared with the team on a regularly scheduled basis, such as quarterly. The goal is that
+once the system is operational, feedback from the users is solicited to evaluate the efficacy of the system in
+meeting the needs of the medical office. This evaluation stage is crucial and should reflect back on the
+business need that was identified in the early stages of the project.
+This case study provides a general framework and some factors you might consider as you work to develop
+your solution to this problem. You might have other ideas on how to approach the problem, uncover user
+requirements, and produce creative solutions.
+CAREERS IN IS
+Analyst
+Analysts are the most common professionals engaged in defining the business problem or opportunity as
+well as leading or managing the requirements gathering process. This position’s title has many variations,
+including business systems analysts, systems analysts, and different versions of software engineers. These
+roles can be found in all areas of a company, including IT departments. Common skills required for these
+roles include being knowledgeable about business analysis, communication, requirements gathering,
+analytics, and software (Microsoft, Azure, Python, R) or tools used for documentation. Higher-level
+educational degrees, certifications, and experience will contribute to higher salary earnings.
+4.2 • Defining the Business Problem and User Requirements
+135
+
+4.3 Technical Design Methodologies and Practical Applications
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Explain systems design principles and networked architecture
+•
+Identify systems designs for enterprise network architectures
+The launch of a new company, or the decision to expand an existing business into a new area, are
+organizational shifts that require new systems. The design of those systems, and their architecture needs, will
+be most successful when planned using established design principles and best practices. Consider Dr. Singh
+and the medical office expansion of Hometown Physicians Group. The addition of the new office with the new
+billing and electronic records system has worked out well. Both offices are functioning as expected, patients
+can be seen in either location, and patient records comply with current electronic reporting requirements. As
+part of an outreach effort, Dr. Singh is considering adding a monthly walk-in clinic for vaccinations at the local
+community center. This would further complicate the system that is currently in place as it is not set up to track
+nonpatients or to accept government-sponsored health-care programs. The latter capability would need to be
+addressed and incorporated into the system as the practice can be reimbursed for some expenses through the
+government-sponsored health-care program. One additional complication is that the program requires specific
+reports and data to be submitted quarterly through the state health-care program portal.
+With these capabilities, Hometown Physicians Group would provide an important service to the community,
+serve as a source of clinical hours for those studying to be health-care professionals, and contribute to a
+health-care issue that Dr. Singh is passionate about. To accommodate this new venture, the current system will
+require additional design work.
+System Design Principles and Networked Architectures
+After gaining an understanding of the business problem, completing a systems analysis, gathering user
+requirements, and generating design diagrams to potentially address an organization’s business opportunity,
+it is time to begin the next phase. The system design process determines and defines the architecture,
+interfaces, and data for a system that can satisfy the specified requirements. There are several general guiding
+principles that govern good system design, including:
+•
+Simplicity: Simplifying the design and system solution is preferred as overcomplication can require more
+work, time, and sometimes leads to solving problems that do not exist.
+•
+Clarity: Designs should be clear and easy to use. Be mindful of users who will interact with the product.
+What type of experience would an end user want to have while using the product? Avoid or minimize
+complexity where possible.
+•
+Core functionality: The main or core functionality and its interrelated parts are the most important.
+Additional system features and details can wait.
+•
+Scalability: Does the solution have the capacity to respond to organizational change—that is, handle
+additions or reductions of users, clients, products, processes, services, data, as well as an evolving
+business landscape? Where does the company want to be in the next few years, and how would that
+impact scalability needs? These considerations should be appropriately addressed within the solution to
+minimize any constraints on organizational change.
+•
+Reliability: The design and system solution should be reliable when it functions in accordance with its
+designed specifications, with no or minimal failures during the specified time of its use.
+•
+Security: How secure is the system from external or unauthorized use or threats? A system is deemed
+secure when authorized users can access it and when all measures to control and safeguard the system
+are in place.
+136
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+ETHICS IN IS
+ACM Code of Ethics
+All those involved with the systems analysis and design team are expected to maintain ethical standards to
+facilitate a relationship of trust with the customer. There are eight principles focused on the following:
+public, client and employer, product, judgment, management, profession, colleagues, and self. These
+principles were designed to guide decision-making for computing professionals, with a focus on integrity in
+decision-making and advancing the public good. Just as other professionals such as attorneys and doctors
+have codes of ethics to protect clients and patients, the ACM code of ethics was established for computing
+professionals to avoid unjust harm, promote honesty and fairness, and respective privacy to protect
+customers.
+You can find a full description of the Software Engineering Code—ACM Code of Ethics and Professional
+Conduct (https://openstax.org/r/109ACMcode) at the Association for Computing Machinery’s website.
+Network architecture is concerned with the fundamental principles and concepts that underlie the design and
+operation of a network. The network architecture is a top-level view of the system that defines the
+equipment in the network and the interaction between the equipment . For example, in your home you might
+have a printer connected to a network/LAN or the internet. In this case, the network architecture includes your
+computer/laptop, the printer, the modem, and the router. It could include additional equipment, such as
+Bluetooth devices or your mobile phone.
+The network design, in contrast focuses on the specific implementation and configuration of a network to
+meet the requirements of a particular organization or application. Network designs can be created using
+various types of design models and tools. These may include logical and physical designs, prototype designs,
+or computerized system designs.
+Logical and Physical Designs
+Designs of systems can be logical or physical, and as these designs are developed, it is important to clearly
+represent the information presented in both. A logical design illustrates how data is logically presented and
+flows through the designed system. The focus of logical designs is not on the physical attributes of the design,
+but on the business needs of the organization and the information gathered from stakeholders about the
+business problem or opportunity. Logical designs incorporate the business processes needed to visually
+represent these activities, the flow of data, and the relationships between them—all of which will be later used
+to create the physical design.
+The goal of logical design is to create a high-level representation that is independent of any specific software
+product. Logical designs can take many forms. One is the entity relationship diagram (ERD), which is a
+structural diagram used in logical database design that serves as a visual representation of the data flow and
+its relationship among people, objects, events, places, or concepts. ERD models are composed of entities
+(something that is definite and uniquely exists, such as a business, college course, or person), attributes
+(characteristics or traits of an entity), and relationships (interactions between two or more entities).
+For example, Figure 4.11 shows an ERD of a doctor’s office. Entities are uniquely identified in rectangular
+boxes—physician treats patient, physician orders treatment, physician refers to specialist, facility treats
+patient, and so on—and directional lines with symbols represent the relationship of the connecting entities.
+4.3 • Technical Design Methodologies and Practical Applications
+137
+
+Figure 4.11 An entity relationship diagram provides a visual representation of a system or process, allowing users to see
+relationships between entities and their attributes. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+An additional output of the logical design may be the data dictionary, which details the category names and
+supporting properties of the data used in the database. The dictionary is usually organized in table format,
+and the general properties for the table may include the column name, contents, number/type of characters,
+required/mandatory indicator, and any other aspects of the data that support the logical design.
+A physical design utilizes the completed logical design to create a concrete, physical system with specific
+hardware and software components, detailed systems diagrams and layout, and the requirements for each
+component. Physical designs allow teams to visualize the physical structure of the system and its supporting
+components and characteristics. During the physical design phase, the data gathered during the logical design
+phase are input into the tables, columns, indexes, and places where further details can be added. The physical
+design can be built to optimize query performance, data maintenance, or whatever functions the business
+needs.
+CAREERS IN IS
+Systems Designers
+Systems designers are specialized professionals who support the analysis and design of information
+systems. These roles require having technical and analytical knowledge, expertise with software or tools
+used for documentation, and also possessing communication, leadership, and problem-solving skills.
+Systems designer roles are generally found in IT departments—with higher-level educational degrees,
+certifications, and experience contributing to higher salary earnings. Job titles with similar career paths
+include systems/computer engineer, IS specialist, and software developer. If you are interested in additional
+information about a career as a systems designer, you can check out the Indeed (https://openstax.org/r/
+109IndeedCareer) career guide.
+The Data Cycle
+The data cycle refers to the different stages that data undergo while they exists in an organization’s system,
+from its initial generation onward.
+•
+Creation: During the creation stage, the team addresses the different methods by and inputs through
+which data are created or captured. Data may exist in different formats—such as Microsoft Word, PDF, and
+SQL—and it is important to identify these data types in considering how to manage this data. For example,
+your data may enter the data cycle via manual entry wherein authorized users input information directly
+138
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+into the system. Data may also be captured through an import mechanism from an external source. This
+method is widely used in organizational acquisitions and transitions to maintain the historical components
+of data and to continue current business processes. The capture may also be generated from other input
+sources or devices used throughout the organization.
+•
+Storage: Once the data have been created or captured within the system, they need to be stored for future
+retrieval, use, and reference. The security of the data along with backup and recovery functions are
+needed to ensure the data are secured and retained for the organization’s use.
+•
+Use: The data usage stage provides an understanding of how the data are used to support business
+functions. How are the data processed, modified, and saved? Where is the audit trail of data manipulation,
+and how should it be maintained?
+•
+Sharing: The sharing of system data is another key aspect of the data cycle. The data should be made
+available so it can be shared internally (in which case, it could include reporting and data analysis
+purposes) and externally (in which case, it might include sharing data for regulatory reporting
+requirements).
+•
+Archival: Data archival is the process of transferring data to a nonactive environment for storage, a
+location other than where the system’s daily use environment exists.
+•
+Destruction: Data destruction is needed as data grows to a volume that is no longer feasible to maintain.
+Generally, the destruction or purging of data occurs from the archival location, and every copy of the data
+is removed within the guidelines of the organization’s regulatory retention period.
+Prototype Designs
+A prototype is a design approach wherein systems designers and users create a small-scale representation or
+working model of the solution. Prototypes are generally created using an iterative development process, or a
+series of continuous planning analysis, implementation, and evaluation steps that lead to a design that has
+increasing functionality and increasingly meets the user requirements. Prototypes also enable users to modify
+or make interim changes through to the completion of the final product. In addition to the flexibility that
+prototypes offer, their other benefits include:
+•
+early detection of functional problems
+•
+increased user participation, engagement, and team collaboration
+•
+increased satisfaction with the final product
+•
+greater savings of time and money associated with rework
+Creating a prototype does, however, have its drawbacks. Prototypes can be costly to complete and time-
+consuming to develop. Often, the features included may differ from the final product, and this can be
+misleading for the stakeholder as it does not provide an end-to-end functioning product. Prototype
+development also lends itself to rework due to changing business requirements.
+Computerized System Design
+Use of computers to assist in the design process, including the creation, development, modification, or
+optimization of design systems is called computer-aided design (CAD). Sometimes called computerized
+system design, CAD is increasingly used to optimize resources and maximize time to delivery. Designers,
+engineers, and other technical resources frequently utilize CAD in situations where its ease of visualization,
+level of detail, capacity for specialization, and ability to optimize products and render a physical product can
+assist in the design process.
+Input/Output Control
+In information systems, input/output control falls under the systems design process. An input is the raw data
+that are processed through the functions of the system. Inputs are controlled by the directives used to submit
+responses into the system by the user, producing an output according to the system logic. Systems designers
+create input forms and screens that have quality considerations and that focus on the user experience. These
+4.3 • Technical Design Methodologies and Practical Applications
+139
+
+considerations should provide users with the ability to move about the screen to different fields, confirm the
+accuracy of data entered, and capture the necessary data according to the requirements of its intended use. In
+Figure 4.12, the inputs of the hiring system (such as résumés and recommendations) are processed according
+to the system’s logic into an output format (a decision to hire a candidate). The outputs are synthesized
+through the feedback loop to enhance the hiring process. For example, job performance and satisfaction data
+are fed back into the system to better analyze potential candidates based on the likelihood of performing well
+and being satisfied with their job. Certain demographics and experiences as found on the submitted résumés
+might show a trend in terms of performance and satisfaction. The feedback provided through the system can
+then be used to better filter potential job candidates and increase the hiring efficiency and possibly reduce
+turnover.
+An output is the information the system delivers to users—in other words, it is the data resulting from the
+inputs being processed according to the system logic. System designers consider several factors that meet the
+user requirements. The outputs need to be the right output, quantity, speed, and accuracy. In the hiring
+example, the output from the system is a candidate to fill the open job position. Other outputs from the
+system are job performance and satisfaction metrics.
+Figure 4.12 The inputs of the hiring system are processed according to the system’s logic into an output format. This is a continuous
+process as new inputs are added to the system for processing. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0
+license)
+Systems Design Task List
+A systems design task list provides a road map through each step of the design process, allowing teams to
+have an organized workflow and make informed decisions at each step. A well-crafted design system improves
+the efficiency of teams and improves the speed of product delivery. These guidelines walk through the steps
+for creating a systems design task list:
+1.
+Define and document design processes: Create clear and concise documentation defining the guidelines
+for system behaviors, standards, attributes, accessibility, and any other relevant information to ensure the
+design is user friendly and sets team expectations for the end product. Identify the technologies, system
+elements, and physical interfaces that will comprise the new system. Document the strategy to include a
+review of the user requirements for the system functionality.
+2.
+Identify design characteristics: Define the architectural components relating to the system, ensuring they
+are able to be implemented. Create a shared language and vocabulary—for example, words, behaviors,
+images, phrases—to ensure consistency with the design elements as well as consistency within the team’s
+shared experience in creating a unified user experience. Define and document the design characteristics
+for each identified component.
+3.
+Assess alternative design options and finalize design decisions: Evaluate alternate design options based
+on similar, parallel, or new developments in theory and practice that may be feasible to implement as an
+140
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+alternative to the identified system. Be sure to include those components at risk of becoming obsolete as
+the system is being built. Document the rationale for all options presented. Finalize and document the
+agreed-upon solution to include major hardware, software components, interfaces, subsystems, and
+dependencies. Revisit the preceding steps and adjust documentation as needed.
+4.
+Build and manage the design: Design the solution to include major hardware, software components,
+interfaces, subsystems, and dependencies. Ensure that accessibility and inclusivity standards are included.
+5.
+Review and implement the system design: Review the system design to ensure it meets the approved user
+requirements, engaging system owners, users, designers, and other stakeholders in the review process.
+Provide training for all users and system support staff to ensure proper use, support, and maintenance.
+6.
+Measure the success of the design system and continue making improvements: Capture user feedback
+and evaluate the data received using metrics designed to measure its effectiveness and efficiency. Apply
+continuous improvement processes to address user feedback and system updates and changes.
+Systems Designs for Enterprise Network Architectures
+The enterprise, a term used to refer to as a business, organization, or company, is composed of a technical
+network or system of interconnected computers and other devices that allow for the exchange of data and
+information (such as files) and the sharing of resources (such as printers). Users are connected through
+devices and communicate via standard internet protocols. The enterprise network architecture refers to the
+structure and layout of an organization’s network. Enterprise network architecture designs also reference
+pertinent business functions and provide insight into the overall technical architecture for the business,
+including the dependencies and connectivity of various applications. The goal of network architecture and its
+supporting design is to identify the most efficient way to transfer data from one hardware point to the other.
+Enterprise network architectures are composed of communication protocols along with local area and wide
+area networks (LANs and WANs), network devices (routers, switches, storage), end endpoints (servers, mobile
+devices).
+There are several ways to design a network architecture, and selecting the right design should be based on the
+goals and requirements of the network protocol, that is, the set of rules and guidelines that determine how
+the data are exchanged between network devices. There are two broad types of network architecture: peer-to-
+peer and client/server. In peer-to-peer (P2P) architecture, the computers on the network are all given the
+same opportunity to use resources on the network. There is no central server for file storage, and network
+resources are shared. With client/server architecture—otherwise known as tiered—there is a central
+computer (server) that operates the network and allocates resources to the equipment connected to the
+network.
+A key characteristic of a peer-to-peer network architecture is its decentralized nature. As shown in Figure 4.13,
+there is no central server through which the devices communicate directly. Each of the connected devices
+assumes equal capabilities and responsibilities, hence the term peer. This type of architecture is often used for
+smaller networks, like those in a home, and are highly resilient—even more than a centralized network—to the
+compromise of threats.
+4.3 • Technical Design Methodologies and Practical Applications
+141
+
+Figure 4.13 Each connected device in a peer-to-peer network assumes equal capabilities and responsibilities, and there is no central
+server supporting direct device communication. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+As shown in Figure 4.14, a client/server network is composed of servers and connected client machines—and
+thus considered a centralized network. Servers provide services—generally client requests—through their vast
+processing power. Client/server networks are associated with larger, more extensive computer networks
+utilizing WANs.
+Figure 4.14 Client/server architecture is a centralized network composed of servers and connected client machines. (attribution:
+Copyright Rice University, OpenStax, under CC BY 4.0 license)
+GLOBAL CONNECTIONS
+5G Technology’s Global Reach
+The fifth generation mobile network, or 5G, is the latest iteration of a global wireless standard. This 5G
+technology connects people, places, and things, including devices, machines, and objects. It provides
+increased availability, reliability, and network capacity, allowing for quicker service delivery to users.
+Increased network capacity allows for the maximum amount of information to be transferred at any given
+time and considers volume, traffic, utilization, and type of data. 5G became available in 2019 when most
+phone manufacturers began using the technology commercially. It is widely expected to expand beyond
+the sixty plus countries currently benefiting from the service, and it is also expected to extend beyond the
+mobile device industry, spreading into the automotive sector and others as well.
+142
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+4.4 Designing for Mobile Devices and Other Design Considerations
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Explain user-centered design
+•
+Identify special design considerations for mobile apps and social platforms
+Designing mobile applications and social media platforms focuses on creating intuitive and engaging
+experiences by placing the user’s needs, preferences, and behaviors at the center of the design process.
+Keeping users in mind ensures that apps and platforms are not only functional but also provide seamless and
+enjoyable experiences across different devices and user contexts.
+User-Centered Design
+Businesses increasingly recognize the need to incorporate stakeholder feedback into the design process,
+which reflects a shift from traditional design and development practices. A way to meet this need is to
+incorporate user-centered design (UCD), an iterative, or stepwise, approach to development that considers
+the user’s needs, behaviors, and preferences. UCD aims to positively influence user experience, gaining user
+loyalty for continued use of the product. In short, the user is placed at the center of the design process and the
+user’s experience is factored into decisions where the business looks to align business practices and
+stakeholder research to create a design that aligns with the end user’s needs. Applying user feedback to guide
+the design process not only strengthens the output of the design, but it creates a relationship with the user.
+Consider some best practices for how to implement the UCD approach:
+•
+Define the business goal: To arrive at a final solution, businesses need to define their organizational goals.
+These goals set the direction of the design process. What are the strategic goals of the business? What are
+the targeted outcomes (in the short term or long term) of these goals? How will the design of the business
+reflect these goals and increase its socioeconomic and financial value? How does the system user fit into
+the strategic goals of the business and how will the system reflect that relationship? These decisions
+should also consider the market forces that will help shape the design. Namely, the organization should
+identify its target market, the intended users of its product/solution, and its competitors.
+•
+Understand users and align business goals: The customer is the driving force of the design as the
+customers or end users will ultimately support the final solution. Therefore, having insight from the user’s
+point of view is essential and foundational to UCD. This insight can include the user’s needs, abilities, and
+constraints—each of which may impact a user’s ability to fully interact with an information system’s
+design. Consider the task of designing a website for a client. To meet the needs of users who might have
+specific challenges or differing abilities, the site might incorporate variable font size, color options, or
+larger buttons. Anticipating the user’s tasks (current and future) is key for insight into the user’s abilities
+and the challenges users might face when using the tool.
+◦
+Do thorough research. Initiate interviews, focus groups, surveys, and other types of customer research
+methods to solicit user responses. Invite users who may provide insight into different roles or functions
+of the design. Consider assessing who will use the website, the environment, how the user feels when
+using the design, and their needs, abilities, and limitations. Gather and analyze the data using
+analytical tools and analytics as the data will drive decisions for the design. Learn as much as possible
+about the users in order to craft a product that fits their needs.
+◦
+Evaluate the business needs and requirements. Identify and engage stakeholders to further
+understand your organization’s goals, constraints, regulatory requirements, and budget considerations.
+Determine how to create the design and incorporate the data received from surveying users. Decide on
+the metrics that will be used to measure the success of the design.
+•
+Generate the design solution and evaluate: Create a total solution that incorporates the user’s feedback.
+Explore design tools for web design such as wireframes, user stories, mock-ups, and diagrams to provide
+4.4 • Designing for Mobile Devices and Other Design Considerations
+143
+
+a vision of the full user story, leveraging business requirements and stakeholder feedback. Test the design
+end to end, re-creating the user experience. This process lends itself to the iterative, or circular, nature of
+UCD, namely, the cycling practice of building, refining, and improving a product, project, or initiative more
+than once. Be sure to account for and validate all the business and user requirements. Evaluate the design
+utilizing the identified metrics.
+•
+Continue to refine: Continue to involve the user throughout the design process, refining the design as
+needed to assess its usability, a quality-related attribute that refers to a system or interface’s ease of use.
+A popular social media platform, Instagram, provides an example of this iterative process. Launched in 2010,
+Instagram provided a means for people to connect through photos and until 2012 was only available as an
+iPhone app. The app grew in popularity, prompting the platform to evolve as users interacted with each other
+and with the app itself. The first evolution was incorporating the hashtag (#). The hashtag was already in use
+on X (at that time, Twitter) to cluster similar posts and provide a searching mechanism for similar content.
+Another addition was integrating Android capability, which led to an entirely new group of Instagram users.
+Eventually, the app incorporated ads, and it replaced the chronological order of the posts with an algorithmic
+order. As the user base increased and its needs became more apparent, business pages were developed, plus
+the ability to add a “story” and multiple pictures in a post.
+Subsequent developments included “reels” and business Instagram shops. All of these developments and new
+opportunities came about through the implementation of UCD—specifically, the use of tools that aimed to
+better understand how users were interacting with the system. Instagram, much like other social media
+platforms, is expected to continue to evolve as user needs change.
+Special Design Considerations for Mobile Apps and Social Platforms
+Accessing applications via mobile devices has increased as technology has literally shifted into people’s hands.
+The marketplace for mobile applications is crowded with all types. When considering how to approach design
+and development for mobile application use, recognize that applications differ in function and purpose based
+on their user bases. Despite their variability, mobile applications generally belong to one of the following
+categories:
+•
+Social media applications: Social media applications allow community-based sharing via communication
+and collaboration. These applications lend themselves to connecting community members with shared
+content, expanding social networks. Users are driven to check in on such apps almost daily. YouTube, a
+popular social media platform, receives 2.6 billion users per day, and generated $29.2 billion dollars in
+2022.3 Other popular social media applications include Facebook, TikTok, and WhatsApp.
+•
+Games and entertainment: The gaming and entertainment application space has expanded as accessibility
+includes mobile devices, computers, televisions, and game consoles. These interactive applications house
+activities related to leisure and fun. They are where content creators, marketing professionals, and artists
+collaborate to create an enjoyable interactive experience that generates revenue. Popular applications
+include Netflix, Hulu, Disney+, and Xbox Game Pass.
+•
+Lifestyle: Lifestyle apps support and define aspects related to a user’s lifestyle. For example, users who
+watch HGTV can now access the HGTV application to watch shows they missed, get exclusive content from
+hosts, and even enter sweepstakes. Other lifestyle applications include VRBO, Expedia, and Uber. Health-
+care applications can also fall under the lifestyle umbrella. Many health-care organizations are
+incorporating services via mobile technologies due to their ease of use, convenience, and reduced
+administrative costs to the organization. The health-care insurance provider Humana, Inc., is an example
+of a company using AI to improve operational efficiencies via mobile technologies.
+•
+Productivity: Productivity applications (such as Microsoft Office, Docusign, and Calendar) allow users to
+manage tasks efficiently and effectively, leveraging the application’s speed and convenience. Thanks to
+3
+Mansoor Iqbal, “YouTube Revenue and Usage Statistics (2025),” Business of Apps, updated January 22, 2025,
+https://www.businessofapps.com/data/youtube-statistics/
+144
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+such applications, users may be able to handle basic banking transactions or sign an important document
+from a variety of locations or devices.
+•
+News and information: News and information applications allow people to stay connected to current
+events by presenting news and information in unique formats that appeal to their users. For example, the
+Bleacher Report provides sports-related news and analysis, while Flipboard allows users to receive news
+and analysis on sports, politics, international relations, and other topics.
+•
+Utility: Utility applications such as Calculator, Flashlight, and Weather may be preinstalled into a mobile
+device, generally serving a single, quick purpose.
+Today, many users of technology need to access websites, software, and applications on various platforms. For
+example, employees who work from home may access a work software program via their tablet rather than
+their desktop computer in the office. Social media users often access their accounts through their phone, but
+they might also want to interact with an app through their smartwatch. It is important during the development
+process to design the system so that it can meet the user requirements on various platforms with nearly the
+same functionality. Specifically, website developers must incorporate making sure the website displays
+correctly on a mobile device into the development process.
+Effective systems offer a seamless user experience between devices and platforms, which means that the
+functionality of the system is consistent for the user across various devices (such as phones, tablets, and
+personal computers) and platforms (like Android, IoS, and Windows). In some cases, users appreciate when
+applications are connected and integrated into other applications or software. This often occurs with products
+within the same company such as with Meta, who owns Facebook and Instagram. When a user changes their
+profile picture in one application, it is automatically updated in the other application. This can also occur with
+integrations of systems that are not under the same company. For example, payments held in an Apple Wallet
+on an iPhone can be integrated into a wide variety of shopping applications, and often that information is
+saved in the shopping app so the user does not have to enter payment information each time. These are just a
+few examples of how systems design has become more complicated over time as technology has changed and
+user needs and requirements have evolved.
+These are a few practical design considerations for developing mobile apps and social platforms:
+•
+Purpose and goals: Start by defining the purpose and goals for the application or platform. Do sufficient
+research. Discover the latest trends in design that may boost usability.
+•
+Simplicity: Simple, functional designs with pleasing visualizations often generate buzz and increase the
+number of return users. For example, a good design might incorporate a color palette, features a status
+bar indicator to visually display the user’s progress, and directs the user to the next step through prompts.
+•
+Reliability: The design should be reliable, meaning users should be able to access it successfully 24/7. To
+support this reliability, it should meet relevant speed and consistency standards. One dimension to
+consider is the data network architecture and infrastructure. In addition, review the policies of the mobile
+apps and social platforms to guard against misinformation (inaccurate or false information) and
+disinformation (false information given with the intent to mislead).
+•
+Friendly navigation: Mobile app designs are most successful when they can be accessed well with friendly
+navigation. Users should be able to navigate the site’s functions via their fingertips, voice commands, or
+similar simple manners.
+•
+Platform compatible: Consider different platforms in the design to create a seamless user experience.
+What works for iOS may not work for Android as the user interface may differ. Functional elements should
+be minimal and consistent with the website, as this builds trust among users when they access the
+application in either setting.
+•
+Social media integration: As users become more inclined to share information with others in their
+communities and networks, social media integration may be a function that raises the design to another
+level. Here are some questions to consider while integrating social media into an application: How well
+does the application integrate with some of the popular social media applications? Would users want to
+4.4 • Designing for Mobile Devices and Other Design Considerations
+145
+
+play games or compare outcomes with their friends and share the results on social media? How would this
+functionality expand the reach of the application and its use? What types of push notifications or social
+media application alerts would users need to have an optimal experience?
+•
+Financial: There is a broad range of money needed for mobile application development as features such as
+push notifications, real-time updates, and third-party integrations may cause significant variations in
+expense. These costs can range from $10,000 to $500,000, and projects can sometimes involve many
+years of development.
+LINK TO LEARNING
+Read more about haptic technology that goes beyond the use of finger navigation (https://openstax.org/r/
+109HapticTech) at the Smithsonian Magazine website.
+GLOBAL CONNECTIONS
+Messaging Apps Fill Global Gaps
+People increasingly want the ability to connect with their communities wherever they may be physically
+located across the globe. However, compatibility and coverage from carriers and service providers can pose
+challenges. Messaging applications emerged in the mid-1990s in response to this international need, and
+they gained in popularity because they provide an alternate communication method—via a user’s mobile
+device—that is consistent with how people want to use technology to connect. Facebook Messenger,
+WhatsApp, Google Hangouts, and BOSS Revolution are examples of such applications. To use them to
+communicate, the user and receiver must have the application downloaded or be able to access it via a web
+browser. These apps are cost-free and continue to advance in their technological capabilities, bridging
+international communication gaps.
+Guidelines for Mobile App Design
+A good mobile design reflects the process undertaken by the development team, which ensure that the final
+design is not merely an acceptable product for stakeholder use, but also one that supports a stakeholder need
+and fosters continued use. Developers should also consider the impact of globalization on mobile app design,
+both in terms of international regulatory standards and user needs. This might include offering features that
+allow the user to select a language for the interface, and incorporating elements that are not regional or
+specific to a single culture or ethnicity. The following guidelines should be considered when designing a
+mobile application:
+•
+Strategy development and planning: Strategy development is a major first step in creating a mobile
+application. It will help to define the direction and vision of the design and allow anticipation of future
+industry trends. Here are several questions to consider in this phase: What are the strategic priorities of
+the organization that are prompting this development? How will the application align with the business
+goals? And, most important, what is the problem to be resolved or alleviated with the design? For
+example, the organization may not have a mobile application for its customers to make purchases, inquire
+about returns, and other general needs. Creating a mobile application may increase customer satisfaction
+and generate exposure to the business, ultimately expanding the customer base. The development
+process should seek to create positive experiences for its targeted users through its functionality. Create a
+detailed plan that outlines the “why” to include an analysis of the problem, the overall goals, and how the
+design will ultimately align with the organizational strategic goals, including data to support the plan.
+•
+User interface and user experience: These two elements work together within an application and should
+146
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+be part of design consideration. The user interface (UI) is the point of interaction between the user and
+the product. Designing with UI in mind involves considering elements and functions that the user may
+encounter, and how the design responds to the user’s needs. The user experience (UE or UX) is a design
+approach that integrates the user’s experience with the company, its services, and its products. UE looks at
+the application design process from all aspects of a customer’s interactions with a company’s services. This
+process requires a keen understanding of the user, their needs, and their interactions with the application
+or system that is being designed. Much like the Agile approach, the UX approach keeps the user needs at
+the forefront of the development process.
+•
+Application development, testing, and deployment: Taking into consideration the defined strategy and the
+plan to integrate the UI/UE approach within the design, begin developing the application. Leverage user
+stories, storyboards, and other visuals and mapping tools to outline the user’s steps as they navigate the
+application. Does the design provide consistency? Are its core features available? Is the text legible? Is the
+navigation simple? Is it usable across platforms and with its web-enabled version (if available)? Does the
+design anticipate its user’s needs, leading users to a positive end result and user experience? Review the
+design to validate that it meets the business and user requirements. Test the design to identify bugs or
+glitches that may impact its use, functionality, and performance (such as load times). Consider extending
+testing to a focus group, which is a group of individuals assembled to discuss their opinions on a product
+or service, as their insight could direct the future use of the product. Once the mobile design is validated,
+deploy the application and watch it in use.
+•
+Application support and performance monitoring: Continue to monitor the mobile application via statistics
+and reporting methods to gauge its usability. Monitor user feedback and performance metrics, leveraging
+the resulting data to update future design iterations, if necessary.
+CAREERS IN IS
+Mobile Application Developer
+A mobile application developer writes software programs for mobile applications across platforms, and
+they may be involved in the testing and future maintenance or updating of applications. These technical
+professionals work in a wide variety of industries. Other professionals who create similar, user-friendly
+software applications are software engineers, web designers, and iOS developers. A minimum of a
+bachelor’s degree, industry certifications, and the completion of internships or entry-level work experience
+are generally expected to start .
+Guidelines for Website Design and Usability
+Have you ever visited a website and regretted it immediately? Why? Was the site hard to navigate, visually
+unappealing, or slow to load? Did you not find the information you were looking for? Examples of poor
+usability include a landing page that features several issues that contribute to an unprofessional look, such as
+too much information as text, uneven header and footer, and a lack of white space.
+Certain common problems associated with web design often lead websites to their demise if not corrected.
+Unfortunately, many website owners do not even realize that their sites have these problems. Although these
+guidelines are not all universally applicable, following them can help web development teams to make sure
+websites are user friendly:
+•
+Follow web content accessibility guidelines: The term accessibility refers to the practice of making
+products, services, and environments usable by as many people as possible, especially by ensuring that
+digital resources are available to individuals with disabilities. W3C is a Web Accessibility Initiative
+organization that maintains guidelines, strategies, standards, and resources for web design. It continues
+to expand its web content accessibility guidelines (WCAG) to incorporate accessibility guidelines for
+4.4 • Designing for Mobile Devices and Other Design Considerations
+147
+
+organizations and individuals around the world. These international standards focus on a variety of
+information and content located on websites, from code to the presentation of the resulting text, images,
+and sound.
+•
+Maintain common design elements: Design elements should be functionally minimal. Content should be
+clear and legible, and related ideas should be located in close proximity to each other and organized,
+through hierarchies, into common categories. Images, text, and sound elements should meet accessibility
+standards.
+•
+Simplify navigation: A good website is easy to navigate and users are able to locate items quickly when
+they land on the site. Search or lookup features should be readily available and functional, and they should
+return targeted results based on the search input.
+•
+Optimize for mobile devices: Most users now access websites via their mobile device. The use of a
+responsive design will allow the website’s design themes and associated content to adjust to match and
+reconfigure themselves for mobile use.
+A strong design features accessible font styles and colors along with being easy to navigate. The font is clear,
+well organized, and visually appealing. Good website design uses images, text, and sound elements that are
+within accessibility standards.
+FUTURE TECHNOLOGY
+Low Code and No Code
+Low Code and No Code are two future technologies of mobile design that allow users with little to no
+programming or software development experience to build applications for business use. Drag-and-drop
+features of computerized models with prebuilt coded instructions and functions can be used to create
+valuable business applications. These technologies generate value by replacing legacy systems, providing
+interoperability options, being easy to use, and offering reduced development time compared with
+traditional development.
+148
+4 • Systems Analysis, Design, and Development
+Access for free at openstax.org
+
+Key Terms
+accessibility
+practice of making products, services, and environments usable by as many people as possible,
+especially by ensuring that digital resources are available to individuals with disabilities
+Agile
+approach of iterative and incremental delivery of quality products and value to stakeholders using
+team collaboration, flexibility, and continuous planning
+Agile software development
+adaptive approach to software development that considers uncertainty in
+rapidly changing environments and allows Agile teams to respond to those changes to deliver smaller,
+consumable work packages quickly
+As-Is/To-Be process map
+visualization that details the “current state” and “future state,” respectively, of a
+specific process or function within an information system; the As-Is process map details how things
+currently work, while the To-Be process map describes what should be done to reach the desired future
+state
+business problem
+any obstacle to business operations that causes variance in the expected outcome
+client/server architecture
+tiered architecture in which a central computer (server) operates the network and
+allocates resources to the equipment connected to the network
+computer-aided design (CAD)
+design approach in which computers are used to assist in the design process,
+including in the creation, development, modification, or optimization of design systems
+context diagram
+high-level diagram that visualizes a system or parts of a system and the environmental
+actors with which it interacts using diagrammatic arrows to display the flow of data
+data cycle
+different stages that data pass through while they exist in an organization’s system, from initial
+generation onward
+data design
+aspect of systems design wherein data and the actionable components resulting from the
+systems analysis process are translated from their raw formats and combined into understandable formats
+data dictionary
+database that houses the details of system data, their properties, entity relationships, and
+any reference documentation
+data flow diagram (DFD)
+graphical representation of the information flow of a process or system
+design diagram
+simplistic drawing, or elaborate depiction, that helps design teams as it is simple to
+understand, universally accepted, and easy to compare
+enterprise
+another term for a business, organization, or company
+enterprise network architecture
+includes pertinent business functions and provides and illustrates the
+technical architecture, including the dependencies and connectivity of various applications
+entity relationship diagram (ERD)
+visual representation of the data flow and its relationship among people,
+objects, events, places, or concepts
+flowchart
+visualization that displays sequential relationships between data, systems, programs, or processes
+and is often used by technical and nontechnical persons to document, plan, and communicate ideas in a
+simple-to-understand visual format
+focus group
+group of individuals assembled to discuss their opinions on a product or service
+functional requirement
+feature or function of an application that is needed for the affected business areas
+to accomplish its tasks
+interface design
+design of the visual layout and functional elements of a product or system that involves
+using an understanding of people and processes to drive the final design outcomes
+iterative
+process that is applied repeatedly
+mind map
+free-form depiction of ideas with branches displaying the flow of information and thoughts;
+generally used for brainstorming activities
+network
+system of interconnected computers and other devices that allow for the exchange of data and
+information (such as files) and the sharing of resources (such as printers)
+network architecture
+top-level view of the system that defines the equipment in the network and the
+interaction between the equipment
+network design
+focuses on the specific implementation and configuration of a network to meet the
+4 • Key Terms
+149
+
+requirements of a particular organization or application
+network protocol
+set of rules and guidelines that determines how data are exchanged between network
+devices
+nonfunctional requirement
+attribute of the system that enhances its functionality or operation and is often
+viewed as an item that describes the general properties of the system or how the system should behave
+and work
+peer-to-peer (P2P) architecture
+architecture in which computers on the network are all given the same
+opportunity to use resources on the network
+process design
+activity generally used by businesses to further understand its processes and how to improve
+them
+prototype
+design approach wherein systems designers and users create a small-scale representation or
+working model of the solution
+requirements traceability matrix (RTM)
+spreadsheet or similar document used to record each user
+requirement along with supplemental information (such as type, description, objective, justification,
+priority, department, and status) that assists with the review, testing, and confirmation of requirements
+responsive design
+approach that allows design themes and associated content to adjust to match and
+reconfigure itself for mobile use
+retrospective meeting
+meeting in the Agile software development process at which sprints are discussed in
+detail and areas of improvement to apply to future sprints are identified
+software development life cycle (SDLC)
+framework that defines the stages of software development, from
+inception to retirement
+sprint
+time-based period, generally between one and six weeks, that represents a delivery cycle during which
+the specified work is completed and reviewed
+stakeholder
+individual or group who has a vested interest or concern of a business decision; may be internal
+or external to an organization and may include the community, government entities, employees,
+customers, investors, suppliers, or trade unions/associations
+stand-up
+ten- to thirty-minute daily meeting to discuss the development process and any changes that are
+needed during sprints
+system design process
+methodology that determines and defines the architecture, interfaces, and data for a
+system to ensure that it satisfies the specified requirements
+system documentation
+reference information used to describe the system and its parts and used to
+understand the functioning of the system
+systems analysis
+identifies the opportunities discovered by examining business problems and identifying
+possible solutions the business may undertake
+systems analyst
+professional whose primary functions are to utilize systems analysis and design techniques
+to support information systems and solve challenges that arise when using information systems
+systems design
+organizational approach to improving on an existing system or to developing a newer one
+systems design task list
+road map through each step of the design process, allowing teams to have an
+organized workflow and make informed decisions at each step
+UML diagram
+broad category of tools that are commonly used in systems analysis and design
+usability
+quality-related attribute that assesses an interface’s ease of use
+use case diagram
+visual representation of system features that displays how specific users interact with the
+specific functions of a system
+user experience (UE or UX)
+design approach that encompasses the user’s experience with the company, its
+services, and its products
+user interface (UI)
+point of user interaction with the product that incorporates the elements, functions, and
+responsiveness of the design that the user may encounter
+user requirements
+aspects of a solution that are specified by stakeholders and needed to support the
+specific needs and expectations of a business process or product
+user-centered design (UCD)
+iterative, and stepwise, approach to development that considers the user’s
+150
+4 • Key Terms
+Access for free at openstax.org
+
+needs, behaviors, and preferences
+web content accessibility guidelines (WCAG)
+guidelines for web and digital design that integrate
+accessibility into the product and user experience
+Summary
+4.1 Systems Analysis and Design for Application Development
+•
+Systems analysis and design is a stepwise process for evaluating and developing information systems by
+understanding the needs of the business to improve on or develop effective and efficient functioning
+solutions to technical challenges.
+•
+The benefits of systems analysis and design include the identification of operational efficiencies achieved
+by improvements to existing systems, the alignment of system functionality with organizational strategic
+objectives, early risk identification of potential threats to processes, the minimization or reduction of
+resources and costs, and the overall improved quality, efficiency, productivity, and usability of the system.
+•
+A systems analyst is a professional whose primary functions are to utilize systems analysis and design
+techniques to support information systems and solve challenges presented when using information
+systems.
+•
+Systems design generally involves the following activities: designing the data, interface design, and
+process design. The tools used in systems analysis and design are varied and aid in the understanding of
+the system in its current and/or future state.
+•
+SDLC is a framework that defines the stages of software development, from its inception to its retirement,
+providing a blueprint of the tasks to be completed for each stage of the cycle: analysis, design,
+development, testing, deployment, and maintenance.
+•
+Agile is an iterative approach to software development that considers uncertainty in changing
+environments and allows Agile teams to respond to those changes quickly to deliver smaller, consumable
+work packages. The Manifesto for Agile Software Development maintains the four Agile Manifesto values
+and describes how Agile development works, including the planning and preparation involved and the
+importance of sprint planning.
+•
+An analysis and design team includes members such as the designer, systems architect, user experience
+researcher, and systems analyst, among other important participants in the systems analysis and design
+process.
+4.2 Defining the Business Problem and User Requirements
+•
+Defining the business problem is multifaceted and includes asking directed questions to uncover the
+issues that need to be addressed and the problem at hand.
+•
+Various tools can be used to understand user needs and how users will interact with the system. These
+include both visual tools, such as flowcharts, and textual tools, such as user stories.
+•
+Not having complete or correct user requirements can delay a project and result in additional costs. Taking
+time up front will save valuable resources in the long run.
+•
+Through proper planning in the early stages of systems development, analysts can feel confident in
+delivering a system that works for the stakeholders and meets the user requirements.
+4.3 Technical Design Methodologies and Practical Applications
+•
+The systems design process defines the architecture, interfaces, and data for a system that satisfies the
+specified requirements.
+•
+Systems designs can be logical (a high-level view of the system, including actors and the relationships
+between the actors and the system) or physical (the specific hardware and software components, along
+with detailed systems diagrams and layout of the systems).
+•
+Data move through the system in a cycle from initial data creation to the eventual archiving or destruction
+of the data.
+4 • Summary
+151
+
+•
+Prototypes are used for early detection of problems, expanded user engagement, increased satisfaction
+with the final product, and greater savings of time and money associated with rework. CAD is used by
+designers and engineers because of its ease of visualization, level of detail, capacity for specialization, and
+ability to optimize products and render a physical product, which can greatly inform the design process.
+•
+Input/output control is a component of the design process. Input is the raw data that are processed
+through the functions of the system. It is controlled by the directives used to submit responses into the
+system by the user, producing an output according to the system logic. Output is the information delivered
+to users through an information system; it is the data that result from the inputs being processed
+according to the system logic.
+•
+A systems design task list provides a road map through each step of the design process, allowing teams to
+have an organized workflow and make informed decisions through each step.
+•
+The enterprise network system is composed of interconnected computers and other devices that allow for
+the exchange of data and information and the sharing of resources.
+•
+The most commonly used network architectures are peer-to-peer and client/server.
+4.4 Designing for Mobile Devices and Other Design Considerations
+•
+User-centered design (UCD) creates a product that uses an interdisciplinary approach to design with focus
+on the user experience and feedback. Applying user feedback to guide the design process strengthens the
+output of the design and creates a relationship with the user.
+•
+UCD is iterative in nature and includes the practices of building, refining, and improving a product, project,
+or initiative.
+•
+Best practices associated with a UCD approach include defining the business goals, understanding users
+and aligning business goals, generating the design solution, evaluating the final product, and continuing
+to refine the product.
+•
+Mobile applications require special design considerations. This includes keeping the flow simple,
+highlighting key features of the application, and designing features for touch screens.
+•
+Effective website design includes making sure accessibility standards are met for images, text, and sound.
+The website design should also incorporate mobile accessibility in the process.
+Review Questions
+1. What is a drawback of systems analysis and design?
+a. delays early identification of potential threats to processes
+b. increases resources and general costs
+c. prevents the alignment of strategic objectives
+d. decreases quality, efficiency, productivity, and usability of the system
+2. What is the tool used in systems analysis and design that documents the details of the design?
+a. simulation
+b. data flow diagram
+c. pseudocode
+d. data dictionary
+3. What is a statement that best characterizes the Agile software development process?
+a. It is a linear approach to software development and proceeds sequentially from one stage to the next.
+b. There are no considerations for environmental changes.
+c. The final work product is delivered in one package at the end of the process.
+d. It values individuals and interactions over processes and tools.
+4. What is a responsibility of the systems architect role?
+a. to conduct user testing to validate ideas
+b. to create the hardware, software, and network systems
+152
+4 • Review Questions
+Access for free at openstax.org
+
+c. to create and test software solutions
+d. to detail the technical specifications of the system
+5. A small start-up is developing a mobile app and has limited resources. The team wants to release a basic
+version of the app quickly, gather feedback, and make iterative improvements based on that feedback.
+The team also expects some changes to the app’s features as they learn more about user needs. Given
+these conditions, which of the following best describes the most suitable approach for the team?
+a. Use a Waterfall approach to ensure all features are fully developed and tested before the first release,
+preventing any major changes after the launch.
+b. Follow an Agile development process to focus on delivering a minimum viable product (MVP), gather
+user feedback, and iterate on the app with each new release.
+c. Adopt a hybrid approach, combining elements of Agile and Waterfall, to maintain flexibility in
+development while still following a strict, sequential timeline.
+d. Use a Rapid Application Development (RAD) model to complete the app’s features as quickly as
+possible, with minimal user involvement during the development process.
+6. What is the purpose of the five-whys method?
+a. to determine solutions to the business problem or opportunity
+b. to evaluate the solution
+c. to evaluate the options presented
+d. to define the problem
+7. What would indicate that an update or reassessment of the user requirements is needed?
+a. documented processes
+b. early delivery of the product
+c. meeting user functional requirements
+d. increased costs
+8. Dr. Singh could benefit from having a systems analyst support her business problems and opportunities.
+How could Dr. Singh leverage this resource most efficiently?
+a. by focusing on opening the new practice location and not addressing challenges within the current
+practice
+b. by engaging all stakeholders in discussions with the systems analyst to gain a comprehensive
+understanding of the business problems and opportunities
+c. by fixing the problems in the current practice and delaying the opening of a new office
+d. by purchasing a system “off the shelf” and adjusting the business to fit the new system
+9. What is an example that demonstrates the importance of clearly defining business problems and user
+requirements at the start of a systems development project?
+a. Focusing on user requirements can prevent misunderstandings during the development process but
+will not influence project costs or timeline.
+b. Incomplete or incorrect user requirements may lead to significant delays and increased costs, but
+addressing them in early stages helps avoid costly changes later.
+c. Analyzing user needs only at the final stages of development ensures that the system meets
+stakeholder expectations without wasting resources.
+d. Relying on visual tools, such as flowcharts, exclusively, will guarantee that user needs are fully
+understood and eliminate the risk of project delays.
+10. When should the systems design process begin?
+a. before the business problem is defined, prior to completing a systems analysis, during the
+requirements gathering process, and prior to the generation of design diagrams
+b. after the business problem is defined, prior to completing a systems analysis, during the requirements
+gathering process, and after the generation of design diagrams
+4 • Review Questions
+153
+
+c. after the business problem is defined, after completing a systems analysis, after completion of the
+requirements gathering process, and after the generation of design diagrams
+d. after the business problem is defined, prior to completing a systems analysis, during the requirements
+gathering process, and prior to the generation of design diagrams
+11. What differentiates logical designs from physical designs?
+a. Logical designs include the specific hardware that will be used in the system.
+b. Physical designs incorporate business processes to visually represent the flow of data and the
+relationships between them.
+c. Logical designs provide a high-level representation of the system.
+d. Physical designs are used to build out the logical design.
+12. Why are communications protocols part of the network?
+a. They help diagnose connectivity issues.
+b. They allow for the exchange of data and information.
+c. They allow for the connectivity of most devices.
+d. They ensure safe data transmission.
+13. Which statement best illustrates the importance of the systems design process in ensuring a successful
+project outcome?
+a. A systems design focuses primarily on choosing the right hardware to meet performance
+requirements, ensuring the system functions as expected.
+b. The systems design process creates detailed architectural and data specifications, balancing logical
+and physical components, while also identifying potential issues early through prototypes and iterative
+design.
+c. A systems design is only about developing the user interface, focusing primarily on aesthetics and ease
+of use.
+d. The systems design process is mainly concerned with generating the necessary documentation and
+does not need to consider user feedback or future scalability.
+14. What is a key goal of using a user-centered design approach?
+a. providing the cheapest solution to the user in the quickest time frame
+b. integrating customer feedback once during the development process
+c. developing detailed documentation reports of the system functionality
+d. utilizing user input throughout the process to provide the best solution to meet the needs of the users
+15. Why is it important to conduct research before designing a mobile application?
+a. Research helps create an app with the least amount of time and cost.
+b. Research tells you how to design the product.
+c. Research prevents costly mistakes and major changes later in the design process.
+d. Research provides new revelations about user needs.
+16. What is a consideration for mobile application design?
+a. trendiness in design
+b. predetermined response time
+c. finger-friendly navigation
+d. complex but functional design
+17. What is a true statement about UI and UE?
+a. UI and UE work independently of each other.
+b. There is minimal difference between UI and UE.
+c. UE considers the interaction of the user with the design.
+d. UI looks at the design process, encompassing the user’s experience with all aspects of the company’s
+154
+4 • Review Questions
+Access for free at openstax.org
+
+services.
+18. Which statement best describes the role of iterative design and user feedback in a user-centered design
+(UCD) approach for product creation?
+a. Iterative design ensures that the product is perfect from the start, avoiding the need for user feedback
+after the initial launch.
+b. User feedback in UCD is only relevant during the initial concept phase, and iteration focuses solely on
+technical performance.
+c. UCD uses continuous user feedback to guide iterative improvements, creating a product that aligns
+closely with user needs and business goals.
+d. Iterative design in UCD is focused primarily on aesthetic improvements, deprioritizing functionality and
+accessibility requirements.
+Check Your Understanding Questions
+1. Describe the concept of systems analysis and design.
+2. Explain the SDLC process in your own words.
+3. Identify methodologies and tools in systems analysis.
+4. What would be your preferred tool to use to complete a systems analysis and why?
+5. What importance does each of the roles and responsibilities ascribed to the analysis and design team
+have?
+6. Why is it important for businesses to solve business problems? Explain.
+7. Explain the purpose of a requirements traceability matrix (RTM).
+8. If you had to create a design diagram to communicate two different solutions to Dr. Singh for her
+problem/opportunity, which design diagram would you use and why?
+9. What might be some of the challenges associated with the requirements gathering process?
+10. What are the aspects of a good systems design?
+11. What are the fundamental differences between logical and physical designs?
+12. What are some pros and cons of creating a prototype?
+13. Why is it important that the enterprise network architecture be considered in developing and designing
+an application?
+14. Why is user-centered design important?
+15. When should strategic development and planning occur in the mobile application development process,
+and what is the importance of this step?
+16. Would you consider UI or UE more important? Explain how you would prioritize features of a website
+design.
+17. Explain how globalization affects mobile application design.
+Application Questions
+1. Reflect on the Agile methodology and the characteristics of Agile teams:
+a.
+How might the Agile approach be applied to a team project for a class you are in that lasts the
+duration of the term and has a final presentation and paper due the last week of the term?
+b.
+What is your ideal time period for a sprint for a semester-long team project that you are assigned and
+4 • Check Your Understanding Questions
+155
+
+why?
+c.
+What tools would you use to maintain engagement in the project?
+2. In a small group or on your own, reflect on a business problem in your current organization (work or
+school).
+a.
+Identify an opportunity for improvement in your organization’s function or operation.
+b.
+Who would you enlist to assist with requirements gathering?
+c.
+What tools will you use to assist your efforts?
+d.
+What are some other factors you should consider?
+3. Discuss the inputs and outputs that could be present in Dr. Singh’s system. Include how the data move
+through the data cycle in the system.
+4. Reflect on a website or a mobile application that you frequently use or visit.
+a.
+Discuss what you like and dislike about the website or mobile application. How would you describe its
+usability?
+b.
+If you have any dislikes, why do you continue to visit this website? Are there competitor websites, and
+how do they differ?
+c.
+Does the website or mobile application allow you to submit user feedback? If so, have you ever
+submitted feedback on the website’s usability? Why or why not?
+156
+4 • Application Questions
+Access for free at openstax.org

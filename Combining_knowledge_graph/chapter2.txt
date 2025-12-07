@@ -1,0 +1,600 @@
+Chapter 2
+Background
+This chapter describes the information required to understand the previous research works
+and the proposed methodology in this thesis. First, we discuss about the knowledge graph.
+After that we explain different natural language processing concepts like tokenization, co-
+reference resolution, and word embedding. Then we describe two neural network architectures-
+sequence-to-sequence learning, and graph attention network. Also, we describe about at-
+tention mechanism technique. Furthermore, we discuss about the automatic evaluation met-
+rics BLEU, ROUGE, METEOR, and BERTScore. Finally we explore about large language
+models and architectures of BART and T5 models.
+2.1
+Knowledge Graph
+A knowledge graph (KG) can be defined as a data management system that combines
+different data types and uses graphs to visualize the information (Fei et al., 2022; Tang
+et al., 2019). It can be defined as the collection of triplets (Pietrasik et al., 2024). Each
+triplet consists of a subject entity to an object entity via a predicate/relationship. So, a
+triplet can be represented according to equation 2.1.
+triplet = (s, p,o) ∈S×P×O
+(2.1)
+where,
+(s, p,o): A triplet where s is the subject, p is a predicate, and o is the object of the triplet.
+S: The set of subjects.
+7
+
+2.2. NATURAL LANGUAGE PROCESSING CONCEPTS
+P: The set of predicates/relationships.
+O: The set of objects.
+The three main elements of a KG are nodes, edges, and triplets. A node represents an entity,
+concept, or data. An edge connects two nodes in a graph. A predicate/Relationship can be
+directed or undirected according to the connection of the graph. A KG can be utilized
+for representing extensive global knowledge and retrieving information (Chaudhary et al.,
+2025). It can also be used for semantic search (Gulnara and Sabdenov, 2024) and semantic
+reasoning (Sun et al., 2024).
+2.2
+Natural Language Processing Concepts
+We first describe tokenization, which is a process to convert a text into words. Then we
+discuss Coreference resolution, and finally we explain embedding, the process of converting
+words to a dense vector representation.
+2.2.1
+Tokenization
+Tokenization is a fundamental concept of NLP, which converts a piece of text into
+smaller, more manageable units. For example, converting a sentence into smaller pieces
+called tokens. Depending on the required form and the method used, the tokens can be
+individual words, subwords, or characters. Before applying any machine learning model,
+the text is required to be converted into tokens. This transformation converts the data to a
+more manageable, understandable, and interpretable, allowing it to be processed properly
+by models.
+The simplest way of tokenize text is splitting the whole text on its whitespaces only. For
+example, the sentence ”Knowledge is power” would be tokenized as [”Knowledge”, ”is”,
+”power”]. Another approach of tokenization is subword tokenization, which splits the text
+into the smallest meaningful unit. For example, the sentence ”I am not unhappy” would be
+tokenized as [”I”, ”am”, ”not”, ”un”, ”happy”] using subword tokenization as the word un-
+8
+
+2.2. NATURAL LANGUAGE PROCESSING CONCEPTS
+happy is not in the model’s vocabulary. There are some open source libraries like NLTK3,
+spaCy4, Gensim5 to perform the tokenization in different NLP tasks like summarization,
+question answering, machine translation etc.
+2.2.2
+Coreference Resolution
+Coreference resolution is an NLP task that aims to identify all linguistic expressions in
+a text that correspond to the same real-world entity (Preiss, 2005). To resolve ambiguity,
+maintain context across sentences, and ensure scalability for long texts, coreference reso-
+lution plays a vital role. Coreference resolution can be utilized in text-to-graph generation,
+text summarization, and question answering tasks. For example, the sentences ”John is a
+nice person. He always likes to help others”, after performing coreference resolution would
+result in ”John is a nice person. John always likes to help others.”
+2.2.3
+Word Embedding
+Before feeding the sequence of text into a neural network model, it is required to convert
+the text to a numerical form. Word embedding is a technique of NLP where words are
+represented as a dense, fixed-length vector. The Vector Space Model (VSM) introduced by
+Salton et al. (1975) is considered one of the most influential models for encoding words
+and documents as vectors (Almeida and Xex´eo, 2023). As word embedding is leveraged in
+many NLP tasks, it has become one of the emerging topics of research (Turney and Pantel,
+2010). It is the process of representing words into fixed-length vector representations. Word
+embedding can be categorized into two types: prediction-based models and count-based
+models (Baroni et al., 2014; Almeida and Xex´eo, 2023; Pennington et al., 2014).
+- Prediction-based Models: Prediction-based models are mainly based on neural lan-
+guage models (NNLMs), which started with the first large neural language model
+proposed by Bengio et al. (2003).
+3https://www.nltk.org/.
+4https://spacy.io/.
+5https://pypi.org/project/gensim/.
+9
+
+2.2. NATURAL LANGUAGE PROCESSING CONCEPTS
+- Count-based Models: Count-based models produce word embedding by utilizing
+word-context co-occurrence counts globally in a corpus (Turney and Pantel, 2010).
+This approach does not provide any specific training for algorithms.
+Three of the most popular word embedding approaches are Word2Vec (Mikolov et al.,
+2013a), Glove (Pennington et al., 2014), and FastText (Joulin et al., 2016).
+Word2Vec
+Word2Vec is a widely-used word embedding approach proposed by Mikolov et al.
+(2013a) at Google, which represents a high-dimensional vector of real numbers that repre-
+sents the complex relationships between different entities. To produce a word embedding,
+the Word2Vec model can use either a continuous bag of words (CBOW) approach or a
+continuously sliding skip-gram approach (Mikolov et al., 2013a,b).
+Glove
+Glove (Global Vectors for Word Representation) is a word embedding approach intro-
+duced by Pennington et al. (2014) at Stanford. This is an unsupervised learning approach
+which maps words into a meaningful vector space. This approach leverages global word-
+word co-occurrence statistics. This method combines two approaches - global matrix fac-
+torization and local context window methods.
+Sentence Transformer
+Sentence transformer, known as Sentence-BERT (SBERT) introduced by Reimers and
+Gurevych (2019) is a modification of the pre-trained BERT (Devlin et al., 2019)model. This
+approach generates sentence embeddings using siamese and triplet network structure. It
+generates semantically meaningful sentence embeddings that can be compared using cosine
+similarity, so semantically similar sentences are close in vector space. Siameses network
+architecture consists of two identical neural networks that share and parameteres, it ensures
+the similar sentences are closed together in the embedding space. SBERT is very useful for
+10
+
+2.4. ATTENTION MECHANISM
+clustering, semantic similarity, sentiment analysis, and information retrieval tasks, which
+are computationally efficient.
+2.3
+Sequence-to-Sequence Learning
+Sequence-to-Sequence, or Seq2Seq, is a type of neural network architecture that trans-
+forms an input sequence to an output sequence. It is widely used in NLP tasks like ma-
+chine translation, text summarization, question answering, and conversational models. This
+model is introduced by Sutskever et al. (2014) for the machine translation task between En-
+glish and French, where two LSTMs (Long Short-Term Memory) (Hochreiter and Schmid-
+huber, 1997) are combined into one unified model and the model is trained in an end-to-end
+manner. This model can take a variable-length input text and generate a different length
+output text, where Cho et al. (2014) shows how the machine can handle variable-length
+sequence transformations.
+Sequence-to-Sequence models are based on two major components - encoder and decoder.
+The encoder takes the input sequence and converts it into an encoded representation. An
+encoder usually uses an RNN (Recurrent Neural Network) (Rumelhart et al., 1986) like an
+LSTM (Hochreiter and Schmidhuber, 1997), or a GRU (Gated Recurrent Unit) (Cho et al.,
+2014) and convert the input sequence to a context vector. The context vector is the input for
+the decoder, which generates the output sequence.
+2.4
+Attention Mechanism
+One of the major limitations of Sequence-to-Sequence models is long-range depen-
+dencies in data. A fixed-length vector that represents the encoded sequence may not be
+sufficient to store all the information. So the model performance may decrease if the in-
+put sequence is too long. Bahdanau et al. (2016) proposed an attention mechanism which
+enables solving this problem in the neural machine translation task. This approach allows
+RNN-based sequence-to-sequence model during decoding to look back in the encoding se-
+11
+
+2.4. ATTENTION MECHANISM
+quence and determine at the current stage which words are more important for generating
+the output sequence. In producing the output sequence, the attention mechanism provides
+different weights to the input sequence according to the relative importance of the current
+stage. The evaluation of the attention mechanism results in the development of the Trans-
+former architecture by Vaswani et al. (2023). A self-attention mechanism is used in the
+transformer. Self-attention mechanism for each element calculates a weighted average of
+all input elements, allowing each element to attend to all other elements in the sequence
+(Vaswani et al., 2023).
+Components of Attention Mechanism
+The components of the attention mechanism are: Query, Key, and Value. An alignment
+score is calculated by attention between queries and keys. Then the softmax function is
+applied to get the attention weight, which is used to calculate a weighted sum of the values.
+Attention(Q,K,V) = softmax(QKT
+√dk
+)V
+(2.2)
+where, the set of Queries, packed together into a matrix Q, the keys and values are packed
+together into matrices K and V, and dk is the dimensionality of the key vector which scales
+the dot product in the softmax function.
+Multi-head Attention
+In a transformer architecture, multi-head attention uses several attention heads in paral-
+lel. The outputs are then concatenated and linearly transformed to make the final output. It
+allows the model to capture more information from the input.
+MultiHead(Q,K,V) = Concat(head1,...,headh)W O
+(2.3)
+where headi = Attention(QW Q
+i ,KW K
+i ,VWV
+i )
+(2.4)
+12
+
+2.5. GRAPH ATTENTION NETWORK
+In the above equations,
+W0 is a parameter matrix, this matrix linearly transform the concatenated outputs of all the
+heads.
+W Q
+i is the parameter matrix for the i-th attention head for Queries.
+W K
+i is the parameter matrix for the i-th attention head for Keys.
+WV
+i is the parameter matrix for the i-th attention head for Values.
+2.5
+Graph Attention Network
+A Graph Attention Network (GAT) introduced by Veliˇckovi´c et al. (2018) is a neural
+network architecture. It is a variant of a Graph Neural Networks (GNNs) that works with
+graph structure data. Compared to a GNN, a GAT is more efficient, effective, and flexible
+as it combines an attention mechanism into a GNN. GAT assigns an attention coefficient to
+each neighboring node, according to the neighbor’s features during feature aggregation.
+GAT Architecture
+Input Features
+Each node in the graph is represented as a feature vector, which is the numerical repre-
+sentation of each node. The feature vectors are one-dimensional, where each number in the
+vector represents a feature of the node.
+Linear Transformation
+The first linear transformation is done on the input features using a weight matrix that
+encodes how an input vector is mapped to an output vector through multiplication.
+13
+
+2.5. GRAPH ATTENTION NETWORK
+Attention Layers
+After the linear transformation, the GAT computes the attention coefficient concerning
+its neighboring nodes, indicating the importance of node features to a node. The coefficient
+computed by the attention mechanism, where nodes i and j are connected by an edge, can
+be represented by the equation 2.5.
+αij =
+exp(LeakyReLU(aT[Whi||Wh j]))
+∑k∈N (i) exp(LeakyReLU(aT[Whi||Whk))]
+(2.5)
+where,
+a: Weight vector to compute attention score
+hi:Node feature vector of node i
+hj: Node feature vector of node j
+W: Weight matrix applied to the hi and hj
+N (i): Sets of neighboring nodes for node i
+||: Concatenation operation
+k: Iterator that runs over the set of neighbors of node i
+.T: Transposition operation
+LeakyReLU (Maas et al., 2013) is an activation function which allows a small, non-zero
+gradient when the input is negative and solves the problem of dying ReLU. Dying ReLU
+is the problem in neural network where neurons using the ReLU activation function always
+output zero and become permanently inactive, regardless of the input.
+LeakyReLU(x) =
+
+
+
+
+
+
+
+x
+if x ≥0
+αx
+if x < 0
+(2.6)
+where α is a positive small constant.
+14
+
+2.6. AUTOMATIC EVALUATION METRICS
+Normalization
+The attention coefficients are normalized using the softmax function to make the coef-
+ficients easily comparable across different nodes.
+αij = softmaxj(ei j) =
+exp(ei j)
+∑N
+k=1 exp(eik)
+(2.7)
+where eij is the raw attention score and N is the number of tokens in the sequence.
+Feature Aggregation
+Using the normalized attention coefficients as weights, the final step is to update the
+node features of each node as a weighted sum of its neighboring nodes. Feature aggregation
+is done using equation 2.8.
+h
+′
+i = σ(∑
+jεNi
+αi jWhj)
+(2.8)
+σ is a nonlinear activation function. Usually, ReLU (Agarap, 2019) is utilized as a nonlinear
+activation function.
+2.6
+Automatic Evaluation Metrics
+To understand the model performance and capabilities, evaluation metrics are used in
+natural language processing tasks like classification, text generation, summarization, trans-
+lation, etc. The main target of using evaluation metrics is to compare the model output
+with the reference where the reference can be obtained from the dataset. Utilizing evalu-
+ation metrics are better than human evaluations because evaluation metrics are fast, cost-
+efficient, consistent, reproducible, and standardized by research community compared to
+human evaluation (Sun, 2010; Belz and Reiter, 2006; Clark et al., 2012). For classification
+task, classification metrics are Accuracy, Precision, Recall, F-score, for text generation task
+like summarization, question answering, or machine translation, the language generation
+metrics are BLEU, ROUGE, METEOR, BERTScore etc.
+15
+
+2.6. AUTOMATIC EVALUATION METRICS
+2.6.1
+Accuracy, Precision, Recall and F-score
+Accuracy
+Accuracy calculates the overall correctness of a model, whether positive or negative.
+Accuracy =
+True Positives+True Negatives
+True Positives+True Negatives+False Positives+False Negatives (2.9)
+Precision
+Precisions evaluates the correctness of positive predictions measured by a model.
+Precision =
+True Positives
+True Positives+False Positives
+(2.10)
+Recall
+Recall, also known as sensitivity measures the model’s ability to find all relevant in-
+stances.
+Recall =
+True Positives
+True Positives+False Negatives
+(2.11)
+F-score
+F-score is the harmonic mean of precision and recall. It provides a single metric that
+balances both
+F1-score = 2∗Precision ∗Recall
+Precision + Recall
+(2.12)
+2.6.2
+BLEU
+BLEU (Bilingual Evaluation Understudy) first introduced by Papineni et al. (2002).
+This is a metric for evaluating the performance of machine-translated text with the reference
+translation by comparing the generated translation to the reference translation. It assigns a
+score from zero to one based on how close the generated translated text is to the reference
+16
+
+2.6. AUTOMATIC EVALUATION METRICS
+text, where zero indicates no similarity and one indicates perfect similarity.
+BLEU evaluates the translation on the corpus level. That is, it calculates how many words
+in the generated translation match with the reference translation. BLEU calculates the
+proportion of the n-grams, which means it evaluates the sequence of n consecutive words
+that appear both in the generated translation and the reference translation. Generally, it is
+up to four words long. BLEU-1, BLEU-2, BLEU-3, and BLEU-4 are the variants of BLEU
+that differ in the length of n-grams. BLEU-1 means precision of a single word, BLEU-2
+means precision of a 2 word sequence, BLEU-3 means precision of a 3 word sequence, and
+BLEU-4 means precision of a 4 word sequence.
+The BLEU score for corpus is calculated as:
+BLEU = BP.exp(
+N
+∑
+i=1
+(wnlogpn)
+(2.13)
+where,
+wn: Weight for each n-gram (1 for BLEU-1, 0.5 for BLEU-2, 0.33 for BLEU-3, and 0.25
+for BLEU-4)
+pn:Modified precision for n-grams of size n
+BP: Brevity penalty
+The major limitations of BLEU are that it does not capture fluency, semantic adequacy, and
+grammatical errors. Additionally, it only counts the actual matches, but it does not consider
+sentences with the same meaning.
+2.6.3
+ROUGE
+ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is a widely popular eval-
+uation metric proposed by Lin (2004), mostly used for text summarization and machine
+translation tasks. ROUGE works on the basis of Longest Common Subsequence (LCS)
+(Lin and Och, 2004) between the generated text and the original text. After calculating
+LCS, it calculates the precision and recall between the generated text and the reference
+17
+
+2.6. AUTOMATIC EVALUATION METRICS
+text. The calculated precision and recall helps to find the F-score between the generated
+text and the reference text. ROUGE metric value can be between zero to one, where one
+means higher similarity between the generated text and the reference text.
+Precision =
+Length of LCS
+Length of Generated Text
+(2.14)
+Recall =
+Length of LCS
+Length of Reference Text
+(2.15)
+F −score = 2∗Precision ∗Recall
+Precision + Recall
+(2.16)
+ROUGE has some variants like ROUGE-1, ROUGE-2, ROUGE-L, ROUGE-N, ROUGE-
+W, etc. ROUGE-N finds the overlap of n-grams between the generated text and the ref-
+erence text, for example, ROUGE-1 (unigrams) and ROUGE-2 (bigrams) find the overlap
+between single words and word pairs, respectively. ROUGE-L, which is mostly used as the
+evaluation metric in the question generation task, is an LCS-based strategy.
+Though ROUGE is a fast and automated approach as an evaluation metric, its main limita-
+tion is that it does not consider fluency, coherence, or semantic meaning. ROUGE generates
+the metric value based on the exact word matching, and it does not consider any paraphrases
+or synonyms.
+2.6.4
+METEOR
+METEOR (Metric for Evaluation of Translation with Explicit Ordering) is an evaluation
+metric introduced by Lavie and Agarwal (2007) to evaluate machine translation tasks. To
+solve the limitations of earlier evaluation metrics like BLEU, METEOR provides a more
+holistic approach where not only word matching is calculated, but also takes into account
+the word meaning, stemming, and synonyms.
+First, METEOR calculates the alignment between a unigram in the candidate translation
+and a unigram in the reference translation. Then it calculates the precision and the recall.
+METEOR combines the precision and recall using the harmonic mean in the equation 2.19,
+18
+
+2.6. AUTOMATIC EVALUATION METRICS
+where recall is provided nine times more weights than precision.
+Precision = M
+WC
+(2.17)
+where,
+M: The number of unigrams matches between the candidate translation and the reference
+translation
+WC: The number of unigrams in the candidate translation
+Recall = M
+WR
+(2.18)
+where,
+M: The number of unigrams matches between the candidate translation and the reference
+translation
+WR: The number of unigrams in the reference translation
+Fmean = 10 ∗Precision ∗Recall
+Recall + 9 ∗Precision
+(2.19)
+METEOR also allows stemming (matching root words) (Lovins, 1968) and synonyms to
+perform the calculation. By considering stemming and synonyms, METEOR is more suit-
+able for evaluating paraphrased texts.
+2.6.5
+BERTScore
+BERTScore introduced by Zhang et al. (2020), is an advanced evaluation metric assess-
+ing the semantic similarity between a generated text and a reference text. It leverages the
+contextual embedding from BERT or similar Transformer-based models. Traditional eval-
+uation metrics are based on surface-level word matching or n-gram overlap. On the other
+hand, BERTScore depends on the deeper semantic meaning and context. The development
+19
+
+2.7. LARGE LANGUAGE MODELS
+of BERTScore has provided more context-aware evaluation metrics in NLP.
+BERTScore measures the similarity between the texts. According to the computation of
+BERT-Score, the generated text and the reference text are first tokenized and passed through
+a BERT model to generate contextual embedding of each token. The cosine similarity is
+calculated for each token in the candidate tokens between this candidate token embedding
+and the embedding of all tokens of the reference text. Finally, precision, recall, and F1-
+score are calculated. Precision calculates the average of the maximum cosine similarity
+scores for each candidate token to the reference tokens. Recall calculates the average of
+the maximum cosine similarity scores for each reference token to the candidate tokens. F1-
+score is the harmonic mean of the precision and recall. Precision measures how much the
+candidate text or the generated text is relevant to the reference text, recall measures how
+much the reference text is relevant to the candidate text or the generated text.
+FBERT = 2∗PrecisionBERT.RecallBERT
+PrecisionBERT +RecallBERT
+(2.20)
+BERTScore is effective for model selection; it achieves better correlation than common
+metrics and resolves some of the limitations of traditional metrics (Zhang et al., 2020).
+2.7
+Large Language Models
+Large Language Models (LLMs) are transformer-based models proposed by Vaswani
+et al. (2023). LLMs contain hundreds of millions to trillions of parameters, which are pre-
+trained on extensive text (Shanahan, 2023; Zhang et al., 2020; Minaee et al., 2025). Some
+examples of LLMs are GPT-3 (Brown et al., 2020), BART(Lewis et al., 2020), T5(Raffel
+et al., 2023), PaLM (Chowdhery et al., 2022), LLaMA (Touvron et al., 2023). LLMs can
+understand, generate, and interact with human languages.
+LLMs are trained in two main phases:
+- Pre-training: Pre-training LLMs is the task of training a model on a huge, diverse
+20
+
+2.7. LARGE LANGUAGE MODELS
+dataset of text without any specific task labels.
+- Fine-tuning: Fine-tuning LLMs is the process of training a pre-trained model on a
+specific dataset for a particular task to optimize its performance.
+2.7.1
+Applications of LLMs
+- Text Generation: LLMs can be utilized producing appropriate contextual texts on
+different fields like text summarization, creative writing, mail generation etc.
+- Question Answering: Designing question answering system and chatbot using LLMs
+can be highly efficient.
+- Machine Translation: Multilingual communication like English to French transla-
+tion or vice versa LLMs can be used for machine translation.
+- Code Generation and Debugging: We can utilize LLMs for automatic code gener-
+ation or automatic bug fixing task.
+- Information Retrieval: LLMs can be leveraged for automatic query generation, doc-
+ument retrieval, and search engine optimization.
+2.7.2
+BART
+BART (Bidirectional and Auto-Regressive Transformers) proposed by Lewis et al. (2020)
+is a transformer based sequence-to-sequence model. By integrating BERT ( Bidirectional
+Encoder Representations from Transformers) by Devlin et al. (2019) bidirectional encoder
+with GPT (Generative Pre-training Transformer) by Radford and Narasimhan (2018) left-
+to-right decoder, this model can be used in language generation, understanding and inter-
+action tasks.
+21
+
+2.7. LARGE LANGUAGE MODELS
+Figure 2.1: BART Architecture (Vaswani et al., 2023).
+Architecture
+BART model is built based on the standard sequence-to-sequence transformer archi-
+tecture form Vaswani et al. (2023). BART model is pre-trained by corrupting documents
+and the cross-entropy loss function is utilized to reconstruct the loss between the decoder’s
+output and the original document. It has main two parts: encoder and decoder.
+• Encoder
+The encoder part of BART is similar to BERT where a bidirectional attention mech-
+anism is employed which allows the encoder to process the input text by both direc-
+tion. The differences between BERT and BART are BERT uses an additional feed-
+forward network before word prediction and in BART decoder, each layer performs
+cross-attention over the final hidden layer of the encoder.
+• Decoder
+Like GPT, the BART decoder performs in autoregressive manner. The decoder gener-
+ates output tokens autoregressively by generating one token at a time in a left-to-right
+manner.
+Fine-tuning can make the BART model work more effectively. BART has roughly 10%
+more parameters than a model of the same size as the BERT model. The architecture of
+the BART model proposed by Vaswani et al. (2023) is shown in Figure 2.1. The left side
+of the image is the BART encoder part, which encodes the input text. The right side of the
+image is autoregessive decoder which decodes the text. A special token (<s>) is used at
+the beginning of the decoder, and it generates the output.
+22
+
+2.7. LARGE LANGUAGE MODELS
+Variants of BART Model
+According to the model size of BART architecture, BART model has some variants like
+BART-small, BART-base, BART-large, etc. In Table 2.1, the details of BART architecture
+with some variants are shown.
+Table 2.1: BART Model Architecture Variants.
+Model
+# Encoder Layers
+# Decoder Layers
+Hidden Size
+#
+Parame-
+ters(Approximate)
+BART-small
+4 to 6
+4 to 6
+256 to 512
+45 to 60 million
+BART-base
+6
+6
+768
+140 million
+BART-large
+12
+12
+1024
+406 million
+Applications
+BART model can be utilized for text generation, text summarization, machine transla-
+tion, understanding conversational texts, generating responses etc.
+2.7.3
+T5
+The T5 (Text-to-Text Transfer Transformer) is a highly prominent language model pro-
+posed by Raffel et al. (2023) and introduced by Google research. Based on its model archi-
+tecture, training process and hyperparameters, the T5 model is capable for doing different
+text-to-text problems like text summarization, question answering, and machine translation.
+Architecture
+The T5 model is based on a standard transformer architecture. This model takes a
+sequence of text as input and generates a sequence of text as output. This model is also
+based on an encoder and decoder.
+• Encoder
+Utilizing an encoder, the input text is converted to a contextualized representation.
+23
+
+2.8. SUMMARY
+• Decoder
+A decoder takes the contextualized representation and generates the output tokens
+one at a time.
+One of the key advantages of the T5 model is its unified framework. It transforms every
+NLP problem into a text-to-text problem and can simplify the new task.
+Variants of T5 Model
+Though all of the variants of the T5 model have the same architecture, the variants exist
+because of their model size and performance. In Table 2.2, the details of some variants of
+the T5 model are shown.
+Table 2.2: T5 Model Architecture Variants.
+Model
+# Encoder Layers
+# Decoder Layers
+Hidden Size
+#
+Parame-
+ters(Approximate)
+T5-small
+6
+6
+512
+70 million
+T5-base
+12
+12
+768
+240 million
+T5-large
+24
+24
+1024
+770 million
+T5-3B
+24
+24
+1024
+2.8 billion
+T5-11B
+24
+24
+1024
+11 billion
+Applications
+The T5 model can be applied to different text-to-text generation tasks like question
+answering, text summarization, text generation, machine translation, and others.
+2.8
+Summary
+This chapter provides the information required to understand the previous works on
+question generation and the proposed methodology of this thesis. We have discussed the
+knowledge graph, the basic concepts of natural language processing. We have then provided
+an overview of sequence-to-sequence learning, the attention mechanism, graph attention
+network architecture. Then we have described about the automatic evaluation metrics that
+24
+
+2.8. SUMMARY
+are important to understand the performance of our model. Finally, we have discussed large
+language models, the BART, and T5 model architectures and applications.
+25

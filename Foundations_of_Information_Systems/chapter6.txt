@@ -1,0 +1,2191 @@
+Figure 6.1 Continuous threats to data privacy and security encourage organizations to develop policies and protocols that evolve
+with technology. (credit: modification of work “Data Security Breach” by blogtrepreneur.com/tech/Flickr (http://blogtrepreneur.com/
+tech/Flickr), CC BY 2.0)
+Chapter Outline
+6.1 Key Concepts in Data Privacy and Data Security
+6.2 Vulnerabilities and Threats in Web Applications and IoT Technology
+6.3 Data Security and Privacy from a Global Perspective
+6.4 Managing Enterprise Risk and Compliance
+Introduction
+Many of us turn a key in our door lock or press a button on our car’s key fob as a routine habit. It’s quite easy
+to lock up our living space or keep our vehicle secure. But how do we keep information secure? How can we
+protect data the way we protect more tangible items around us? In today’s digital environment, most of our
+interactions, transactions, and online engagement create a footprint of data that can be cataloged, tracked,
+and used for a wide array of purposes. While data can help enterprises tailor personalized experiences for
+customers or make insightful business decisions, it also brings to the forefront important considerations about
+data protection, data integrity, and responsible computing. The issues of security, privacy, and risk in
+information systems are of increasing importance in our modern digital landscape.
+6.1 Key Concepts in Data Privacy and Data Security
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Define data privacy and data security and their importance to the enterprise
+•
+Identify the risks and consequences of not protecting personal data and sensitive information
+•
+Describe how enterprise security and risk policies impact data privacy
+•
+Identify various data privacy regulations and standards mandated to protect privacy information
+Enterprise Security, Data Privacy, and Risk Management
+6
+
+The state in which data are kept from unauthorized access through the proper handling, processing, storage,
+and usage of data regarding consent, notice, and regulatory obligations is called data privacy. Its primary
+focus consists of individuals’ rights to reasonable protection of their personal information from unauthorized
+access, disclosure, or abuse. Additionally, data security is an element of data privacy and involves the
+implementation of measures to ensure data are kept safe from corruption and unauthorized access while
+preserving confidentiality, integrity, and availability (CIA).1
+Data privacy and security are critical to any enterprise for several reasons, including trust and reputation,
+prevention of financial loss, mitigation of financial risks, and controlled operational risks. Trust in this sense
+refers to the confidence that consumers have in relation to an organization, while reputation is the collective
+perception or evaluation of an organization.
+Several data protection and management tools have been developed to further bolster efforts to keep data
+safe. They involve the assessment and mitigation of privacy risks, the implementation of privacy engineering,
+and the design of products and services that inherently respect and protect the privacy of individuals. Any
+breach can significantly damage an enterprise’s reputation and consumer trust.2 To this end, several
+regulations, such as the European General Data Protection Regulation and the California Consumer Privacy
+Act, require businesses to protect personal data under threat of penalties and other legal actions.
+The Importance of Enterprise Digital Data Privacy and Data Security
+Data privacy and security play a critical role in our ever-expanding digital world. As businesses, governments,
+and other large enterprises transition to digital platforms, the amount of data created has exponentially
+increased. Historically, small companies and large enterprises have sought to contain their trade secrets,
+customer information, and intellectual property rights through training and other mitigating measures. In a
+nondigital landscape, access to sensitive information was often controlled through physical security, which is
+the protection of buildings, hardware, and assets. This included measures such as locked cabinets, secure
+rooms, and need-to-know restrictions, where only those with explicit permission could access certain data.
+Personnel were trained to handle information carefully, and physical controls were in place to ensure that
+unauthorized individuals couldn’t gain access. However, as technology has advanced, more data are now being
+stored electronically, transmitted via the internet, and accessed from the cloud. Thus data are now much more
+susceptible to breaches, accidental disclosures,and exploitation by bad actors. A bad actor is a person or
+entity who hacks or cracks into a computer or system with malicious intent. Data privacy involves ensuring the
+responsible use of personal information throughout the data life cycle, and it underpins the fundamental
+principles of ethical business practices. For example, a customer signs up for an online service, and their data
+are collected, stored, and used for account setup and personalized recommendations. After the service is
+canceled, the data are archived for compliance purposes and eventually deleted following retention policies.
+It is no secret that unauthorized access to confidential data, often leading to the exposure of sensitive
+information, called a data breach, occurs often. However, what is staggering is the sheer number of user
+accounts that have been compromised as a result. For example, in April of 2024, billions of records from a
+background check service known as National Public Data (NPD) were exposed, affecting hundreds of millions
+of people. The exposed records contained sensitive items such as Social Security numbers, birth dates, and
+mailing addresses.3
+In 2024, a data breach involving AT&T compromised approximately 100 million customer records, exposing
+sensitive personal information, including names, addresses, and Social Security numbers. This incident
+highlighted vulnerabilities in data storage and the growing challenges of securing customer information
+1
+Kim B. Schaffer, Peter Mell, Hungh Trinh, and Isabel Van Wyk, “Recommendations for Federal Vulnerability Disclosure Guidelines,”
+NIST Special Publication 800-216, National Institute of Standards and Technology, May 24, 2023, https://doi.org/10.6028/
+NIST.SP.800-216
+2
+Hsiangting Shatina Chen and Tun-Min Jai, “Trust Fall: Data Breach Perceptions from Loyalty and Non-Loyalty Customers,” The
+Service Industries Journal, 41, no. 13–14 (2021): 947–963
+3
+Daniel Hooven, “2.9 Billion Reasons To Be Concerned—The Latest on the National Public Data Breach,” Schnieder Downs, August
+21, 2024, https://schneiderdowns.com/our-thoughts-on/npd-breach/
+212
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+against increasingly sophisticated cyberattacks.
+Another major breach in 2024 affected Change Healthcare, a service provider to UnitedHealth. A ransomware
+attack disrupted health-care operations nationwide, affecting claims processing and payments for weeks. It
+was revealed that sensitive medical data, such as diagnoses, test results, and treatments for a substantial
+proportion of Americans, had been stolen. The financial and operational fallout from this attack underscored
+the critical importance of cybersecurity in health care.
+Information generation has not grown in a steady, linear fashion; rather, it has increased exponentially as
+companies have leveraged digital assets to maintain growth amid competition. For example, in the late 1970s,
+the internet was in its early stages of development. The World Wide Web became publicly available in 1991,
+and at that point, the internet was primarily text-based with limited multimedia content. As shown in Figure
+6.2, the internet is remarkably different today from its original iteration.
+Figure 6.2 The World Wide Web has seen many improvements and expansions since its first development in 1979. (credit:
+modification of work “History of online service” by “Viviensay”/Wikimedia Commons, CC0 1.0)
+The volume of data has increased exponentially due to the digital evolution, with global internet traffic
+growing from 100 GB per day in 1992 to 150.7 TB per second by 2022,4 driven by vast amounts of content
+generated and shared across various platforms. These figures highlight the explosion of data generation and
+consumption over the past few decades, an explosion that’s been driven by technological advancements and
+the digitization of various aspects of life. The challenge today lies not only in managing the volume of this
+data, but also in harnessing it effectively and ethically. In other words, it is a complex challenge that
+underscores the importance of data privacy and security.
+4
+World Bank, World Development Report 2021: Data for Better Lives (World Bank, 2022), https://doi.org/10.1596/
+978-1-4648-1600-0
+6.1 • Key Concepts in Data Privacy and Data Security
+213
+
+FUTURE TECHNOLOGY
+The Future of Data Provenance
+As entities continue to collect data from various devices, websites, and social media platforms, an important
+issue has arisen concerning the proper handling, integrity, and usage of that data. One concept known as
+data provenance has emerged as a potential solution to reduce the threats of data mishandling,
+contamination, and leakage. Data provenance refers to the documentation of a dataset’s life cycle, which is
+essential for ensuring data quality and adherence to laws, regulations, and policies governing the industry
+or operation, or compliance. There are three pillars that comprise data provenance:
+•
+Source provenance: tracking the origins of data
+•
+Transformation provenance: documenting the changes and processes the data undergo
+•
+Usage provenance: details on how data are accessed and used
+Data provenance ensures trust and transparency, aids in meeting compliance with legal requirements, and
+facilitates data reuse and reproducibility.
+Data privacy and security are no longer mere IT issues. Rather, they form an essential aspect of an enterprise’s
+strategic planning. Today, businesses are expected to be stewards of the data they hold, protecting
+information from breaches and ensuring its appropriate use. As a result, enterprises are investing significantly
+in data security measures and privacy protocols to safeguard customer data (and thereby maintain trust) and
+to comply with increasingly stringent regulations. Security breaches can result in massive financial and
+reputational damage. Thus, the need for robust data privacy measures is critical.
+Consider the cases of Solar Winds and MGM Resorts. Solar Winds is a company that develops software to
+manage and control computer networks. It was targeted in 2020 in an attack that affected thousands of
+organizations globally and highlighted how vulnerable even the most sophisticated, well-protected networks
+are.5 ,6 In 2023, MGM Resorts in Las Vegas, Nevada, was one victim of a ransomware attack that caused
+significant outages of systems such as door locks, key card readers, and other hotel amenities. The damage
+from the attack cost MGM over $100 million in lost revenue and was executed through BlackCat operators who
+used social engineering techniques to gain access to critical systems.7 These attacks underscore that data
+privacy is integral to maintaining consumer trust and the smooth operation of critical infrastructure, and in
+extreme cases could be a national security concern.
+Finally, it is essential to acknowledge the international dimensions of data privacy. In an interconnected world
+where enterprises often operate across borders, understanding the nuances in privacy regulations and
+practices in different regions is key because the location of the source of the data takes precedence over the
+customer’s citizenship location. Whether it’s the more consumer-centric privacy model of the EU’s General Data
+Protection Regulation (GDPR), the sector-specific approach in the United States, or the diverse and evolving
+landscape of data privacy regulations in Asia and Australia, businesses need to be equipped to navigate these
+varying landscapes while upholding their commitment to data privacy and security.
+5
+Cybersecurity and Infrastructure Security Agency, “Remediating Networks Affected by the SolarWinds and Active Directory/M365
+Compromise,” U.S. Department of Homeland Security, May 14, 2021, https://www.cisa.gov/news-events/news/remediating-networks-
+affected-solarwinds-and-active-directorym365-compromise
+6
+Cybersecurity and Infrastructure Security Agency, “Advanced Persistent Threat Compromise of Government Agencies, Critical
+Infrastructure, and Private Sector Organizations,” U.S. Department of Homeland Security, April 15, 2021, https://www.cisa.gov/news-
+events/cybersecurity-advisories/aa20-352a
+7
+Arielle Waldman, “MGM Faces $100M Loss from Ransomware Attack,” TechTarget, October 6, 2023, https://www.techtarget.com/
+searchsecurity/news/366554695/MGM-faces-100M-loss-from-ransomware-attack
+214
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+Risks and Consequences of Unprotected Personal Data and Sensitive
+Information
+Unprotected personal data and sensitive information pose a variety of risks, with far-reaching consequences
+that extend beyond the digital realm. Cyber threats such as data breaches and identity theft—which is the act
+of stealing someone’s information and assuming their identity—represent some of the most immediate risks
+of unprotected personal data. Sometimes bad actors may wait for months or years before exploiting the
+breached data to prevent suspicion that the data have been breached.
+In 2024, IBM’s annual Cost of a Data Breach report revealed that the global average cost of a data breach has
+reached $4.88 million, marking a 10 percent increase from the previous year. This underscores the growing
+financial impact of data breaches on organizations worldwide.8 Beyond the financial loss, a data breach can
+also result in a severe loss of customer trust, tarnishing the organization’s reputation. This may take years to
+rebuild and could lead to a long-term decrease in the company’s market value.
+One of the most striking examples of this is the Equifax breach in 2017, which exposed the personal
+information, including Social Security numbers, of nearly 147 million people. In its aftermath, the company
+faced hundreds of millions of dollars in legal fees and reparations, and the value of its stock fell by more than
+30 percent.9 As of 2024, Equifax has had to pay over $425 million to users affected by the breach and has
+invested in over $1.6 billion to improve security and technology.10
+Cyber Espionage
+The use of online methods to obtain secret or confidential information without the permission of the holder of
+the information, typically for strategic, military, or political advantage, is considered cyber espionage. The risk
+of cyber espionage continues to escalate, with unprotected personal data often being the target. A notable
+example from 2022 is the Uber data breach, where an attacker compromised the company’s internal systems.
+This incident exposed a vast amount of sensitive data and disrupted Uber’s operations. The breach not only
+raised concerns about the protection of user and employee data, but also highlighted vulnerabilities in
+corporate cybersecurity practices. Additionally, the persistent threat of ransomware attacks remains a major
+concern. These attacks, which involve hijacking an organization’s data for ransom, have seen a significant rise
+in sophistication and frequency, further emphasizing the need for robust data security measures.
+Reputational Harm
+Unprotected personal data and sensitive information pose a significant risk to both businesses and
+individuals. Data can be exploited for fraudulent activities, identity theft, and other malicious acts. But the
+repercussions of inadequate data protection extend beyond immediate financial harm and can significantly
+damage an organization’s reputation and erode customer trust. Trust is a critical element of customer loyalty
+and a significant factor in a business’s success. When customers provide businesses with their personal data,
+they are entrusting those businesses to keep their information safe. A data breach can lead to a breach of that
+trust, which can be challenging to restore.
+According to IBM’s report, the largest contributor to the costs associated with data was “lost business,” which
+includes customer attrition, reputation damage, increased customer acquisition costs, and lost revenue
+opportunities.11 One high-profile example of this is the 2013 Target data breach, which resulted in the theft of
+the credit and debit card information of 40 million customers. This breach cost Target approximately $291
+million and caused significant damage to its reputation. Their sales decreased dramatically in the last quarter
+of 2013, and fewer households reported shopping at Target.12
+8
+IBM, Cost of a Data Breach Report: 2024 (IBM, 2024), https://table.media/wp-content/uploads/2024/07/30132828/Cost-of-a-Data-
+Breach-Report-2024.pdf
+9
+“Equifax to Pay $700m over Breach That Exposed Data of 150m People,” The Guardian, July 22, 2019,
+https://www.theguardian.com/us-news/2019/jul/22/equifax-data-breach-security-ftc-settlement
+10
+John Egan, “Five Years after the Equifax Data Breach, How Safe Is Your Data?,” Bankrate, September 12, 2022,
+https://www.bankrate.com/credit-cards/news/how-safe-is-your-data/
+6.1 • Key Concepts in Data Privacy and Data Security
+215
+
+The rise of privacy-conscious consumers, those who are aware of and concerned about how their personal
+data are collected and distributed, means that businesses need to be even more diligent in their data
+protection efforts. A 2020 Cisco report found that 84 percent of consumers care about data privacy, and 80
+percent are willing to act to protect it—meaning they would switch away from companies that have poor data
+practices or policies.13 Organizations must continue to invest significantly in data security measures and
+privacy protocols to safeguard their customer’s data, maintain trust, and comply with increasingly stringent
+regulations.
+How Enterprise Security and Risk Policies Impact Data Privacy
+Enterprise security and risk policies are fundamental in shaping an organization’s approach to data privacy. To
+ensure the effectiveness of these policies, organizations often turn to established frameworks such as those
+recommended by the Information Systems Audit and Control Association (ISACA), where white papers and
+research articles offer valuable insights into best practices. The MIS Quarterly Executive (MISQE), Journal of
+Management Information Systems (JMIS), Communications of the ACM (CACM), Journal of the Association for
+Information Systems (JAIS), and Communications of the AIS (CAIS) serve as reputable sources of the latest
+advancements in the science of privacy. While Privacy by Design and privacy engineering are closely related,
+they focus on different, albeit complementary, goals. Privacy by Design aims to integrate privacy
+considerations into the design and operation of IT systems, business practices, and networked infrastructure
+right from the outset.
+Privacy by Design and Privacy Engineering
+To make these principles actionable, standards such as the ISO/IEC 27701 for privacy information
+management, and frameworks such as Privacy by Design (PbD) by Ann Cavoukian14 are invaluable. Cavoukian
+characterized this Privacy by Design approach as proactive more so than reactive; it anticipates privacy
+invasion events before they occur. These tools allow businesses to convert abstract, principles-based legal
+mandates into implementable technical privacy controls compatible with existing security measures. The
+Privacy by Design model employs seven principles, such as being proactive and embedding privacy, into the
+design (Figure 6.3). By adhering to such standards, organizations can mitigate risks and foster trust, which is
+particularly vital in an age where data breaches and cyberattacks are increasingly sophisticated and damaging.
+11
+IBM, Cost of a Data Breach Report: 2024 (IBM, 2024), https://table.media/wp-content/uploads/2024/07/30132828/Cost-of-a-Data-
+Breach-Report-2024.pdf
+12
+Kelli Young, “Cyber Case Study: Target Data Breach,” Coverlink Insurance, September 12, 2021, https://coverlink.com/cyber-
+liability-insurance/target-data-breach/
+13
+Cisco, Protecting Data Privacy to Maintain Digital Trust (Cisco, 2020), https://www.cisco.com/c/dam/en_us/about/doing_business/
+trust-center/docs/cybersecurity-series-2020-cps.pdf
+14
+Ann Cavoukian, Privacy by Design: The 7 Foundational Principles, 2008, https:/privacy.ucsc.edu/resources/privacy-by-design---
+foundational-principles.pdf
+216
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+Figure 6.3 There are seven foundational principles of Privacy by Design. (attribution: Copyright Rice University, OpenStax, under CC
+BY 4.0 license)
+Considering all these threats, several national and international organizations, corporations, and governments
+have taken measures to promote data protection and integrity. Through features such as app tracking
+transparency and clear privacy labels on the App Store, Apple provides users with greater visibility and control
+over how their data are used, although the overall architecture of their system remains relatively closed
+compared with more open platforms.
+Data scientists suggest that data are providing an endless stream of new digital capital. However,
+organizations that fail to take data privacy and security seriously may lose their competitive edge as well as
+customer trust, and/or face regulatory action. Tackling the massive scale and complexity of data management
+requires the implementation of robust, risk-based frameworks.
+An emerging field in this context is privacy engineering, which is fundamentally about incorporating privacy
+principles directly into the design and development of IT systems, networks, and business practices. By
+making privacy an integral part of the design and development process rather than an afterthought,
+enterprises can effectively mitigate risks and better protect user data. Some examples of privacy engineering
+include:
+•
+Google’s Differential Privacy: This practice allows Google to leverage the ability to learn from aggregate
+data while ensuring that returned search results and map addresses do not permit anyone to learn about
+a particular individual. Google has used this with Google Maps to help show the busy times at restaurants
+and other locations without divulging the location history data of users.
+•
+Apple’s Privacy Labels: Apple has developed Privacy Labels for its App Store. These labels provide simple,
+straightforward summaries of an app’s privacy practices, and they are written in plain language, letting
+consumers know what data an app collects and whether the data are linked to them or used to track
+them.
+•
+Microsoft’s Data Loss Prevention (DLP): Microsoft developed a data loss prevention solution to prevent
+sensitive information from leaking out of the organization. This solution identifies sensitive information
+across several platforms, such as Exchange Online, SharePoint, OneDrive for Business, and Microsoft
+Teams. This measure ensures that data are not inadvertently shared with the wrong groups. While DLP
+does well with implementing controls that prevent data loss, it does not focus on physical security.
+On the other hand, privacy engineering refers to the technical and operational aspects of implementing
+privacy principles in systems and services. Its goal is to operationalize the concepts of Privacy by Design
+through specific methodologies, tools, and technologies. Privacy engineering focuses on developing practical
+solutions and practices that protect individuals’ privacy and meet regulatory requirements. This includes
+6.1 • Key Concepts in Data Privacy and Data Security
+217
+
+creating data protection features, ensuring secure data processing, and developing privacy-preserving
+technologies. While Privacy by Design sets the framework and objectives for privacy, privacy engineering
+focuses on actual implementation of those objectives in the real world. Like Privacy by Design, privacy
+engineering focuses more on the technical aspects of implementing data protection controls. One example of
+a social media company that uses this idea is Snapchat, which limits the amount of time a message can be
+viewed once it is sent.
+CAREERS IN IS
+Data Privacy and Security Career Options
+With its ever-evolving challenges and emerging practices, the area of data privacy and security offers many
+exciting opportunities. Those seeking to work in this field may consider these roles, for example:
+•
+Privacy analyst/privacy consultant: A specialist who assesses and advises organizations on complying
+with data protection laws and regulations. They analyze privacy policies, conduct privacy impact
+assessments, and recommend strategies to protect personal data.
+•
+Chief privacy officer (CPO): A high-level executive responsible for an organization’s data privacy policies
+and procedures. The CPO ensures compliance with privacy laws, oversees data protection strategies,
+and manages privacy risks.
+•
+Cybersecurity analyst: A professional who focuses on protecting an organization’s computer systems
+and networks. They monitor breaches, investigate security incidents, and implement security measures
+to safeguard sensitive data.
+•
+Information security manager: A role responsible for overseeing and managing an organization’s
+information security program. They develop and implement policies and procedures to protect data
+from unauthorized access, disclosure, alteration, and destruction.
+•
+Compliance officer: A role that involves ensuring an organization meets external regulatory
+requirements and internal policies, especially concerning data protection and privacy laws.
+•
+Data protection lawyer: A legal professional specializing in data protection and privacy law. They advise
+clients on compliance with data protection regulations, represent in case of data breaches, and help
+draft privacy policies.
+Third-Party Risks
+A key aspect of security and risk policies is the management of third-party risks, including third-party access,
+which is access to data from an external entity. In an interconnected digital ecosystem, organizations often
+share data with partners, vendors, and other third parties. This is particularly significant given the rise of cloud
+computing, which is the delivery of computing services over the internet, and Software as a Service (SaaS),
+which is a software distribution model in which applications are hosted by a third-party provider and made
+available to customers over the internet, typically on a subscription basis. For instance, Amazon Web Services,
+Google Cloud, and Microsoft Azure handle vast amounts of data from countless businesses. These enterprises
+must ensure that their security policies cover these relationships and that third parties meet stringent security
+standards.
+The measures that enterprises can adopt include regular audits and inspections, solid contractual agreements
+regarding data handling, and clear communication about responsibilities in the event of a security breach.
+Furthermore, an enterprise’s data might be shared with a third party not only for storage purposes, but also
+for processing. Many businesses employ third-party data analytics firms to make the most of their collected
+information.
+218
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+FUTURE TECHNOLOGY
+Two Privacy Developments on the Horizon
+The future of technology in information systems paints a promising picture for data privacy and protection.
+Here’s a brief look at two key developments:
+•
+Federated learning: An emerging concept in machine learning, federated learning allows a model to be
+trained across multiple decentralized devices or servers holding local data samples, without
+exchanging the data samples themselves. This helps to maintain privacy as raw data never leave their
+original device.15
+•
+Homomorphic encryption: A form of encryption allowing computations to be carried out on encrypted
+data, homomorphic encryption produces an encrypted result that, when decrypted, matches the result
+of operations performed on the plain data. This means sensitive data can be processed securely in
+encrypted form, without ever needing to be decrypted, thereby maintaining data privacy.16
+These technologies demonstrate how the future of information systems may uphold robust data protection
+while still leveraging the benefits of data-driven insights. As these technologies mature, they will play an
+increasingly significant role in securing information systems and ensuring data privacy.
+For stakeholders such as investors and partners, solid security policies imply the organization’s proactive
+stance toward risk management, which can increase their confidence in the organization’s resilience against
+potential data breaches. The best policies will be those that keep evolving with the changing technology
+landscape and regulatory environment, continuously fostering a culture of privacy and accountability in the
+organization. In accountability, people and entities must take responsibility for the decisions they make and
+be able to explain them.
+Data Privacy Regulations and Standards
+Data privacy regulations and standards have become increasingly important in today’s data-driven world. With
+vast quantities of personal data being collected and processed daily, these regulations ensure the
+safeguarding of personal information and provide a standardized approach for businesses to manage data
+privacy. Across the globe, nations are developing regulations to address this ever-evolving need. For example,
+the Personal Data Protection Act (PDPA) in Singapore strives to protect personal data across the economy by
+serving as a complement to sector-specific legislative and regulatory frameworks.17 Meanwhile, in Brazil, the
+Lei Geral de Proteção de Dados (LGPD) came into effect in August 2020, aligning the country more closely with
+the global trend toward stricter data privacy regulations.18 The General Data Protection Regulation (GDPR)
+is a comprehensive data protection law in the European Union that sets guidelines for the collection and
+processing of personal information of individuals within the EU.19 The GDPR represents a major shift in data
+privacy regulations. It has introduced several significant changes, including stricter requirements for consent,
+which is the explicit permission given by an individual for the collection, processing, and use of their personal
+information. Additionally, the GDPR expanded data subject rights (such as the right to be forgotten, the right
+to data portability, and the right to object to processing), and steeper penalties for noncompliance, up to 4
+percent of an organization’s global annual turnover or 20 million euros, whichever is higher.20
+15
+Brendan McMahan and Daniel Ramage, “Federated Learning: Collaborative Machine Learning without Centralized Training Data,”
+Google Research, April 6, 2017, https://research.google/blog/federated-learning-collaborative-machine-learning-without-centralized-
+training-data/
+16
+Kirsty Paine, “Homomorphic Encryption: How It Works,” Splunk, February 5, 2024, https://www.splunk.com/en_us/blog/learn/
+homomorphic-encryption.html
+17
+“PDPA Overview,” Personal Data Protection Commission Singapore, accessed December 22, 2024, https://www.pdpc.gov.sg/
+overview-of-pdpa/the-legislation/personal-data-protection-act
+18
+Lei Geral, Lei Geral de Proteção de Dados (LGPD), Obtenido de Lei Geral de Proteção de Dados (LGPD), 2020,
+http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm
+6.1 • Key Concepts in Data Privacy and Data Security
+219
+
+In a similar manner, the California Consumer Privacy Act (CCPA), a law that increases privacy rights and
+consumer protection for residents of California, has set a benchmark for data privacy in the United States21
+(Table 6.1). While it only applies to businesses that meet certain criteria (such as having gross annual revenues
+over $25 million), the CCPA is influencing data practices beyond California. It is likely to inspire similar
+legislation in other states, or potentially at the federal level.22 Under the CCPA, businesses must disclose what
+data they collect, sell, or share, and consumers can opt out of the sale of their data, request deletion of their
+data, or access the data that businesses have collected about them.
+CCPR
+GDPR
+Implementation
+date
+July 1, 2020
+May 25, 2018
+People affected
+For-profit companies that collect
+personal data on California residents
+EU citizens, businesses, data subjects, and
+controllers
+Application
+Businesses, third parties, California
+residents
+Organizations offering goods and services
+in the EU
+Data scope
+inclusions
+Any personal data sold for monetary or
+other value
+Any type of personal data
+Fines for
+noncompliance
+$7,500 per violation and $100–$750 per
+consumer incident related to breaches
+Up to 20 million euros for major violations;
+up to 10 million euros for minor violations
+Table 6.1 Comparison of the CCPR and GDPR The U.S.’s California Consumer Privacy Act (CCPA) and the E.U.’s General Data
+Protection Regulation (GDPR) are two regional regulations that provide foundational frameworks for cybersecurity.
+However, it’s not just regulatory compliance that organizations need to consider. Industry standards also play a
+crucial role in shaping how businesses protect personal data. For instance, the International Organization for
+Standardization (ISO) has introduced ISO/IEC 27701, an extension to ISO/IEC 27001, the international standard
+for information security management systems. ISO/IEC 27701 provides guidance on how to manage privacy
+information, essentially translating privacy principles from regulations like the GDPR into actionable controls.
+This involves not only technical measures, but also administrative ones, such as defining roles and
+responsibilities, maintaining records of processing activities, and ensuring proper data breach response
+procedures.23 By adopting ISO/IEC 27701, organizations can demonstrate their commitment to privacy,
+reassure customers and stakeholders, and potentially gain a competitive advantage.
+Businesses will also need to consider other relevant regulations in their respective jurisdictions. For instance,
+in Canada, businesses must comply with the Personal Information Protection and Electronic Documents Act
+(PIPEDA), which establishes basic rules for the use, collection, and disclosure of personal information by
+private sector organizations during commercial activities. Similarly, in Australia, the Privacy Act 1988 mandates
+how personal information is to be handled.
+Moving forward, as data privacy issues continue to rise in prominence, we can expect further evolution in both
+19
+European Parliament and Council, “Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on
+the protection of natural persons with regard to the processing of personal data and on the free movement of such data (General
+Data Protection Regulation),” Official Journal of the European Union, L119 (2016): 1–88, https://eur-lex.europa.eu
+20
+“GDPR Fines/Penalties,” Intersoft Consulting, accessed December 22, 2024, https://gdpr-info.eu/issues/fines-penalties/
+21
+California Consumer Privacy Act of 2018 (Cal. Civ. Code § 1798.100 - 1798.199), Enacted as AB-375, California Legislative
+Information, 2018, https://leginfo.legislature.ca.gov
+22
+“AB-375 Privacy: Personal Information: Businesses,” California Legislative Information, June 29, 2018,
+https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375
+23
+International Organization for Standardization, ISO/IEC 27701:2019 (ISO, 2019).
+220
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+legislation and industry standards. Companies will need to stay vigilant and adaptive, not just to avoid
+penalties, but also to earn and maintain their customers’ trust and loyalty. This is particularly true in an era
+where data privacy is increasingly seen as a differentiator and a competitive advantage. Trust in how
+businesses handle personal data can significantly impact their brand reputation, customer relationships, and,
+ultimately, their bottom line.
+The landscape of data privacy is becoming increasingly complex, and staying abreast of these regulations and
+standards is crucial for businesses.
+6.2 Vulnerabilities and Threats in Web Applications and IoT Technology
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Identify common vulnerabilities and threats in web applications and IoT technology
+•
+Determine the countermeasures and techniques used to combat threats of security and privacy of
+web applications and IoT technology
+•
+Discuss the social responsibility of enterprises and IT professionals developing this technology
+•
+Determine guidelines or regulations that must be implemented to protect web applications and IoT
+technology in the future
+Every connected device you own is collecting data—about your preferences, routines, and even your health.
+This data, if compromised, can lead to significant privacy breaches. As we become increasingly reliant on IoT
+technology, it is essential to recognize the risks that come with it. The concern is not just about securing your
+smartphone or computer. It is about securing a network of devices that know more about you than you might
+realize.
+The solution rests in understanding the inherent vulnerabilities of web applications and IoT technology and
+recognizing the potential threats that exploit these weaknesses. In our age of extensive data collection and
+usage, commitment to transparency, accountability, and privacy protection becomes a cornerstone of
+responsible innovation. Examining these issues requires exploring privacy and security risks associated with
+the web and IoT technology, potential countermeasures, ethical considerations, and prospective regulatory
+frameworks.
+Common Online Vulnerabilities and Threats
+In the span of a few decades, digital technology has transformed the world. The arrival of the mobile
+revolution introduced an era of smartphones, bringing the internet from the confines of home and office
+spaces into the palms of our hands. The digital revolution continued with the equipping of even the simplest
+items with internet connectivity, forming the core of the modern digital era.
+The Internet of Things (IoT), a term coined by Kevin Ashton in 1999, is the network that connects everyday
+physical objects to the internet, enabling them to collect and share data with other devices or systems. The IoT
+now encapsulates a vast array of everyday items from refrigerators and thermostats to door locks and light
+bulbs, converting them into smart, connected devices (Figure 6.4). The sheer scale of IoT’s growth is nothing
+short of astounding. To put it in perspective, in 2003, the number of devices connected to the internet was
+estimated at around 500 million.24 By 2018, that number had increased to 10 billion.25 And the number of IoT
+devices in use globally is expected to reach 40 billion by 2030.26
+24
+Dave Evans, “The Internet of Things: How the Next Evolution of the Internet Is Changing Everything,” Cisco Internet Business
+Solutions Group (IBSG), April, 2011, https://www.cisco.com/c/dam/en_us/about/ac79/docs/innov/IoT_IBSG_0411FINAL.pdf
+25
+Insider Intelligence, “How IoT & Smart Home Automation Is Entering Our Homes in 2020,” Business Insider, January 6, 2020.
+https://www.businessinsider.com/iot-smart-home-automation
+26
+“Satyajit Sinha, Connected IoT Devices Forecast 2024–2030,” from State of IoT 2024: Number of Connected IoT Devices Growing
+13% to 18.8 Billion Globally, IoT Analytics, September 3, 2024, https://iot-analytics.com/number-connected-iot-devices/
+6.2 • Vulnerabilities and Threats in Web Applications and IoT Technology
+221
+
+Figure 6.4 An interconnected group of IoT devices can communicate with the cloud and each other independently. (credit:
+modification of work “Internet et ses applications” by “jeferrb”/Wikimedia Commons, CC0 1.0)
+This rapid expansion of the IoT has significant implications, both positive and negative. On one hand, it creates
+new opportunities for innovation, efficiency, and convenience as smart homes equipped with IoT devices can
+automate a variety of tasks, from adjusting the thermostat to managing home security systems. However, the
+proliferation of IoT devices also introduces substantial security vulnerabilities both at home and at work. The
+introduction of these devices into the workplace further complicates security for IT managers because
+vulnerabilities in IoT devices often allow attackers to eavesdrop, conduct brute-force attacks, and elevate their
+privileges on a network.
+Keeping pace with the rapid advancement in IoT technologies and adequately addressing the myriad security
+risks they present is a significant challenge for regulatory bodies. The sheer number of IoT devices and the
+rapid growth of that number, plus their widespread distribution, further complicate regulation. These devices,
+often manufactured in one region, sold in another, and potentially operated in a third, create a transnational
+landscape that can blur jurisdictional lines and make enforcement of regulations challenging. Additionally, the
+proprietary nature of many IoT devices poses its own set of problems. In many instances, device
+manufacturers prioritize time to market and functionality over security, leading to devices with hard-to-patch
+vulnerabilities. Some manufacturers might use proprietary protocols, which are tools specific to the
+organization and closed off to the public, making it difficult for regulatory bodies to assess and ensure their
+security.
+The high-profile Mirai botnet attack of 2016 serves as an important real-world example of these challenges.
+This was a distributed denial-of-service (DDoS) attack that exploited many inherent weaknesses in IoT security:
+default passwords, unsecured network services, and the lack of regular software updates in many devices. The
+attack targeted and overwhelmed the servers of Dyn, a major DNS provider, with a tremendous amount of
+traffic. This disruption impacted several high-profile platforms and services, including Twitter, Netflix, Reddit,
+and CNN, rendering them inaccessible to millions of users for several hours. This incident showcased how
+easily IoT devices can be exploited for malicious purposes and the far-reaching consequences of such security
+lapses.
+Similarly, IoT technology is transforming industry practices. Industry 4.0, which represents the fourth industrial
+revolution noted by the integration of digital technology in manufacturing and digital practices, allows for real-
+time monitoring, predictive maintenance, and increased operational efficiency. However, these devices also
+present a potential entry point for cyberattacks, risking not only data breaches, but also physical damage and
+222
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+potential safety hazards.
+Given the expansive growth and diverse applications of IoT technologies, one thing is clear, while IoT devices
+bring a multitude of benefits, they also carry significant risks. As we continue to incorporate these
+technologies into various facets of life, it is important to understand and mitigate these vulnerabilities.
+Web Applications: Banking and E-commerce
+Among the most prevalent and potentially damaging threats in the digital realm are those targeting web
+applications, particularly in sectors like banking and e-commerce. A study by the security firm Positive
+Technologies found that 100 percent of web applications contain at least one security vulnerability, with 48
+percent of these vulnerabilities considered high risk.27 Online banking systems are prime targets for
+cybercriminals due to the sensitive nature of the information they handle.
+Techniques like phishing—wherein users are tricked into providing their login credentials to fake
+websites—and SQL injection—where hackers exploit a vulnerability in a web application’s database query
+software—can result in unauthorized account access and monetary loss. Similarly, e-commerce platforms face
+threats such as credit card fraud, DDoS attacks, and cross-site scripting (XSS), which is a type of vulnerability
+that allows an attacker to inject malicious scripts into websites trusted by end users, leading to potential theft
+of sensitive data such as login credentials or credit card information.
+IoT Technology: Smart Homes and Self-Driving Cars
+IoT technology has transformed sectors such as home automation and transportation, and as more devices
+become connected to the internet, the potential for vulnerabilities increases. Smart homes, with internet-
+connected security systems, thermostats, and appliances, are particularly susceptible to threats such as device
+hijacking, where attackers gain control over IoT devices. Similarly, self-driving cars, which rely on complex
+systems and sensors, face significant cybersecurity risks, as many of their systems were not originally
+designed with security in mind. In 2024, a high-profile incident occurred when researchers demonstrated the
+ability to remotely hack into the infotainment system of a Tesla, gaining access to critical vehicle functions.
+ETHICS IN IS
+German Steel Mill Attacks
+ThyssenKrupp, a major German steel producer, was targeted by a sophisticated cyberattack in early 2024.
+The attack disrupted the operations of its automotive division, forcing parts of the facility offline to contain
+the threat. Although full details have not been disclosed, the attack demonstrated the ongoing vulnerability
+of industrial control systems (ICS) in the manufacturing sector. The incident involved cybercriminals gaining
+unauthorized access to critical systems. Another attack on a German steel mill ten years prior used spear-
+phishing tactics to infiltrate the office network before accessing the plant’s production networks. Attackers
+manipulated control systems, causing significant physical damage, including a blast furnace that could not
+be properly shut down. This event marked a pivotal moment in understanding the real-world dangers of
+cyberattacks on industrial systems.
+Both incidents highlight the increased risks associated with the convergence of operational technology (OT)
+and information technology (IT) networks. This integration, a hallmark of the Industrial Internet of Things
+(IIoT), has expanded the attack surface, making industrial facilities more susceptible to cyber threats. The
+ThyssenKrupp attack serves as a stark reminder that even with advancements in cybersecurity, industrial
+control systems remain vulnerable to sophisticated cyber threats, with the potential for substantial physical
+damage.
+27
+“Threats and Vulnerabilities in Web Applications 2020–2021,” Positive Technologies, June 13, 2022, https://www.ptsecurity.com/
+ww-en/analytics/web-vulnerabilities-2020-2021/
+6.2 • Vulnerabilities and Threats in Web Applications and IoT Technology
+223
+
+Frameworks to Identify Vulnerabilities and Protect IoT/IT Ecosystems
+The IoT ecosystem, marked by its complexity and breadth of use cases, presents its own set of regulatory
+challenges. Unlike more traditional, monolithic systems, IoT is characterized by a multitude of interconnected
+devices, platforms, and services, spanning across various sectors and geographical boundaries. One example
+would be a “smart” refrigerator communicating with a smartphone to replenish grocery items by adding them
+to the grocery shopping list for home delivery and communicating this information to the grocery store
+identified by the homeowner.
+This variety of devices and tasks not only introduces numerous potential vulnerabilities but also makes it
+difficult to apply a one-size-fits-all regulatory framework. One of the primary regulatory challenges in IoT is its
+vast and rapidly evolving nature. IoT devices range from simple sensors to complex industrial systems, each
+with different security requirements and implications.
+As such, it is necessary to examine the existing structure of rules and guidelines, often legislated, within which
+an industry or business must operate, or the regulatory framework.
+Organizations such as the International Organization for Standardization (ISO), International Electrotechnical
+Commission (IEC), and the Institute of Electrical and Electronics Engineers (IEEE) have developed standards,
+such as ISO/IEC 27001 and IEEE 2413, to address these vulnerabilities through risk management frameworks
+and architectural guidelines. The ISO/IEC 27001 provides the framework for an information security
+management system (ISMS), which is a systematic approach consisting of processes and procedures designed
+to control an organization’s information security risks. An ISMS allows organizations to manage security in a
+comprehensive and structured manner, ensuring that all potential vulnerabilities are addressed and that
+systems are resilient to potential attacks. The IEEE has been heavily involved in developing standards for IoT.
+One such standard is the IEEE 2413, an architectural framework for IoT that aims to promote cross-domain
+interaction, aid system interoperability and functional compatibility, and foster a common understanding
+among IoT systems.
+International standards offer guidelines that help ensure the robustness, security, and interoperability of web
+and IoT technologies. They also provide a basis for creating regulations and laws that can govern these
+technologies in different regions worldwide. Cities adopting smart technologies often rely on these
+international standards to ensure the reliable and secure operation of their systems. For instance, another
+standard from the ISO, ISO/IEC 30141, provides a reference architecture for IoT, assisting the developers and
+operators of smart city solutions in creating systems that can securely communicate and interact.
+However, since current regulations such as GDPR and CCPA are region-specific, there is a need for more
+comprehensive global regulations. Countries such as the United Kingdom, Brazil, and India are developing
+specific IoT security laws, reflecting a trend toward targeted regulatory measures. For example, Brazil’s Lei
+Geral de Proteção de Dados (LGPD) and India’s Personal Data Protection Bill reflect global concerns regarding
+data privacy. Countries such as the United Kingdom have initiated specific guidelines for IoT device security,
+focusing on secure passwords and regular updates. New regulatory trends such as these require different
+stakeholders to adapt. Businesses must understand and comply with various international regulations, making
+it necessary to invest in legal expertise. Consumers benefit from these protections, and as a result, they
+develop confidence in digital services.
+Regulators face challenges, however, in balancing consumer protection with enabling technological
+innovation. Future challenges may arise from the integration of IoT with 5G networks, quantum computing,
+and decentralized technologies such as blockchain. These advancements will necessitate a reevaluation of
+existing regulations and potentially lead to new regulatory frameworks. Strategies may include international
+collaboration to standardize regulations across jurisdictions, fostering innovation while maintaining security.
+For example, the Asia-Pacific Economic Cooperation (APEC) Cross-Border Privacy Rules (CBPR) is a system
+privacy framework designed to facilitate the secure flow of personal information across APEC borders while
+224
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+maintaining strong privacy protections.
+Industry-led self-regulation extends beyond established examples such as Payment Card Industry Data
+Security Standard (PCI DSS), which is a set of standards designed to ensure companies secure credit
+information. For example, the Center for Internet Security (CIS), a nonprofit organization that works to
+safeguard private and public organizations against cyber threats, provides guidelines that organizations can
+voluntarily follow. The Industrial Internet Consortium (IIC)—which is an organization that accelerates the
+growth of the industrial internet by promoting best practices, reference architectures, and frameworks—has
+released a security framework to guide industries in building secure IoT systems.
+In addition, the Internet of Things Security Foundation (IoTSF) provides a comprehensive set of guidelines and
+best practices for securing IoT devices. The continually evolving landscape of IoT and web regulations,
+combined with the increasing role of self-regulation by the industry, emphasizes the importance of
+understanding various global regulations and guidelines. These include well-known examples such as GDPR
+and CCPA, plus emerging trends such as LGPD, IIC, and IoTSF. Adapting to these changes requires ongoing
+vigilance, collaboration, and commitment to balancing innovation with ethical principles and consumer
+protection.
+CAREERS IN IS
+Careers in Security
+Due to the rapid proliferation of technology, there’s a growing need for professionals who can navigate the
+security challenges these technologies present, such as the following:
+•
+Web security analyst: identifies and mitigates vulnerabilities in web applications such as SQL injection
+and XSS
+•
+IoT security specialist: secures connected devices by recognizing and addressing vulnerabilities unique
+to IoT environments
+•
+Ethical hacker: tests vulnerabilities in web and IoT technologies, exploiting weaknesses and
+recommending countermeasures
+•
+Corporate social responsibility (CSR) officer: ensures that web and IoT technology development aligns
+with ethical and social responsibility initiatives
+•
+Policy analyst: studies and influences regulations related to web and IoT security, drafting guidelines
+for improved protection
+•
+Privacy engineer: designs and implements privacy solutions for IoT devices and web applications in
+compliance with regulations
+•
+Compliance auditor: ensures web and IoT technologies adhere to industry standards and regulations,
+safeguarding business integrity
+Countermeasures to Combat Online Security Threats
+With an ever-increasing reliance on interconnected digital technologies, security risks continue to escalate.
+Cybersecurity incidents have the potential to cause not only digital disruption, but also substantial real-world
+impacts. There is an array of strategies designed to manage the risks associated with these technologies, from
+preventive measures such as secure coding and data encryption to reactive solutions such as incident
+response plans. These countermeasures help professionals better navigate the challenges of technological
+advancement and safeguard digital environments.
+6.2 • Vulnerabilities and Threats in Web Applications and IoT Technology
+225
+
+Implementing Secure Coding Practices
+Securing web applications begins with secure coding practices. Because code is one of the key elements of a
+digital system, poor coding practices can inadvertently introduce vulnerabilities that bad actors can exploit to
+compromise these systems and cause data breaches or service disruptions. One notable example of a data
+breach that took advantage of coding errors is that of First American Financial Corporation, a leading provider
+of title insurance and settlement services to the real estate and mortgage industries. In 2019, hundreds of
+millions of documents related to mortgage deals going back to 2003 were leaked due to a coding issue that
+permitted attackers to access unauthorized information by manipulating the URL of the website. 28
+These practices encompass various activities such as validating input, ensuring proper error handling, and
+maintaining the principle of least privilege. Following guidelines such as the OWASP Secure Coding Practices
+can help developers avoid common pitfalls that lead to vulnerabilities in the code. Secure coding practices
+include the following:
+•
+Systems should always check inputs received from users or from other systems for their data type, length,
+format, and range, a process called input validation. Any input that does not meet these requirements
+should be rejected.
+•
+Every module or process should follow the least privilege principle, in which users are granted the
+minimum levels of access, or permissions, needed to perform their job functions, reducing the risk of
+unauthorized access to sensitive information. If a function only needs to read from a file, it should not
+have write access to the file. This reduces the potential damage that can be done if the function is
+compromised. If a malicious actor gains control of a process, they are restricted by the permissions of that
+process. For example, if a database query only needs to retrieve data, it should not have permission to
+alter or delete the data.
+•
+Implement strategies and coding practices to effectively identify, report, and manage errors that occur
+during the operation of a software application or system. Potential errors need to be systematically
+managed and addressed to prevent system failures and security breaches, known as error handling.
+Strengthening Authentication and Authorization
+The importance of robust authentication and authorization mechanisms in web applications cannot be
+overstated. In such applications, user credentials typically serve as the keys to unlocking a massive amount of
+sensitive information and services. Hence, their protection helps maintain the integrity and confidentiality of
+these resources as well as user trust.
+Multifactor authentication (MFA), biometric identification, and risk-based authentication are among the
+strategies that can significantly bolster the authentication and authorization process. MFA, which requires the
+user to provide two or more verification factors, adds an extra layer of security, making it harder for attackers
+to gain access even if they compromise one factor. Biometric identification, such as fingerprints or facial
+recognition, provides a unique verification method that is difficult to replicate, thereby enhancing security.
+Risk-based authentication adjusts the authentication process based on the risk level associated with the user’s
+behavior or access conditions. Such an approach allows for a balance between security and usability, offering a
+more robust protection mechanism when needed.
+Designing for Security and Hardware Measures
+As you learned in Chapter 5 Information Systems Security Risk Management, technologies such as intrusion
+detection systems (IDSs) and intrusion prevention systems (IPSs) play a vital role. These systems identify
+possible threats and deploy measures to mitigate them.
+A predominant concern in IoT is the integral need for security starting from the very roots. For example
+commonplace items such as home appliances, vehicles, and personal devices have become embedded with
+28
+United States of America before the Securities and Exchange Commission, Securities Exchange Act of 1934: Administrative
+Proceeding, File No. 3-20367, in the matter of First American Financial Corporation, Respondant, Release No. 92176, June 14, 2021.
+226
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+IoT technology, thereby extending IT concerns beyond their traditional confines (Figure 6.5).
+Figure 6.5 IoT technology is seen in everyday items, such as (a) smartwatch technology and (b) smart refrigerators. (credit a:
+modification of work “Health 11” by The IET/Flickr, Public Domain; credit b: modification of work “LG Smart DIOS V9100” by LG
+Electronics/Wikimedia Commons, CC BY 2.0)
+Maintaining security of IoT devices involves regular firmware updates. These updates play a dual role: first,
+they bring new features and rectify bugs, and second, they patch security vulnerabilities, which is key to
+preserving the security of the device throughout its life cycle. Further critical to IoT security is secure device
+onboarding, which involves adding devices to the network in a secure manner that prevents unauthorized
+access and protects the integrity of the network.
+Social Responsibility of Enterprises and Information Technology
+Professionals
+Technology has permeated virtually every aspect of modern life, largely propelled by the proliferation of IoT
+and web applications. This pervasive integration of IoT has brought to the forefront a range of ethical
+considerations that were once limited to more clearly defined technological areas. It now encompasses not
+only privacy and data security, but wider societal issues such as accessibility, inclusivity, environmental
+sustainability, and professional ethics. This evolution underscores the critical need for a comprehensive
+understanding and proactive management of ethical concerns in all areas of technology.
+Ethical Considerations in Information Technology
+Data handling and management, professional responsibilities, and promoting digital inclusivity are critical
+ethical considerations in the field of IT. Key aspects of these principles include:
+•
+Data collection, storage, processing, and sharing:
+◦
+Collecting: Enterprises must be transparent about the nature and purpose of data collection, ensuring
+users are fully informed.
+◦
+Storing and processing: Robust security measures are necessary to prevent unauthorized access and
+potential misuse, safeguarding sensitive information.
+◦
+Sharing: Data sharing practices should prioritize user privacy and adhere to relevant regulations,
+ensuring that information is treated with respect.
+•
+Professional responsibilities of IT professionals:
+◦
+Protecting user data and ensuring privacy
+◦
+Promoting accessibility and reducing the digital divide
+◦
+Upholding fairness and inclusivity within the digital realm
+•
+Adherence to professional codes of ethics:
+6.2 • Vulnerabilities and Threats in Web Applications and IoT Technology
+227
+
+◦
+Complying with codes of ethics from organizations such as the Association of Computing Machinery
+(ACM) and IEEE that guide IT professionals in ethical decision-making
+◦
+Operating under key principles such as respecting privacy, avoiding harm, performing with honesty and
+trustworthiness, and contributing to society and human well-being
+•
+Digital inclusivity and accessibility:
+◦
+Ensuring equal access to technology, regardless of socioeconomic background, geographical location,
+or physical abilities
+◦
+Designing technology with accessibility in mind benefits diverse user needs, improving both reach and
+user experience
+LINK TO LEARNING
+View the entire ACM Code of Ethics (https://openstax.org/r/109ACMCodeEthic) here.
+LINK TO LEARNING
+Point: Some scholars assert that technology companies have an inherent moral duty to prioritize human
+well-being in their operations, citing ethical theories such as utilitarianism (https://openstax.org/r/
+109Utilitarian) and corporate social responsibility.
+Counterpoint: Others argue that the primary responsibility of these enterprises is to their shareholders
+(https://openstax.org/r/109Shareholders) and that ethical considerations, while important, should not
+overshadow business objectives.
+Role of Enterprises in Promoting Digital Inclusivity and Accessibility
+Ensuring everyone has equal access to technological advances is an important social issue. Digital inclusivity,
+which entails making IT solutions available and accessible to all, has a profound impact on narrowing the
+digital divide. The digital divide refers to the gap between individuals, communities, or countries that have
+access to modern information and communication technologies and those that do not. This divide can
+manifest in various forms, such as differences in internet access, digital literacy, and the availability of
+affordable devices and services. Tech enterprises have the responsibility to foster an inclusive digital
+environment. By developing affordable and accessible technologies, they can ensure that the benefits of
+digital innovation reach all corners of society and that users can effectively utilize these solutions.
+This necessitates designing technology with diverse user needs in mind. From building websites that are
+accessible to individuals with visual or hearing impairments, to creating software that is easy to navigate for
+individuals with cognitive or motor skill challenges, the commitment to accessibility is a cornerstone of ethical
+IT development. Designing with accessibility in mind not only widens the user base, but also enhances the
+overall user experience.
+ETHICS IN IS
+Ethical Decision-Making in IT
+To illustrate the importance of ethical decision-making, consider the case of a social media platform
+deciding to implement a new data-sharing policy. Adherence to ethical principles would mean that the
+platform informs its users about the policy changes in a clear and transparent manner, allows users to opt
+out if they desire, and implements robust measures to protect shared data. In contrast, an unethical
+228
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+approach would be to implement the policy covertly without informing users or obtaining their consent. A
+real-world example of not following ethical principles was demonstrated by Facebook in 2014.
+Facebook faced significant controversy when it was revealed that the company had covertly conducted a
+psychological experiment on nearly 700,000 unsuspecting users. The experiment, carried out in 2012,
+involved manipulating users’ news feeds to either reduce the number of positive posts or reduce the
+number of negative posts they saw. The objective was to determine whether the changes could sway users’
+emotions and influence their subsequent posts. The results suggested that emotional states could be
+transmitted across the social network, leading to a ripple effect.
+However, the study’s execution sparked significant backlash. Critics argued that Facebook had manipulated
+users’ emotions without their explicit consent, raising serious ethical concerns regarding user consent and
+the boundaries of corporate research. The incident served as a stark reminder of the need for clearer
+guidelines and transparency when conducting research on platforms with such extensive user bases. This
+conversation about ethics and transparency was further highlighted in U.S. Senate Committee on the
+Judiciary’s congressional hearings during 2024 when lawmakers scrutinized the impact of social media on
+teens’ mental health and the ethical responsibilities of tech companies.
+Transparency and Accountability
+Transparency has become a significant ethical issue in IT. In the context of organizations and governance,
+transparency refers to openness, communication, and accountability, where actions and decisions are clear
+and understandable to stakeholders. Users have the right to know how their data are collected, stored, used,
+and shared. Enterprises need to be transparent in their data practices, providing clear and understandable
+privacy policies and consent mechanisms. Transparent practices not only meet regulatory requirements, but
+also foster trust between users and enterprises, which is crucial for long-term user engagement.
+The roles of tech enterprises and IT professionals in being accountable for the social and ethical implications
+of technology have never been more critical. Both entities are key stakeholders in shaping the norms and
+values of the digital realm. Enterprises must imbue their business strategies with ethical considerations, from
+protecting user data to ensuring digital inclusivity. Likewise, IT professionals, the frontline workers of the
+digital revolution, must adhere to professional ethical codes, conscientiously delivering solutions that honor
+user rights and societal values. It is through their collective efforts that technology can truly serve its purpose
+as a tool for advancing societal well-being.
+Social Responsibility in the Information Technology Sector
+The obligation of companies to act in ways that benefit society and the environment beyond what is legally
+required is considered social responsibility. In the IT sector, social responsibility is expected to evolve and
+deepen as emerging technologies such as artificial intelligence, IoT, and blockchain raise new ethical questions
+that will require innovative and thoughtful responses. As these technologies become increasingly integrated
+into everyday life, the ethical dimensions of IT will extend beyond individual user rights to encompass broader
+societal impacts, including sustainability. The future will call for an even stronger commitment from
+enterprises and IT professionals to uphold ethical standards, promote transparency, ensure digital inclusivity,
+and champion sustainability.
+6.2 • Vulnerabilities and Threats in Web Applications and IoT Technology
+229
+
+6.3 Data Security and Privacy from a Global Perspective
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Identify global frameworks in data security and privacy
+•
+Identify global regulations and requirements for data security and privacy
+•
+Apply a framework to a case study
+In an era driven by digitization and the Internet of Things (IoT), vast amounts of data are generated, collected,
+processed, and transmitted daily. From personal user preferences in online shopping to critical health data,
+information flows through global networks with an ease previously unimaginable. Data have indeed become
+one of the most valuable commodities in the modern era, both for businesses and for bad actors, making the
+frameworks that guide its safekeeping vitally important to maintaining the integrity of our digital future.
+Reflecting the diverse concerns of different regions and industries, several frameworks have emerged that
+now serve as a universal staple in data management practices of multiple private, public, and governmental
+organizations. These frameworks, such as the COBIT 2019, the Enterprise Privacy Risk Management
+Framework, and the ISO/IEC 27701, provide structured practices that enable enterprises to comply with
+regulatory demands and establish and maintain a culture of data integrity and privacy-centric operations.
+These international standards are critical as they shield enterprises from potential breaches and legal
+repercussions in the respective country.
+However, the world of data security and privacy is in a perpetual state of evolution. The introduction of
+landmark regulations such as the European Union’s GDPR or California’s CCPA is testament to the shifting
+sands of data governance, with each new regulation aiming to balance business innovation with individual
+rights. In navigating this dynamic terrain, organizations must not only be aware of these frameworks and
+regulations, but also thoroughly understand their nuances and the underlying principles they champion.
+Global Frameworks in Data Security and Privacy
+Due to the explosive growth and constant evolution of technologies frameworks have been established
+through the collaboration of international standards organizations, governmental bodies, and industry groups
+to establish guidelines that resonate on a worldwide scale. Some of the most well-known are the globally
+recognized COBIT 2019 Framework, the Enterprise Privacy Risk Management Framework, ISO/IEC 27701, and
+the NIST Privacy Framework.
+COBIT 2019 Framework
+Developed by the Information Systems Audit and Control Association (ISACA), Control Objectives for
+Information and Related Technologies (COBIT) stands out as a comprehensive framework designed for the
+governance and management of enterprise IT. While its primary focus is IT governance, its principles and
+guidelines offer a holistic approach to robust data protection. The framework, previously known as COBIT5 and
+then overhauled in 2019, emphasizes the importance of stakeholder needs, risk management, and a value-
+based, holistic approach that aligns IT goals with business objectives. Organizations employing this framework
+may use it to:
+•
+establish a systematic approach to managing personal data
+•
+ensure that privacy risks are identified and mitigated
+•
+demonstrate compliance with privacy regulations globally
+•
+foster trust among stakeholders, especially data subjects, by showcasing a commitment to privacy
+An example of COBIT adoption is the European Network of Transmission System Operators for Electricity
+(ENTSO-E).
+230
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+Tasked with representing forty-two electricity transmission operators across thirty-five European countries,
+ENTSO-E embarked on a journey in 2014 to integrate COBIT 5 into its IT processes.29 This strategic move was
+aimed at refining the organization’s intricate IT infrastructure to support massive electricity flows, establish a
+decade-long network development blueprint, and ensure a transparent, standardized energy transaction
+framework across Europe. By embracing COBIT 5, ENTSO-E was able to fortify its IT governance, ensuring data
+integrity, process efficiency, and a commitment to excellence in line with its ambitious mission.
+As the framework evolved, they have continued to align their practices with the updated COBIT 2019 to
+address emerging IT governance challenges.
+ISO/IEC 27701
+An extension to the ISO/IEC 27001 and ISO/IEC 27002 standards, the ISO/IEC 27701 provides guidelines for
+establishing, implementing, and maintaining a privacy information management system (PIMS), which is a
+framework or set of policies and procedures used by an organization to manage personal data and ensure
+compliance with privacy laws and regulations.
+ISO/IEC 27701 is particularly vital given the volume of international and regional data protection laws such as
+the General Data Protection Regulation (GDPR) in the European Union and the California Consumer Privacy Act
+(CCPA) in the United States.
+The key highlights of ISO/IEC 27701 include three levels (Table 6.2):
+•
+Frameworks and Standards (Top Level): These are the overarching guidelines that organizations follow. For
+instance, ISO/IEC 27001 is the standard for managing information security, while ISO/IEC 27701 focuses
+on privacy.
+•
+Systems (Middle Level): The frameworks lead to the creation of specific systems such as ISMS and PIMS,
+which are implemented within organizations to protect information and ensure compliance.
+•
+Sector-Specific Applications (Bottom Level): The standards and systems are applied differently across
+sectors, acknowledging that each has specific requirements and challenges.
+Standards, Systems, and
+Sectors
+Application
+Top Level: Frameworks and Standards
+ISO/IEC 27001
+Foundation for information security management system (ISMS)
+ISO/IEC 27002
+Provides best practices and controls to support the ISMS established by
+ISO/IEC 27001
+ISO/IEC 27701
+An extension of ISO/IEC 27001 and 27002, focused on privacy information
+management system (PIMS)
+Middle Level: Systems Examples
+Information security
+management system (ISMS)
+Created based on ISO/IEC 27001, this system manages and protects an
+organization’s information
+Table 6.2 ISO/IEC 27701 Hierarchy The hierarchy of the ISO/IEC 27701 provides guidance through overarching standards, specific
+systems, and the application of those standards and systems.
+29
+European Network of Transmission System Operators for Electricity, “Net-Zero Industry Act,” ENTSO-E, July 2023,
+https://eepublicdownloads.blob.core.windows.net/public-cdn-container/clean-documents/Publications/
+Position%20papers%20and%20reports/2023/ENTSO-E%20NZIA%20Position%20Paper_%20June2023.pdf
+6.3 • Data Security and Privacy from a Global Perspective
+231
+
+Standards, Systems, and
+Sectors
+Application
+Privacy information
+management system (PIMS)
+Built upon ISO/IEC 27701, this system integrates privacy controls into the
+ISMS, focusing on personal data protection
+Bottom Level: Sector-Specific Applications
+Health-care sector
+Adoption of ISO/IEC 27701 to ensure patient data privacy across borders
+Financial services sector
+Utilization of ISO/IEC 27701 to manage global client data securely
+Tech sector
+Integration of ISO/IEC 27701 into cloud platforms to safeguard user data
+Table 6.2 ISO/IEC 27701 Hierarchy The hierarchy of the ISO/IEC 27701 provides guidance through overarching standards, specific
+systems, and the application of those standards and systems.
+NIST Privacy Framework
+In January 2020, the National Institute of Standards and Technology (NIST) released its Privacy Framework to
+address the challenges of increasing data privacy risks. This framework complements the NIST Cybersecurity
+Framework, specifically focusing on managing privacy risks by promoting the idea of Privacy by Design, which
+is a concept and approach in system engineering and data handling practices that integrates privacy and data
+protection measures from the very beginning of the design process, rather than as an afterthought.
+The NIST Risk Management Framework allows enterprises to translate high-level, principles-based legal
+requirements into tangible technical privacy controls. Figure 6.6 outlines the Risk Management Framework
+steps, serving as a blueprint for organizations to tailor their own cybersecurity strategies. Notably, it
+incorporates guidance from a suite of NIST standards. For instance, NIST SP 800-39 offers a broad overview for
+managing information security risk organization-wide, while IR 8062 provides a nuanced approach to privacy
+engineering and risk management. SP 800-30, on the other hand, specializes in risk assessments, helping
+organizations identify, evaluate, and prioritize risks.
+232
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+Figure 6.6 The Risk Management Framework steps incorporate key NIST standards such as SP 800-39 for organizational risk, IR 8062
+for privacy engineering, and SP 800-30 for risk assessments. (modification of work “Risk Management” by NIST/National Institute of
+Standards and Technology, Public Domain)
+As we advance further into the era of data-driven decision-making and digital innovation, these frameworks
+and regulations play a dual role. First, they provide a framework to guard against potential risks, and second,
+they lay the foundation for businesses to innovate responsibly, ensuring that user trust isn’t compromised.
+National Regulations outside the United States and the European Union
+The growing number of regulations and standards creates complexity for multinational companies, requiring
+significant resources and expertise to comply with different, sometimes conflicting, regulations. These
+challenges include addressing security risks due to inadequate security controls in IoT devices, differing
+standards across devices, and issues of data sovereignty in cloud-based platforms and access controls.
+International alignment and cooperation in data privacy regulations is crucial, as it simplifies compliance for
+global businesses and facilitates international trade and data flows.
+In a globalized world where technology transcends borders, the protection of user information, data security,
+and privacy controls is a shared concern among nations, although each country has its own regulatory laws.
+Just as the United States has put in place various agencies and standards to oversee data protection, other
+nations across Asia, South America, and Africa have crafted comparable frameworks to safeguard user
+information.
+China: Personal Information Protection Law
+China’s Personal Information Protection Law (PIPL), introduced in 2021, marks the country’s first major data
+6.3 • Data Security and Privacy from a Global Perspective
+233
+
+privacy law. This law is crucial for ensuring that personal information collected within China remains within its
+borders—a concept known as data localization. PIPL sets very strict rules for sharing data with other countries,
+meaning that companies must meet specific requirements before transferring data out of China. These
+requirements include getting certifications or contracts that align with Chinese standards.
+Japan: Act on the Protection of Personal Information
+Japan’s Act on the Protection of Personal Information (APPI) has been a key part of the country’s data privacy
+laws since it was first enacted in 2003. Recognizing the growing importance of global data protection, Japan
+made significant changes to the APPI in 2017 to update it in line with international standards, such as the
+European Union’s GDPR. The APPI focuses heavily on individual rights, ensuring that people have control over
+their personal data. This includes the right to access their data, correct any inaccuracies, and decide how their
+data are used. Businesses are required to clearly explain why they are collecting personal data and must
+obtain explicit consent from individuals.
+South Africa: Protection of Personal Information Act
+South Africa’s Protection of Personal Information Act (POPIA), which became fully effective in 2021, is designed
+to protect the privacy of personal data within the country. POPIA applies to any organization that processes
+personal information in South Africa, whether the data are processed automatically (like on a computer) or
+manually. The law requires that organizations are transparent about why they are collecting personal data and
+that they get consent from individuals when necessary. POPIA also emphasizes the importance of lawful
+processing, meaning that data can only be used for legitimate purposes. Furthermore, organizations must
+appoint an information officer to oversee compliance with POPIA, ensuring that the organization follows the
+regulations.
+Industry-Specific Regulations and Standards
+In the rapidly evolving landscape of information security, two frameworks stand out for their comprehensive
+approach and widespread adoption: the Payment Card Industry Data Security Standard (PCI DSS) and ISO/IEC
+27001 (Table 6.3). PCI DSS, a global security framework, sets the standard for safeguarding cardholder
+information, thereby playing a crucial role in mitigating credit card fraud.
+Framework
+PCI DSS
+ISO/IEC 27001
+Purpose
+•
+Increases controls around
+cardholder information
+•
+Aims to reduce credit card fraud
+•
+Helps organizations manage
+information security practices
+•
+Aligns information security with
+business needs
+Governance
+•
+Maintained by the Payment Card
+Industry Security Standards Council
+•
+Applicable to all entities handling
+credit card data
+•
+An international standard; part
+of the ISO/IEC 27000 family
+•
+Establishes, implements,
+maintains, and improves an
+ISMS
+Table 6.3 Industry-Specific Regulations and Standards The PCI DSS and ISO/IEC 27001 purposes, governance, data protection,
+security measures, and impact on organizations are laid out in their frameworks.
+234
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+Framework
+PCI DSS
+ISO/IEC 27001
+Data protection and
+risk management
+•
+Requires strong encryption for
+storing and transmitting cardholder
+data
+•
+Establishes secure network
+requirements through firewalls and
+other measures
+•
+Provides guidance on managing
+and mitigating information
+security risks
+•
+Emphasizes regular risk
+assessment and mitigation
+strategies
+Security measures/
+maintenance and
+improvement
+•
+Mandates regular security testing
+and assessments
+•
+Limits cardholder data access to
+necessary personnel only
+•
+Includes ongoing maintenance
+and continuous improvement of
+the ISMS
+•
+Ensures regular reviews and
+updates to security practices
+Compliance and
+impact/adoption and
+impact
+•
+Mandatory for organizations
+handling branded credit cards
+•
+Enhances customer trust by
+indicating high-security standards
+•
+Widely adopted across various
+industries as a security
+benchmark
+•
+Improves information security
+management and competitive
+advantage
+Table 6.3 Industry-Specific Regulations and Standards The PCI DSS and ISO/IEC 27001 purposes, governance, data protection,
+security measures, and impact on organizations are laid out in their frameworks.
+The enforcement of these security standards and regulations typically involves a combination of government
+oversight, industry self-regulation, and third-party audits. Government agencies in various countries develop
+and enforce regulations, often imposing penalties for noncompliance, which can include fines, legal action, or
+operational restrictions. Compliance with these standards is often verified through third-party audits
+conducted by accredited certification bodies, which assess whether organizations meet the required security
+and privacy benchmarks.
+Effective collaboration between nations, industries, and regulatory bodies is essential in shaping a coherent,
+effective approach to data protection in the globalized digital age.
+Case Study: Attaining ISO/IEC 27001 Certification
+Information security remains at the forefront of organizational priorities, particularly as data breaches and
+cyber threats become increasingly sophisticated. The ISO/IEC 27001 certification differentiates organizations
+that have excelled in establishing robust information security processes and procedures to safeguard crucial
+data. Additionally, organizations that meet this standard are better equipped to prevent data breaches and
+protect essential data. This case study delves into the experience of a Texas-based data center, a facility
+designed to host computer systems and related components, as it tackled the challenges of securing this vital
+certification during the global COVID-19 pandemic.
+Background: The ISO/IEC 27001 Standard
+The International Organization for Standardization (ISO) and the International Electrotechnical Commission
+(IEC) jointly developed ISO/IEC 27001. This globally recognized standard specifies the requirements for
+establishing, implementing, maintaining, and continuously improving an information security management
+system (ISMS). An organization that achieves this certification demonstrates its commitment to information
+6.3 • Data Security and Privacy from a Global Perspective
+235
+
+security and data privacy, meeting international standards of excellence.
+ISO/IEC 27001 certification is achieved through a rigorous process facilitated by a certification body, which is
+an organization accredited to assess and certify that companies, systems, processes, or products meet the
+established standards and requirements. The traditional method to obtain this certification involves
+undergoing an audit, a systematic examination and evaluation of an organization’s records, compliance with
+regulatory standards, and the integrity of financial reporting processes.
+The Challenge: Certification during a Pandemic
+In April 2020, Lone Star Data Hub, a data center located in Austin, Texas, embarked on a journey to achieve
+ISO/IEC 27001 certification. For Lone Star Data Hub, known for managing critical data infrastructure for
+regional clients in sectors such as finance and health care, this certification was more than just a seal of
+approval. It was a strategic business move aimed at setting their services apart in a competitive market.
+Obtaining ISO/IEC 27001 certification would underscore the center’s dedication to stringent information
+security standards and enhance its appeal to a broad client base, including Fortune 500 companies. This
+certification was seen as a crucial step in demonstrating their commitment to protecting sensitive data and
+maintaining the highest level of security. However, the onset of the COVID-19 pandemic introduced a myriad of
+challenges, specifically, nationwide lockdowns, social distancing mandates, and the transition to remote work.
+To meet the challenges of this certification process, the data center sought a certification body with a solid
+reputation, even in remote settings. Guided by a recommendation from another auditor and the influence of
+stakeholders with a comprehensive background in information security, they selected the National Sanitation
+Foundation; International Strategic Registrations chapter (NSF-ISR).
+The ensuing audit was thoroughly planned, with NSF-ISR providing a comprehensive agenda designed to allow
+the data center to operate seamlessly, ensuring minimal disruption to its ongoing operations. The audit
+process involved a detailed examination of the data center’s information security practices, including
+assessments of security controls, risk management processes, and compliance with ISO/IEC 27001 standards.
+This balanced approach provided the data center with invaluable insights, highlighting areas of strength and
+those needing improvement.
+LINK TO LEARNING
+Understanding the physical and digital infrastructures that help a data center achieve ISO/IEC 27001
+certification can be eye-opening. Explore a real-world ISO/IEC 27001 certified data center
+(https://openstax.org/r/109ISOIEC27001) through this virtual tour to observe the kind of security protocols
+and management systems in place. By going through the tour, you’ll get an insider’s look into the rigorous
+security measures and operational protocols that these certified facilities maintain. This will help you better
+understand the significance and implementation challenges of achieving ISO/IEC 27001 certification, and
+also deepen your understanding of how ISO/IEC 27001 principles are applied in a real-world setting.
+Remote Auditing: A New Paradigm
+The adoption of remote auditing, a practice in which an audit is conducted off-site via video or other
+technological means, marked a significant shift in the certification process. Traditionally, auditors would be
+present on-site, directly interacting with systems and personnel. However, the pandemic’s constraints
+necessitated a different approach. NSF-ISR leveraged digital tools and technologies to assess the data center’s
+systems, processes, and policies. During the remote audit, NSF-ISR measured various aspects, including the
+effectiveness of security controls, the alignment of practices with ISO/IEC 27001 standards, and the overall
+security posture of the data center. This assessment was conducted through virtual meetings, screen sharing
+sessions, and digital document reviews, which have become a new norm. While this mode of auditing was
+236
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+novel, it demonstrated that with the right tools and expertise, remote evaluations could be just as effective as
+their in-person counterparts.
+Achieving Certification: Implications and Benefits
+The meticulous audit culminated in the data center obtaining its ISO/IEC 27001 certification. This achievement
+also signaled an auditor’s adeptness in remotely verifying an ISMS. For the Texas-based data center, this
+certification expanded the company’s market opportunities, enabling it to respond to business opportunities
+that mandated stringent information security practices. As more organizations prioritize data security, the
+demand for ISO/IEC 27001-certified entities is poised to grow.
+6.4 Managing Enterprise Risk and Compliance
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Evaluate policies and discern whether they comply with global frameworks
+•
+Identify gaps and assess risks in an enterprise’s policies
+•
+Describe the processes involved in developing, implementing, and monitoring new policies and
+protocols
+As you have learned, the responsibility of safeguarding data security and privacy is not just a regulatory
+requirement: it is also a cornerstone of business success in our modern data-driven age. For enterprise
+organizations, this requires compliance --the adherence to laws, regulations, and policies governing an
+industry or operation --to various frameworks. Additionally, it involves a deeper commitment to understanding
+and continually aligning internal policies and protocols. An entity’s policy consists of defined guidelines and
+procedures established by the organization to regulate actions and ensure compliance with legal and ethical
+standards. Its protocols are the specific, detailed procedures or rules designed to implement policies in
+practical terms; for example, a data security protocol might specify encryption standards, access controls, and
+incident response measures to enforce the privacy policy. Aligning policies and protocols with data protection
+standards is necessary because in today’s digital economy businesses increasingly rely on customer data to
+drive decision-making, innovation, and personalized services. Therefore, earning and maintaining customer
+trust by responsibly managing their data is essential. This is all achieved by managing enterprise risk and
+compliance.
+Auditing Policy Compliance to a Global Framework
+Aligning with global frameworks such as GDPR is an essential step in ensuring that organizations have strong
+data security and privacy policies. But how exactly does this alignment occur, and what are the specifics
+involved in ensuring compliance with such a framework? It starts with understanding the GDPR standards and
+then auditing how well the company’s data and data processing activities perform against those standards. An
+audit is a systematic evaluation of an organization’s data privacy and security practices.
+Key Principles of GDPR
+The GDPR is built around seven key principles: lawfulness, fairness, and transparency; purpose limitation; data
+minimization; accuracy; storage limitation; integrity and confidentiality (security); and accountability.
+Understanding these principles is the foundation of any GDPR compliance audit. An audit should begin with an
+assessment of areas of potential need. Table 6.4 shows an example of how a company might identify potential
+actions to take in each area.
+6.4 • Managing Enterprise Risk and Compliance
+237
+
+GDPR Principle
+Facebook’s Actions
+Lawfulness, fairness, and
+transparency
+Reevaluate user consent mechanisms to ensure transparency and
+fairness
+Provide clearer information on data usage
+Purpose limitation
+Scrutinize third-party app policies to ensure data sharing is for specific,
+lawful purposes
+Data minimization
+Review whether minimal data transferred policies are fully enforced
+Accuracy
+Improve data accuracy
+Storage limitation
+Implement stricter policies on data storage longevity
+Integrity and confidentiality
+(security)
+Tighten security measures to prevent unauthorized data access and
+leaks
+Accountability
+Enhance accountability by increasing interactions with regulators
+Communicate compliance with data protection regulations to the public
+Table 6.4 Principal Application in Facebook Audit A company can begin an audit by assessing how effectively its policies and
+protocols are in aligning to the seven key principles of GDPR.
+Data Mapping
+An audit requires knowing where all types of personal data are stored, processed, and transferred within the
+organization. Data mapping serves as an essential precursor to effective data governance and compliance. A
+data mapping tool—which is a software application or platform that enables data professionals to automate
+the process of mapping data fields, attributes, or elements from source systems to target systems or
+destinations—can be especially useful here. The tools listed in Table 6.5 can automate this process, identifying
+various data storage points across the organization’s infrastructure, including cloud services, databases, and
+even employee devices.
+Tool
+Description
+OneTrust Data
+Mapping
+Provides a platform specifically designed to help with privacy, security, and data
+governance, including GDPR compliance; data mapping helps in visualizing data
+flows and assessing risks
+Varonis
+Focuses on protecting sensitive data and detecting insider threats; data mapping
+features also help in GDPR compliance by identifying where personal data reside
+and who has access
+Symantec Data
+Loss Prevention
+(DLP)
+Offers robust data mapping capabilities that help in discovering, monitoring, and
+protecting personal data across endpoints, networks, and storage systems
+Table 6.5 Data Mapping Tools Data mapping tools can help facilitate parts of an audit.
+238
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+Tool
+Description
+McAfee Total
+Protection for Data
+Loss Prevention
+Offers robust data mapping, policy enforcement, and reporting capabilities; often
+used in enterprise settings where there’s a complex landscape of data to manage
+Collibra
+Provides data mapping capabilities as part of its broader data cataloging and
+governance platform; often used by organizations with more mature data
+governance needs
+IBM Guardium
+Offers a comprehensive solution for data discovery and classification; particularly
+robust in dealing with a wide variety of data types and environments, from cloud
+storage to traditional databases
+Informatica
+Offers data mapping as part of its broader suite of data governance solutions;
+particularly effective for complex, large-scale enterprise environments
+Microsoft Azure
+Purview
+Provides a unified data governance service that helps organizations achieve GDPR
+compliance by mapping data across servers and databases, both on-premises and in
+the cloud
+Talend
+Offers data mapping as part of its Data Fabric platform, which is useful for
+enterprises with complex data pipelines
+erwin Data
+Modeling
+Helps organizations create a physical, conceptual, and logical map of their data
+landscape, which can be especially useful for GDPR compliance
+Table 6.5 Data Mapping Tools Data mapping tools can help facilitate parts of an audit.
+These data mapping tools offer advantages that go beyond mere identification. They can also categorize the
+identified data according to its sensitivity and the privacy risks it presents, thereby aiding in the prioritization
+of data protection efforts. For instance, personal identifiers such as Social Security numbers or medical records
+may be flagged as high-risk data requiring stricter security measures. By providing a more structured, visual
+representation of how data flows and resides within an organization, these tools allow for more effective
+planning and implementation of data privacy policies.
+Data Processing Activities
+The GDPR requires organizations to document how they process data. Therefore, understanding what kind of
+data are being collected, for what purpose, and how it is being processed and stored is essential. Additionally,
+the regulation mandates that companies maintain a detailed record of their data processing activities, from
+data collection to storage and eventual deletion.
+This recordkeeping is not just a compliance requirement—it also serves a strategic function by fostering a
+culture of accountability and transparency. Failing to adhere to this detailed level of documentation can lead to
+significant legal consequences under GDPR.
+In the context of Facebook, which faced public scrutiny for its data handling practices during the Cambridge
+Analytica scandal, GDPR compliance required the company to reevaluate its third-party app policies
+meticulously. Specifically, Facebook needed to document the kind of user data that was being accessed by
+third-party apps and for what purpose. This finding led Facebook to make changes in its API permissions,
+6.4 • Managing Enterprise Risk and Compliance
+239
+
+ensuring that data access by third-party apps would be more restricted and better aligned with GDPR
+principles. For example, apps would need explicit user consent to collect data and would be limited in what
+types of data they could collect. Not only does this practice protect the rights of individuals, but it also helps
+organizations minimize risks and liabilities by ensuring that each data processing activity has a lawful basis
+and specific purpose.
+GDPR Compliance Checklist
+Checklists can help an organization ensure that it hasn’t missed any critical elements during an audit. Creating
+a GDPR compliance checklist is an invaluable step in ensuring that all regulatory requirements are met and
+that no critical elements are overlooked during the audit process. Checklists serve as both a road map for the
+initial steps of becoming compliant and a measure for ongoing compliance measures. Following that, the
+checklist usually breaks down GDPR’s key principles and provisions into actionable items. For instance, under
+the principle of “lawfulness, fairness, and transparency,” items on the checklist could include establishing
+lawful bases for data processing, drafting clear and transparent privacy notices, and setting up mechanisms
+for obtaining and recording consents.
+Regular reviews and updates to the checklist are necessary for maintaining compliance, especially in a rapidly
+evolving digital landscape. Creating and following a detailed GDPR compliance checklist demonstrates a
+proactive approach to data protection and serves as documentary evidence of an organization’s commitment
+to compliance, which can be particularly useful if regulatory scrutiny ever occurs.
+Identifying Gaps and Risks
+Aligning with global frameworks is not a one-time task. The dynamic nature of technology, along with changes
+in regulation and emerging threats, means that organizations must constantly identify and address gaps and
+risks in their policies. Keeping an enterprise compliant is an ongoing process that demands vigilance, insight,
+and a proactive approach to risk management. Knowing how to perform a gap analysis, evaluate compliance
+with global frameworks, and navigate the complex terrain of enterprise risk policies is important for building
+and maintaining robust and compliant data management systems, and for effectively managing risks in the
+ever-evolving landscape of enterprise security.
+Gap Analysis
+The foundation of strong enterprise risk management lies in an organization’s ability to perform a gap
+analysis, which is an evaluation of existing policies and protocols, identifying weaknesses and areas that
+might not align with global data security and privacy standards. As international regulations evolve,
+organizations must be agile, adjusting their policies to ensure they remain in compliance with frameworks
+such as GDPR, CCPA, HIPAA, and others. The ability to evaluate and adapt to these global frameworks is more
+than just a legal necessity; it’s a strategic move that can enhance a business’s reputation and consequently its
+ability to gain and maintain consumer trust.
+Risk Assessment
+The process of identifying potential risks that could negatively impact an organization’s assets and business
+operations and evaluating potential negative outcomes and the likelihood of them occurring is called risk
+assessment. Every data processing activity carries a level of risk, which must be assessed and mitigated. One
+of the most comprehensive ways to conduct a risk assessment in the context of GDPR is to perform a data
+protection impact assessment (DPIA). A DPIA is a structured analysis that maps out how personal data are
+processed and how to minimize the data protection risks to individuals. It often involves evaluating the
+necessity and proportionality of the data processing activities and requires consultation with relevant
+stakeholders, including data protection officers (DPOs) and potentially even the data subjects themselves.
+For example, an organization would need to conduct a DPIA when changing how user data are shared with
+third-party apps. This would involve scrutinizing the types of data being shared, the potential risks of this
+240
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+sharing to user privacy, and the measures that could mitigate these risks. They would assess whether the data
+sharing is necessary for the service to function or whether less intrusive methods are available. Moreover, the
+DPIA would investigate security measures to ensure the third-party apps have adequate protections in place.
+After identifying and quantifying risks, the organization then needs to establish measures to mitigate them.
+These could range from technical solutions such as encryption and access controls to policy measures such as
+stricter consent requirements or limitations on data sharing. This step also involves determining the residual
+risks, or the risks remaining after mitigation, to ensure they fall within acceptable levels.
+Finally, GDPR requires that risk assessments are not a one-time activity. Risks need to be periodically reviewed
+and updated, especially when there is a significant change in data processing activities or when there are new
+insights into potential vulnerabilities and threats. Conducting regular risk assessments and DPIAs
+demonstrates an organization’s commitment to data protection, and it’s also a key requirement for GDPR
+compliance.
+Developing, Implementing, and Monitoring Policies and Protocols
+An assessment of gaps and risks is an audit that helps identify where an organization’s policies and practices
+align with or deviate from global standards, and it aims to establish the current situation. Once complete, an
+organization needs to take the findings of the initial audit and use them as a starting point for creating a
+concrete action plan, which is a detailed outline of steps to be taken to achieve a particular goal. This includes
+creating new policies and protocols that will bring the organization into compliance with GDPR. This goes
+beyond mere assessment to provide a road map for achieving compliance, which involves identifying what
+needs to be done and detailing how to do it.
+New Policies and Protocols
+The first step involves creating new policies that align with GDPR requirements. For example, this might mean
+overhauling the company’s existing third-party data sharing agreements to include more explicit consent
+mechanisms. When Facebook was faced with this need, it introduced a “Privacy Checkup” tool that serves as a
+proactive measure to empower users to control their personal information and privacy settings.30
+This feature guides users through a step-by-step process to review who can see their posts, what kind of
+personal information is visible to others, and what apps have access to their data. Not only does the Privacy
+Checkup tool allow users to understand and configure their settings, but it also aligns with Facebook’s
+obligation under GDPR to make data collection transparent and easily understandable. By implementing such
+a tool, Facebook is also demonstrating accountability—another key GDPR principle—as it shows the company’s
+active efforts to help users manage their privacy. Table 6.6 provides some examples of new or updated policies
+an organization might introduce after an audit of GDPR compliance.
+Policy/Action
+Description
+Time-limited
+data retention
+policies
+Develop a policy where user data are deleted or anonymized after a specified period
+unless renewed consent is obtained, aligning with GDPR’s principles of data minimization
+and storage limitation
+Third-party
+data handling
+guidelines
+Establish stricter policies for third-party developers, including rigorous vetting processes
+and mandatory compliance checklists, to ensure they handle user data responsibly, in
+line with GDPR’s accountability principle
+Table 6.6 Policies and Actions to Align with GDPR Compliance These examples show potential actions a company might plan to
+take to improve compliance with GDPR.
+30
+“Guiding You through Your Privacy Choices,” Meta Newsroom, January 6, 2020, https://about.fb.com/news/2020/01/privacy-
+checkup/
+6.4 • Managing Enterprise Risk and Compliance
+241
+
+Policy/Action
+Description
+Stricter data
+security
+measures
+Implement enhanced encryption methods and two-factor authentication as default
+settings to better safeguard user data, in accordance with GDPR’s integrity and
+confidentiality principle
+Automated
+data
+processing
+notifications
+Draft new policies that require explicit notification to users when automated decision-
+making or profiting based on user data occurs, along with an option to opt out, as
+mandated by GDPR
+Table 6.6 Policies and Actions to Align with GDPR Compliance These examples show potential actions a company might plan to
+take to improve compliance with GDPR.
+Legal and Internal Reviews
+Any new policies must undergo a legal review to ensure they are compliant with GDPR standards. They should
+also be vetted by different departments within the organization to check for feasibility, practicality, and
+effectiveness.
+•
+Legal review for GDPR compliance: Before any policy is finalized, it needs to be reviewed by legal experts
+specializing in data protection and compliance. For instance, Microsoft undertook a comprehensive legal
+review when GDPR was introduced to ensure all its products and services were complying.31
+•
+Departmental review for feasibility: Once the legal review confirms the draft policies follow GDPR, the next
+step is to vet them through the various departments that will be impacted. Each department can give
+insights into how practicable the new policies are. For example, when Salesforce implemented new privacy
+policies, it engaged multiple departments, including marketing, sales, and customer service, to ensure
+operational feasibility.32
+•
+Executive approval for effectiveness: The final arbiter in the review process is typically the executive
+leadership of the organization. Its buy-in is critical not just for approval, but also for the effective
+implementation of the policies. Amazon’s leadership, for example, plays an active role in the review and
+approval of compliance policies, as evidenced by the company’s public corporate governance guidelines.33
+Employee Training
+Employees need to be educated about any new policies to ensure company-wide compliance. Training
+sessions, workshops, and regular updates can serve this purpose. Educating employees about new policies is
+critical for ensuring that the entire organization adheres to compliance standards. This involves a
+comprehensive and sustained effort, involving multiple training formats and ongoing updates such as those
+listed in Table 6.7.
+31
+Julie Brill, “GDPR’s First Anniversary: A Year of Progress in Privacy Protection,” Microsoft On the Issues, May 20, 2019,
+https://blogs.microsoft.com/on-the-issues/2019/05/20/gdprs-first-anniversary-a-year-of-progress-in-privacy-protection/
+32
+“Full Salesforce Privacy Statement,” Salesforce, July 24, 2023, https://www.salesforce.com/company/privacy/full_privacy/
+33
+“Annual Report,” Amazon, 2022, https://s2.q4cdn.com/299287126/files/doc_financials/2023/ar/Amazon-2022-Annual-Report.pdf
+242
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+Training
+Method
+Description
+Company
+Using
+Method
+E-learning
+courses
+Development of e-learning courses on GDPR compliance and data privacy,
+mandatory for all employees. These courses would cover handling user data,
+responding to data breaches, and upholding GDPR principles in daily tasks.
+Cisco
+Live
+workshops
+In addition to digital courses, live workshops offer a platform for employees to
+ask questions and participate in scenario-based learning. These sessions could
+be led by internal experts or external consultants.
+Google
+Regular
+newsletters
+and
+updates
+Distribution of monthly newsletters summarizing changes in data protection
+laws, best practices, or internal policies. These updates would help keep staff
+informed and current on policy changes.
+IBM
+Certification
+programs
+Introduction of a certification program for roles directly involved in data
+processing and compliance. Certification could be a requirement for certain
+positions within the company.
+Microsoft
+Table 6.7 Training Methods and Descriptions Robust employee training works through multiple approaches.
+Policy Implementation
+Implementing new policies to align data handling practices with GDPR requirements turns assessment
+findings into actionable practices. For example, if gaps in consent management are identified, systems should
+be updated to ensure explicit opt-ins and proper recording of user consent. Similarly, if high-risk activities are
+found, the organization might introduce measures such as encryption or stricter access controls. Effective
+implementation often requires coordination across multiple systems and departments, ensuring that changes
+are consistent and integrated throughout the organization. Table 6.8 gives some examples of implementation
+strategies a company might use.
+6.4 • Managing Enterprise Risk and Compliance
+243
+
+Implementation
+Strategy
+Description
+System-wide software
+updates
+•
+Implementation of system-wide software updates to enforce new data
+policies, similar to Apples iOS updates that include privacy settings
+•
+Could involve changes at the user interface level, such as adding consent
+checkboxes and transparent data usage notifications
+Back-end process
+overhaul
+•
+Overhaul of back-end systems, including data storage and retrieval
+methods, to align with GDPR’s data minimization principle
+•
+Could include modifying algorithms to anonymize user data, as seen in
+Google’s approach to reduce privacy law violations
+Employee training and
+change management
+•
+Employee training sessions to ensure awareness and proper
+implementation of new policies
+•
+Addresses the human element of policy changes, like IBM’s comprehensive
+training programs during major shifts in policy or technology
+Table 6.8 IT Implementation Strategies and Descriptions Useful strategies for implementing new data policies include system-
+wide software updates, back-end process overhauls, and employee training.
+Communication
+Once new policies are in place, communicating these changes to end users is critical. This could occur via
+emails, updated terms of service, or in-app notifications, for example. Transparent and timely communication
+with end users is key to maintaining trust and ensuring that new policies are understood and followed. Here
+are three ways an organization can communicate these changes effectively:
+•
+Email notification: An organization can distribute a comprehensive email to all users, providing an
+executive summary of what changes have been made in the data privacy policy, why these changes were
+necessary, and what users need to do, if anything, in response. The email should also provide a link to the
+updated full text of the policy for those who desire to review it in detail. This also includes positive receipt
+of notification indicating the changes to the policy have been read. An example of such a transparent
+approach can be found in the way Dropbox communicated its privacy policy changes in 2023.34
+•
+In-app pop-up: Another effective way of ensuring the message reaches the user base is through an in-app
+pop-up notification. This notification can appear when users log in to the app after the policy changes
+have been enacted, offering them a brief overview of the changes, and directing them to more detailed
+information. X (formerly Twitter), for instance, employed this strategy when the company updated its
+terms of service in 2023.35
+•
+Social media announcements: In addition to email and direct communication through the platform,
+leveraging other social media channels to announce changes can also be useful. A series of posts
+explaining the key changes in easy-to-understand language can be made on platforms such as Instagram,
+LinkedIn, or X to broaden the reach. Google took to its blog and social media to explain changes when the
+company updated its privacy policy in 2020.36
+34
+“Dropbox Terms of Service and Privacy Policy Updates,” Dropbox, updated January 15, 2024, https://help.dropbox.com/security/
+terms-service-privacy-policy
+35
+X “An Update on Two-Factor Authentication Using SMS on Twitter,” X Blog, February 15, 2023, https://blog.twitter.com/en_us/
+topics/product/2023/an-update-on-two-factor-authentication-using-sms-on-twitter
+36
+Sundar Pichai, “Keeping Your Private Information Private,” Google: the Keyword, June 24, 2020, https://blog.google/technology/
+safety-security/keeping-private-information-private/
+244
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+Continuous Monitoring and Auditing
+Continuous monitoring and auditing are vital in ensuring that the changes implemented are not merely a one-
+time fix but are effectively integrated into an organization’s ongoing operations. This involves conducting a
+mix of automated and manual reviews aimed at regularly validating an organization’s compliance with GDPR.
+Establishing a schedule for routine audits and assessments is key, as it provides structured intervals for
+scrutiny, which in turn minimizes the risk of noncompliance creeping back into the organization’s practices
+over time.
+Table 6.9 describes the actions needed to monitor and audit data handling and who is responsible for each
+action; it also features time frames for the implementation of each task.
+Action Item
+Responsibility
+Time Frame
+1. Develop an audit framework.
+Legal and compliance teams
+1 to 2 months
+2. Establish metrics for success.
+Data analytics team, legal and compliance
+teams
+1 month
+3. Conduct quarterly internal audits.
+Internal audit team
+Quarterly
+4. Conduct annual third-party audits.
+Compliance team to select third-party
+auditor
+Annually
+5. Implement real-time monitoring
+systems.
+IT security team
+Ongoing
+6. Maintain audit trails.
+IT and compliance teams
+Ongoing
+7. Review and update policies.
+Legal and compliance teams
+After each audit
+cycle
+8. Share audit outcomes.
+Legal and compliance teams
+After each audit
+Table 6.9 Action Items, Responsible Entity, and Time Frame for Auditing GDPR Compliance Measures An example plan outlines
+the key action items, responsible teams, and timelines for implementing and auditing GDPR compliance measures.
+Case Study: Facebook Gap Analysis, Risk Assessment, and Policy Changes
+One real-world example that highlights the need for robust data security and privacy protocols involves the
+gaps that surfaced in the policies of Facebook (now Meta) during the Cambridge Analytica scandal. In March
+2018, it was revealed that the data of around 87 million Facebook users had been harvested without consent
+by a third-party app and sold to Cambridge Analytica, a political consulting firm. The incident sparked global
+outrage, leading to intense scrutiny of Facebook’s data privacy practices, and eventually resulting in significant
+regulatory action.
+This case study explores the processes enacted during Facebook’s audit, gap analysis, risk assessment, and
+policy development and implementation.
+Facebook’s approach began by identifying the scope and objectives of its audit. The focus was on how
+management could address the challenges and gaps in its data privacy practices to align with global
+standards. The scope was to examine how Facebook’s failure to protect user data led to unauthorized access
+by Cambridge Analytica, exposing significant flaws in data management and user privacy. The primary
+6.4 • Managing Enterprise Risk and Compliance
+245
+
+objective was to bring Facebook’s data privacy policies into compliance with global standards such as GDPR,
+ensuring management’s responsibility for implementing necessary changes.
+Facebook conducted a detailed examination of existing policies, with a critical eye toward identifying
+vulnerabilities and areas for improvement. Although the pre-incident policies that allowed third-party apps to
+access Facebook users’ data were compliant with existing laws, they were found to be risky. This situation
+highlighted the importance of not only complying with legal requirements, but also adhering to privacy best
+practices to protect users’ personal information.
+The next phase involved comparing Facebook’s practices to the stringent requirements of the EU’s GDPR.
+GDPR emphasizes principles such as data minimization and transparency, both of which were lacking in
+Facebook’s existing data sharing approach. The principle of data minimization ensures that organizations
+only collect, process, and store the minimum amount of personal data necessary for its purpose. Identifying
+specific areas where compliance with international standards was lacking underscored the need for targeted
+interventions.37
+Next was the process of identifying gaps and weaknesses which involved a meticulous examination of areas
+where policies, procedures, and practices fell short. This step pinpointed specific areas that needed to be
+addressed to enhance data protection and user privacy. In the case of Facebook, the company conducted an
+audit and found gaps in its own user consent management, data sharing controls, and third-party data access
+monitoring. It then laid out a plan to address these areas systematically.
+Risk evaluation considers potential negative consequences resulting from gaps and weaknesses. For
+Facebook, the risks included substantial regulatory fines (such as a $5 billion fine by the FTC), potential
+reputational damage, and the loss of user trust. For any organization, understanding these risks is essential in
+prioritizing and tailoring the response to ensure that the most significant threats are addressed promptly.
+Based on the identified gaps and assessed risks, Facebook needed to develop clear and actionable plans to
+rectify its shortcomings. This included implementing changes to limit third-party access, which is access to
+data from an external entity to user data, enhancing user consent mechanisms, and increasing transparency
+regarding data usage.
+The implementation phase is where planned changes are executed. Facebook, in response to heightened data
+privacy concerns, began to conduct more robust audits of third-party developers, enhancing oversight and
+adhering to stricter data privacy standards. To ensure these changes were not just one-off adjustments but
+part of a sustained compliance strategy, Facebook instituted continuous monitoring measures. These
+measures include regular reviews of data access and usage by third-party developers, the use of advanced
+analytics to detect and respond to unusual patterns indicative of potential data misuse, and ongoing updates
+to their data privacy policies and practices in line with evolving regulations and user expectations. Continuous
+monitoring of compliance ensures that the changes not only effectively address identified gaps, but also that
+ongoing compliance is maintained, adapting to new challenges and regulatory requirements as they arise.
+Documenting and reporting are final steps that are vital in maintaining transparency and trust. Facebook
+increased transparency with users and regulators through public reports and regular updates on privacy
+measures, reinforcing the importance of management’s role in driving these changes.
+Facebook’s reevaluation of its data security and privacy policies after the Cambridge Analytica scandal
+illustrates the process of aligning corporate practices with global standards. It also serves as a lesson for
+organizations to be vigilant in protecting user privacy, ensuring compliance with regulatory frameworks, and
+establishing transparent communication with stakeholders.
+37
+Colin J. Bennett, “The European General Data Protection Regulation: An Instrument for the Globalization of Privacy Standards?,”
+Information Polity 23, no. 2 (April 2018), https://doi.org/10.3233/IP-180002
+246
+6 • Enterprise Security, Data Privacy, and Risk Management
+Access for free at openstax.org
+
+ETHICS IN IS
+Ethical Considerations in Gap Analysis
+In 2022, Uber faced significant backlash after a data breach exposed the personal information of millions of
+users. This incident underscores the ethical responsibilities companies have when managing sensitive data.
+The gap analysis process is not just about compliance but also about upholding ethical standards to protect
+user trust.
+Key ethical considerations before a gap analysis include:
+•
+Informed consent: Ensure users fully understand and agree to how their data will be used and stored.
+•
+Transparency: Be clear and open about data collection, storage, and sharing practices.
+•
+Trust: Protect the trust users place in your organization by implementing robust data protection
+measures.
+•
+Accountability: If gaps are found, be transparent and take responsibility to address them immediately.
+Ethical actions after a gap analysis include:
+•
+Communicate clearly: Inform stakeholders promptly if any vulnerabilities are detected.
+•
+Implement changes responsibly: Address any identified gaps with a focus on ethical responsibility, not
+just legal compliance.
+•
+Ongoing monitoring: Continuously audit and monitor data practices to ensure ongoing protection and
+trust.
+By integrating these ethical considerations into your gap analysis, the organization can enhance data
+security and build a culture of trust and accountability.
+6.4 • Managing Enterprise Risk and Compliance
+247
+
+Key Terms
+accountability
+principle that people and entities must take responsibility for the decisions they make and be
+able to explain them
+action plan
+detailed outline of steps to be taken to achieve a particular goal, often aimed at mitigating risk
+or improving performance
+audit
+process of evaluating the adequacy, effectiveness, and adherence to prescribed procedures, protocols,
+or standards
+bad actor
+person or entity who hacks or cracks into a computer or system with malicious intent
+California Consumer Privacy Act (CCPA)
+law that increases privacy rights and consumer protection for
+residents of California
+certification body
+organization accredited to assess and certify the conformity of companies and
+organizations to specific standards, ensuring they meet the established criteria in their industry or sector
+compliance
+adherence to laws, regulations, and policies governing an industry or operation
+consent
+in the context of data protection, explicit permission given by an individual for the collection,
+processing, and use of their personal information
+cyber espionage
+use of online methods to obtain secret or confidential information without the permission
+of the holder of the information, typically for strategic, military, or political advantage
+data breach
+unauthorized access to confidential data, often leading to the exposure of sensitive information
+data center
+facility used to house computer systems and related components, such as telecommunications
+and storage systems
+data mapping tool
+software application or platform that enables data professionals to automate the
+process of mapping data fields, attributes, or elements from source systems to target systems or
+destinations
+data minimization
+principle that organizations should only collect, process, and store the minimum amount
+of personal data necessary for its purpose
+data privacy
+rights and practices around the proper collection, storage, and use of personal information
+data protection impact assessment (DPIA)
+process to help identify and minimize the data protection risks
+of a project
+data security
+protection of data from unauthorized access, corruption, or theft
+digital divide
+gap between individuals, communities, or countries that have access to modern information
+and communication technologies and those that do not
+error handling
+process in software and systems design where potential errors are systematically managed
+and addressed to prevent system failures and security breaches, and to provide meaningful feedback to
+users
+gap analysis
+method for comparing current policies, protocols, or performance metrics against desired
+goals or industry standards to identify areas for improvement
+General Data Protection Regulation (GDPR)
+comprehensive data protection law in the European Union that
+sets guidelines for the collection and processing of personal information of individuals within the EU
+identity theft
+act of stealing someone’s information and assuming their identity
+IEEE 2413
+architectural framework for IoT developed by the Institute of Electrical and Electronics Engineers
+(IEEE) to standardize and promote cross-domain interaction
+input validation
+process of checking inputs received from users or from other systems for their data type,
+length, format, and range
+Internet of Things (IoT)
+network that connects everyday physical objects to the internet, enabling them to
+collect and share data with other devices or systems
+ISO/IEC 27701
+extension to the ISO/IEC 27001 and ISO/IEC 27002 standards that provides guidelines for
+establishing, implementing, and maintaining a privacy information management system
+least privilege principle
+cybersecurity practice where users are granted the minimum levels of access, or
+permissions, needed to perform their job functions, reducing the risk of unauthorized access to sensitive
+248
+6 • Key Terms
+Access for free at openstax.org
+
+information
+physical security
+measures and systems used to protect people, property, and physical assets from external
+threats such as theft, vandalism, and natural disasters
+policy
+defined guidelines and procedures established by an organization to regulate actions and ensure
+compliance with legal and ethical standards
+Privacy by Design
+privacy by design concept and approach in system engineering and data handling
+practices that integrates privacy and data protection measures from the very beginning of the design
+process, rather than as an afterthought
+privacy engineering
+incorporating privacy principles directly into the design and development of IT systems,
+networks, and business practices
+privacy information management system (PIMS)
+framework or set of policies and procedures used by an
+organization to manage personal data and ensure compliance with privacy laws and regulations
+regulatory framework
+structure of rules and guidelines, often legislated, within which an industry or
+business must operate
+remote auditing
+modern auditing method that uses digital tools and technologies for assessing systems,
+processes, and policies when in-person visits are not feasible
+risk assessment
+process of identifying potential risks that could negatively impact an organization’s assets
+and business operations and evaluating the potential negative outcomes and the likelihood of them
+occurring
+secure device onboarding
+process that involves adding devices to a network in a secure manner to prevent
+unauthorized access and protect the integrity of the network
+social responsibility
+in a business context, the obligation of companies to act in ways that benefit society
+and the environment beyond what is legally required
+third-party access
+ability for external entities or applications, not part of the primary institution, to access
+certain data or functionalities
+transparency
+openness, communication, and accountability, wherein actions and decisions are clear and
+understandable to stakeholders
+Summary
+6.1 Key Concepts in Data Privacy and Data Security
+•
+Data privacy and security involve protecting data from unauthorized access and ensuring confidentiality,
+integrity, and availability; they are essential for maintaining trust and reputation, preventing financial loss,
+and reducing operational risks in enterprises.
+•
+The transition of businesses to digital platforms has increased the susceptibility of information to
+breaches and unauthorized disclosures, emphasizing the impact of enterprise security and risk policies on
+data privacy in a digital landscape.
+•
+Data privacy and security have transcended being mere IT issues to become crucial elements of strategic
+planning for businesses, necessitating significant investment in data security measures and privacy
+protocols to maintain customer trust and comply with regulations.
+•
+The growing awareness and concern among consumers about their data privacy means businesses must
+enhance their data protection efforts, as consumers are increasingly likely to switch away from companies
+with poor data practices.
+•
+Security policies extend to managing risks associated with third parties such as cloud service providers
+and data analytics firms, requiring regular audits, and secure data handling agreements.
+•
+Data privacy regulations and standards, both regional and international, ensure the safeguarding of
+personal information and provide a standardized approach for businesses to manage data privacy.
+6 • Summary
+249
+
+6.2 Vulnerabilities and Threats in Web Applications and IoT Technology
+•
+The rapid advancement of digital technologies, including IoT and mobile, has introduced significant
+vulnerabilities.
+•
+The expansion of IoT and web applications has integrated technology into every facet of modern life,
+increasing the responsibility of enterprises and IT professionals to ethically manage and secure these
+interconnected ecosystems.
+•
+Security strategies include both preventive and reactive measures intended to combat security threats in
+web and IoT technologies, preparing future IT professionals to effectively protect digital environments.
+•
+Regulatory frameworks and standards developed by organizations such as ISO and IEEE are essential for
+enhancing security, interoperability, and quality in the digital ecosystem, particularly in the
+underregulated IoT sector and its global reach.
+6.3 Data Security and Privacy from a Global Perspective
+•
+The ISO/IEC 27001 standard is a key global framework for data security and privacy. It serves as an
+international regulation that sets specific requirements for information security management systems
+(ISMSs).
+•
+The global landscape of data security and privacy is a combination of intricate regulations, standards, and
+best practices that reflects the diverse concerns of different regions and industries. It is in a perpetual
+state of evolution.
+•
+Some of the most well-known standards are the globally recognized COBIT 2019 Framework, the
+Enterprise Privacy Risk Management Framework, ISO/IEC 27701, and the NIST Privacy Framework.
+•
+While the United States has put in place various agencies and standards to oversee data protection, other
+countries across Asia, South America, Africa, as well as various industries have crafted similar frameworks
+to safeguard user information.
+•
+The case study provides important insights on the strategic importance of global certifications, the need
+for flexibility, and the value of expert auditors in navigating global regulations and frameworks.
+6.4 Managing Enterprise Risk and Compliance
+•
+Enterprises can significantly benefit from conducting an audit and gap analysis to determine compliance
+with global frameworks, a critical process that helps identify discrepancies between current data security
+and privacy practices and industry-wide best practices or regulatory requirements. A gap analysis is
+invaluable for pinpointing areas where policies may leave the company or its users’ data vulnerable to
+various risks.
+•
+Introducing new data privacy and protection policies is a critical step for any organization aiming for GDPR
+compliance. These policies undergo a thorough legal review to ensure they meet GDPR standards and are
+also vetted internally across various departments to check for operational feasibility and effectiveness.
+•
+To ensure company-wide compliance, it’s essential to conduct comprehensive employee training on new
+data protection policies. This involves a mix of e-learning courses, live workshops, regular updates, and,
+for certain roles, specific certification programs to ensure that every member of the organization
+understands and can effectively apply these policies.
+•
+Continuous improvement is key in GDPR compliance, which involves regular policy reviews, automated
+compliance monitoring, and audits. Equally important is transparent and effective communication with
+end users regarding any policy changes to maintain trust and compliance.
+Review Questions
+1. What is a description of Privacy by Design?
+a. a principle advocating for privacy to be intentionally embedded into the design and architecture of IT
+systems and business practices
+b. a principle focusing on the technical aspects of implementing data protection controls, such as
+250
+6 • Review Questions
+Access for free at openstax.org
+
+encryption and anonymization
+c. a principle focusing only on data storage and management by third-party providers
+d. a principle that is reactive to data protection and is only considered after a data breach has occurred
+2. The General Data Protection Regulation (GDPR) impacts ________.
+a. only organizations based in the EU
+b. only organizations based outside of the EU
+c. all organizations that process the data of EU citizens, regardless of the company’s location
+d. only organizations that have a physical presence in the EU
+3. The International Organization for Standardization’s (ISO) 27701 standard is an extension of ISO 27001.
+What does ISO 27701 provide guidance on?
+a. how to manage privacy information
+b. how to manage third-party relationships in data storage
+c. how to create new data privacy laws
+d. how to design privacy into IT systems and business practices
+4. How did internet usage change from the 1990s to the 2020s?
+a. It decreased due to privacy concerns.
+b. It increased slightly with the growth of technology.
+c. It skyrocketed due to the rise of big data and digital lifestyle.
+d. It remained stable as internet penetration rates reached a plateau.
+5. What is the term for the practice of incorporating privacy controls into the design and development of IT,
+systems, networks, and business practices?
+a. Privacy by Design
+b. privacy engineering
+c. security engineering
+d. privacy network
+6. What kind of attack exploits vulnerabilities in a web application to inject malicious scripts into websites
+viewed by other users?
+a. man-in-the-middle attack
+b. SQL injection
+c. cross-site scripting
+d. phishing
+7. Which attack can turn unsecured IoT devices into bots to carry out massive, distributed denial-of-service
+(DDoS) attacks?
+a. Mirai botnet attack
+b. SQL injection
+c. CSRF attack
+d. dictionary attack
+8. Which international standard provides a framework for an information security management system
+(ISMS)?
+a. ISO 31000
+b. ISO/IEC 27001
+c. ISO 9001
+d. ISO 14001
+9. When developing web and IoT technologies, enterprises and IT professionals have the social responsibility
+to ________.
+a. maximize profit
+6 • Review Questions
+251
+
+b. ensure user engagement
+c. safeguard user information and privacy
+d. minimize development costs
+10. Which regulation enacted by the European Union focuses primarily on data protection and control?
+a. COPPA
+b. GDPR
+c. CCPA
+d. LGPD
+11. Which organization has been heavily involved in developing standards specifically for IoT?
+a. W3C
+b. IEEE
+c. ITU
+d. NIST
+12. In the case study, what was the primary reason behind the Texas-based data center efforts to gain ISO/IEC
+27001 certification?
+a. legal requirement
+b. client demands
+c. strategic business decision
+d. government grants
+13. Which type of organization would most likely require that its data centers be ISO/IEC 27001 certified?
+a. local shops
+b. Fortune 500 companies
+c. small online businesses
+d. individual clients
+14. What is a primary focus of a gap analysis related to data security and privacy?
+a. identifying strong performance areas only
+b. assessing whether the organization’s philanthropic efforts are successful
+c. comparing current policies against industry standards to identify weaknesses
+d. measuring the CEO’s leadership skills
+15. In terms of compliance with global frameworks such as GDPR, what principle emphasizes collecting only
+the data strictly necessary for intended purposes?
+a. data maximization
+b. transparency
+c. data minimization
+d. data expansion
+16. What is the main objective of conducting an audit in the context of data security and privacy?
+a. to hire new staff
+b. to align an organization’s practices with global privacy standards
+c. to redesign the company’s organizational structure
+d. to evaluate employee performance
+17. In complying with global frameworks such as GDPR, what does the term transparency primarily refer to?
+a. the organization’s revenue
+b. clarity in how user data are used and managed
+c. the physical layout of an office
+d. government operations
+252
+6 • Review Questions
+Access for free at openstax.org
+
+18. Which of the following would be considered a significant risk associated with gaps in data security
+policies?
+a. reduced employee turnover
+b. increased stock prices
+c. loss of user trust and potential regulatory fines
+d. introduction of new company products
+19. The scope of a gap analysis for data security and privacy usually includes evaluating ________.
+a. employee behavior and data sharing controls
+b. third-party data access and customer behavior
+c. evaluating areas such as user consent management, data sharing controls, and third-party data access
+d. consent management only
+Check Your Understanding Questions
+1. Briefly explain the differences between Privacy by Design and privacy engineering. How do these concepts
+play a role in enterprise security and risk policies?
+2. The GDPR and the CCPA are two major data privacy regulations implemented in the European Union and
+California, respectively. What are the key rights these regulations provide to individuals, and what are their
+implications for businesses?
+3. What are some of the key drivers behind the rapid data creation in our current digital age, and how has
+this impacted data privacy and security?
+4. Discuss the international dimensions of data privacy. Why is it essential for businesses to understand
+varying privacy regulations and practices in different regions?
+5. What is one major vulnerability commonly found in Internet of Things (IoT) devices, and how has this
+vulnerability been exploited in a real-world example?
+6. Describe one specific regulation or standard (such as GDPR or ISO/IEC 27001) aimed at enhancing the
+security and privacy of web and IoT technology.
+7. How do regulations such as GDPR and CCPA impact the social responsibility of enterprises and IT
+professionals developing web and IoT technology?
+8. What is one future challenge that may require reevaluation of existing regulations and the creation of new
+guidelines or regulations for web and IoT technology?
+9. Briefly explain the importance of an information security management system (ISMS) in the context of
+data security and privacy.
+10. List at least two regulations that impact data security and privacy in countries outside of the United States.
+11. Briefly explain what a gap analysis is and how it helps in enhancing an organization’s data security and
+privacy.
+12. What are some key principles of the General Data Protection Regulation (GDPR) that organizations should
+comply with?
+13. Describe some potential risks that organizations could face due to gaps in their data security and privacy
+policies. How could an organization mitigate these risks?
+Application Questions
+1. Reflect on the importance of data privacy and protection in today’s increasingly digital world. How do you
+see these concerns influencing your personal habits online and your future professional life, particularly if
+6 • Check Your Understanding Questions
+253
+
+you are considering a career in information systems? How do you believe businesses and regulations need
+to evolve to maintain data privacy and protection in the face of rapidly changing technology?
+2. Watch Glenn Greenwald’s “Why Privacy Matters” TEDx talk (https://openstax.org/r/109TEDGreenwald) and
+answer the following question: How does Greenwald’s perspective on the importance of privacy align or
+contrast with the ideas presented in the text about the role of data privacy and security in the digital age?
+Provide specific examples from both the video and the text in your response.
+3. Reflect on the ethical responsibilities of IT professionals in shaping the use and development of web and
+IoT technologies. Do you think IT professionals should have a moral duty to be socially responsible,
+particularly in ensuring user privacy and security? How do their roles and actions influence the broader
+regulatory and ethical landscape?
+4. Considering the increasing interconnectedness of our world through IoT, what are some sectors or
+industries that you believe will face the most significant regulatory challenges in the future?
+5. Watch this video about hackers remotely hijacking a vehicle (https://openstax.org/r/109RemoteHijack) and
+answer the following questions: Given the increasing connectivity in modern vehicles, what implications
+does the hacking of a vehicle with the driver inside have for consumer trust and automotive cybersecurity?
+While this incident occurred with a specific make and model, any vehicle could have been affected. How do
+you think regulations and guidelines can address such vulnerabilities?
+6. Consider the various strategies and best practices for protecting an organization from a ransomware
+attack. As a leader in the IT industry, how would you proactively prepare and safeguard your organization’s
+digital assets and data against such an attack?
+7. Reflect on how an information security management system (ISMS) could benefit an international
+organization or national organization that you are familiar with. What specific challenges and
+opportunities can you identify for implementing an ISMS in this organization?
+8. Watch this video by Rachel Cummings on the Data Privacy Index (https://openstax.org/r/109DataPrivIndx)
+and consider the following: How can an index such as a FICO score used by credit card companies and
+banks be used across various social media platforms and rideshare platforms such as Lyft, Uber,
+TaskRabbit, or AirBnB? What are the limitations?
+9. Reflect on a recent news event involving a data breach or data privacy scandal. How do you think a gap
+analysis could have prevented or mitigated the issues at hand?
+10. Think about your own experiences with online services and their privacy policies. Are there any instances
+where you felt that a service could improve its data security or privacy policies? What specific gaps did you
+identify and how would you address them?
+254
+6 • Application Questions
+Access for free at openstax.org

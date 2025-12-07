@@ -1,0 +1,1401 @@
+Figure 7.1 Cloud computing and the development of cloud infrastructure are critical to delivering software applications securely,
+more rapidly, and continuously. (credit: modification of work "Cloud" by James Cridland/Flickr, CC BY 2.0)
+Chapter Outline
+7.1 Fundamentals of Cloud Computing
+7.2 Cloud Computing Services, Pricing, and Deployment Models
+7.3 Cloud Computing Technologies
+7.4 Cloud-Based Industry Applications
+7.5 Scientific, Industrial, and Social Implications of Cloud Computing
+Introduction
+Organizations are facing more pressure today to retain customers who depend on updated or new business
+capabilities. This requires organizations to deliver software applications securely, more rapidly, and
+continuously. For organizations to adapt existing applications or build new applications using the cloud, they
+must abide by a different set of constraints to leverage cloud infrastructure in comparison to traditional on-
+premise infrastructure.
+Cloud computing offers the ability to access information via the internet at any time of day, from any device,
+and from any location. Before the cloud existed, transferring large amounts of data required physical external
+storage devices. The limitation of carrying data on a physical drive meant that employees could not work
+remotely and maintain access to all necessary information when away from the office. There was also not yet a
+means for customers to access banking information from an app, to shop online from a laptop, or to write an
+essay using Google Docs from a desktop computer. Cloud computing changed all of that, and it enriched the
+depth and breadth of information systems (IS) development and efficacy in the modern business world.
+Cloud Computing and Managing the Cloud Infrastructure
+7
+
+7.1 Fundamentals of Cloud Computing
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Define cloud computing and its relevance to the organization
+•
+Compare and contrast cloud computing and in-house hosting
+•
+Discuss the role of information systems professionals in cloud computing
+The application of cloud computing offers businesses the ability to add, expand, or modify systems to be used
+in accounting, human resources, and daily operations. Consider Google Drive, for example, which a user can
+access from their smartphone to create and save a document. That user can then allow another user to access
+and modify that document from another device. Google Docs also allows multiple people to work together
+within the same document at the same time. Such advantages give cloud computing the ability to help an
+organization work more effectively and efficiently.
+Cloud Computing and Its Relevance to the Organization
+Consider a situation in which an organization is faced with the need to rapidly expand a new product line,
+which could increase the company’s competitive advantage in their industry. What is the timeline to purchase
+physical equipment and install, configure, implement, and support the needed resources, including human
+resources? Depending on the organization’s purchasing requirements, it could be a minimum of thirty days to
+push a purchase order through, if funding is available. Depending on the amount of equipment ordered,
+delivery may take forty-five to sixty days or more. Once the equipment is received, there is the configuration
+and implementation aspect of the project. This step depends on the abilities of the staff and whether there are
+special application requirements, testing, or piloting of the resources.
+Take the same project and consider how it may look different if it is planned and executed in the context of
+cloud computing, often referred to simply as “the cloud,” which is information technology (IT) resources that
+are available through the internet on an on-demand or pay-as-you-go basis without the users needing to
+manage it. The organization would need a cloud provider, a company that provides on-demand services such
+as data storage, applications, and infrastructure in a platform accessible through the internet. Once the
+organization has a cloud provider, it then becomes a cloud consumer, which is an entity that uses and
+maintains access to the computing resources of a cloud provider. The organization can use the cloud provider’s
+portal to order, build, configure, and implement the needed infrastructure, which is the facility and system
+used to support an organization’s operations. The organization can then use a portal to complete the same
+build, configuration, software installation, testing, and piloting to be accomplished in the physical environment
+(Figure 7.2).
+Figure 7.2 A cloud-based environment connects a cloud consumer to cloud components like servers and firewalls via the internet.
+256
+7 • Cloud Computing and Managing the Cloud Infrastructure
+Access for free at openstax.org
+
+(attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license; credit “File server”: modification of work “Simpleicons
+Interface folder-open-shape” by SimpleIcon/Wikimedia Commons, CC BY 3.0; credit “Application server”: modification of work
+“Application Server” by Openclipart/Wikimedia Commons, Public Domain; credit “Database Server”: modification of work “Database
+Server” by Openclipart/Wikimedia Commons, Public Domain; credit “Infrastructure”: modification of work “Network (22612) – The
+Noun Project by Ann Fandrey/Wikimedia Commons, CC0 1.0; credit “Router”: modification of work “Router (16624) – The Noun
+Project” by Christopher Pond/Wikimedia Commons, CC0 1.0; credit “Firewall”: modification of work “Firewall (computing)” by
+Openclipart/Wikimedia Commons, Public Domain)
+The organization will need to determine the competitive advantage of each approach to expanding to a new
+product line. It might take several months if the organization decides to use their own infrastructure to
+implement an on-premise environment, which is the physical hardware, such as servers, network equipment,
+and workstations. The cost of that implementation could occur concurrently to the rollout of a new product
+line that the system will support, thus maximizing the capital expenditure for the project (Figure 7.3). The cloud
+scenario, which could be implemented in days rather than months, might meet the immediate needs of a new
+project that must adhere to specific deadlines that do not offer an extended amount of start-up time.
+Figure 7.3 An on-premise environment is connected to the internet through a firewall, and network traffic passes through a router
+and switch. The infrastructure consists of application, file, FTP, email, print, and database servers. (attribution: Copyright Rice
+University, OpenStax, under CC BY 4.0 license; credit "Firewall": modification of work “Firewall (computing)” by Openclipart/Wikimedia
+Commons, Public Domain; credit "Router": modification of work "Router (16624) - The Noun Project" by Christopher Pond/Wikimedia
+Commons, CC0 1.0; credit "Switch": modification of work "Noun Project switch icon" by "IconMark"/Wikimedia Commons, CC BY 3.0;
+credit "Application server": modification of work "Application server" by Openclipart/Wikimedia Commons, Public Domain; credit "File
+server": modification of work “Simpleicons Interface folder-open-shape” by SimpleIcon/Wikimedia Commons, CC BY 3.0; credit "FTP
+server" and "Database server": modification of work “Database Server” by Openclipart/Wikimedia Commons, Public Domain; credit
+"Email server": modification of work "E-mail-server" by Openclipart/Wikimedia Commons, Public Domain; credit "Print server":
+modification of work "Fax server" by Openclipart/Wikimedia Commons, Public Domain)
+Cloud computing environments and on-premise environments have the same functionality, but they have
+some fundamental differences. One main difference is the physical environment. In an on-premise facility, an
+organization owns and manages their own infrastructure. In a cloud environment, the cloud provider owns,
+operates, and manages the computing equipment. Both computing environments have a physical hardware
+component, yet the cloud environment offers services to the cloud consumers using virtualization, in which a
+physical computer environment creates a simulated computer environment (Figure 7.4). Virtualization
+software takes physical hardware, such as a server, and converts it to resources that are then reallocated
+through code to re-create an IT resource that functions in the same manner as the physical equivalent.
+7.1 • Fundamentals of Cloud Computing
+257
+
+Figure 7.4 An interface virtualizes the resources, such as CPUs, RAM, network, and, in some cases, storage, of the physical server. It
+divides these resources while allocating what is needed for each computer accessing the server. (credit: modification of work from
+Introduction to Computer Science. attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+In an on-premise environment, the organization provides access to the different platforms, such as Exchange,
+file, and database, and applications, such as email, the web, and data entry. Access to the internet occurs
+through the on-premise network infrastructure and is monitored and maintained by the organization.
+In a cloud environment, the cloud provider owns and manages physical hardware to deliver virtualized access
+through the internet to the server, network equipment, and workstations. The cloud environment can support
+access via any device, from any location, at any time based on the contracted services the cloud consumer
+purchases. For example, a cloud environment in a school allows a student to review their grades at any time.
+The student can use their smartphone to access the school portal, and with the correct credentials, they can
+log in and access the platform that houses their grades.
+Cloud environments are based on the services the cloud provider offers to the cloud consumer. Amazon Web
+Services (also known as AWS or AWS Marketplace) provides many services based on the categories the cloud
+consumer procures. Some of the service categories are operating systems, security, networking, and storage.
+Though companies, such as AWS, Google, and Microsoft Azure, offer a wide range of services, some cloud
+environments specialize in services that meet a single requirement for a cloud consumer. One example of a
+single service is a development environment, such as those provided by DigitalOcean. This environment allows
+developers to build a web and application platform that can be scaled to their needs and can run
+independently from their production environment.
+Data storage is a problem that all organizations face—from how much they create to how long they should
+retain it. The amount of data generated is relevant to their customer base, products, and services. This, in turn,
+creates an issue with determining the amount of storage required at any given time. Cloud storage offers
+organizations the opportunity to implement accessible elastic storage, meaning that it can expand or collapse
+based on demand. Cloud providers such as Wasabi Technologies (also known as Wasabi) specialize in offering
+only storage environments, such as hot site storage, network-attached storage, and data lakes. In hot site
+storage, mission-critical data are stored in one location where the organization can have immediate access to
+the data. In network-attached storage (NAS), the storage system is flexible and attaches to an organization’s
+network infrastructure. In a data lake, large amounts of structured and unstructured data are stored in a
+repository.
+Cloud Computing Compared to On-Premises Hosting
+There are several advantages and disadvantages of cloud computing. First, consider the difference between an
+organization that has on-premise equipment and one that uses a cloud computing environment. Each
+organization has data storage, website hosting, and system availability for an end user, or the entity that
+makes use of the technology provided by an organization.
+258
+7 • Cloud Computing and Managing the Cloud Infrastructure
+Access for free at openstax.org
+
+When organizations have their own equipment to provide the services to their end users on-premise, the
+organization manages, maintains, and supports all services in-house. These services are dependent on the
+services the organization provides to their customers and the industry in which they operate. The support of
+these services includes, but is not limited to, the facility, utilities, hardware, software, and other equipment
+necessary to perform the functions the end users need to complete their job function. In most cases, the
+company has its own personnel to support the equipment and services necessary to support the technology
+and systems the organization operates, such as Active Directory services, website development, and data
+storage.
+In cloud computing, the resources are located external to the organization’s facilities and accessed through the
+internet. According to the National Institute of Standards and Technology (NIST), “Cloud computing is a model
+for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing
+resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and
+released with minimal management effort or service provider interaction.”1 According to this definition, there
+are five essential characteristics: on-demand self-service, broad network access, resource pooling, rapid
+elasticity, and measured service; three service models: Infrastructure as a Service (IaaS), Platform as a Service
+(PaaS), and Software as a Service (SaaS); and four deployment models: community cloud, private cloud, public
+cloud, and hybrid cloud2 (Figure 7.5).
+Figure 7.5 The NIST Cloud Computing Model is composed of five essential characteristics, three service models, and four
+deployment models. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Cloud computing infrastructure is based on a physical environment that uses virtualization technology to
+expand the capabilities of the physical equipment. Virtualization offers the cloud environment scalability,
+which is the ability of the resource to be scaled up or down with minimal effort, as well as flexibility, access to
+system resources, and a cost factor based on services that are contracted. The process of virtualization
+requires a platform to operate the virtual infrastructure, another platform that creates the virtual
+environment, and a service to manage the virtualized resources.
+There are many server virtualization software companies, such as VMware, Microsoft, SUSE Linux, and Citrix.
+Each server virtualization software package offers different features (such as resource allocation, high
+availability, and centralized management) based on the cloud environment that is to be created according to
+the cloud consumer’s needs.
+1
+NIST Cloud Computing Standards Roadmap Working Group, “The NIST Definition of Cloud Computing,” in NIST Cloud Computing
+Standards Roadmap, NIST Special Publication 500-291, Version 2, National Institute of Standards and Technology, July 2013,
+https://www.nist.gov/system/files/documents/itl/cloud/NIST_SP-500-291_Version-2_2013_June18_FINAL.pdf, 2.
+2
+NIST Cloud Computing Standards Roadmap Working Group, “The NIST Definition of Cloud Computing,” in NIST Cloud Computing
+Standards Roadmap, NIST Special Publication 500-291, Version 2, National Institute of Standards and Technology, July 2013,
+https://www.nist.gov/system/files/documents/itl/cloud/NIST_SP-500-291_Version-2_2013_June18_FINAL.pdf.
+7.1 • Fundamentals of Cloud Computing
+259
+
+FUTURE TECHNOLOGY
+Cloud Computing and Generative AI
+Cloud computing has a solid place in the computing world, which has led to new applications for hybrid
+clouds, multicloud environments, and now, generative AI. Cloud providers can integrate generative AI into
+their platforms, providing AI-as-a-Service and thereby making it more accessible and usable for
+organizations. Having generative AI as part of a cloud provider’s platform allows an organization the
+flexibility to use it in many different applications, such as content creation, data analysis, and more. Cloud
+infrastructure will continue to scale and optimize to support the massive computational demands of
+training and running generative AI models, allowing businesses to focus on leveraging generative AI
+without worrying about underlying technical details. Further, the accessibility of generative AI in cloud
+computing can help promote innovation, especially in fields that previously may not have had access to the
+technology. The future of cloud computing and generative AI is a dynamic, evolving landscape that
+promises to revolutionize industries, increase accessibility, and drive innovation. With advancements in
+scalability, cost-efficiency, AI ethics, and automation, cloud environments will continue to serve as the
+foundation for generative AI technologies, making it easier and more powerful for organizations to
+leverage AI in creative and transformative ways.
+The Role of Information Systems Professionals in Cloud Computing
+The cloud network infrastructure has evolved from the traditional physical network to software-defined
+networks. A software-defined network (SDN) is a network that uses software for traffic management in
+programmable controllers and interfaces. The evolution to SDNs means that the roles and specialties of IS
+professionals have also evolved. Network engineering, systems administration, and cybersecurity are a few of
+the important specialties involved in cloud computing. A network engineer is the person with the skill to
+design, implement, and manage a network in support of an organization’s mission. They will need to
+understand not only networking principles but also virtualization, coding languages (such as Java, JavaScript,
+and Python), and server administration. The system administrator is the person who manages and maintains
+the IT and IS resources for an organization. They will need to handle server administration, and they will also
+have to know the different operating systems and the virtualization system management interfaces. An
+operating system (OS) is the software installed on a computer system, such as Windows, Linux, or Unix, that
+manages the resources. The system administrator will need to be proficient in server virtualization software,
+coding languages, and platform-specific applications.
+A cybersecurity specialist is a person who identifies and develops security strategies, verifies needed security
+improvements, and implements security strategies for an organization. This position needs a person who can
+recognize the possible risks that an organization might encounter. People pursuing cybersecurity need to
+understand cyber threats, and they will also need to know networking, system operations, physical security,
+and information security. According to the U.S. Bureau of Labor Statistics, cybersecurity positions should grow
+33 percent between 2023 and 2033.3
+CAREERS IN IS
+Cloud Computing Employment
+There are many career opportunities in the field of cloud computing. The types of jobs that are available
+range from network engineers, who manage networks, to software developers, who maintain IS and IT
+3
+Bureau of Labor Statistics, “Information Security Analysts,” Occupational Outlook Handbook, U.S. Department of Labor, last
+modified August 29, 2024, https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm
+260
+7 • Cloud Computing and Managing the Cloud Infrastructure
+Access for free at openstax.org
+
+resources, to cybersecurity specialists, who develop security strategies. Individual employers have different
+requirements for the type of IS personnel they need, so even after choosing a specialty and earning a
+degree, you may need additional education, certifications, or experience. Certification requirements may
+include those related to specific software or hardware manufacturers. Because of the nature of the
+specialties in the field of cloud computing, it is important to research employers’ requirements to ensure
+you have the qualifications they are seeking.
+Case Study: Using the Cloud to Prepare for a Natural Disaster
+When dealing with IT resources, anything can change how a company does business. Consider the city of
+Houston, Texas, which must be prepared for a natural disaster, such as a hurricane. As a result of hurricanes
+that have affected Texas in the past, the state government has had to shut down, and employees have had to
+relocate. In such a scenario, the concern becomes how to serve the citizens of Texas who depend on the state
+for their benefits. With employees and clients relocated, it becomes more complicated for the state to provide
+services with locally maintained databases and client information. The state can take a wait-and-see approach
+and delay services until the data centers become operational again. Another option might be for the state to
+acquire new IT resources and set up new data centers in an area less prone to hurricanes, which takes time,
+funds, personnel, and additional facilities. A third option might be for the state to transition to a cloud-based
+environment, which will take time to develop, implement, and roll out. The time constraints and cost factors
+for the third option are significantly less, and the need for a facility is nullified. The state government will need
+to evaluate and justify each option, based on the criticality of the state’s operational needs and the needs of
+the clients.
+All three scenarios meet the organization’s needs, so the justification process will involve the availability of
+funds, personnel, and facilities. A major portion of the justification will be to consider the time frame the
+organization needs to return to an operational status. With a wait-and-see approach, there is no planning for
+how long it will take to return to normal operations. The time frame needed for an on-premise resource
+environment to return to normal operations is based on the availability of the needed resources, delivery
+timelines, qualified personnel, and facilities. The time frame needed for a cloud-based resource environment
+to return to normal operations is usually shorter and may be days instead of weeks or months. The funds
+needed for an on-premise environment are usually greater than those of the cloud-based environment, and
+depending on the funding structure of the organizations, a lower-cost solution may be approved without
+major effort.
+With the introduction of cloud-based resources, organizations now have a new component to add to their tools
+for IS operations. The concept of IS operations requires an organization to make allowances and plans for
+downtime scenarios. One course of action is business continuity, which is a plan that an organization puts in
+place to maintain its operational status in an emergency scenario. The plan requires the company to inventory
+its IS resources, validate the requirements for its users, and develop a plan to address the needs should an
+outage occur. The plan would provide details for how the outage is to be handled, who is involved to assist in
+the outage, and what steps should be taken to restore services.
+The other course of action is plans for disaster recovery, the process an organization follows to reestablish
+operational status after an incident causes a system failure. This plan is more detailed than the business
+continuity plan, yet it uses some of the same information as the business continuity plan. The difference
+between the two plans is that the disaster recovery plan takes into account a system failure that prevents
+operations at a large scale. For example, a network outage would fall under business continuity, whereas the
+crash of a database server could be classified as disaster recovery if there is not a backup database server.
+The cloud-based environment offers companies additional options for doing business on a regular basis and in
+an emergency transition scenario. It provides the organization with a methodology for designing new
+7.1 • Fundamentals of Cloud Computing
+261
+
+resources, implementing new resources, or even creating a resource environment to use in business continuity
+and disaster recovery that includes business impact analysis and incident handling processes.
+7.2 Cloud Computing Services, Pricing, and Deployment Models
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Discuss how cloud services are delivered and priced
+•
+Identify major cloud service providers and their delivery models
+Delivery models that service providers use to support the cloud consumer vary based on the needs of the
+cloud consumer. Advances in technology and the growth of the cloud environment have led to the
+development of new service models. Each evolution in technology offers advancements in service deliverables
+that the cloud provider can offer cloud consumers. Today’s cloud environment is much different from the
+earliest version when operations began to move to the cloud.
+Cloud consumers now have many options for choosing a hosting platform when pursuing a move,
+transformation, or implementation of a cloud platform for their organization. The cost for the platform is one
+of the factors that an organization will consider when determining whether the cloud solution is the
+technology the organization needs to gain a competitive advantage. Each organization has different
+technology requirements, and the cloud provides an opportunity for the organizations to challenge
+themselves to move with innovation.
+Deployment and Pricing of Cloud Services
+Cloud services are provided using a delivery model, which includes the resources offered by the cloud
+provider, and a deployment model, which includes the location, the method, and the entity responsible for
+controlling the infrastructure. The primary delivery models are broken down into Infrastructure as a Service,
+Platform as a Service, and Software as a Service. The Infrastructure as a Service (IaaS) model involves the
+provision of infrastructure resources, such as networking and storage. The Platform as a Service (PaaS)
+model manages the software and hardware resources for the purpose of development. Software as a Service
+(SaaS) is the delivery of applications in the cloud. Each of the delivery models has a specific function when it
+comes to building cloud services, but they are all subscription-based processes of delivering infrastructure,
+network, and applications, which is why they are all considered “as a Service.” All three delivery models are
+scalable up or down, and are available on-demand to the cloud consumer. The delivery models are built on top
+of each other in a layered approach to building the cloud environment. The other factors in a cloud
+environment that are customizable for cloud consumers are the specifications, such as processing power, RAM,
+storage, and applications.
+Infrastructure as a Service is the first level of the cloud environment that must be designed based on the
+requirements of the cloud consumer. This service can include, but is not limited to, raw IT resources, such as
+compute resources, which include the specific operating systems, the hardware components, and the network
+systems, such as connectivity. The functionality of the IaaS environment provides the needed control over the
+cloud structure while also providing the cloud consumer the ability to configure and utilize the IaaS
+functionality to its fullest. The IaaS environment consists of the virtual server, which is leased through the
+cloud provider based on memory, the CPU, and storage.
+Platform as a Service is typically the second level of the cloud environment and is built in relation to the IaaS
+component. This service is a preconfigured environment that supports a cloud consumer’s operational needs.
+The PaaS delivery model can be as simple as file services, such as storage of data files on a file server, or as
+complex as database services with business intelligence used for business analysis. This portion of the delivery
+model requires the cloud consumer to identify specific tasks that are associated with their operational
+requirements, such as extending an existing on-premise resource by creating a secondary backup system in
+262
+7 • Cloud Computing and Managing the Cloud Infrastructure
+Access for free at openstax.org
+
+the cloud, or replacing an existing IS. The PaaS offers the cloud consumer the opportunity to configure the
+prebuilt environments and removes some of the complexity involved in configuring an IaaS environment with
+a bare metal server, which is a physical server deployed for a single customer that provides the customer full
+access to the server resources.
+Software as a Service offers a wide range of available products to cloud consumers, which embodies the
+essence of cloud computing: to make as many services as possible available to as many consumers as
+possible. A wide range of products exist in the cloud computing environment. Depending on the product,
+cloud providers can offer leases for the use of different services on different terms based on the needs of the
+cloud consumer. Figure 7.6 shows all three levels of delivery models.
+Figure 7.6 The base level of the cloud environment is IaaS, the second is PaaS, and the top is SaaS. Each level stacks on the one
+below it so that they work together to form the foundation and ultimately enable the cloud consumer to build, develop, and deploy
+the software applications they need to operate. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+As the availability of newer technologies has grown and evolved (processors with more cores, faster GPUs),
+cloud providers have gained access to many new offerings. These offerings have changed the possibilities for
+the cloud consumer when it comes to adding their cloud environment. Some of these new offerings are
+Database as a Service (DBaaS), which is a service that gives cloud consumers the ability to manage and
+maintain relational and nonrelational databases; Communication as a Service (CaaS), which is a service that
+allows for the cloud-based delivery of services such as Voice over Internet Protocol, videoconferencing, and
+internet-based telecommunication services; and Testing as a Service (TaaS), which is a service that cloud
+providers have built to outsource testing of software, applications, and other components that would normally
+be performed within the organization.
+Each of the delivery models has components that are subject to a contract requirement that is supported with
+a service-level agreement (SLA), a document that outlines the levels of service that a cloud provider assures
+the cloud consumer they will receive. The SLA is used as a point of reference for the daily operation of a cloud
+consumer’s environment. Each cloud provider has a monitoring tool in place to determine the level of service
+provided, and there are often penalties listed in the SLA that can apply if the cloud provider fails to meet the
+required levels of service.
+The cloud provider will establish the usage parameters in the contract for billing purposes. The usage
+parameters are needed to determine the cost of the cloud-based services. The services range in cost based on
+the usage by the cloud consumer as they pertain to the infrastructure, platform, and software requirements. A
+usage charge is usually calculated per hour based on the service, and the cloud consumer will incur additional
+charges if the usage level is exceeded. An example of this would be a per-hour charge for the service with a set
+number of transactions. Once the number of transactions is reached, there will be an additional transaction
+charge, which may be per transaction or may be a tiered amount for a certain number of additional
+transactions.
+7.2 • Cloud Computing Services, Pricing, and Deployment Models
+263
+
+Each service that is offered has a predetermined rate, which is calculated based on the cloud consumer’s
+location. The rates are charged on a 24/7 basis as outlined in the cloud consumer’s contract. The rates may
+change based on the locations of the cloud-based environment and which location or locations the consumer
+uses. For example, the IaaS may be located in San Antonio, Texas, and the PaaS is located in Seattle,
+Washington, and the SaaS is located in Boston, Massachusetts. Cloud-based services may also be located
+globally, so the cloud consumer can use all the U.S.-based sites for their basic delivery models and have their
+backup run to Singapore.
+There are four major cloud deployment models: community cloud, an infrastructure shared by multiple
+organizations with a common interest; private cloud, an infrastructure dedicated to a single organization;
+public cloud, an infrastructure that provides services in an on-demand environment; and hybrid cloud, a
+combination of the public and private models that can be combined with on-premise infrastructure. Each of
+the models is deployed based on the access needs, who is to be the owner of the environment, and the size of
+the environment.
+A community cloud environment is one that is owned by a specific community or a cloud provider that is
+offering services to that community (Figure 7.7). Access to the community cloud is limited to the community
+that built and manages the cloud environment, such as a university with multiple campuses or a firm with
+multiple office locations. Membership is granted to those outside the community at the discretion of the
+community, and access is controlled by the community. Since community clouds are shared by organizations in
+the same industry, those that do business in a certain sector, such as education, must adhere to certain sector-
+specific regulations for their entire cloud.
+Figure 7.7 The structure of a community cloud is dependent on the requirements of the community of organizations that establish
+the cloud-based environment. The organizer of the community is the authority of the systems used in the cloud. (credit: modification
+of work from Introduction to Computer Science. attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+A public cloud environment is designed by a provider that wants to offer services to consumers (Figure 7.8).
+Based on the provisioning of the cloud environment, the cloud provider can offer access at a cost to
+consumers or as a service through other avenues, such as a search engine offering an analytics service to
+cloud consumers who want to leverage their offering. Google Cloud’s search engine is an example of a public
+264
+7 • Cloud Computing and Managing the Cloud Infrastructure
+Access for free at openstax.org
+
+cloud. It is open access, but users can access additional features by signing in. The cloud provider that
+develops the public cloud environment is responsible for ongoing maintenance, operations, customer support,
+and availability. Depending on the offering, the provider will design and implement an architecture to support
+the consumer’s needs.
+Figure 7.8 Cloud-based environments are available to individuals and business users and can be accessed in the public cloud. Access
+to the cloud-based environment is dependent on the policies that are imposed by individual providers. (credit: modification of work
+from Introduction to Computer Science. attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+GLOBAL CONNECTIONS
+Global Use of Search Engines
+The public cloud provides access to information throughout the world. Each public cloud provider has
+domain locations that allow for global access. For example, Google hosts its own search engines in its cloud
+infrastructure. Because the company is based in the United States, the domain name for the Google search
+engine is google.com, but when users access Google in another country, the domain name has a country
+code appended to it. For example, in Mexico, the domain is google.com.mx. Using country-specific domains
+allows Google to tailor the search engine to adhere to laws and regulations in that country and to offer
+results in the country’s language or languages, while ensuring all of their global users have access to a
+similar search engine.
+A private cloud environment is designed by an organization based on its need for its own cloud environment
+(Figure 7.9). The private cloud provides access to resources that can be used and previsioned by the level,
+locations, and needs of the different parts of the organization. Whether its IS resources are internal or
+external, the management of the private cloud is the responsibility of the organization. What distinguishes this
+cloud environment is that the organization is both the provider and consumer of the environment.
+7.2 • Cloud Computing Services, Pricing, and Deployment Models
+265
+
+Figure 7.9 A private cloud-based environment incorporates a cloud-based database service. The purpose of the environment
+determines the configuration of the services and information technology resources that are built into the cloud-based environment.
+Private cloud environments are built to a specific cloud customer, and only that cloud customer has access to the environment.
+(credit: modification of work from Introduction to Computer Science. attribution: Copyright Rice University, OpenStax, under CC BY
+4.0 license)
+Hybrid cloud environments are designed through the use of several deployment models (Figure 7.10). The
+most common hybrid cloud environment combines the deployment of a private cloud with controlled access
+with a public cloud without access requirements. This provides the organization with one environment for
+sensitive or confidential information and one for general use. The hybrid cloud can be a challenge to create
+because it requires the integration of two independent environments, which can be a website in the public
+cloud and a database service in the private cloud, that may be spread across different cloud providers.
+Figure 7.10 Depending on the requirements of the cloud consumer, the cloud-based environment can be a combination of private
+and public. The hybrid cloud can also combine an on-premise and cloud-based environment. (credit: modification of work from
+Introduction to Computer Science. attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+266
+7 • Cloud Computing and Managing the Cloud Infrastructure
+Access for free at openstax.org
+
+When a cloud consumer is determining the value of employing a cloud environment, there are several factors
+they must consider, such as cost, services, and networking. The cost factors will require the involvement of
+senior management and finance because the organization will need to determine the different types of cloud
+environments, the different requirements of the environments, the level of support needed internally and
+externally, and the differences between the cloud provider’s offerings.
+An organization may choose a hybrid cloud environment so that it can control access to its information based
+on customer profiles. For example, if a retailer sells TVs, it might list models that are priced similarly to its
+competitors on its public website as part of the public portion of its hybrid cloud. The retailer might not
+advertise some other models that are at a special price that is only accessible to customers after they sign in to
+the private portion of the hybrid cloud. Similarly, a company may have a public site for direct sales to
+consumers, and a private site for retail merchants purchasing their goods wholesale.
+LINK TO LEARNING
+Hybrid cloud environments can be especially beneficial for organizations that have sensitive data and also
+want to increase sales to their customers. Read this article describing the ways banks can leverage AI and
+machine learning in a hybrid cloud (https://openstax.org/r/109AIHybridCld) to improve fraud detection and
+customer experience overall, while protecting their sensitive data and adhering to industry regulations.
+Organizations will need to determine the need to move to a cloud-based environment or maintain an on-
+premise IT environment by conducting a feasibility study. This study should include but is not limited to
+considering up-front and ongoing costs as well as capital expenditures. An up-front cost is one that must be
+expended for services before delivery. Up-front costs are analyzed for both the on-premise and cloud
+environments, as they pertain to startup, hardware, integration, and implementation, among other expenses.
+An ongoing cost is one that must be expended for day-to-day operations. Ongoing costs are associated with
+software licensing, hardware maintenance, utilities, and labor. A capital expenditure is the cost for the
+acquisition of assets. Capital expenditures are those funds that are used to acquire value for the organization.
+Each organization sets the number of purchases to determine as such. Since each IT environment and cloud
+environment varies, the total cost of ownership, which is the investment in a product for the lifetime of the
+product, and the return on investment (ROI), which is a metric that determines the value of an investment,
+will vary because of the differences in the cloud-based environment developed by the cloud consumer.
+Major Cloud Service Providers and Their Delivery Models
+The growth of cloud environments has been spurred by consumers wanting access to services that could
+provide more connections, such as a mobile app that searches the local eateries and then gives them access to
+the restaurant’s menu. Organizations such as Amazon, Google, and Microsoft started small and have
+developed their own cloud-based environments that have changed the way organizations do business, moved
+the e-commerce space forward in time, and provided access to the world around us.
+Amazon Web Services grew out of an internal need for Amazon to have the IT resources to manage and
+maintain its own IS environment. Amazon has taken its proprietary technology and grown the company into a
+cloud provider that offers services for other organizations to use so that they do not need to manage or
+maintain any on-premise systems. Amazon Web Services provides services such as computing, network
+service, databases, and storage; computing tools for organizations for analytics and machine learning; and
+services to help organizations with security, identity protection, and compliance.
+Google evolved from a search engine to another cloud provider. Just like AWS, Google provides computing,
+storage, database, and networking services. Google Cloud provides its consumers with operations,
+development, and analytics tools. Google has also developed AI to simulate human intelligence and has
+created solutions using generative AI offerings. Google’s offerings are built around its own cloud environment.
+7.2 • Cloud Computing Services, Pricing, and Deployment Models
+267
+
+Just like AWS and Google, Microsoft Azure offers computing, databases, networking, and storage. Microsoft
+Azure made progress in the AI realm with services that combine it with other technology. Each offering by
+Microsoft Azure is built on Microsoft’s foundation.
+Amazon Web Services, Google, and Microsoft Azure all offer certifications in their respective platforms.
+Amazon Web Services offers multiple certification levels: foundation, professional, associate, and specialty.
+Each of the certificates is knowledge and role based, depending on the goal of the certification. Google offers
+foundational, associate, and professional certifications as well. Google structures its certifications around
+knowledge, fundamental skills, and technical skills. Microsoft also offers certification tracks in other areas of its
+products, such as AI, to support its cloud environment.
+CAREERS IN IS
+What Are Information Systems Certifications?
+When looking at a career in IS, check out certification expectations with companies such as AWS and
+Google. These sites show some of the certifications that the industry often requires for a person to work in
+a cloud-based environment. There are certificates that are offered by the cloud-based providers, such as
+AWS and Google. There are also certifications that are designed around industry-based knowledge, like the
+Cloud+ certification offered by CompTIA. It is common for organizations in the industry to identify specific
+certifications in their job listings so that they can hire people who already have cloud, security, or project
+management certifications. Obtaining certifications appropriate for your preferred role before seeking
+employment can make you a more viable candidate for an open position.
+The big cloud providers such as AWS, Google, and Microsoft offer a wide range of services to cloud consumers.
+However, there are smaller cloud providers that specialize in specific services. These smaller companies offer
+the cloud consumer an alternative to using mainstream providers. For example, DigitalOcean offers
+development environments that are focused on only development, and Wasabi only offers cloud-based
+storage. These specialized services provide more options to the cloud consumer, so they may need to do
+additional research to determine whether their needs are best met by a provider that can offer a variety of
+services or one that specializes in one service.
+Organizations in today’s business environment have to stay competitive in order to continue to grow and
+operate. This is sometimes identified as a competitive advantage, the factor that allows one company to make
+products or offer services more efficiently and effectively than its competitors. One advantage an organization
+might investigate is how it deploys IT resources over its competitors. Information technology resources are a
+cost factor that must be considered when determining the advantage one company might have over another.
+An organization may choose to add to their competitive advantage by moving into a new area of its market
+share, which is the sales that a company has in its industry, usually calculated as a percentage. This move will
+require additional IT resources to support the initiative.
+The organization can follow two courses of action to select their service provider: issue a request for quote,
+which is the process for determining the pricing of IT resources based on the organization’s understanding of
+what is needed, or a request for proposal, which is documentation of the details of a project, including the IT
+resources that might be needed, in order to support the bidding process to get a fair and competitive price.
+Both processes will provide the organization with information about the possible up-front cost to start the
+project and the ongoing cost of maintenance for the IT resources.
+The benefit of going through the bidding process is that it will help the organization identify the capital
+expenditures that are needed to accomplish the project. This step is needed to determine if sufficient funds
+are available. The next step, confirming the total cost of ownership of the IT resources, is needed to validate
+268
+7 • Cloud Computing and Managing the Cloud Infrastructure
+Access for free at openstax.org
+
+the availability of funds in the projected budgets for subsequent fiscal years. Once the total cost of ownership
+is determined, then the organization can evaluate the return on the investment of the IT resources that are
+purchased. The return on investment will influence the total cost of producing a product, entering a market, or
+introducing a new service.
+7.3 Cloud Computing Technologies
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Identify the technology components in cloud computing
+•
+Discuss migration strategies and best practices
+•
+Identify cloud-based standards in industry
+The technical components of cloud computing range from advances in networking to the possibilities of
+virtualization. For each aspect of cloud computing technology, there is a component that creates a feature,
+service, or tool that a consumer needs. These components interlock to build the foundation for cloud
+computing.
+When organizations choose to migrate their systems, data, and services to the cloud, they should identify and
+follow best practices. Each organization will develop its own best practices based on trial and error, lessons
+learned, and the plans that other organizations have used. Each organization will build its migration strategies
+to accomplish its goal, which is to have a successful transformation to the cloud.
+As part of any transition in service, an organization will need to verify the applicable industry standards and
+regulatory requirements and ensure they adhere to them. There may be international, federal, and state
+regulatory requirements they need to follow.
+Technology Components in Cloud Computing
+Since the development of the cloud environment, there has been specific network architecture needed, such
+as more availability to control the flow of data, how it manages access to the applications, and bandwidth
+capabilities. Traditional network architectures did not meet these requirements, which led to the development
+of SDNs. The SDNs changed the way networking components worked and handled traffic, and they opened
+new methods of controlling the network architecture. The SDNs move from the proprietary software and
+configurations of network equipment manufacturers to develop a mechanism to enable control at specific
+levels of the network architecture. The other aspect of SDNs is their ability to virtualize the network
+infrastructure, enabling the network manager to control the network infrastructure from the SDN controller
+(Figure 7.11). The SDN controller provides centralized management of the network environment, the
+application layer manages the applications and provides information to the SDN controller regarding the
+needs of the applications, and the infrastructure layer is the layer where the physical network hardware
+resides.
+7.3 • Cloud Computing Technologies
+269
+
+Figure 7.11 The components of a software-designed network (SDN) are broken into three layers: application, controller, and
+infrastructure. Each layer has its function within the SDN structure. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0
+license; credit "Routers": modification of work "Router (16624) - The Noun Project" by Christopher Pond/Wikimedia Commons, CC0
+1.0)
+Advances in virtualization have changed the realm of network storage. Virtualization has enabled network
+storage to be expanded, meaning that cloud consumers can access more storage. It has also offered more
+options for developing customized storage solutions for customers.
+Today, there are cloud computing providers that specialize in storage only. They have taken the storage-area
+network (SAN), which is a network that provides high-speed connectivity to a storage environment, and
+introduced virtualization to it and expanded the storage capabilities (Figure 7.12). Changing the traditional SAN
+into a virtualized environment creates a pool of virtual servers that can now be used as a cloud storage
+environment. This virtualization of SAN has also changed the requirement for a large amount of physical
+storage, thus changing the cost factor for both the cloud provider and the cloud consumer.
+With every change comes challenges, such as the introduction of broadband networks, which provided cloud
+providers with needed bandwidth but also created greater security concerns. Increasing throughput and
+network capacity along with the increased bandwidth means an increase in the need for security tools for
+cloud providers and their consumers. The cloud consumer expects to be able to trust that the cloud provider
+has the necessary security tools in place to protect their data at the same time they provide availability to the
+data.
+Figure 7.12 The first component to virtualize a server is a physical server. The next is a virtualization interface tool to inventory the
+resources of the physical server and allocate them into the virtual server environment. Once the tool is implemented, the virtual
+server environment can be built out. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+270
+7 • Cloud Computing and Managing the Cloud Infrastructure
+Access for free at openstax.org
+
+LINK TO LEARNING
+The use of virtualization tools in the cloud environment is a necessity—especially in the area of server
+virtualization—as a way to increase the performance, availability, and reliability of a cloud service. Read this
+article about the specific placement of the virtual machine in the cloud system (https://openstax.org/r/
+109VirtMachPlc) to understand how researchers determined that placement can affect efficiency.
+Migration Strategies and Best Practices
+When an organization evaluates the possibility of migrating (moving) their systems, data, and infrastructure to
+a cloud-based environment, they must determine their migration strategy, which is the plan an organization
+will follow to move to the cloud. This migration must be laid out in a manner that upholds the organization’s
+business strategies. Some best practices that an organization might consider for migration are the following:
+1.
+Identify the goals and objectives of the organization. This process will help the organization better
+understand its need for a cloud-based environment and what advantage the environment will offer the
+organization.
+2.
+Evaluate cloud providers to select the one that maximizes the business’s strategies. The evaluation process
+is a step that will identify the advantages and disadvantages of each of the cloud providers considered for
+the transition to the cloud.
+3.
+Design a plan for the migration. This process will require the involvement of the different departments in
+the organization. The final plan should be assessed to ensure it adheres to IT governance.
+4.
+Implement a methodology for communication about the migration. This step is needed to create the
+procedures for communicating the progress of the migration to the different departments in the
+organization.
+5.
+Develop a test plan for the migration, and conduct a practice run. The migration process should have a
+test environment in the plan to validate the data migration tool, which is a software-based tool that is
+designed to move data from one data repository to another, and the ability to migrate into the cloud-
+based environment. The practice run will prove or disprove the ability to migrate into the cloud.
+6.
+Conduct the migration. During this step, the migration process moves forward, and the systems are
+moved to the cloud-based environment.
+7.
+Employ a specialist for the migration on the new platform. This aspect of the migration may be covered by
+the cloud provider, or the organization migrating will have personnel to accomplish the process.
+To select the migration tool to be used during the process, it is necessary to have chosen a cloud provider. Each
+cloud provider will have migration tools specific to their systems and specialists trained in them. Part of the
+practice run process will include testing the migration tools that the cloud provider uses, based on the amount
+of data to be transferred, the type of data to be transferred, and network constraints.
+Another point in the migration plan is the funding of the project. This funding will require management
+support and the financial resources of the organization. In most migrations, the cloud provider offers an
+estimate for the cost of the process. This is only an estimate because there are variables that may change
+during the process. One such variable is the actual amount of data that are migrated because the volume will
+change between the time the migration plan is developed and when the process starts.
+One process that an organization should require is compliance with the CIA triad (refer to Figure 5.2). Security
+in the migration process is a priority when selecting the cloud provider. There are many security standards that
+should be followed in the handling of data, such as the General Data Protection Regulation (GDPR) and
+Payment Card Industry Data Security Standard, which are discussed in Chapter 6 Enterprise Security, Data
+Privacy, and Risk Management. These security standards are dictated by international standards, federal
+regulations, and even state statutes. Security processes should then be laid out with the cloud provider to
+7.3 • Cloud Computing Technologies
+271
+
+determine what type of identity and access management, network security, and data encryption the cloud
+consumer will require. This service will have to be accounted for in the estimate to fund the migration.
+Cloud-Based Standards in Industry
+When designing cloud-based solutions for an organization, the organization will need to research the cloud
+providers, the services available, the service levels required, contractual obligations, and even arbitration
+policies. After performing this due diligence, the organization will need to select and implement an
+international, federal, or state standard for the design process. One standard is the NIST Cloud Computing
+Reference Architecture, which is a federal standard that can provide direction for an organization in the
+selection process, industry definitions, and components of a cloud architecture. The NIST document will be
+informative and resourceful for an organization that is considering a cloud environment for the first time.
+Some cloud providers have frameworks in place to help organizations migrate into their cloud environment.
+The framework provides guidance, tools, and processes to migrate into the new platform, accounting for
+operations, performance, security, and cost.
+When reviewing industry standards for cloud-based computing, organizations will need to continuously
+reference the different cloud service models, cloud deployment models, and cloud security standards that
+each provider offers. One such model is Security as a Service (SECaaS), a cybersecurity service that a cloud
+provider offers to protect cloud consumers. It can be implemented across community, public, private, and
+hybrid cloud deployment models. Another model is Firewall as a Service (FWaaS), which is a cybersecurity
+service that a cloud provider offers to protect the perimeter of a company’s network.
+Figure 7.13 The three main parts of the cloud provider infrastructure are SaaS, PaaS, and IaaS. The SECaaS is a component of the
+SaaS infrastructure. The DBaaS is a component of the PaaS infrastructure. The FWaaS is a component of the IaaS infrastructure.
+(attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+One decision that an organization needs to make is the security standards to follow. The NIST Cybersecurity
+Framework, which, as you learned in 5.3 Information Security and Risk Management Strategies, is a federal
+272
+7 • Cloud Computing and Managing the Cloud Infrastructure
+Access for free at openstax.org
+
+standard that works in any computing environment. The framework provides guidance in the following areas
+(Figure 7.14):
+•
+identifying, determining what in the organization needs to be protected;
+•
+protecting, putting safeguards in place to build a structure for the protection of assets;
+•
+detecting, implementing tools needed to identify cybersecurity threats;
+•
+responding, implementing a strategy for the containment of any cybersecurity incidents; and
+•
+recovering, restoring any system to operational status after a cybersecurity occurrence.
+Figure 7.14 Each component of the NIST Cybersecurity Framework has a specific function in the cybersecurity framework.
+Organizations can create their own functions for each of the components. (credit: modification of work from Introduction to
+Computer Science. attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+The NIST Cybersecurity Framework provides a foundation for an organization to develop a cybersecurity
+program. It can be used in the development of policies for cybersecurity, risk management, business
+continuity, and disaster recovery plans.
+FUTURE TECHNOLOGY
+Cybersecurity Issues in Artificial Intelligence Use in Cloud Computing
+Consider the future of cybersecurity as it pertains to cloud computing and then add a tool like AI. The use of
+AI in cybersecurity can greatly enhance the methodology used to identify potential threats to the cloud
+environment. The full extent of the opportunities that AI can add to the tools cybersecurity specialists use is
+unknown at this time, yet it can play a role in the defense of data. In fact, the Cybersecurity and
+Infrastructure Security Agency (CISA) has published its “Roadmap for Artificial Intelligence” to demonstrate
+how the U.S. cyber defense agency believes they can use AI responsibly to enhance and protect critical
+infrastructure.4 The future of cybersecurity involves AI, so it is important to learn how to use it responsibly
+to protect and secure data. Reading about how CISA is using AI in cybersecurity can provide a foundation
+for this knowledge.
+Case Study: Migrating to the Cloud
+A company wants to restructure its IT resources and has determined that the cloud meets its requirements. It
+has compared the use of a cloud-based environment to the goals and objectives of the organization and
+concluded that the cloud-based environment will offer a competitive advantage in the organization’s industry.
+This restructuring will require the migration of the company’s systems to the cloud.
+The organization will have project managers work with IT to develop a migration plan and submit it for
+approval for those specializing in IT governance. The plan will require that IT provide resources to configure
+4
+Cybersecurity and Infrastructure Security Agency, “Artificial Intelligence,” U.S. Department of Homeland Security, accessed January
+20, 2025, https://www.cisa.gov/ai
+7.3 • Cloud Computing Technologies
+273
+
+the migration tool needed to move to this cloud provider’s environment. The plan is laid out as follows:
+1.
+Identify all assets to be migrated to the cloud.
+2.
+Identify all licensing associated with the software currently used.
+3.
+Meet with the cloud provider to determine which licensing will transfer or if licensing is provided in the
+contract.
+4.
+Establish a test environment in the cloud.
+5.
+Decide on the migration tool to be used and develop the migration application.
+6.
+Test the migration tool in a practice run.
+7.
+Review the information from the practice run to determine if the migration will be successful.
+8.
+Establish a migration date and communicate it across the organization.
+9.
+Conduct the migration.
+10.
+Test and validate the migration.
+11.
+Conduct a follow-up to the migration and create a lessons-learned document.
+This is a simple outline of a process an organization might follow to migrate to the cloud. Each migration is
+different and has requirements that will vary depending on factors associated with the organization and the
+cloud provider.
+7.4 Cloud-Based Industry Applications
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Identify the types and categories of applications in the cloud
+•
+Determine when an enterprise application would be migrated to the cloud
+Cloud-based applications can vary based on the industry and the needs of an organization. Examples of
+categories of applications include analytics, development, and e-commerce. One solution is a commercial off-
+the-shelf application, which is commercially produced software or hardware that is available for sale and is
+ready to install and use without customization. Another solution is a home-grown application, which is
+software that is developed for an organization in-house, based on the development requirements of the
+organization.
+Types and Categories of Applications in the Cloud
+Organizations are now challenged to look at their cost as it pertains to the different applications they use to
+operate in the market space. These applications carry maintenance and licensure costs. Each application will
+eventually need to be updated or replaced due to the software manufacturer’s requirements. Replacement of
+the application is defined by the application itself and the number of seats allowed in the terms of the license.
+Organizations are now turning to cloud-based applications to replace their current applications. These
+applications are hosted in the cloud versus a physical on-premise environment. The application is leased based
+on the same criteria, such as number of seats and volume of data, which are comparable to the purchase of
+the application. The difference is that instead of owning the application outright, the organization leases the
+privilege to use the application.
+Companies like SAP, Oracle, and Workday offer cloud-based enterprise resource planning (ERP), which is a
+system that is used to manage the operations of an organization for customers that want to combine multiple
+organizational platforms into one. Figure 7.15 illustrates examples of platforms that can be combined into an
+ERP. The platforms are modular and can be configured to incorporate financial, supply chain, analytics, and
+other needs. The system gathers data and stores the data in a data warehouse where the data can be
+managed. The combination of systems can handle the analytics that organizations use in the decision-making
+process. Because the ERP system is customizable, the manufacturers build the systems according to each
+274
+7 • Cloud Computing and Managing the Cloud Infrastructure
+Access for free at openstax.org
+
+customer’s requirements.
+Figure 7.15 Enterprise resource planning (ERP) can include numerous possible components, as it is built to the customer’s
+requirements. (credit: modification of work from Introduction to Computer Science. attribution: Copyright Rice University, OpenStax,
+under CC BY 4.0 license)
+Companies such as Salesforce, HubSpot, and Zoho have a cloud-based customer relationship management
+(CRM) application, which organizations can use to manage customer interactions and leads, and perform
+analytics. A CRM is used to determine the return on the organization’s sales force investments in the customer
+base and uses a data warehouse for accumulating the data for analytics purposes. Figure 7.16 shows an
+example of a CRM. A CRM is a modular platform and is fully customizable based on the customer’s
+requirements.
+Figure 7.16 There are several possible components of a customer relationship management system (CRM). Each CRM is designed
+and implemented based on the customer requirements. The modules provide information for the system and the decision-making
+process. (credit: modification of work from Introduction to Computer Science. attribution: Copyright Rice University, OpenStax, under
+CC BY 4.0 license)
+7.4 • Cloud-Based Industry Applications
+275
+
+Companies such as Infor, Oracle, and SAP offer cloud-based supply chain management systems. A supply
+chain management (SCM) system optimizes an organization's production and distribution of goods and
+services. The SCM has upper-level components, such as logistics, management, and profit. Like other
+solutions, these components are also customizable. For example, logistics will have functions such as
+managing inbound and outbound logistics. Each SCM is designed based on customer requirements and
+specifications. Figure 7.17 shows an example.
+Figure 7.17 The primary levels of the CRM components are customizable to provide functionality, such as this example of a supply
+chain management system. The CRM system is fully customizable; therefore, other components are available. (credit: modification of
+work from Introduction to Computer Science. attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Companies such as Workday, BambooHR, and ADP offer cloud-based human resources (HR) systems. This type
+of system can be used for employee relations, performance evaluations, payroll, and benefits. This system
+operates a data warehouse that stores the data files for use in the analytics process. The components of the
+HR system are customizable, such as the application programming interface or the choice of the database
+system (such as Microsoft SQL or Oracle).
+Each organization should evaluate their processes to determine which system meets the requirements of the
+operation. These requirements vary from organization to organization, which is the justification for the
+manufacturers constructing the systems in a modular layout. The organization will determine the functionality
+of the system by providing the manufacturer with details of its operation, and the outputs of each section of
+the organization, that need to be covered by the system.
+The other aspect of these cloud-based systems is that one system covers all the functionalities of the others.
+The ERP system has modules for HR, CRM, and SCM built into its operational parameters.
+Migrating an Enterprise Application to the Cloud
+When an application, such as Microsoft Office 2016, is no longer supported, organizations will need to
+consider their next steps. These steps can be to replace the application with a different on-premise application
+or migrate their system to the cloud (Figure 7.18). Office 2016 could be replaced with Office 365, which acts like
+276
+7 • Cloud Computing and Managing the Cloud Infrastructure
+Access for free at openstax.org
+
+a cloud service with regular updates instead of an Office suite product that becomes obsolete. This decision
+has many factors, such as the difference in cost between the on-premise product and the cloud-based service.
+Other factors include licensing or system requirements. When the application is a mission-critical platform,
+which is an application or program that will cause a financial burden if there is a loss of service, then
+monitoring and management controls must be included in the migration process. A cloud computing platform
+provides technical support and security in moving applications to the cloud. Cloud computing services also
+offer the infrastructure, storage, and processing power to make a migration relatively easy.
+Figure 7.18 An organization may want to consider several steps before they migrate their data to the cloud. The migration process
+can be automated, yet the order, tools, and steps to be taken will need to be developed for the process. (attribution: Copyright Rice
+University, OpenStax, under CC BY 4.0 license)
+If an organization wants to use cloud-based application development, they must evaluate the tools that are
+available in the automation and optimization of the migration process. These tools can help reduce the cost of
+the migration process because of the reduced human interaction needed in the process. The automation
+process will aid in the data migration process, provided there is minimal configuration of the tools, since
+human interaction is required for configuration, which in turn drives the cost up. Each of the major cloud
+providers, such as AWS, Google, IBM, and Microsoft, have migration tools that are specialized for the cloud-
+based environment.
+CAREERS IN IS
+Automation in Data Migration
+The use of automation tools in the migration of data requires personnel who are fluent in software
+development and proficient in programming languages. The job titles might be Cloud Automation Engineer
+or Senior Software Engineer. The person in this position will not only develop the tools, they will also need
+an understanding of the different environments the automation tool will be used in. This means that the
+professional in the position will need to be fluent in both the physical and virtual cloud-based
+environments.
+7.4 • Cloud-Based Industry Applications
+277
+
+GLOBAL CONNECTIONS
+Software Development in Cloud Computing
+Software development is not a local process anymore; it has moved to a global environment. Software
+development projects are not just handled by one group in an organization. Projects are shared across
+global organizations to expedite the turnaround and use personnel efficiently across the organization.
+Since projects are shared across the global development environment, there are requirements, laws,
+regulations, and standards that vary from country to country that have to be managed. This global
+connection allows for a project to have access to additional capabilities, but it also increases the complexity.
+Case Study: Using the Cloud for Parallel Application Development
+Organizations are often faced with the decision about whether or not to automate. When an organization’s
+applications have reached the end of their life cycle, a decision must be made about what next steps should be
+taken. These decisions have both time constraints and funding needs associated with them. The organization
+will need to prepare for the development of the application, as features will have changed, processes may
+have changed, and the environment that IT operates in may have to change. This is the time in which the
+organization should have project management develop the process for the development of the application.
+Project management can help determine if the development of the application is considered a new project or
+is associated with change management. No matter which direction the organization goes with for the
+development of the application, the process will incorporate the software development life cycle (refer to
+Figure 4.7). The organization will need to prepare for the new application by starting with the software
+development life cycle (SDLC), which, as you have learned, is the process used for the development of software
+and applications (refer to 4.1 Systems Analysis and Design for Application Development). This process can
+include moving the application to a new computing environment, such as the cloud. Needing a new
+application is an opportune time to develop in the cloud. This is also the time to determine if the application
+will operate in a virtual environment.
+The cloud environment offers an organization the opportunity to develop the new application in parallel with
+the old application, thus providing the organization with the ability to identify differences between the two.
+The parallel process offers the development team the chance to work with the end user to make a smooth
+transition. The parallel process allows for testing of features, especially those that might be new, and the
+ability for the end user to interact with the system and assist in verification of the processes.
+7.5 Scientific, Industrial, and Social Implications of Cloud Computing
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Explain the scientific breakthroughs that made cloud computing possible
+•
+Identify the social implications of cloud computing and its impact on data privacy
+•
+Understand cloud-based sustainability
+Cloud computing has made many advances since its inception. These advancements have been associated
+with the introduction of new technology, SDNs, and the growth of the internet. Each advancement has led to
+new opportunities in the cloud market space, which in turn has led to new offerings for cloud consumers and
+moving cloud-based computing into the mainstream of business today. Consider a scenario of vacation
+planning. In the past, people had to use travel agents to plan trips, but now there are many travel applications
+that allow a person to plan their own vacation.
+With the move to the cloud, data privacy has become a relevant and timely topic. Another concern is the
+278
+7 • Cloud Computing and Managing the Cloud Infrastructure
+Access for free at openstax.org
+
+ethical use of data that reside in cloud environments. Further, consider the social impact of the amount of data
+stored in the cloud, which is accessible at any time of day by any device.
+The sustainability of any market space is a question all organizations need to consider. In the market space of
+remote access, cloud-based computing is accessible to most people. It is available from any device without the
+addition of an application, software, or tool. This is a benefit that adds to the sustainability of the cloud.
+Scientific Breakthroughs That Made Cloud Computing Possible
+One of the most important breakthroughs in cloud computing was SDNs, which have changed the way
+network engineers manage traffic by offering scalability, which led to optimization of traffic performance
+through the infrastructure layer’s ability to manage network resources, and the flexibility to design networking
+in a new manner using the functionality of the control layer. In the cloud computing environment, SDNs
+provide better management of network traffic, improve resource management, and give cloud providers tools
+to enhance their security profile. What makes the SDN platform so unique is that it is built on open-source
+software, free software that is available for use and modification without licensing, known as OpenFlow and
+OpenDaylight. There are also SDN platforms using Python-based language for programming.
+Research continues today into possible alternatives to the current open-source software used. There may be
+alternatives because SDN architecture works with virtualization and bare metal platforms that are
+independent of the network equipment manufacturer. This independence offers more capabilities, flexibility,
+and security by not requiring a specific vendor for network equipment, which in turn allows for a layered
+approach to building out the cloud provider’s network infrastructure. SDN architecture communicates across
+the three layers: application, control, and infrastructure (refer to Figure 7.11). The communication is facilitated
+by the API.
+CAREERS IN IS
+Software-Defined Network Cloud Architect
+The state of network engineering has changed with the introduction of SDN. A position as an SDN Cloud
+Architect requires an undergraduate degree and may also require certifications in programming languages,
+cloud architecture, and virtualization. Changes in the network architecture require that the IT professional
+performing the duties is qualified and certified. These positions work with both physical and virtual
+environments, so the IT professional will need knowledge in physical equipment plus an understanding of
+virtualization software and systems.
+Social Implications of Cloud Computing and Its Impact on Data Privacy
+The social implications related to data privacy and security also connect to the ethical guidelines of an
+organization and the personal code of conduct of staff that access the data. In addition, it is important to
+consider the legal implications, jurisdiction issues, and operational requirements, plus national laws, state
+laws, and international standards, such as GDPR, System and Organization Controls, and California Consumer
+Privacy Act, that might control certain types of cloud service operations. Cloud computing systems use data
+marts, data warehouses, data lakes, and big data. A data mart is a data storage location that is a subset of a
+data warehouse. A data warehouse is a data storage location that accumulates data from multiple sources. A
+data lake is a repository used to store structured and unstructured data that are not size dependent. Big data
+is a large data set that is used for analysis. The storage of data by the cloud provider and the use of data by the
+cloud consumer must follow regulations and laws written for the protection and ethical use of the data. These
+regulations and laws are often specific to the industry, such as medical, financial, and educational areas.
+Social implications that impact individuals in society involve use of the stored data. An organization’s analysis
+of the data for decision-making can have positive or negative effects on society. Opening a manufacturing
+7.5 • Scientific, Industrial, and Social Implications of Cloud Computing
+279
+
+plant in an area that has a labor force can be considered a positive effect, whereas its impact on the natural
+resources of the area might be a negative effect. This is where the organization has to determine the impact
+their actions will have on society in that specific region.
+The type of information that is to be produced from the data will dictate the type or tools that will be used to
+extract it. The data from the different storage platforms can be used to discover trends, make predictions for
+future growth in a product, and perform analytics to determine if the organization is growing as planned. The
+manner in which the data is to be interpreted also influences the type of tool used to extract it. There are tools
+that provide numerical information, visualization of the information, and general reporting. All of these factors
+are taken into consideration when selecting the right tool for the decision-making process.
+ETHICS IN IS
+Data Storage
+The storage of data raises ethical concerns for organizations. Data privacy is always in the forefront when
+dealing with stored data because of the possibility of data breaches. The data that an organization stores
+are a target for potential hackers. It is required that organizations implement strong encryption practices,
+such as using algorithms like AES-256 and implementing end-to-end encryption for sensitive data, and
+access controls, such as employing multi factor authentication for log-ons and conducting regular security
+audits to identify vulnerabilities and ensure proper implementation of controls.
+Information technology professionals must have a code of ethics when dealing with large amounts of data.
+This code of ethics is needed not only to protect the privacy of the data but to protect the integrity of the IT
+professional.
+Cloud-Based Sustainability
+In any industry, an organization must determine how to achieve sustainability in their products, services, and
+offerings. This issue is familiar to those who developed cloud computing. One factor that has led to the
+sustainability of cloud-based computing is its accessibility from any device. Creating a platform that does not
+require the adding of an app, software, or a proprietary component is a major factor in attracting and
+sustaining a strong customer base. It is also important to consider the environmental impact of cloud-based
+solutions, such as energy consumption of data centers, and reflect on how an organization can reduce its
+carbon footprint, such as learning what efforts are being made to recycle resources (for example, cooling
+water, using generated heat, and optimizing operations). These factors can help an organization determine
+what cloud-based solutions to use.
+GLOBAL CONNECTIONS
+Sustainability
+Sustainability is a global commitment, whether it involves the environment or the continuation of a product
+line. Each cloud provider has different definitions for sustainability and different interpretations of the
+effects on the global market. An organization should review the cloud provider’s sustainability practices
+when evaluating the provider. As the cloud grows, the actions of the cloud providers improve sustainability
+in the form of growth and in the protection of the environment for the future. For example, Google
+promotes sustainability by pursuing net-zero emissions through technology and innovation, such as
+energy-efficient chips. Google Maps can provide traffic and emissions data that may help city planners
+make decisions about development and transportation systems, in turn, potentially supporting initiatives to
+make cities more environmentally friendly.
+280
+7 • Cloud Computing and Managing the Cloud Infrastructure
+Access for free at openstax.org
+
+Another factor that can lead to sustainability is a provider’s ability to offer services that can be created with
+automated tools by the customer, without needing to wait on hold for customer service, thus reducing the
+need for customer service interaction and, in turn, reducing the cost for assistance. The minimal time it takes
+for a cloud consumer to bring a system online, roll it into production, and start generating revenue is a major
+component of satisfaction and will lead to sustainability.
+Each offering, each tool, each process, and each component that cloud-based computing puts in place benefits
+their sustainability. The potential for growth is sustainable, the possibility of continued offering is sustainable,
+and the new technology that emerges has the potential for sustainability.
+7.5 • Scientific, Industrial, and Social Implications of Cloud Computing
+281
+
+Key Terms
+bare metal server
+physical server that is deployed for a single business that provides the business full
+access to the server resources
+business continuity
+plan that an organization puts in place to maintain its operational status in an
+emergency scenario
+capital expenditure
+cost for the acquisition of assets
+cloud computing
+(also, the cloud) information technology resources that are available through the internet
+on an on-demand or pay-as-you-go basis without the users needing to manage it
+cloud consumer
+entity that uses and maintains access to computing resources of a cloud provider
+cloud provider
+company that provides on-demand services such as data storage, applications, and
+infrastructure in a platform accessible through the internet
+commercial off-the-shelf
+commercially produced software or hardware that is available for sale and ready
+to install and use without customization
+Communication as a Service (CaaS)
+service that allows for the cloud-based delivery of services such as Voice
+over Internet Protocol, videoconferencing, and internet-based telecommunication services
+community cloud
+infrastructure shared by multiple organizations with a common interest
+customer relationship management (CRM)
+application that organizations use to manage customer
+interactions and lead management, and perform analytics
+cybersecurity specialist
+person who identifies and develops security strategies, verifies needed security
+improvements, and implements security strategies for an organization
+data migration tool
+software-based tool that is designed to move data from one data repository to another
+Database as a Service (DBaaS)
+service that gives cloud consumers the ability to manage and maintain
+relational and nonrelational databases
+delivery model
+resources offered by a cloud provider
+deployment model
+location, method, and entity responsible for controlling the infrastructure
+disaster recovery
+process an organization follows to reestablish operational status after an incident causes a
+system failure
+elastic storage
+ability for a cloud storage resource to expand or collapse based on demand
+end user
+entity that makes use of the technology provided by an organization
+Firewall as a Service (FWaaS)
+cybersecurity service that a cloud provider offers to protect the perimeter of a
+company’s network
+home-grown application
+software that is developed for an organization in-house, based on the
+development requirements of the organization
+hot site storage
+cloud service in which mission-critical data are stored in one location where the
+organization can have immediate access to the data
+hybrid cloud
+combination of public and private models that can be combined with on-premise infrastructure
+infrastructure
+facility and system used to support an organization’s operations
+Infrastructure as a Service (IaaS)
+cloud services deployment model that involves delivery of infrastructure
+resources, such as networking and storage
+market share
+sales a company has in its industry, usually calculated as a percentage
+migration strategy
+plan an organization will follow to move to the cloud
+mission-critical platform
+an application or program that will cause a financial burden if there is a loss of
+service
+network engineer
+person with the skill to design, implement, and manage a network in support of an
+organization’s mission
+network-attached storage (NAS)
+cloud service–provided storage system that is flexible and attaches to an
+organization’s network infrastructure
+NIST Cloud Computing Reference Architecture
+federal standard that can provide direction for an
+organization in the selection process, industry definitions, and components of a cloud architecture
+282
+7 • Key Terms
+Access for free at openstax.org
+
+on-premise environment
+physical hardware, such as servers, network equipment, workstations, and
+network infrastructure
+ongoing cost
+expense for day-to-day operations
+open-source software
+free software that is available for use and modification without licensing
+Platform as a Service (PaaS)
+cloud services deployment model that involves management of the software
+and hardware resources for the purpose of development
+private cloud
+infrastructure dedicated to a single organization
+public cloud
+infrastructure that provides services in an on-demand environment
+request for proposal
+documentation of the details of a project, including the information technology
+resources that might be needed, in order to support the bidding process to get a fair price
+request for quote
+process for determining the pricing of information technology resources based on the
+organization’s understanding of what is needed
+return on investment (ROI)
+metric that determines the value of an investment
+scalability
+ability of a resource to be scaled up or down with minimal effort
+Security as a Service (SECaaS)
+cybersecurity service that a cloud provider offers to protect cloud consumers
+service-level agreement (SLA)
+document that outlines levels of service that a cloud provider assures the
+cloud consumer they will receive
+Software as a Service (SaaS)
+cloud services deployment model that involves delivery of applications in the
+cloud
+software-defined network (SDN)
+network that uses software for traffic management in programmable
+controllers and interfaces
+storage-area network (SAN)
+network that provides high-speed connectivity to a storage environment
+supply chain management (SCM)
+optimization of an organization's production and distribution of goods
+and services
+system administrator
+person who manages and maintains the information technology and information
+systems resources for an organization
+Testing as a Service (TaaS)
+service that cloud providers have built to outsource testing of software,
+application, and other components that would normally be performed in the organization
+total cost of ownership
+investment in a product for the lifetime of the product
+up-front cost
+expense for services before delivery
+virtualization
+service in which a physical computer environment creates a simulated computer environment
+Summary
+7.1 Fundamentals of Cloud Computing
+•
+On-premise IS resources provide organizations with systems that are managed and maintained by the IS
+staff of the organization.
+•
+Cloud computing has introduced a means by which organizations can provide services to their customers
+through the internet.
+•
+Cloud computing provides constant access through the internet to any device from any location.
+•
+Cloud computing maximizes resource use through the implementation of virtualization software, which
+adds scalability and elasticity for the cloud consumer.
+•
+There are numerous IS positions available in cloud computing, such as network engineers, system
+administrators, and cybersecurity specialists.
+7.2 Cloud Computing Services, Pricing, and Deployment Models
+•
+Cloud computing incorporates a delivery model to allow consumers to build the cloud computing
+environment that will best handle their computing needs. Those delivery models are IaaS, PaaS, and SaaS.
+•
+Cloud computing has a deployment model that enables the cloud consumer to build an environment
+7 • Summary
+283
+
+structure that meets business strategies. The deployment models are community, private, public, and
+hybrid.
+•
+Cloud computing offers consumers flexibility, scalability, and pricing variations based on usage.
+•
+The cost factor of cloud computing versus on-premise environments should be evaluated before
+organizations enter any contracts.
+•
+Each cloud provider is different, and the services they offer differ based on their customer profiles.
+7.3 Cloud Computing Technologies
+•
+Technology used in cloud-based computing, such as SDNs, virtualization, and storage-area networks,
+provides some of the functionalities offered to cloud consumers.
+•
+To properly migrate to cloud-based computing, organizations must determine what migration tools are
+needed to complete the move to the cloud infrastructure.
+•
+Security of the data is essential when it comes to migrating to a cloud-based platform. Security
+frameworks such as NIST and the CIA triad will help with the process before, during, and after.
+•
+Organizations need to identify a cybersecurity framework that maximizes the protection of their data.
+7.4 Cloud-Based Industry Applications
+•
+Organizations need a variety of cloud computing applications and must choose the category and type to
+be developed, purchased, or leased.
+•
+Organizations will encounter software or applications that the vendor stops supporting and will need to
+determine whether to replace the software or migrate to the cloud.
+•
+Organizations can research the possibility of migrating to a cloud-based application versus on-premise
+deployments.
+•
+In a migration strategy, organizations can determine if the application migration can be automated to
+reduce costs.
+7.5 Scientific, Industrial, and Social Implications of Cloud Computing
+•
+The evolution of technologies and software has moved cloud-based computing into the mainstream of
+business.
+•
+Ethics must drive an organization’s use of data because of social implications and data privacy laws and
+regulations.
+•
+Cloud-based computing will need to continue to look at new forms of revenue to accomplish sustainability.
+Review Questions
+1. What term describes a physical computing environment that is located at an organization’s facility?
+a. on-premise
+b. hot facility
+c. cold site
+d. cloud-based
+2. A cloud environment incorporates physical hardware to deliver services that are described in what way?
+a. programmable
+b. virtualized
+c. tested
+d. rack mounted
+3. What is the term for the party that manages and maintains a cloud-based environment?
+a. service provider
+b. ISP engineer
+c. cloud provider
+d. cloud engineer
+284
+7 • Review Questions
+Access for free at openstax.org
+
+4. What factor offers the cloud environment flexibility, utilization of system resources, scalability, and a cost
+factor that is scalable?
+a. cloud computing
+b. physical environment
+c. coding
+d. virtualization
+5. What is the term for a plan that an organization puts in place to maintain its operational status in an
+emergency scenario?
+a. business continuity
+b. recovery plan
+c. emergency recovery
+d. shutdown plan
+6. What is the first level of the cloud environment that must be designed based on the requirements of the
+cloud consumer?
+a. Infrastructure as a Service
+b. Platform as a Service
+c. Software as a Service
+d. Database as a Service
+7. What is the second level of the cloud environment that is to be built in relation to the Infrastructure as a
+Service component?
+a. Database as a Service
+b. Software as a Service
+c. Platform as a Service
+d. Communication as a Service
+8. What service allows cloud consumers the ability to manage and maintain relational and nonrelational
+databases?
+a. Infrastructure as a Service
+b. Software as a Service
+c. Testing as a Service
+d. Database as a Service
+9. What is the term for an environment that is owned by a specific community or cloud provider that is
+offering services to a specific community?
+a. hybrid cloud
+b. community cloud
+c. public cloud
+d. private cloud
+10. What is the term for an environment designed to use several deployment models?
+a. community cloud
+b. public cloud
+c. private cloud
+d. hybrid cloud
+11. What advancement changed the way networking components worked, handled traffic, and opened new
+methods of controlling the network architecture?
+a. SDN
+b. VPN
+c. ACD
+7 • Review Questions
+285
+
+d. ATM
+12. Advances in what area have changed the realm of network storage?
+a. networking
+b. virtualization
+c. programming
+d. architecture
+13. What would an organization use to move their content to a cloud provider?
+a. programming code
+b. command line
+c. migration tool
+d. solution plan
+14. What type of legal document is the NIST Cloud Computing Reference Architecture?
+a. state law
+b. industry guideline
+c. commercial code
+d. federal standard
+15. What is the name of the guidelines that provide a foundation for the organization to work from and
+develop a cybersecurity program?
+a. NIST Cybersecurity Framework
+b. NIST Cloud Computing Reference Architecture
+c. NIST Standard for Cybersecurity and Risk
+d. NIST Computing Security Standard
+16. What is a component of an enterprise resource planning system?
+a. company goals and implementation plans
+b. customer relationship management
+c. mission-critical platform
+d. home-grown application
+17. What is an example of a cloud-based application used by companies such as Salesforce, HubSpot, and
+Zoho for managing their customer interactions, lead management, and analytics?
+a. enterprise management planning
+b. customer relationship management
+c. supply chain management
+d. automatic call distribution
+18. What is a component of a supply chain management system?
+a. payroll
+b. customer interactions
+c. employee evaluations
+d. logistics
+19. What is the consideration for planning that involves needed resources, maintenance, licensing, and utility
+cost?
+a. funding amounts
+b. quotation numbers
+c. cost factors
+d. loan values
+20. What can aid in the data migration process when there is minimal need for human interaction?
+286
+7 • Review Questions
+Access for free at openstax.org
+
+a. machine learning
+b. customized configuration
+c. programming language
+d. automation process
+21. What platform is unique in that it is built on open-source software known as OpenFlow and OpenDaylight?
+a. SDN
+b. ATM
+c. TCP/IP
+d. VPN
+22. What factor related to an IS professional who accesses data relates to the ethical guidelines of the
+organization when discussing social implications, data privacy, and security?
+a. job description
+b. personal code of conduct
+c. job requirements
+d. manager’s approval
+23. Cloud computing systems utilize data marts, data warehouses, data lakes, and big data storage
+techniques for the accumulation of what?
+a. control system data
+b. database backups
+c. raw data
+d. management logs
+24. What repository is used to store structured and unstructured data and is not size dependent?
+a. big data
+b. data mart
+c. data warehouse
+d. data lake
+25. What component of cloud-based computing is influenced by its accessibility from any device?
+a. competitiveness
+b. drive
+c. profitability
+d. sustainability
+Check Your Understanding Questions
+1. In your own words, describe what cloud computing offers the cloud consumer.
+2. What does virtualization offer the cloud environment?
+3. What are three examples of specialized careers for individuals who work in cloud computing?
+4. What factors need to be covered when an organization adds new information technology resources to the
+cloud-based environment?
+5. In your own words, describe Platform as a Service.
+6. Identify and explain the purpose of each of the three primary delivery models offered in cloud-based
+computing.
+7. Identify and describe the use of the four deployment models used in cloud-based computing.
+8. What are two courses of action an organization can take when acquiring new cloud-based environments?
+7 • Check Your Understanding Questions
+287
+
+9. What are the primary delivery models for cloud-based computing?
+10. In your own words, describe some advantages of using a software-defined network in a cloud-based
+environment.
+11. What are the components of the CIA triad?
+12. What are some additional cloud service models that are available?
+13. What are the components of the NIST Cybersecurity Framework?
+14. Each application has a life cycle in which it must be updated or replaced due to the software
+manufacturer’s requirements. What is the term for this life cycle?
+15. List four of the modules of an enterprise resource planning system.
+16. List four modules of a customer relationship management system.
+17. List four modules of a supply chain management system.
+18. Describe the parts of a cost factor that might be used to determine if migrating to the cloud is cost
+effective.
+19. How have software-defined networks (SDNs) changed the way network engineers manage traffic?
+20. One factor that has led to the sustainability of cloud-based computing is accessibility. Describe
+accessibility as it pertains to cloud-based computing.
+21. Identify the different types of storage that an organization has access to in a cloud-based environment.
+Application Questions
+1. Consider the skills needed to become a systems administrator in cloud computing. On top of the
+administration skills, what additional skills are needed?
+2. When evaluating the possible uses of a hybrid cloud, identify one that a retail store might use.
+3. What are the functions of the NIST Cybersecurity Framework and how are they applied?
+4. If an organization’s application is deemed to be at the end of its life, what two production environments
+can be considered for the new application?
+5. What should an information technology professional develop to adhere to regulations and laws when
+handling data?
+288
+7 • Application Questions
+Access for free at openstax.org

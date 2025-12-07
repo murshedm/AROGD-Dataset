@@ -1,0 +1,760 @@
+Chapter 4 – Artificial Intelligence Applications in Electrical Energy Consumption 
+Optimization
+Despite its obvious purpose, research on the implementation of electrical energy–saving measures at 
+the plant level has been surprisingly slow. Hence, this systematic literature review aims to articulate the 
+following:
+1. The research that has been done and the methods that have been investigated in the optimization of 
+EEC in cement manufacturing.
+2. The contributions of previous investigations to EEC optimization and the gaps that need to be 
+addressed.
+3. The application of AI, and other methods and approaches applied to EEC optimization in other power–
+consumption heavy industries.
+4. The potential areas of future research in cement manufacturing EEC optimization, and the inherent 
+opportunities to leverage AI applications.
+At the nexus of sustainability and industrial development, cement manufacturing presents a unique 
+challenge in curbing energy consumption without compromising the quality and quantity of production. 
+This study contextualizes the significance of optimizing EEC, addressing the industry's demand and its 
+implications for environmental sustainability. The rationale behind this study stems from the urgency to 
+reduce the environmental impact of cement manufacturing while ensuring its operational efficiency [18, 
+20]. The electric power the cement plants consume is significant, and the generation of the electricity 
+consumed contributes to the carbon footprint due to the indirect impact of the power plant which uses either 
+fossil fuel or natural gas to generate electricity. There are research efforts on alternative ways to generate 
+electricity; however, there seem not to be as many research efforts focused on optimizing electricity 
+consumption in cement manufacturing. Analyzing and synthesizing the existing body of knowledge is
+46
+pivotal to identifying gaps, novel advancements, and future directions for optimizing EEC in this vital 
+industry. This study aims to critically examine and consolidate insights from a wide array of scholarly 
+articles, industry reports, and research studies. 
+Discovering a dearth of research on the optimization of EEC in cement manufacturing, this literature 
+review explores approaches adopted in other industries with high power demand. It further explores the 
+relatively untapped potential for leveraging artificial intelligence to optimize EEC in cement manufacturing. 
+Thus, it contributes to the evolving discourse on sustainable practices within cement manufacturing and 
+endeavors to identify opportunities for innovation, foster informed decision–making, and propel the cement 
+manufacturing industry toward a more energy–efficient and environmentally conscious future.
+4.1 Literature Review Method
+The systematic review process described in [99] was adopted for this study. The first stage of the 
+process includes identifying a need for a review and developing a review protocol. In the second stage, we 
+select the papers, assess their quality, and extract and synthesize data and relevant information. The final 
+stage involves analyzing and interpreting the content, reporting the findings, and making recommendations 
+for further research. The article selection process was streamlined into four steps: keyword selection, 
+relevant database search, criteria–based shortlisting of articles, and selection of articles for in–depth review.
+We selected search terms from the scoping study and discussions within the review team to conduct a 
+comprehensive and unbiased search. The keywords and term adopted was “electric energy consumption 
+optimization in cement manufacturing" to identify contributions related to electric power optimization, 
+specifically in cement manufacturing. The keywords selected stem from the main concept of the area of 
+study and it is intended to aid the identification and location of relevant literature and resources from various 
+databases and search engines.
+All contribution types, including articles, conference papers, and literature reviews published between 
+1993 and 2023, were considered, and relevant ones were included in the study. The search was conducted 
+47
+across Google Scholar, Scopus, IEEE EXplore, and PhilPapers databases. These databases contain 
+scholarly resources relevant to the search topic
+The most relevant 120 from a sample of peer–reviewed publications matched on Google Scholar (each 
+with at least 100 citations) were assessed. Most of the matches came from a match on power optimization; 
+however, most were not cement manufacturing applications. Other relevant articles were selected from 
+Scopus, IEEE EXplore, and PhilPapers databases. The literature survey indicates that studies on power 
+consumption optimization in cement manufacturing are limited in number and scope, and that this paper 
+can contribute to a better understanding of strategies for optimizing EEC in cement manufacturing. The 
+selection criteria are summarized in Table 5 below.
+Table 5. Literature review selection criteria.
+Items Criteria for selection
+Keywords/Term “Electric energy consumption optimization in 
+cement manufacturing”
+Databases Google Scholar, Scopus, IEEE Explore, and 
+PhilPapers
+Source Article title; Abstract; Keywords
+Time frame 1993 – 2023
+Document typology Article; Conference review; Literature 
+Review; Conference paper
+Research articles were identified and selected based on their focus and relevance to power optimization 
+in cement manufacturing. Then, we did a backward–forward search by reviewing the references of the 
+articles in our initial selection and identifying relevant articles that cited the ones in our initial sample [100]. 
+After screening titles and abstracts, full–text articles were reviewed for eligibility, and 25 papers were 
+finalized for detailed analysis. These papers’ full texts were evaluated in detail to identify the main themes 
+and perspectives. Figure 14 highlights the steps adopted for selecting the literature reviewed.
+48
+Figure 14. Literature selection
+In comparison to applications in cement manufacturing found in literature, we reviewed the applications 
+of AI to EEC optimization in manufacturing industries that have a heavy demand for electric power, 
+including metals and mining, chemicals and petrochemicals, electronics and semiconductors, food and 
+beverage processing, pulp and paper, automotive and transportation equipment, and textiles and apparel.
+The quality assessments adopted include exploring and comparing different sources of knowledge for 
+data quality, reviewing theoretical adequacy, and confirming that the claims made are generalizable 
+logically and theoretically from the data [99]. Our analysis followed the descriptive design highlighted in 
+the structuring content analysis approach of [101], which analyzes the texts to find the power optimization 
+categories and register the occurrence of the categories. For instance, the adoption of power–efficient 
+equipment occurred frequently in the literature, suggesting significant cumulative power–saving effects 
+from implementing multiple strategies. 
+We organized the discussion on power–efficient equipment around processes in the different heavy 
+power consumption subsystems of cement manufacturing. These include general electrical power 
+management, gas handling and pneumatic systems, motors and transmissions, and comminution and 
+separation. Other major categories in the literature include automation and process control along with 
+adopting Industry 4.0 concepts. These categories formed the key themes around which we frame our 
+findings in the following section.
+49
+4.2 Literature Review Results
+The literature review findings will be presented and discussed in the following sub–paragraphs 
+identifying opportunities for EEC in electric power management, gas handling and pneumatic systems, 
+motors and transmissions, and comminution and separation. First, we provide a descriptive analysis of 
+relevant literature. Subsequently, we describe energy–saving opportunities from the cumulative effect of 
+adopting power–efficient equipment. Then, we highlight the opportunities within other categories, such as 
+automation and process control, digitalization, and adoption of Industry 4.0 concepts. We also examine 
+how other industries that have heavy demand for electrical energy implement EEC optimization by 
+leveraging AI. The potential role of advanced analytics and AI in achieving electric power optimization in 
+cement manufacturing specifically is further discussed, focusing on its potential to be leveraged for energy 
+data analysis, predictive modeling, process optimization, and integration with energy management systems.
+4.2.1 Descriptive Results
+The research trend (Figure 15) indicates recent interest in electrical energy optimization in cement 
+manufacturing. There is a recent increase in awareness of the importance of energy conservation and 
+environmental protection. With EEC accounting for more than 60% of the total consumption and the higher 
+cost of electricity linearly increasing the cost of production [18], energy conservation in cement 
+manufacturing is key to the economical and sustainable production of cement. Optimizing electrical energy 
+consumption in the production process can improve energy efficiency, reduce operational costs, and 
+mitigate environmental impacts. It is worthy of note that all nine of the shortlisted publications that are 
+focused on digitalization and the application of Industry 4.0 concepts were all published between 2018 and 
+2023, and involve the use of simulation, modeling, or analytics.
+Table 6 groups the literature [102–123, 8] into the different electrical energy–saving categories 
+elaborated in the papers. Many of the papers covered multiple categories, compared potential energy–saving 
+opportunities, and aligned with the concept of accumulating power savings by adopting multiple power–
+saving methods.
+50
+Figure 15. Distribution of relevant literature contributions
+Table 6. Categories of electric energy saving opportunities in literature
+Electricity Saving Category Source Types Number of 
+Papers
+Literature 
+References
+Energy efficient equipment and 
+technologies
+Conference 
+proceedings, 
+Journals
+6
+[102], [103], [104], 
+[105], [106], [107]
+Pyro–processing, grinding and milling 
+opportunities
+Journals 2 [108], [109]
+Raw material, recycling, circular economy Journals 2 [110], [111]
+Waste heat recovery and power generation Journals 3 [112], [113], [114]
+Automation and process control Journals 5 [106], [107], [111], 
+[115], [116]
+Digitalization (Industry 4.0) Conference 
+proceedings, 
+Journals
+8
+[116], [117], [118], 
+[119], [120], [121], 
+[122], [8], [123]
+0
+2
+4
+6
+8
+10
+12
+14
+16
+1993 -1999 2000-2006 2007-2013 2014-2017 2018-2023
+Count of shortlisted publications
+Period
+Growing interest in electric power optimization in cement manufacturing
+51
+4.2.2 Energy-saving Opportunities
+The raw materials preparation process in cement manufacturing which includes quarrying, crushing, 
+grinding and the blending of limestone with other materials, the calcination in the kiln, clinker cooling, 
+and the final cement grinding are all electrical-energy intensive processes. Figure 16 is a schematic 
+representation of the cement manufacturing process showing the electrical-energy intensive processes and 
+emissions. The following subsections describe some of the energy–saving opportunities applicable to the 
+cement production process.
+Figure 16. Schematic representation of a cement manufacturing process highlighting the electrical energyintensive steps
+4.2.2.1. Energy efficient equipment and technologies
+Advocacy for adopting energy–efficient equipment was found to be common in literature within the 
+period in consideration. As cement manufacturing equipment technology evolved, the advances were 
+applied to curtail electricity costs by reducing specific power usage [102 –105]. Before the first period 
+(1993–1999), there were improvements in fuel energy requirements, and the adoption of alternative fuels 
+increased, while specific electrical energy consumption increased by as much as 40%. Many cement plants 
+in Europe and North America at the time had higher electrical bills than fuel bills. The high bills drove 
+innovations that created power reduction opportunities within electrical power management, gas handling 
+and pneumatic systems, motors and transmissions, and comminution and separation [102].
+E - Electrical Energy
+PE - Particulate Emission
+GE - Gaseous Emission
+H = Heat
+Raw Materials
+Quarrying
+PE E
+Raw Materials
+Crushing
+PE E
+Grinding
+E PE
+Dry Mixing and
+Blending
+E PE
+Preheater
+H
+PE GE
+Rotary Kiln
+Clinker Cooler
+Packaging&
+Shipping
+Product
+Storage
+Gypsum
+Final Grinding
+PE
+GE
+H
+PE
+E PE
+GE
+E
+PE
+E
+E
+52
+With modern electrical power management technology, cement plants are digitalized, and 
+computerized monitoring of motors and starters is implemented so that all the data collected can be analyzed 
+to develop control strategies. These data–driven power management strategies include production planning 
+to shift loads and maximize on–peak and off–peak demand power rates, preventing unnecessary equipment 
+idling, and studying the causes of power variation.
+Worrell et al., in their research [103], examined strategies for decreasing energy consumption and 
+carbon dioxide emissions in US cement production by gathering data on the costs, energy conservation, and 
+reductions in carbon dioxide emissions associated with various technologies and approaches. These 
+methods were classified into two groups: existing measures widely adopted in cement plants globally and 
+innovative measures that were either minimally implemented or on the brink of commercial viability. Using
+an energy conservation supply curve, the authors assessed the cost–effectiveness of the potential for 
+improving energy efficiency. Energy conservation supply curves compare investments in energy 
+conservation against investments in energy supply to take the least–cost approach to meeting energy needs. 
+According to the findings, switching products to blended cement resulted in total fuel savings of 1.41 GJ/t 
+of blended cement but an estimated increase in electricity consumption by 17kWh/t from grinding the 
+blending materials. Estimated electricity savings from energy–efficient technologies for cement making in 
+the US in 1994 ranged from 0.03 GJ/t from using high–efficiency roller mills to 0.07 GJ/t from adopting 
+heat recovery for power generation. The International Energy Agency reported that from 2010 to 2020, the 
+thermal energy intensity of clinker decreased by 0.2% annually [11]. However, it has since plateaued at 
+around 3.6 GJ/t. This decline brought a rise in the sector's electricity intensity, estimated at 100kWh/t 
+cement since 2022. This indicates that some of the advancements in thermal energy efficiency in cement 
+manufacturing resulted in increased electrical energy consumption within the sector.
+Common to many of the papers reviewed is an advocacy for the adoption of methods that have the 
+potential to save energy. Al–Mansour et al. [104] submitted that prompt activation of savings opportunities 
+yields economic advantages and reduces both direct and indirect greenhouse gas emissions. The analysis 
+53
+of Slovenia from 1997 to 2020 illustrated that promptly implementing energy efficiency measures in the 
+industrial sector is economically justified. Using analytical methods with a 'least cost' economics analysis 
+approach, the authors opined that enhancements to internal industrial conversion systems, such as the co–
+generation of electricity and heat, contribute significantly to overall efficiency improvements. The 'least 
+cost' method identifies the scope for cost–effective energy savings as a function of energy cost and 
+investment criteria.
+The report in [105] is a guide for energy and plant managers that covers more than forty energy–
+efficient technologies implemented in cement plants worldwide. It assesses the technologies' effectiveness 
+in terms of energy and carbon dioxide savings, investment costs, and operation and maintenance expenses. 
+It recommends a corporate–wide energy management program that advocates for changes in staff behavior 
+and attitude, energy efficiency training programs, and a formal management structure for managing energy. 
+Energy–efficient technologies are often combined with process controls to reduce energy consumption 
+and carbon emissions [106–107]. Madlool et al. [106] surveyed energy efficiency measures for raw 
+materials preparation, clinker production, products and feedstock changes, and finish grinding. Table 7 
+summarizes the estimated electrical energy savings and emission reductions reported in the paper from 
+energy efficiency measures at each stage of the cement manufacturing process. The study indicated that as 
+of 2013, the largest recorded amount of electrical energy savings from the adoption of energy efficiency 
+methods was 35kW h/t.
+One factor that should be addressed when implementing efficiency improvements in the manufacturing 
+process is the economic viability of the proposed improvements. In a study that presented energy–saving 
+measures with varying degrees of complexity and investment requirements, cost savings achieved surpassed 
+the investment cost of implementing actions by 0.9 million USD [107]. 
+54
+Table 7. Aggregation of estimated electrical energy savings and emission reductions reported by
+Madlool et al. [106]
+Energy–efficiency measures Electrical Energy 
+Savings
+(kW h/t, *GJ/t)
+CO2 Emission 
+Reduction
+(kg/t)
+Efficient transport systems for raw materials preparation –
+pneumatic systems, mechanical conveyors, pipe conveyors 2 – 3.4 0.41 – 3.22
+Raw meal homogenizing systems 1 – 4.3 0.26 – 2.73
+Raw meal process control for vertical mills 1.02 – 1.7* 0.16 – 1.45
+Use of roller mills 6 – 11.9 1.24 – 10.45
+High–efficiency classifiers/separators 3.18 – 6.3 0.51 – 5.23
+Energy management and process control systems for clinker 
+making in kilns
+2.35 – 5 2.48 – 16.61
+Adjustable speed drive for kiln fan for clinker making in all 
+kilns
+4.95 – 6.1 1.4 – 6.27
+Low–temperature heat recovery for power generation for 
+clinker making in rotary kilns
+20 – 35 4.6 – 31.66
+High–temperature heat recovery for power generation for 
+clinker making in rotary kilns
+17.84 – 22 3.68 – 9.25
+Low–pressure drop cyclones for suspension preheaters for 
+clinker making in rotary kilns
+0.66 – 4.4 0.16 – 2.67
+Efficient kiln drives for clinker making in rotary kilns 0.45 – 3.9 0.16 – 0.9
+Process control and management in grinding mills for finish 
+grinding
+1 – 4.2 0.9 – 4.11
+Vertical rollers mill for finish grinding 10 – 25.93 8.82 – 26.66
+High–pressure (hydraulic) roller presses for finish grinding 8 – 28 1.28 – 25.09
+High–efficiency classifiers for finish grinding 1.9 – 7 0.4 – 2.07
+Improved grinding media (for ball mills) 1.8 – 6.1 0.29 – 6.27
+High–efficiency motors and drives 0 – 25 0 – 47
+Adjustable or variable speed drives 0.08 – 9.15 1 – 9.41
+Changing product and feedstock – blended cements 0.3 – 213.54
+Use of waste–derived fuels 12 – 76.31
+Changing product and feedstock – Limestone Portland cement 2.8 – 3.3 8.4 – 29.86
+55
+Implementing energy–efficient technologies led to a 10.45% reduction in electrical energy 
+consumption between 2008 and 2010. Notably, the improvements in process control techniques introduced 
+during the same period resulted in substantial energy savings, with a 22.6% improvement in specific 
+electrical energy consumption. 
+The authors employed the cumulative sum of differences technique to evaluate the effectiveness of the 
+implemented actions. Therefore, with this know–how, there is an argument to be made that the cement 
+manufacturing industry will gain much in cost savings and reduce CO2 indirect impact by looking at 
+innovative ways to optimize electrical usage at the plant level.
+The articles reviewed indicate that the adoption of energy-efficient equipment and technologies in 
+cement manufacturing has the potential to reduce energy consumption, electricity costs, and carbon dioxide 
+emissions. Also, it is important to ascertain the economic viability of efficiency improvements to ensure 
+manufacturer’s motivation to implement.
+4.2.2.2 Pyro–processing, grinding and milling opportunities
+Quarry crushing is the start of the preparation of the raw material needed for the manufacturing of 
+cement. The crushing process which also consists of conveying blasted limestone material consumes 
+electricity because of motor drives. The process accounts for a small percentage compared to the other 
+processes. Raw material milling, which follows the quarry crushing to reduce the material to fines for 
+cement manufacturing also consumes electricity because of the raw mill motor drive. Compared to the other 
+processes, however, it is a small percentage. Pyroprocessing is a term used to describe the high-temperature 
+thermal treatments that occur during cement manufacturing. The processes involve using intense heat to 
+transform grounded raw materials into clinker, the primary component of cement. Considerable electrical 
+energy is required to power the kiln drive system motors and gears, the preheater and pre-calciner systems 
+fans and blowers, the clinker cooler system, and the numerous auxiliary equipment such as air compressors, 
+pumps, lighting, and control systems. In a study, raw material processing, clinker burning, and clinker 
+grinding accounted for 28%, 25%, and 32% of electrical energy consumption, respectively [107]. Demand-
+56
+side energy management measures can provide immediate and short-term improvements in energy 
+efficiency. Examples of these measures include leveraging free and low-cost options such as motor, 
+compressed air, and process heater optimization software tools, energy management training programs, and 
+energy assessments and audits.
+After the clinker has been cooled, it’s stored in clinker domes or silos, in storage bins or heaps outside. 
+It is conveyed to storage, and to the finish mill for further grinding, using belt conveyors, deep bucket 
+conveyors or bucket elevators, which can also dump it directly into silos or bins for shipment. To produce 
+powdery cement, the nodules are ground to a fine powdery consistency. Approximately 3‑5 per cent gypsum 
+is added to regulate the setting properties of the cement. These powders, clinker and gypsum, are ground in 
+ball mills or a combination of ball mills and roller presses, in roller mills, or roller presses Vertical roller 
+mills are technically feasible, but they have yet to be widely accepted in the US. Coarse material generated 
+by all these systems is screened and returned to the mill for further grinding to ensure a uniform surface 
+area of the final product. The electrical power required to grind the raw material depends on the required 
+surface area of the final product, the additives used, the hardness of the materials used (principally the 
+limestone, clinker, pozzolana extenders), and the desired fineness of the cement [105]. 
+In a study of a methodology to shift electricity consumption to economical off-peak periods, various 
+physical components such as the raw mill, the kiln, crushers, cement mill, and auxiliary equipment were 
+integrated into a simulation model to accurately predict their influence on production and cost [108]. Utlu 
+et al. [109] examined pyroprocessing energy-saving opportunities in a Turkish cement plant using actual 
+operational data. They proposed a tool for the analysis of energy and exergy utilization, the development 
+of energy policies, and the provision of energy conservation measures. However, delivering energyefficient technologies to consumers effectively is a challenge.
+The pyroprocessing, grinding, and milling processes involved in cement manufacturing are energyintensive due to the significant electrical energy consumed by the equipment such as motors, fans, mills, 
+and conveyors. Some of the potential energy management measures recommended in articles include the 
+57
+use of optimization software, energy audits, shifting electricity consumption to off-peak periods, and the 
+analysis of energy and exergy utilization data for the development of conservation measures.
+4.2.2.3 Raw material, recycling, circular economy
+More recent research efforts indicate that value can be derived from adopting recycling and the circular 
+economy concept. The findings in [110] provide an estimate that recycled cement production using cement 
+paste from concrete waste consumes 30% less energy than clinker production. The electrical energy 
+consumption for an industrial setup is estimated by extrapolating laboratory results through simulations and 
+analogies. The energy requirement is approximately one-third lower than conventional methods, as the 
+concrete waste is already pre-crushed, thus reducing the need for extensive crushing to obtain fine 
+aggregates. Additionally, the weaker nature of concrete waste compared to natural rock further contributes 
+to the lower energy demand. However, compared to clinker, using concrete waste as a substitute has 
+limitations that necessitate further investigation to comprehend the differences fully. While concrete waste 
+exhibits lower reactivity and potentially lower strength characteristics, it has demonstrated acceptable 
+results when used to replace up to 40% of Portland cement. Ambient air temperature and moisture content 
+of the raw material also affect the performance of the raw mill and, in effect, the energy consumption. First 
+and second law efficiencies of raw mill increase as ambient temperature increases and the moisture content 
+of the raw materials decreases [111].
+In summary, research suggests cement production from recycled concrete waste has the potential 
+to reduce energy consumption when compared to conventional clinker production, however its possible 
+limitations in strength and reactivity are worthy of further investigation. 
+4.2.2.4. Waste heat recovery and electric power generation
+Researchers have explored waste heat recovery to generate power for cement manufacturing, as the 
+process is energy-intensive and generates significant amounts of waste heat [112-114]. Mirhosseini et al. 
+[114] confirm the feasibility and economic viability of generating electricity using thermoelectric 
+58
+generators (TEG) at the cement rotary kiln. The researchers propose installing a metallic frame acting as an 
+absorber around the cement kiln, maintaining a specific gap from the kiln surface. This configuration serves 
+two purposes: firstly, it facilitates heat recovery by thermoelectric generators, and secondly, it prevents the 
+kiln from experiencing excessive temperature rise and additional weight. The study presents an optimal 
+TEG system design that maximizes power generation by dividing the arc-shaped absorber into ten distinct 
+sections. For each section, the study calculates the optimal design parameters for the TEG and 
+corresponding heat sink, ensuring efficient heat transfer and electricity production.
+Sanaye et al. [112] highlighted procedures for the modeling and optimum design of waste heat recovery 
+and power generation systems. The modeling covered energy, exergy, economic, and environmental 
+aspects. They reported on two parallel lines of cement production that were new and specific to the cement 
+plant studied and leveraged a genetic algorithm for multi-objective optimization. The study's Organic 
+Rankine cycle results showed that using water as a working fluid provided 9.14MW power output with an 
+exergy destruction ratio of 47.9%. In contrast, using toluene as a working fluid provided a 6.56MW power 
+output with an exergy destruction ratio of 53.5%.
+Sani et al. implemented waste heat recovery by installing an air-quenching chamber at the clinker 
+cooler's output and incorporating suspension preheater boilers in the preheating stage [113]. A genetic 
+algorithm was employed to determine the optimal energy and exergy performance evaluation parameters, 
+considering three different working fluids: water, refrigerant R123, and refrigerant R245fa. By optimizing 
+the use of refrigerant R123, the power generation capacity increased significantly from 5MW to 9MW, 
+whereas utilizing water as the working fluid only resulted in a modest increase from 4.8MW to 5MW. 
+Furthermore, the analysis revealed that the refrigerant R123 exhibited a 4.1% decrease in total exergy loss, 
+indicating its suitability as an efficient working fluid for cement plants' waste heat recovery cycle.
+In summary, the feasibility and optimal design of waste recovery systems for generating electricity in 
+cement manufacturing has been investigated by researchers. The approaches they have proposed include 
+using TEG around the rotary kiln, incorporating air-quenching chamber at the clinker cooler’s output, and 
+suspension preheater boilers in the pre-heating stage.
+59
+4.2.2.5 Automation and Process Control
+Automation and advanced process control systems are critical for optimizing electrical energy usage in 
+cement manufacturing. The cement production process is highly energy-intensive, with massive equipment 
+consuming vast amounts of electricity. About two-thirds of the total electrical energy is used to reduce the 
+particle size of raw materials and clinker. Practical methods to optimize the efficiency of the cement ball 
+mill (CBM) were explored in a study of its energy and exergy in a new-generation cement plant [115]. The 
+electrical energy consumption of the CBM unit was initially specified at 37.9 kWh/t. The study investigated 
+the impact of factors such as ball charge pattern, cement fineness, and the addition of limestone and 
+pozzolan on the performance of the CBM unit and the quality of the produced cement. By modifying the 
+ball charge pattern, the first and second law efficiencies of the CBM increased to 81.8% and 20.6%, 
+respectively, while the electrical energy consumption of the CBM unit decreased to 36.5 kWh/t. 
+Furthermore, the results demonstrated that as the cement fineness decreased from 3250 cm2/g to 2820 
+cm2/g, the cement production rate increased from 185 t/h to 224 t/h, and the electrical energy consumption 
+decreased from 41.1 kWh/t to 33.1 kWh/t. However, reducing the cement fineness affected the cement 
+compressive strength (at 3, 7, and 28 days), which decreased while the cement setting time (initial and final) 
+increased.
+Gangwar et al. [116] developed a simulation-optimization method for scheduling energy-intensive 
+industries under the uncertainty of the spot electricity market. This method, which can be adopted by the 
+cement manufacturing industry for optimizing electricity costs, uses a Monte-Carlo scenario generator to 
+generate future electricity prices and calculates the potential outputs for each of the plausible forecasted 
+electricity price scenarios independently. Overall, the model identified the most profitable ways to operate 
+an air separation plant in Spain under the uncertainty of electricity prices in the future.
+By implementing automated control systems, parameters like equipment speeds, temperatures, and 
+material flow rates can be dynamically adjusted based on real-time feedback to operate at peak efficiency. 
+This prevents inefficient manual operation that wastes energy. Additionally, machine learning and artificial 
+60
+intelligence capabilities can be integrated to predict ideal operating setpoints and detect anomalies that 
+increase energy drain. Automated monitoring also enables predictive maintenance, reducing unplanned 
+outages and optimizing planned downtime for maintenance - avoiding wasteful energy consumption from 
+faulty equipment. With rising energy costs and pressures to decarbonize, investing in automation and 
+process control yields compounding paybacks through electrical energy savings while enhancing product 
+quality, throughput, and environmental sustainability of cement production.
+4.2.2.6. Digitalization
+Potential benefits of digitalizing cement manufacturing include energy optimization, process 
+automation and control, predictive maintenance, supply chain optimization, remote monitoring and control, 
+product quality control, and data-driven decision-making. While digitalization requires upfront investments 
+in technologies, systems, and skills, the potential benefits from efficiency improvements can result in 
+significant cost savings, improved quality, and enhanced sustainability. Another potential benefit of 
+digitalization is the standardization of data which allows the exchange, comparison, and integration of 
+content between different parties in the industry. These provide valuable opportunities for cement 
+manufacturers to remain competitive and adaptable to changing market demands.
+Several research findings confirm the potential value of digitalization, subsequent data collection, and 
+application of advanced analytics to the cement manufacturing process. In one instance, implementing 
+model predictive control (MPC) technologies drove power consumption reductions ranging from 3% to 
+8%, simultaneously enabling increased production output and reduced fuel consumption rates [117]. In this 
+study, two cement-related industrial MPC applications were presented – a cement raw-mix blending 
+application and a cement mill grinding MPC application. A linear model predictive control algorithm with 
+soft constraints was applied. By leveraging predictive modeling and optimization algorithms, MPC 
+technologies can optimize various process parameters, improving electrical energy efficiency, and higher 
+throughput, contributing to cost savings and sustainability goals.
+61
+Tong et al. [118] introduced the digitization work of a smart cement plant in China, which implemented 
+intelligent factory technology using special integrated robots, software-as-a-service-based cement process 
+digital applicant, artificial intelligence (XGBoost classifier), and advanced process control. Introducing 
+these technologies gave potential energy savings ranging from 2% to 5% from improved process control. 
+The primary production process in cement manufacturing is continuous, making process operation 
+optimization or real-time optimization a crucial aspect. In their paper, Zhu et al. [119] presented a real-time 
+optimization method based on system identification, which is particularly well-suited for energy and utility 
+systems in cement plants. The proposed approach does not require rigorous mathematical models or 
+specialized performance tests, making it a cost-effective solution. By leveraging system identification 
+techniques, this method can optimize processes without complex modeling or extensive testing, thereby 
+providing an efficient and economical way to enhance energy and utility systems in cement production.
+In another study that shows the role that simulations and modeling can play in improving production, 
+simulations and modeling studies were conducted to evaluate modifications to the existing cement grinding 
+circuit flowsheet [120]. The proposed modifications involved redirecting the mill filter stream to the final 
+product silo instead of sending it to the classifier feed. The simulations indicated that this modification 
+would lead to a 4.45% increase in production rate, resulting in corresponding energy savings of 4.26%. 
+This optimization approach not only improved energy efficiency but also enhanced the quality of the end 
+product. Extensive investigations, laboratory validations, and post-production surveys were undertaken to 
+validate the effectiveness of the modifications and ensure that product quality was not compromised. The 
+results confirmed that the proposed changes did not adversely impact the quality of the cement product 
+while delivering the anticipated benefits of increased production capacity and energy savings. Similarly, in 
+another study, the specific electricity consumption of the raw mill workshop of a cement plant in Morocco 
+was optimized while ensuring mill stability and quality control [122]. A multilinear regression model was 
+used to test the effect of the independent variables mill throughput, hydraulic pressure, and mill outlet 
+temperature against target variables of mill-specific electricity consumption and mill vibration.
+62
+Ye et al. [122] focused their study on modeling the primary energy-consuming equipment in cement 
+manufacturing plants by utilizing industrial load characteristics and implementing a Markov process model. 
+Subsequently, they used reinforcement learning algorithms to design demand response scheduling methods 
+tailored for industrial applications. By combining the equipment modeling approach with advanced 
+machine learning techniques, the study demonstrated intelligent energy management strategies that can 
+optimize electrical energy consumption and enable demand response capabilities in energy-intensive 
+cement manufacturing facilities. Artificial neural networks and genetic algorithms have also been applied 
+to reduce the cost of electricity by optimizing different variables in the production process and regulated 
+electricity market costs [123].
+The best way for the cement industry to confront the challenges facing it and improve operational 
+excellence is to embrace technological advances and innovations [8, 124]. The cement industry's major 
+challenges include cost reduction, environmental protection, and energy/capital efficiency. Technological 
+advances under the "Industrial Internet of Things" paradigm can be leveraged to address these challenges. 
+These include process automation, engineering software, data collection/analysis platforms, secure data 
+transportation, and storage solutions that provide real-time information for informed decision-making, help 
+improve asset utilization and optimize relationships with customers and suppliers.
+4.2.3. Leveraging AI for EEC optimization in other manufacturing industries
+Research efforts have been directed at reducing electrical energy consumption in other manufacturing 
+industries whose operations have a high demand for electrical energy, but this is lacking in the cement 
+manufacturing industry. There is evidence in the literature that AI can improve energy efficiency by 
+increasing technological efficiency [125-127]. For instance, in the metals and mining industry, the furnaces, 
+electrolytic processes, and other energy-intensive operations required for smelting and refining metals like 
+steel, copper, and aluminum consume considerable amounts of electrical energy. Artificial intelligence 
+solutions were leveraged in an initiative that helped a steel manufacturer drive higher profit margins while 
+meeting quality and quantity demand at reduced energy consumption levels. Pattern recognition and 
+63
+predictive modeling was applied to signals from sensors embedded in the mill to predict demand flow, asset 
+flow, wear rates, and high-expense consumables used in production [128].
+The production of various chemicals, plastics, and petrochemicals uses electric motors, pumps, fans 
+and blowers, compressors, and compressed air systems. Motor systems use about 57% of the total electricity 
+used in the chemical industry. 26% of the electricity is used by pumps, 23.6% is used in material processing, 
+27.7% by compressed air systems, 11.9% by fans, and 7.7% by refrigeration systems. Researchers have 
+developed and tested a method that leverages descriptive analytics and neural network modeling to optimize 
+the use of energy resources in chemical production [129]. Similarly, data analytics has been applied to 
+optimize EEC in smart food processing achieving a 12% reduction in energy consumption and CO2 
+emissions [130]. Optimization algorithms, mixed data sampling regression, and genetic algorithms have 
+been used to reduce the electrical energy consumed in mechanical pulp production in the papermaking 
+industry [131]. It is essential that the cement industry explore this novel idea to optimize its electrical 
+consumption. No literature work was found during this work which shows that AI has been adopted by the 
+cement industry to help optimize electrical consumption as other industries have done.
+4.3 EEC Optimization Discussion
+Infrastructural changes required at the cement plant to implement energy optimization often require 
+significant capital investments [8]. Replacing aging equipment with more modern energy-efficient 
+equipment and technologies often requires significant financial and human capital. Cement quality 
+requirements are a constraint to swapping out or recycling raw materials. The adoption of automation and 
+process control in cement manufacturing is getting attention. However, the fully autonomous cement plant 
+is still a distant reality [132]. With innovation in sensors, interconnection of machines, automation devices, 
+techniques based on IIoT, and advancement in cloud data storage and computing, large volumes of data on 
+the operations of the cement plant can be collected. Even a staged implementation of digitalization in 
+cement manufacturing can yield immediate, cost-effective results by applying advanced analytics to the 
+data to generate transformative insights.
+64
+Table 8 is a synthesis of analytics methods applied in the literature for power optimization in cement 
+manufacturing. The methods involve modeling and/or simulation of the electrical energy-intensive cement 
+manufacturing process and applying a statistical method, an algorithm, or an optimization method to the 
+model. Researchers have explored model predictive control applications [117], intelligent factory 
+technology applications [118], real-time optimization [119], multilinear regression model [121], and 
+reinforcement learning [122]. 
+Energy data can be analyzed to uncover opportunities to reduce EEC. Cement plants generate massive 
+amounts of data from various sources, including energy meters, process sensors, and control systems. 
+Advanced analytics techniques can be employed to analyze this data and uncover patterns, trends, and 
+insights related to energy consumption. This analysis can help identify energy hotspots, inefficiencies, and 
+opportunities for optimization. By leveraging historical data and machine learning algorithms, predictive 
+models can be developed to forecast energy demand, production rates, and equipment performance. These 
+models can assist in optimizing energy usage by anticipating fluctuations in demand and adjusting 
+operations accordingly, minimizing energy waste and peak loads. The output of the models can be 
+incorporated into energy management systems that monitor and control energy consumption across the 
+plant.
+The use of digital twins and simulation in manufacturing is gaining attention. A high-fidelity digital 
+twin of the cement grinding circuit can be developed using physics-based models and machine learning. 
+Simulations can then be performed to test strategies for energy optimization before implementing them in 
+the actual plant. Digital twins can also be used for virtual commissioning and operator training to improve 
+human-process interaction efficiency.
+The applications of AI to process optimization should be explored further for electric energy-saving 
+opportunities in cement manufacturing. Advanced analytics can be used to optimize various processes 
+within the cement plant, such as raw material grinding, clinker production, and cement grinding. By 
+analyzing data from sensors and meters across the grinding circuit (mill, separators, fans, conveyors), we 
+65
+can determine the optimal setpoints and operating parameters (mill speed, feed rate, airflow) that minimize 
+specific energy consumption while maintaining product quality.
+Table 8. Analytics methods applied to power optimization in cement manufacturing
+Literature and 
+Country
+Themes Analytical method Insights
+Worrell, Martin, 
+N., & Price, L. 
+(2000) [103].
+United States
+Energyefficient 
+technologies
+Energy conservation 
+supply curve
+Demonstrated that utilizing blended cement is a 
+crucial and economical approach for enhancing 
+energy efficiency and reducing carbon dioxide 
+emissions in the US cement sector
+Al-Mansour et 
+al. (2003) [104] 
+Slovenia
+Energyefficient 
+technologies
+Analytical methods 
+with a 'least cost' 
+economics analysis 
+approach
+The 'least cost' method identifies the scope for 
+cost-effective energy savings as a function of fuel 
+prices and investment criteria. Prompt activation 
+of savings opportunities yields economic 
+advantages and reduces direct and indirect 
+greenhouse gas emissions. Enhancements to 
+internal industrial conversion systems, 
+particularly cogeneration of electricity and heat, 
+contribute significantly to overall efficiency 
+improvements.
+Afkhami et al. 
+(2015) [107].
+United States
+Process control 
+and energyefficient 
+technologies
+Cumulative sum of 
+differences 
+technique
+Process control improvements resulted in 22.6% 
+improvements in electrical energy consumption.
+Sanaye et al. 
+(2020) [112].
+Iran
+Waste heat 
+recovery and 
+power 
+generation
+Genetic algorithm 
+for multi-objective 
+optimization
+Results for the study's Rankine (Organic 
+Rankine) cycle showed that using water (toluene) 
+as a working fluid provided 9.14 (6.56) MW 
+power output with an exergy destruction ratio of 
+47.9% (53.5%).
+Sani et al. 
+(2020) [113].
+Waste heat 
+recovery and 
+Genetic algorithm to 
+determine optimal 
+parameters for 
+Optimizing fluid R123 increased power 
+generation from 5MW to 9MW, while water only 
+increased from 4.8MW to 5MW. R123 fluid also 
+66
+Iran power 
+generation
+energy and exergy 
+performance 
+evaluation
+showed a 4.1% decrease in total exergy loss, 
+indicating that it's suitable for the cycle.
+Gangwar et al. 
+(2023) [116].
+Spain
+Automation 
+and process 
+control, 
+digitalization 
+(modeling, 
+industry 4.0, 
+analytics)
+Monte-Carlo 
+scenario generator 
+(MCSG), ARIMA 
+(Autoregressive 
+integrated moving 
+averages)
+Simulation-optimization method for scheduling 
+energy-intensive industries under the uncertainty 
+of the spot electricity market
+Zhang et al. 
+(2021) [117].
+Turkey
+Digitalization 
+(control and 
+optimization)
+Linear model 
+predictive control 
+(LMPC) algorithm
+Demonstrates that model predictive control 
+(MPC) technologies can reduce power 
+consumption by 3-8% while also increasing 
+production and reducing fuel consumption.
+Tong et al. 
+(2023) [118].
+China
+Digitalization, 
+Industry 4.0 
+concepts
+SAAS-based cement 
+process digital 
+applicant, Artificial 
+Intelligence, and 
+Advanced Process 
+Control (APC)
+2 -5% potential energy savings from improved 
+process control.
+Zhu et al. (2022) 
+[119]
+Digitalization 
+(modeling, 
+industry 4.0, 
+analytics)
+Real-time 
+optimization
+A real-time optimization method based on 
+system identification is especially suitable for 
+energy and utility systems.
+Altun, O. 
+(2018). [120]
+Digitalization 
+(modeling, 
+industry 4.0, 
+analytics)
+Simulation and 
+modeling
+This optimizes the energy efficiency and the 
+quality of the end-product by modeling and 
+modifying the existing flowsheet of the cement 
+grinding circuit.
+Belmajdoub, F., 
+& Abderafi, S. 
+Digitalization 
+(modeling, 
+Multilinear 
+regression model
+Optimization of specific electricity consumption
+67
+(2018) [121]. 
+Morocco
+industry 4.0, 
+analytics)
+Ye et al. (2023) 
+[122]. China
+Digitalization 
+(modeling, 
+industry 4.0, 
+analytics)
+Markov process 
+model and 
+reinforcement 
+learning
+Design of industrial demand response 
+scheduling methods using reinforcement learning 
+algorithm
+The production line of modern cement plants can be partitioned into these four sub-processes: crushing, 
+kiln feed preparation, clinker production, and finish grinding. The cement manufacturing process heavily 
+relies on electricity for various operations, such as crushing and grinding the raw materials, transporting 
+substantial volumes of gases and materials throughout the facility, and grinding the final cement product. 
+The electricity consumption of a grinding workshop is typically modeled as a function of the power demand 
+of the equipment and the throughput of the material in the mill feed [121]. The objective is to optimize 
+specific electricity consumption while keeping the mill operation stable and the product quality and 
+production quantity according to plan. Effectively reducing electricity consumption reduces the carbon 
+footprint due to the indirect impact of the electricity generating power plants which use either fossil fuel or 
+natural gas. At a high level, the design of the optimization experiment will include the following:
+• Identifying and modeling of the electrical energy-intensive components of the production process 
+[133]. 
+• Data measurement and collection of mill-controlled and manipulated parameters such as crushers, 
+conveyors, mill motor and fan power, vibration, bed material height, residue fineness, mill throughput, 
+mill output temperature, mill roller hydraulic pressure, mill fan speed, and separator speed. This will 
+require the installation of sensors and meters where necessary.
+• Exploratory data analysis is used to find patterns and uncover insights, helping to determine the linear 
+and non-linear relationships of variables with the objective function and the optimization methods to 
+experiment with.
+68

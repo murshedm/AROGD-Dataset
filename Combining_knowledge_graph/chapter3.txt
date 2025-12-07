@@ -1,0 +1,217 @@
+Chapter 3
+Related Work
+As multi-hop question generation has gained specific attention from researchers because
+of the advancement of Artificial Intelligence (AI), researchers have made unique contribu-
+tions to question generation and specifically to multi-hop question generation. This chapter
+discusses the current state-of-the-art in the area of question generation, techniques, and
+methodologies used, and the scope which a researcher can contribute in the QG field.
+At first, different question generation approaches are discussed such as template-based ap-
+proach, syntax-based approach, semantic-based approach, and sequence-to-sequence mod-
+els. The emphasis is given to the multi-hop question generation research. We have explored
+current research on the multi-hop question generation process, the dataset used in the re-
+search, and the evaluation approaches used. We have tried to find the architecture, and
+effectiveness of it, and to point out limitations, if any, in the architecture. This review pro-
+vides us a path to understanding state-of-the-art models of multi-hop question generation,
+finding the research scope, and deciding our thesis methodology.
+3.1
+Question Generation Task
+Sentence-to-question transformation for factual question generation was first introduced
+by Mitkov (2006) (Blˇst´ak and Rozinajov´a, 2021). Rus et al. (2010) had a great impact on
+question generation systems where a question was generated from a sentence and para-
+graphs. Zhang et al. (2021) discussed the state-of-the-art, present methodologies, and fu-
+ture scopes of question generation from a given passage or answer. From the analysis of the
+26
+
+3.1. QUESTION GENERATION TASK
+paper, the template-based approach, syntax-based approach, and semantic-based approach
+are the main three approaches of the rule-based approach. On the other hand, traditional
+Seq2seq models, pre-trained Seq2seq models, generative models, and graph-based models
+are utilized in the neural network-based approach.
+3.1.1
+Syntax Based Question Generation
+Syntax-based Question Generation is considered one of the fundamental processes that
+follows the syntactic structure of a sentence to generate meaningful questions. It is a rule-
+based approach that utilizes syntactic parsing to find the grammatical relationship and trans-
+formation rules to generate the questions (Dhole and Manning, 2022; Khullar et al., 2018).
+The main advantages of the syntax-based approach are that it performs better in generating
+short questions, and can identify the question type by analyzing syntactic patterns. How-
+ever, it often struggles to generate complex questions. Generating questions with gram-
+matical errors are the major limitations of this approach (Heilman and Smith, 2010; Yao,
+2010).
+3.1.2
+Semantic Based Question Generation
+Semantic-based Question Generation focuses on the deep understanding of the text by
+extracting meaning, relations, and entities from the text (Flor and Riordan, 2018). This
+approach utilizes Semantic Role Labeling (SRL) which identifies the semantic relationships
+in a sentence (M`arquez et al., 2008). This approach can generate wider variety of accurate
+questions by using deeper meaning of the sentence (Yao et al., 2012; Ma et al., 2020).
+3.1.3
+Template Based Question Generation
+Template-based Question Generation uses predefined templates to generate questions
+where templates can be defined as predefined structures with placeholders (Biermann et al.,
+2018; Liu et al., 2018; Chen and Aist, 2009). Though this approach is very straightfor-
+ward, it can generate questions ensuring grammatical correctness, designing high-quality
+27
+
+3.1. QUESTION GENERATION TASK
+templates are major drawbacks of this approach because it requires human efforts and lin-
+guistic diversity (Yao, 2010).
+3.1.4
+Sequence-to-Sequence Approach
+Sequence-to-sequence (seq2seq) models (Sutskever et al., 2014) are data-driven ap-
+proaches using neural network architecture to generate questions. An encoder process the
+input text and a decoder generates the question.
+Du et al. (2017) applied an RNN encoder-decoder architecture as a fully data-driven neural
+network approach for question generation. A bi-directional LSTM is used to encode the
+sentence. The attention mechanism is used to make the model focused on certain elements
+of the input. The SQuAD (Rajpurkar et al., 2016) dataset is utilized in this work which
+contains 100k questions from 536 articles. The seq2seq model with attention mechanism
+where pre-trained word embedding is implemented provides better results than without pre-
+trained word embedding seq2seq model with attention mechanism. The main contribution
+of this paper is to propose an attention mechanism first for generating questions.
+Sun et al. (2018) proposed an attention-based pointer generator model where a bi-directional
+LSTM works as an encoder and unidirectional LSTM works as a decoder. Local attention
+is used to narrow the focus in the input sequence and word position embedding is incorpo-
+rated. MS Marco (Nguyen et al., 2016) and SQuAD (Rajpurkar et al., 2016) datasets are
+used in this research. The main contribution of this research is that the model does not copy
+any irrelevant words from the input.
+Rabin et al. (2023) proposed a question generation model for generating one or multiple
+questions using the consistency parser. SNLI (Bowman et al., 2015) dataset used in this
+research work contains natural langauge inference (NLI) pairs that have two sentences de-
+noting a premise and a hypothesis. The authors have filtered those questions with common
+answers and finally selected questions that only use information known to the user. The
+major contribution of this research is to propose an approach for gap-focus question gener-
+28
+
+3.1. QUESTION GENERATION TASK
+ation that involves information gaps between the interlocutors during communication and
+utilize NLI dataset.
+Oh et al. (2023) proposed a multiple reference question generation system utilizing LLMs
+(Chatgpt and GPT-3) to generate reference augmentation questions by paraphrasing each
+question. Each question is paraphrased 20 times. The Quiz design dataset (Laban et al.,
+2022) is used in this research which contains 3,164 human-annotated samples.
+Semantic Role Labeler (SRL) can be combined with the seq2seq approach where SRL gen-
+erates the semantic representation of input, which is used to train the seq2seq models. Naeiji
+et al. (2023) proposed an approach where using SRL BERT, each answer is converted to its
+semantic representation. Each question is also converted to its semantic representation. If
+a semantic role label occurs both in the answer and question, then the question is replaced
+by the label. Otherwise, cosine similarities are assigned to generate the question by com-
+paring each label word with a possible n-gram from the question. The highest similarities
+are replaced by the question. T5 and BART are used as Seq2seq models. Three datasets are
+used in this work: SQuAD (Rajpurkar et al., 2016), NewsQA (Trischler et al., 2017), and
+CarManuals (Alfassy et al., 2022).
+3.1.5
+Multi-hop Question Generation
+Though multi-hop question generation is a new area of research and some advances have
+been made in this field, multi-hop QG has gained great attention from researchers now. By
+generating multi-hop questions, reasoning-based questions can be ensured. To solve the
+unique challenges of multi-hop QG, researchers have proposed some methodologies. Some
+of the approaches are based on graph neural networks, large language models, prompting,
+attention mechanisms, advancement of encoder-decoder architecture, fusion networks, and
+others.
+Su et al. (2020) proposed MulQG that is a sequence-to-sequence based model to generate
+multi-hop questions without any sentence level information. In the MulQG model, two
+29
+
+3.1. QUESTION GENERATION TASK
+Table 3.1: Comparison of Seq2seq models in QG task.
+Paper Title
+Methodology
+Dataset
+Learning to Ask: Neural Ques-
+tion
+Generation
+for
+Reading
+Comprehension (Du et al., 2017)
+Seq2Seq
+with
+Bi-directional
+LSTM
+SQuAD
+Question
+Generation
+Using
+Sequence-to-Sequence
+Model
+with
+Semantic
+Role
+Labels
+(Naeiji et al., 2023)
+T5 and BART
+SQuAD, NewsQA and Car Man-
+uals
+Answer-focused
+and
+Position-
+Aware Neural Question Genera-
+tion (Sun et al., 2018)
+Attention Based Pointer Genera-
+tor
+SQuAD and MARCO
+Open-World Factual Consistent
+Question Generation (Mahesh-
+wari et al., 2023)
+Pegasus large and BART-large
+ELI5
+Question Generation for Ques-
+tion Answering (Duan et al.,
+2017)
+CNN and RNN
+Community QA
+Event Extraction as Question
+Generation and Question An-
+swering (Lu et al., 2023)
+BART and T5
+ACE 2005
+RQUGE: Reference-Free Metric
+for Evaluating Question Genera-
+tion by Answering the Question
+(Mohammadshahi et al., 2023)
+GPT-2 and T5
+SQuAD, NQ, and MS-MARCO
+Evaluation of Question Genera-
+tion Needs More References (Oh
+et al., 2023)
+Chatgpt and GPT 3
+Quiz Design Dataset
+30
+
+3.1. QUESTION GENERATION TASK
+bidirectional LSTM-RNNs encoders are used to obtain initial contextual representations.
+A third bidirectional LSTM is used to create answer-aware context encoding. They have
+constructed the entity graph with the name entities in contexts as node where the edges
+between entities are created if they are in the same sentence, or in the same paragraphs.
+A Graph Convolution Network (GCN) is leveraged to perform multi-hop context encoding
+and use biattention mechanism (Seo et al., 2018) to update multi-hop answer encoding.
+Lastly, a reasoning gate is applied on the answer-aware context encoding. The decoder part
+is consisted of a uni-directional LSTM and a maxout pointer generator. For this research,
+HotpotQA dataset is utilized.
+To ensure the complexity of the generated questions, Fei et al. (2022) proposed CQG which
+is a effective controlled framework. Entity graph is constructed following Qiu et al. (2019)
+from the input documents and Graph Attention Network (GAT) (Veliˇckovi´c et al., 2018)
+is employed. The answer is concatenated with the text and the sequence is passed to pre-
+trained BERT model. A transformer based decoder is constructed as controlled generation
+framework. The HotpotQA dataset is used for experiments of this research.
+Emerson and Chali (2023b) proposed a multi-hop question generation approach that applies
+a transformer model without utilizing any sentence level supporting fact information. Con-
+cepts that are effective in single-hop question generation are incorporated in this research
+including a copy mechanism and placeholder tokens.
+Jamshidi and Chali (2025) proposed GNET-QG, which integrates a GAT with sequence-
+to-sequence models. Constructing entity graph by nodes representing entities and edges
+representing relationships between entities, a multi-head GAT is applied before linear trans-
+formation to create enriched input text. BART and T5 are used as pre-trained transformer
+models. After fine-tuning the model with the HotpotQA dataset, better performance is ob-
+tained by BART when compared to the T5 model.
+Cao et al. (2023) proposed knowledge graph enhanced language model (KGEL). The whole
+methodology can be split into three steps. In the first step, a GPT-2 model is utilized for en-
+31
+
+3.1. QUESTION GENERATION TASK
+coding the context and answer. An answer-aware GAT with bi-directional attention mecha-
+nism provides the path to interact between the answer and the knowledge graph. Multi-hop
+questions are generated from the enhanced context representation using multi-head self at-
+tention module (Vaswani et al., 2023). The performance of the KGEL model is evaluated
+on the HotpotQA dataset.
+32

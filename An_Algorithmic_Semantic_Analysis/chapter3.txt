@@ -1,0 +1,918 @@
+30 
+CHAPTER 3: RESILIENCE IN COMPLEX SOCIOTECHNICAL ECOSYSTEMS 
+ 
+ 
+ 
+What is Resilience? Struggling for a Definition 
+ 
+Resilience has a problem: researchers and practitioners cannot agree on what resilience 
+is. Much of the research follows U.S. Supreme Court Justice Potter Stewart’s line of thinking, “I 
+know it when I see it” [27]. Complicating matters further, resilience is used across disparate 
+fields ranging from ecology to psychology to engineering systems. As this chapter will show, 
+each field discusses resilience in slightly different terms.  
+Definitions abound in the cyber field, but they do not bring much clarity for non-cyber 
+professionals on how to think about cyber resilience and often overlap heavily. The publications 
+cited below often have more than one definition for the term, muddying the waters further. To 
+make it even harder for practitioners to understand, marketing and business development 
+materials from cybersecurity companies often use many of the terms interchangeably. 
+• 
+Cybersecurity: The process of protecting information by preventing, detecting, and 
+responding to attacks [28]. 
+• 
+Cyber Survivability: The ability of warfighter systems to prevent, mitigate, recover from 
+and adapt to adverse cyber-events that could impact mission-related functions by 
+applying a risk-managed approach to achieve and maintain an operationally relevant risk 
+posture throughout its life cycle [28]. 
+
+31 
+• 
+Resilience: The National Institute for Standards and Technology Computer Resource 
+Center’s Glossary lists ten different definitions for resilience1, none of which match the 
+most-used definition from the National Academy of Sciences for resilience. “The ability 
+to prepare and plan for, absorb, recover from, and more successfully adapt to adverse 
+events” [29]. 
+• 
+Cyber Resiliency: The ability to anticipate, withstand, recover from, and adapt to 
+adverse conditions, stresses, attacks, or compromises on systems that use or are enabled 
+by cyber resources. Cyber resiliency is intended to enable mission or business objectives 
+that depend on cyber resources to be achieved in a contested cyber environment [28]. 
+• 
+Robustness: The ability of an information assurance (IA) entity to operate correctly and 
+reliably across a wide range of operational conditions, and to fail gracefully outside of 
+that operational range [30]. 
+• 
+Reliability: The ability of a system or component to function under stated conditions for 
+a specified period of time [28]. 
+• 
+Securely Resilient: The ability of a system to preserve a secure state despite disruption, 
+to include the system transitions between normal and degraded modes. Securely resilient 
+is a primary objective of systems security engineering [28]. 
+• 
+Security: Protection against intentional subversion or forced failure. A composite of four 
+attributes – confidentiality, integrity, availability, and accountability – plus aspects of a 
+fifth, usability, all of which have the related issue of their assurance [28]. 
+ 
+1 NIST Computer Security Resource Center Glossary provides a consolidation of definitions across NIST’s 
+publications. resilience - Glossary | CSRC (nist.gov) 
+
+32 
+• 
+Supply Chain Assurance: Confidence that the supply chain will produce and deliver 
+elements, processes, and information that function as expected [30]. 
+• 
+Cyber Supply Chain Risk Management: A systematic process for managing cyber 
+supply chain risk exposures, threats, and vulnerabilities throughout the supply chain and 
+developing risk response strategies to the risks presented by the supplier, the supplied 
+products and services, or the supply chain [31]. 
+• 
+Cyber Risk: Risk of financial loss, operational disruption, or damage, from the failure of 
+the digital technologies employed for informational and/or operational functions 
+introduced to a manufacturing system via electronic means from the unauthorized access, 
+use, disclosure, disruption, modification, or destruction of the manufacturing system [32]. 
+The overlap among the definition is pronounced, and the community has yet to form a consensus 
+on what cyber resilience is and how it is distinct from cybersecurity and other cyber practices 
+and terms—resilience is almost defined as lack of successful attacks. A recent meta-survey of 
+resilience and cyber resilience literature by Sidney Smith of the Army Research Laboratory 
+highlighted this fact, citing eight different literature reviews that came to the same conclusions, 
+that there is no clearly accepted definition, and that “the definition has expanded to the point of 
+meaningless jargon” [2], [33]. 
+ 
+Describing Resilience: A Data-Centric Approach 
+ 
+Getting to a commonly accepted definition has proven elusive for this interdisciplinary 
+concept, despite the growing, interdisciplinary body of research that supports it. A meta-analysis 
+
+33 
+of the literature reveals that resilience has several common themes or features that emerge, even 
+if a precise definition does not.  
+ 
+As described in the previous chapter, this research approaches resilience from an 
+interdisciplinary, data-centric approach. It uses modern data science techniques and machine 
+learning algorithms to analyze a corpus of resilience definitions from literature to arrive at a set 
+of concepts or features, if not a potential common definition. This analysis uses a corpus of 44 
+interdisciplinary papers, books, and documents sourced from searches of the SCOPUS database 
+and Google Scholar from February 2023 to October 2024 [2-7], [9], [34-70]. The disciplines 
+ranged from cybersecurity, psychology, community studies, disaster relief, ecology, network 
+science, organizational studies, international relations, sociology, and medicine. Some of the 
+sources contained similar, qualitative analyses of resilience definitions, and thus had multiple 
+definitions in the source. The 44 documents contained 123 definitions, of which 102 were 
+unique.  
+ 
+Unlike traditional literature reviews, this research approaches these definitions from a 
+data science perspective, using statistical and machine learning techniques to understand how 
+this interdisciplinary community writes about resilience. To support the analyses, the 123 
+definitions were tokenized and lemmatized, which removes common stop words (i.e., the, of, an, 
+etc.), and duplicate definitions removed. A dictionary of custom stop words was developed 
+iteratively during the analysis to remove additional stop words from the corpus, which included 
+the following words: resilience, defined, cyber, use, way, long, well, paper, manner, also, and 
+even. The following content analyses were conducted on the 102 unique definitions: a word 
+cloud, word co-occurrence matrix, term frequency-inverse document frequency (tf*idf) analysis, 
+and Latent Dirichlet Allocation analysis. Each analysis provides a different insight or look into 
+
+34 
+how the interdisciplinary community identifies and defines resilience. Taken together, the body 
+of analyses will provide a set of concepts that form a meta-definition for resilience.  
+ 
+ 
+Word Cloud Analysis 
+ 
+A word cloud is a simple visualization of term frequency in a body of text. It provides an 
+easy visualization of which terms occur most frequently in the body of the text and allows for 
+greater and more rapid intuitive understanding of the important concepts. The word cloud based 
+on the 102 definitions is shown below in Figure 6. It was produced using the WordCloud 
+package (v1.9.3) for Python [71].  
+ 
+Figure 6: A word cloud showing the frequency of occurrence for terms in the corpus of 102 definitions of resilience. 
+From this figure, the following key concepts on resilience emerge. First, resilience is about a 
+system’s ability and capacity to change in response to a stressor or disturbance. Second, that 
+capacity is likely a function of the system’s capacity for absorption, adaptation, and community 
+
+35 
+in which the system exists. Finally, resilience is a process to recover from and overcome 
+adversity and produce a positive state. Of note, word clouds do not show the connections, 
+relationships, or frequency of co-occurrence between terms, just the simple counts of term 
+frequency.  
+ 
+ 
+Word Co-Occurrence Network Analysis and Jaccard Similarity 
+ 
+Word clouds provide an excellent, first-order analysis of terms in a document, but they do 
+not necessarily reveal linkages between the terms and how the definitions use those terms in 
+different combinations. That linkage can be provided by a word co-occurrence matrix, which 
+relates how often a term appears next to another term in the list of definitions. The 
+CountVectorizor function in the scikit-learn (v1.4.2) package for Python “converts 
+a collection of text documents into a matrix of token counts” [72]. The tokenization of the 
+definitions decomposes each definition into a set of tokens, which are generally individual words 
+with punctuation removed and converted to all lowercase. The function then counts how often 
+two tokens, such as “resilience” and “system” or “system” and “ability” appear next to each 
+other in the body of definitions.   
+The matrix itself can be hard to draw insights from, but viewing the results as a network 
+diagram provides a more readily interpretable picture of how often the terms occur (node size) 
+and how often they appear with other terms (edges connecting to other nodes). Figure 7, below, 
+shows the network diagram for the word co-occurrence matrix on the 102 definitions.  
+
+36 
+ 
+Figure 7: A Word Co-occurrence Network View of Term Frequency and Connection for 102 Definitions of Resilience 
+From this network diagram, resilience of a system is both a capacity and an ability. These nodes 
+have frequent linkage to change, disturbance, state, absorption, organization, stress, and 
+recovery. Like the interpretation of the word cloud, the word co-occurrence network diagram 
+highlights term frequency, but also the relationship between terms.  
+
+37 
+ 
+Of greater interest might be the importance of words from the word cloud analysis and 
+the linkage with terms in the word co-occurrence matrix. A few term groupings that are worth 
+noting are provided here:  
+ System, ability, disturbance, stress, and state: Across the interdisciplinary set of 
+definitions emerges the concept that resilience is the ability of a system to respond to a 
+stressor or disturbance, and that system has a definable state. State can take on many 
+connotations depending on the field, but, in general, the state can be thought of as the set 
+of variables that define the system at a given point in time. This linkage of terms implies 
+a temporal dimension to resilience: a system is in one state, experiences a stressor or 
+disturbance, and responds and recovers to the previous state or adapts to a new state.  
+ System, structure, and capacity: The capacity of a system to respond to a stressor or 
+disturbance is a function of its structure. This implies that there may be some system 
+structures that reduce adaptive capacity or create outsized adaptive capacity that may not 
+be present in similar systems undergoing similar disturbances.   
+ Identity, capacity, and change: Related to the previous bullet point about system, 
+structure, and capacity, the relationship of identity to capacity and change may imply that 
+identity plays a role in the degree of emergence, or not, of adaptive capacity in the 
+system.  
+ Organization, system, stress, and ability; Community, ability, and disturbance: Both 
+groupings relate the ability of a system to respond to a stressor or disturbance as a 
+potential function of the community or organizational structure of system, or that the 
+system is a part of. This implies that the system should be viewed, potentially, at multiple 
+levels or scales.  
+
+38 
+ Capacity and process: The term capacity conjures thoughts of a static variable that 
+describes how much of a stressor or disturbance a system can withstand while 
+maintaining its functions or absorbing a cyberattack. The frequent pairing with process 
+implies a far more dynamic view of capacity: that the capacity of a system may change 
+on a temporal basis as a function of the other variables described, not as a fixed quantity 
+from which the system can draw on or rely on.   
+Next, calculating the Jaccard coefficients for the pairs in the word co-occurrence network 
+reveals insights into how similar certain words are within a set. They are equivalently known as 
+the Jaccard similarity. The Jaccard coefficient is a function of two sets of data: the elements in 
+the intersection of the two sets divided by the union of the two sets [73]. The coefficient is on the 
+range [0,1], with 0 indicating no similarity between the sets, and 1 indicating the sets are 
+identical. In this relatively small dataset, there will likely be identical sets, but a heatmap 
+representation of the word co-occurrence by Jaccard coefficients, in Figure 8, below, shows 
+which words share stronger relationships than the network diagram in Figure 7 leads on.  
+
+39 
+ 
+Figure 8: A heatmap of the Jaccard coefficients showing the strength of relationships between the top 29 terms in the resilience 
+definition dataset 
+The heatmap confirms the previous analysis of “interesting” relationships from the network 
+diagram. Two new insights emerge from the heatmap, though:  
+ Identity lacks strong similarity with most of the terms in the definition, but an analogous 
+term, self, has strong similarity to many of the terms instead. This may be an artifact of 
+the data analysis process in that those two definitions were not lemmatized into a single 
+concept, but, philosophically, it raises an interesting question. Is identity tied to a sense of 
+
+40 
+self, and how does that shape the perception of resilience and what stable states are 
+considered acceptable? 
+ Coping with adverse events is strongly correlated with both individuals and resources, 
+indicating that adaptive capacity comes from both within (i.e. individual and 
+organizational identity, as previously discussed) and the resources available to the system.  
+The combinatory analysis of word co-occurrence and Jaccard coefficients provided a greater 
+level of detail into the relationships between words in the corpus of resilience definitions. It 
+shows the nuanced and complex relationship between the system, its ability and capacity for 
+change, and the variables that affect it. It shows that resilience is likely subjective, and has both 
+temporal and scalable components to it, as strong ties to community showed.   
+ 
+ 
+Term Frequency – Inverse Document Frequency Analysis 
+ 
+Term frequency – inverse document frequency is a measure of a term’s importance within 
+a body of text and is a well-regarded, though basic, algorithm for analyzing text [25]. Applying 
+the tf*idf algorithm to the corpus of 102 definitions using the TfidfVectorizer from the 
+scikit-learn (v1.4.2) package resulted in 566 unique terms which are scored according to 
+the tf*idf definition. The value of tf*idf analysis is the ability to reveal terms that have greater 
+importance than others. In a collection of definitions, similar to the previous two analyses, tf*idf 
+
+41 
+highlights the terms that the interdisciplinary community uses the most. A histogram of the tf*idf 
+scores of the 566 terms, shown in Figure 9, below, depicts this.  
+ 
+Figure 9: A histogram of 100 bins showing the distribution of tf*idf scores for 566 terms in the corpus of resilience definitions 
+ The statistical description of the distribution of tf*idf scores:  
+Table 1: Statistical descriptors for the histogram of tf*idf scores 
+Descriptor 
+Value 
+Number of Terms 
+566 
+Mean 
+0.60279 
+Median 
+0.36418 
+Standard Deviation 
+0.60973 
+
+42 
+Minimum 
+0.20292 
+Maximum 
+6.10947 
+ 
+The standard practice in data science would be to examine the top quartile for the 
+significant terms.2 Given the number of terms and the distribution of the tf*idf scores shown in 
+Figure 9, the top 5% of terms includes those with tf*idf scores >1.80 and provides a reasonable 
+number of terms (n = 29) for further analysis. The top 5% of terms and their tf*idf scores are 
+provided in Table 2, below.  
+Table 2: Top 5% of terms by tf*idf Score 
+Term 
+Td-idf Score 
+Ability 
+6.109 
+Capacity 
+5.365 
+Change 
+3.546 
+Disturbance 
+3.512 
+Adapt 
+3.212 
+Stress 
+3.195 
+Community 
+2.934 
+Process 
+2.918 
+Absorb 
+2.692 
+State 
+2.651 
+Recover 
+2.607 
+ 
+2 The top quartile is the generally accepted threshold for significance in tf*idf scores; however, there is no literature 
+directly validating this threshold, nor examining the effect of statistical distributions of tf*idf scores in selecting the 
+significance threshold for further analysis.  
+
+43 
+Function 
+2.531 
+Risk 
+2.405 
+Positive 
+2.396 
+Adaptation 
+2.366 
+Event 
+2.355 
+Adaptive 
+2.312 
+Condition 
+2.267 
+Adversity 
+2.264 
+Resource 
+2.231 
+Face 
+2.212 
+Organization 
+1.970 
+Withstand 
+1.958 
+Adverse 
+1.979 
+Outcome 
+1.908 
+Maintain 
+1.879 
+Despite 
+1.862 
+Cope 
+1.827 
+Structure 
+1.811 
+ 
+ 
+The results from the tf*idf algorithm on the 566 terms from the definition reinforce the 
+observations from both the word cloud analysis and the word co-occurrence matrix analysis. 
+Resilience is most often described as an ability and capacity to change in response to a stressor 
+
+44 
+or disturbance. It is a function of the community and organizational structure in and around the 
+system, and that adaptive capacity is a process, not a static quantity.  
+ 
+ 
+Latent Dirichlet Allocation Analysis 
+ 
+Tf*idf analysis provides an excellent lower-level analysis of a text to extract key terms, 
+but it struggles to reduce the dimensionality of large bodies of text, making feature extraction or 
+term significance harder to identify. Latent Dirichlet Allocation provides a generative 
+probabilistic model to generate Bayesian topic probabilities of topics that are represented in a 
+document [50]. By using Bayesian probabilities to estimate the probability of a term belonging to 
+a particular topic, LDA allows for more efficient and effective topic identification and extraction.  
+ 
+LDA analysis requires a fixed number of topics to show the semantic similarity 
+(coherence) among the words within the topic. Determining the right number of topics requires 
+both quantitative and qualitative analysis. For the quantitative analysis, a grid search is 
+performed on the dataset with a specified number of topics ranging from 5-20, which is a 
+generally accepted adequate starting range, and the coherence scores calculated. A higher 
+coherence score indicates greater semantic similarity within a given topic and greater 
+interpretability of the topics. Given the very small data set this research is working with 
+compared to other data mining and big data applications, this analysis hypothesizes that few 
+topics will be required for a sufficient LDA analysis. Qualitatively, the topics are evaluated for 
+consistency and overlap using heuristic methods. The qualitative analysis evaluates the topics for 
+both meaning and distinctness from other topics. For example, too many topics would likely 
+result in a greater degree of overlap between topics; both describing essentially or largely the 
+
+45 
+same concepts. The previous analyses—word cloud, word co-occurrence, and tf*idf—provide 
+good calibration for the heuristic methods.  
+The use of coherence, log perplexity, and Jensen-Shannon Divergence provides 
+quantitative measures to evaluate the quality of the LDA model. Coherence measures how 
+semantically similar the words are within a topic, which corresponds well with human judgment 
+of topic quality. Higher coherence scores indicate the topic contains words that belong together 
+conceptually [74]. Log perplexity, the logarithm of the model's perplexity score, measures how 
+well the model fits the data. Lower (more negative) values suggest the model better represents 
+the underlying data distribution. However, research has shown that perplexity doesn't always 
+align with human interpretations of topic quality [75]. Jensen-Shannon Divergence measures the 
+distinctness between topic distributions, with higher values indicating better separation between 
+topics. This helps ensure the LDA model isn't creating redundant topics [76]. These three metrics 
+together provide a balanced approach to evaluating topic model quality—balancing 
+interpretability, statistical fit, and topic distinctiveness. The results for the grid search are shown 
+below, in Table 3, and represent the coherence score, logarithm of perplexity, and average 
+Jensen-Shannon Divergence for the given number of topics.  
+ 
+ 
+ 
+
+46 
+Table 3: LDA grid search results on the body of resilience definitions, including model coherence, perplexity, and the average 
+Jensen-Shannon Divergence 
+Number of Topics 
+Coherence 
+Log Perplexity3 
+Average Jensen-
+Shannon Divergence 
+5 
+0.340185 
+-6.50129 
+0.17838 
+6 
+0.313048 
+-6.54544 
+0.20177 
+7 
+0.332992 
+-6.56282 
+0.22134 
+8 
+0.360202 
+-6.63912 
+0.22890 
+9 
+0.387011 
+-6.60328 
+0.25191 
+10 
+0.379103 
+-6.70799 
+0.25381 
+11 
+0.449869 
+-6.78788 
+0.25389 
+12 
+0.396243 
+-6.79102 
+0.26114 
+13 
+0.393525 
+-6.76626 
+0.27918 
+14 
+0.377734 
+-6.87054 
+0.28048 
+15 
+0.378645 
+-6.93568 
+0.27510 
+16 
+0.347337 
+-6.87989 
+0.29107 
+17 
+0.380038 
+-6.93054 
+0.29071 
+18 
+0.386032 
+-6.94343 
+0.30051 
+19 
+0.41191 
+-6.90956 
+0.30913 
+20 
+0.431801 
+-7.03320 
+0.30037 
+Mean 
+0.37911 
+-6.77549 
+0.26111 
+Standard Deviation 
+0.03432 
+0.15985 
+0.03644 
+ 
+3 The negative perplexity values are the result of the Gensim package (v4.3.3) taking the logarithm of the 
+perplexity value, which is a probabilistic function. Since the probability values are less than 1, the log perplexity 
+value will be negative.  
+
+47 
+The relatively equal scores are likely the result of a small dataset with a greater degree of 
+similarity between terms. The maximum coherence score from the grid search, 0.449869 with z 
+= 2.061, suggests the ideal number of topics should be set at 11. While lower perplexity values 
+and higher Jensen-Shannon Divergence scores indicate a better model fit and greater distinctness 
+between topics, these need to balance against the coherence score. The values for 11 topics strike 
+an acceptable balance. 20 topics may fit better by quantitative metrics, but the qualitative 
+analysis of the topics generated by LDA shows over-segmentation of the small dataset. The 
+topics from the LDA algorithm are presented in Table 19, below, along with the interpretation of 
+the grouping of terms in that topic.  
+Table 4: Topics and interpretations from a Latent Dirichlet Allocation analysis of resilience definitions 
+Topic 
+Terms in the Topic 
+Potential Interpretation 
+1 
+0.020*"ability" + 
+0.020*"experience" + 
+0.020*"stress" + 
+0.020*"positive" + 
+0.014*"system" 
+Resilience is related to the system’s capability to 
+handle stress and experiences in a positive light  
+2 
+0.037*"system" + 
+0.029*"ability" + 
+0.019*"process" + 
+0.019*"stress" + 
+0.013*"term" 
+Resilience is related to the process a system uses to 
+respond to stressful events over a time scale 
+3 
+0.031*"system" + 
+0.027*"ability" + 
+Resilience is related to disruptive, impactful, and other 
+extreme events and the ability to survive those events 
+
+48 
+0.026*"disaster" + 
+0.026*"extreme" + 
+0.020*"survive" 
+4 
+0.043*"ability" + 
+0.025*"capacity" + 
+0.017*"change" + 
+0.016*"system" + 
+0.015*"event" 
+Resilience is related to the ability and capacity for a 
+system to change in response to an event 
+5 
+0.036*"ability" + 
+0.033*"community" + 
+0.021*"stress" + 
+0.016*"disturbance" + 
+0.016*"crisis" 
+Resilience is related to a system’s functions across 
+scales or a community (vice individual or 
+organizational) in response to crises or stressors 
+6 
+0.054*"system" + 
+0.023*"capacity" + 
+0.022*"ability" + 
+0.016*"disturbance" + 
+0.016*"stress" 
+Resilience is related to a system’s capability or ability 
+to respond to a disturbance or stressor 
+7 
+0.048*"system" + 
+0.025*"ability" + 
+0.021*"within" + 
+0.017*"state" + 
+0.016*"recover" 
+Resilience is related to the ability of a system to 
+recover within a given state 
+
+49 
+8 
+0.042*"capacity" + 
+0.027*"system" + 
+0.023*"change" + 
+0.021*"function" + 
+0.020*"absorb" 
+Resilience is related to a system’s capacity to absorb a 
+disturbance, continue functioning, and change in 
+response 
+9 
+0.020*"mitigate" + 
+0.020*"effect" + 
+0.019*"social" + 
+0.014*"capacity" + 
+0.014*"environment" 
+Resilience is related to mitigating the effects of 
+stressors through social capacities and the environment 
+10 
+0.037*"ability" + 
+0.025*"system" + 
+0.020*"variable" + 
+0.016*"positive" + 
+0.016*"condition" 
+Resilience is related to a system’s ability to respond 
+positively under variable conditions 
+11 
+0.037*"system" + 
+0.017*"ability" + 
+0.014*"shock" + 
+0.014*"particular" + 
+0.014*"adapt" 
+Resilience is related to a system’s ability to adapt in 
+response to specified or particular shocks 
+ 
+ 
+The topical distribution from the LDA analysis reveals how nuanced resilience is. 
+Heuristically, this checks against the inability to arrive at a common definition within a single 
+
+50 
+discipline, let alone in the broader interdisciplinary community. The LDA analysis confirms the 
+results of the prior analyses that resilience is dynamic, impacted by scale and time, and is both 
+process and capacity.  
+ 
+Cumulative Results of the Data Analysis 
+ 
+The analysis yields interesting insights into the generally accepted attributes of resilience, 
+and how those core attributes shape our perceptions of resilience and resilient systems. There is 
+general agreement that resilience is a defined system moving through phases before and in 
+response to a disruptive event, and that the quality of that reaction and response is determined by 
+the pre-existing adaptive capacity before the event, the resources and processes available in 
+response to the event, and how the system responds and adapts across several scales as a result. 
+This fits with resilience as an emergent property of a complex adaptive system [77].  
+First, there is broad agreement that resilience is not a singular, static concept with a tidy 
+definition, but rather a dynamic concept that changes across time and scale for a given system. 
+Prior to a disruptive event, resilience largely revolves around the adaptive capacity of the system 
+in question, such as an individual, community, organization, or ecosystem. This capacity is 
+determined from the adaptive memory of responses and outcomes from earlier stressors (i.e., 
+“lived experience” from a psychological perspective), changes to the system since the earlier 
+stressor, and the capacities of the other actors above and below the scale of the system in 
+question.  
+After a disruptive event occurs, the magnitude of resilience of the actor is determined by 
+that pre-existing capacity for adaptation, and the processes by which the actor absorbs, responds, 
+
+51 
+and adapts to the disruptive event. This can be best seen graphically by adapting a common 
+interpretation of resilience of plan and prepare, absorb, recover, and adapt from a disruptive 
+event and indicating how these concepts relate to resilience as adaptive capacity and process 
+[78].  
+ 
+Figure 10: Resilience and adaptive capacity across time and scale in response to multiple adverse events. 
+ 
+Time and scale become central concepts in the pre- and post-disruptive event phases and 
+define the flow of resilience. Establishing these as a two-dimensional plot allows for the existing 
+interdisciplinary research to be placed into a broader or more systemic context, thus giving 
+resilience a stronger notion of being a fundamental concept on how systems respond to a 
+disruptive event, regardless of the topical approach (i.e., ecology, psychology, etc.). Figure 11, 
+
+52 
+below, shows this framework with the notional placement of different disciplines involved in 
+resilience. Both axes, time and scale, are considered at log-scale to reinforce the concept of 
+linearization about a specific point in time and scale. It also shows the intractability of thinking 
+about resilience as a purely linear, finite concept that is disconnected from cross-scale and long-
+term impacts.  
+ 
+Figure 11: Resilience as a function of time and scale with notional overlay of where various disciplines linearize. 
+ 
+
+53 
+ 
+Resilience and Time  
+The response and adaptation phases operate at short- mid-, and long-term time scales. 
+Short-term actions focus on immediate responses and adaptations to the disruptive event(s). For 
+example, for a cyber breach, this includes traditional incident response actions and post-incident 
+recovery and adaptation actions, such as implementing additional security controls, incorporating 
+new security features, educating users, etc. The mid-term actions in response to a cyber breach 
+might focus on improving the enterprise architecture, organizational investments necessary to 
+reduce the risk of a future breach, or changes in policy and governance. In the case of an 
+organization that is part of a nation’s broader critical infrastructure or nested within a broader 
+ecosystem (as all are), the long-term actions may also include systemic responses to the breach, 
+such as changes in government policies or laws, investigatory actions, punitive actions, etc. To 
+which the actor must adapt. For example, Storm-0558’s breach of Microsoft in 2023 resulted in 
+one of the first high profile investigations by the nascent Cyber Safety Review Board, whose 
+procedures, actions, and recommendations will drive Microsoft and other organizations to adapt 
+their policies to this new investigatory paradigm [79]. Though the future role of federal 
+government oversight and investigations is now up in the air after the Trump Administration 
+disbanded the Cyber Safety Review Board [80]. 
+ 
+ 
+Resilience at Scale 
+Second, the conceptualization of a system as described in the literature is one of a set of 
+actors, processes, and resources across multiple scales. While that can theoretically drive analysis 
+from the nano- to galactic-scales, drawing a system boundary provides necessary constraints to 
+the analysis. These complex adaptive systems are inherently non-linear, and defining a system 
+
+54 
+boundary is akin to assuming linearity at a specified point for ease of analysis with minimal 
+impact to understanding (accuracy). Thus, resilience is defined at a scale and level meaningful to 
+the point of reference, such as a psychologist working with an individual or group, an ecologist 
+studying a local watershed, or a government agency seeking to improve resilience in a critical 
+infrastructure sector. Brief examples from several fields highlight the benefit of a “linear” system 
+boundary in studying resilience.  
+Psychological research into personal resilience focuses not solely on the individual, but 
+how the community around that individual creates the capacity, or lack thereof, for resilience in 
+the individual through experiences in the community and the resources of the community in 
+helping them process a disruptive experience.  
+At the community level, research identifies pre-existing community attributes as central 
+to the adaptive capacity before a disaster or other stressing event strikes, and the resources 
+available to the community at scales above (county, state, and federal governments, non-
+governmental organizations, etc.), below (individuals and families, etc.), and at the same level 
+(e.g., organizations within the community such as religious organizations, community groups, 
+etc.) as the community [54], [56], [81].  
+At the organizational level, there is little direct research into resilience; however, the 
+literature around high reliability organizations, resilience engineering, and similar concepts 
+correlate well with the aspects of resilience discussed thus far [70], [82], [83]. There is a strong 
+parallel to community level concepts and the availability of organizational and community 
+resources before and after adverse events. Within the organization, the research highlights the 
+relationships between technical systems, processes, and organizational culture—a sociotechnical 
+
+55 
+system—as key for sustaining high performance over time and adapting to adverse events in a 
+positive fashion [55], [82-88].  
+At the ecosystem level, ecologists examine the resilience of ecosystems through 
+disruptive events, and the impact of those events on ecosystem services. Research at this level is 
+highly variable, from modeling the resilience of certain wildlife populations in predator-prey 
+relationships to ecosystem response following fire to the degradation of ecosystem services from 
+human impact [89-94]. Many of these studies take place at the local to regional scales, but in 
+showing how scale and time drive ecosystem resilience, there is additional research into the 
+impacts of climate change on local and global ecosystems as well [95].  
+ 
+Common Concepts from Resilience Literature 
+ 
+The analysis using data science techniques yielded multiple insights into the definition of 
+resilience, but it did not fully capture several of the concepts that are still emerging, likely due to 
+lack of sufficient presence within the definitional data set to rise quantitatively to the top. These 
+concepts link broadly with several topics from the Latent Dirichlet Allocation analysis and are 
+worth greater study here: adaptive capacity, graceful extensibility, adaptive management, critical 
+functions, cross-scale interactions, and panarchy (a nested set of adaptive cycles) and the 
+adaptive cycle. These concepts have been largely advanced by Woods, Fath, Connelly, Holling, 
+and others, and heuristically have strong ties to the other disciplines, but the other disciplines 
+have not yet adopted the terminology [43], [96-99].  
+ 
+
+56 
+ 
+Adaptive Capacity and Graceful Extensibility 
+ 
+In the realm of complex systems that serve human purposes, adaptive capacity and 
+graceful extensibility emerge as fundamental concepts that enable sustained adaptability. 
+Adaptive capacity refers to a system's ability to continue adapting to changing environments, 
+stakeholders, demands, contexts, and constraints [69], [100]. Graceful extensibility, on the other 
+hand, is the opposite of brittleness—a sudden collapse or failure when events push a system 
+beyond its boundaries for handling changing disturbances and variations. A system with graceful 
+extensibility can extend its capacity to adapt when surprise events challenge its boundaries [69]. 
+These concepts are interconnected, as adaptive memory and adaptive management play 
+significant roles in shaping a system's adaptive capacity. Previous experiences, such as coping 
+with cyberattacks or other disruptive events, influence how individuals, organizations, and 
+systems respond to future challenges. The response to a disruptive event is a manifestation of the 
+adaptive capacity of the affected actors, with the processes by which they absorb, respond, and 
+adapt determining the magnitude of resilience.  
+As time and scale are crucial factors in understanding both adaptive capacity and graceful 
+extensibility, these concepts can be visualized as a two-dimensional plot that places 
+interdisciplinary research into a broader or more systemic context (Figure 10 and Figure 11). By 
+addressing adaptive capacity and graceful extensibility, we can better understand how complex 
+systems sustain adaptability during changing conditions, ultimately helping us design systems 
+capable of withstanding various challenges and adapting in the face of uncertainty [69]. 
+ 
+
+57 
+ 
+Adaptive Management 
+Memory and adaptive management capture the fact that individuals and organizations 
+have memory, and this influences adaptive capacity. Previous cyberattacks and other disruptive 
+events color how individuals and the organization respond to the next one. Indeed, the response 
+to Midnight Blizzard’s cyberattack against Microsoft coming so quickly following the Storm-
+0558 breach has amplified the calls for greater accountability for Microsoft and driven portions 
+of the federal government to accelerate diversification efforts [101], [102], [103]. The changes 
+made following an attack to make the next one less impactful reflect of the adaptive capacity of 
+the people and the organization as a whole [40]. This is firmly a social phenomenon, not a matter 
+of technical controls and system memory, and thus brings in the social impacts from various 
+cognitive biases in management actions with respect to preparing for the next attack. These 
+biases shape how people respond and adapt following an attack, and the social aspects of this 
+shape changes to the technical and sociotechnical systems [40], [104], [105]. Finally, there is a 
+strong linkage with cross-scale interactions and adaptive management. As organizations come 
+through particularly difficult attacks, understanding the memory and adaptive management of 
+other organizations in the ecosystem, such as state and federal governments, is prudent. 
+ 
+ 
+Critical Functions 
+Critical functions are somewhat self-explanatory. They are the reasons that an 
+organization exists and the value it seeks to deliver as defined by key stakeholders. These 
+stakeholders, in identifying critical functions as they relate to organizational resilience, must 
+identify “the resilience of what, to what, and for whom” [40]. Key to defining critical functions 
+or services is defining both the scale of interest and the time span of interest. It is important to 
+
+58 
+note that the critical functions are not specifically cyber- or IT-related. These are organizational 
+functions critical to delivering the core value proposition. IT exists to enable organizations to 
+better deliver value and services, and cybersecurity and cyber resilience are the means to ensure 
+that the organization can continue to deliver those services despite setbacks. These critical 
+functions provide the basis for risk management activities, and defining acceptable levels of 
+degradation or loss is a crucial responsibility of an organization’s senior leadership [106]. 
+ 
+ 
+Cross-Scale Interactions  
+Cross-scale interactions acknowledge that cyber-attacks or other disruptions, such as 
+weather, impact the organization at multiple levels and on multiple time scales [40], [66]. The 
+long history of cyberattacks against Microsoft provides a clear example of this [107]. Microsoft 
+responded to each cyberattack as it came in over the years, but the ongoing perception of security 
+flaws in their products that the cyberattacks highlight have pushed new sectors and 
+organizations, such as the federal government, to diversify services into additional vendors–also 
+a response to cyberattacks, albeit on a longer timescale [101], [108]. While it was likely well 
+beyond drafting and into interagency coordination during the recent Midnight Blizzard and 
+Storm-0558 cyberattacks on Microsoft, NSM-22 can potentially be seen as a high-level policy 
+response that will alter how ecosystems, and the organizations in them, respond to these 
+cyberattacks in the future. Indeed, calls are growing for the federal government to take a firmer 
+response to Microsoft for their software security, and more broadly to the technology giants that 
+run the bulk of the public cloud services [101], [109]. This change of both scale and temporal 
+spans as a result of cross-scale interactions is known as panarchy, which captures the dynamic 
+and hierarchical structuring of complex systems, and the cycles they go through [97]. 
+
+59 
+ 
+ 
+Thresholds 
+Thresholds invoke the idea that a system or organization may have several stable states 
+that it can operate in. Business continuity plans address this in more concrete terms and capture 
+the threshold concept well. For example, a major power outage or natural disaster in one location 
+may result in the activation of an alternate location from which a business restarts some or all 
+critical functions. Understanding the potential stable states of an organization and how sensitive 
+or robust they are to disturbances is critical to developing a resilience strategy [40], [67]. In the 
+case of a federal agency facing potential service outages from a cyberattack against Microsoft 
+Exchange services, the agency may determine back up means to ensure that a portion of the 
+agency’s services or throughput shift to alternative means while email is inaccessible, such as 
+reducing operations to only certain critical functions, which get printed off and hand-walked 
+through an organization if necessary, instead of all routing done by email. This could be 
+sustained for a long period of time because the reduced number of products matches the 
+inefficiencies from manual routing, or the organization and slowly adapt and create new 
+processes to restore stopped workflows during the Microsoft Exchange outage. In the case of 
+Microsoft, internally, reporting from ProPublica revealed that the Microsoft Security Response 
+Center had crossed a threshold into a new stable state: from responding appropriately to reported 
+threats and working with product teams to remediate them to adopting the attitude “How can I 
+get to won’t fix?” [110]. 
+ 
+
+60 
+ 
+Panarchy and the Adaptive Cycle 
+The 2002 introduction of panarchy and adaptive cycles in ecosystems brought about a 
+major change in the way ecologists approached the study of resilience in ecosystems [97]. The 
+adaptive cycle linked several elements present in ecosystems–system potential, connectedness, 
+and resilience–to how they vary over time. It defined four phases that ecosystems, or in our case, 
+organizations, go through:  
+1. Exploitation and growth,  
+2. Equilibrium or conservation of the status quo ante,  
+3. Release, collapse, and the crisis,  
+4. Confusion, reorientation, and innovation [43], [97].  
+The phases of a resilience shown in Figure 10 occur in Figure 12, below, at the crisis point when 
+an adverse event occurs that impacts the organization’s ability to operate, through the confusion 
+and innovation phases as the organization absorbs and recovers. The adaptive phase begins as the 
+organization enters a phase of new growth, and the transition back to planning and preparation 
+for adverse events begins anew in the new status quo. 
+The private sector sees this cycle play out all the time in the sensational stories of the rise 
+and fall of organizations, turnarounds, and companies beating the odds to stay on top. Think of 
+Good to Great by Jim Collins, The High Velocity Edge by Steve Spear, and countless memoirs 
+from business leaders telling the story of their company’s success [111], [112]. These stories all 
+have a common thread. Organizations accrue resources, including people, financial assets, 
+intellectual property, etc., and then leverage these resources for tremendous growth. Once in a 
+satisfactory position, whether in terms of product, market share, or myriad other indicators, they 
+
+61 
+seek to conserve their position, which inevitably faces a crisis. That crisis results in a collapse or 
+lesser release of resources, which prompts a reorganization, realignment, or other initiative to 
+reposition the organization for a new phase of growth. Figure 12 gives a visual representation of 
+how this occurs over time, as adapted for social systems. 
+ 
+Figure 12: The adaptive cycle as applied to social systems from [43].4 
+Organizations spend most of their time in the exploitation and conservation phases. How 
+long the organization lasts in those phases depends on how resilient and adaptive the 
+organization is to threats, changes to the industry, and myriad other disruptions. The internet 
+unicorns of the dot com bubble seemed to rise and fall overnight while the venerable General 
+ 
+4 “Figure 3: Adaptive cycle applied to social systems. Stages in this cycle are similar to ecological stages, from new 
+growth to status quo, to confusion, and innovation. The differentiation between crises that remain within the 
+threshold and those that lead to dissolution are indicated by the vertical range of tolerance.” Fath BD, Dean CA, 
+Katzmair H. Navigating the adaptive cycle: an approach to managing the resilience of social systems. Ecology 
+and Society 2015;20. Figure used with permission from the author under the Creative Commons License 4.0 - 
+https://creativecommons.org/licenses/by/4.0/.  
+
+62 
+Electric managed to sustain a minimum level of performance for more than 120 years before 
+being delisted from the Dow in 2018 [113]. In the case of Microsoft’s security culture, we can 
+“watch” the cycles play out over the last twenty years, first in 2002 with the secure development 
+lifecycle and Trustworthy Computing initiative, to Bill Gates’ memo to the company in 2012 
+redefining and reinforcing Trustworthy Computing, to Chief Executive Officer (CEO) Satya 
+Nadella’s response to the Storm-0558 breach with the Secure Future Computing Initiative [114], 
+[115], [116]. Each new pronouncement punctuates the crisis point and potentially begins the 
+period of confusion as Microsoft begins to reorganize and reprioritize their work in response.  
+Mapping the adaptive cycle onto an organization to understand how its performance 
+evolves over time is not well established, nor does it provide individuals with an understanding 
+of what drives the seemingly random movement of the exploitation phase. Borrowing a concept 
+from safety-critical industries like nuclear power and healthcare, Cook and Rasmussen provide a 
+framework in Figure 13 that shows how the operating envelope that encompasses the variations 
+in organizational performance and how changes in the organization can push it into a state of 
+crisis, confusion, or collapse as it crosses an unacceptable boundary. 
+
+63 
+ 
+Figure 13: The dynamic safety model from [117] which shows how changes in the forces acting on an organization can drive an 
+organization outside of acceptable performance.5 
+From this, the random wanderings shown in Figure 12 begin to make more sense from an 
+organizational perspective. As people come and go, culture changes, the organization responds to 
+shifts in the industry or threat environment, etc., the performance of the organization wanders in 
+this envelope. In the years leading up to the Midnight Blizzard breach, we can theoretically 
+“visualize” how Microsoft writ large and the Microsoft Security Response Center move 
+ 
+5 “Figure 1: Dynamic safety model. (A) Gradients push the system operating point away from the boundaries of 
+economic failure and work overload and towards the unacceptable performance (accident) boundary. (B) Stable low 
+risk systems (A) operate far from this boundary; stable high-risk systems (B) operate nearer the acceptable margin 
+but the operating point moves in small increments and remains largely inside the marginal boundary; unstable 
+systems (C) have large rapid shifts in the operating point.” Cook R, Rasmussen J. “Going solid”: a model of system 
+dynamics and consequences for patient safety. BMJ Quality & Safety 2005;14:130–4, by permission of BMJ 
+Journals. This image is not covered by the terms of the Creative Commons license of this publication. For 
+permission to reuse, please contact the rights holder.  
+
+64 
+behaviorally from an unacceptable workload boundary because of the number of bugs being 
+reported along with management prioritizing the shipping of new features and the Azure cloud 
+products until Microsoft crosses a final, acceptable performance boundary that enables Midnight 
+Blizzard to make it into the networks [79], [110]. 
+ 
+General versus Specified or Narrow Resilience 
+The relationship between resilience and the disruptive event requires elaboration. Both 
+academic literature and popular discourse on resilience often fail to specify the nature of the 
+relationship, which hides a critical aspect of resilience. The vast majority of definitions do not 
+explicitly define this, but a sufficient number did reference it such that the 11th topic in the LDA 
+analysis produced the key term “particular.” General resilience shares similar aspects with the 
+debate around artificial general intelligence and, more simply, optimization problems.6 
+Achieving optimality for all cases generally results in suboptimal results for all case. No system 
+can be optimal, or resilient, to all conditions or threats at all times. The law of entropy ensures 
+that even if perfect optimality or resilience is achieved, it cannot be maintained. The cross-scale 
+dynamics, emergent properties resulting from human involvement, and other factors ensure that 
+entropy acts on the system.  
+ 
+ 
+ 
+ 
+6 Of note, optimization is sued here in the metaphorical sense, not the literal sense. Adaptive capacity, and thus 
+resilience, by definition, will be suboptimal since greater resources, capacity, people, etc. will be required to achieve 
+resilience than the results of an optimization study would prescribe. Optimization drives for the most efficient use of 
+resources, and that efficiency can actually result in the system becoming less resilient over time as the adaptive 
+capacity is further removed from the system, beginning at the technical levels and move through the sociotechnical 
+and higher levels as the dynamics of the system change in response to the optimization goals.  

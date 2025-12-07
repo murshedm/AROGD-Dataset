@@ -1,0 +1,1931 @@
+Figure 3.1 Databases are regularly used in businesses to organize large amounts of data and require an understanding of database
+management systems. (credit: modification of work “DARPA Big Data” by Defense Advanced Research Projects Agency
+(DARPA)/Wikimedia Commons, Public Domain)
+Chapter Outline
+3.1 Data Types, Database Management Systems, and Tools for Managing Data
+3.2 Practical Applications of Database Design and Management
+3.3 Mobile Database Development and Cloud Database Management Systems
+Introduction
+Databases play a significant role in everyday life, even if they are unnoticed. From organizing personal photos
+and contacts on a phone to keeping track of inventory at a grocery store, databases help manage and make
+sense of the vast amounts of information we encounter every day. IS professionals should understand the
+fundamentals of database management systems, how they are used to address business problems, and how
+they are applied practically. Whether it is a mobile app or a cloud-based system, databases are key to the tools
+and systems that businesses rely on, making it essential to understand how they work and how to design them
+effectively.
+3.1 Data Types, Database Management Systems, and Tools for Managing
+Data
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Define data and differentiate between types of data
+•
+Identify tools and techniques for managing data with database systems
+•
+Determine how to gather, organize, curate, and process data
+•
+Compare and contrast database management systems
+Understanding the fundamentals of data is important for effective management. Data can be categorized into
+structured, semistructured, and unstructured forms, requiring different tools and techniques to collect and
+analyze. Effective data management involves collecting, storing, and processing data using tools like a
+Database Management Systems
+3
+
+database management system (DBMS).
+Identifying the business problem of an organization involves understanding the organization’s goals and
+opportunities through comprehensive needs analysis and stakeholder engagement, which involve collecting
+and analyzing data. By leveraging well-managed data, organizations can gather accurate user requirements to
+ensure their solutions align with the end users’ needs and expectations. These solutions are often built on
+robust database design and management practices, which are essential for creating scalable and efficient data
+systems. Careful planning, structuring, and management of data ensure databases support current and future
+needs. Effective database management includes regular tasks such as backup and recovery of data,
+performance optimization, and security enforcement. Additionally, as organizations continue to develop their
+data capabilities, the need for reliable mobile database development has become more prominent.
+A mobile database is a database used on mobile devices, such as a smartphone or tablet, to store and access
+data. It must be lightweight to save storage, use less power, and work efficiently on limited mobile device
+resources. A cloud-based database is a database system stored and managed online. It allows the user to
+access it through the internet instead of keeping it on a single device. The development and integration of
+these database types has revolutionized how organizations store, manage, and analyze data, offering
+scalability, flexibility, and cost-effectiveness. Integrating mobile and cloud databases connects mobile devices
+with centralized storage, making it easy to sync, access, and manage data across platforms. This creates a
+smoother and more efficient way to handle data for businesses.
+Types of Data
+Understanding how to manage data is important for any organization in the digital world. Data, as you learned
+in 1.1 Introduction to Information Systems, consist of any information that can be processed or analyzed to
+gain insights and make decisions. Data come in two main categories line of business data and customer
+behavior data. Line of business data consists of the information generated from daily business operations,
+such as financial records, day-to-day operations, inventory processes, and supply chain details. These data are
+important for running the business efficiently. Customer behavior data consists of information collected about
+how customers interact with the company’s products or services. This includes a customer’s frequent
+transactions, purchase history, browsing patterns, social media interactions, and feedback.
+These types of data can appear in various forms, such as text, voice, and images. Text data include emails,
+documents, news, and social media posts. Voice data come from customer service calls or voice-activated
+devices. Image data include photos and scanned documents, while video data consist of recordings from
+security cameras, social media, or marketing videos. There are three types of data: structured, semistructured,
+and unstructured (Table 3.1). Data that are highly organized and easily searchable is called structured data.
+Structured data is found in spreadsheets, tables, or databases. Another type of data is semistructured data,
+which are data that have some organization but does not fit neatly into tables. Two examples of
+semistructured data are extensible markup language (XML), which is a way to organize data using tags so that
+both people and computers can read it, and JavaScript Object Notation (JSON) files, which are in a format that
+transmits and stores data using human-readable text. This format can be used to send information from a web
+application to a database to migrate data. Finally, unstructured data lack a predefined structure and require
+advanced techniques for analysis; these include emails, videos, and social media posts.
+82
+3 • Database Management Systems
+Access for free at openstax.org
+
+Structured Data
+Semistructured Data
+Unstructured Data
+Definition
+Highly organized and
+formatted data, easily
+searchable in databases
+Partially organized data with
+some structure; tags often
+used to separate data elements
+Data lack any specific
+structure, making it difficult
+to search and analyze
+directly
+Examples
+SQL databases,
+spreadsheets
+XML, JSON, email
+Text documents, images,
+videos, social media posts
+Storage
+Stored in tables with
+rows and columns
+Stored in formats that contain
+tags
+Stored as binary or text files,
+often in large volumes
+Ease of
+access
+Easy to query
+Moderately complex
+Highly complex
+Scalability
+Moderate, depends on
+the database system
+High, designed to handle large
+volumes of data
+High, but requires
+significant resources
+Usage
+Financial records,
+inventory systems
+Web data, configuration files
+Multimedia content, big
+data analytics, social media
+Tools
+Relational database
+management systems
+NoSQL databases, XML, JSON
+parsers
+Big data platforms (Apache
+Hadoop, Spark)
+Performance
+High for structured
+queries
+Moderate, depends on the
+complexity of the structure
+Variable, depends on the
+tools and methods used for
+analysis
+Table 3.1 Comparison of Structured, Semistructured, and Unstructured Data Understanding the different types and forms of
+data is crucial to effectively manage and use the information to drive business decisions and strategies.
+In 2006, British mathematician and data scientist Clive Humby compared data in the digital age to oil in the
+past, highlighting the crucial role of data in organizational growth.1 Just as oil powered the industrial age, data
+fuels the integration of digital technology into nearly all business, production, and industry processes; this
+integration is known as Industry 4.0. Effective use of data is vital to the successful operation of modern
+organizations. Data help in understanding market trends, customer behaviors, and organizations’ internal
+processes, which is essential for making informed decisions, improving efficiency, enhancing customer
+experiences, and fostering innovation.
+Managing Data in a Database Management System
+A database management system (DBMS), which is a software system that manages, stores, and processes
+data, ensuring the data are organized, accessible, and secure. For example, a large hospital network uses a
+DBMS to streamline patient care and administrative tasks and support operations such as the following:
+•
+Electronic health records (EHRs): Patient medical histories, prescriptions, lab results, and imaging files are
+stored in a centralized database, allowing doctors to access up-to-date information instantly.
+•
+Appointment scheduling: Doctor availability and patient schedules are tracked to avoid conflicts and
+1
+Clive Humby, “Data Is the New Oil,” (lecture at Association of National Advertisers conference, Orlando, FL, April 30–May 2, 2006).
+3.1 • Data Types, Database Management Systems, and Tools for Managing Data
+83
+
+reduce wait times.
+•
+Billing and insurance processing: A DBMS automates billing, tracks payments, and verifies insurance
+claims efficiently.
+•
+Real-time alerts: A DBMS sends reminders for follow-up visits or medication refills and flags potential drug
+interactions or critical lab results for immediate review.
+When you request a ride from a company like Uber or Lyft, or make a purchase at a grocery store, a DBMS is
+working in the background to handle all the information needed to make things run smoothly. A ride-sharing
+app collects information like the following:
+•
+your current location and where you want to go
+•
+available drivers nearby
+•
+traffic conditions to calculate the best route and estimated time
+•
+payment details to process the fare
+After the ride, the data doesn’t just sit there. It’s used to
+•
+figure out where and when ride requests are most common,
+•
+help drivers be in the right place at the right time, and
+•
+improve routing and reduce delays.
+By organizing and analyzing data effectively, a DBMS helps businesses make better decisions, save money, and
+improve customer experiences.
+These systems organize and store large amounts of data efficiently, allow easy access and querying of data,
+ensure data accuracy, control data access, handle data transactions, guarantee data reliability, support large-
+scale data operations, ensure high performance, and provide mechanisms to restore data in case of failures.
+Managing data effectively is essential for organizations, and database systems provide a structured
+environment to store, retrieve, and manipulate data efficiently. Various tools and techniques are used to
+manage data within these systems, each catering to different types of data and requirements. At the core of
+effective data management are two fundamental issues: how to use a database and how to build a database.
+Addressing these issues involves a variety of tools and techniques that are designed to ensure a high quality of
+data management.
+The tools and techniques for using a database include the following:
+•
+Structured Query Language: Structured Query Language (SQL) is the standard language used to query
+and manage data in relational databases. It allows users to perform a wide range of operations such as
+SELECT, INSERT, UPDATE, DELETE, and JOIN to handle data efficiently. For example, in a ride-sharing app
+like Uber or Lyft, when a user requests a ride, the app’s database must quickly identify nearby drivers.
+•
+Database management systems: As mentioned previously, DBMSs manage data storage, and software like
+MySQL, PostgreSQL, Oracle Database, and Microsoft SQL Server provide the interface and tools necessary
+for database interaction.
+•
+Database access tools: A database access tool, such as SQL Server Management Studio, provides
+graphical user interfaces (GUIs) to facilitate database interaction without writing extensive code.
+•
+Indexing: Creating indexes on database tables improves the speed of data retrieval operations. Indexes
+are especially useful for large databases where query performance is critical. For example, in social media
+platforms like Instagram or X, millions of posts are created every second. When a user opens the app, the
+database must quickly retrieve the most recent posts from accounts they follow. An index on the user_id
+column ensures quick filtering of posts by the accounts that users follow. Another index on the created_at
+column allows the database to instantly sort posts by the most recent time stamps. This allows the app to
+load the user’s feed almost instantly, even with billions of posts in the database, providing a seamless user
+experience.
+84
+3 • Database Management Systems
+Access for free at openstax.org
+
+•
+Transactions: Data consistency and integrity are protected by adhering to ACID (atomicity, consistency,
+isolation, and durability) properties. These ACID characteristics ensure that a transaction is all-or-
+nothing (atomicity), keeps the database accurate and adhering to rules (consistency), prevents
+transactions from interfering with each other (isolation), and guarantees that once a transaction is
+complete, it stays saved even if the system crashes (durability).
+•
+Backup and recovery: Regular backups and effective recovery plans are vital for data protection. Tools like
+mysqldump, pg_dump, and RMAN (Oracle Recovery Manager) help in creating backups and restoring data
+when necessary.
+•
+User access management: Managing user permissions and roles ensures that only authorized users can
+access or manipulate the data. The DBMSs provide tools to define user roles and privileges.
+Building a database involves two steps—design and implementation—to ensure that a structure can efficiently
+store and manage data. The database design involves creating an entity relationship diagram (ERD), which is a
+visual representation of the database structure, including entities, attributes, and relationships. Entities are the
+things we are keeping data about, like “students,” or “classes.” Attributes are the details about an entity, like a
+student’s name or date of birth. Relationships show how entities are connected, like a student being enrolled
+in a class.
+A technique used in the design process is normalization, in which data are organized and stored only once to
+eliminate the duplication of data. This helps to ensure data consistency and integrity and reduce redundancy.
+Tools like Lucidchart can help facilitate the design process. This involves dividing large tables into smaller,
+related tables and defining their relationships. Another important step in the design process is defining the
+database schema, which is the structures of tables, including columns and data types. This step is followed by
+using a data modeling tool like Microsoft Visio, which assists in creating and visualizing the database schema,
+helping to design both the logical and physical aspects of the database. Finally, it is important to implement
+data security measures such as encryption to protect sensitive data. A DBMS provides features and tools to
+enforce data security policies, ensuring that data remain safe and compliant with regulations. Data security
+policies in a DBMS can come from both the organization and federal regulations. Organizational policies are
+rules set by the company, like allowing only human resources to access salary records. Federal policies are
+legal requirements, like the Health Insurance Portability and Accountability Act (HIPAA), which protects patient
+health information.
+Database Types
+Data storage is fundamental to how information is organized and accessed in computing environments. Here
+are some key types of databases:
+•
+A relational database stores data in tables with rows and columns, making it ideal for structured data.
+Each table contains data about a specific type of entity, and tables can be linked using keys (MySQL).
+•
+A NoSQL database (Not Only SQL) does not use the traditional table structure of an SQL database. This
+stores data in flexible formats like documents and is designed to handle a wide variety of data types and
+structures. It can manage large volumes of unstructured or semistructured data. NoSQL databases are
+useful for applications that require high flexibility, such as real-time web applications.
+•
+A data warehouse integrates data from various sources and stores it in a combined manner (Amazon
+Redshift is an example). It is a specialized database optimized for analysis and reporting rather than
+transaction processing. A data warehouse is designed to perform complex queries and data analysis
+quickly and efficiently.
+•
+A data lake stores large amounts of raw data in their original format until the data are needed. A data
+lake can handle structured, semistructured, and unstructured data (examples include Apache Hadoop and
+Amazon S3). A data lake is particularly useful for big data analytics.
+An important database process is data retrieval, which involves obtaining specific information from a
+database or storage system. It queries the database using methods such as SQL in relational databases to
+3.1 • Data Types, Database Management Systems, and Tools for Managing Data
+85
+
+extract needed data quickly and efficiently. The purpose of data retrieval is to access information for analysis,
+reporting, or decision-making, making it an essential aspect of effective data management. A technique used
+to improve the speed of data retrieval operations in a database is indexing. By creating an index, a database
+can quickly locate and access data without having to scan the entire table. The most common type of index is
+the B-tree index, which maintains a balanced tree structure (a tree structure where all branches are kept
+roughly the same height), providing efficient insertion, deletion, and lookup operations.
+LINK TO LEARNING
+Learn more about how a B-tree index (https://openstax.org/r/109BTreeIndex) provides sorted data and
+allows for efficient searching and access, plus variations in types of B-tree indexes.
+Another type is the hash index, which uses a hash function to map data to a fixed-size table. Hash indexes are
+ideal for equality searches but are less efficient for range queries (Table 3.2). For example, a hash index works
+well when searching for something specific, like “Find Customer ID = 342678,” because it can quickly locate
+that exact ID. But it’s not as good for tasks like “Find all customers with IDs between 2000 and 2200,” since
+hash indexes do not keep data in order, making range searches slower.
+Number
+First Name
+Last Name
+Country
+342678
+Chris
+Assam
+USA
+675309
+Taylor
+Tan
+Australia
+649568
+Anthony
+Ray
+Mexico
+Table 3.2 Customer Data in a Hash Index Hash indexing can
+map values to locations in tables but are inefficient when
+looking up range values.
+A bitmap index uses 0s and 1s to show where a value is in a database. It’s great for columns with only a few
+options, like “Yes/No” or “Rent/Own/Neither,” and facilitates quick searching. Bitmap indexes are efficient for
+columns with a limited number of distinct values and are often used in data warehouses for complex queries
+on large datasets. Full-text indexes organize words in text fields to make it easier and faster to search for
+specific words or phrases.
+Data retrieval techniques (Table 3.3) ensure that data can be efficiently retrieved, processed, and utilized for
+different applications, ranging from simple queries (such as using SQL to pull specific data, like finding all
+customers from a certain city) to complex data analysis and mining (for example, finding patterns in large
+datasets, like discovering what products people buy together).
+Retrieval
+Technique
+Description
+SQL
+Used to query and manipulate data in relational databases
+NoSQL database
+Handles unstructured and semistructured data with specific query languages
+Table 3.3 Data Retrieval Techniques There are different ways to retrieve data, from simple SQL queries to quickly finding records to
+indexing for faster searches.
+86
+3 • Database Management Systems
+Access for free at openstax.org
+
+Retrieval
+Technique
+Description
+Full-text search
+engine
+Indexes text data to enable complex search queries
+API
+Provides access to data from web services and applications using HTTP methods
+File-based
+retrieval
+Retrieves data stored in files using programming languages
+Web scraping
+Extracts data from websites using tools
+Data warehousing
+Aggregates data from multiple sources for complex queries and analytics
+Indexing
+Improves data retrieval speed by creating quick lookup structures
+In-memory data
+grid
+Stores data in random access memory for faster access, supporting distributed
+caching and querying
+Metadata search
+Retrieves data based on descriptive information
+Data mining
+Extracts patterns and knowledge from datasets
+Table 3.3 Data Retrieval Techniques There are different ways to retrieve data, from simple SQL queries to quickly finding records to
+indexing for faster searches.
+SQL consists of the following:
+•
+Database: a collection of related data
+•
+Table: a collection of related data entries consisting of columns and rows
+•
+Column: a vertical entity in a table that contains all information associated with a specific field
+•
+Row: a horizontal entity in a table that contains a single record
+Basic SQL commands include CREATE TABLE, INSERT, SELECT, UPDATE, and DELETE for managing databases
+(Table 3.4):
+•
+CREATE TABLE: makes a new table with specified columns and data types
+•
+INSERT INTO: adds new data to a table
+•
+SELECT: retrieves data from a table
+•
+UPDATE: changes existing data in a table
+•
+DELETE: removes data from a table
+3.1 • Data Types, Database Management Systems, and Tools for Managing Data
+87
+
+SQL Command
+Example
+Creating a table
+Inserting data into a
+table
+Retrieving data
+selecting all
+columns
+Retrieving data
+selecting specific
+columns
+Filtering results
+Using logical
+operators
+Updating data
+Deleting data
+Table 3.4 Basic SQL Commands Key SQL commands include CREATE TABLE to make tables, INSERT INTO to add data, SELECT to
+retrieve data, UPDATE to change data, and DELETE to remove data. These commands are essential for managing any database
+(attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license).
+A DBMS is a set of software programs that let users create and maintain databases. It provides a way to
+interact with the data, ensuring data are stored systematically in a structured and consistent way, making
+them easy to access, manage, and efficiently retrieve. DBMSs offer many advantages, such as improved data
+integrity and consistency, reduced redundancy, control over data independence, trusted security and access
+protocols, and overall management and backup protections.
+Data integrity refers to the accuracy and consistency of data stored in a database. A DBMS enforces rules and
+constraints such as primary keys. A primary key is a unique identifier for each data entry in a database table.
+It ensures that no two rows in the table have the same value for this key, enforcing data integrity. It cannot
+have duplicate or null values. For example, in a “Customers” table, “CustomerID?” could be the primary key
+because it gives every customer a unique ID. Constraints like primary keys prevent incorrect data entry and
+88
+3 • Database Management Systems
+Access for free at openstax.org
+
+maintain the integrity of the data over time. For example, a DBMS can enforce that an email field must contain
+a valid email format, preventing incomplete entries.
+A DBMS also supports data consistency, ensuring that data remain consistent and accurate across the
+database. It enforces consistency through ACID properties in transactions, meaning that all operations within
+a transaction are completed successfully, and the database remains in a consistent state. For example,
+transferring money from one account to another involves two steps: debiting one account and crediting
+another. Both steps must be completed in the correct order, ensuring consistency.
+A DBMS reduces data redundancy, or the duplication of data, to save space and prevent inconsistencies.
+Using normalization, DBMS structures the data in a way that reduces redundancy. For example, instead of
+storing customer details in multiple places, they are stored in only one place and referenced as needed. A
+DBMS also allows for data independence, meaning that data can be structured without affecting the
+programs that use it. This works because DBMSs use a schema, which shows the structure of the data
+separately from how the data are stored.
+Protection of data from unauthorized access to ensure data privacy is considered data security. A DBMS
+provides robust security features like user authentication (verifying a user’s identity before granting access to
+a system), access controls, and encryption (arranging data into an unreadable code that can only be read with
+a key). For instance, only authorized users can access certain data in a company’s database. Concurrent access
+allows multiple users to access and modify the data simultaneously and without conflicts. A DBMS uses a
+locking mechanism to ensure that multiple operations can occur simultaneously without data corruption. For
+example, while one user is updating a record, another user can still view the data without interruption. Backup
+and recovery allow data to be backed up and restored after a failure or loss. A DBMS provides automated
+backup and recovery solutions.
+Database Design Techniques
+Database design is the process of organizing data according to a database model, which indicates how to
+structure the data and how the data are stored and connected. A well-designed database will store and
+retrieve data efficiently and ensure the data are accurate and accessible. Design involves understanding the
+data needs of an organization and structuring the data to minimize redundancy and maximize performance.
+A database modeler designs and plans how a database will work. This person figures out what data are
+required to create the structure (like tables and relationships, often called entity relationship diagrams), and
+makes sure the database is efficient, secure, and easy to use. They also work with developers and
+administrators to set it up and keep it running smoothly by following specific constraints. Constraints are rules
+applied to database tables to ensure data integrity and reliability (for example, entity constraints that ensure
+each table has a primary key). A referential constraint maintains relationships between tables, making sure
+that a foreign key in one table matches a primary key in another table. This ensures that the relationships
+between records are consistent and eliminates any orphaned record, or a record that references another
+record that no longer exists. A check constraint specifies the values that can be entered into a column. For
+example, a check constraint can ensure that the values in an age column are always positive, or that the status
+column only contains predefined values like “Active” or “Inactive.”
+A database design usually proceeds through three stages: conceptual, logical, and physical design. Prior to
+these, the designer must conduct a requirements analysis, which is a study of how a business operates to
+determine what data should be stored and how the data should be used. It helps in understanding what users
+need from the database. This involves studying how the business operates to determine what data should be
+stored and how the data should be used.
+Next, the conceptual design creates a simple model of the data, focusing on what is needed and how it’s
+connected. It involves identifying key items like customers or products (entities), their details like names or
+prices (attributes), and how they are related, such as “customers place orders.” An ERD is often used to map
+3.1 • Data Types, Database Management Systems, and Tools for Managing Data
+89
+
+this out clearly. This ensures the database fits the business or application needs. Once the concept is
+determined, the next step is to turn the initial models into a more detailed a logical design, which defines
+tables, columns, primary keys, and foreign keys. A foreign key is a column or set of columns in one table that
+establishes a relationship with the primary key in another table. These keys are used to maintain referential
+integrity between the two tables, ensuring that the value in the foreign key column corresponds to an existing
+value in the referenced table. Finally, the physical design translates the logical design into a physical structure
+(via actual implementation in the database) that the DBMS can use. This involves choosing data types, indexing
+strategies, and planning for storage.
+The database modeler also needs to attend to these needs during the design:
+•
+Schema refinement: Making sure the database design is free of issues such as storing the same data in
+multiple places to save space.
+•
+Data integrity and validation: Ensuring the data remain accurate. This is achieved through constraints
+(rules applied to database columns to ensure data integrity and accuracy) and stored procedures (such as
+prewritten SQL programs stored in the database that perform specific tasks) that enforce business rules
+and validate the data.
+•
+Documentation: Creating detailed documentation for developers, administrators, and users.
+•
+Prototyping and iterative refinement: Building a prototype of the database, testing it, and refining the
+design based on feedback and performance results. This helps catch issues early and ensures the design
+meets user needs.
+•
+Security design: This protects database data by managing who can access it, encrypting sensitive info, and
+keeping track of activity. It ensures the data stay safe and recoverable.
+•
+Maintenance: Ensuring the database can be maintained over time.
+A functional dependency describes how one piece of data relates to another within a table. For example, in a
+table of employees, entering the employee ID should provide you with their name and address. One of the
+ways of checking the dependencies is normalization in which data are organized and stored only once to
+eliminate the duplication of data. Normalization occurs across three stages:
+1.
+First normal form (1NF): Ensures each column contains atomic, indivisible values. Each column has single,
+simple values, and rows are unique. For example, multiple phone numbers do not appear in one
+cell—each number gets its own row.
+2.
+Second normal form (2NF): Ensures the database is in 1NF and that all nonkey columns depend on the
+whole primary key. For example, in a table with OrderID and ProductID as the key, Quantity must depend
+on both, not just one.
+3.
+Third normal form (3NF): This form ensures the database is in 2NF and that all columns are dependent
+only on the primary key.
+For systems analysts, understanding normalization is key when working with relational databases.
+Normalization helps organize data to avoid problems like duplicate records or errors. However, it’s important
+for a systems analyst to know when to balance normalization with performance needs.
+In cloud environments or large systems, sometimes denormalization, or the addition of redundant data, is
+used to make things run faster and meet specific requirements. Consider a systems analyst managing a
+database for an online store. The database has two tables: one table is Customers (with customer information
+like name and address), and the other table is Orders (and includes details about each order). Normally, these
+tables are kept separate and are linked by a customer ID. This keeps the data clean—if a customer updates
+their address, you only need to change it in one place. But if the store is busy, joining tables every time
+someone checks an order can slow things down. To fix this, the analyst might denormalize the database by
+combining some tables to allow data retrieval to occur more quickly. Instead of keeping customer information
+separate, the organization could decide to store the customer’s name and address directly in the Orders table.
+While this makes it faster to retrieve orders, if the customer changes their address, it will have to be updated in
+90
+3 • Database Management Systems
+Access for free at openstax.org
+
+multiple places. This is how analysts balance keeping the data clean with making the system run more quickly.
+Table 3.5, Table 3.6, and Table 3.7 show how a database progresses through the first, second, and third normal
+forms (1NF, 2NF, 3NF) using tables for an online store’s customer and ordering data.
+Beginning Data
+OrderID
+CustomerName
+Address
+Products
+TotalPrice
+101
+John Doe
+123 Main St
+Shirt, Shoes
+$75
+102
+Jane Smith
+456 Oak Ave
+Hat, Bag
+$50
+103
+John Doe
+123 Main St
+Jacket, Sunglasses
+$120
+First Normal Form (1NF)
+OrderID
+CustomerName
+Address
+Product
+TotalPrice
+101
+John Doe
+123 Main St
+Shirt
+$75
+101
+John Doe
+123 Main St
+Shoes
+$75
+102
+Jane Smith
+456 Oak Ave
+Hat
+$50
+102
+Jane Smith
+456 Oak Ave
+Bag
+$50
+103
+John Doe
+123 Main St
+Jacket
+$120
+103
+John Doe
+123 Main St
+Sunglasses
+$120
+Table 3.5 First Normal Form (1NF) To begin, the data might have multiple values in one field.
+In 1NF, the products are separated into individual rows to ensure there is only one value per
+field.
+Second Normal Form (2NF)—Orders
+OrderID
+Product
+TotalPrice
+101
+Shirt
+$75
+101
+Shoes
+$75
+102
+Hat
+$50
+102
+Bag
+$50
+Table 3.6 Second Normal Form (2NF) In 2NF, partial
+dependencies are removed by splitting the data into two
+tables: one for Orders and another for Customers.
+3.1 • Data Types, Database Management Systems, and Tools for Managing Data
+91
+
+Second Normal Form (2NF)—Orders
+103
+Jacket
+$120
+103
+Sunglasses
+$120
+Second Normal Form (2NF)—Customers
+CustomerID
+CustomerName
+Address
+1
+John Doe
+123 Main St
+2
+Jane Smith
+456 Oak Ave
+Table 3.6 Second Normal Form (2NF) In 2NF, partial
+dependencies are removed by splitting the data into two
+tables: one for Orders and another for Customers.
+Third Normal Form (3NF)—Orders
+OrderID
+Product
+TotalPrice
+CustomerID
+101
+Shirt
+$75
+1
+101
+Shoes
+$75
+1
+102
+Hat
+$50
+2
+102
+Bag
+$50
+2
+103
+Jacket
+$120
+1
+103
+Sunglasses
+$120
+1
+Third Normal Form (3NF)—Customers
+CustomerID
+CustomerName
+1
+John Doe
+2
+Jane Smith
+Third Normal Form (3NF)—Addresses
+AddressID
+Address
+Table 3.7 Third Normal Form (3NF) In 3NF, transitive
+dependencies are removed by creating a separate Addresses
+table.
+92
+3 • Database Management Systems
+Access for free at openstax.org
+
+Third Normal Form (3NF)—Orders
+1
+123 Main St
+2
+456 Oak Ave
+Table 3.7 Third Normal Form (3NF) In 3NF, transitive
+dependencies are removed by creating a separate Addresses
+table.
+Studying the three models of database design—conceptual, logical, and physical—is important because they
+help ensure a database is well planned, functional, and efficient. A conceptual model is a high-level outline of
+what data the database will hold and how that data relate to each other. Think of it as the blueprint of an
+organization’s database, often visualized using ERDs. The physical model describes how the database will be
+implemented on a specific database management system. It considers technical aspects like storage, indexing,
+and performance. A logical model takes the conceptual model and adds more detail. It includes data types,
+indexing, and storage specifics.
+Gathering, Organizing, Curating, and Processing Data
+Data serve as a cornerstone for decision-making and innovation across various disciplines, ranging from
+scientific research to business management. Whether engaged in academic research, business operations, or
+personal projects, knowing how to effectively gather, organize, curate, and process data is imperative.
+Gathering Data
+The gathering data stage includes identifying data sources, data collection methods, and tools for data
+collection. Data sources can be categorized into primary and secondary sources. Primary data refers to data
+collected firsthand through methods such as experiments, surveys, or direct observations. Secondary data
+include data previously collected by other researchers or organizations and are accessible through books,
+articles, and other databases. The choice of data collection method depends on the research objectives and
+the nature of the data required. Table 3.8 lists some considerations and examples for collecting primary data.
+3.1 • Data Types, Database Management Systems, and Tools for Managing Data
+93
+
+Method
+Description
+Who Uses
+Them
+When to Use
+Them
+Example
+Surveys and
+questionnaires
+Useful for collecting data
+on opinions or
+preferences
+used to gather
+information from large
+groups of people
+can be conducted online,
+over the phone, or in
+person
+Public health
+officials and
+educational
+researchers
+When collecting
+standardized
+data, such as
+opinions or
+behaviors, from
+many
+participants
+A school district might
+survey parents to
+assess satisfaction
+with online learning
+programs
+Experiments
+Employed to obtain
+specific data points under
+controlled conditions to
+test hypotheses by
+manipulating variables
+and observing the
+outcomes
+Scientists and
+medical
+researchers
+When
+determining
+cause-and-
+effect
+relationships
+under
+controlled
+conditions
+A researcher might
+test what level of a
+drug is needed to
+produce a medical
+effect.
+Observations
+Involve recording data
+based on direct
+observation by watching
+behaviors or events
+Educators
+and
+psychologists
+When studying
+real-life
+interactions or
+behaviors as
+they occur
+An educator might
+observe students
+during group activities
+to assess collaboration
+skills.
+Interviews
+Involve one-on-one
+conversations that explore
+a participant’s experiences
+or opinions in depth
+Social
+scientists,
+psychologists,
+and health-
+care
+professionals
+When the
+researcher
+needs rich,
+detailed
+responses or
+when exploring
+sensitive topics
+A researcher studying
+stress among health-
+care workers might
+conduct interviews to
+capture personal
+stories and insights.
+Table 3.8 Primary Data Collection There are several methods for gathering primary data. The source and type of data influence
+which method is most appropriate.
+Organizing Data
+Proper data organization ensures that data can be easily manipulated and analyzed in tabular, hierarchical,
+and graphical formats. Tabular format organizes data in rows and columns, facilitating sorting and filtering;
+hierarchical format structures data in a treelike format, suitable for nested information; and graphical format
+represents data as nodes and edges, ideal for depicting relationships and networks.
+Implementing best practices in data management enhances data integrity and usability. Using consistent
+naming conventions helps avoid confusion by ensuring files and variables are clearly and uniformly named.
+Version control is essential for keeping track of different iterations of datasets, making it easier to manage
+changes over time. Regular backups can prevent data loss, ensuring that data remain safe and accessible.
+94
+3 • Database Management Systems
+Access for free at openstax.org
+
+Curating Data
+Curating data involves several important steps to ensure its accuracy and reliability. Data cleaning is the first
+step, which includes handling missing values by deciding whether to flag or remove incomplete records,
+removing duplicates to ensure each record is unique, and standardizing formats for dates, units, and other
+data points. Data transformation is the process of making data more suitable for analysis through
+normalization. Ensuring data quality is the final step and involves making sure the data are accurate,
+consistent, complete, and timely. This is done by checking that data entries are correct and precise, verifying
+uniformity across different sources, ensuring no crucial data are missing, and using the most up-to-date data
+available.
+Processing Data
+Processing data involves various techniques and tools to analyze and visualize information effectively.
+Descriptive statistics—like mean, median, mode, and standard deviation—summarize data, while inferential
+statistics use hypothesis testing and confidence intervals to draw conclusions about a population. Machine
+learning algorithms, such as regression and classification models, provide predictive analysis. Tools like
+Microsoft Excel and Google Sheets are useful for basic analysis, while advanced statistical software like R, SPSS,
+and SAS offer capabilities that are more sophisticated. Programming languages like Python, with libraries such
+as Pandas and R, are powerful tools for data manipulation and analysis. Effective data visualization enhances
+understanding through charts and graphs, such as bar charts, line graphs, and scatterplots, while advanced
+tools like Tableau and Microsoft Power BI offer more complex visualization options. Dashboards provide
+interactive platforms for real-time data monitoring and decision-making.
+Data Security and Access Control
+Database security involves protecting the database against unauthorized access and potential threats.
+Measures include implementing strong access controls, using encryption, performing regular security audits,
+and monitoring for suspicious activities (you will learn more about these topics in Chapter 5 Information
+Systems Security Risk Management and Chapter 6 Enterprise Security, Data Privacy, and Risk Management.
+User management includes creating, managing, and monitoring database user accounts. Proper user
+management ensures that only authorized personnel have access to specific data, and roles and permissions
+are assigned based on the principle of least privilege, which is giving a user, system, or process only the
+minimum access or permissions needed to perform their specific tasks. Ensuring that database transactions
+are processed efficiently is essential. This includes maintaining data consistency and integrity through ACID
+properties. Proper transaction management helps prevent issues like data corruption and ensures that
+operations are completed fully or not at all.
+ETHICS IN IS
+Structured Query Language Injections
+In 2011, Sony faced a major data breach in their PlayStation Network when attackers used SQL injection to
+exploit weaknesses in their systems. An SQL injection is a type of security vulnerability that occurs when an
+attacker is able to insert or manipulate SQL queries within a web application’s input fields. It allows the
+attacker to retrieve sensitive data from the database, such as usernames, passwords, or financial
+information. This can happen when the application fails to properly sanitize user input before incorporating
+it into an SQL query, allowing the attacker to execute malicious SQL commands. This gave hackers access to
+sensitive customer information, including credit card numbers. The incident showed how critical it is for
+organizations to secure their databases and control access to prevent such attacks. Views and authorization
+are critical for preventing SQL injection attacks, where hackers use harmful inputs to access or manipulate
+database data.
+3.1 • Data Types, Database Management Systems, and Tools for Managing Data
+95
+
+To prevent SQL injection, the following practices are recommended:
+•
+Views only show users the data they need, hiding sensitive information.
+•
+Authorization controls ensure users can only access what their role allows.
+•
+Parameterized queries treat user inputs as data, not code, which allows for blocking of harmful code.
+•
+Input validation checks and cleans user inputs to prevent attacks.
+•
+Stored procedures standardize input handling, reducing vulnerabilities.
+•
+Regular security checks help identify and fix weaknesses.
+Using these practices together makes databases much safer from SQL injection attacks.
+One important user management procedure is access control, which is the security-driven restriction of
+access to ensure that only authenticated users are able to interact with specific resources. There are four
+common access control models: mandatory, discretionary, role-based, and privileged (Table 3.9):
+Mandatory access control (MAC) is highly restrictive and typically used in government and military
+environments. In MAC, a central authority based on security clearances assigns access permissions to
+individuals working for the organization. For example, individuals with the necessary top-secret clearance are
+the only ones who can access a top-secret document in a military database. Users cannot alter permissions,
+ensuring strict compliance with the organization’s security protocols.
+Discretionary access control (DAC) allows resource owners to decide who can access their data. For instance, if
+you own a file on your company’s shared drive, you can grant or deny access to other colleagues. While this
+model offers flexibility, it can lead to security risks if not managed carefully. For example, if an employee
+shares a sensitive document with a contractor without proper vetting, it could lead to unauthorized access.
+Role-based access control (RBAC) assigns permissions based on a user’s role within an organization. For
+example, an employee in the human resources department is given access to payroll information and
+employee records, while someone in IT is granted access to system configurations and network settings. This
+model simplifies management by grouping permissions based on roles rather than individual users, making it
+easier to update access as roles change. For instance, when a junior developer gets promoted to a senior
+developer, their role-based access can be updated to include additional system privileges.
+Privileged access management (PAM) focuses on controlling and monitoring access for users with elevated
+permissions, often referred to as privileged accounts. For example, system administrators may have the ability
+to install software, configure network settings, and access sensitive data. PAM solutions ensure that these
+high-level permissions are used appropriately and securely by providing tools for monitoring, auditing, and
+managing access. For instance, a PAM system can track and log every action taken by an administrator—such
+as changes to firewall settings—ensuring accountability and security.
+Table 3.9 summarizes some of the pros and cons of each of these four access control models.
+96
+3 • Database Management Systems
+Access for free at openstax.org
+
+Access Control
+Model
+Advantages
+Disadvantages
+Mandatory
+access control
+(MAC)
+•
+Provides robust security
+and restricts access
+permissions
+•
+Reduces the risk of
+unauthorized access
+•
+Can be complex to implement and manage
+•
+Not easily adaptable to changing business
+needs
+Discretionary
+access control
+(DAC)
+•
+Resource owners have the
+freedom to grant access
+•
+Easier to set up and
+manage for smaller
+environments
+•
+Increased risk of unauthorized access due to
+the potential for users to inadvertently grant
+permissions
+•
+Can lead to inconsistent application of security
+policies across the organization
+Role-based
+access control
+(RBAC)
+•
+Simplifies management by
+grouping permissions
+•
+Easier to manage as the
+organization grows
+•
+Can lead to a large number of roles that need
+to be managed
+•
+Not as adaptable to temporary changes in roles
+or duties
+Privileged access
+management
+(PAM)
+•
+Focuses on controlling and
+monitoring high-level
+permissions
+•
+Provides detailed logging
+and auditing of activities
+•
+Can be complex to implement and manage,
+requiring significant resources and expertise
+•
+May lead to frustration among users if access is
+too restricted
+Table 3.9 Access Control Models Access control models such as MAC, DAC, RBAC, and PAM each have their own advantages and
+disadvantages. They can be adapted for dynamic access control, especially with the shift to remote and blended workforces.
+Choosing the right access control model for an organization can be challenging. A small defense subcontractor
+might need to implement MAC systems for its entire operation to meet strict security requirements
+determined by government regulations or classified contracts. In contrast, a prime contractor, which is a large
+organization managing multiple subcontractors, can use a more nuanced approach, reserving MAC systems
+for its most sensitive operations, such as handling classified defense projects.
+Some industries commonly use role-based access controls, so that different system users (such as employees,
+managers, or suppliers) only have access to specific information. For example, a manager might have access
+to employee schedules and inventory records, while a cashier may only have access to the point-of-sale
+system.
+Comparing Database Management Systems
+When working with database management systems, it is important to understand the different types available
+and how they are used in various applications. We’ll focus on comparing three major types: relational, object
+oriented, and NoSQL. Learning the strengths and limitations of each provides insight into when and why to
+use them, based on specific project needs.
+A relational database management system (RDBMS) is a database management system that stores and
+organizes data in a structured way using tables. Each table represents an entity, and each row in the table
+represents a record of that entity, while columns represent the attributes of the entity. An RDBMS requires a
+3.1 • Data Types, Database Management Systems, and Tools for Managing Data
+97
+
+predefined schema, which is a document that defines the structure of the data in terms of tables and the
+relationships between them. Relationships between tables are established using foreign keys, which reference
+primary keys in other tables, ensuring referential integrity. The RDBMS enforces data integrity through
+constraints such as primary keys, foreign keys, unique constraints, and checks. The SQL is the standard
+language used to interact with an RDBMS for defining, querying, and manipulating data. Additionally, an
+RDBMS adheres to ACID properties to ensure reliable transaction management. Normalization is a key practice
+in an RDBMS, aimed at reducing data redundancy and improving data integrity by organizing data into
+multiple related tables. As an example of an RDBMS, a university stores student records in tables, with a
+predefined schema that organizes data into entities like “Students,” “Courses,” and “Grades,” linked by
+relationships. The structure ensures data consistency and simplifies reporting.
+Object-oriented programming principles are fundamental concepts that guide the design and implementation
+of programs in object-oriented languages like Java, Python, and C++. An object-oriented database
+management system (OODBMS) stores data in the form of objects, similar to the way data are represented in
+object-oriented programming languages. Each object includes both data, in the form of attributes, and
+behavior, in the form of methods. This approach allows for a more direct mapping between the database and
+the application’s data model, facilitating complex data representations and relationships. An OODBMS
+supports classes, inheritance, polymorphism, and encapsulation, enabling the creation of complex data types
+and relationships that mirror real-world entities more closely. The schema in an OODBMS is defined using
+object-oriented concepts, and objects can contain references to other objects, enabling rich, interconnected
+data structures. Querying in an OODBMS is typically done using object query languages, which are designed to
+operate on objects and their relationships. An OODBMS is particularly well suited for applications requiring a
+complex data model—such as computer-aided design (CAD), computer-aided manufacturing, multimedia, and
+telecommunications—that requires efficient handling of complex data types and relationships efficiently. As an
+example of an OODBMS, a CAD software company can use an OODBMS to store data about three-dimensional
+models. Each model is an object containing data and methods reflecting real-world design elements.
+A NoSQL database management system is a type of database that provides a mechanism for storing and
+retrieving data that is not based on the traditional relational database model. They are built to handle large
+amounts of data, high-speed data processing, and diverse data types. They offer scalability, flexibility, and
+performance, making them ideal for modern applications that manage big data and real-time web
+applications. Because a NoSQL DBMS does not require a fixed schema, they permit rapid or ad hoc changes to
+data structures. They also support distributed computing, which helps manage large-scale data across
+multiple servers. NoSQL databases come in various types, including key-value stores, document-oriented
+databases, column-family stores, and graphical databases, each tailored to specific types of data and use
+cases. Key-value stores organize data by associating them with a unique identifier (the key) and its
+corresponding value, which can be a simple string or a complex object. The simplicity of key-value stores
+makes them very fast for certain types of tasks, particularly those involving straightforward data access
+patterns. They are perfect for applications like caching, session management, and real-time data analytics. A
+document-oriented database, which has a flexible schema, works well with a NoSQL database management
+system. Document-oriented databases store data in the form of documents, usually using formats like JSON,
+BSON (binary JSON), or XML. Each document contains a self-contained data structure made up of fields and
+values, which can include nested documents and arrays. This flexible schema allows for storing complex data
+structures without needing a predefined schema, making it easy to adapt to changes in data requirements
+over time. Document-oriented databases are great for applications that need hierarchical data storage, such
+as content management systems, e-commerce platforms, and real-time analytics. As an example of NoSQL
+databases, a social media platform uses a document-oriented NoSQL database to store user profiles, posts,
+and comments. The flexible schema easily adapts to new features, like adding reactions or multimedia
+support.
+98
+3 • Database Management Systems
+Access for free at openstax.org
+
+3.2 Practical Applications of Database Design and Management
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Describe the design process and structure for a database management system
+•
+Discuss the various applications of database management systems for different industries
+Database design and management are important for businesses because they help store, organize, and
+retrieve data efficiently. A well-designed database design ensures data are accurate, secure, and easy to
+access. This is important in many information systems in the enterprise, such as customer relationship
+management, financial systems, and health-care information systems. These systems rely on databases to
+function correctly and support day-to-day operations of a company or organization.
+In e-commerce, databases help manage product inventory, track customer orders, and analyze sales. For
+example, companies like Amazon use complex databases such as DynamoDB, a fully managed NoSQL
+database, to handle millions of transactions daily and provide personalized recommendations to customers.
+These databases help keep track of stock, update customers on their orders, and tailor marketing strategies to
+individual preferences, leading to better customer satisfaction and increased sales.
+The health-care industry serves as a strong example of how an industry benefits from well-designed
+databases. Electronic health records (EHR) database systems store patient information, medical histories, and
+treatment plans. The Epic Systems EHR system is the most widely used system in the United States, has the
+largest hospital EHR share in the world, and provides the top healthcare app, MyChart.2 An EHR system makes
+it easier for health-care providers to access patient data, coordinate care, and improve the quality of services.
+Databases also help integrate different health information systems, like lab results and imaging studies, giving
+a complete view of a patient’s health. Effective health-care database management ensures patient data are
+kept confidential and secure and follows laws like HIPAA. Almost 78 percent of office-based doctors and 96
+percent of hospitals in the United States now use EHR systems.3 While smaller practices often struggle with
+higher costs and less support, EHRs are becoming more common across health care, helping to improve
+patient care and streamline operations.
+Database Design
+There are two fundamental stages of database design—logical and physical. Logical design involves creating a
+blueprint of the database that outlines the structure without considering how it will be physically
+implemented. This stage includes defining entities, their attributes, and relationships, often using tools like
+ERDs. The goal is to ensure that the database model aligns with business requirements and eliminates
+redundancies, such as duplicate records or repetitive fields. Physical design focuses on how the database will
+be built on a specific DBMS. It includes selecting data types, indexing strategies, and storage methods to
+optimize performance and storage. The transition from logical to physical design is essential as it translates a
+theoretical model into a practical, efficient database.
+Database design needs to take into consideration the data and the data life cycle. As Figure 3.2 illustrates, the
+data life cycle includes the stages that data undergo from collection to deletion, ensuring data remain
+accurate, accessible, and valuable throughout their life cycle. It begins with data collection where raw data are
+gathered from various sources, with the goal of capturing accurate and relevant information for future use.
+Next, data storage involves saving this information in a database for easy access and management, ensuring it
+is organized and can be retrieved efficiently. Processing follows, and data are cleaned, transformed, and
+2
+Giles Bruce and Naomi Diaz, “50 Things to Know about Epic,” Becker’s Hospital Review, October 17, 2024,
+https://www.beckershospitalreview.com/ehrs/50-things-to-know-about-epic.html
+3
+“National Trends in Hospital and Physician Adoption of Electronic Health Records: Health IT Quick-Stat #61,” Assistant Secretary
+for Technology Policy, Office of the National Coordinator for Health Information Technology, 2021, accessed January 28, 2025,
+https://www.healthit.gov/data/quickstats/national-trends-hospital-and-physician-adoption-electronic-health-records
+3.2 • Practical Applications of Database Design and Management
+99
+
+organized to prepare the data for analysis, ensuring data quality and usability. During the data analysis phase,
+data are examined by stakeholders to extract useful insights that inform decision-making, revealing patterns,
+trends, and correlations valuable for strategic planning. Finally, data are either archived for future reference or
+deleted if no longer needed, maintaining a clean and efficient database environment.
+Figure 3.2 The data life cycle processes are interconnected and continuous. (attribution: Copyright Rice University, OpenStax, under
+CC BY 4.0 license)
+Database system design should proceed through several steps:
+1.
+Defining requirements
+2.
+Designing the structural components
+3.
+Ensuring performance capabilities
+4.
+Creating a positive user experience
+5.
+Planning for smooth integration with existing systems
+The first step in database design is to gather and define the system requirements. This involves understanding
+the needs of the users and the objectives of the database. Requirements are categorized as functional,
+detailing what the database should do, and nonfunctional, specifying performance criteria such as speed,
+reliability, and security. Clear and comprehensive requirements ensure that the database system meets user
+expectations and business goals, providing a solid foundation for the design process.
+Once the requirements are defined, the next step is to map out the system’s structure and architecture.
+Diagrams can illustrate how different components of the system interact with each other. These may include
+software modules, hardware components, network infrastructure, and data storage solutions. A clear
+architecture helps plan the implementation and ensures that all parts of the system work together
+harmoniously, facilitating efficient and effective design.
+A critical aspect of database system design is ensuring that the database performs efficiently and can scale to
+handle increasing loads. This involves selecting appropriate technologies, optimizing algorithms, and
+designing for concurrency and parallel processing. Scalability ensures that the database can grow and adapt to
+higher demands without significant performance degradation. This is particularly important for databases
+expected to handle large volumes of data or high user traffic, ensuring long-term viability and performance.
+The design process also focuses on creating a positive user experience. This includes designing intuitive user
+interfaces, ensuring fast response times, and providing clear results to users.
+Finally, database design must ensure smooth integration with existing systems. This might involve interfacing
+100
+3 • Database Management Systems
+Access for free at openstax.org
+
+with legacy systems, using standardized protocols for communication, and ensuring data compatibility.
+Successful integration minimizes disruptions and allows for seamless operation across different platforms and
+technologies, enhancing the overall functionality and efficiency of the database system.
+Steps for Determining the Design and Structure for a Database
+Management System
+To determine the design and structure for a DBMS, consider the process of designing a library management
+system. Imagine you’re tasked with designing a library management system for a local library. The system
+must handle book inventories, track borrowings and returns, maintain member records, and generate reports.
+This scenario will guide you through the design process using a structured task list.
+1.
+Requirement analysis. The first step is to gather and analyze user requirements. After consulting with
+library staff and stakeholders, you identify the following criteria:
+◦
+Store information about books, including
+▪
+title,
+▪
+author,
+▪
+International Standard Book Number (ISBN) (a unique thirteen-digit code used to identify a book),
+▪
+edition, and
+▪
+availability status.
+◦
+Maintain member records with details like
+▪
+name,
+▪
+membership ID,
+▪
+contact information, and
+▪
+borrowing history.
+◦
+Track lending and returns, including
+▪
+due dates and
+▪
+fines for overdue books.
+◦
+Generate reports such as
+▪
+book inventories,
+▪
+popular books, and
+▪
+member activity.
+◦
+Support user authentication with roles for librarians and regular members.
+2.
+Feasibility study. Next, you conduct a feasibility study to ensure the project is viable:
+◦
+Technically, the project is feasible with the available tools, including an RDBMS like MySQL.
+◦
+Economically, the library has allocated a sufficient budget. The budget is the amount of money reserved
+for the project and was decided by the finance committee. If the budgeted amount is not enough, they
+could apply for grants, shift funds from other areas, or adjust the project to focus on the most
+important parts.
+◦
+Legally, there are no significant concerns, but data privacy for member records must be ensured.
+From the first two steps, you determine that the project is feasible and worth pursuing.
+3.
+System specification is based on the requirements, so you define the DBMS specifications:
+◦
+The system will be a web application with a MySQL database back end. The back end is the part of a
+software application that handles data, logic, and operations, supporting what users interact with on
+the front end. The front end is the part of a software application that users interact with, including the
+design and user interface.
+◦
+The system will contain modules for
+▪
+book management,
+3.2 • Practical Applications of Database Design and Management
+101
+
+▪
+member management,
+▪
+lending and return tracking, and
+▪
+reporting.
+◦
+User roles will be implemented to distinguish between librarians and regular users.
+◦
+The application will be accessible via the library's internal network.
+4.
+Logical design is the next phase where you will create data models and define the DBMS architecture. You
+design ERDs to represent the following entities and their relationships:
+◦
+Book attributes include
+▪
+book ID,
+▪
+title,
+▪
+author,
+▪
+ISBN,
+▪
+genre, and
+▪
+availability.
+◦
+Member attributes include
+▪
+member ID,
+▪
+name,
+▪
+contact information, and
+▪
+membership date.
+◦
+Lending attributes include
+▪
+loan ID,
+▪
+book ID,
+▪
+member ID,
+▪
+loan date,
+▪
+due date, and
+▪
+return date.
+The relationships between these entities are established, such as a member can borrow multiple books,
+and a book can be borrowed by multiple members over time.
+5.
+Physical design. In this phase, you plan the database schema based on the logical design. You define the
+tables, columns, and data types. Table 3.10, Table 3.11, and Table 3.12 represent the attributes and data
+types for books, member, and lending tables.
+Attribute
+Data Type
+BookID
+Primary Key - Integer
+Title
+CHAR
+Author
+CHAR
+ISBN
+CHAR
+Generation
+CHAR
+Availability
+BOOLEAN
+Table 3.10 Books Table First, the attributes
+and data types for the book table are defined.
+102
+3 • Database Management Systems
+Access for free at openstax.org
+
+Attribute
+Data Type
+MemberID
+Primary Key - Integer
+Name
+VARCHAR
+ContactInfo
+VARCHAR
+MembershipDate
+DATE
+Table 3.11 Member Table Next, the attributes and
+data types for the member table are established.
+Attribute
+Data Type
+LendingID
+Primary Key - Integer
+BookID
+Foreign Key - Integer
+MemberID
+Foreign Key - Integer
+LoanDate
+DATE
+DueDate
+DATE
+ReturnDate
+DATE
+Table 3.12 Lending Table Finally, the
+attributes and data types for the lending table
+are defined.
+You also consider indexing strategies to optimize query performance and storage methods to ensure
+efficient data retrieval.
+6.
+Prototyping is the next step for developing a library management system, and you’ll focus on key
+functionalities like
+◦
+book search,
+◦
+member registration, and
+◦
+borrowing transactions.
+You then present this prototype to the library staff for feedback. The prototype is well received, and they
+suggest adding a feature to notify members about due dates via email.
+7.
+System integration is the next step as you integrate various components of the DBMS, ensuring that the
+web application interfaces correctly with the MySQL database. You also integrate the email notification
+feature suggested by the library staff, using an SMTP server to send due date reminders to members.
+8.
+Testing is conducted to ensure the DBMS works as expected. Individual functions are verified by a unit
+test, an integration test checks the interaction between modules, and a system test evaluated the
+overall functionality. To ensure the system meets the needs of the end users, user acceptance testing is
+performed.
+9.
+Documentation is an important step as you create comprehensive documentation, including user manuals
+3.2 • Practical Applications of Database Design and Management
+103
+
+for librarians and technical documentation for developers. The user manual covers how to
+◦
+manage books,
+◦
+register members,
+◦
+process loans and returns, and
+◦
+generate reports.
+The technical documentation includes database schemas, API references, and deployment instructions.
+10.
+Deployment on the library’s internal network is a major step for your system. Software is installed on the
+server, the database is set up, and the application is configured. The library staff is trained to use the new
+DBMS.
+11.
+Maintenance is provided to keep the system running smoothly. This includes
+◦
+regular backups of the database,
+◦
+updates to the software, and
+◦
+support for any issues that arise.
+Feedback from the library staff is continuously gathered to make further improvements to the system. By
+following these steps, you have successfully designed and implemented a database management system that
+meets the library’s needs and enhances their operational efficiency.
+Applications of Database Management Systems in Different Industries
+Databases and DBMSs are used extensively across various industries. In health care, databases are used to
+store patient records, medical histories, treatment plans, prescriptions, and billing information. Common
+DBMSs used in health care include MySQL, PostgreSQL, Oracle Database, and MongoDB. These databases
+allow health-care providers to access patient data quickly and enhance the quality and coordination of care.
+Electronic health record systems integrate various data points to give a comprehensive view of a patient’s
+health status, aiding in better diagnosis and treatment. Health-care databases often use relational structures
+to ensure data integrity and support complex queries. Increasingly, cloud-based databases are being adopted
+for their scalability, flexibility, and compliance with data security regulations like HIPAA standards.
+Financial institutions use databases for transaction processing, customer information management, account
+balances, loan processing, and investment portfolios. Common DBMSs used in the financial sector include
+Oracle Database, Microsoft SQL Server, and IBM Db2. Financial database management systems need to be
+highly reliable and secure to handle sensitive financial data and support real-time transaction processing. They
+enable efficient management of large volumes of transactions and customer data. Relational databases are
+favored in finance for their robustness and ACID properties, ensuring reliable transaction processing. Some
+institutions also use NoSQL databases for big data analytics and handling unstructured data.
+In education, databases manage student records, course schedules, grades, and administrative data. Learning
+management systems like Moodle, Canvas, and Blackboard use databases to store course materials,
+assignments, and grades, facilitating online learning and tracking student progress. Educational institutions
+typically use relational databases for structured data such as student records and course information. Cloud-
+based databases are popular due to their scalability, ease of access, and ability to support large numbers of
+users, especially in remote learning scenarios.
+Manufacturers use databases to track inventory levels, manage supply chains, monitor production processes,
+and maintain equipment logs. Examples of DBMSs in manufacturing include SAP HANA, Oracle Database, SQL
+Server, and MongoDB. Databases support efficient operations by providing real-time data on stock levels,
+production schedules, and maintenance needs, helping optimize manufacturing processes and inventory
+management. Both relational and NoSQL databases are used. Relational databases handle structured data like
+inventory lists and production schedules, while NoSQL databases manage large volumes of sensor data from
+IoT devices in smart manufacturing.
+104
+3 • Database Management Systems
+Access for free at openstax.org
+
+Additional key industries using databases for management and control include retailers that use databases for
+managing product catalogs, customer orders, and transaction records; logistics companies that use databases
+to optimize routes, manage deliveries, and track shipments; and telecommunication providers that use
+databases to manage customer accounts, billing information, and network performance data.
+3.3 Mobile Database Development and Cloud Database Management
+Systems
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Explain the challenges in developing a mobile first design with a database
+•
+Discuss the considerations for cloud-based databases and their architecture
+Mobile database development continues to be in high demand, as more businesses look for scalable and
+efficient ways to support their business. Mobile application development is closely tied to database design
+because apps rely on databases to store, manage, and retrieve data (Figure 3.3). Most commonly, lightweight
+embedded database systems such as SQLite are used to store data locally.
+During development, the database structure is designed to align with the app’s features. For example, an e-
+commerce app might need tables for users, products, orders, and payments. Apps also connect to databases
+allowing for tasks like user login and real-time updates. A well-planned database ensures the app runs
+smoothly, stays fast, and supports all the features users depend on.
+Figure 3.3 With the rise of mobile technology, accessing and interacting with data have changed, making strong back-end systems
+crucial for handling mobile users’ needs. Cloud databases provide the infrastructure needed, offering real-time data access,
+scalability, and lower maintenance costs. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+In mobile app development, using cloud databases lets developers focus on user experience and app features
+without worrying about data storage and management. Services from providers like AWS, Google Cloud
+Platform, and Microsoft Azure offer databases designed for mobile apps. These databases ensure data
+synchronization across various devices, including smartphones, tablets, laptops, desktops, and IoT devices. For
+example, in a mobile app, real-time updates ensure a user’s changes on a smartphone are immediately
+reflected on their tablet or desktop.
+3.3 • Mobile Database Development and Cloud Database Management Systems
+105
+
+This integration also enables advanced features like offline data access, real-time updates, and easy app
+updates. For example, Firebase Realtime Database allows a mobile app to update users in real time, even
+when offline, by storing data locally and syncing it once the device reconnects.
+Developing a Mobile-First Application with a Database
+Mobile applications need to handle various forms of data input efficiently and accurately, ensuring that the
+collected information is stored securely and is easily retrievable. Some popular mobile apps include Google
+Drive and Google Docs for schoolwork and sharing files, Slack for group communication, and Spotify for
+streaming music.
+Designing for Mobile Data Input
+When designing a mobile application, one important consideration is how data are collected from users. As
+mobile devices have smaller screens and different input methods compared to desktops, optimizing forms and
+data entry interfaces for mobile use is necessary. Techniques such as responsive design, use of drop-down
+menus, autocomplete fields, and clear, concise instructions help ensure that users can enter data accurately.
+Validations should be implemented to check for correct data types, mandatory fields, and logical errors before
+the data are submitted, for example, ensuring an email field contains a valid email address format or a date
+field does not accept future dates when past dates are required. Many people use Instagram, Snapchat, and
+TikTok to stay connected with friends, and tools like Khan Academy and Quizlet are common for studying and
+learning.
+Data Collection and Usage on Websites
+Websites often collect user data through cookies, forms, and tracking technologies to personalize the user
+experience and for marketing purposes. These data are stored in databases and include information like user
+preferences, browsing history, and interaction patterns. By analyzing this data, websites can tailor content and
+advertisements to individual users, enhancing engagement and conversion rates. For instance, e-commerce
+sites use this data to recommend products based on previous searches and purchases. You’ve probably
+noticed how ads for products you recently liked or reviewed online show up in your search engine—this is a
+great example of how apps use data and databases to personalize the user experience and target customers.
+Ensuring Data Cleanliness and Security
+The term data cleanliness refers to the accuracy and consistency of data and the lack of duplicate, error, or
+missing information. Implementing validation checks at the point of data entry helps maintain data quality.
+Regular data audits and cleaning processes also remove duplicates, correct errors, and update outdated
+information.
+Security is paramount, especially for applications handling sensitive data. Encryption should be used for data
+at rest and in transit. Secure authentication methods, such as multifactor authentication, help protect user
+accounts. Access controls ensure that only authorized users can access specific data. Regular security updates
+and patches are necessary to protect against vulnerabilities.
+CAREERS IN IS
+Data Quality Analyst
+A data quality analyst is a professional who is responsible for the data cleanliness and security within an
+organization. Following are some key responsibilities of this role:
+•
+Data cleaning: Resolve issues such as incorrect formatting, duplicate entries, missing values, and other
+outliers.
+•
+Data validation: Ensure accuracy and compliance through comparing data with predefined rules and
+106
+3 • Database Management Systems
+Access for free at openstax.org
+
+standards.
+•
+Data governance: Enforce quality policies to maintain the integrity of the data.
+•
+Data standardization: Maintain consistent formatting throughout data sources.
+•
+Data security: Implement security measures that protect data.
+Privacy and Data Protection
+Protecting user privacy involves adhering to data protection regulations such as the General Data Protection
+Regulation (GDPR), HIPAA, and the California Consumer Privacy Act (CCPA). Users should be informed about
+what data are being collected, how the data will be used, and who the data will be shared with. Providing
+options for users to control their data, such as opting out of data collection and deleting their data, is essential
+for building trust.
+Design Principles for Mobile Applications and Database Management
+Systems
+Successful apps are well designed and allow the user to easily navigate the interface. Several principles can
+ensure an effective mobile application design:
+•
+Simplicity and clarity: Keep the user interface straightforward to reduce the risk of user input errors. This
+includes reducing clutter on screens and only displaying essential information to reduce cognitive load for
+users.
+•
+Consistency and reliability: Maintain a consistent style (interaction behaviors, colors, fonts, layout
+patterns) across the application, and ensure it functions in accordance with its designed specifications,
+with no or minimal failures during the specified time of its use.
+•
+Accessibility and usability: Ensure accessibility for those with disabilities, through features such as
+adjustable text sizes, appropriate color contrast, and functions like text-to-speech. Make sure users have
+adequate time to interact with the system so it is easily usable. This includes functions like response time,
+the ability to provide feedback, and verification of option selection or payment.
+A mobile app DBMS is essential to ensure smooth app functionality. Some key principles for an efficient DBMS
+include the following:
+•
+Modularity: Break the system into manageable parts, such as separate modules for user authentication,
+data collection, and data retrieval.
+•
+Flexibility: Design the database to handle changes in data requirements or formats without needing
+extensive rework. This is especially important for large, unstructured data from apps such as real-time
+messaging or social media platforms.
+•
+Scalability: Ensure the system can handle increasing amounts of data and users, which is especially
+important for growing mobile applications.
+•
+Security: Implement robust security measures, such as encryption and access controls, to protect data
+during transmission and storage.
+Cloud-Based Databases
+Cloud-based databases offer several advantages, including scalability, flexibility, accessibility, and cost
+efficiency. They can easily scale up or down based on demand, support various data models, and provide pay-
+as-you-go pricing models that reduce up-front costs. Major cloud-based database services include AWS with
+Amazon RDS and Amazon DynamoDB, Microsoft Azure with Azure SQL Database, and Google Cloud with Cloud
+SQL. Cloud-based databases are widely adopted across industries due to their ability to handle large data
+volumes, provide robust disaster recovery options, and support real-time analytics. They are particularly useful
+for industries with fluctuating data needs, such as e-commerce during holiday seasons or health care during
+public health crises.
+3.3 • Mobile Database Development and Cloud Database Management Systems
+107
+
+GLOBAL CONNECTIONS
+Netflix Database
+Think about Netflix, a company that streams movies and TV shows to millions of people across the world.
+Behind the scenes, Netflix relies on a powerful database system to keep everything running smoothly. The
+company experienced rapid growth that made it difficult to keep up with customer demand. This growth
+led to a database corruption in 2008, which made the company realize that they had to make the switch to
+a cloud database.4
+Netflix completed its cloud migration in 2016.5 By using cloud-based databases, Netflix became able to
+handle a huge number of users at the same time, making sure videos loaded quickly and without
+interruptions. It also allowed Netflix to personalize what recommendations customers saw, so every viewer
+received a unique experience.
+Considerations for Cloud-Based Databases and Their Architecture
+Cloud-based databases are hosted on third-party servers, providing scalable and flexible data storage
+solutions. This means businesses don’t have to maintain physical servers and infrastructure, freeing them to
+focus on development and other core activities. Examples include AWS with Amazon RDS and DynamoDB, GCP
+with Cloud SQL and Cloud Firestore, and Microsoft Azure with Azure SQL Database and Azure Cosmos DB.
+Third-party providers manage these cloud-based databases. They handle the infrastructure, including
+database farms and storage. This ensures high availability, data redundancy, and automatic backups, which
+reduces the operational burden on businesses. Services like Amazon RDS, Google Cloud SQL, and Azure SQL
+Database offer managed database services, taking care of patching, backups, and scaling.
+Cloud applications benefit significantly from the scalability and flexibility of cloud databases. These databases
+allow applications to handle increased loads without performance issues, which is especially important for
+mobile applications that experience varying levels of user activity.
+•
+Bandwidth: Cloud databases need to handle high data transfer rates efficiently. Adequate bandwidth
+ensures that data can be transmitted quickly between the cloud database and the mobile application,
+providing a smooth user experience.
+•
+Redundancies: Redundancy is built into cloud architectures to ensure data availability. Cloud providers use
+techniques such as data replication across multiple geographic locations to protect against data loss and
+ensure that services remain available even in the event of hardware failures.
+Pros and Cons of Cloud-Based Databases
+Most organizations choose cloud-based databases because they make storing and managing data easier and
+more flexible. Some of their benefits include being able to scale as needed and access data from anywhere,
+but there are also drawbacks, like security risks and potential cost issues. Organizations will need to weigh the
+pros and cons to determine if they’re the right fit for the organization’s needs. Some pros of cloud-based
+databases are as follows:
+•
+Scalability: Cloud-based databases can grow or shrink with needs, which can easily accommodae
+fluctuating workloads.
+•
+Cost-effectiveness: Customers only pay for what they use, so there’s no need for costly investments in
+hardware.
+4
+Yury Izrailevsky, Stevan Vlaovic, and Ruslan Meshenberg, “Completing the Netflix Cloud Migration,” Netflix, February 11, 2016,
+https://about.netflix.com/en/news/completing-the-netflix-cloud-migration
+5
+Yury Izrailevsky, Stevan Vlaovic, and Ruslan Meshenberg, “Completing the Netflix Cloud Migration,” Netflix, February 11, 2016,
+https://about.netflix.com/en/news/completing-the-netflix-cloud-migration
+108
+3 • Database Management Systems
+Access for free at openstax.org
+
+•
+Easy access: Customers can access their data from anywhere with an internet connection.
+•
+Automatic updates: The cloud provider takes care of software updates and security patches, so
+organizations don’t have to worry about maintaining the system.
+•
+Disaster recovery: Most cloud services have built-in backups and recovery options to protect data from
+loss or outages.
+Some cons of cloud-based databases are as follows:
+•
+Internet reliance: If the internet goes down or is slow, it can disrupt access to the database.
+•
+Security risks: Storing data in the cloud can raise concerns about privacy.
+•
+Costs: While they can be a cost-effective option for small workloads, unexpected usage can drive up costs
+quickly.
+•
+Less control: Organizations may have limited control over the database compared to hosting on their own
+infrastructure.
+•
+Vendor lock-in: Switching to a different cloud provider can be complicated and expensive.
+FUTURE TECHNOLOGY
+Smarter Streaming with Artificial Intelligence
+Netflix uses a mix of relational and NoSQL databases like Apache Cassandra, MySQL, and DynamoDB to
+manage all the data it needs for streaming. These databases work together to store and organize user
+information, the massive content library, and details like what shows people watch and how long they
+watch them.
+But Netflix takes it a step further by using AI to personalize the experience. The AI systems analyze the data
+from these databases to figure out what users might want to watch next. For example, Cassandra handles
+huge amounts of real-time data from around the world, MySQL keeps track of account details, and
+DynamoDB supports the AI recommendations that pop up while browsing for something new.
+By combining its databases with AI, Netflix makes sure users get spot-on recommendations, smooth video
+quality, and a seamless experience no matter where they are or what device they’re using.
+3.3 • Mobile Database Development and Cloud Database Management Systems
+109
+
+Key Terms
+access control
+security-driven restriction of access to ensure that only authenticated users are able to
+interact with specific resources
+ACID (atomicity, consistency, isolation, and durability)
+characteristics that ensure transactions are fully
+completed or not executed (atomicity), the database remains accurate and follows its rules (consistency),
+transactions do not interfere with each other (isolation), and a transaction stays saved even if the system
+crashes (durability)
+B-tree index
+most common type of index; maintains a balanced tree structure, providing efficient insertion,
+deletion, and lookup operations
+back end
+part of a software application that handles data, logic, and operations, supporting what users
+interact with on the front end
+bitmap index
+type of index that uses 0s and 1s to show where a value is in a database
+check constraint
+rule that specifies the value that can be entered into a column
+conceptual design
+creation of a simple model of data for database design, focusing on what is needed and
+how it is connected
+data cleanliness
+accuracy and consistency of data and the lack of duplicated or missing information
+data consistency
+data remain consistent and accurate across the database
+data independence
+data can be restructured without affecting the programs that use it
+data lake
+type of database that stores large amounts of raw data in their original format until the data are
+needed
+data life cycle
+stages that data undergo from creation to deletion, ensuring data remain accurate,
+accessible, and valuable throughout their life cycle
+data redundancy
+duplication of data
+data retrieval
+process of obtaining specific information from a database or storage system
+data warehouse
+type of database that integrates data from various sources and stores them in a combined
+manner
+database access tool
+provides graphical user interfaces (GUIs) to facilitate database interaction without
+writing extensive code
+database management system (DBMS)
+software system that manages, stores, and process data, ensuring
+it is organized, accessible, and secure
+database schema
+structure of tables, including columns and data types
+denormalization
+addition of redundant data for the purpose of making things run faster and meeting
+specific requirements
+foreign key
+column or set of columns in one table that establishes a relationship with the primary key in
+another table
+front end
+part of a software application that users interact with, including the design and user interface
+functional dependency
+how one piece of data relates to another within a table
+hash index
+type of index that uses a hash function to map data to a fixed-size table
+indexing
+technique used to improve the speed of data retrieval operations in a database
+integration test
+test to check the interaction between modules
+logical design
+detailed database model that defines tables, columns, primary keys, and foreign keys
+normalization
+technique in the design process where data are organized and stored only once, to eliminate
+the duplication of data
+NoSQL database (Not Only SQL)
+database that does not use the traditional table structure of SQL databases
+NoSQL database management system
+type of database that provides a mechanism for storing and
+retrieving data that is not based on the traditional relational database model
+object-oriented database management system (OODBMS)
+database management system that stores data
+in the form of objects, similar to the way data are represented in object-oriented programming
+orphaned record
+record that references another record that no longer exists
+110
+3 • Key Terms
+Access for free at openstax.org
+
+physical design
+creation of a physical structure from a logical design via actual implementation in the
+database
+primary key
+unique identifier for each data entry in a database table
+referential constraint
+maintains relationship between tables, making sure that a foreign key in one table
+matches a primary key in another table
+relational database
+stores data in tables with rows and columns, making it ideal for structured data
+relational database management system (RDBMS)
+database management system that stores and
+organizes data in a structured way using tables
+requirements analysis
+studying how a business operates to determine what data should be stored and how
+the data should be used
+semistructured data
+data that have some organization but do not fit neatly into tables
+structured data
+data that are highly organized and easily searchable
+Structured Query Language (SQL)
+standard language used to query and manage data in relational
+databases
+system test
+test to evaluate the overall functionality
+unit test
+test to verify individual functions
+unstructured data
+data that lack predefined structure and require advanced techniques for analysis
+user acceptance testing
+test to ensure the system meets the needs of end users
+Summary
+3.1 Data Types, Database Management Systems, and Tools for Managing
+Data
+•
+A database management system (DBMS) is a software system that manages, stores, and processes data,
+ensuring data are organized, accessible, and secure.
+•
+Data can be categorized into structured, semistructured, and unstructured types, requiring different tools
+and techniques to collect and analyze. Data come in two main types: line of business data and customer
+behavior data.
+•
+Managing data effectively is essential for organizations to ensure data integrity, accessibility, and security.
+A database system provides a structured environment to store, retrieve, and manipulate data efficiently.
+•
+Building a database involves two steps—design and implementation—to ensure that a structure can
+efficiently store and manage data. Types of databases include relational, NoSQL, data warehouses, and
+data lakes.
+•
+Understanding the types of data storage, indexing, and data retrieval techniques is fundamental to
+understanding database concepts.
+•
+Database design is the process of organizing data according to a database model, developing a design
+through conceptual, logical, and physical stages. Strong design involves understanding the data needs of
+an organization and structuring the data to minimize redundancy and maximize performance, and
+meeting requirements for functional dependencies and normalization.
+•
+Building a database involves gathering, organizing, curating, and processing data, as well as allowing for
+security and access controls.
+•
+Types of database management systems include relational, object-oriented, and NoSQL.
+3.2 Practical Applications of Database Design and Management
+•
+Database design and management are important for businesses because they help store, organize, and
+retrieve data efficiently.
+•
+A good database design ensures data are accurate, secure, and easy to access.
+•
+In e-commerce, databases help manage product inventory, track customer orders, and analyze sales. In
+healthcare, they manage electronic health records (EHRs).
+3 • Summary
+111
+
+•
+Logical design involves creating a blueprint of the database that outlines the structure without
+considering how it will be physically implemented.
+•
+Physical design focuses on how the database will be built on a specific DBMS.
+•
+A systems design process outlines the steps involved in creating a system, ensuring a systematic approach
+to design and leading to successful project outcomes.
+•
+Testing, documentation, and maintenance ensure that the DBMS meets all requirements and performs as
+expected under various conditions.
+•
+Applications of DBMSs can be found in various industries, such as health care, finance, education, and
+manufacturing.
+3.3 Mobile Database Development and Cloud Database Management
+Systems
+•
+Mobile development and cloud databases are closely linked as more businesses look for scalable and
+efficient ways to support their apps.
+•
+Mobile app development is closely tied to database design because apps rely on databases to store,
+manage, and retrieve data. Whether it’s user profiles, messages, or product details, the database handles
+this information.
+•
+In mobile app development, using cloud databases lets developers focus on user experience and app
+features without worrying about data storage and management.
+•
+Mobile applications need to handle various forms of data input efficiently and accurately, ensuring that
+the collected information is stored securely and is easy to retrieve.
+•
+Cloud applications benefit significantly from the scalability and flexibility of cloud databases.
+•
+Cloud databases need to handle high data transfer rates efficiently.
+•
+Cloud providers use techniques such as data replication across multiple geographic locations to protect
+against data loss and ensure that services remain available even in the event of hardware failure.
+Review Questions
+1. Which of the following best describes the two main types of data and their focus areas in business
+operations?
+a. Line of business data focus on customer interactions and feedback, while customer behavior data
+include daily operations and financial records.
+b. Line of business data involve daily operations like financial records and supply chain details, while
+customer behavior data focuses on customers’ interactions with a company’s offerings, such as
+purchase history and social media interactions.
+c. Line of business data include social media interactions and purchase history, while customer behavior
+data involve inventory processes and supply chain details.
+d. Both line of business data and customer behavior data focus primarily on the financial records and
+day-to-day operations of a business.
+2. The type of data that includes photos and scanned documents is called ________.
+a. text data
+b. voice data
+c. image data
+d. video data
+3. A tool or technique not used for managing data in a database system is a(n) ________.
+a. Structured Query Language (SQL)
+b. database management system like MySQL
+c. image editing software like Adobe Photoshop
+d. database access tools like phpMyAdmin
+112
+3 • Review Questions
+Access for free at openstax.org
+
+4. The type of database designed to handle a wide variety of data types and structures, providing flexibility
+for applications like real-time web applications, is a(n) ________.
+a. NoSQL database
+b. relational database
+c. data warehouse
+d. data lake
+5. An example of a primary data source are ________.
+a. data from existing databases
+b. articles and books
+c. direct observations
+d. reports from other researchers
+6. Database design and management are crucial for businesses because they ________.
+a. help in storing, organizing, and retrieving data efficiently
+b. ensure data are accurate, secure, and easy to access
+c. support various enterprise systems like customer relationship management, financial systems, and
+health-care information systems
+d. all of the above
+7. What is the main benefit of electronic health record systems in health care?
+a. storing patient information, medical histories, and treatment plans
+b. helping with marketing strategies
+c. managing product inventory
+d. tracking financial transactions
+8. What is the primary purpose of requirement analysis in the design of a library management system?
+a. determining the feasibility of the project
+b. gathering and analyzing user needs
+c. creating data models and defining system architecture
+d. conducting testing and ensuring system functionality
+9. Why are cloud databases important for mobile app development?
+a. They offer lower maintenance costs and real-time data access.
+b. They increase the complexity of app development.
+c. They require local servers for data storage.
+d. They eliminate the need for user experience design.
+10. How do cloud-based databases benefit mobile applications?
+a. They reduce the need for user authentication.
+b. They eliminate the need for data encryption.
+c. They provide scalable and flexible data storage solutions.
+d. They require businesses to maintain physical servers.
+Check Your Understanding Questions
+1. What is indexing in the context of databases, and how does it improve data retrieval operations?
+2. What is the purpose of referential constraints in database design, and how do they ensure data integrity?
+3. What are the primary advantages of using NoSQL databases over traditional relational databases?
+4. How do document-oriented databases handle data, and what are their typical use cases?
+5. How do well-designed databases improve operations in health-care systems?
+3 • Check Your Understanding Questions
+113
+
+6. Explain the role of databases in e-commerce and how they enhance customer satisfaction.
+7. What are the key components and functionalities that a library management system must handle?
+8. What steps are involved in the feasibility study for designing a library management system, and why are
+they important?
+9. How do cloud databases support the scalability and efficiency needs of mobile applications?
+10. What are some key design principles to consider when integrating mobile applications with databases?
+Application Questions
+1. You are a database architect for a company that develops different types of applications, including an
+ecommerce platform, a real-time analytics tool, and a computer-aided design system. Your job is to
+choose the right database management system for each application. You have these options:
+•
+relational database management system (RDBMS)
+•
+object-oriented database management system (OODBMS)
+•
+NoSQL database
+Based on this scenario, answer the following questions:
+a.
+Which DBMS should be chosen for the e-commerce platform and why?
+b.
+Which database management system would be most appropriate for the real-time analytics tool and
+why?
+c.
+Which database management system should be selected for the computer-aided design system and
+why?
+2. Given the importance of security in database design, particularly in systems handling sensitive data such
+as a library management system, outline the security measures you would implement to protect the data.
+114
+3 • Application Questions
+Access for free at openstax.org

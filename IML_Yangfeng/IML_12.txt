@@ -1,0 +1,892 @@
+CS 4501/6501 Interpretable Machine Learning
+Jiefeng Chen
+Department of Computer Sciences
+University of Wisconsin - Madison
+jchen662@wisc.edu
+1
+Guest Lecture: Robust Attribution Regularization
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+2
+Overview
+• What is attribution? 
+• How to compute attribution? 
+• What is the vulnerability issue of attribution methods? 
+• Why should attribution methods be robust? 
+• How to enforce attribution robustness?
+• What are the benefits of attribution robustness?
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+3
+Overview
+• What is attribution? 
+• How to compute attribution? 
+• What is the vulnerability issue of attribution methods? 
+• Why should attribution methods be robust? 
+• How to enforce attribution robustness?
+• What are the benefits of attribution robustness?
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+4
+What is Attribution?
+According to Merriam-Webster: “attribution” means 
+“to explain (something) by indicating a cause”. 
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+5
+Human Learning
+Do you see a dog?
+Yes.
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+6
+Human Learning
+What makes you think so?
+Because I see this!
+Correct
+Wrong
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+7
+Machine Learning
+Machine learning is like human learning. 
+Training Data
+Learning 
+Algorithm
+Model
+……
+……
+Dog
+Test Data
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+8
+Deep Neural Networks
+A neural network with some level of complexity, usually at least two 
+layers, qualifies as a Deep Neural Network (DNN). 
+… …
+…
+…
+…
+…
+Outdoor
+Indoor
+Outdoor
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+9
+Deep Learning Breakthroughs
+Image Classification
+Machine Translation
+Game Playing
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+10
+Deep Learning Challenges
+• Blackbox: not too much understanding/interpretation
+• Vulnerable to adversarial examples
+Model
+Dog
+classified as
+Stop Sign
+97% confidence
+classified as
+Max Speed 100
+98% confidence
++
+=
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+11
+Why DNN Models are Vulnerable? 
+Deep Neural Networks (DNNs) may use spurious correlation for prediction. 
+Training Data
+Test Data
+How will the 
+DNN behave?
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+12
+Attribution in Machine Learning
+Attribution: attributing the prediction of a DNN to its input features.
+Attributions for Question Classification
+Attributions for Image Classification 
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+13
+Formal Definition of Attribution
+Suppose we have a function 𝐹: 𝑅! →[0,1] that represents a deep network, 
+and an input 𝑥= 𝑥", … , 𝑥! ∈𝑅!. An attribution of the prediction at input 𝑥
+relative to a baseline input 𝑥′ is a vector 𝐴# 𝑥, 𝑥$ = 𝑎", … , 𝑎! ∈𝑅! where 
+𝑎% is the contribution of 𝑥% to the prediction 𝐹(𝑥).
+Model
+𝐹(𝑥)
+Cabbage Butterfly
+Score: 0.996
+𝑥
+𝐹
+𝑥’
+𝐴# 𝑥, 𝑥$
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+14
+A note on the baseline
+• The need for a baseline is central to any explanation method. In a 
+sense, it is the counterfactual for causal reasoning. 
+• The network must have a truly neutral prediction at the baseline input.
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+15
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+16
+Overview
+• What is attribution? 
+• How to compute attribution? 
+• What is the vulnerability issue of attribution methods? 
+• Why should attribution methods be robust? 
+• How to enforce attribution robustness?
+• What are the benefits of attribution robustness?
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+17
+Common Attribution Methods
+• Gradients
+• DeepLift
+• Layer-wise Relevance Propagation (LRP)
+• Deconvolutional Networks
+• Guided Back-propagation
+• Integrated Gradients
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+18
+How to evaluate an attribution method?
+Sundararajan et al.’s Approach:
+• Define a set of reasonable axioms for attribution methods. 
+• Check if the attribution method satisfies them.  
+Sundararajan, Mukund, Ankur Taly, and Qiqi Yan. "Axiomatic attribution for deep networks." ICML, 2017.
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+19
+Sensitivity Axioms
+• Sensitivity: If starting from baseline, varying a variable changes the 
+output, then the variable should receive some attribution.
+• Insensitivity: A variable that has no effect on the output gets no 
+attribution.
+Pure gradients do not satisfy Sensitivity 
+when predictions saturate.
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+20
+Functional Axioms
+• Implementation Invariance: Two functionally equivalent networks 
+have identical attributions for all inputs and baseline. 
+• Linearity: If the function 𝐹is a linear combination of two functions 𝐹", 
+𝐹&, then the attributions for 𝐹are a linear combination of the 
+attributions for 𝐹", 𝐹&. 
+• Symmetry: If a function is symmetric across two input variables then 
+the variables should receive identical attribution. 
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+21
+An Accounting Axiom
+Completeness: Sum(attributions) = F(input) - F(baseline).
+Break down the predicted click through rate (pCTR) of an ad like:
+• 55% of pCTR is because it’s at position 1.
+• 25% is due to its domain (a popular one).
+…
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+22
+Integrated Gradients (IG)
+• The integrated gradient (IG) along the 𝑖𝑡ℎdimension for an input 𝑥and 
+baseline 𝑥’ is defined as follows: 
+𝐼𝐺% 𝑥≔𝑥% −𝑥%
+$ × :
+'()
+"
+𝜕𝐹(𝑥$ + 𝛼×(𝑥−𝑥′))
+𝜕𝑥%
+𝑑𝛼
+• IG satisfies the completeness axiom: if F is differentiable almost 
+everywhere, then ∑%("
+!
+𝐼𝐺% 𝑥= 𝐹𝑥−𝐹(𝑥′).
+Sundararajan, Mukund, Ankur Taly, and Qiqi Yan. "Axiomatic attribution for deep networks." ICML, 2017.
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+23
+Theoretical Result
+Theorem: Integrated Gradients is the unique method satisfying:
+• Sensitivity, Insensitivity
+• Implementation Invariance, Linearity, Symmetry
+• Completeness
+up to the errors from approximating integration.
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+24
+Implementation of IG
+• The integral of IG can be efficiently approximated via a summation:
+𝐼𝐺%
+*++,-. 𝑥≔𝑥% −𝑥%
+$ × @
+/("
+0
+𝜕𝐹𝑥$ + 𝑘
+𝑚× 𝑥−𝑥$
+𝜕𝑥%
+× 1
+𝑚
+Here, m is the number of steps in the Riemman approximation of the integral. 
+• Step-size 𝑚: check if completeness holds. If not, increase 𝑚.
+• Baseline 𝑥$: select 𝑥$ that leads to a near-zero score. 
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+25
+TensorFlow Implementation of IG
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+26
+Applications of IG
+We can use IG for Diabetic Retinopathy Prediction where feature importance 
+explanations are important for specialists to build trust in the network’s predictions. 
+Attribution for Diabetic Retinopathy grade prediction from a retinal fundus image.
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+27
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+28
+Overview
+• What is attribution? 
+• How to compute attribution? 
+• What is the vulnerability issue of attribution methods? 
+• Why should attribution methods be robust? 
+• How to enforce attribution robustness?
+• What are the benefits of attribution robustness?
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+29
+Fragile Interpretation
+As Ghorbani et al. convincingly demonstrated, for existing DNNs, one can generate 
+minimal input perturbations that substantially change model attributions, while 
+keeping their (correct) predictions intact. 
+Ghorbani, Amirata, Abubakar Abid, and James Zou. "Interpretation of neural networks is fragile." AAAI 2019.
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+30
+Attribution Attack Objective
+For a given neural network 𝒩with fixed weights and a test data point 𝑥1, the 
+feature importance method produce an interpretation 𝐼(𝑥1; 𝒩), which is a 
+vector of normalized feature scores. The attribution attack objective is: 
+arg max
+2
+𝒟(𝐼𝑥1; 𝒩, 𝐼(𝑥1 + 𝛿; 𝒩))
+𝑠𝑢𝑏𝑗𝑒𝑐𝑡𝑡𝑜:
+𝛿
+3 ≤𝜖
+𝑃𝑟𝑒𝑑𝑖𝑐𝑡𝑖𝑜𝑛𝑥1 + 𝛿; 𝒩= 𝑃𝑟𝑒𝑑𝑖𝑐𝑡𝑖𝑜𝑛(𝑥1; 𝒩)
+where 𝒟(⋅) measures the change in interpretation and 𝜖> 0 constrains the 
+norm of the perturbation. 
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+31
+Solving Attribution Attack Objective
+Algorithm Iterative Feature Importance Attacks
+Input: test image 𝑥!, perturbation budget 𝜖, normalized feature importance function I(6), number of 
+iterations P, step size 𝛼. 
+Define a dissimilarity function D to measure the change between interpretations of two images:
+𝐷𝑥!, 𝑥=
+−∑"∈$ 𝐼𝑥"
+∑"∈% 𝐼𝑥"
+𝐶𝑥−𝐶𝑥!
+&
+where B is the set of the k largest dimensions of 𝐼(𝑥!), A is the target region of the input image in 
+targeted attack, and 𝐶(⋅) is the center of feature importance mass. 
+Initialize 𝑥" = 𝑥!
+for 𝑝∈1, … , 𝑃do
+Perturb the test image: 𝑥# = 𝑥#$% + 𝛼⋅𝑠𝑖𝑔𝑛(∇&𝐷(𝑥!, 𝑥#$%))
+If needed, clip the perturbed input to satisfy: 𝑥# −𝑥!
+' ≤𝜖
+end for
+Among {𝑥%, … , 𝑥(}, return the element with the largest value for the dissimilarity function and the 
+same prediction as the original test image. 
+for top-k attack
+for targeted attack
+for mass-center attack
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+32
+Metrics for interpretation similarity
+• Spearman’s correlation: use the rank correlation to compare the 
+similarity between two attributions.
+• Top-k intersection: compute the size of intersection of the k most 
+important features of the two attributions divided by k. 
+The indices of the 5 most important features 
+of attribution A is {0, 1, 2, 3, 4} while the 
+indices of the 5 most important features of 
+attribution B is {3, 4, 5, 6, 7}. Then the top-5 
+intersection of A and B is 0.4. 
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+33
+Top-k and Mass-center Attack Results
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+34
+Targeted Attack Results
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+35
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+36
+Overview
+• What is attribution? 
+• How to compute attribution? 
+• What is the vulnerability issue of attribution methods? 
+• Why should attribution methods be robust? 
+• How to enforce attribution robustness?
+• What are the benefits of attribution robustness?
+
+--------------------------------------------------------------------------------
+[End of Page 36]
+
+37
+Why we want robust attributions?
+Model attributions are facts about model behaviors. While robust 
+attribution does not necessarily mean that the attribution is correct, a 
+model with brittle attribution can never be trusted.
+
+--------------------------------------------------------------------------------
+[End of Page 37]
+
+38
+Importance of Attribution Robustness
+In safety critical applications, the users need to check the attribution to see 
+whether the model’s predictions could be trusted. If the attributions are 
+brittle, the users will find it difficult to trust the model. 
+
+--------------------------------------------------------------------------------
+[End of Page 38]
+
+39
+Overview
+• What is attribution? 
+• How to compute attribution? 
+• What is the vulnerability issue of attribution methods? 
+• Why should attribution methods be robust? 
+• How to enforce attribution robustness?
+• What are the benefits of attribution robustness?
+
+--------------------------------------------------------------------------------
+[End of Page 39]
+
+40
+Robust Prediction Correlates with Robust Attribution: Why?
+original image, 
+normally trained model
+perturbed image,
+normally trained model
+Empirical results demonstrate that if the model has robust prediction, 
+usually it also has robust attribution. 
+
+--------------------------------------------------------------------------------
+[End of Page 40]
+
+41
+Robust Prediction Correlates with Robust Attribution: Why?
+perturbed image,
+robustly trained model
+original image, 
+robustly trained model
+Empirical results demonstrate that if the model has robust prediction, 
+usually it also has robust attribution. 
+
+--------------------------------------------------------------------------------
+[End of Page 41]
+
+42
+Adversarial Training (AT) 
+Training for robust prediction: find a model that predicts the same label 
+for all perturbed inputs around the training input. 
+min
+)
+𝔼𝒙,+ ∼-
+max
+𝒙!∈/(𝒙) ℓ𝒙′, 𝑦; 𝜃
+Perturbed input
+Allowed perturbations
+Madry, Aleksander, et al. “Towards deep learning models resistant to adversarial attacks.” ICLR 2018
+
+--------------------------------------------------------------------------------
+[End of Page 42]
+
+43
+Solving AT Objective
+We use projected gradient descent (PGD) to solve the inner maximization 
+problem and then use stochastic gradient descent (SGD) to optimize the 
+model parameters. 
+min
+O
+𝔼𝒙,Q ∼S
+max
+𝒙!∈T(𝒙) ℓ𝒙′, 𝑦; 𝜃
+𝒙1U" = ΠT 𝒙(𝒙1 + 𝛼⋅𝑠𝑖𝑔𝑛(∇𝒙ℓ(𝒙1, 𝑦; 𝜃)))
+𝒙) = 𝒙
+𝒙$ = 𝒙V
+𝜃$ = 𝜃−𝜂⋅∇Oℓ(𝒙$, 𝑦; 𝜃)
+PGD
+SGD
+
+--------------------------------------------------------------------------------
+[End of Page 43]
+
+44
+Robust Attribution Regularization (RAR)
+Training for robust attribution: find a model that can get similar attributions 
+for all perturbed inputs around the training input.
+min
+)
+𝔼𝒙,+ ∼- ℓ𝒙, 𝑦; 𝜃+ 𝜆⋅RAR
+RAR = max
+𝒙!∈/(𝒙) 𝑠(IG(𝒙, 𝒙′))
+Perturbed input
+Allowed perturbations
+Chen, Jiefeng, et al. "Robust attribution regularization." NeurIPS 2019.
+
+--------------------------------------------------------------------------------
+[End of Page 44]
+
+45
+Robust Attribution Regularization (RAR)
+Training for robust attribution: find a model that can get similar attributions 
+for all perturbed inputs around the training input.
+min
+)
+𝔼𝒙,+ ∼- ℓ𝒙, 𝑦; 𝜃+ 𝜆⋅RAR
+RAR = max
+𝒙!∈/(𝒙) 𝑠(IG(𝒙, 𝒙′))
+Size function
+Integrated Gradient
+Chen, Jiefeng, et al. "Robust attribution regularization." NeurIPS 2019.
+
+--------------------------------------------------------------------------------
+[End of Page 45]
+
+46
+IG in RAR
+• The IG function for RAR is defined as: 
+𝐼𝐺% 𝑥, 𝑥′ ≔𝑥%
+$ −𝑥% × :
+'()
+"
+𝜕ℓQ(𝑥+ 𝛼× 𝑥′ −𝑥)
+𝜕𝑥%
+$
+𝑑𝛼
+where ℓQ 𝑥= ℓ(𝑥, 𝑦; 𝜃) is the loss function. The input 𝑥is regarded as the 
+baseline. 
+• From the axiom of Completeness, we have 
+@
+%("
+W
+𝐼𝐺% 𝑥, 𝑥′ = ℓ𝑥$, 𝑦; 𝜃−ℓ(𝑥, 𝑦; 𝜃)
+• In implementation, we use summation approximation of IG: 
+𝐼𝐺%
+*++,-. 𝑥, 𝑥′ ≔𝑥%
+$ −𝑥% × @
+/("
+0
+𝜕ℓQ 𝑥+ 𝑘
+𝑚× 𝑥$ −𝑥
+𝜕𝑥%
+$
+× 1
+𝑚
+
+--------------------------------------------------------------------------------
+[End of Page 46]
+
+47
+Connection to Robust Prediction
+• Robust attribution regularization: 
+• If 𝜆= 1 and 𝑠⋅= 𝑠𝑢𝑚(⋅), then RAR becomes the Adversarial 
+Training objective for robust prediction: 
+min
+O
+𝔼𝒙,Q ∼S
+max
+𝒙!∈X(𝒙,Y) ℓ(𝒙$, 𝑦; 𝜃)
+simply by the Completeness of IG.
+min
+)
+𝔼𝒙,+ ∼- ℓ𝒙, 𝑦; 𝜃+ 𝜆∗RAR
+RAR = max
+𝒙!∈/(𝒙) 𝑠(IG(𝒙, 𝒙′))
+Madry, Aleksander, et al. “Towards deep learning models resistant to adversarial attacks.” ICLR 2018
+
+--------------------------------------------------------------------------------
+[End of Page 47]
+
+48
+When the two coincide?
+Theorem. Consider the special case of one-layer neural networks, where 
+the loss function takes the form of ℓ𝒙, 𝑦; 𝒘= 𝑔(−𝑦𝒘, 𝒙). Suppose 𝑔
+is nonnegative, differentiable, non-decreasing, and convex. Then for 𝜆=
+1, 𝑠⋅=
+⋅", and ℓ3 neighborhood, RAR training objective reduces to 
+adversarial training objective: 
+@
+%("
+0
+max
+𝒙"
+!Z𝒙" #[Y 𝑔(−𝑦% 𝒘, 𝒙%
+$ )
+= @
+%("
+0
+𝑔(−𝑦% 𝒘, 𝒙% + 𝜖𝒘")
+(Adversarial training objective)
+(soft-margin)
+
+--------------------------------------------------------------------------------
+[End of Page 48]
+
+49
+When the two coincide?
+For the special case of one-layer neural networks (linear function), the 
+robust attribution instantiation (𝑠(⋅) = ‖ ⋅‖") and the robust prediction 
+instantiation (𝑠(⋅) = 𝑠𝑢𝑚(⋅)) coincide, and both reduce to soft max-
+margin training. 
+
+--------------------------------------------------------------------------------
+[End of Page 49]
+
+50
+Connection to Robust Prediction
+• Robust attribution regularization: 
+• If 𝜆= 𝜆′/𝜖\ and 𝑠⋅=
+⋅"
+\ with approximate IG, then RAR becomes 
+the Input Gradient Regularization for robust prediction: 
+min
+O
+𝔼𝒙,Q ∼S ℓ𝒙, 𝑦; 𝜃+ 𝜆′ ∇𝒙ℓ𝒙, 𝑦; 𝜃
+\
+\
+min
+)
+𝔼𝒙,+ ∼- ℓ𝒙, 𝑦; 𝜃+ 𝜆∗RAR
+RAR = max
+𝒙!∈/(𝒙) 𝑠(IG(𝒙, 𝒙′))
+Ross, Andrew, and Finale Doshi-Velez. “Improving the adversarial robustness and interpretability of deep 
+neural networks by regularizing their input gradients.” AAAI 2018.
+
+--------------------------------------------------------------------------------
+[End of Page 50]
+
+51
+Instantiations of RAR
+• IG-NORM: if we pick 𝑠⋅=
+⋅", then this gives
+min
+O
+𝔼𝒙,Q ∼S ℓ𝒙, 𝑦; 𝜃+ 𝜆⋅
+max
+𝒙!∈X 𝒙,Y
+IG(𝒙, 𝒙′) "
+• IG-SUM-NORM: if we define 𝑠⋅= 𝑠𝑢𝑚⋅+ 𝛽⋅", where 𝛽≥0 is a 
+regularization parameter, and set 𝜆= 1, then this gives
+min
+O
+𝔼𝒙,Q ∼S
+max
+𝒙!∈X 𝒙,Y ℓ𝒙$, 𝑦; 𝜃+ 𝛽⋅IG(𝒙, 𝒙′) "
+
+--------------------------------------------------------------------------------
+[End of Page 51]
+
+52
+Solving RAR Objective
+Given (𝒙, 𝑦) at time step 𝑡during training, we have the following two steps:
+1) Attack step: we run PGD on (𝒙, 𝑦) to find 𝒙∗that produces a large 
+inner max term (i.e., IG 𝒙, 𝒙∗
+" for IG-NORM and ℓ𝒙∗, 𝑦; 𝜃+
+𝛽⋅IG 𝒙, 𝒙∗
+" for IG-SUM-NORM). 
+2) Gradient step: fixing 𝒙∗, we can then compute the gradient of the 
+corresponding loss with respect to 𝜃, and then update the model.   
+
+--------------------------------------------------------------------------------
+[End of Page 52]
+
+53
+Difficulty of Optimization
+Due to the summation approximation of IG, we have first order terms in 
+the training objective. It forces us to compute second derivatives, which 
+may not be numerically stable for deep networks. 
+min
+'
+𝔼𝒙,* ∼, ℓ𝒙, 𝑦; 𝜃+ 𝜆⋅
+max
+𝒙!∈- 𝒙,.
+IG/00123(𝒙, 𝒙′) 4
+𝐼𝐺"
+/00123 𝑥, 𝑥′ ≔𝑥"
+5 −𝑥" × E
+674
+8
+𝜕ℓ* 𝑥+ 𝑘
+𝑚× 𝑥5 −𝑥
+𝜕𝑥"
+5
+× 1
+𝑚
+
+--------------------------------------------------------------------------------
+[End of Page 53]
+
+54
+Experiments: Qualitative
+Flower dataset
+
+--------------------------------------------------------------------------------
+[End of Page 54]
+
+55
+Experiments: Qualitative
+MNIST dataset
+
+--------------------------------------------------------------------------------
+[End of Page 55]
+
+56
+Experiments: Qualitative
+Fashion-MNIST dataset
+
+--------------------------------------------------------------------------------
+[End of Page 56]
+
+57
+Experiments: Qualitative
+GTSRB dataset
+
+--------------------------------------------------------------------------------
+[End of Page 57]
+
+58
+Experiments: Quantitative
+• Metrics for attribution robustness: 
+1. Kendall’s tau rank order correlation.
+2. Top-K intersection.
+Original Image Attribution Map
+Perturbed Image Attribution Map
+Top-1000 Intersection: 0.1%          
+Kendall’s Correlation: 0.2607
+
+--------------------------------------------------------------------------------
+[End of Page 58]
+
+59
+Experiments: Quantitative
+Flower
+MNIST
+Fashion-MINST
+GTSRB
+
+--------------------------------------------------------------------------------
+[End of Page 59]
+
+60
+Prediction Accuracy of Different Models
+Dataset
+Approach
+Nat. Acc.
+Adv. Acc.
+MNIST
+NATURAL
+99.17%
+0.00%
+AT
+98.40%
+92.47%
+IG-NORM
+98.74%
+81.43%
+IG-SUM-NORM
+98.34%
+88.17%
+Fashion-MNIST
+NATURAL
+90.86%
+0.01%
+AT
+85.73%
+73.01%
+IG-NORM
+85.13%
+65.95%
+IG-SUM-NORM
+85.44%
+70.26% 
+GTSRB
+NATURAL
+98.57%
+21.05%
+AT
+97.59%
+83.24%
+IG-NORM
+97.02%
+75.24%
+IG-SUM-NORM
+95.68%
+77.12%
+Flower
+NATURAL
+86.76%
+0.00%
+AT
+83.82%
+41.91%
+IG-NORM
+85.29%
+24.26%
+IG-SUM-NORM
+82.35%
+47.06%
+
+--------------------------------------------------------------------------------
+[End of Page 60]
+
+61
+Empirical Observations
+Our main findings can be summarized as follows:
+1. Compared with naturally trained models, RAR only results in a very 
+small drop in test accuracy;
+2. Our method gives significantly better attribution robustness, as 
+measured by correlation analyses;
+3. Our models yield comparable prediction robustness (sometimes even 
+better), compared with adversarially trained models (for robust 
+prediction), while consistently improving attribution robustness;
+4. Intriguingly, RAR leads to much more human aligned attribution.
+
+--------------------------------------------------------------------------------
+[End of Page 61]
+
+62
+Overview
+• What is attribution? 
+• How to compute attribution? 
+• What is the vulnerability issue of attribution methods? 
+• Why should attribution methods be robust? 
+• How to enforce attribution robustness?
+• What are the benefits of attribution robustness?
+
+--------------------------------------------------------------------------------
+[End of Page 62]
+
+63
+Benefits of Attribution Robustness
+• Robust attribution correlates with robust prediction.
+• Robust attribution leads to more human-aligned attribution.
+• Robust attribution may help tackle spurious correlations.
+
+--------------------------------------------------------------------------------
+[End of Page 63]
+
+64
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 64]
+
+65
+Reference
+• Sundararajan, Mukund, Ankur Taly, and Qiqi Yan. "Axiomatic attribution for deep 
+networks." International conference on machine learning. PMLR, 2017.
+• Ghorbani, Amirata, Abubakar Abid, and James Zou. "Interpretation of neural 
+networks is fragile." Proceedings of the AAAI conference on artificial intelligence. 
+Vol. 33. No. 01. 2019.
+• Madry, Aleksander, et al. "Towards Deep Learning Models Resistant to Adversarial 
+Attacks." International Conference on Learning Representations. 2018.
+• Chen, Jiefeng, et al. "Robust attribution regularization." Advances in Neural 
+Information Processing Systems 32 (2019).
+
+--------------------------------------------------------------------------------
+[End of Page 65]

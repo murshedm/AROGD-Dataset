@@ -1,0 +1,891 @@
+Chapter 5 – Electrical Energy Efficiency and Decarbonization in Cement Raw Meal Grinding
+Chapter 1 of this dissertation highlighted the gap in research efforts to optimize EEC in cement 
+production compared to efforts to optimize thermal energy despite the significant decarbonization 
+opportunities in EEC optimization. The submission was that EEC in raw meal grinding is a critical aspect 
+of cement production, where grinding operations can account for up to 27% of total plant electricity 
+demand. The literature review in Chapter 2 covered the theoretical foundation of optimization methods, 
+including the application of AI. This section of the dissertation shares the experimental applications of 
+advanced industrial analytics to optimize EEC in cement raw meal grinding, highlights the findings, and 
+discusses the results and their implications for decarbonization in the cement industry and other electrical 
+energy-intensive manufacturing processes.
+5.1 Raw Meal Grinding Process
+Cement raw materials include limestone, clay, marl, sand, gypsum, silica, alumina, and iron. The raw 
+meal grinding process is a series of steps and components that transform the raw materials into a fine meal 
+that meets the specifications for cement production. The method includes a feeding mechanism for 
+introducing the raw materials into the grinding system, batch binning to ensure uniformity in particle size, 
+stirring and mixing, crushing and grinding, and grading that separates the ground materials based on 
+fineness. The process is a critical step that determines both the final product's quality and the production 
+process's overall energy efficiency. It involves the grinding of raw materials to a specific fineness that is 
+essential for effective clinker calcination. The grinding system has specific technical requirements and 
+quality control parameters [134]. Raw meal fineness must be carefully controlled to ensure optimal clinker 
+formation and is typically specified as residue percentage on an 80 m sieve. Industry standards usually 
+require 12-15% residue for efficient calcination [135].
+5.1.1 Key Considerations in the Raw Meal Grinding Process
+The key factors of raw meal grinding quality requirements include composition uniformity, chemical 
+parameter monitoring, and the efficiency of the grinding equipment. Variability in the composition of the 
+70
+raw meal may adversely affect clinker reactivity. As part of chemical control, the lime saturation factor, 
+silica modulus, alumina modulus, and the levels of SO3 must be monitored. The grinding media and 
+equipment design also go a long way in determining raw meal efficiency and quality outcomes. There is 
+often a trade-off between stringent quality control measures and their cost implications. Striking the right 
+balance between these two remains challenging in the cement industry.
+Energy consumption patterns in raw meal grinding, which could account for up to 27% of total 
+electricity consumption, represent a critical factor in cement production efficiency and sustainability, 
+making it a prime target for optimization efforts [136,137]. According to Meng et al., 2021, the mean energy 
+consumption of raw material preparation in China's cement industry has significantly decreased from 30.88 
+kWh/t in 2014 to 16.13 kWh/t in 2019. The average specific electrical energy consumption baseline from 
+the data collected from the cement plant for this research was 15.55 kWh/t. Advancements have been made 
+in reducing EEC in raw meal grinding through equipment technology improvements and a better 
+understanding of material properties. However, the industry still faces challenges in standardizing these 
+improvements across diverse conditions of operations and scales of production.
+5.1.2 The Complexity of Cement Raw Meal Grinding Optimization
+The challenges with optimizing EEC in the raw meal grinding revolves around the complexity of the 
+process and the requirements for accuracy in modeling. The nonlinear nature of grinding and the 
+variabilities in the conditions at the plant, complicates the establishment of effective mathematical models 
+for optimization. Raw material heterogeneity such as limestone compositional variability, moisture content 
+fluctuations, and hardness variations, contribute to the complexity that render traditional optimization 
+approaches inadequate. The variabilities in the conditions at the cement plant include the following:
+• Equipment degradation patterns affecting performance.
+• Environmental factors such as temperature and humidity influencing process efficiency.
+• Human operator interventions and decision-making patterns.
+• Process interdependencies across multiple subsystems. 
+71
+5.2 EEC Optimization Research Objectives
+With the cement industry at the critical intersection of global industrial energy consumption and 
+environmental impact, optimizing EEC in the raw meal grinding process presents a significant opportunity 
+for improvement. Traditional optimization approaches have not resulted in sustainability practices at the 
+cement plant because they have struggled to fully address the grinding process's inherent complexity and 
+nonlinearity, and their outcomes have been difficult to translate to actual interventions at the cement plant.
+Advances in IoT and AI/ML methods offer promising pathways for optimizing industrial processes through 
+their ability to read and adapt to changing operational conditions and handle complex multivariate systems. 
+Applying these technologies to raw meal grinding could be a transformative approach to reducing electrical 
+energy consumption and associated carbon emissions while maintaining product quality and ensuring 
+economic viability.
+This study investigates the optimization of EEC in cement raw meal grinding through the application 
+of Causal Bayesian Optimization. Leveraging the probabilistic framework of Bayesian statistics and 
+incorporating causal relationships between process variables enables efficient exploration of the parameter 
+space while accounting for the interdependencies between operational variables, material properties, and 
+energy consumption patterns. The proposed approach integrates process data, quality parameters, and 
+energy consumption metrics to create an optimization strategy that balances environmental and economic 
+objectives. Moreover, the research findings easily translate to actual energy consumption reduction 
+interventions at the cement plant.
+5.3 EEC Optimization Research Methods 
+The research focuses specifically on the raw meal grinding process, one of the most energy-intensive 
+processes in cement production and a well-bounded system for study. The research findings could apply to 
+other electrical energy-intensive industrial operations, especially those involving grinding. The study was 
+undertaken to answer the following research questions:
+72
+1. How can causal relationships between operational variables be systematically identified and leveraged 
+in cement raw meal grinding optimization, where traditional ML approaches fail due to confounding 
+variables and complex interdependencies?
+2. What framework can effectively handle the significant real-world disturbances (material variations, 
+environmental factors, equipment degradation) that render conventional optimization approaches 
+inadequate in industrial cement manufacturing?
+3. How can Causal Bayesian Optimization be adapted to complex, real-world industrial systems with 
+operational constraints, quality requirements, and safety considerations?
+4. What is the relative importance of key operational variables in determining grinding energy efficiency?
+This study covers the following system development steps:
+• Development of an understanding of the raw meal grinding process to be modeled.
+• Identification of the critical components of the raw meal grinding system and the data points 
+required. 
+• Installation of data collection field assets throughout the raw meal grinding system.
+• Data collection, cleaning, and preprocessing of inputs and operational variables for the cement 
+plant's raw meal grinding operations from 2020 to 2024.
+• Exploratory data analysis and feature importance analysis to determine control, manipulatable, and 
+disturbance variables and determine which ones are predictive of the EEC.
+• Algorithm selection and customization.
+• Model training, testing, and validation.
+• Model output evaluation and industry consultations on practicability and cost implications of 
+implementing the manufacturing system conditions that will enable the optimal EEC output 
+generated.
+This study aims to understand better causes or actions that can lead to a reduction in EEC and identify 
+practical interventions for optimizing EEC during the raw meal grinding process. 
+73
+The objective function is defined as:
+Minimize: 𝑓(𝑥) = 𝑆𝐸𝐸𝐶(𝑥) + 𝜆1.𝑄𝑢𝑎𝑙𝑖𝑡𝑦𝑃𝑒𝑛𝑎𝑙𝑡𝑦(𝑥) + 𝜆2 . 𝑆𝑡𝑎𝑏𝑖𝑙𝑖𝑡𝑦𝑃𝑒𝑛𝑎𝑙𝑡𝑦(𝑥) (8)
+Subject to:
+• Quality constraints, raw material volume mixture
+• Equipment operational limits for each control variable
+• Process stability constraints to prevent rapid parameter fluctuations
+Where 𝑥 represents the vector of controllable process parameters.
+𝑆𝐸𝐸𝐶(𝑥) is the Specific Electrical Energy Consumption (kWh/ton).
+𝑄𝑢𝑎𝑙𝑖𝑡𝑦𝑃𝑒𝑛𝑎𝑙𝑡𝑦(𝑥) enforces constraints on product quality metrics such as raw material combination 
+requirements and fineness residue.
+𝑆𝑡𝑎𝑏𝑖𝑙𝑖𝑡𝑦𝑃𝑒𝑛𝑎𝑙𝑡𝑦(𝑥) penalizes solutions that may cause operational instability.
+The weighting coefficients 𝜆1 and 𝜆2 are numerical values determining the relative importance of 
+different terms in the multi-objective optimization problem. They enable the adjustment of priorities, 
+balancing of competing objectives, normalization (since terms have different scales), and parameter tuning.
+The review of the Iterative Causal Optimization and the Causal Bayesian Optimization methods in Chapter 
+2 revealed opportunities to address the following challenges with implementing these methods in practice 
+in the industry: causal discovery uncertainties, computational complexity, computational demands, and 
+challenges with scaling to high-dimensional spaces. The hybrid causal optimization method proposed in 
+this study attempts to solve these challenges.
+5.4 Hybrid Causal Optimization
+This study's memory-efficient hybrid causal optimization represents an approach for addressing largescale optimization problems in high-energy-dependent manufacturing processes. This implementation 
+leverages the unique strengths of both iterative causal inference and CBO and manages the computational 
+demands of complex industrial systems. The features and key improvements on the CBO are highlighted 
+below:
+74
+1) Causal structure identification: 
+i. The hybrid causal optimization uses Random Forest-based cross-validation from the iterative 
+approach for robust causal effect estimation. 𝜏̂𝑗
+, the estimated causal effect of variable 𝑋𝑗 on 
+outcome 𝑌 is given by:
+𝜏̂𝑗 = 
+1
+𝐾
+∑
+∑ (𝑌𝑖 −̂𝑌𝑖
+(−𝑘)
+).(𝑋𝑖𝑗 − 𝑋̂
+𝑖𝑗
+(−𝑘)
+) 𝑖∈𝑇𝑘
+∑ (𝑋𝑖𝑗 − ̂𝑋𝑖𝑗
+(−𝑘)
+𝑖∈𝜏𝑘
+)
+2
+𝐾
+𝑘=1
+(9)
+Where 𝐾 is the number of cross-validation folds
+𝑇𝑘 is the test set for fold 𝑘, 𝑌𝑖
+is the actual outcome for observation 𝑖
+̂𝑌𝑖
+(−𝑘)
+is the predicted outcome using a model trained on all folds except 𝑘
+𝑋𝑖𝑗 is the value of variable 𝑋𝑗
+for observation 𝑖
+𝑋̂
+𝑖𝑗
+(−𝑘)
+is the predicted value of 𝑋𝑖𝑗 using a model trained on all folds except 𝑘
+ii. It incorporates memory-efficient batching from the Bayesian approach.
+iii. It maintains a causal graph structure with weighted edges.
+2) Optimization Strategy:
+i. The hybrid causal optimization combines Gaussian Process-based Bayesian optimization with 
+iterative causal updates.
+ii. It uses a custom kernel that incorporates causal structure information. The causal-weighted 
+kernel with adaptive length scales is given by:
+𝑘𝑐𝑎𝑢𝑠𝑎𝑙(𝑥, 𝑥
+′
+) = 𝜎𝑓
+2
+exp (−
+1
+2
+∑
+(𝑥𝑗− 𝑥𝑗
+′
+)
+2
+(𝑙𝑗
+.𝑤𝑗
+)
+2
+)
+𝑑
+𝑗=1
+(10)
+Where 𝑤𝑗 = 
+1
+1+|𝜏̂𝑗
+|
+is a weight that modifies the length scales based on causal effects.
+iii. It modifies the expected improvement of the acquisition function 𝐸𝐼(𝑥) to account for causal 
+influences. The causal-weighted expected improvement is
+𝐸𝐼𝑐𝑎𝑢𝑠𝑎𝑙(𝑥) = 𝐸𝐼(𝑥) . (1 + 𝛽 ∑ |𝜏̂𝑗
+|
+𝑑
+𝑗=1
+. |𝑥𝑗
+|) (11)
+Where 𝛽 is the exploration weight parameter that controls the influence of causal effects.
+75
+iv. Whereas CBO minimizes the acquisition function 𝑥𝑡+1= arg 𝑚𝑖𝑛𝑥∈𝑋
+𝐸𝐼(𝑥), the hybrid approach 
+adds a causal gradient step. 
+𝑥𝑡
+′ = 𝑥𝑡 − 𝜂 . 𝑠𝑖𝑔𝑛(𝜏̂) ⨀ |𝜏̂| (12)
+𝑥𝑡+1= arg 𝑚𝑖𝑛𝑥∈𝑋
+𝐸𝐼𝑐𝑎𝑢𝑠𝑎𝑙(𝑥)
+where 𝑥𝑡
+′
+is an intermediate point after applying the causal gradient, 𝜂 is the step size, 𝑠𝑖𝑔𝑛(𝜏̂)
+determines direction, ⨀ is element-wise multiplication of the matrices and |𝜏̂| weights the step size by 
+causal strength.
+3) Memory Efficiency:
+i. The implementation uses batch processing for large datasets.
+ii. It includes garbage collection at critical points.
+iii. It allows toggling between memory-efficient and full-data modes.
+The implementation of the hybrid causal optimization has a more robust causal effect estimation using 
+Random Forest cross-validation. It incorporates causal knowledge into the GP kernel and acquisition 
+function, enabling adaptive exploration based on causal structure. It also handles operational constraints 
+better with causal considerations. However, the implementation is more complex and requires the proper 
+definition of operational constraints and more detailed process knowledge for optimal configuration.
+5.5 Experimental Implementation and Results
+5.5.1 Data Collection
+This research utilized hourly operational data collected from the cement manufacturing plant from 
+January 2020 to December 2024. The dataset encompasses over 30,300 hours of operation from the cement 
+plant's raw meal grinding subsystem. The time series data collected includes process parameters, energy 
+consumption metrics, and quality indicators. Table 9 is a logical grouping of features collected for the 
+experiment.
+Mill operational data and material moisture content were measured at one-hour intervals through 
+sensors, meters, and the plant's distributed control system. Specific electrical energy consumption was 
+76
+computed from total raw mill feed and raw mill energy consumption. This measurement, which is in kWh/t, 
+enables standardization because the target variable is the electrical energy required for processing a ton of 
+raw mill feed.
+The experiment’s computing environment is set up using Python programming language on the Apple 
+M1 chip, which has an 8-core CPU with four performance cores and four efficiency cores, an 8-core GPU, 
+and a 16-core Neural Engine.
+5.5.2 Data Preprocessing
+Data preprocessing involved inspection and rationalization of the data against the measurement units 
+and subject matter expert’s expected range of values of the variables from the raw mill grinding subsystem. 
+Outlier detection was applied with values exceeding the threshold of three standard deviations from the 
+mean flagged for verification. Missing values (approximately 2.6% of the dataset) were addressed using 
+forward-fill for short gaps and linear interpolation for longer interruptions, thus maintaining data integrity.
+One set of duplicated data captured under different variable names was removed. Specifically, the power 
+of the bucket elevator of the raw meal subsystem, the power of the classifier motor, and the fan air duct 
+temperature were each duplicated, with each variable having two different names.
+Table 9: Raw meal grinding data features
+Category Feature Units
+Mechanical Health 
+Metrics
+RAW MILL VIBRATION [0 - 50 [mm/s]]
+RM PINION VIBRATION - VERTICAL [0 - 20 [mm/s]]
+RM PINION VIBRATION - HORIZONTAL [0 - 20 [mm/s]]
+BUCKET ELEVATOR BELT POSITION TOP [-100 - 100 [%]]
+BUCKET ELEVATOR BELT POSITION 
+BOTTOM 
+[-100 - 100 [%]]
+Temperature Metrics RAW MILL FAN AIR DUCT TEMP [0 - 150 [°C]]
+RAW MILL FAN AIR DUCT TEMP [0 - 150 [°C]]
+RAW MEAL B.E.MOTOR WDG.TEMP.T11 [0 - 200 [°C]]
+RAW MEAL B.E.MOTOR WDG.TEMP.T21 [0 - 200 [°C]]
+RAW MEAL B.E.MOTOR WDG.TEMP.T31 [0 - 200 [°C]]
+RAW MEAL B.E.MOTOR BRG.TEMP.1 [0 - 150 [°C]]
+77
+RAW MEAL B.E.MOTOR BRG.TEMP.2 [0 - 150 [°C]]
+RAW MILL AIRSLIDE TEMPERATURE [0 - 200 [°C]]
+BAGHOUSE PENTHOUSE 
+AMB.TEMPERATURE 
+[-20 - 100 [°C]]
+Pressure Metrics RAW MEAL DUST COLL.#1 DIFF.PRESSURE [0 - 25.4 [mbar]]
+RAW MEAL DUST COLL.#2 DIFF.PRESSURE [0 - 49.8 [mbar]]
+RAW MEAL DUST COLL.#3 DIFF.PRESSURE [0 - 49.8 [mbar]]
+RAW MEAL DUST COLL.#4 DIFF.PRESSURE [0 - 49.8 [mbar]]
+BAGHOUSE DIFFERENTIAL PRESSURE [0 - 50 [mbar]]
+RAW MILL BAGHOUSE INLET PRESSURE [-40 - 5 [mbar]]
+RAW MILL BAGHOUSE OUTLET PRESSURE [-55 - 5 [mbar]]
+RAW MILL DIFFERENTIAL PRESSURE [0 - 100 [mbar]]
+Power and Energy 
+Metrics
+RM REJECTS BELT CONV.#2 MOTOR POWER [0 - 40 [kW]]
+RAW MILL CLASSIFIER MOTOR POWER [0 - 300 [kW]]
+RAW MEAL B.E.MOTOR POWER [0 - 300 [kW]]
+RAW MILL ENERGY CONSUMPTION [0 - 1000000000 
+[kWh]]
+Raw Mill Motor (kW)
+Bucket Elevator - C02 (kW)
+Coal Mill Motor (kW)
+Coal Mill Fan (kW)
+Raw Mill Air Compressor (kW)
+Conveyor Motor - B04-006 (kW)
+Conveyor Motor - B04-015 (kW)
+Bucket Elevator - C03 (kW)
+Raw Mill Fan Motor (kW)
+Raw Mill Classifier Motor (kW)
+Electrical Metrics RAW MEAL B.E. MOTOR CURRENT [0 - 100 [A]]
+RAW MILL FAN MOTOR TORQUE [0 - 150 [kNm]]
+Process Control Metrics RAW MILL FAN SPEED [0-100 %]
+RAW MILL BY-PASS DAMPER POSITION [0-100 %]
+C04 BAG HOUSE FEED AIR RECIEVER FLOW [0 - 3000 [CFM]]
+Material Flow Metrics RM LIMESTONE W.F.FLOW RATE [0 - 1000000000 [T]]
+RM IRON W.F.FLOW RATE [0 - 1000000000 [T]]
+RM SAND W.F.FLOW RATE [0 - 1000000000 [T]]
+BOTTOM ASH FEED TOTALIZER [0 - 1000000000 [T]]
+Raw Material Condition Stack Moisture [0 - 15 [%]]
+Runtime Metrics Runtime [0 - 1000000000 [s]]
+Runtime [0 - 1000000000 [h]]
+78
+Notice that the multicollinearity between these variables captured in Table 10 indicates that the highlighted 
+variables have maximum correlations of 1 with other columns on the dataset. The assumption that predictor 
+variables are independent is not valid for this dataset as predictor variables are also correlated.
+5.5.3 Exploratory Data Analysis
+Initial exploratory data analysis was done to understand the data and generate insights. The 
+correlation heatmap of the variables was generated to identify patterns and correlations. The 
+predictive power score heatmap of the independent variables and target variable was also generated 
+to detect the variables that were more predictive of specific electrical energy consumption. (See 
+items II and III in the Appendix). As expected, many predictor variables had negative correlations 
+with SEEC, with the raw material flow variables having the highest negative correlations. 
+Correlations are generated with Pearson correlation, and the predictive power scoring uses a 
+decision tree regressor.
+5.5.4 Causal Discovery
+Causal discovery reveals which adjustments will genuinely reduce electrical energy consumption in 
+cement grinding rather than just identifying variables that happen to change together. In the initial causal 
+network discovery and estimation, causality was explored in a 5-variable subset of the dataset built with 
+the target and predictor variables with the highest predictive power scores. Figure 17 is a time-series plot 
+of these predictor variables and the target variable. A visual inspection reveals the peaks in the target 
+variable VT corresponding to the peaks in the predictor variables (V1, V2, V3, V4). 
+Tigramite, a Python package for the PC algorithm combined with momentary conditional independence 
+(PCMCI), was adopted for estimating causal networks from this large-scale time series dataset [138]. The
+PC (Peter-Clark) algorithm is a well-known method for learning the structure of Bayesian networks through 
+conditional independence tests. However, it can be computationally intensive, especially for large datasets.
+79
+Table 10. Correlation between features
+Column
+Max 
+Correlation 
+w/ Other 
+Columns
+Correlations 
+Above 
+Threshold
+Missing 
+Rows
+RAW MILL BY-PASS DAMPER POSITION [0-100 %] 0.26 0 0
+RAW MILL BAGHOUSE OUTLET PRESSURE [-55 – 5 
+[mbar]] 0.63 7 0
+RAW MILL BAGHOUSE INLET PRESSURE [-40 – 5 
+[mbar]] 0.92 14 0
+RAW MILL AIRSLIDE TEMPERATURE [0 – 200 [Â°C]] 0.83 14 0
+RAW MEAL DUST COLL.#4 DIFF.PRESSURE [0 – 49.8 
+[mbar]] 0.16 0 0
+RAW MEAL DUST COLL.#3 DIFF.PRESSURE [0 – 49.8 
+[mbar]] 0.3 0 0
+RAW MEAL DUST COLL.#2 DIFF.PRESSURE [0 – 49.8 
+[mbar]] 0.26 0 0
+RAW MEAL DUST COLL.#1 DIFF.PRESSURE [0 – 25.4 
+[mbar]] 0.22 0 0
+RAW MEAL B.E.MOTOR WDG.TEMP.T31 [0 – 200 [Â°C]] 0.98 3 0
+RAW MEAL B.E.MOTOR WDG.TEMP.T21 [0 – 200 [Â°C]] 1 4 0
+RAW MEAL B.E.MOTOR WDG.TEMP.T11 [0 – 200 [Â°C]] 1 5 0
+RAW MEAL B.E.MOTOR POWER [0 – 300 [kW]] 1 16 0
+RAW MEAL B.E.MOTOR BRG.TEMP.2 [0 – 150 [Â°C]] 0.9 1 0
+RAW MEAL B.E.MOTOR BRG.TEMP.1 [0 – 150 [Â°C]] 0.99 2 0
+RAW MEAL B.E. MOTOR CURRENT [0 – 100 [A]] 0.98 17 0
+Date 0.8 2 N/A
+Conveyor Motor – B04-015 (kW) 0.84 3 12
+Conveyor Motor – B04-006 (kW) 0.94 4 12
+Coal Mill Motor (kW) 0.9 2 0
+Coal Mill Fan (kW) 0.74 1 0
+C04 BAG HOUSE FEED AIR RECIEVER FLOW [0 – 3000 
+[CFM]] 0.57 2 0
+Bucket Elevator – C03 (kW) 0.77 2 0
+Bucket Elevator – C02 (kW) 0.89 5 0
+BUCKET ELEVATOR BELT POSITION TOP [-100 – 100 
+[%]] 0.33 0 0
+BUCKET ELEVATOR BELT POSITION BOTTOM [-100 –
+100 [%]] 0.26 0 0
+BOTTOM ASH FEED TOTALIZER [0 – 1000000000 [T]] 0.77 10 0
+BAGHOUSE PENTHOUSE AMB.TEMPERATURE [-20 –
+100 [°C]] 0.17 0 0
+BAGHOUSE DIFFERENTIAL PRESSURE [0 – 50 [mbar]] 0.49 0 0
+80
+Effective builds of the algorithm that take advantage of GPU-based parallel processing ease its adoption 
+for high dimensional causal discovery [139, 140]. Assuming cause and effect are linearly dependent, 
+PCMCI was initialized on the data subset using the independence test, the partial correlation test that 
+considers the null distribution to be Student's t.
+Figure 17: Timeseries plot of top five predictor variables against target variable
+Figure 18 is a plot of the lag function matrix showing time-lagged correlations (up to 10 time steps) 
+between the variables in the system. This plot helps identify which variables influence others and at what 
+time delay, revealing temporal causal relationships in the cement raw meal grinding system. The causal 
+graph structure of the dataset shows which variables influence others and at what time lag, along with their 
+statistical significance and effect strengths. This causal model forms the foundation for optimization by 
+identifying which process variables drive changes in electrical energy consumption.
+Figure 19 plots the time series graph showing the causal system discovered with respect to its time 
+dependency. This plot is a causal graph visualization from the PCMCI analysis results that show variables 
+as nodes and causal relationships as arrows between them. (See the output of the PCMCI algorithm in item 
+81
+IV in the Appendix). Arrow colors indicate the strength of causal effects, and the direction shows which 
+variable influences which and helps to identify the key drivers of electrical energy consumption in the raw 
+meal grinding system. Figure 20, on the other hand, shows a standard network diagram where the spatial 
+arrangement of nodes does not represent time. Instead, it focuses on the overall causal structure - depicting 
+which variables influence others (shown by directed arrows) and the strength of those relationships (shown 
+by color intensity)
+Figure 18: Plot of the lag function matrix showing time-lagged correlations
+Figure 19: Plot of the time series graph showing the causal system discovered
+82
+Figure 20: Standard network diagram of causal system discovered
+Having established the causal structure underlying the raw meal grinding process, below is a 
+generalizable system architecture for electrical energy consumption optimization. This framework provides 
+the foundation upon which the three optimization methods explored operate.
+As shown in Figure 21, the architecture consists of four primary components: 
+1. a data acquisition layer that collects real-time measurements from process sensors and energy 
+monitoring systems
+2. a causal model layer that maintains and updates the discovered causal relationships
+3. an optimization engine implementing one of the three methods explored in this study
+4. a control integration layer that translates optimization recommendations into actionable parameter 
+adjustments.
+This modular design allows flexible implementation across various grinding system configurations 
+while maintaining consistent optimization capabilities.
+83
+Figure 21: Process diagram of the optimization framework
+Critical to this architecture is the bidirectional information flow between the causal model and 
+optimization components, which enables continuous refinement as operational conditions evolve. This 
+framework can be enabled with a machine learning system that keeps data flow direction conventions 
+between components, as illustrated in Figure 22.
+Building upon this architecture, we now examine the results from the three optimization approaches: 
+iterative causal inference, which leverages sequential interventions based on causal strength; causal 
+Bayesian optimization, which incorporates uncertainty quantification to balance exploration and 
+exploitation; and hybrid causal optimization, which combines the strengths of both previous methods to 
+address the complex dynamics of industrial grinding systems.
+84
+Figure 22: Machine learning system architecture showing data flow between components
+5.5.5 Feature importance
+Two approaches were used to determine feature importance. First, absolute feature importance was 
+performed using the chi-squared statistical test to identify the 21 most relevant features for the optimization 
+model. This enables the identification of the variables with the strongest statistical relationship with the 
+target variable—SEEC—allowing the optimization to focus on the most influential parameters in the 
+cement raw meal grinding process. Table 11 lists the top 21 features and their feature importance score. 
+The scores indicate how strongly each input variable is associated with the target variable. A higher 
+score suggests a stronger relationship between the feature and SEEC in the cement raw meal grinding 
+process. While these scores help identify relevant features, they do not indicate the relationship's direction 
+or capture nonlinear relationships that might exist in the grinding process.
+85
+Table 11: Top 21 features and their feature importance ranking
+# Feature Score
+1 Runtime [0 - 1000000000 [s]] 1.14E+07
+2 RAW MILL ENERGY CONSUMPTION [0 - 1000000000 [k... 3.81E+05
+3 Raw Mill Motor (kW) 2.40E+05
+4 Total Raw Mill Feed (tons) 2.29E+05
+5 Raw Mill Fan Motor (kW) 2.02E+05
+6 C04 BAG HOUSE FEED AIR RECIEVER FLOW [0 - 3000... 1.88E+05
+7 RM LIMESTONE W.F.FLOW RATE [0 - 1000000000 [T]] 1.87E+05
+8 BOTTOM ASH FEED TOTALIZER [0 - 1000000000 [T]] 4.37E+04
+9 RAW MEAL B.E.MOTOR POWER [0 - 300 [kW]] 3.76E+04
+10 Bucket Elevator - C03 (kW) 3.76E+04
+11 Bucket Elevator - C02 (kW) 2.49E+04
+12 Coal Mill Motor (kW) 1.97E+04
+13 Coal Mill Fan (kW) 1.56E+04
+14 Conveyor Motor - B04-006 (kW) 1.39E+04
+15 RAW MILL CLASSIFIER MOTOR POWER [0 - 300 [kW]] 1.33E+04
+16 Raw Mill Classifier Motor (kW) 1.33E+04
+17 RM SAND W.F.FLOW RATE [0 - 1000000000 [T]] 7.77E+03
+18 Conveyor Motor - B04-015 (kW) 7.25E+03
+19 RAW MEAL B.E.MOTOR WDG.TEMP.T21 [0 - 200 [Â°C]] 7.09E+03
+20 RAW MEAL B.E.MOTOR WDG.TEMP.T31 [0 - 200 [Â°C]] 6.91E+03
+21 RAW MILL FAN MOTOR TORQUE [0 - 150 [kNm]] 6.22E+03
+The second feature selection method uses the Extra Trees Classifier algorithm to implement a treebased relative feature importance analysis [141]. The algorithm implements an estimator that fits 
+randomized decision trees on sub-samples of the dataset and uses averaging to improve the predictive 
+accuracy and control over-fitting. Its feature importance property is an impurity-based feature importance 
+known as Gini importance. The approach determines feature importance by measuring how much each 
+feature contributes to decreasing impurity across all trees in the ensemble. Features used more frequently 
+for splits and greater information gain receive higher importance scores. It captures nonlinear relationships 
+that statistical tests might have missed. Figure 22 is a view of the variables that most strongly influence 
+SEEC. Many variables are also featured in the feature importance selection from the statistical tests. 
+86
+However, some features were unique in the selection using either method, and there was also differentiation 
+of the ranking of the features common to both selection methods. See the Appendix for the correlation 
+heatmap visualization of all the variables (Figure 23) and the top variables from feature importance (Figure 
+24). The heatmaps help visualize the variables strongly related to each other, which is valuable for 
+understanding interdependence and potential redundancies in the optimization model.
+Figure 23: Feature importance using the Extra Trees Classifier algorithm
+5.5.6 Iterative causal inference
+Iterative causal inference combines causal discovery and iterative optimization to systematically 
+identify and adjust the most influential variables for reducing electrical energy consumption. Our 
+implementation of it for optimizing SEEC includes the following:
+• An optimizer initialization function with the following parameters creates an empty directed graph 
+to store the causal structure: 5 cross-validation splits, significance threshold for causal 
+relationships, and maximum optimization iterations.
+• A causal structure identification function to discover causal relationships between input variables 
+and the target variable.
+87
+• A causal effect estimation function that implements a double machine learning approach to 
+estimate causal effects. This function uses cross-validation to avoid overfitting and trains Random 
+Forest models [142] to predict both the potential cause and the outcome.
+• An optimize function that performs iterative optimization based on discovered causal structure and 
+returns optimized parameters and the full optimization trajectory. These are the steps for each 
+iteration:
+o Updates variables proportionally to their causal effect (negative direction to minimize 
+SEEC)
+o applies constraints – constraints were defined with scale requirements between variables, 
+and successively with minimum and maximum of variables in observational data, and 
+then within top and bottom deciles of a subset of observational variables as guided by 
+subject matter experts (see results from using different constraint definitions in Table 12)
+o re-evaluates causal structure after updates
+o tracks optimization path
+For the first initialization, a significance threshold for causal relationships of 0.05 and maximum 
+optimization iterations of 10 were applied. The constraints for the variables were built from the minimum 
+and maximum of observational data. These parameters generated an optimized prediction of 15.47 kWh/t 
+SEEC. This is a marginal improvement of 0.51% on the 15.55kWh/t average SEEC observed from the data 
+collected at the cement plant.
+After parameter tweaks, the best result obtained using iterative causal inference was an optimized 
+prediction of 14.83 kWh/t SEEC, which is a 4.6% improvement. The parameters that gave the best result 
+were a significance threshold for causal relationships of 0.1 and maximum optimization iterations of 20, 
+using constraints built from the top and bottom deciles of observational data.
+88
+5.5.7 Causal Bayesian Optimization
+The efficient implementation of the constrained CBO combines causal discovery with Bayesian 
+optimization. It uses various efficiency techniques (batching, sampling, vectorization) to handle larger 
+datasets and includes the following functions:
+• An initialization function with the following parameters: number of optimization iterations, size of 
+data batches for processing, an exploration weight variable that controls exploration versus 
+exploitation balance, and a standard scaler for normalizing data.
+• A function that estimates the causal effect of a single treatment variable on the target using simple 
+linear regression after removing the impact of other variables and a fast approximation approach 
+for computational efficiency. 
+• A function that discovers causal relationships between input variables and the target and processes 
+data in batches to reduce memory usage. For each variable, the function calculates causal effects 
+across multiple batches and returns a dictionary of variables and their average causal effects.
+• A function that creates a causal kernel by doing the following:
+o Creates a specialized Gaussian Process kernel weighted by causal effects
+o Sets kernel length scales inversely proportional to causal effect strength
+o The variables with stronger causal effects get smaller length scales (have more influence)
+o Returns a composite kernel (constant kernel x radial basis functions RBF) for the Gaussian 
+Process [143, 144]
+• An expected improvement (EI) function calculates the expected improvement acquisition function 
+using a vectorized implementation for computational efficiency and returns an array of EI values 
+for candidate points.
+• An optimization process function for the following:
+o Main optimization loop using Bayesian optimization principles.
+o Scales input and output data for numerical stability.
+89
+o Identifies causal structure to inform the optimization process.
+o Creates and trains a Gaussian Process model on a subset of data.
+o Generates candidate points, applies constraints, and selects the most promising using 
+expected improvements.
+o Tracks optimization path and returns the best solution found.
+Execution of this CBO implementation used constraints built from the top and bottom deciles of 
+observational data and default parameters (50 iterations, batch size of 500, and exploration weight of 0.1), 
+producing an optimized prediction of 14.92 kWh/t SEEC. However, this reduction in SEEC is not as good 
+as the best prediction of 14.83 kWh/t SEEC from the iterative causal inference method.
+5.5.8 Hybrid Causal Optimization
+This hybrid approach is a more advanced implementation that combines the strengths of iterative causal 
+optimization and CBO while managing computational resources more carefully. Like the CBO 
+implementation, the hybrid approach also has functions that estimate the causal effect, identify causal 
+structure, create the causal kernel, utilize expected improvement, and optimize. Highlighted below are the 
+major differences between the hybrid and CBO implementations:
+• Integration—The hybrid optimizer combines the Random Forest and Gaussian Process approaches, 
+while the CBO uses only simplified linear regression for causal discovery and Random Forest for 
+rigorous causal effect estimation.
+• Causal structure: The hybrid implementation maintains an explicit causal graph of significant 
+relationships using NetworkX [145] and handles memory constraints with optional sampling. The 
+CBO implementation only maintains a dictionary of effects without graph representation.
+• Kernel design: The hybrid uses a more sophisticated kernel combining RBF and Matern 
+components [146] with causal weighting, while the CBO uses only an RBF kernel.
+• Optimization process: The hybrid uses formal minimization of the acquisition function, while the 
+CBO implementation uses simpler candidate sampling and selection. The hybrid implements 
+90
+garbage collection to manage memory during optimization, and the process has sophisticated 
+constraints handling.
+A comparison of the hybrid causal optimization method's performance to the baseline of average SEEC 
+from observational data establishes the advantage the hybrid approach offers. The hybrid causal 
+optimization implementation produced an optimized prediction of 11.397 kWh/t SEEC. This is a potential 
+improvement of 26.7% on the 15.55kWh/t average SEEC observed from the data collected at the cement 
+plant.
+Table 12 summarizes the optimized prediction of SEEC using each of the three methods and different 
+constraint definitions. The computation was done with SEEC as the target variable, so this implies that the 
+result of the hybrid causal optimization indicates the potential of reducing the electrical energy used to grind 
+a ton of raw meal at the cement plant by 26.7%, and this should scale to the production quantity of the 
+cement plant assuming that all the variables from all the components of the system can be kept at the levels 
+that resulted in the optimized SEEC throughout production. 
+Table 12: Optimization results by methods and constraints
+#
+Optimization Method Constraint Best Predictive 
+SEEC (kWh/t)
+1 Iterative Causal Inference Minimum and Maximum 
+of Predictive Variables
+14.83
+2
+Causal Bayesian 
+Optimization Bottom and Top Decile 14.92
+3
+Hybrid Causal 
+Optimization
+Bottom and Top Decile 
+and SME guidance logic
+11.40
+Table 13 shows the reading of the predictive variables that resulted in the optimized prediction of 
+11.397kWh/t SEEC using the hybrid causal optimization method. The hard constraints within the 
+optimization algorithm assure the quality of production at the model's recommendation of optimal SEEC, 
+preventing it from suggesting parameter settings that could violate quality specifications. 
+91
+Table 13: Values of predictive variables that yield optimal SEEC prediction
+Predictive Variables optimal 
+0.25 -
+Quartile
+0.5 -
+Quartile
+0.75 -
+Quartile
+1.0 -
+Quartile
+Total Raw Mill Feed (tons) 682.28 539.92 586.81 626.43 798.00
+RAW MILL VIBRATION [0 - 50 [mm.s]] 6.85 6.88 7.99 8.76 14.49
+RM PINION VIBRATION - VERTICAL [0 
+- 20 [mm/s]] 1.76 1.60 1.70 1.85 3.68
+RM PINION VIBRATION - HORIZONTAL 
+[0 - 20 [mm/s]] 1.87 1.76 1.95 2.15 3.49
+Stack Moisture [0 - 15 [%]] 12.46 10.66 11.78 13.17 17.60
+RM REJECTS BELT CONV.#2 MOTOR 
+POWER [0 - 40 [kW]] 1.52 1.48 1.64 1.82 3.01
+RAW MILL FAN SPEED [0-100 %] 85.79 89.84 91.80 93.56 99.91
+RAW MILL FAN AIR DUCT TEMP [0 - 150 
+[Â°C]] 92.78 97.78 99.98 103.02 118.75
+RAW MILL FAN MOTOR TORQUE [0 -
+150 [kNm]] 118.68 127.53 132.71 136.31 149.93
+RAW MILL FAN AIR DUCT TEMP [0 - 150 
+[Â°C]].1 92.78 97.78 99.98 103.02 118.75
+RAW MILL CLASSIFIER MOTOR 
+POWER [0 - 300 [kW]] 122.27 111.02 122.11 141.77 188.07
+RAW MEAL DUST COLL.#1 
+DIFF.PRESSURE [0 - 25.4 [mbar]] 2.42 3.64 3.85 4.69 19.00
+RAW MEAL DUST COLL.#4 
+DIFF.PRESSURE [0 - 49.8 [mbar]] 9.22 9.20 9.33 9.42 16.76
+RAW MEAL B.E. MOTOR CURRENT [0 -
+100 [A]] 26.40 22.83 23.53 24.42 28.31
+RAW MEAL B.E.MOTOR POWER [0 - 300 
+[kW]] 152.15 124.71 130.22 137.05 165.76
+RAW MEAL B.E.MOTOR 
+WDG.TEMP.T11 [0 - 200 [Â°C]] 52.13 41.74 50.27 57.42 73.96
+RAW MEAL B.E.MOTOR 
+WDG.TEMP.T21 [0 - 200 [Â°C]] 65.86 50.60 62.38 72.57 96.00
+RAW MEAL B.E.MOTOR 
+WDG.TEMP.T31 [0 - 200 [Â°C]] 70.63 55.57 67.89 78.56 102.31
+RAW MEAL B.E.MOTOR BRG.TEMP.1 [0 
+- 150 [Â°C]] 26.16 19.90 28.20 35.48 52.28
+RAW MEAL B.E.MOTOR BRG.TEMP.2 [0 
+- 150 [Â°C]] 32.18 24.06 32.30 39.52 57.77
+BUCKET ELEVATOR BELT POSITION 
+TOP [-100 - 100 [%]] -11.47 -15.17 -12.57 1.00 64.29
+BUCKET ELEVATOR BELT POSITION 
+BOTTOM [-100 - 100 [%]] 16.63 -5.58 1.59 6.79 62.32
+92
+RAW MEAL DUST COLL.#2 
+DIFF.PRESSURE [0 - 49.8 [mbar]] 9.18 5.18 5.94 7.72 16.98
+RAW MEAL DUST COLL.#3 
+DIFF.PRESSURE [0 - 49.8 [mbar]] 10.70 10.32 10.49 10.64 19.08
+RAW MILL AIRSLIDE TEMPERATURE 
+[0 - 200 [Â°C]] 77.67 77.34 79.92 83.57 125.17
+RAW MILL BY-PASS DAMPER 
+POSITION [0-100 %] 33.71 95.95 100.00 100.00 100.00
+C04 BAG HOUSE FEED AIR RECIEVER 
+FLOW [0 - 3000 [CFM]] 381.81 292.65 340.71 406.33 1801.83
+BAGHOUSE DIFFERENTIAL PRESSURE 
+[0 - 50 [mbar]] 24.67 24.67 24.78 24.88 29.92
+RAW MILL BAGHOUSE INLET 
+PRESSURE [-40 - 5 [mbar]] -12.95 -9.15 -8.18 -7.49 -1.10
+RAW MILL BAGHOUSE OUTLET 
+PRESSURE [-55 - 5 [mbar]] -36.42 -33.34 -31.85 -31.05 -7.39
+BAGHOUSE PENTHOUSE 
+AMB.TEMPERATURE [-20 - 100 [°C]] 16.58 18.01 24.94 31.30 54.12
+RM LIMESTONE W.F.FLOW RATE [0 -
+1000000000 [T]] 574.50 461.25 492.75 520.00 624.50
+RM IRON W.F.FLOW RATE [0 -
+1000000000 [T]] 1.34 4.36 6.63 8.23 15.22
+RM SAND W.F.FLOW RATE [0 -
+1000000000 [T]] 42.19 34.13 38.03 41.45 59.13
+BOTTOM ASH FEED TOTALIZER [0 -
+1000000000 [T]] 64.25 40.19 49.41 56.75 99.16
+RAW MILL ENERGY CONSUMPTION [0 
+- 1000000000 [kWH]] 7776.00 8360.00 8663.50 8880.00 10149.00
+RAW MILL DIFFERENTIAL PRESSURE 
+[0 - 100 [mbar]] 79.20 86.65 90.25 93.63 113.43
+Runtime [0 - 1000000000 [s]] 3660.00 1.00 3540.00 3600.00 3660.00
+Runtime [0 - 1000000000 [h]] 1.02 0.00 0.98 1.00 1.02
+Raw Mill Motor (kW) 3197.63 3211.38 3402.05 3655.97 4131.33
+Bucket Elevator - C02 (kW) 137.34 127.77 138.27 146.58 166.45
+Coal Mill Motor (kW) 153.67 414.34 430.98 447.06 501.41
+Coal Mill Fan (kW) 118.74 367.80 370.01 374.96 526.09
+Raw Mill Air Compressor (kW) 98.54 99.85 105.02 109.99 123.56
+Conveyor Motor - B04-006 (kW) 73.53 58.96 64.20 67.98 93.05
+Conveyor Motor - B04-015 (kW) 65.28 57.48 60.87 63.31 83.58
+Bucket Elevator - C03 (kW) 152.15 124.71 130.22 137.05 165.76
+Raw Mill Fan Motor (kW) 3732.07 4206.22 4465.05 4662.15 5536.92
+Raw Mill Classifier Motor (kW) 122.27 111.02 122.11 141.77 188.07
+93
+5.6 Discussion
+5.6.1 Expert system introduction
+An expert system for automatically maintaining optimal grinding parameters using the hybrid causal 
+optimization solution would operate as a closed loop causal optimization control system. This is an 
+advanced process control (APC) system that does the following:
+• Continuously monitors all input variables (raw material properties, equipment metrics, process 
+control metrics).
+• Applies the hybrid causal optimizer’s model to determine optimal operating parameters.
+• Automatically adjust control variables (feed rates, separator speeds, fan operations).
+• Incorporates feedback loops to validate energy consumption and quality outcomes.
+• Features self-learning capabilities to refine the causal model over time.
+A comprehensive quality assurance framework will be preferred when using the hybrid causal optimizer 
+in an advanced process control system. Such a framework would include some of the following:
+• Real-time quality constraint integration would implement hard constraints within the algorithm to 
+prevent the suggestion of parameter settings that could violate quality specifications.
+• A multi-objective evaluation that incorporates quality as a secondary optimization objective instead 
+of treating it as just a constraint would leverage a composite score that weighs both energy reduction 
+and quality metrics to track an optimal solution that represents different trade-offs.
+• Post-implementation validation executed with increased sampling frequency for quality testing and 
+a comparison of actual quality metrics against predicted values
+• An expert review system uses a semi-automated workflow where model recommendations receive 
+human expert review before implementation. In such an arrangement, quality engineers set 
+additional constraints based on current conditions, and the system learns from rejected 
+recommendations to improve future suggestions.
+94
+5.6.2 Sustainability Impact 
+For a cement plant that produced about 3.13 million metric tons of cement in 2024, a 26.7% reduction 
+in the electrical energy used for grinding raw meal is an estimated reduction in emission of 10.5 million 
+pounds of CO2 from electricity generation [147]. To put this in context, 10.5 million pounds of CO2
+reduction is equivalent to carbon sequestration from planting approximately 22,000 trees and letting them 
+grow for 10 years [148] or the removal of approximately 1,000 passenger vehicles from the road for an 
+entire year [149]. Implementing this energy saving measure would have resultant ecosystem benefits, show 
+industry leadership, regulatory compliance, and other ripple effects. Ecosystem benefits include a decrease 
+in acid rain potential from reduced sulfur and nitrogen oxide emissions associated with electricity 
+generation and reduced particulate matter emissions that affect local air quality.
+This reduction in electrical energy consumption demonstrates the feasibility of significantly reducing 
+emissions without compromising production capacity. It would also represent pioneering efficiency in an 
+industry that accounts for approximately 8% of global CO2 emissions and establish a new industry 
+benchmark for energy efficiency in the grinding process. It potentially puts the plant ahead of increasingly 
+stringent carbon regulations and reduces vulnerability to future carbon pricing mechanisms.
+Implementation at this scale also suggests that if adopted industry-wide, similar optimization could reduce 
+global emissions by millions of tons annually. It also creates a model for other energy-intensive industrial 
+processes and advances the technical knowledge base for industrial decarbonization.
+5.6.3 Economic Benefits
+For a cement plant with an annual production of 3.13 million tons, a 26.7% reduction in electrical 
+energy for raw meal grinding translates to substantial operating cost savings. Below is an estimated 
+economic benefit analysis:
+• Raw meal grinding at the plant consumes 15.55 kWh/t, which accounts for 25% of the total plant 
+electrical consumption. 
+• Estimated total grinding energy: 3.13M tons x 15.55kWh/t = 48.67M kWh annually
+95
+• Estimated energy saved: 48.67M kWh x 26.7% = 13M kWh annually
+• At industrial electricity rates of $0.13/kWh in Maryland, this represents annual savings of $1.69 
+million.
+Estimating implementation costs to be between $500,000 - $1,000,000 broken down as follows:
+• Software development and integration: $150,000-$300,000
+• Additional sensors and control equipment: $200,000-$400,000
+• System commissioning and optimization: $100,000-$200,000
+• Staff training: $50,000 - $100,000
+The return on investment can be estimated as:
+• Simple payback period: 3.5 - 7.1 months
+• First-year ROI (return on investment): 169%-338%
+• 5-year NPV (net present value) at 7% discount rate: $6.3 million
+• Internal rate of return (IRR): 165%-190%
+Long-term financial impacts will include direct energy savings, reduced maintenance costs, extended 
+equipment life from reduced mechanical stress, and potential carbon credit revenue. This indicates that the 
+economic benefits are substantial, with a very attractive estimated return on investment and a rapid payback 
+period.
+5.6.4 Industry benchmarks
+Table 14 captures the optimal parameters readout of power metrics from the hybrid causal optimization 
+at kW/ton. This enables a comparison of the metrics with industry standards at the same scale. Table 15
+summarizes industry benchmarking data on energy consumption (not including equipment-level specifics) 
+extracted from cement manufacturing and sustainability documents from researchers, the International 
+Energy Agency, Global Cement and Concrete Association, US Environmental Protection Agency, and 
+European Cement Research Academy [150-154]. The predicted SEEC of 11.397kWh/t from the hybrid 
+causal optimization puts the solution in best practice rating for raw material grinding.
+96
+Table 14: Values of power parameters (in kW/t) that yield optimal SEEC
+Power Predictive Variables Optimal 
+(kW/ton)
+RM REJECTS BELT CONV.#2 MOTOR POWER [0 - 40 [kW]] 0.002
+RAW MILL CLASSIFIER MOTOR POWER [0 - 300 [kW]] 0.179
+RAW MEAL B.E.MOTOR POWER [0 - 300 [kW]] 0.223
+Raw Mill Motor (kW) 4.687
+Bucket Elevator - C02 (kW) 0.201
+Coal Mill Motor (kW) 0.225
+Coal Mill Fan (kW) 0.174
+Raw Mill Air Compressor (kW) 0.144
+Conveyor Motor - B04-006 (kW) 0.108
+Conveyor Motor - B04-015 (kW) 0.096
+Bucket Elevator - C03 (kW) 0.223
+Raw Mill Fan Motor (kW) 5.470
+Raw Mill Classifier Motor (kW) 0.179
+5.6.5 Challenges with implementation
+While various advanced process control systems exist for cement grinding, as far as the author knows, 
+there isn't currently a commercially available system that specifically implements hybrid causal 
+optimization as described in this study. Implementing this solution at scale across existing cement plants 
+will require solving technical challenges such as sensor infrastructure requirements, integration with legacy 
+control systems, and computing infrastructure limitations. The solution would also require adapting it to 
+each plant's unique characteristics through extensive calibration, managing knowledge and expertise gaps 
+amongst operators, and mitigating production continuity risks from testing new optimization. Other 
+business challenges include ROI variability due to variations in implementation costs and energy prices 
+across different plants, intellectual property protection, and organizational change management.
+97
+Table 15: Aggregated summary of industry benchmarks for electrical energy consumption
+Electrical Energy Consumption Benchmarks
+Overall Plant Electrical Energy
+Global average 90-110 kWh/ton of cement
+Best practice 80-90 kWh/ton of cement
+State-of-the-art plants 65-80 kWh/ton of cement
+Raw Material Grinding (Total)
+Industry average 14-18 kWh/ton of raw meal
+Best practice 10-14 kWh/ton of raw meal
+Best available technology 8-10 kWh/ton of raw meal
+Percentage Breakdown of Electrical Energy
+Raw material preparation
+22-30% of total electrical 
+consumption
+Clinker production 20-25%
+Cement grinding 38-42%
+Other processes and auxiliaries 10-15%
+Addressing these challenges requires a phased implementation approach. It starts with plants that have 
+modern control systems and robust data infrastructure and then standardized integration methods can 
+eventually be developed that can be applied to more challenging environments.
+5.6.6 Framework Validation and Reliability Analysis
+Since direct implementation of the hybrid causal optimization framework has not been completed at 
+the cement plant as at the time of this publication, this validation section employs complementary lines of 
+evidence to assess framework reliability, robustness, and industrial applicability. This validation approach 
+follows established practices in systems engineering for validating complex optimization frameworks prior 
+to full-scale deployment.
+98
+I. Statistical Validation of Causal Discovery
+1. Causal Relationship Significance Testing
+The PCMCI algorithm provided robust statistical validation of discovered causal relationships (see 
+Appendix item IV).
+Significance levels achieved:
+• Target variable VT showed 8 significant causal links with p-values ranging from 0.00 to 
+0.00088.
+• Variable V1 demonstrated 16 significant links with maximum p-value of 0.00588 at α = 0.01.
+• Variable V2 exhibited 19 significant relationships with p-values consistently below 0.01
+• Variables V3, V4, and V5 showed 29, 16, and 18 significant links respectively.
+Cross-validation robustness:
+The causal effect estimation using Random Forest cross-validation with K=5 folds demonstrated 
+the following:
+• Consistent causal effect estimates across all validation folds
+• Low variance in effect estimates (standard deviation < 0.05 for major causal relationships)
+• Stable causal graph structure across different data subsets
+2. Temporal Stability Analysis
+Time-lagged causal validation: The lag function matrix analysis (see Figure 18) shows stable causal 
+relationships across multiple time horizons.
+• Causal effects detected at lags 1-8 hours showing consistent directionality.
+• Strongest causal effects concentrated at 1-2 hours lag, indicating immediate system responses.
+• Temporal decay patterns are consistent with physical grinding process dynamics.
+II. Cross-Validation through Feature Importance Analysis
+1. Multiple Feature Selection Method Convergence
+99
+Validation through multiple feature importance methodologies showed consistent variable 
+rankings. Chi-squared statistical test identified the following top variables. Runtime, Raw Mill Energy 
+Consumption, Raw Mill Motor (scores: 1.14E+07, 3.81E+05, 2.40E+05), Total Raw Mill Feed, Raw 
+Mill Fan Motor (scores: 2.29E+05, 2.02E+05). Extra Trees Classifier confirmed similar rankings. Raw 
+Mill Motor and Fan Motor consistently ranked as top energy drivers. Material flow variables 
+(limestone, sand) showed consistent importance across methods. Equipment health metrics (vibration, 
+temperature) were validated as significant factors.
+2. Causal Discovery Validation
+Comparison between correlation-based and causal-based variable importance:
+• Strong correlations confirmed as causal: Raw Mill Motor power showed both high 
+correlation (r > 0.9) and significant causal effect (p < 0.001).
+• Spurious correlations identified: Several highly correlated variables showed no 
+significant causal relationship
+• Hidden causal relationships discovered: Some weakly correlated variables demonstrated 
+strong causal effects.
+III. Expert Validation and Industrial Feasibility Assessment
+1. Plant Operator Feedback Integration
+Subject matter expert evaluation of optimization recommendations revealed that the parameter 
+settings are feasible.
+• Raw Mill Feed Rate: Optimal 682.28 tons per hour falls within equipment capacity (539.92 –
+798 tons range).
+• Fan Speed Settings: Recommendation 85.79 aligns with efficient operating range.
+• Motor Power Levels: Suggested power consumption levels are within equipment ratings.
+• Material Flow Rates: All recommended flow rates are achievable with existing conveyor 
+systems.
+100
+• Production continuity: No recommendations violate process stability requirements.
+2. Historical Performance Correlation
+There is alignment with best practices when comparing the optimization recommendations with 
+historical best performance periods.
+• Energy consumption benchmarks: Optimized 11.40 kWh/t approaches theoretical minimum for this 
+equipment configuration.
+• Production efficiency: Recommended parameters align with historically successful operating 
+periods.
+• Equipment longevity: Parameter settings are consistent with practices that minimize equipment 
+wear.

@@ -1,0 +1,1181 @@
+Figure 10.1 Robotics and their growing ability to process large volumes of data remain central to discussions on emerging
+technologies. (credit: modification of work “Artificial Intelligence & AI & Machine Learning – 30212411048” by
+https://www.vpnsrus.com/Wikimedia Commons, CC BY 2.0)
+Chapter Outline
+10.1 Defining Emerging Technologies
+10.2 The Evolving Frontiers of Information Systems
+10.3 Societal and Global Importance of Emerging Technologies in Information Systems
+Introduction
+Innovation can be defined as applying a new process or concept to an existing technology to add value,
+enhance its capabilities, improve efficiency, or address unmet needs. Innovation is continually applied to
+technology, resulting in emerging technologies that create opportunities, challenges, and risks. Ultimately,
+these technologies can significantly impact individuals and organizations.
+10.1 Defining Emerging Technologies
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Define emerging technology and provide examples
+•
+Identify real-world applications of emerging technologies
+•
+Identify the opportunities, challenges, and risks of emerging technologies
+When you hear the phrase “emerging technology,” what comes to mind? Have you ever driven an electric car
+or ridden in a self-driving car? What do you think are the factors that determine if a technology is emerging?
+Would you consider the latest smartphone an emerging technology? Technically, the first commercial
+smartphone was released three decades ago. If technology created over thirty years ago was emerging then,
+is it still emerging technology today? What about Henry Ford’s historical introduction of the moving assembly
+line? Both of these technologies were built on existing technologies, and both have been revised and advanced
+over the years to their current forms—both are examples of the important influences of emerging
+Emerging Technologies and Frontiers of Information Systems
+10
+
+technologies.
+What Makes an Emerging Technology
+Any software or hardware that enhances the user experience by obtaining or using information and data in
+new and compelling ways can be considered an emerging technology. The term can be used to describe new
+technologies or the continuing development of existing technologies. Emerging technology can be found in all
+areas of our society, including education, information technology, nanotechnology, biotechnology, robotics,
+and artificial intelligence. If we look back over the last century, there have been many technological
+advancements: the automated teller machine, the hard disk drive, the magnetic stripe card, mobile telephony,
+desktop computers, the computer mouse, and more. Each of these was considered an emerging technology at
+the time and is now a familiar part of our lives.
+The progressive nature of emerging technologies allows for companies that embrace them to gain a
+competitive advantage and the potential for synergies with other technologies that have the same or similar
+goals. The convergence of technologies has the potential to create efficiencies that may not have previously
+existed. Consider the convergence of video, voice, and data, for example. All these technologies were new at
+one time, and as their capabilities became apparent, opportunities became available to combine the
+technologies for use in one product. Having video, voice, and data on the same network allows multiple forms
+of communication that are not possible with separate infrastructures. Sending email or text messages to
+others while having a video chat conversation on the same device used to be hard to imagine, but they are
+now widely used together.
+There are many other forms of technology that are considered to be emerging because of their rapid rate of
+change. The branch of engineering and computer science called robotics involves the conception, design,
+building, and operation of robots, creating intelligent machines that can assist humans with a variety of tasks.
+Robotics is considered emerging because it is being used in new and exciting ways every day. For example,
+many surgeries today are being performed laparoscopically with the assistance of robotic technology. Self-
+driving and electric vehicles are increasing their presence on roads, making waves in the automotive industry.
+The Internet of Things (IoT) has introduced biometric scanners and wearable devices that are changing the
+way we communicate and interact with each other.
+Blockchain is considered an emerging technology due to its ability to improve efficiencies and streamline
+processes across many different industries. A blockchain is a shared, immutable ledger that facilitates the
+process of recording transactions and tracking assets. Blockchains are used for secured, transaction-based
+actions and information sharing within business networks. Blockchain uses cryptography, the process of
+hiding or coding information so that only the intended recipient can read it. Cryptographic protocols provide
+secure connections, enabling two parties to communicate with privacy and data integrity and provide
+additional layers of security. We see examples of blockchain use through the emergence of digital currency,
+such as cryptocurrency or bitcoin, one type of cryptocurrency. Cryptocurrency uses blockchain technology and
+allows transactions over the internet with no Federal Reserve System or monetary backing. Blockchain ensures
+that the cryptocurrency is successfully transferred from the sender to the recipient and arrives at its intended
+location and that financial transactions occur properly.
+In 1977, the U.S. Department of Energy (DOE) was created and charged with promoting broader energy policy,
+promoting energy conservation, and finding alternative sources of energy. With these goals in mind, the DOE
+has become one of the largest federal organizations to drive innovation in the areas of power plants, solar
+panels, and renewable energies, all considered emerging technologies because they influence the way we
+interact with sustainable resources.
+Educational institutions have also provided the means for researchers to foster innovation and develop
+technology by providing research labs and direct and indirect support, such as funding, research assistants,
+and faculty with subject matter expertise in research area and statistics. Ivan Sutherland, a professor at
+378
+10 • Emerging Technologies and Frontiers of Information Systems
+Access for free at openstax.org
+
+Harvard University, along with his student Bob Sproull, created the first virtual reality (VR) device in 1968
+(Figure 10.2). Sutherland is also credited with the development of augmented reality (AR) that same year.
+Figure 10.2 Known as the “Sword of Damocles,” Ivan Sutherland and his research team created this first head-mounted virtual reality
+device in 1968. (credit: modification of work “Virtual Reality Headset Prototype” by “Pargon”/Flickr, CC BY 2.0)
+Emerging technologies usually introduce novel approaches, concepts, or applications that may not have been
+previously considered. They also show rapid advancement, developing and changing quickly, often due to an
+organization’s financial investments and research efforts. Other characteristics of emerging technologies
+include their prominent impact, volatility, complexity, and uncertainty. Additionally, emerging technologies
+may be characterized by the type of technology used, the industry in which they are used, or the uniqueness of
+their attributes.
+Emerging technologies are also known for their disruptive or transformative potential. They can introduce
+significant change and challenge traditional norms. For example, the introduction of self-checkout kiosks in
+grocery stores has reduced the number of cashiers needed to assist customers with their purchases. Following
+are some other cutting-edge emerging technologies that merit special attention for their transformative
+potential:
+•
+Quantum computing harnesses quantum mechanics principles to perform complex calculations
+exponentially faster than traditional computers. It shows promising breakthroughs in cryptography, drug
+discovery, and financial modeling.
+•
+Edge computing brings data processing closer to where data are created, reducing latency and enabling
+real-time applications like autonomous vehicles and smart manufacturing.
+•
+Green computing practices focus on environmentally sustainable computing through energy-efficient
+hardware, smart power management, and eco-friendly data center design.
+The integration of these technologies creates new possibilities. For instance, edge computing can reduce
+energy consumption by processing data locally, while quantum computing could optimize power grids for
+better energy distribution. Meanwhile, cross-platform integration allows these technologies to work together.
+A self-driving car might use edge computing for immediate decisions, quantum algorithms for complex route
+optimization, and green computing principles to maximize battery life.
+If we look back over the last century, there have been many technological advancements: the automated teller
+machine, the hard disk drive, the magnetic stripe card, mobile telephony, desktop computers, the computer
+mouse, and more.
+10.1 • Defining Emerging Technologies
+379
+
+Real-World Applications of Emerging Technologies
+Real-world applications of emerging technologies are boundless, and you are likely familiar with many usages.
+An augmented reality (AR) overlays digital information onto a user's environment in real time. Augmented
+reality often involves the use of hardware such as headsets or smartphones to overlay digital information onto
+physical environments. Slightly different, virtual reality (VR) is a computer-generated environment that
+simulates reality and allows users to interact with three-dimensional environments. AR and VR technologies
+are advancing (Figure 10.3), particularly in fields like education, health care, and entertainment. New
+immersive experiences are being created with better hardware, more realistic simulations, and applications in
+virtual collaboration.
+Figure 10.3 (a) Augmented reality and (b) virtual reality create immersive experiences that are being used across organizations and
+fields to help teach and train employees. (credit a: modification of work “Command Center Alpha” by Dale Eckroth, U.S. Air Force/Air
+Education and Training Command, Public Domain; credit b: modification of work “Razer OSVR Open-Source Virtual Reality for Gaming
+(16241057474)” by Maurizio Pesce/Wikimedia Commons, CC BY 2.0)
+The biggest technological change over the last three decades has been the introduction of cell phones and
+smartphones, which are almost as powerful as desktop computers. In response to consumer feedback,
+smartphone manufacturers continue to develop and create more powerful devices with new features,
+improving screen size, data storage, battery life, camara quality, and processing power.
+Another emerging technology, AI, is the branch of computer science focused on creating intelligent machines
+capable of performing tasks that typically require human intelligence, such as visual perception, speech
+recognition, decision-making, and language translation. While AI was originally developed in the 1950s, the
+power of modern computers provides new uses for AI. Artificial intelligence applications are transforming
+everyday business operations across industries:
+•
+In retail, AI powers recommendation systems that suggest products based on past purchases and
+browsing history.
+•
+In health care, AI assists radiologists by flagging potential abnormalities in medical images for review.
+•
+Manufacturing plants use AI for predictive maintenance, analyzing sensor data to identify when machines
+might fail before they break down.
+•
+Financial institutions employ AI to detect fraudulent transactions by spotting unusual patterns in real time.
+These practical applications are examples of how AI moves beyond theory to solve real business problems. AI
+is not just about complex algorithms; AI is using technology to make processes more efficient, decisions more
+informed, and services more personalized.
+LINK TO LEARNING
+While AI offers many opportunities for technological advancements, it also creates challenges. For example,
+380
+10 • Emerging Technologies and Frontiers of Information Systems
+Access for free at openstax.org
+
+this documentary explores how bias is an issue in AI facial recognition (https://openstax.org/r/
+109FacRecogBias) and how some aspects of AI may violate civil liberties.
+A type of AI called generative AI creates new content or ideas in the form of text, images, videos, music,
+audio, and other forms of data, and its supporting tools are being used to create mounds of content for
+different professions. Educators, students, lawyers, project managers, and even publishers are using
+generative AI to shorten the time on tasks. The information gathering that can be done from internet sources
+and web applications can be pulled together quickly through generative AI.
+ETHICS IN IS
+Trust Issues in Artificial Intelligence Cause Ethical Concerns
+Generative AI, such as ChatGPT, will change the way we approach learning and all forms of technology.
+Generative AI has the ability to facilitate our learning, help with industry research, and diagnose many
+different problems. But, there is one major flaw—it cannot be trusted all of the time. When gathering
+information—such as images, audio, and text—from the internet, generative AI tools often use copyrighted
+material, often without obtaining permission from the intellectual property owners. While generative AI
+software can do a phenomenal job creating text and images, it lacks this ethical component.
+Additionally, if AI is unable to find the information you request in your prompt, it may create that
+information itself, which can result in fake articles, photographs, events, and people. For example, following
+hurricanes on the East Coast during fall 2024, several fake AI-generated images were used to highlight how
+the hurricane affected the area.1 In 2023, The Guardian determined that ChatGPT listed fake, unpublished
+journal articles as responses to prompts asked for through the ChatGPT interface.2 ChatGPT may fabricate
+content that mimics real articles if prompted, highlighting generative AI’s inability to verify factual accuracy.
+This is a real problem in a virtual world. If generative AI software fabricates information, how can
+individuals identify real information from fake information? The material generated by AI looks and reads
+just like real articles. This only diminishes the trust of what is found on the internet. Without any type of
+regulation, fake information can be referenced and even cited on the internet, leading to more
+misinformation and potentially disinformation.
+1
+“Fake Images Generated by AI Are Spreading on Social Media, Compounding Misinformation Surrounding Hurricane Recovery
+Efforts,” ABC News, October 15, 2024, https://abcnews.go.com/US/video/fake-images-generated-ai-spreading-social-media-
+compounding-114824660
+2
+Chris Moran, “ChatGPT Is Making Up Fake Guardian Articles: Here’s How We’re Responding,” The Guardian, April 6, 2023,
+https://www.theguardian.com/commentisfree/2023/apr/06/ai-chatgpt-guardian-technology-risks-fake-article
+10.1 • Defining Emerging Technologies
+381
+
+Quantum computing represents another real-world application of emerging technologies. Rensselaer
+Polytechnic Institute in Troy, New York, became the first university to house an IBM quantum computer,
+costing the school more than $150 million in investment capital.3 This acquisition allows students at the
+college to propose research projects, and if the project has merit, time will be allotted for the project to run on
+the quantum computer, providing students with an opportunity to gain hands-on experience in quantum
+computing. In quantum computing computers use quantum mechanics principles to perform complex
+calculations exponentially faster than traditional computers. With this ability, the computer models problems
+and simulations that are extremely hard for researchers to conceptualize, such as complex weather
+forecasting, large-scale financial modeling, and advanced pharmaceutical formulas for new drugs. These and
+other complex problems tend to involve multiple variables that have elaborate interactions, requiring
+sophisticated technology to analyze and understand the problems and potential solutions. Quantum
+computing can provide the sophistication needed. However, the most significant challenge in quantum
+computing is considered to be quantum error correction; effectively managing the noise and errors that occur
+within quantum systems, which is crucial for achieving reliable and large-scale quantum computations.
+Opportunities, Challenges, and Risks of Emerging Technologies
+Emerging technologies offer a multitude of opportunities to enhance our lives in every way. For example,
+businesses can use AI to generate valuable data about customer experiences and satisfaction, and these data
+can be the impetus to make changes needed to improve customer service. Artificial intelligence can help
+students learn by providing educational materials like customized flash cards and quizzes. At the same time,
+the use of emerging technologies can pose challenges and risks that must be managed in balance with the
+benefits that these technologies offer.
+Opportunities
+Emerging technologies provide boundless opportunities for businesses to evolve and increase their
+competitive advantage. For example, enterprise modeling and integration (EMI), a process that uses
+computer-based tools to model the business structure and facilitate the connection of its technology, work,
+and information flow across an organization, has increasingly been considered a value-add for businesses as it
+allows a quicker response to business challenges, and improves efficiencies. EMI connects functionality and
+communication between information systems to include applications, data, clouds, application programming
+interfaces, processes, and devices. It combines multiple integration approaches into one combined effort, with
+one governance model. Incorporating AI into this process would be a value-add for businesses as its
+capabilities can be integrated directly into products and systems to enhance performance in all system areas.
+Augmented reality and VR also provide opportunities for business growth and improved performance. AR and
+VR technologies allow users to access animated three-dimensional experiences, videos, and targeted detection
+directly from their personal devices, leveraging components within the device such as the camera,
+magnetometer, orientation, and other functions. An example of this functionality is the use of AR-enabled
+applications to enhance user shopping experiences (Figure 10.4).
+3
+“Rensselaer Polytechnic Institute Plans to Deploy First IBM Quantum System One on a University Campus,” IBM, June 28, 2023,
+https://newsroom.ibm.com/2023-06-28-Rensselaer-Polytechnic-Institute-Plans-to-Deploy-First-IBM-Quantum-System-One-on-a-
+University-Campus
+382
+10 • Emerging Technologies and Frontiers of Information Systems
+Access for free at openstax.org
+
+Figure 10.4 Augmented reality is used with many online retailers to help shoppers visualize how that item would fit in their
+environment. We are now able to see how a couch fits in our living room or how a dress looks on our body prior to purchase. (credit:
+modification of work “Augmented reality fashion” by “sndrv”/Flickr, CC BY 2.0)
+Additionally, emerging technologies continue to influence areas such as information technology, integrated
+manufacturing, medical informatics, digital libraries, and electronic commerce, supporting efficiencies in
+manufacturing, health care, e-commerce, and other facets of business. Another area impacted by emerging
+technologies is information economics, which is a branch of microeconomics that analyzes how economic
+decisions and consumer behaviors are influenced by knowledge and power. It focuses on how information is
+produced, distributed, and used in economic systems. It is an important field of study to provide businesses
+and other organizations with the data and knowledge they need to be competitive in the marketplace.
+Another example is Bitcoin, which provides specific opportunities with its functionality, including the following:
+•
+Data sharing between businesses is enabled in a decentralized structure where no single entity is
+exclusively in charge.
+•
+Security and privacy are improved wherein transactions have end-to-end encryption protections from
+unauthorized activity.
+•
+Costs are reduced as a result of efficiencies in transaction and business processes.
+•
+Speed is increased as compared to manual processes and other technologies with similar functions.
+Blockchain technology continues to evolve, finding new applications in areas like decentralized finance, supply
+chain management, and secure data sharing. Blockchain technologies have touted benefits and opportunities
+in several industries including financial institutions, health-care organizations, and nonprofit and government
+agencies. Customers of these industries have experienced faster and less costly clearing and settlement of
+financial transactions, increased security of patient privacy, and transparent supply chains to maximize social
+impact. Specific to health-care organizations, patient- and organizational-related benefits can be attributed to
+the use of blockchain technologies (Figure 10.5).
+10.1 • Defining Emerging Technologies
+383
+
+Figure 10.5 Health care’s use of blockchain technology has benefits for both the health-care organization and patients. (credit:
+modification of work “Fig. 3. Benefits of blockchain technology” by Israa Abu-elezz, Asma Hassan, Anjanarani Nazeemudeen, Mowafa
+Househ, Alaa Abd-alrazaq/International Journal of Medical Informatics, Volume 142, October 2020, 104246. https://doi.org/10.1016/
+j.ijmedinf.2020.104246, CC BY 4.0)
+Challenges and Risks
+The opportunities derived from emerging technologies are indeed exciting; however, with their expected
+growth and expansion come challenges and associated risks. Security and data privacy will continue to be
+ongoing concerns as cybercriminals are increasingly sophisticated at usurping the security protocols of
+networked and cloud-based systems. Broader access to AI tools has equipped adversaries with the means to
+exploit these technologies, generating misleading or incorrect information. For example, in fall 2023, fake
+videos generated by AI featured Taylor Swift promoting Le Creuset cookware and Tom Hanks promoting a
+dental plan. Both celebrities decried the videos as fake content produced without their input or permission.4
+Artificial intelligence can be used to analyze patterns and detect vulnerabilities faster than security teams can
+respond as the impact may be increasingly widespread as more of our services become reliant on AI. Users
+can be tricked into responding to impostor prompts asking for identifying information. These challenges
+continue to risk the security and data privacy protections needed to protect the personal information of users
+and customers.
+There are also security and data privacy concerns with the use of AR and VR. Unauthenticated data content is
+sometimes used by AR browsers that facilitate the augmentation process; therefore, people can be misled by
+false information provided on these sites. Aside from the cybersecurity challenges, the biggest VR danger is its
+ability to interfere with one’s visual and auditory connection to the outside world. When users are immersed in
+VR, they may experience a sensory conflict between what their bodies are experiencing in the real world and
+the visuals of the virtual world. This can lead to cybersickness, which may include disorientation, dizziness, and
+even nausea as users lose spatial awareness. It is crucial to maintain awareness of one’s surroundings when
+immersed in these environments.5
+Early implementations of blockchain technology have exposed some of the technology’s challenges and risks,
+including ongoing threats to security and data privacy of its users. Additional challenges include the scalability
+and performance, interoperability, regulatory and legal concerns, and adoption and integration of blockchain
+technology. Energy consumption is also a significant challenge as blockchain technology requires high-
+powered computing equipment to create new blocks and verify transactions. The energy needs to power this
+4
+Megan Cerullo, “AI-Generated Ads Using Taylor Swift’s Likeness Dupe Fans with Fake Le Creuset Giveaway,” ed. Anne Marie Lee,
+CBS News, updated January 16, 2024, https://www.cbsnews.com/news/taylor-swift-le-creuset-ai-generated-ads/
+5
+Ann Pietrangelo, “All About Cybersickness,” Healthline, February 4, 2021, https://www.healthline.com/health/cybersickness
+384
+10 • Emerging Technologies and Frontiers of Information Systems
+Access for free at openstax.org
+
+equipment are so great that blockchain technology’s energy consumption is causing substantial greenhouse
+gas emissions and contributing to climate change.
+10.2 The Evolving Frontiers of Information Systems
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Discuss the frontiers of information systems
+•
+Explain the convergence of information systems frontiers and emerging technologies
+•
+Explain the opportunities and challenges related to information systems frontiers
+Information systems are constantly evolving as communities of researchers, developers, think tanks, and
+others have expanded their thinking beyond what many of us can imagine in terms of where information
+systems may take us next. We have seen the evolution of systems from concept through iterations of change
+as the technology supporting these systems has evolved. Just look back on the evolution of the Apple iPhone,
+first introduced in 2007. From its initial functionalities that included mobile phone calling, personal computing,
+music, and a camera to its more contemporary features such as extended battery life, assistive touch, AI
+features, and camera resolution, iPhone functionality continues to be developed and enhanced with each new
+release. What do you think the next step is for the iPhone? How will the future versions of these types of
+technologies continue to impact our lives?
+The Frontiers of Information Systems
+The concept of information systems frontiers refers to the latest developments in the field of information
+systems. Frontiers explore new research areas, innovative applications, and emerging technologies that have
+the potential to significantly impact the field. These frontiers encompass a wide range of topics including data
+analytics, AI, cybersecurity, cloud computing, mobile computing, and social media.
+Data Analytics
+Data analytics has been identified as the future of information systems and innovation. In response to the
+increasing number of systems available and the breadth of data collected, organizations are increasingly
+looking to utilize this information. Walmart, for example, collects substantial amounts of data from their
+website (such as purchase histories, and products sold and returned) and in store (like customer
+demographics, store details, and products sold and returned). These data inform many of their business
+practices.
+Data analytics, as you learned in Chapter 8 Data Analytics and Modeling, is the process of examining datasets
+to draw conclusions and insights, typically using statistical and computational methods to inform decision-
+making or solve problems (Figure 10.6). The insights generated from data analytics help businesses with the
+foundational information needed to increase performance and operational efficiencies. Along with better
+decision-making and operational efficiencies, data analytics can lead to the simplification of data, increasing
+the organization’s ability to make sense of the raw data collected and share that data as needed. Refer to 8.3
+Analytics to Improve Decision-Making for data analytics tools and techniques that are used to process and
+examine data, allowing insight into business challenges and future trends, and leading to more informed
+business decisions.
+10.2 • The Evolving Frontiers of Information Systems
+385
+
+Figure 10.6 Data analytics uses data visualization to gain a better understanding of the habits of customers, leading to more
+informed decisions in business offerings and strategies. For example, Walmart might study purchase data to adjust its marketing
+strategy. (credit: modification of work “Examining Fisheries Data” by NOAA’s National Ocean Service/Flickr, Public Domain)
+CAREERS IN IS
+Tech Market Researcher
+Tech market research is becoming increasingly popular as organizations attempt to gauge how well
+technology-related products are being received. Tech market researchers study market trends, consumer
+behaviors, emerging technologies, competitor information, and other factors to determine the viability of a
+new technological product or service. It is a systematic process of gathering, analyzing, and interpreting
+data related to the technology sector. Specific roles in this area may include analyst, specialist, recruiter, and
+general researcher, with general focus in wide-ranging areas of technologies to include data cloud
+computing, big data management, and emerging technologies.
+Artificial Intelligence
+Artificial intelligence is an important innovation in information systems. Artificial intelligence is increasingly
+being used in many industries, including health care, logistics, manufacturing, automotive, and publishing, as
+well as in daily lifestyle applications. Artificial intelligence–enabled computer systems are able to process large
+amounts of data, identify patterns and trends, and make decisions, tasks that generally require human
+intelligence and a great deal of time and resources. Artificial intelligence uses reasoning, learning, problem-
+solving, and perception as it processes the data.
+It is important to recognize that to function optimally, AI must be grounded in data that are valid and reliable.
+Without robust data, AI may produce inaccurate data analyses and biased algorithms. In addition, since AI
+doesn’t have the reasoning capabilities of humans, the technology is poorly suited for situations that require
+adaptation to change, such as using AI to operate machinery safely.
+Artificial intelligence has several subfields that focus on its different aspects
+•
+The field of machine learning involves the creation of algorithms and models that enable machines to
+learn from or make decisions about the data without specific programming.
+•
+A neural network is a method of AI that uses algorithms to teach computers to process data much like the
+human brain, using image and speech recognition.
+•
+Deep learning uses multiple layers of neural networks to address deeper, more complex decision-making
+and is often considered a subset of machine learning.
+•
+Cognitive computing simulates human thought processes via reasoning and learning.
+•
+Computer vision teaches machines how to see and interpret information from images or videos using
+facial recognition, object identification, and segmentation.
+•
+The field of natural language processing teaches machines to understand and generate human
+language and involves tasks such as speech recognition, text analysis, and language translation.
+386
+10 • Emerging Technologies and Frontiers of Information Systems
+Access for free at openstax.org
+
+Cybersecurity
+Cybersecurity is the practice of protecting internet-connected systems from internal and external threats of
+unauthorized access, attack, or damage to its technologies and networks. It combines the people, processes,
+policies, systems, and technology needed to thwart cyber risks, safeguard assets, and protect assets.
+Cybersecurity has become increasingly vital to business as the breadth of today’s information is managed
+electronically. The exposure caused by a breach can compromise personal information, leading to a loss of
+trust and potential financial liabilities. Additionally, cybersecurity allows organizations to remain compliant
+with regulations, safeguard against identity theft, and protect intellectual property, finances, and people’s
+personal information.
+Currently, cybersecurity is a critical aspect of information systems, and this will continue to be true as new
+technologies emerge. The work of the National Institute of Standards and Technology (NIST) will continue to
+be important for emerging technologies. The NIST-developed Cybersecurity Framework (CSF) leads as an
+essential approach for organizations to create and manage their cybersecurity strategy. Refer to Chapter 5
+Information Systems Security Risk Management and Chapter 6 Enterprise Security, Data Privacy, and Risk
+Management for more on information on cybersecurity.
+As new technologies emerge, there remain several pivotal layers of cybersecurity necessary to guard against
+ever-evolving cyber threats:
+•
+Application security is a principal component of cybersecurity, adding security inside an application to
+shield it from attacks on vulnerabilities within its code. Various tools (such as firewalls, antivirus software,
+encryption techniques, and web application firewalls) combined with various types of application security
+(authentication, authorization, encryption, logging, and application security testing) assist in keeping
+applications secure.
+•
+Companies must protect customer, client, employee, and user information from unapproved access, use,
+modification, loss or deletion. This component is dedicated to protecting the integrity of the data residing
+within a system.
+•
+Network security protects the network from unapproved access and potential dangers. Firewalls and
+antivirus software are examples of strategies used to support network security efforts.
+•
+Disaster recovery planning helps businesses identify the necessary and mission-critical applications vital to
+maintain the operations of the organization and how the implementation of these plans will occur in the
+event of a cyberattack.
+•
+Operational security encourages management to step inside the role of a hacker to identify areas of
+vulnerability within the organization.
+•
+End-user security targets the safeguards of individual devices connected to a network, such as computers,
+tablets, printers, and smartphones. Coupled with end-user education and training, these controls help to
+alleviate security threats that may be caused by human error.
+Biometrics are increasingly used to authenticate a person’s identity, such as fingerprints to access
+smartphones, or the use of facial recognition technology at airport smart-gates. Some examples of biometrics
+that could be used in 5G network security include fingerprint scanning, iris recognition, and voice recognition.
+Cloud Computing
+Cloud computing is an emerging technology defined as the use of hosted services like data storage, servers,
+databases, networking, and software that run over the internet (or an intranet) rather than on private servers
+and hard drives. Cloud computing services are available via public, private, or hybrid means and are generally
+owned by a third party, allowing the customer to pay for the choice of how they want their infrastructure to be
+managed and supported. Review Chapter 7 Cloud Computing and Managing the Cloud Infrastructure for more
+information on cloud computing.
+10.2 • The Evolving Frontiers of Information Systems
+387
+
+CAREERS IN IS
+Cloud Engineering
+Cloud engineers are increasingly needed to support the design, development, maintenance, security, and
+management of cloud infrastructures. Cloud engineers ensure the security of the network. Additionally,
+they assist with the planning and design of cloud computing applications and services for the business,
+deployment of cloud-based infrastructure, and programming code in various languages such as Java,
+Python, and C++. They also work with organizations on disaster planning, preparedness, and recovery.
+Experience working with coding languages, as a systems administrator or network engineer and excellent
+written and communication skills are necessary to succeed in this position.
+Mobile Computing
+The emerging technology of mobile computing involves the strategies, technologies, products and services
+that enable users to access information without restricting the user to a single geographic location. Combined,
+mobile computing technologies support the use of mobile devices that are portable, and wireless devices that
+are enabled to transmit data, voice, and video communications. The convenience of mobile computing allows
+people to access network services anywhere and anytime. Most could not have imagined a few decades ago a
+future where you could call or text a relative in another country from an underground subway train or connect
+with a long-lost classmate through a social media application.
+Mobile computing combines infrastructure (technical pieces that enable communication such as a wireless
+network), hardware (physical devices such as laptops), and software (applications and operating systems)
+technologies. Characteristics of mobile computing technologies include portability, connectivity, social
+interactivity, context sensitivity, and individualization. These are all applicable to the types of mobile devices
+consumers enjoy using, such as tablets, mobile phones, and laptop computers.
+In addition to being able to privately connect, interact, and collaborate with people through different
+applications, there are several other advantages to mobile computing. For example, studies have shown that
+mobile computing increases productivity. With the move toward working remotely, organizations have realized
+that the cost of an office location may not make sense when employees can work from any location and be just
+as productive.6 Mobile computing has also enabled a plethora of entertainment options with applications that
+provide movies (like Netflix and YouTube), games (such as Wordle), lifestyle content (for example, HGTV and
+Amazon), and more. Additionally, mobile computing now supports and connects to the cloud and cloud
+computing services, allowing data such as photos, videos, and documents to be secured for future retrieval.
+Mobile computing does have limitations. For example, the range and bandwidth (the capacity at which a
+network can transmit data) of some devices is limited, leading to transmission interference or unwanted
+disruptions while communicating. This can severely interrupt the quality of the sound or picture being
+displayed on the device. Security standards that govern mobile computing technologies also remain an issue
+as the industry regulations can lag behind the rate of innovation. Additionally, mobile computing technologies
+present power consumption and battery charging challenges. For example, batteries can be negatively
+impacted by temperature changes, making it difficult to recharge and maintain battery performance.
+The Convergence of Information Systems Frontiers and Emerging
+Technologies
+In the context of computing and technology, convergence is the joining of two or more different entities in a
+single device or system. The convergence of emerging technologies and IS frontiers can create new
+6
+Jane Thier, “Bosses, You’re Wrong: Remote Workers Are More Productive than Your In-Office Employees,” Fortune, October 20,
+2022, https://fortune.com/2022/10/20/remote-hybrid-workers-are-more-productive-slack-future-forum/
+388
+10 • Emerging Technologies and Frontiers of Information Systems
+Access for free at openstax.org
+
+opportunities for innovation and growth as the research and development processes in new frontiers helps
+foster and promote emerging technologies to develop and evolve. For example, the convergence of AI and
+data analytics can help organizations make better decisions by analyzing vast amounts of data in real time. It
+can enable organizations to gain a competitive edge, optimize operations, and drive business value by
+providing insights into data that a data analyst may not be able to uncover. Data analysts will still be needed to
+interpret the data in a business sense as these technologies do not yet have the capacity to accomplish such
+tasks.
+The IoT can connect devices and sensors to create smart systems that can optimize operations and enhance
+user experiences. These technologies can be leveraged to create smart homes, where internet-enabled
+appliances and devices can be managed remotely via a connected network. For example, IoT smart devices
+can support the needs of people who are hard of hearing or deaf by providing real-time alerts, such as a
+smoke detector that activates non-sound-based alarms. Overall, the intersection of emerging technologies
+and IS frontiers is an exciting area that has the potential to transform various industries and improve people’s
+lives.
+Opportunities, Challenges, and Risks of Information Systems Frontiers
+The rapidly evolving field of information systems presents both significant opportunities and complex
+challenges for organizations navigating the digital landscape. Frontiers of information systems, such as data
+analytics, AI, cloud computing, mobile computing, and social media, provide opportunities, challenges, and
+even risks to people and organizations as they continue to evolve.
+Opportunities
+Businesses can expect IS frontiers to expand and grow, becoming more advanced and mature in their
+functions. For example, natural language processing enhancements will further the abilities of machines to
+understand and generate human language, making it easier for users to interact with information systems.
+This expected growth may provide increased employment opportunities to develop and manage such systems,
+as well as a growth in educational and training opportunities in these areas.
+Another opportunity afforded by these systems will be an overall improvement in networking infrastructure,
+allowing increased compatibility between networked systems. Problems with voice, data, and image
+transmission will be reduced, improving overall communication quality and delivery. This will also lead to a
+reduction in hardware and software costs, reducing the overall costs of processing data. Over time, the cost
+savings should make information systems more affordable, allowing businesses to become more competitive.
+We have already seen exponential growth in mobile computing in the variations of devices, their functionality,
+and their processing power. Mobile computing will continue to exhibit improved functioning, making it easier
+to use and maintain, and possibly become more affordable in the future.
+Challenges and Risks
+Data analytics will experience challenges with big data (large amounts of complex data) in that it is unable to
+be stored, processed, or analyzed in traditional data storage formats—a significant challenge. However,
+analyzing this data in a timely manner can help decrease risks to society, nature, or the ecosystem. For
+example, hospitals, pharmaceutical companies, and other medical and health organizations store large
+amounts of medical data. When completed in a timely manner, data analytics can provide trend analysis and
+identify potential health-related threats to different communities, improving and even saving lives. Another
+risk occurs when, even if data are analyzed in a timely manner, the analysis uses bad data, such as those
+caused by outdated records, inaccurate data integration processes, and data entry errors.
+10.2 • The Evolving Frontiers of Information Systems
+389
+
+Data breaches are an increasing concern as hackers are becoming more sophisticated in breaking through
+networks. In health care, which shows much promise in the convergence of IS frontiers and emerging
+technologies, 45.9 million U.S. health-care records were breached in 2021, 51.9 million breaches occurred in
+2022, and this increased to 133 million records exposed, stolen, or otherwise impermissibly disclosed in 2023.7
+Care needs to be taken to protect data as it is processed in new ways.
+Businesses are also challenged to maintain regulatory compliance as the increased use of these technologies
+continues to push the boundaries of regulatory bodies. It is becoming more difficult and expensive to ensure
+adherence to these regulations, and violations may result in substantial penalties, data breaches, and
+reputational risk to the business.
+Challenges and risks for cloud computing include misconfiguration of security settings, a common
+vulnerability that occurs when security settings such as default configurations, improper access controls,
+insufficient firewall protections, and other misconfigurations result in security issues. The data itself may pose
+quality issues where duplicate data, corrupt data due to human error, or mixed data types may exist, all
+creating challenges when gathering data for analysis.
+LINK TO LEARNING
+The publication Information Systems Frontiers: A Journal of Research and Innovation (https://openstax.org/
+r/109ISFrontiers) explores topics in areas of emerging technologies, including research developments in
+EMI, medical informatics, mobile computing, and e-commerce.
+10.3 Societal and Global Importance of Emerging Technologies in
+Information Systems
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Identify the societal and global impact of emerging technologies
+•
+Describe the global reach of research and innovation
+•
+Examine how research and innovation lead to emerging technologies
+•
+Discuss questions in emerging technologies
+Emerging technologies are changing how information systems–related work and projects are managed.
+Virtual assistants and chatbots, machine learning, predictive analyses, resource optimization, natural language
+processing, data management, and other functionalities of emerging technologies help to automate repetitive
+and routine tasks, enhance collaboration with team members and stakeholders, and efficiently plan and track
+project tasks.8 Societal innovation can also have a major impact on social groups, resulting in a change in
+behavior or practice that has far-reaching consequences worldwide. In an era defined by rapid technological
+advancement, the emergence of innovative technologies has revolutionized societal interactions.
+7
+Steve Alder, “Healthcare Data Breach Statistics,” The HIPAA Journal, January 15, 2025, https://www.hipaajournal.com/healthcare-
+data-breach-statistics/
+8
+Ana María Choquehuanca-Sánchez, Keiko Donna Kuzimoto-Saldaña, Jhonatan Rubén Muñoz-Huanca, et al., “Emerging
+Technologies in Information Systems Project Management,” EAI Endorsed Transactions on Scalable Information Systems 11, no. 4
+(2024), https://doi.org/10.4108/eetsis.4632
+390
+10 • Emerging Technologies and Frontiers of Information Systems
+Access for free at openstax.org
+
+Societal and Global Impact of Emerging Technologies
+The societal and global impact of emerging technologies refers to their worldwide effect of change—to
+economy, culture, public policy, public services, health, the environment, and quality of life. For example,
+emerging technologies are rapidly changing many aspects of the finance industry. When customers contact
+their financial institutions with general banking questions, such as location, hours, account balance, and bill
+payments, they can interact with AI-enabled systems to get the information they need and accomplish banking
+tasks. Other uses include fraud detection, anti-money-laundering, risk management, credit scoring, and trade
+and investment services (Figure 10.7). By automating routine tasks, organizational resources (human and
+financial) can be allocated elsewhere, improving efficiency. As noted during a 2023 panel discussion at the JP
+Morgan NBFI Leaders Forum in Sydney, Australia, generative AI could add $2.4 to $4.4 trillion annually to the
+global economy.9 It is expected to impact 75 percent of areas, such as customer operations, marketing,
+software engineering, and research and development, while reducing fraud and account rejection rates by 15
+to 20 percent.10 We can also look at these services, enabled by AI and other emerging technologies, as
+contributors to the closure of over 3,000 branches of large financial institutions in 2023 due to the rise of
+digital banking.11
+Figure 10.7 The financial sector utilizes artificial intelligence to support many areas of its business. (attribution: Copyright Rice
+University, OpenStax, under CC BY 4.0 license)
+Another emerging technology with a societal impact is self checkout (SCO), in which machines are enabled
+with artificial intelligence technology, product images, barcodes, and other mechanisms for customers to
+complete purchases. First introduced in the 1980s, SCO technology began appearing in stores in greater
+numbers in the 1990s. The SCO systems market generated $3.5 billion in revenue in 2021 and is expected to
+grow 13 percent between 2022 and 2028 (Figure 10.8).12
+9
+Michael Chui, Roger Roberts, Lareina Yee, et al., The Economic Potential of Generative AI: The Next Productivity Frontier,
+(McKinsey & Company, June 14, 2023), https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-
+of-generative-ai-the-next-productivity-frontier#introduction
+10
+“How AI Will Make Payments More Efficient and Reduce Fraud,” J.P.Morgan, November 20, 2023. https://www.jpmorgan.com/
+insights/payments/payments-optimization/ai-payments-efficiency-fraud-reduction
+11
+Courtney Rau and Konner McIntire, “Fact Check Team: Major Banks Close Their Doors amid Rise in Digital Banking,” The National
+News Desk, November 28, 2023, https://thenationaldesk.com/news/fact-check-team/fact-check-team-major-banks-close-their-doors-
+amid-rise-in-digital-banking-pnc-jpmorgan-chase-bank-of-america-citizens-federal-deposit-apps-websites-branches-locations
+12
+“Global Self-Checkout Systems Market Size, Share, Trends, Industry Growth by Component (Systems, Services), by Type (Cash,
+Cashless), by Application (Retail, Financial Services, Entertainment, Travel, Healthcare, Others), by Region, and Forecast to 2028,”
+Research Corridor, updated March 6, 2024, https://www.researchcorridor.com/self-checkout-systems-market/
+10.3 • Societal and Global Importance of Emerging Technologies in Information Systems
+391
+
+Figure 10.8 Self-checkout systems, which rely on artificial intelligence technology, enable customers to independently complete
+purchases. (credit: "Self Checkout" by "pin add"/Flickr, CC BY 2.0)
+LINK TO LEARNING
+The processes of self-checkout technology (https://openstax.org/r/109SelfCheckout) have encountered
+unexpected challenges, including scanning difficulties, inaccuracy of produce scales, problems with weights
+in bagging areas, missed scans, and theft, to name a few. This technology can be costly to a business with a
+four-kiosk system, costing six figures, on average. Some organizations are reversing the course on this
+technology by putting limits on its use, installing cameras, and even removing systems.
+The societal and global impact of emerging technology may not be apparent right away. For example, social
+media began in the 1990s with small platforms like Classmates.com, GeoCities.com, and SixDegrees.com, all
+with messaging and chat functions. Today, billions of people worldwide use social media daily for purposes
+including finding entertainment, interacting with others, and conducting business. Social media has expanded
+beyond its original designs to include e-commerce functions that allow users to buy, sell, or trade items, earn
+income, and find other financial incentives for use. Businesses often utilize e-commerce functions to run
+targeted ads, build brand awareness, generate online sales, and attract a global online following. The
+interaction of businesses in real time can foster a sense of community and loyalty.
+Another example is the availability and adoption of solar power by consumers. First introduced in the 1980s,
+solar power has experienced significant growth as a result of improved solar energy technology. The
+conversion of energy from the sun into power for electricity and heat, or solar power, is generated through the
+use of solar panels. These can be found for general use on private rooftops or solar farms/fields, and large
+areas of land with interconnected solar panels generate large amounts of energy at the same time.
+392
+10 • Emerging Technologies and Frontiers of Information Systems
+Access for free at openstax.org
+
+The advancements in solar power technology along with federal incentives and tax credits in the United States
+have increased sales of solar cells. Over five million solar systems have been installed with enough solar
+energy-generating systems installed to power 32.5 million homes (Figure 10.9).13 In other parts of the world,
+solar technology is being adopted in places where laws have been passed to enable access of solar energy to
+their citizens. The adoption and widespread use of this emerging technology have helped consumers lower
+electricity bills, increase property values, and reduce dependence on fossil fuels, all positive impacts on public
+health and the environment.
+Figure 10.9 Solar farms, such as the one shown here, use solar panels to convert energy from the sun into power used to support
+electricity and provide heat. (credit: “Hawaii solar; a photovoltaic power station” by Reegan Moen, U.S. Department of Energy/
+Wikimedia Commons, Public Domain)
+While there are positive societal and global impacts of emerging technology, such as job creation, improved
+access to education and health care, and environmental conservation efforts, there can also be negative
+consequences. Unintended consequences of emerging technology include increased inequality, job loss, and a
+harmful impact on the environment. For example, using AI may be challenging for individuals with different
+abilities, reducing the opportunity for them to interact with AI-enabled systems. Similarly, solar power
+technologies are limited to those who have the financial means to invest.
+LINK TO LEARNING
+Read this article from Forbes to learn how AI can exploit consumer vulnerabilities (https://openstax.org/r/
+109EthicsAI) if not built and trained ethically, especially in the marketing industry.
+The global impact of emerging technologies is also evident across frontiers in information systems. Data
+analytics tools and techniques are being used and applied in all aspects of society from transportation to
+health care, marketing to education, finance to political campaigns. Public health organizations collect
+nonidentifying information on disease prevalence to spur and fund research efforts, provide targeted
+medicines, improve efficiencies in health care–related supply chains and logistics, resource health care, and
+initiate targeted marketing campaigns aimed at increasing awareness and disease prevention. The year-by-
+year identification of different strains of flu and its prevalence is an example of how data analytics can drive
+13
+"5 Millions Solar Installations: Powering American Communities," Solar Energy Industries Association, updated May 2024,
+https://seia.org/5m/
+10.3 • Societal and Global Importance of Emerging Technologies in Information Systems
+393
+
+societal and global change.
+We also see the societal and global impacts of data analytics in the frontier of education. A student’s personal
+learning experience is enhanced, educational resources are optimized, and the student’s strengths and
+weaknesses are identified in order to tailor instruction and set them up for success. The same transformative
+effects can be seen in environmental conservation efforts where deforestation, pollution, and climate change
+data are collected and used to enact positive change. This is evident, for example, in the World Resources
+Institute’s work on global forestry, where analytics is helping to identify deforestation in countries across the
+world, improving impacts to climate, biodiversity, and human well-being.14
+The Global Community of Research and Innovation
+Without research and development, we would not have smartphones, computers, the internet, or any of the
+technologies many of us use on a daily basis. Research and development are crucial in ensuring that
+technology continues to evolve and improve, and that new and innovative solutions are developed to address
+emerging challenges.
+The global community of scientists supporting research and innovation continues to make strides toward
+furthering new findings, technologies, and processes. And those latest developments in the field of
+information systems continue to push to further the potential reach of new technologies worldwide. For
+example, global growth in data analytics and the predictive analytics market is expected to grow from $16.41
+billion in 2023 to $83.98 billion by 2032.15
+Regionally, North America is leading global efforts in data analytics and the predictive analytics market, and
+the largest increases in growth are in Europe, Asia-Pacific, Middle East and Africa, and South America.16
+Together, countries in these regions are increasingly seeing solution and service gains in banking, financial
+services, insurance, health care, telecommunications, and information technology. For example, the banking
+industry is using these technologies to customize insurance plans and premium amounts based on user data
+and documentation. Large global organizations will dominate these markets as they have increased their
+capacity to store, process, and analyze large amounts of data to leverage the outcomes and create marketing
+strategies that target customers and improve user experiences.
+We can also find global communities working to adopt and expand on these technologies in uses like the
+continued adoption and development of 5G. This fifth-generation wireless technology is an example of how
+mobile computing is evolving regionally and throughout the world, increasing the speed of use, enhancing
+connectivity, and enabling other mobile options while connected. The next generation, 6G technology is
+currently being developed in regions throughout the world and is expected to be available in the United States
+in 2030.17
+How Research and Innovation Lead to Emerging Technologies
+Research and innovation have played a significant role in the growth of emerging technologies. Research, or
+the systematic process to generate understanding or knowledge, is a precursor to innovation, the process of
+using the knowledge generated from research to meet real needs. When we think of research, we might
+imagine a scientist behind a microscope. But research can be thought of more broadly, beginning with a broad
+idea, leading to preliminary investigation, designing and planning, collecting and interpreting data, and then
+disseminating findings.
+14
+Mikaela Weisse, Elizabeth Goldman, and Sarah Carter, “Forest Pulse: The Latest on the World’s Forests,” World Resources
+Institute, updated April 4, 2024, https://research.wri.org/gfr/latest-analysis-deforestation-trends
+15
+Global Market Overview and Competitive Analysis (Introspective Market Research, May 2024),
+https://introspectivemarketresearch.com/reports/data-science-and-predictive-analytics-market/
+16
+Global Market Overview and Competitive Analysis (Introspective Market Research, May 2024)
+https://introspectivemarketresearch.com/reports/data-science-and-predictive-analytics-market/
+17
+“ITU’s IMT-2030 Vision: Navigating Towards 6G in the Americas,” 5G Americas, September 2024, https://www.5gamericas.org/
+itus-imt-2030-vision-navigating-towards-6g-in-the-americas/
+394
+10 • Emerging Technologies and Frontiers of Information Systems
+Access for free at openstax.org
+
+Innovation is a catalyst for change as stagnation or inactivity can impede the growth of a competitive and
+fiscally sound organization. The innovation process is generally composed of three systematic steps:
+conception, implementation, and marketing (Figure 10.10). It begins with a conceptual idea—its evaluation,
+the generation of requirements, and the planning needed for potential implementation. The implementation
+stage is where the idea is further developed or constructed, and a prototype or pilot is produced and tested.
+Generally, within the marketing step, the prototype or pilot application is moved to production or to launch for
+use. The organization may also choose specific markets to release the product.
+Figure 10.10 Innovation can occur in three steps: conception, implementation, and marketing. (attribution: Copyright Rice University,
+OpenStax, under CC BY 4.0 license)
+FUTURE TECHNOLOGY
+Agricultural Technologies
+The agricultural industry continues to make research and innovation gains in addressing food insecurity,
+animal welfare, the environmental impacts of meat production, and the overall protection of human health.
+Research and innovation advances in tissue engineering techniques and regenerative medicine
+technologies have led to the production of cultured or cultivated meat, produced from culturing animal
+cells in vitro. These advances represent new and innovative approaches that significantly enhance the
+efficiency, productivity, and sustainability of farming practices as they integrate digital tools, sustainable
+practices such as drone monitoring, precision agriculture using GPS, and automation and robotics. New
+Harvest, a leading U.S.-based nonprofit research organization, is pioneering these emerging technologies
+with the goal of reducing dependence on animal agriculture by using cells instead of animals.18
+Through its continuous research and innovation processes, India has become a global leader in information
+technology and business process outsourcing (BPO), a service industry that supports outsourcing of
+business service operations to third-party vendors. It is estimated that these services have garnered $157
+billion in the fiscal year 2021–22, comprising $106 billion of information technology services and $51 billion of
+BPO services, respectively.19 This growth has also contributed to the emergence of an Indian workforce
+trained to solve complex problems and manage the technical functions of global corporations including
+consulting, design, product development, business process management, and infrastructure support.
+Governments, think tanks, and private enterprises have also made major contributions to the research of new
+discoveries and uses for emerging technologies. The U.S. government has contributed to research and
+innovation through its support of federally funded agencies, such as the Department of Defense, the National
+Science Foundation, National Aeronautics and Space Administration (NASA), and the Environmental Protection
+Agency Office of Research and Development. According to the National Science Board, the proposed fiscal year
+2025 budget for federal research and development is approximately $201.9 billion, with the Department of
+Defense (DOD) accounting for 46 percent and the Department of Health and Human Services accounting for
+25 percent.20
+18
+“New Harvest Is a Field-Building Organization Advancing Cellular Agriculture Globally,” New Harvest, accessed December 19,
+2024, https://new-harvest.org/
+19
+“How India Is Emerging as the World’s Technology and Services Hub,” EY India, January 27, 2023, https://www.ey.com/en_in/
+india-at-100/how-india-is-emerging-as-the-world-s-technology-and-services-hub
+10.3 • Societal and Global Importance of Emerging Technologies in Information Systems
+395
+
+The RAND Corporation, considered one of the top think tanks in the world, is an example of an organization or
+institution that maintains a scholarly and interdisciplinary approach to research on particular issues, policies,
+or ideas. The RAND Corporation receives public and private funds to support research efforts, educational
+opportunities, analyses, consulting, training, and other services, with $390 million in revenue in 2023.21 Areas
+of expertise include public policy, education, environment, national security, law, and corporate governance,
+and also science, technology, infrastructure, defense, and economic development.
+Questions in Emerging Technologies
+While there is an emphasis on a multidisciplinary approach for emerging technologies in information systems
+that draws from such fields as computer science, telecommunications, operations research, economics, and
+cognitive sciences, the field is constantly evolving, and there are many questions to explore. Here are some of
+the central issues.
+How can we ensure the ethical and responsible use of emerging technologies such as AI, blockchain, and the
+IoT? Ensuring the ethical and responsible use of emerging technologies should occur at individual and
+organizational levels as there is a great deal at stake. As complex technologies are developed, it is necessary to
+consider bias, fairness, transparency, privacy, and data protection as well as the human control of these
+technologies. Additional proactive ethical strategies to consider include the following:
+•
+Promote open and transparent dialogue among technical teams, users, leadership, and other
+stakeholders about the ethical implications needed to navigate the complex landscape that technologies
+may bring.
+•
+Foster collaboration and engage diverse stakeholder perspectives to create, adopt, and promote ethical
+standards.
+•
+Embed ethics within the design through all stages from conception to implementation. Be sure to address
+questions in the integration to cover processes in place, levels of access, responsible parties or
+departments to respond, and ongoing monitoring processes.
+•
+Invest in research and education of emerging technologies to aid in the development of ethical guidelines.
+How can we design information systems that are resilient to cyberattacks and other security threats? As new
+technologies and attack vectors emerge, how can we keep systems and data safe? Organizations have
+recognized the need to design information systems that are resilient to cyberattacks and other security
+threats. Creating cyber-resilient strategies is key to safeguarding systems and data, such as the following best
+practices:
+•
+Identify emerging trends in cybersecurity. Explore the specific technology and the threats that may be
+inherent in them. Discuss the challenges posed for each, the potential controls, validating techniques and
+other means to manage their vulnerabilities with leadership and other stakeholders.
+•
+Build a resilient infrastructure. Be sure to build a comprehensive cybersecurity infrastructure that includes
+all the hardware, software, firewalls, encryption protocols, and regular security surveillance needed to
+mitigate potential risks.
+•
+Collaborate with external partners. Explore collaborative communities to include vendors, industry peers,
+and governing organizations. The value of partnerships with external partners may far outweigh the cost
+of an attack.
+•
+Explore the cybersecurity landscape. Research the evolving nature of threats, methods to address them,
+and potential impacts to the organization, such as regulatory penalties, financial losses, reputational
+damage, and the loss of customer trust.
+•
+Implement training and security protocols within the organization to include user controls, privileges, and
+data access. Multifactor authentication and regular access reviews can also aid in strengthening security.
+20
+Laurie Harris, Lisa S. Benson, Marcy E. Gallo, et al., Federal Research and Development (R&D) Funding: FY2025 (Congressional
+Research Service, December 9, 2024), https://crsreports.congress.gov/product/pdf/R/R48307/2
+21
+2023 RAND Annual Report (RAND Corporation, April 10, 2024) 39, https://www.rand.org/pubs/corporate_pubs/CPA1065-4.html
+396
+10 • Emerging Technologies and Frontiers of Information Systems
+Access for free at openstax.org
+
+•
+Develop an incident response plan. Creating a culture of prompt incident reporting to test the
+effectiveness of systems is needed to identify areas of improvement.
+How can we leverage emerging technologies to improve health-care delivery and patient outcomes? For
+example, can AI be used to diagnose diseases more accurately or predict patient outcomes more effectively?
+Emerging technologies are increasingly used throughout the health-care sector to improve health-care
+delivery and patient outcomes. According to the Health Information and Management Systems Society, a
+leading organization driving reformation of health-care delivery through information and technology, health-
+care stakeholders are optimistic about emerging health-care-related tools and technologies and their ability to
+improve accuracy and efficiency in care.22 Another study found that 80 percent of 80 percent of health
+organizations intend to expand their use of digital systems between 2022 and 2027.23 Figure 10.11 shows
+some of these emerging technologies and some examples of how they are being used to support health-care
+delivery:
+•
+Artificial intelligence has been leveraged in areas such as clinical decision support where presenting
+conditions can be narrowed down to further identify a diagnosis or causation of a presenting health
+challenge. It can also improve the accuracy of the diagnosis using predictive analyses and other
+functionality. Additionally, AI has been used to support standard operating procedures, ensuring that
+patient care protocols are consistently adhered to.
+•
+Cloud computing has enabled health-care organizations to expand their capacity for data storage and
+scalability. Cloud computing–enabled interoperability in devices supports collaboration and data-sharing
+capabilities between patients and their care team.
+•
+The management and secure transfer of patient medical records through hospitals, pharmacies,
+diagnostic laboratories, and other health-care entities have been attributed to the use of blockchain
+technologies. Its system also enables increased protection and safeguards of health-care data.
+•
+The IoT enhances patient monitoring capabilities, medication adherence, and overall well-being. IoT-
+enabled devices support videoconferencing, allowing patients to confer with their medical team remotely.
+These devices also support the distribution of medical information where patients can use their mobile
+devices to track health measures or check the results of medical tests.
+22
+“Future of Healthcare Report: Exploring Healthcare Stakeholders’ Expectations for the Next Chapter,” HIMSS, August 11, 2021,
+https://www.himss.org/resources/future-healthcare-report-exploring-healthcare-stakeholders-expectations-next-chapter
+23
+Bill Siwicki, “Where to Invest Increasing Digital Health Dollars,” Healthcare IT News, August 24, 2022,
+https://www.healthcareitnews.com/news/where-invest-increasing-digital-health-dollars
+10.3 • Societal and Global Importance of Emerging Technologies in Information Systems
+397
+
+Figure 10.11 Emerging technologies support several segments of health-care delivery to include clinical integration and operational
+optimization. (credit: modification of work “Figure 2” by Abdulatif Alabdulatif, Ibrahim Khalil, and Mohammad Saidur Rahman,
+“Security of Blockchain and AI-Empowered Smart Healthcare: Application-Based Analysis,” Applied Sciences 12, no. 21 (October 31,
+2022): 11039, https://doi.org/10.3390/app122111039, CC BY 4.0)
+What are the implications of emerging technologies for the future of work? How will automation and AI impact
+the job market, and how can we prepare workers for this new reality? There are some who believe that
+emerging technologies will take away jobs. A more optimistic viewpoint explores the potential these
+technologies will have to not only enhance and transform the skills and competencies of the current workforce
+but also add new types of roles to augment existing roles. For example, traditional sales jobs (cold-calling,
+door-to-door) may have decreased due to the introduction and use of new technologies; however, new
+opportunities have been created and leveraged for companies to hit their sales targets. For example,
+automating sales activities can increase efficiencies such as lead qualification and generation, the use of virtual
+assistants to manage human tasks more efficiently, and algorithms to identify promising prospects. Data
+analytics can also create algorithms to identify opportunities and customer-focused prospects. Additionally,
+social media provides marketing options, reducing the need for cold-calling, improving the reach of services,
+and increasing the potential to attain sales goals. According to the Harvard Business Review, there are several
+capabilities companies need to have or build to realize the value of AI to exceed its costs.24 They recommend
+that companies change behaviors to maximize learning, control experimentation to determine the value of a
+potential full organizational rollout, measure the value of the technology for the business, manage the data as
+current data stores may need to be augmented to support the potential volume of data captured, and develop
+personnel to engage with the technology to improve productivity and operations.
+24
+Tom Davenport and John J. Sviokla, “The 6 Disciplines Companies Need to Get the Most Out of Gen AI,” Harvard Business Review,
+July 8, 2024, https://hbr.org/2024/07/the-6-disciplines-companies-need-to-get-the-most-out-of-gen-ai
+398
+10 • Emerging Technologies and Frontiers of Information Systems
+Access for free at openstax.org
+
+How can we ensure that emerging technologies are accessible to all, regardless of income, location, or ability?
+How can we bridge the digital divide and ensure that everyone has equal access to the benefits of new
+technologies? The adoption of responsible and inclusive approaches is necessary to ensure inclusivity and
+accessibility of emerging technologies. According to the World Health Organization, an estimated 1.3 billion
+people, or 16 percent of the global population, experience significant physical and/or mental disabilities.25
+Best practices for inclusive and accessible design include conducting user research, engaging diverse
+perspectives, prioritizing features, and creating flexible designs that are tested and iterated. We must bridge
+the gap between the technological world and users to increase accessibility. Some technologies have been
+developed with accessibility challenges in mind, such as GPT-4 offering advanced capabilities such as visual
+assistance to those who are visually impaired. Apple has introduced a wide range of tools to improve voice-
+controlled and assistive technology functions within its devices. Additionally, Google has improved its
+navigation features within Google Maps so users can access wheelchair accessibility, walking routes, and live
+experiences for those with visual impairments.
+As emerging technologies continue to evolve, research and development will continue to address new issues
+and ensure that technology advances and meets society’s needs. An important part of this will be addressing
+the power demands of AI and other emerging technologies. To ensure that organizations have sufficient
+resources to support these power needs, research and development need to focus on sustainable energy
+practices. This may include efforts such as the development of processors that are more energy efficient and
+collaboration on open sources to share power. Efforts to manage the power consumption of emerging
+technologies can reduce these technologies’ environmental footprints as well as improve efficiencies and cost-
+effectiveness.
+ETHICS IN IS
+Ethics in the United Kingdom
+There are growing calls for ethics in research and innovation, particularly as emerging technologies are
+increasing their global reach and impact. The UK Research and Innovation organization is one such entity
+that has acknowledged the need for collective responsibility where funders, researchers, stakeholders, and
+the public all have a role to play. The organization says that the responsibility goes beyond the
+consideration of risk and regulation and should also be aligned with creating value for society in an ethical
+and responsible way. The Framework for Responsible Research and Innovation was created as a guiding
+process to promote creativity and opportunity for science and innovation.26
+25
+“Disability,” World Health Organization, March 7, 2023, https://www.who.int/news-room/fact-sheets/detail/disability-and-health
+26
+“Framework for Responsible Research and Innovation,” UK Research and Innovation, updated March 16, 2023,
+https://www.ukri.org/who-we-are/epsrc/our-policies-and-standards/framework-for-responsible-innovation/
+10.3 • Societal and Global Importance of Emerging Technologies in Information Systems
+399
+
+Key Terms
+augmented reality (AR)
+technology that overlays digital information onto a user's environment in real time
+blockchain
+shared, immutable ledger that facilitates the process of recording transactions and tracking
+assets
+business process outsourcing (BPO)
+service industry that supports outsourcing business service operations
+to third-party vendors
+convergence
+joining of two or more different entities; in the context of computing and technology, into a
+single device or system
+cryptography
+process of hiding or coding information so that only the intended recipient can read it
+emerging technology
+software or hardware that enhances the user experience by obtaining or using
+information and data in new and exciting ways; can be used to describe new technologies or the continuing
+development of existing technologies
+enterprise modeling and integration (EMI)
+process that uses computer-based tools to model the business
+structure and facilitate the connection of its technology, work, and information flow across an organization
+generative AI
+type of artificial intelligence that creates new content or ideas in the form of text, images,
+videos, music, audio, and other forms of data
+information economics
+branch of microeconomics that analyzes how economic decisions and consumer
+behaviors are influenced by knowledge and power
+information systems frontiers
+latest developments in the field of information systems, exploring new
+research areas, innovative applications, and emerging technologies that have the potential to significantly
+impact the field
+machine learning
+use of algorithms and models that enable machines to learn from or make decisions
+about data without specific programming
+mobile computing
+strategies, technologies, products, and services that enable users to access information
+without restricting the user to a single geographic location
+natural language processing
+teaching machines to understand and generate human language; involves
+tasks such as speech recognition, text analysis, and language translation to build this understanding
+quantum computing
+use of quantum mechanics principles to perform complex calculations exponentially
+faster than traditional computers
+robotics
+branch of engineering and computer science that involves the conception, design, building, and
+operation of robots, creating intelligent machines that can assist humans with a variety of tasks
+self checkout (SCO)
+machines enabled with artificial intelligence technology, product images, barcodes, and
+other mechanisms for customers to complete purchases
+virtual reality (VR)
+computer-generated environments that simulate reality and allow users to interact with
+three-dimensional environments
+Summary
+10.1 Defining Emerging Technologies
+•
+Emerging technology is defined as software or hardware that enhances the user experience by obtaining
+or using information and data in new and compelling ways. It includes novel technologies and the
+continuing development of existing technologies.
+•
+Emerging technology can be found in many areas including education, information technology, and AI,
+and continues to have great potential to provide synergies with other technologies of similar or different
+functionalities.
+•
+Characteristics of an emerging technology include its novelty or newness, rapid advancement, and
+disruptive potential.
+•
+Emerging technologies may be developed from a combination of private and/or public entities, such as
+government agencies and educational institutions.
+400
+10 • Key Terms
+Access for free at openstax.org
+
+•
+Blockchain, AI, AR, and VR are all real-world applications of emerging technologies.
+•
+Opportunities, challenges, and risks are apparent with these technologies and should be considered for
+each technology.
+10.2 The Evolving Frontiers of Information Systems
+•
+Frontiers of information systems are the latest developments in the field of information systems.
+•
+IS frontiers explore new research areas, innovative applications, and emerging technologies that have the
+potential to significantly impact the field.
+•
+The convergence of IS frontiers and emerging technologies provides opportunities for two or more of
+these technologies, like AI and data analytics, to converge, which can help organizations analyze vast
+amounts of data in real time and inform decision-making.
+•
+The opportunities, challenges, and risks associated with these information systems continue to evolve as
+they are further integrated for business and personal use.
+10.3 Societal and Global Importance of Emerging Technologies in
+Information Systems
+•
+Emerging technologies can have far-reaching societal and global consequences.
+•
+The emergence of innovative technologies, such as AI-enabled customer service systems in banking, SCO
+machines, e-commerce-enabled websites, and solar power, has revolutionized societal interactions and
+affected worldwide change in economy, culture, public policy, public services, health, and the
+environment.
+•
+Data analytics tools and techniques are being applied in all aspects of society, helping organizations to
+leverage their functionality to support business processes.
+•
+Emerging technologies and innovations are expected to continue to grow globally to include data
+analytics, IoT, and others, with solution and service gains in the banking, financial services, and insurance
+sector, health care, telecommunications, and information technology.
+•
+Research is a precursor to innovation, and it begins with a broad idea and ends with the dissemination of
+findings. The idea, or concept, evolves through specific process steps to where it will be available for
+market use.
+•
+Emerging technologies will continue to evolve and so will be of great importance in research and
+development. As the field continues to evolve, new questions will arise, and researchers will need to work
+together to find answers.
+Review Questions
+1. Which of the following statements about emerging technologies is false?
+a. Emerging technologies only include hardware.
+b. They can be described by their novelty, disruptive potential, and rapid advancement.
+c. Augmented reality, virtual reality, Internet of Things and artificial intelligence can be considered
+emerging technologies.
+d. The progressive nature of these technologies allows for synergies with other technologies.
+2. What term refers to digital money used for online transactions?
+a. artificial intelligence
+b. blockchain
+c. bitcoin
+d. augmented reality
+3. Which statement best describes the convergence of frontiers of information systems and emerging
+technologies?
+a. Connecting Internet of Things and devices creates a disruptive environment and negatively impacts
+user experiences.
+10 • Review Questions
+401
+
+b. It enables organizations to create new opportunities for innovation and growth.
+c. Blockchain combined with augmented reality and virtual reality can lead to profit losses for
+organizations.
+d. The role of data analysts will no longer be needed as the convergence of emerging technologies and
+innovation systems has the potential to accomplish analysis-related tasks.
+4. Frontiers of information systems present several opportunities, challenges, and risks for use. Which of the
+following is an opportunity?
+a. It can increase compatibility between networked systems.
+b. It will lead to a reduction in hardware and software costs, increasing the overall costs of processing
+data.
+c. Data breaches become of increasing concern.
+d. Adherence challenges to regulatory compliance requirements may be at risk.
+5. Which of the following is true about societal and global impacts of emerging technologies?
+a. They only affect small groups.
+b. Emerging technologies have only had a small effect on communities.
+c. Academia is the only area of societal change.
+d. Artificial intelligence–enabled systems are examples of the societal and global impacts of emerging
+technologies.
+6. Why is solar power considered an emerging technology?
+a. It has seen widespread adoption, helping consumers to lower their electricity bills.
+b. Laws have been passed to prevent companies from marketing these products to consumers.
+c. Economies have been negatively impacted by its widespread use.
+d. It has decreased dependency on fossil fuels.
+7. How do data analytics support health-care efforts?
+a. It helps to identify different strands of the flu and its prevalence in communities.
+b. The data collected reduce efficiencies in health care–related supply chains and logistics.
+c. It provides information on health-care resourcing to help organizations identify staffing and financial
+needs.
+d. It helps to initiate targeted marketing campaigns aimed at increasing awareness and disease
+prevention.
+8. Which is not a correct statement about research and innovation in technology?
+a. It has contributed to significant growth in the data analytics and predictive analytics markets.
+b. Global growth in technologies has been experienced in several countries in varying sectors of business.
+c. Research and innovation activities further new findings, technologies, and processes.
+d. It has been funded primarily by governments in all countries.
+9. What is the purpose of research as it relates to technology?
+a. It is the precursor to innovation.
+b. It is a secondary component within the design process.
+c. Research provides the full picture of how the technology is supposed to function.
+d. Research prevents innovation from being adopted by consumers.
+10. Which of the following is a true statement about the process of innovation?
+a. It follows the systematic steps: conception, implementation, marketing, and communication.
+b. Analyzing and recording information is the first step in identifying and selecting resources.
+c. The scientific research process and associated skills are at the core of the research process.
+d. Information must be recorded and communicated immediately.
+11. Which of the following is a false statement as it relates to the Internet of Things in health care?
+402
+10 • Review Questions
+Access for free at openstax.org
+
+a. It enhances patient monitoring capabilities, medication adherence, and overall well-being.
+b. It supports the distribution of medical information.
+c. Patients can use their mobile devices to check the results of medical tests.
+d. It creates challenges in videoconferencing with the medical care team.
+Check Your Understanding Questions
+1. What are the major differences between virtual reality and augmented reality?
+2. What is the U.S. Department of Energy’s relationship to emerging technologies?
+3. Describe how blockchain technology supports the safe use of cryptocurrency.
+4. How do augmented reality and virtual reality enhance user shopping experiences?
+5. What is the difference between emerging technologies and frontiers of information systems?
+6. What are the main goals in using different tools and techniques in data analytics?
+7. What are some opportunities provided by mobile computing technologies?
+8. What is a drawback to not analyzing big data in a timely manner?
+9. What is the relationship of emerging technologies and society from a global perspective?
+10. How are businesses able to leverage e-commerce functions using social media?
+11. How does data analytics support education?
+12. What is the importance of research in innovation?
+13. How do research and innovation lead to emerging technologies?
+14. What is the purpose of fostering collaboration of stakeholders in creating ethical and responsible use of
+emerging technologies?
+15. How does the identification of emerging trends in cybersecurity help to create a cyber-resilient
+information system?
+Application Questions
+1. Discuss the benefits of blockchain technology in health-care organizations.
+2. Watch this Wall Street Journal video (https://openstax.org/r/109BatteryPlant) that highlights an engine
+factory in Germany that is being transformed into a battery plant. Why is so much software development
+involved in the making of electric vehicles? Why might electric vehicle start-ups have a certain advantage
+in writing software? Why might software development be a difficult task for traditional automakers like VW
+to manage?
+3. Discuss how banks have optimized many of their customer service functions with the use of artificial
+intelligence.
+4. Describe how frontiers of information systems technology is used to enact positive social change.
+5. Business process outsourcing has evolved as a major technology-supporting industry. Discuss the
+importance of business process outsourcing and its impact on the industry.
+6. How has the evolution of technology changed telemedicine?
+10 • Check Your Understanding Questions
+403
+
+404
+10 • Application Questions
+Access for free at openstax.org

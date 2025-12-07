@@ -1,0 +1,1695 @@
+CS 4501/6501 Interpretable Machine Learning
+Hanjie Chen, Yangfeng Ji
+Department of Computer Science
+University of Virginia
+{hc9mx, yangfeng}@virginia.edu
+1
+Post-hoc explanations: perturbation-based methods
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+2
+Trade-off
+Black-box 
+Neural Network
+Interpretable GAM
+Limitations
+•
+Ignoring complex 
+feature interactions
+•
+Performance drop
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+3
+Explaining Black-box Model
+Black Box
+Input
+Output
+𝒙
+𝒚
+How to improve model interpretability?
+Model’s inner working and decision making are hidden in the black box 
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+4
+Explaining Black-box Model
+Black Box
+Input
+Output
+𝒙
+𝒚
+How to improve model interpretability?
+Explaining model predictions from the post-hoc manner
+Interpreter
+Post-hoc explanation
+Extracting relationships 
+between input features 
+and the model prediction
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+5
+Post-hoc Explanation
+Input features
+Model prediction
+Importance
+𝑥1
+𝑥2
+𝑥𝑛
+⋯
+𝑦
+𝑎1
+𝑎2
+𝑎𝑛
+Identifying important features
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+6
+Post-hoc Explanation
+• Example 1: tabular data
+-
+Mushroom dataset
+-
+Task: predicting if a mushroom is edible or poisonous
+Feature
+Odor
+gill size
+stalk surface 
+above ring
+Spore print color
+stalk surface 
+below ring
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+7
+Post-hoc Explanation
+• Example 1: tabular data
+-
+Mushroom dataset
+-
+Task: predicting if a mushroom is edible or poisonous
+Feature
+Value
+Odor=foul
+𝑥1 = 1 (true)
+gill size=broad
+𝑥2 = 1
+stalk surface above 
+ring=silky
+𝑥3 = 1
+Spore print 
+color=chocolate
+𝑥4 = 1
+stalk surface below 
+ring=silky
+𝑥5 = 1
+Model
+Prediction
+poisonous
+Explanation
+Input
+Importance
+𝑎1 = 0.26
+𝑎2 = −0.13
+𝑎3 = 0.11
+𝑎4 = 0.08
+𝑎5 = 0.06
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+8
+Post-hoc Explanation
+• Example 1: tabular data
+-
+Mushroom dataset
+-
+Task: predicting if a mushroom is edible or poisonous
+Feature
+Value
+Odor=foul
+𝑥1 = 1 (true)
+gill size=broad
+𝑥2 = 1
+stalk surface above 
+ring=silky
+𝑥3 = 1
+Spore print 
+color=chocolate
+𝑥4 = 1
+stalk surface below 
+ring=silky
+𝑥5 = 1
+Model
+Prediction
+poisonous
+Explanation
+Input
+Importance
+𝑎1 = 0.26
+𝑎2 = −0.13
+𝑎3 = 0.11
+𝑎4 = 0.08
+𝑎5 = 0.06
+(the most 
+important feature)
+(indicating edible)
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+9
+Post-hoc Explanation
+• Example 2: text data
+-
+Movie review
+-
+Task: predicting the sentiment of a text (positive or negative)
+Model
+Prediction
+positive
+Input
+a
+clever
+piece
+of
+cinema
+𝒙1
+𝒙2
+𝒙3
+𝒙4
+𝒙5
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+10
+Post-hoc Explanation
+• Example 2: text data
+-
+Movie review
+-
+Task: predicting the sentiment of a text (positive or negative)
+Model
+Prediction
+positive
+Explanation
+Input
+a
+clever
+piece
+of
+cinema
+𝒙1
+𝒙2
+𝒙3
+𝒙4
+𝒙5
+𝑎1 = 0.11
+𝑎2 = 0.46
+𝑎3 = 0.01
+𝑎4 = −0.02
+𝑎5 = 0.06
+(Word saliency map)
+a
+clever
+piece
+of
+cinema
+Pos
+Neg
+0.5
+0
+−0.5
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+11
+Post-hoc Explanation
+• Example 3: image data
+Task: Object recognition
+Source: https://medium.datadriveninvestor.com/visualizing-neural-networks-using-saliency-maps-in-pytorch-289d8e244ab4
+Feature: a pixel 𝒙𝑖𝑗
+(color, intensity…)
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+12
+Post-hoc Explanation
+• Example 3: image data
+Task: Object recognition
+Prediction: Dog
+Source: https://medium.datadriveninvestor.com/visualizing-neural-networks-using-saliency-maps-in-pytorch-289d8e244ab4
+𝒙𝑖𝑗
+𝒂𝑖𝑗
+Saliency map: the lighter color, 
+the larger value
+Explanation
+Input
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+13
+Post-hoc Explanation
+• Model-agnostic (black-box): not requiring access to model inner working  
+How to learn feature importance?
+Perturbation-based methods
+• Local: explaining model prediction per example 
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+14
+Perturbation-based methods
+• LIME 
+• SHAP
+(Ribeiro et al., KDD, 2016)
+(Lundberg and Lee, NIPS, 2017)
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+15
+LIME
+"Why Should I Trust You?"
+Explaining the Predictions of Any Classifier
+Marco Tulio Ribeiro, Sameer Singh, Carlos Guestrin
+(KDD, 2016)
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+16
+Interpretable Model
+• Linear model
+ℎ𝑦𝒙= 𝒘𝑦𝑇𝒙
+- 𝑤𝑦,𝑗: the contribution of 𝑥𝑗
+-
+Higher weights indicate more important features 
+𝒙∈0, 1 𝑛
+Global interpretation
+Feature
+𝒙𝑣1
+𝒙𝑣2
+𝒙𝑣𝑛
+⋯
+Importance
+⋯
+𝑤𝑦,𝒙𝑣1
+⋯
+𝑤𝑦,𝒙𝑣2
+𝑤𝑦,𝒙𝑣𝑛
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+17
+Interpretable Model
+• Linear model
+ℎ𝑦𝒙= 𝒘𝑦𝑇𝒙
+- 𝑤𝑦,𝑗: the contribution of 𝑥𝑗
+-
+Higher weights indicate more important features 
+𝒙∈0, 1 𝑛
+Global interpretation
+Feature
+𝒙𝑣1
+𝒙𝑣2
+𝒙𝑣𝑛
+⋯
+Importance
+𝑤𝑦,𝒙𝑣1
+⋯
+𝑤𝑦,𝒙𝑣2
+𝑤𝑦,𝒙𝑣𝑛
+⋯
+Logistic regression 
+“It”        “is”       “a”      “fantastic”      “movie”
+𝒘0
+𝒘1
+[Pos]
+[Neg]
+0.89
+0.72
+1.13
+-1.92
+0.34
+0.85
+0.82
+1.05
+2.21
+0.26
+1.16
+5.19
+Prediction: positive
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+18
+Neural Networks
+Global interpretation is not capable of explaining each specific model prediction
+-
+Neural networks can capture complex relationships between features 
+and the response
+-
+The meaning of a feature may vary across different examples
+“good”
+adjective
+Morally excellent
+noun
+Possessions
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+19
+Neural Networks
+Global interpretation is not capable of explaining each specific model prediction
+-
+Neural networks can capture complex relationships between features 
+and the response
+-
+The meaning of a feature may vary across different examples
+“good”
+adjective
+Morally excellent
+noun
+Possessions
+Local interpretation
+Explaining model prediction 
+per example by identifying 
+local feature importance
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+20
+LIME: Local Interpretable Model-Agnostic Explanations
+The way that explains model 
+predictions or the generated 
+explanations are understandable 
+to humans 
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+21
+Idea: using local linear model to approximate neural network for each example 
+•
+Decision boundary of a neural 
+network 𝑓
+•
+Dashed line: local linear model 𝑔
+•
+Blue/pink background represents 
+negative (-) /positive (+) class
+•
+Bold red cross: the instance 𝒙being 
+explained
+𝑔≈𝑓
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+22
+• Interpretable data representations
+Neural network 𝑓
+Linear model 𝑔
+𝒙= 𝒙1, 𝒙2, ⋯, 𝒙𝑛
+𝒙′ = 𝑥′1, 𝑥′2, ⋯, 𝑥′𝑁
+Feature representation 
+𝒙𝑖∈ℝ𝒅is uninterpretable 
+Feature representation 
+𝑥′𝑖∈0, 1 is interpretable 
+-
+𝑛: the number of features in the example
+-
+𝑁: the number of all features
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+23
+• Interpretable data representations
+Neural network 𝑓
+Linear model 𝑔
+𝒙= 𝒙1, 𝒙2, ⋯, 𝒙𝑛
+𝒙′ = 𝑥′1, 𝑥′2, ⋯, 𝑥′𝑁
+Feature representation 
+𝒙𝑖∈ℝ𝒅is uninterpretable 
+Feature representation 
+𝑥′𝑖∈0, 1 is interpretable 
+Image
+Text
+𝒙𝑖: a tensor with three color channels per pixel
+0/1 indicates the absence/presence of a patch of pixels
+𝒙𝑖: a high-dimensional vector (word embedding)
+Image
+Text
+0/1 indicates the absence/presence of a word
+(bag-of-words representation)
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+24
+• Interpretable data representations
+Neural network 𝑓
+Linear model 𝑔
+𝒙= 𝒙1, 𝒙2, ⋯, 𝒙𝑛
+𝒙′ = 𝑥′1, 𝑥′2, ⋯, 𝑥′𝑁
+≈
+Text
+a
+good
+movie
+𝒙
+𝒙1
+𝒙2
+𝒙3
+Vocab
+⋮
+a
+⋮
+good
+⋮
+movie
+⋮
+𝒙′
+⋮(0)
+1
+⋮
+1
+⋮
+1
+⋮
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+25
+• Sampling for local exploration
+Need more samples to fit a local linear model
+𝒙′ = 0, ⋯, 1, ⋯, 1, ⋯, 1, ⋯, 1, ⋯, 0, 1, ⋯, 0 𝑁
+It
+is
+a fantastic movie
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+26
+• Sampling for local exploration
+Need more samples to fit a local linear model
+𝒙′ = 0, ⋯, 1, ⋯, 1, ⋯, 1, ⋯, 1, ⋯, 0, 1, ⋯, 0 𝑁
+It
+is
+a fantastic movie
+Randomly sample nonzero elements
+𝒛1′ = 0, ⋯, 0, ⋯, 0, ⋯, 1, ⋯, 0, ⋯, 0, 1, ⋯, 0 𝑁
+a
+movie
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+27
+• Sampling for local exploration
+Need more samples to fit a local linear model
+𝒙′ = 0, ⋯, 1, ⋯, 1, ⋯, 1, ⋯, 1, ⋯, 0, 1, ⋯, 0 𝑁
+It
+is
+a fantastic movie
+Randomly sample nonzero elements
+𝒛1′ = 0, ⋯, 0, ⋯, 0, ⋯, 1, ⋯, 0, ⋯, 0, 1, ⋯, 0 𝑁
+𝒛2′ = 0, ⋯, 0, ⋯, 0, ⋯, 0, ⋯, 1, ⋯, 0, 1, ⋯, 0 𝑁
+a
+movie
+fantastic movie
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+28
+• Sampling for local exploration
+Need more samples to fit a local linear model
+𝒙′ = 0, ⋯, 1, ⋯, 1, ⋯, 1, ⋯, 1, ⋯, 0, 1, ⋯, 0 𝑁
+It
+is
+a fantastic movie
+Randomly sample nonzero elements
+𝒛1′ = 0, ⋯, 0, ⋯, 0, ⋯, 1, ⋯, 0, ⋯, 0, 1, ⋯, 0 𝑁
+𝒛2′ = 0, ⋯, 0, ⋯, 0, ⋯, 0, ⋯, 1, ⋯, 0, 1, ⋯, 0 𝑁
+a
+movie
+fantastic movie
+𝒛𝑀′ = 0, ⋯, 0, ⋯, 0, ⋯, 0, ⋯, 1, ⋯, 0, 0, ⋯, 0 𝑁
+⋮
+fantastic
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+29
+• Sampling for local exploration
+Need more samples to fit a local linear model
+𝒙′ = 0, ⋯, 1, ⋯, 1, ⋯, 1, ⋯, 1, ⋯, 0, 1, ⋯, 0 𝑁
+It
+is
+a fantastic movie
+Randomly sample nonzero elements
+𝒛1′ = 0, ⋯, 0, ⋯, 0, ⋯, 1, ⋯, 0, ⋯, 0, 1, ⋯, 0 𝑁
+𝒛2′ = 0, ⋯, 0, ⋯, 0, ⋯, 0, ⋯, 1, ⋯, 0, 1, ⋯, 0 𝑁
+a
+movie
+fantastic movie
+𝒛𝑀′ = 0, ⋯, 0, ⋯, 0, ⋯, 0, ⋯, 1, ⋯, 0, 0, ⋯, 0 𝑁
+⋮
+fantastic
+What are the labels of 
+these pseudo examples?
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+30
+• Sampling for local exploration
+Labeling pseudo examples with neural network 𝑓
+𝒛1′
+𝒛2′
+𝒛𝑀′
+⋮
+𝒛1
+𝒛2
+𝒛𝑀
+⋮
+𝑓𝒛1
+𝑓𝒛2
+𝑓𝒛𝑀
+Negative
+Positive
+Positive
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+31
+• Sampling for local exploration
+Labeling pseudo examples with neural network 𝑓
+𝒛1′
+𝒛2′
+𝒛𝑀′
+⋮
+𝒛1
+𝒛2
+𝒛𝑀
+⋮
+𝑓𝒛1
+𝑓𝒛2
+𝑓𝒛𝑀
+Negative
+Positive
+Positive
+a movie
+fantastic movie
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+32
+• Sampling for local exploration
+Penalize noisy examples 
+Distance between 𝒙and 𝒛𝑚
+𝜋𝒙𝒛𝑚= 𝑒(−𝐷𝒙,𝒛𝑚2/𝜎2)
+𝐷: cosine distance (for text), 𝐿2 distance (for image)
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+33
+• Sparse linear explanation
+Fitting a local linear model 
+𝑔(𝒛′) ≈𝑓(𝒛)
+𝒛𝑚′, 𝑓𝒛𝑚
+𝑚=1,⋯,𝑀
+𝑔𝒛′ = 𝒘𝑇𝒛′
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+34
+• Sparse linear explanation
+Fitting a local linear model 
+𝑔(𝒛′) ≈𝑓(𝒛)
+𝒛𝑚′, 𝑓𝒛𝑚
+𝑚=1,⋯,𝑀
+Objective
+min ℒ𝑓, 𝑔
+ℒ𝑓, 𝑔= ෍𝜋𝒙𝒛(𝑓𝒛−𝑔(𝒛′))2
+𝑔𝒛′ = 𝒘𝑇𝒛′
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+35
+• Sparse linear explanation
+Fitting a local linear model 
+𝑔(𝒛′) ≈𝑓(𝒛)
+𝒛𝑚′, 𝑓𝒛𝑚
+𝑚=1,⋯,𝑀
+Objective
+min ℒ𝑓, 𝑔+ Ω(𝑔)
+ℒ𝑓, 𝑔= ෍𝜋𝒙𝒛(𝑓𝒛−𝑔(𝒛′))2
+Restricting complexity (the 
+number of nonzero weights)
+𝑔𝒛′ = 𝒘𝑇𝒛′
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+36
+• Sparse linear explanation
+Extracting feature importance scores
+𝒘ො𝑦𝑇
+-
+ො𝑦: model prediction on the original example
+-
+Local explanation: 𝑤ො𝑦,𝒙1, ⋯, 𝑤ො𝑦,𝒙𝑛
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 36]
+
+37
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 37]
+
+38
+• Explaining each example individually, not the whole dataset (locally faithful)
+• May not work for highly non-linear models
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 38]
+
+39
+• Example: Deep networks for image classification
+Model: Google’s pre-trained Inception neural network
+Top 3 predicted classes
+Electric guitar
+Acoustic guitar
+Labrador
+The explanations enhance trust in the model, as it acts in a reasonable manner
+LIME: Local Interpretable Model-Agnostic Explanations
+
+--------------------------------------------------------------------------------
+[End of Page 39]
+
+40
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 40]
+
+41
+Submodular Pick for Explaining Models
+Single explanation is not 
+sufficient to evaluate and assess 
+trust in the model as a whole
+Providing a global understanding
+of the model by explaining a set 
+of individual instances
+
+--------------------------------------------------------------------------------
+[End of Page 41]
+
+42
+Submodular Pick for Explaining Models
+Single explanation is not 
+sufficient to evaluate and assess 
+trust in the model as a whole
+Providing a global understanding
+of the model by explaining a set 
+of individual instances
+How to select these 
+instances judiciously?
+
+--------------------------------------------------------------------------------
+[End of Page 42]
+
+43
+Submodular Pick for Explaining Models
+•
+Budget 𝐵: the number of explanations users are willing to look at in order to understand a model
+A set of instances 𝑋
+select
+𝐵instances (diverse, representative)
+
+--------------------------------------------------------------------------------
+[End of Page 43]
+
+44
+Submodular Pick for Explaining Models
+•
+Budget 𝐵: the number of explanations users are willing to look at in order to understand a model
+A set of instances 𝑋
+select
+𝐵instances (diverse, representative)
+Submodular pick (SP) algorithm
+𝑤1,1 𝑤1,2
+𝑤2,2 𝑤2,3
+𝑤3,2 𝑤3,3
+𝑤4,2
+𝑤4,4
+𝑤5,4 𝑤5,5
+𝒙(1)
+Explanation matrix 𝑊
+𝒙(2)
+𝒙(3)
+𝒙(4)
+𝒙(5)
+𝑥1
+𝑥2
+𝑥3
+𝑥4
+𝑥5
+-
+Each row represents an instance
+-
+Each column represents a feature
+-
+Each value represents a local importance
+𝒙(1) contains two features
+
+--------------------------------------------------------------------------------
+[End of Page 44]
+
+45
+Submodular Pick for Explaining Models
+•
+Budget 𝐵: the number of explanations users are willing to look at in order to understand a model
+A set of instances 𝑋
+select
+𝐵instances (diverse, representative)
+Submodular pick (SP) algorithm
+𝑤1,1 𝑤1,2
+𝑤2,2 𝑤2,3
+𝑤3,2 𝑤3,3
+𝑤4,2
+𝑤4,4
+𝑤5,4 𝑤5,5
+𝒙(1)
+Explanation matrix 𝑊
+𝒙(2)
+𝒙(3)
+𝒙(4)
+𝒙(5)
+𝑥1
+𝑥2
+𝑥3
+𝑥4
+𝑥5
+Select instances that cover 
+important features (𝑥2)
+𝐼2: global importance of 𝑥2
+
+--------------------------------------------------------------------------------
+[End of Page 45]
+
+46
+Submodular Pick for Explaining Models
+•
+Budget 𝐵: the number of explanations users are willing to look at in order to understand a model
+A set of instances 𝑋
+select
+𝐵instances (diverse, representative)
+Submodular pick (SP) algorithm
+𝑤1,1 𝑤1,2
+𝑤2,2 𝑤2,3
+𝑤3,2 𝑤3,3
+𝑤4,2
+𝑤4,4
+𝑤5,4 𝑤5,5
+𝒙(1)
+Explanation matrix 𝑊
+𝒙(2)
+𝒙(3)
+𝒙(4)
+𝒙(5)
+𝑥1
+𝑥2
+𝑥3
+𝑥4
+𝑥5
+Select instances that cover 
+important features (𝑥2)
+Avoid selecting instances with similar 
+explanations (redundant features)
+If 𝒙(2) is selected, 
+there is no need to 
+select 𝒙(3)
+
+--------------------------------------------------------------------------------
+[End of Page 46]
+
+47
+Submodular Pick for Explaining Models
+•
+Budget 𝐵: the number of explanations users are willing to look at in order to understand a model
+A set of instances 𝑋
+select
+𝐵instances (diverse, representative)
+Submodular pick (SP) algorithm
+𝑤1,1 𝑤1,2
+𝑤2,2 𝑤2,3
+𝑤3,2 𝑤3,3
+𝑤4,2
+𝑤4,4
+𝑤5,4 𝑤5,5
+𝒙(1)
+Explanation matrix 𝑊
+𝒙(2)
+𝒙(3)
+𝒙(4)
+𝒙(5)
+𝑥1
+𝑥2
+𝑥3
+𝑥4
+𝑥5
+Select instances that cover 
+important features (𝑥2)
+Avoid selecting instances with similar 
+explanations (redundant features)
+Select less instances, while covering 
+more features (𝒙(2) and 𝒙(5))
+
+--------------------------------------------------------------------------------
+[End of Page 47]
+
+48
+Submodular Pick for Explaining Models
+Submodular pick (SP) algorithm
+Algorithm Submodular pick (SP) algorithm
+Require: Instances 𝑋, Budget 𝐵
+for all 𝒙(𝑖) in 𝑋do
+𝒘(𝑖) ←𝐿𝐼𝑀𝐸(𝒙(𝑖))
+Construct the explanation matrix
+
+--------------------------------------------------------------------------------
+[End of Page 48]
+
+49
+Submodular Pick for Explaining Models
+Submodular pick (SP) algorithm
+Algorithm Submodular pick (SP) algorithm
+Require: Instances 𝑋, Budget 𝐵
+for all 𝒙(𝑖) in 𝑋do
+𝒘(𝑖) ←𝐿𝐼𝑀𝐸(𝒙(𝑖))
+Construct the explanation matrix
+for 𝑗∈1, ⋯, 𝑁do
+𝐼𝑗←
+෍
+𝑖=1
+𝑋
+𝑤𝑖,𝑗
+Compute global feature importance
+
+--------------------------------------------------------------------------------
+[End of Page 49]
+
+50
+Submodular Pick for Explaining Models
+Submodular pick (SP) algorithm
+Algorithm Submodular pick (SP) algorithm
+Require: Instances 𝑋, Budget 𝐵
+for all 𝒙(𝑖) in 𝑋do
+𝒘(𝑖) ←𝐿𝐼𝑀𝐸(𝒙(𝑖))
+Construct the explanation matrix
+for 𝑗∈1, ⋯, 𝑁do
+𝐼𝑗←
+෍
+𝑖=1
+𝑋
+𝑤𝑖,𝑗
+Compute global feature importance
+𝑉←{}
+while 𝑉< 𝐵do
+𝑉←𝑉⋃𝒙(𝑖∗)
+Return 𝑉
+𝑖∗= argmax
+𝑖
+𝑐𝑉⋃𝒙𝑖, 𝑊, 𝐼
+c 𝑉, 𝑊, 𝐼= σ𝑗=1
+𝑁
+1 ∃𝑖∈𝑉:𝑤𝑖,𝑗>0 𝐼𝑗
+Greedily add examples that maximize the coverage gain 
+The coverage computes the total global importance of the 
+features that appear in at least one instance in a set V
+
+--------------------------------------------------------------------------------
+[End of Page 50]
+
+51
+SP-LIME
+• Compute global feature importance based on local feature importance 
+from LIME
+• Provide a global understanding of the model by selecting a set of 
+representative instances
+
+--------------------------------------------------------------------------------
+[End of Page 51]
+
+52
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 52]
+
+53
+Perturbation-based methods
+• LIME 
+• SHAP
+(Ribeiro et al., KDD, 2016)
+(Lundberg and Lee, NIPS, 2017)
+
+--------------------------------------------------------------------------------
+[End of Page 53]
+
+54
+Black Box
+Input
+Output
+𝒙
+𝑦
+Explaining Black-box Model
+𝑥1
+𝑥2
+𝑥𝑛
+⋯
+(Prediction probability 𝑃𝑦)
+
+--------------------------------------------------------------------------------
+[End of Page 54]
+
+55
+Black Box
+Input
+Output
+𝒙
+𝑦
+Explaining Black-box Model
+𝑥1
+𝑥2
+𝑥𝑛
+⋯
+(Prediction probability 𝑃𝑦)
+𝑥1
+𝑥2
+𝑥𝑛
+⋯
+𝑃𝑦′
+Importance of 𝑥𝑖
+𝑃𝑦−𝑃𝑦′
+
+--------------------------------------------------------------------------------
+[End of Page 55]
+
+56
+Black Box
+Input
+Output
+𝒙
+𝑦
+Explaining Black-box Model
+𝑥1
+𝑥2
+𝑥𝑛
+⋯
+(Prediction probability 𝑃𝑦)
+𝑥1
+𝑥2
+𝑥𝑛
+⋯
+𝑃𝑦′
+Importance of 𝑥𝑖
+𝑃𝑦−𝑃𝑦′
+𝑥1
+𝑥2
+𝑥𝑛
+⋯
+𝑃𝑦′′
+𝑃𝑦−𝑃𝑦′′
+
+--------------------------------------------------------------------------------
+[End of Page 56]
+
+57
+Black Box
+Input
+Output
+𝒙
+𝑦
+Explaining Black-box Model
+𝑥1
+𝑥2
+𝑥𝑛
+⋯
+(Prediction probability 𝑃𝑦)
+𝑥1
+𝑥2
+𝑥𝑛
+⋯
+𝑃𝑦′
+Importance of 𝑥𝑖
+𝑃𝑦−𝑃𝑦′
+𝑥1
+𝑥2
+𝑥𝑛
+⋯
+𝑃𝑦′′
+𝑃𝑦−𝑃𝑦′′
+⋯
+⋯
+⋯
+[Leave-one-out, (Li et al., 2016)]
+
+--------------------------------------------------------------------------------
+[End of Page 57]
+
+58
+Leave-one-out
+• Sentiment classification
+Text
+Confidence
+Word importance
+The movie is interesting 
+0.98
+The movie is interesting 
+0.95
+The
+The movie is interesting 
+0.87
+movie
+The movie is interesting 
+0.96
+is
+The movie is interesting 
+0.61
+interesting
+Model prediction: positive
+0.03
+0.11
+0.02
+0.37
+
+--------------------------------------------------------------------------------
+[End of Page 58]
+
+59
+• Leave ONE feature out at each step 
+Text
+Confidence
+Word importance
+The movie is interesting and impressive  
+0.97
+0.95
+0.96
+interesting
+The movie is interesting and impressive  
+The movie is interesting and impressive  
+impressive
+Leave-one-out
+Feature importance may be misleading
+0.02
+0.01
+
+--------------------------------------------------------------------------------
+[End of Page 59]
+
+60
+• Leave ONE feature out at each step 
+Text
+Confidence
+Word importance
+The movie is interesting and impressive  
+0.97
+0.95
+0.96
+interesting
+The movie is interesting and impressive  
+The movie is interesting and impressive  
+impressive
+Leave-one-out
+Feature importance may be misleading
+0.02
+0.01
+Need a better way to quantify 
+feature importance
+
+--------------------------------------------------------------------------------
+[End of Page 60]
+
+61
+SHAP
+A unified approach to interpreting model predictions
+Scott M. Lundberg, Su-In Lee
+(NIPS, 2017)
+
+--------------------------------------------------------------------------------
+[End of Page 61]
+
+62
+SHAP
+• Shapley value 
+[Shapley, 1953]
+Game
+Payoff
+Player 1
+Player 2
+Player 3
+Player 4
+
+--------------------------------------------------------------------------------
+[End of Page 62]
+
+63
+SHAP
+• Shapley value 
+[Shapley, 1953]
+Game
+Payoff
+Player 1
+Player 2
+Player 3
+Player 4
+?
+
+--------------------------------------------------------------------------------
+[End of Page 63]
+
+64
+SHAP
+• Shapley value 
+[Shapley, 1953]
+Coalitions
+Payoff
+⋯
+(23)
+𝑃1
+𝑃2
+𝑃3
+𝑃4
+𝑃5
+⋯
+
+--------------------------------------------------------------------------------
+[End of Page 64]
+
+65
+SHAP
+• Shapley value 
+[Shapley, 1953]
+Coalitions
+⋯
+(23)
+𝑃1
+𝑃2
+𝑃3
+𝑃4
+𝑃5
+⋯
+𝑃1′
+𝑃2′
+𝑃3′
+𝑃4′
+𝑃5′
+Payoff
+
+--------------------------------------------------------------------------------
+[End of Page 65]
+
+66
+SHAP
+• Shapley value 
+[Shapley, 1953]
+Coalitions
+⋯
+(23)
+𝑃1
+𝑃2
+𝑃3
+𝑃4
+𝑃5
+⋯
+𝑃1′
+𝑃2′
+𝑃3′
+𝑃4′
+𝑃5′
+Payoff
+Marginal contribution
+−
+−
+−
+−
+−
+∆𝑃1
+∆𝑃2
+∆𝑃3
+∆𝑃4
+∆𝑃5
+
+--------------------------------------------------------------------------------
+[End of Page 66]
+
+67
+SHAP
+• Shapley value 
+[Shapley, 1953]
+Coalitions
+⋯
+𝑃1
+𝑃2
+𝑃3
+𝑃4
+𝑃5
+⋯
+𝑃1′
+𝑃2′
+𝑃3′
+𝑃4′
+𝑃5′
+Payoff
+Marginal contribution
+−
+−
+−
+−
+−
+∆𝑃1
+∆𝑃2
+∆𝑃3
+∆𝑃4
+∆𝑃5
+Contribution= σ ∆𝑃𝑖
+(23)
+
+--------------------------------------------------------------------------------
+[End of Page 67]
+
+68
+SHAP
+• Shapley value 
+[Shapley, 1953]
+Game
+Payoff
+Player 1
+Player 2
+Player 3
+Player 4
+
+--------------------------------------------------------------------------------
+[End of Page 68]
+
+69
+SHAP
+• Shapley value 
+[Shapley, 1953]
+Model 𝑓
+Prediction
+𝑥1
+𝑥2
+𝑥3
+𝑥4
+𝜙1
+𝜙2
+𝜙3
+𝜙4
+
+--------------------------------------------------------------------------------
+[End of Page 69]
+
+70
+SHAP
+• Shapley value 
+[Shapley, 1953]
+𝜙𝑖=
+෍
+𝑆⊆𝐹\{𝑖}
+𝑆!
+𝐹−𝑆−1 !
+𝐹!
+𝑓𝑆∪{𝑖} 𝑥𝑆∪{𝑖} −𝑓𝑆𝑥𝑆
+𝐹
+𝑆
+𝑖
+1
+⋯
+Marginal contribution of 𝑥𝑖given 𝑆
+𝐹\{𝑖}
+2
+3
+4
+
+--------------------------------------------------------------------------------
+[End of Page 70]
+
+71
+SHAP
+• Shapley value 
+[Shapley, 1953]
+Weighted by the permutations of features
+𝐹
+𝑆
+𝑖
+1
+⋯
+𝐹\{𝑖}
+2
+3
+4
+𝜙𝑖=
+෍
+𝑆⊆𝐹\{𝑖}
+𝑆!
+𝐹−𝑆−1 !
+𝐹!
+𝑓𝑆∪{𝑖} 𝑥𝑆∪{𝑖} −𝑓𝑆𝑥𝑆
+𝐹!
+𝐹−𝑆−1 !
+𝑆!
+
+--------------------------------------------------------------------------------
+[End of Page 71]
+
+72
+SHAP
+• SHapley Additive exPlanation (SHAP) 
+𝑔𝑧′ ≈𝑓ℎ𝑥𝑧′
+𝑔𝑧′ = 𝜙0 + ෍
+𝑖=1
+𝑁
+𝜙𝑖𝑧𝑖′
+𝑧′ ≈𝑥′
+𝑥= ℎ𝑥𝑥′
+Interpretable input
+Additive feature attribution method
+Original input
+
+--------------------------------------------------------------------------------
+[End of Page 72]
+
+73
+SHAP
+• SHapley Additive exPlanation (SHAP) 
+𝑔𝑧′ ≈𝑓ℎ𝑥𝑧′
+𝑔𝑧′ = 𝜙0 + ෍
+𝑖=1
+𝑁
+𝜙𝑖𝑧𝑖′
+𝑧′ ≈𝑥′
+𝑥= ℎ𝑥𝑥′
+Interpretable input
+Additive feature attribution method
+Original input
+LIME is a special case, but not optimal
+𝑔𝑧′ = ෍
+𝑖=1
+𝑁
+𝑤𝑖𝑧𝑖′
+
+--------------------------------------------------------------------------------
+[End of Page 73]
+
+74
+SHAP
+• SHapley Additive exPlanation (SHAP) 
+𝑔𝑧′ ≈𝑓ℎ𝑥𝑧′
+𝑔𝑧′ = 𝜙0 + ෍
+𝑖=1
+𝑁
+𝜙𝑖𝑧𝑖′
+𝑧′ ≈𝑥′
+𝑥= ℎ𝑥𝑥′
+Interpretable input
+Additive feature attribution method
+Original input
+Property 1: Local accuracy
+𝑓𝑥= 𝑔𝑥′ = 𝜙0 + ෍
+𝑖=1
+𝑁
+𝜙𝑖𝑥𝑖′
+𝜙0 = ℎ𝑥0
+
+--------------------------------------------------------------------------------
+[End of Page 74]
+
+75
+SHAP
+• SHapley Additive exPlanation (SHAP) 
+𝑔𝑧′ ≈𝑓ℎ𝑥𝑧′
+𝑔𝑧′ = 𝜙0 + ෍
+𝑖=1
+𝑁
+𝜙𝑖𝑧𝑖′
+𝑧′ ≈𝑥′
+𝑥= ℎ𝑥𝑥′
+Interpretable input
+Additive feature attribution method
+Original input
+Property 2: Missingness
+𝑥𝑖
+′ = 0
+⟹
+𝜙𝑖= 0
+Missingness constrains features missing in the 
+original input to have no attributed impact
+
+--------------------------------------------------------------------------------
+[End of Page 75]
+
+76
+SHAP
+• SHapley Additive exPlanation (SHAP) 
+𝑔𝑧′ ≈𝑓ℎ𝑥𝑧′
+𝑔𝑧′ = 𝜙0 + ෍
+𝑖=1
+𝑁
+𝜙𝑖𝑧𝑖′
+𝑧′ ≈𝑥′
+𝑥= ℎ𝑥𝑥′
+Interpretable input
+Additive feature attribution method
+Original input
+Property 3: Consistency
+For any two models 𝑓1 and 𝑓2, if 𝑓1 ℎ𝑥𝑧′
+−𝑓1 ℎ𝑥𝑧′\𝑖
+≥𝑓2 ℎ𝑥𝑧′
+−𝑓2 ℎ𝑥𝑧′\𝑖
+𝑧𝑖
+′ = 0
+for all inputs 𝑧′ ∈0, 1 𝑁, then 𝜙𝑖𝑓1, 𝑥≥𝜙𝑖𝑓2, 𝑥
+
+--------------------------------------------------------------------------------
+[End of Page 76]
+
+77
+SHAP
+• SHapley Additive exPlanation (SHAP) 
+𝑔𝑧′ ≈𝑓ℎ𝑥𝑧′
+𝑔𝑧′ = 𝜙0 + ෍
+𝑖=1
+𝑁
+𝜙𝑖𝑧𝑖′
+𝑧′ ≈𝑥′
+𝑥= ℎ𝑥𝑥′
+Interpretable input
+Additive feature attribution method
+Original input
+Only Shapley value satisfies all the three properties
+𝜙𝑖𝑓, 𝑥= ෍
+𝑧′⊆𝑥′
+𝑧′ ! 𝑁−𝑧′ −1 !
+𝑁!
+𝑓ℎ𝑥𝑧′
+−𝑓ℎ𝑥𝑧′\𝑖
+Contains a subset of non-zero entries in 𝑥′
+
+--------------------------------------------------------------------------------
+[End of Page 77]
+
+78
+SHAP
+𝜙𝑖𝑓, 𝑥= ෍
+𝑧′⊆𝑥′
+𝑧′ ! 𝑁−𝑧′ −1 !
+𝑁!
+𝑓ℎ𝑥𝑧′
+−𝑓ℎ𝑥𝑧′\𝑖
+Challenge
+Computational complexity
+𝑂(2𝑛)
+• SHapley Additive exPlanation (SHAP) 
+
+--------------------------------------------------------------------------------
+[End of Page 78]
+
+79
+SHAP
+• SHapley Additive exPlanation (SHAP) 
+Model-agnostic approximations
+Model-type-specific approximations
+-
+Shapley sampling values
+-
+Kernel SHAP
+-
+Linear SHAP
+-
+Low-Order SHAP
+-
+Max SHAP
+-
+Deep SHAP
+
+--------------------------------------------------------------------------------
+[End of Page 79]
+
+80
+SHAP
+• SHapley Additive exPlanation (SHAP) 
+Model-agnostic approximations
+Model-type-specific approximations
+-
+Shapley sampling values
+-
+Kernel SHAP
+-
+Linear SHAP
+-
+Low-Order SHAP
+-
+Max SHAP
+-
+Deep SHAP
+Initialize the number of samples 𝑀
+𝜙𝑖⟵0
+for 𝑚∈1, ⋯, 𝑀do
+𝜙𝑖⟵𝜙𝑖+ 𝑧′ ! 𝑁−𝑧′ −1 !
+𝑁!
+𝑓ℎ𝑥𝑧′
+−𝑓ℎ𝑥𝑧′\𝑖
+Sample 𝑧′ ⊆𝑥′
+
+--------------------------------------------------------------------------------
+[End of Page 80]
+
+81
+SHAP
+• SHapley Additive exPlanation (SHAP) 
+Model-agnostic approximations
+Model-type-specific approximations
+-
+Shapley sampling values
+-
+Kernel SHAP
+-
+Linear SHAP
+-
+Low-Order SHAP
+-
+Max SHAP
+-
+Deep SHAP
+Ω 𝑔= 0
+𝜋𝑥′ 𝑧′ =
+(𝑁−1)
+(𝑁𝑐ℎ𝑜𝑜𝑠𝑒𝑧′ ) 𝑧′ (𝑁−𝑧′ )
+ℒ𝑓, 𝑔= ෍𝜋𝑥′ 𝑧′ (𝑓ℎ𝑥𝑧′
+−𝑔(𝑧′))2
+Linear LIME + Shapley values
+The solutions would be consistent with properties 1-3
+
+--------------------------------------------------------------------------------
+[End of Page 81]
+
+82
+SHAP
+• SHapley Additive exPlanation (SHAP) 
+Model-agnostic approximations
+Model-type-specific approximations
+-
+Shapley sampling values
+-
+Kernel SHAP
+-
+Linear SHAP
+-
+Low-Order SHAP
+-
+Max SHAP
+-
+Deep SHAP
+Faster model-specific methods
+SHAP values can be approximated directly 
+from the model’s weight coefficients
+
+--------------------------------------------------------------------------------
+[End of Page 82]
+
+83
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 83]
+
+84
+Reference
+•
+Ribeiro, Marco Tulio, Sameer Singh, and Carlos Guestrin. "" Why should i trust you?" Explaining the predictions 
+of any classifier." Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and 
+data mining. 2016.
+•
+Lundberg, Scott M., and Su-In Lee. "A unified approach to interpreting model predictions." Proceedings of the 
+31st international conference on neural information processing systems. 2017.
+•
+Li, Jiwei, Will Monroe, and Dan Jurafsky. "Understanding neural networks through representation 
+erasure." arXiv preprint arXiv:1612.08220 (2016).
+•
+Lloyd S Shapley. 1953. A value for n-person games. Contributions to the Theory of Games, 2(28).
+
+--------------------------------------------------------------------------------
+[End of Page 84]

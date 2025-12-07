@@ -1,0 +1,284 @@
+Chapter 5
+Experiments and Results
+In this chapter, we will discuss the results we have obtained from evaluating our proposed
+methodology of KG4QG. At first, we discuss about the HotpotQA dataset which is used in
+our research. Then we discuss the performance of our model and the results based on the
+evaluation metrics.
+5.1
+Dataset
+In this research, we have utilized HotpotQA (Yang et al., 2018) dataset for training and
+evaluating our model. This dataset is consists of 113k samples which are collected from
+Wikipedia articles. This dataset was generated for the purpose to train question-answering
+(QA) systems to perform complex reasoning and provide explanations to answers. From
+the dataset, each sample consists of the following information:
+• Unique ID for each sample
+• Ten context paragraphs with title
+• Reference Question
+• Question Type (Bridge or Comparison)
+• Question Difficulty
+• Supporting Sentences
+49
+
+5.1. DATASET
+In the HotpotQA dataset, there are mainly two types of questions based on multi-hop rea-
+soning tasks: bridge and comparison.
+- Bridge: A bridge-type question links two remotely located supporting facts by utilizing the
+step-specific sub-question provided by the controller.
+- Comparison: A comparison-type question involves comparing two or more elements, entities,
+or concepts to highlight similarities and differences between them.
+(a) Bridge
+(b) Comparison
+Figure 5.1: Answer Retrieval Path Types for Multi-hop Questions(Samadi and Rafiei,
+2023).
+Below Figures 5.2 and 5.3 are one of each instance for bridge-type and comparison-
+type questions sample from HotpotQA dataset. For a bridge-type question, it is required to
+integrate separate information from different contexts. The question of Figure 5.2 can be
+classified as bridge-type question as it is required to connect different information from two
+contexts which is described below.
+- Context 1 provides the information about Bailey Willams that he made his debut
+against Melbourne in round 82,016 at the Melbourne Cricket Ground.
+- Context 2 states that the Melbourne Cricket Ground (MCG), also known simply as
+”The G”.
+To get the answer of the reference question ”What is the nickname of the stadium where
+Bailey Willams played his debut AFL football game?”, it is required to bridge the above
+two information. The reasoning steps are given below.
+50
+
+5.1. DATASET
+- From Context 1, it is required to find the cricket ground name from where Bailey
+Willams debuted.
+- From Context 2, it is essential to find the nickname of the cricket ground where Bailey
+Willams debuted.
+Figure 5.2: Bridge Type Question Sample.
+As with bridge-type questions, it is essential to integrate information from different con-
+texts. In this example we need to integrate information from above two contexts. From
+Context 1, we get the information that at the Melbourne Cricket Ground, Bailey Williams
+had his debut and from Context 2, we can see that Melbourne Cricket Ground is sim-
+51
+
+5.1. DATASET
+ply known as the G. By integrating these information, we ensure multi-hop reasoning and
+can get the answer of this question. The question of Figure 5.3 can be classified as a
+Figure 5.3: Comparison Type Question Sample.
+comparison-type question as in comparison type question it is required to gather informa-
+tion from different contexts and compare any property that both of the contexts share. From
+this sample:
+- Context 1 provides the information that the Con Mine entered production in 1938.
+- Context 2 provides the information that for the Giant Mine the true extent of the gold
+deposits were not known until 1944.
+52
+
+5.1. DATASET
+To get the answer of the reference question ”Which mine started production sooner, the Con
+Mine or the Giant Mine?”, it is required to do comparison of the above two information.
+The reasoning path is given below.
+- From Context 1, it is required to find the time when the Con Mine started production.
+- From Context 2, it is needed to be understood the Giant Mine started mine production
+before or after the Con Mine.
+As the comparison-type question, it is required to do comparison between information from
+different contexts. In this sample we need to do comparsion between above two contexts.
+From Context 1, we get the information that the Con Mine started mine production in
+1938. On the other hand, from Context 2 we can see that the Giant Mine started mine
+production after 1938 as the true extent of the gold deposits were not known until 1944.
+After comparing these information the multi-hop reasoning is ensured and we can get the
+answer of this question.
+5.1.1
+Data Cleaning
+For data cleaning, we followed the path according to Emerson and Chali (2023a). In
+the HotpotQA dataset, each sample consists of 10 paragraphs where only two paragraphs
+are supportive paragraphs containing the actual evidence which are needed to answer the
+question, while the other eight paragraphs are distractor paragraphs that are not relevant to
+answer the question, which we discard from the each sample. We have also discarded sup-
+porting sentence information from the dataset so the model can learn to generate questions
+from the complete input paragraphs. We have removed samples from the dataset which is
+containing yes or no answer. According to Su et al. (2020), it is important to filter out all
+yes/no answer based data samples from the HotpotQA dataset when focusing on the multi-
+hop ability as yes/no answer based questions are easier and requires less reasoning. After
+removing those samples we have ensured complex multi-hop reasoning in our dataset. Af-
+ter removing those samples, we have total 91,911 samples where the number of bridge type
+53
+
+5.2. EVALUATION RESULTS AND DISCUSSION
+question samples is 78,909 and the number of comparison type question samples is 13,002.
+After filtering out the dataset, we have partitioned the dataset into three parts: training
+dataset, validation dataset, and testing dataset. The training dataset is consists of 70% of
+the whole dataset where validation dataset and testing dataset each consists of 15% of the
+whole dataset. Before splitting, we shuffled the dataset randomly so training, testing and
+validation datasets each contain a balanced distribution on sample question types. The pur-
+pose of creating training, testing, and validation datasets are given below.
+• Training dataset: To adjust the parameters of the model to minimize the error based
+on this data.
+• Validation dataset: To tune hyperparameters and prevent overfitting.
+• Testing dataset: To evaluate the model after training to see how the model performs
+on unseen data.
+Table 5.1: HotpotQA: Train, Validation, and Test Distribution.
+Training
+Validation
+Test
+No of Samples
+64337
+13787
+13787
+5.2
+Evaluation Results and Discussion
+To evaluate the performance of KG4QG, we have utilized automated evaluation metrics.
+We have compared the generated questions from the model with the reference questions of
+the test dataset based on the evaluation metrics. The used evaluation metrics are BLEU
+(Papineni et al., 2002), ROUGE (Lin, 2004),METEOR (Lavie and Agarwal, 2007), and
+BERTScore (Zhang et al., 2020). These metrics are chosen based on their widespread
+utilization in the question generation task. Evaluation of our model based on these metrics
+provides us the path to compare the effectiveness of KG4QG to previous research works
+on multi-hop question generation. The performance of our model KG4QG is shown in
+54
+
+5.2. EVALUATION RESULTS AND DISCUSSION
+Table 5.2 based on the evaluation metrics of BLEU, ROUGE, and METEOR. Based on
+BERTScore, the model performance is shown in Table 5.3.
+Table 5.2: Performance of KG4QG model.
+BLEU-
+1
+BLEU-
+2
+BLEU-
+3
+BLEU-
+4
+ROUGE-
+1
+ROUGE-
+2
+ROUGE-
+L
+METEOR
+T5
+backbone
+47.08
+39.11
+36.32
+34.27
+43.42
+33.88
+41.48
+40.41
+BART
+backbone
+53.38
+44.81
+41.24
+38.56
+49.58
+38.05
+47.11
+46.08
+Table 5.3: Performance of KG4QG model based on BERT-Score.
+Precison
+Recall
+F1-Score
+T5 backbone
+89.70%
+89.40%
+89.54%
+BART backbone
+91.20%
+90.73%
+90.95%
+Table 5.4: Performance Comparison between KG4QG and Existing Models.
+Model
+BLEU-1
+BLEU-2
+BLEU-3
+BLEU-4
+ROUGE-L
+METEOR
+MulQG
+40.15
+26.71
+19.73
+15.20
+35.30
+20.51
+CQG
+49.71
+37.04
+29.93
+25.09
+41.83
+27.45
+Transformer Based
+42.13
+30.44
+23.84
+19.42
+39.26
+22.78
+GNET-QG
+49.72
+38.95
+32.88
+27.93
+40.25
+49.87
+TASE-CoT
+45.89
+34.06
+27.11
+22.37
+39.68
+23.39
+DCQG
+-
+-
+21.07
+15.26
+-
+19.99
+KGEL
+41.93
+28.04
+20.83
+16.13
+19.70
+35.28
+MultiFactor
+54.17
+41.50
+33.74
+28.22
+28.60
+44.17
+KG4QG(T5 Backbone)
+47.08
+39.11
+36.32
+34.27
+41.48
+40.41
+KG4QG(BART Backbone)
+53.38
+44.81
+41.24
+38.56
+47.11
+46.08
+To demonstrate the efficiency of our model KG4QG with BART backbone and T5 back-
+bone, we performed a comparison with existing models on multi-hop question generation
+including MulQG by Su et al. (2020), CQG by Fei et al. (2022), Transformer Based ap-
+proach by Emerson and Chali (2023a), GNET-QG by Jamshidi and Chali (2025), TASE-
+CoT by Lin et al. (2024), DCQG by Cheng et al. (2021), KGEL by Cao et al. (2023) and
+MultiFactor by Xia et al. (2023). MulQG, GNET-QG, DCQG, and KGEL models are cho-
+sen for comparison because these models are graph based approaches where KGEL is a
+55
+
+5.2. EVALUATION RESULTS AND DISCUSSION
+knowlegde graph approach. Also, we have compared KG4QG with CQG, TASE-CoT, and
+Transformer based approaches as they achieved significant results in evaluation metrics.
+From Table 5.4, we can see that our model KG4QG outperforms across all metrics compar-
+ing the existing models expect on BLEU-1 where the difference with MultiFactor is 0.79
+and METEOR where the difference with GNET-QG is 3.79. Our model KG4QG outper-
+forms other methodologies because it combines the strengths of structured and unstructured
+data representations. Text embedding captures contextual information, whereas knowledge
+graph embedding encodes explicit relationships. As multi-hop question generation requires
+reasoning over multiple information, a knowledge graph properly represents the connec-
+tions between facts. Contextual information from text and explicit relationships from the
+knowledge graph are generating high-quality, relevant multi-hop questions.
+56

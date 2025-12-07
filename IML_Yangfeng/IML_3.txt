@@ -1,0 +1,1781 @@
+CS 4501/6501 Interpretable Machine Learning
+Hanjie Chen, Yangfeng Ji
+Department of Computer Science
+University of Virginia
+{hc9mx, yangfeng}@virginia.edu
+1
+Interpretable Generalized Additive Models 
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+2
+Interpretability
+•
+Three parameters (𝑤1, 𝑤2, 𝑤3)
+•
+𝑦′ = 𝑤1𝑥1 + 𝑤2𝑥2 + 𝑤3𝑥3
+•
+Contributions:
+𝑥1: 𝑤1𝑥1
+𝑥2: 𝑤2𝑥2
+𝑥3: 𝑤3𝑥3
+•
+Millions of parameters
+•
+𝒚′ = 𝑓𝒘𝒙(complex transformations)
+•
+Model decision-making and feature 
+attributions are unclear
+Bad performance
+Good interpretability 
+Good performance 
+Bad interpretability 
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+3
+Trade-off
+𝑥1
+𝑥2
+𝑥𝑛
+⋯
+Input Layer
+Hidden Layers
+Output Layer
+⋯
+⋯
+⋯
+𝑦
+The information of input features is mixed
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+4
+Trade-off
+𝑥1
+𝑥2
+𝑥𝑛
+⋯
+Input Layer
+Hidden Layers
+Output Layer
++
+⋯
+⋯
+⋯
+⋯
+𝑦
+Keep the information of individual features “locally”
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+5
+Trade-off
+Interpretability
+𝑥1
+𝑥2
+𝑥𝑛
+⋯
+Input Layer
+Hidden Layers
+Output Layer
++
+⋯
+⋯
+⋯
+⋯
+𝑦
+Keep the information of individual features “locally”
+Users can understand 
+the contributions of 
+individual features
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+6
+Trade-off
+Generalized additive models (GAMs)
+𝑔𝑦= 𝑓1 𝑥1 + 𝑓2 𝑥2 + ⋯+ 𝑓𝑛𝑥𝑛
+• Permit complex relationships between individual features (𝑥𝑖) and the 
+target (𝑔𝑦)
+• Exclude complex interactions between features
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+7
+GAM
+Generalized additive models (GAMs)
+𝑔𝑦= 𝑓1 𝑥1 + 𝑓2 𝑥2 + ⋯+ 𝑓𝑛𝑥𝑛
+• 𝑔∙: link function
+-
+Identity: 𝑔𝑦= 𝑦
+Regression
+-
+Logistic function: 𝑔𝑦represents the probability on a class             Classification
+𝐿
+1 + 𝑒−𝑘(𝑥−𝑥0)
+(𝐿= 1, 𝑘= 1, 𝑥0 = 0)
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+8
+GAM
+Generalized additive models (GAMs)
+𝑔𝑦= 𝑓1 𝑥1 + 𝑓2 𝑥2 + ⋯+ 𝑓𝑛𝑥𝑛
+• 𝑓𝑖∙: shape function
+-
+Splines
+𝑥2
+𝑥
+sin 𝑥
+𝑥
+𝑥
+𝑥
+𝑦
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+9
+GAM
+Generalized additive models (GAMs)
+𝑔𝑦= 𝑓1 𝑥1 + 𝑓2 𝑥2 + ⋯+ 𝑓𝑛𝑥𝑛
+• 𝑓𝑖∙: shape function
+-
+Binary Trees
+𝑥< 5
+yes
+no
+𝑦= 1
+𝑦= −1
+𝑦
+𝑥
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+10
+GAM
+Generalized additive models (GAMs)
+𝑔𝑦= 𝑓1 𝑥1 + 𝑓2 𝑥2 + ⋯+ 𝑓𝑛𝑥𝑛
+• 𝑓𝑖∙: shape function
+-
+Binary Trees
+𝑥< 5
+yes
+no
+𝑦= 1
+𝑦= 0
+𝑥< 7
+yes
+no
+𝑦= −1
+𝑦
+𝑥
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+11
+GAM
+Generalized additive models (GAMs)
+𝑔𝑦= 𝑓1 𝑥1 + 𝑓2 𝑥2 + ⋯+ 𝑓𝑛𝑥𝑛
+• 𝑓𝑖∙: shape function
+-
+Binary Trees
+𝑥< 5
+yes
+no
+𝑦= 1
+𝑦= 0
+𝑥< 7
+yes
+no
+𝑦= −1
+For interpretability, we 
+control tree complexity 
+(nodes, leaves, depth) 
+𝑦
+𝑥
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+12
+GAM
+Generalized additive models (GAMs)
+𝑔𝑦= 𝑓1 𝑥1 + 𝑓2 𝑥2 + ⋯+ 𝑓𝑛𝑥𝑛
+• 𝑓𝑖∙: shape function
+-
+Bagged Trees (reduce the variance)
+1
+𝐵(
++ ⋯+
+)
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+13
+GAM
+Generalized additive models (GAMs)
+𝑔𝑦= 𝑓1 𝑥1 + 𝑓2 𝑥2 + ⋯+ 𝑓𝑛𝑥𝑛
+• Training
+-
+Shape functions for individual features
+-
+Learning methods
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+14
+Learning GAM
+• Gradient Boosting
+-
+Learning tree or tree ensemble shape functions
+Algorithm Gradient Boosting for GAM
+1.
+2.
+3.
+4.
+5.
+6.
+𝑓𝑗←0, 𝑗= 1, ⋯, 𝑛
+for 𝑚= 1, ⋯, 𝑀do
+for 𝑗= 1, ⋯, 𝑛do
+ℛ←𝑥𝑖𝑗, 𝑦𝑖−෍
+𝑘
+𝑓𝑘
+𝑖=1
+𝑁
+Learning shape function S: 𝑥𝑗→𝑦using ℛas training data
+𝑓𝑗←𝑓𝑗+ 𝑆
+Initialize all shape functions as zero
+Loop over M iterations
+Loop over all features
+Calculate residuals
+Learn the one-dimensional 
+function to predict the residuals
+Update the shape function
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+15
+Learning GAM
+• Gradient Boosting
+-
+Learning tree or tree ensemble shape functions
+Algorithm Gradient Boosting for GAM
+1.
+2.
+3.
+4.
+5.
+6.
+𝑓𝑗←0, 𝑗= 1, ⋯, 𝑛
+for 𝑚= 1, ⋯, 𝑀do
+for 𝑗= 1, ⋯, 𝑛do
+Learning shape function S: 𝑥𝑗→𝑦using ℛas training data
+𝑓𝑗←𝑓𝑗+ 𝑆
+Initialize all shape functions as zero
+Loop over M iterations
+Loop over all features
+Learn the one-dimensional 
+function to predict the residuals
+Update the shape function
+ℛ←𝑥𝑖𝑗, 𝑦𝑖−෍
+𝑘
+𝑓𝑘
+𝑖=1
+𝑁
+Calculate residuals
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+16
+Learning GAM
+• Gradient Boosting
+𝑖
+𝑥1
+𝑥2
+⋯
+𝑥𝑗
+⋯
+𝑥𝑛
+𝑦
+1
+𝑥11
+𝑥12
+⋯
+𝑥1𝑗
+⋯
+𝑥1𝑛
+𝑦1
+2
+𝑥21
+𝑥22
+⋯
+𝑥2𝑗
+⋯
+𝑥2𝑛
+𝑦2
+⋮
+⋮
+⋮
+⋮
+⋮
+⋮
+⋮
+⋮
+𝑁
+𝑥𝑁1
+𝑥𝑁2
+⋯
+𝑥𝑁𝑗
+⋯
+𝑥𝑁𝑛
+𝑦𝑁
+Training data 
+𝒙𝑖, 𝑦𝑖
+𝑖=1
+𝑁
+𝒙2
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+17
+Learning GAM
+• Gradient Boosting
+𝑖
+𝑥1
+𝑥2
+⋯
+𝑥𝑗
+⋯
+𝑥𝑛
+𝑦
+1
+𝑥11
+𝑥12
+⋯
+𝑥1𝑗
+⋯
+𝑥1𝑛
+𝑦1
+2
+𝑥21
+𝑥22
+⋯
+𝑥2𝑗
+⋯
+𝑥2𝑛
+𝑦2
+⋮
+⋮
+⋮
+⋮
+⋮
+⋮
+⋮
+⋮
+𝑁
+𝑥𝑁1
+𝑥𝑁2
+⋯
+𝑥𝑁𝑗
+⋯
+𝑥𝑁𝑛
+𝑦𝑁
+Training data 
+𝒙𝑖, 𝑦𝑖
+𝑖=1
+𝑁
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+18
+Learning GAM
+• Gradient Boosting
+𝑖
+𝑥1
+𝑥2
+⋯
+𝑥𝑗
+⋯
+𝑥𝑛
+𝑦
+1
+𝑥11
+𝑥12
+⋯
+𝑥1𝑗
+⋯
+𝑥1𝑛
+𝑦1
+2
+𝑥21
+𝑥22
+⋯
+𝑥2𝑗
+⋯
+𝑥2𝑛
+𝑦2
+⋮
+⋮
+⋮
+⋮
+⋮
+⋮
+⋮
+⋮
+𝑁
+𝑥𝑁1
+𝑥𝑁2
+⋯
+𝑥𝑁𝑗
+⋯
+𝑥𝑁𝑛
+𝑦𝑁
+Training data 
+𝒙𝑖, 𝑦𝑖
+𝑖=1
+𝑁
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+19
+Learning GAM
+• Gradient Boosting
+𝑖
+𝑥1
+𝑥2
+⋯
+𝑥𝑗
+⋯
+𝑥𝑛
+𝑦
+1
+𝑥11
+𝑥12
+⋯
+𝑥1𝑗
+⋯
+𝑥1𝑛
+𝑦1
+2
+𝑥21
+𝑥22
+⋯
+𝑥2𝑗
+⋯
+𝑥2𝑛
+𝑦2
+⋮
+⋮
+⋮
+⋮
+⋮
+⋮
+⋮
+⋮
+𝑁
+𝑥𝑁1
+𝑥𝑁2
+⋯
+𝑥𝑁𝑗
+⋯
+𝑥𝑁𝑛
+𝑦𝑁
+Training data 
+𝒙𝑖, 𝑦𝑖
+𝑖=1
+𝑁
+𝑦1 −෍
+𝑘
+𝑓𝑘
+Residuals
+𝑓𝑗
+𝑦2 −෍
+𝑘
+𝑓𝑘
+𝑦𝑁−෍
+𝑘
+𝑓𝑘
+⋮
+(errors made by the 
+current model)
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+20
+Learning GAM
+• Gradient Boosting
+Update 𝑓𝑗based on 
+𝑥𝑖𝑗, 𝑦𝑖−σ𝑘𝑓𝑘
+𝑖=1
+𝑁
+-
+Learn a shape function S that fits: 𝑥→𝑦
+-
+Update 𝑓𝑗←𝑓𝑗+ 𝑆
+𝑥
+𝑦
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+21
+Learning GAM
+• Gradient Boosting
+Example
+𝑥
+𝑦
+1
+8
+5
+5
+3
+8
+9
+7
+𝑥< 4
+yes
+no
+𝑦= 7
+𝑦= 3
+𝑥< 6
+yes
+no
+𝑦= 2
+Residuals
+8 −7 = 1
+5 −3 = 2
+8 −7 = 1
+7 −2 = 5
+𝑓𝑗
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+22
+Learning GAM
+• Gradient Boosting
+Example
+𝑥
+𝑦
+1
+8
+5
+5
+3
+8
+9
+7
+𝑥< 4
+yes
+no
+𝑦= 7
+𝑦= 3
+𝑥< 6
+yes
+no
+𝑦= 2
+Residuals
+8 −7 = 1
+5 −3 = 2
+8 −7 = 1
+7 −2 = 5
+𝑓𝑗
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+23
+Learning GAM
+• Gradient Boosting
+Example
+𝑥
+𝑦
+1
+8
+5
+5
+3
+8
+9
+7
+𝑥< 4
+yes
+no
+1
+2
+𝑥< 6
+yes
+no
+5
+Residuals
+8 −7 = 1
+5 −3 = 2
+8 −7 = 1
+7 −2 = 5
+𝑆
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+24
+Learning GAM
+• Gradient Boosting
+Example
+𝑥
+𝑦
+1
+8
+5
+5
+3
+8
+9
+7
+Residuals
+8 −(7 + 1) = 0
+5 −3 + 2 = 0
+8 −7 + 1 = 0
+7 −2 + 5 = 0
++
+𝑆
+𝑓𝑗
+Update 𝑓𝑗←𝑓𝑗+ 𝑆
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+25
+Learning GAM
+• Gradient Boosting
+Example
+𝑥
+𝑦
+1
+8
+5
+5
+3
+8
+9
+7
+Residuals
+8 −(7 + 1) = 0
+5 −3 + 2 = 0
+8 −7 + 1 = 0
+7 −2 + 5 = 0
++
+𝑆
+𝑓𝑗
+Update 𝑓𝑗←𝑓𝑗+ 𝑆
+Do we learn a 
+perfect model?
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+26
+Learning GAM
+The model fits training data too well
+Source: http://scott.fortmann-roe.com/docs/BiasVariance.html
+We have low bias, but 
+probably have high variance
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+27
+Learning GAM
+• Gradient Boosting
+Example
+𝑥
+𝑦
+1
+8
+5
+5
+3
+8
+9
+7
+Residuals
+8 −(7 + 0.1 × 1) = 0.9
+5 −3 + 0.1 × 2 = 1.8
+8 −7 + 0.1 × 1 = 0.9
+7 −2 + 0.1 × 5 = 4.5
++
+𝑆
+𝑓𝑗
+Update 𝑓𝑗←𝑓𝑗+ 𝛾× 𝑆
+Add a learning rate to scale the 
+contribution of the new tree
+𝛾×
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+28
+Learning GAM
+• Gradient Boosting
+-
+Learning tree or tree ensemble shape functions
+Algorithm Gradient Boosting for GAM
+1.
+2.
+3.
+4.
+5.
+6.
+𝑓𝑗←0, 𝑗= 1, ⋯, 𝑛
+for 𝑚= 1, ⋯, 𝑀do
+for 𝑗= 1, ⋯, 𝑛do
+Learning shape function S: 𝑥𝑗→𝑦using ℛas training data
+𝑓𝑗←𝑓𝑗+ 𝑆
+Initialize all shape functions as zero
+Loop over M iterations
+Loop over all features
+Learn the one-dimensional 
+function to predict the residuals
+Update the shape function
+ℛ←𝑥𝑖𝑗, 𝑦𝑖−෍
+𝑘
+𝑓𝑘
+𝑖=1
+𝑁
+Calculate residuals
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+29
+Learning GAM
+𝑥1
+𝑥2
+𝑥𝑗
+𝑥𝑛
+⋯
+⋯
+𝑚= 1
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+30
+Learning GAM
+𝑥1
+𝑥2
+𝑥𝑗
+𝑥𝑛
+⋯
+⋯
+𝑚= 1
+𝑚= 2
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+31
+Learning GAM
+𝑥1
+𝑥2
+𝑥𝑗
+𝑥𝑛
+⋯
+⋯
+𝑚= 1
+𝑚= 2
+⋯
+𝑚= 𝑀
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+32
+Learning GAM
+𝑥1
+𝑥2
+𝑥𝑗
+𝑥𝑛
+⋯
+⋯
+𝑚= 1
+𝑚= 2
+⋯
+𝑚= 𝑀
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+33
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+34
+Learning GAM
+• Backfitting
+-
+Learning tree or tree ensemble shape functions
+Algorithm Backfitting for GAM
+1.
+2.
+3.
+4.
+5.
+6.
+𝑓𝑗←0, 𝑗= 1, ⋯, 𝑛
+Learn 𝑓1 using the training set 
+𝑥𝑖1, 𝑦𝑖
+𝑖=1
+𝑁
+for 𝑗= 2, ⋯, 𝑛do
+ℛ←𝑥𝑖𝑗, 𝑦𝑖−෍
+𝑘=1
+𝑗−1
+𝑓𝑘
+𝑖=1
+𝑁
+Learning shape function S: 𝑥𝑗→𝑦using ℛas training data
+𝑓𝑗←𝑆
+Initialize all shape functions as zero
+Loop over rest features
+Calculate residuals
+Learn the one-dimensional 
+function to predict the residuals
+Update the shape function
+7. Retrain 𝑓1 based on the residuals of other 𝑛−1 shape functions 
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+35
+Learning GAM
+• Least Squares
+-
+Learning spline shape functions
+-
+Reducing to fitting a linear model 
+𝒚= 𝑿𝜷
+𝑿𝒊= 𝑥𝑖12,
+𝑥𝑖2, ⋯, sin 𝑥𝑖𝑛
+𝜷= 𝛽1, 𝛽2, ⋯, 𝛽𝑛𝑇
+𝑖𝑡ℎexample
+Objective
+min 𝒚−𝑿𝜷
+2
+𝑔𝑦= 𝛽1𝑥1
+2 + 𝛽2 𝑥2 + ⋯+ 𝛽𝑛sin 𝑥𝑛
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+36
+Learning GAM
+• Least Squares
+-
+Learning spline shape functions
+-
+Reducing to fitting a linear model 
+𝒚= 𝑿𝜷
+𝑿𝒊= 𝑥𝑖12,
+𝑥𝑖2, ⋯, sin 𝑥𝑖𝑛
+𝜷= 𝛽1, 𝛽2, ⋯, 𝛽𝑛𝑇
+𝑖𝑡ℎexample
+Objective
+min 𝒚−𝑿𝜷
+2
+𝑔𝑦= 𝛽1𝑥1
+2 + 𝛽2 𝑥2 + ⋯+ 𝛽𝑛sin 𝑥𝑛
+Simple, but not flexible
+
+--------------------------------------------------------------------------------
+[End of Page 36]
+
+37
+Summary
+Generalized additive models (GAMs)
+𝑔𝑦= 𝑓1 𝑥1 + 𝑓2 𝑥2 + ⋯+ 𝑓𝑛𝑥𝑛
+• Training
+-
+Shape functions for individual features: splines, trees, ensembles of trees
+-
+Learning methods: Least Squares, Gradient Boosting, Backfitting
+
+--------------------------------------------------------------------------------
+[End of Page 37]
+
+38
+Summary
+Generalized additive models (GAMs)
+𝑔𝑦= 𝑓1 𝑥1 + 𝑓2 𝑥2 + ⋯+ 𝑓𝑛𝑥𝑛
+• Training
+-
+Shape functions for individual features: splines, trees, ensembles of trees
+-
+Learning methods: Least Squares, Gradient Boosting, Backfitting
+• Interpretability
+𝑥1
+𝑥𝑛
+⋯
+𝑓1 𝑥1
+𝑓𝑛𝑥𝑛
+⋯
+contributions
+
+--------------------------------------------------------------------------------
+[End of Page 38]
+
+39
+Application
+• Dataset: “Concrete” (Blast Furnace Slag, Fly Ash, Superplasticizer…)
+• Models: 
+Lou, Yin, Rich Caruana, and Johannes Gehrke. "Intelligible models for classification and regression." Proceedings of the 
+18th ACM SIGKDD international conference on Knowledge discovery and data mining. 2012.
+• Task: predicting the compressive strength of concrete
+
+--------------------------------------------------------------------------------
+[End of Page 39]
+
+40
+Empirical Results
+• GAMs perform better than linear or logistic regression 
+(without feature shaping)
+Lou, Yin, Rich Caruana, and Johannes Gehrke. "Intelligible models for classification and regression." Proceedings of the 
+18th ACM SIGKDD international conference on Knowledge discovery and data mining. 2012.
+• Tree-based shaping methods are more accurate 
+than spline-based methods
+• Bagged-trees with 2-4 leaves as shape functions in 
+combination with gradient boosting as learning 
+method perform better
+• Controlling the complexity of trees can avoid 
+overfitting 
+(2 leaves)
+(16 leaves)
+
+--------------------------------------------------------------------------------
+[End of Page 40]
+
+41
+Interpretation
+Shapes of features for the “Concrete” dataset (versus the compressive strength 
+of concrete)
+Lou, Yin, Rich Caruana, and Johannes Gehrke. "Intelligible models for classification and regression." Proceedings of the 
+18th ACM SIGKDD international conference on Knowledge discovery and data mining. 2012.
+(Splines)
+(Bagged 
+trees)
+
+--------------------------------------------------------------------------------
+[End of Page 41]
+
+42
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 42]
+
+43
+GA M
+2
+Limitation: GAMs do not consider feature dependency
+𝑓1 𝑥1 + 𝑓2 𝑥2
+𝑓1 𝑥1 + 𝑓2 𝑥2 + 𝑥1𝑥2 + ⋯
+Gap
+Model
+Goal
+
+--------------------------------------------------------------------------------
+[End of Page 43]
+
+44
+GA M
+2
+Limitation: GAMs do not consider feature dependency
+Add two-dimensional interactions
+GA M
+2
+෍𝑓𝑖𝑥𝑖+ ෍𝑓𝑖,𝑗𝑥𝑖, 𝑥𝑗
+𝑓1 𝑥1 + 𝑓2 𝑥2
+𝑓1 𝑥1 + 𝑓2 𝑥2 + 𝑥1𝑥2 + ⋯
+Gap
+Model
+Goal
+
+--------------------------------------------------------------------------------
+[End of Page 44]
+
+45
+GA M
+2
+Definitions
+• Dataset 𝐷=
+𝒙𝑖, 𝑦𝑖
+𝑖=1
+𝑁
+• 𝒙𝑖= 𝑥𝑖1, ⋯, 𝑥𝑖𝑛with 𝑛features
+• 𝑦𝑖is the response
+• 𝒙= 𝑥1, ⋯, 𝑥𝑛denote the features in the dataset
+• 𝑈1 =
+𝑖1 ≤𝑖≤𝑛,𝑈2 =
+𝑖, 𝑗1 ≤𝑖< 𝑗≤𝑛, 𝑈= 𝑈1 ∪𝑈2, i.e., 𝑈
+contains all indices for all features and pairs of features
+• For any 𝑢∈𝑈, let 𝐻𝑢denote the Hilbert space of 𝑓𝑢𝑥𝑢
+• 𝐻= σ𝑢∈𝑈𝐻𝑢, 𝐻1 = σ𝑢∈𝑈1 𝐻𝑢, 𝐻2 = σ𝑢∈𝑈2 𝐻𝑢
+
+--------------------------------------------------------------------------------
+[End of Page 45]
+
+46
+GA M
+2
+GA M
+2
+𝐹𝒙= σ𝑢∈𝑈𝑓𝑢𝑥𝑢
+Objective
+min
+𝐹∈𝐻𝐸𝐿(𝑦, 𝐹𝒙)
+𝐿: non-negative convex loss function
+regression
+classification
+Squared loss
+Cross-entropy loss
+−𝑦log 𝐹𝒙−(1 −𝑦) log(1 −𝐹𝒙)
+(𝑦−𝐹𝒙)𝟐
+
+--------------------------------------------------------------------------------
+[End of Page 46]
+
+47
+GA M
+2
+• We have known how to learn shape functions for GAMs
+• Applicable to two-dimensional shape functions 𝑓𝑢, 𝑢= {𝑖, 𝑗}
+Splines
+𝑓1,2 = 𝑥1𝑥2
+𝑥1
+𝑥2
+Trees
+𝑥1 < 5
+yes
+no
+𝑦= 1
+𝑦= 0
+𝑥2 < 7
+yes
+no
+𝑦= −1
+𝑥2 < 3
+yes
+no
+𝑦= 2
+
+--------------------------------------------------------------------------------
+[End of Page 47]
+
+48
+GA M
+2
+Challenge
+𝑛features
+𝑂(𝑛2) features interactions
+How to find true 
+feature interactions?
+෍𝑓𝑖𝑥𝑖+ ෍𝑓𝑖,𝑗𝑥𝑖, 𝑥𝑗
+
+--------------------------------------------------------------------------------
+[End of Page 48]
+
+49
+GA M
+2
+Algorithm 
+1.
+2.
+3.
+4.
+5.
+6.
+𝑆←∅
+𝑍←𝑈2
+While not converge do
+The set of the selected pairs
+GA M
+2
+7.
+8.
+9.
+10.
+𝐹←arg
+min
+𝐹∈𝐻1+σ𝑢∈𝑆𝐻𝑢
+1
+2 𝐸
+𝑦−𝐹𝒙
+2
+𝑅←𝑦−𝐹𝒙
+for all 𝑢∈𝑍do
+𝐹𝑢←𝐸ൣ𝑅| 𝑥𝑢]
+𝑢∗←arg min
+𝑢∈𝑍
+1
+2 𝐸(𝑅−𝑓𝑢𝑥𝑢)2
+𝑆←𝑆∪𝑢∗
+𝑍←𝑍−𝑢∗
+The set of the remaining pairs
+
+--------------------------------------------------------------------------------
+[End of Page 49]
+
+50
+GA M
+2
+Algorithm 
+1.
+2.
+3.
+4.
+5.
+6.
+𝑆←∅
+𝑍←𝑈2
+While not converge do
+The set of the selected pairs
+GA M
+2
+7.
+8.
+9.
+10.
+𝐹←arg
+min
+𝐹∈𝐻1+σ𝑢∈𝑆𝐻𝑢
+1
+2 𝐸
+𝑦−𝐹𝒙
+2
+𝑅←𝑦−𝐹𝒙
+for all 𝑢∈𝑍do
+𝐹𝑢←𝐸ൣ𝑅| 𝑥𝑢]
+𝑢∗←arg min
+𝑢∈𝑍
+1
+2 𝐸(𝑅−𝑓𝑢𝑥𝑢)2
+𝑆←𝑆∪𝑢∗
+𝑍←𝑍−𝑢∗
+The set of the remaining pairs
+The best additive model 𝐹so far in Hilbert 
+space 𝐻1 + σ𝑢∈𝑆𝐻𝑢
+Learning shape functions for all 
+single features (𝑓𝑖𝑥𝑖) and the 
+selected feature pairs (𝑓𝑖,𝑗𝑥𝑖, 𝑥𝑗). 
+When 𝑆= ∅, 𝐹is the GAM.
+
+--------------------------------------------------------------------------------
+[End of Page 50]
+
+51
+GA M
+2
+Algorithm 
+1.
+2.
+3.
+4.
+5.
+6.
+𝑆←∅
+𝑍←𝑈2
+While not converge do
+The set of the selected pairs
+GA M
+2
+7.
+8.
+9.
+10.
+𝐹←arg
+min
+𝐹∈𝐻1+σ𝑢∈𝑆𝐻𝑢
+1
+2 𝐸
+𝑦−𝐹𝒙
+2
+𝑅←𝑦−𝐹𝒙
+for all 𝑢∈𝑍do
+𝐹𝑢←𝐸ൣ𝑅| 𝑥𝑢]
+𝑢∗←arg min
+𝑢∈𝑍
+1
+2 𝐸(𝑅−𝑓𝑢𝑥𝑢)2
+𝑆←𝑆∪𝑢∗
+𝑍←𝑍−𝑢∗
+The set of the remaining pairs
+The best additive model 𝐹so far in Hilbert 
+space 𝐻1 + σ𝑢∈𝑆𝐻𝑢
+Calculate residual
+
+--------------------------------------------------------------------------------
+[End of Page 51]
+
+52
+GA M
+2
+Algorithm 
+1.
+2.
+3.
+4.
+5.
+6.
+𝑆←∅
+𝑍←𝑈2
+While not converge do
+The set of the selected pairs
+GA M
+2
+7.
+8.
+9.
+10.
+𝐹←arg
+min
+𝐹∈𝐻1+σ𝑢∈𝑆𝐻𝑢
+1
+2 𝐸
+𝑦−𝐹𝒙
+2
+𝑅←𝑦−𝐹𝒙
+for all 𝑢∈𝑍do
+𝐹𝑢←𝐸ൣ𝑅| 𝑥𝑢]
+𝑢∗←arg min
+𝑢∈𝑍
+1
+2 𝐸(𝑅−𝑓𝑢𝑥𝑢)2
+𝑆←𝑆∪𝑢∗
+𝑍←𝑍−𝑢∗
+The set of the remaining pairs
+The best additive model 𝐹so far in Hilbert 
+space 𝐻1 + σ𝑢∈𝑆𝐻𝑢
+Calculate residual
+Build an interaction model on the residual
+Loop over all remaining feature pairs
+Learning a shape function 
+for each feature pair
+
+--------------------------------------------------------------------------------
+[End of Page 52]
+
+53
+GA M
+2
+Algorithm 
+1.
+2.
+3.
+4.
+5.
+6.
+𝑆←∅
+𝑍←𝑈2
+While not converge do
+The set of the selected pairs
+GA M
+2
+7.
+8.
+9.
+10.
+𝐹←arg
+min
+𝐹∈𝐻1+σ𝑢∈𝑆𝐻𝑢
+1
+2 𝐸
+𝑦−𝐹𝒙
+2
+𝑅←𝑦−𝐹𝒙
+for all 𝑢∈𝑍do
+𝐹𝑢←𝐸ൣ𝑅| 𝑥𝑢]
+𝑢∗←arg min
+𝑢∈𝑍
+1
+2 𝐸(𝑅−𝑓𝑢𝑥𝑢)2
+𝑆←𝑆∪𝑢∗
+𝑍←𝑍−𝑢∗
+The set of the remaining pairs
+The best additive model 𝐹so far in Hilbert 
+space 𝐻1 + σ𝑢∈𝑆𝐻𝑢
+Calculate residual
+Build an interaction model on the residual
+Loop over all remaining feature pairs
+Select the best feature pair
+
+--------------------------------------------------------------------------------
+[End of Page 53]
+
+54
+GA M
+2
+Algorithm 
+1.
+2.
+3.
+4.
+5.
+6.
+𝑆←∅
+𝑍←𝑈2
+While not converge do
+The set of the selected pairs
+GA M
+2
+7.
+8.
+9.
+10.
+𝐹←arg
+min
+𝐹∈𝐻1+σ𝑢∈𝑆𝐻𝑢
+1
+2 𝐸
+𝑦−𝐹𝒙
+2
+𝑅←𝑦−𝐹𝒙
+for all 𝑢∈𝑍do
+𝐹𝑢←𝐸ൣ𝑅| 𝑥𝑢]
+𝑢∗←arg min
+𝑢∈𝑍
+1
+2 𝐸(𝑅−𝑓𝑢𝑥𝑢)2
+𝑆←𝑆∪𝑢∗
+𝑍←𝑍−𝑢∗
+The set of the remaining pairs
+The best additive model 𝐹so far in Hilbert 
+space 𝐻1 + σ𝑢∈𝑆𝐻𝑢
+Calculate residual
+Build an interaction model on the residual
+Loop over all remaining feature pairs
+Select the best feature pair
+Put the best feature pair in 𝑆
+Remove that from 𝑍
+
+--------------------------------------------------------------------------------
+[End of Page 54]
+
+55
+GA M
+2
+Algorithm 
+1.
+2.
+3.
+4.
+5.
+6.
+𝑆←∅
+𝑍←𝑈2
+While not converge do
+The set of the selected pairs
+GA M
+2
+7.
+8.
+9.
+10.
+𝐹←arg
+min
+𝐹∈𝐻1+σ𝑢∈𝑆𝐻𝑢
+1
+2 𝐸
+𝑦−𝐹𝒙
+2
+𝑅←𝑦−𝐹𝒙
+for all 𝑢∈𝑍do
+𝐹𝑢←𝐸ൣ𝑅| 𝑥𝑢]
+𝑢∗←arg min
+𝑢∈𝑍
+1
+2 𝐸(𝑅−𝑓𝑢𝑥𝑢)2
+𝑆←𝑆∪𝑢∗
+𝑍←𝑍−𝑢∗
+The set of the remaining pairs
+The best additive model 𝐹so far in Hilbert 
+space 𝐻1 + σ𝑢∈𝑆𝐻𝑢
+Calculate residual
+Build an interaction model on the residual
+Loop over all remaining feature pairs
+Select the best feature pair
+Put the best feature pair in 𝑆
+Remove that from 𝑍
+𝑂(𝑛2)
+See a fast interaction 
+detection algorithm in 
+[Lou et al., 2013]
+
+--------------------------------------------------------------------------------
+[End of Page 55]
+
+56
+GA M
+2
+GAM
+𝑥1
+𝑥2
+𝑥𝑛
+⋯
+GA M
+2
+𝑆(selected pairs)
+𝑍(Remaining pairs)
+(𝑥𝑖, 𝑥𝑗)
+Residuals
+Select a feature pair 
+that minimizes the 
+residual
+1
+2
+3
+
+--------------------------------------------------------------------------------
+[End of Page 56]
+
+57
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 57]
+
+58
+Application
+“Intelligible models for healthcare: Predicting pneumonia risk and 
+hospital 30-day readmission”
+Caruana et al., KDD 2015 
+
+--------------------------------------------------------------------------------
+[End of Page 58]
+
+59
+Background
+•
+In the mid 90’s, a project was funded by Cost-Effective HealthCare (CEHC) to evaluate the 
+application of machine learning to important problems in healthcare such as predicting 
+pneumonia risk
+•
+Goal: predict the probability of death (POD) for patients with pneumonia
+•
+High-risk: patients could be admitted to the hospital
+•
+Low-risk: patients were treated as outpatients
+
+--------------------------------------------------------------------------------
+[End of Page 59]
+
+60
+Background
+•
+In the mid 90’s, a project was funded by Cost-Effective HealthCare (CEHC) to evaluate the 
+application of machine learning to important problems in healthcare such as predicting 
+pneumonia risk
+•
+Goal: predict the probability of death (POD) for patients with pneumonia
+•
+High-risk: patients could be admitted to the hospital
+•
+Low-risk: patients were treated as outpatients
+Models
+Logistic regression
+Rule-based learning
+k-nearest neighbor
+Neural networks
+…
+
+--------------------------------------------------------------------------------
+[End of Page 60]
+
+61
+Background
+•
+In the mid 90’s, a project was funded by Cost-Effective HealthCare (CEHC) to evaluate the 
+application of machine learning to important problems in healthcare such as predicting 
+pneumonia risk
+•
+Goal: predict the probability of death (POD) for patients with pneumonia
+•
+High-risk: patients could be admitted to the hospital
+•
+Low-risk: patients were treated as outpatients
+Models
+Logistic regression
+Rule-based learning
+k-nearest neighbor
+Neural networks
+…
+AUC=0.86 (Best performance)
+
+--------------------------------------------------------------------------------
+[End of Page 61]
+
+62
+Background
+•
+In the mid 90’s, a project was funded by Cost-Effective HealthCare (CEHC) to evaluate the 
+application of machine learning to important problems in healthcare such as predicting 
+pneumonia risk
+•
+Goal: predict the probability of death (POD) for patients with pneumonia
+•
+High-risk: patients could be admitted to the hospital
+•
+Low-risk: patients were treated as outpatients
+Models
+Logistic regression
+Rule-based learning
+k-nearest neighbor
+Neural networks
+…
+AUC=0.86 (Best performance)
+AUC=0.77 (safer to use on patients)
+
+--------------------------------------------------------------------------------
+[End of Page 62]
+
+63
+Problem
+Rule-based models are interpretable
+if (chance_of_rain > 0.75) 
+{ umbrella <- "yes" }
+else { umbrella <- "no" }
+The rule-based model learned a rule:
+HasAsthama(x)  ⟹LowerRisk(x)
+
+--------------------------------------------------------------------------------
+[End of Page 63]
+
+64
+Problem
+The rule-based model learned a rule:
+HasAsthama(x)  ⟹LowerRisk(x)
+counterintuitive
+
+--------------------------------------------------------------------------------
+[End of Page 64]
+
+65
+Problem
+The rule-based model learned a rule:
+HasAsthama(x)  ⟹LowerRisk(x)
+counterintuitive
+The model captures a true pattern in the training data: 
+Patients: 
+asthma + 
+pneumonia 
+Hospital (ICU)
+The aggressive care 
+lowered the risk of 
+dying from pneumonia
+
+--------------------------------------------------------------------------------
+[End of Page 65]
+
+66
+Problem
+The rule-based model learned a rule:
+HasAsthama(x)  ⟹LowerRisk(x)
+Asthmatics have much higher risk!
+It would be dangerous if the model predicts low 
+risk on patients who have not been hospitalized
+
+--------------------------------------------------------------------------------
+[End of Page 66]
+
+67
+Problem
+How about other potential patterns?
+Pregnancy  ⟹Lower Risk ?
+
+--------------------------------------------------------------------------------
+[End of Page 67]
+
+68
+Problem
+How about other potential patterns?
+Pregnancy  ⟹Lower Risk ?
+MUST understand ML models in healthcare. 
+Otherwise, models may hurt patients 
+because of true patterns in data! 
+
+--------------------------------------------------------------------------------
+[End of Page 68]
+
+69
+Generalized Additive Models
+• Better prediction performance than logistic regression 
+(capture more data patterns)
+• Interpretable
+
+--------------------------------------------------------------------------------
+[End of Page 69]
+
+70
+Case Study: Pneumonia Risk
+• There are 46 features 
+describing each patient
+• Bagged trees with 
+gradient boosting
+
+--------------------------------------------------------------------------------
+[End of Page 70]
+
+71
+Prediction Performance
+AUC for different learning methods
+AUC: Area Under the ROC Curve
+𝑇𝑃𝑅=
+𝑇𝑃
+𝑇𝑃+ 𝐹𝑁
+𝐹𝑃𝑅=
+𝐹𝑃
+𝐹𝑃+ 𝑇𝑁
+
+--------------------------------------------------------------------------------
+[End of Page 71]
+
+72
+Interpretation
+Older people have 
+higher risk
+(Blood Urea Nitrogen)
+
+--------------------------------------------------------------------------------
+[End of Page 72]
+
+73
+Interpretation
+GAMs also found the 
+pattern: asthma lowers 
+the risk
+(Blood Urea Nitrogen)
+
+--------------------------------------------------------------------------------
+[End of Page 73]
+
+74
+Interpretation
+GAMs also found the 
+pattern: asthma lowers 
+the risk
+(Blood Urea Nitrogen)
+Repair: eliminate this 
+term
+
+--------------------------------------------------------------------------------
+[End of Page 74]
+
+75
+Interpretation
+(Blood Urea Nitrogen)
+Most patients have BUN=0 because, 
+as in many medical datasets, if the 
+variable is not measured or assumed 
+normal it is coded as 0
+
+--------------------------------------------------------------------------------
+[End of Page 75]
+
+76
+Interpretation
+(Blood Urea Nitrogen)
+BUN levels below 30 appear to 
+be low risk, while levels from 
+50-200 indicate higher risk
+
+--------------------------------------------------------------------------------
+[End of Page 76]
+
+77
+Interpretation
+(Blood Urea Nitrogen)
+Having cancer significantly 
+increases the risk of dying 
+from pneumonia
+
+--------------------------------------------------------------------------------
+[End of Page 77]
+
+78
+Interpretation
+(Blood Urea Nitrogen)
+Chronic lung disease and a
+history of chest pain both lower 
+risk (similar problem as asthma)
+
+--------------------------------------------------------------------------------
+[End of Page 78]
+
+79
+Interpretation
+-
+Risk is highest for the youngest patients 
+-
+It declines for patients who acquire cancer 
+later in life
+-
+For patients without cancer, risk rises as 
+expected with age
+Old people with high respiration 
+rate have the highest risk
+
+--------------------------------------------------------------------------------
+[End of Page 79]
+
+80
+Takeaway
+• If a model contains a modest number of terms (e.g., less than 50), it is 
+best to show terms in the model to experts in the order they are most 
+familiar with
+• When the number of terms grows large, it is best to provide a well-defined 
+ordering of the terms for a patient (from terms that increase risk most to 
+terms that decrease risk most)
+
+--------------------------------------------------------------------------------
+[End of Page 80]
+
+81
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 81]
+
+82
+Reference
+•
+Lou, Yin, Rich Caruana, and Johannes Gehrke. "Intelligible models for classification and regression." Proceedings of the 18th ACM 
+SIGKDD international conference on Knowledge discovery and data mining. 2012.
+•
+Lou, Yin, et al. "Accurate intelligible models with pairwise interactions." Proceedings of the 19th ACM SIGKDD international 
+conference on Knowledge discovery and data mining. 2013.
+•
+Caruana, Rich, et al. "Intelligible models for healthcare: Predicting pneumonia risk and hospital 30-day readmission." Proceedings 
+of the 21th ACM SIGKDD international conference on knowledge discovery and data mining. 2015.
+
+--------------------------------------------------------------------------------
+[End of Page 82]

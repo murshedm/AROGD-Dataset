@@ -1,0 +1,1356 @@
+65 
+CHAPTER 4: SYSTEMATIC EVALUATION OF EXISTING CYBER GUIDANCE AND 
+FRAMEWORKS 
+ 
+ 
+ 
+ 
+ Similar to the development of resilience definitions in the previous chapter, evaluating 
+cyber guidance requires a multi-source and multi-faceted approach. Understanding the co-
+occurrence of resilience terms with cyber terms is critical to determining whether the existing 
+cyber guidance and frameworks have sufficient scope on the time and scale aspects of resilience. 
+This chapter includes three major processes: 1) development of a cyber and resilience dictionary, 
+2) classification of dictionary terms by time and scale, and 3) evaluation of existing cyber 
+guidance and frameworks against the dictionary and previous results from the resilience analysis 
+in the last chapter.  
+The development of the broader cyber dictionary proceeds as follows. First, the 
+definitions will be cleaned, tokenized, and lemmatized for follow on analysis. Second, based on 
+the volume of definitions present in some of the sources, the corpus will be evaluated for down 
+selection using BERT algorithms to determine the most relevant or popular terms. Third, the 
+curated dictionary will be evaluated for existing resilience terms, and, if lacking, the terminology 
+will be added to provide for follow on co-occurrence analysis.  
+ 
+Second, the terms in the cyber dictionary are classified by time and scale based on the 
+concepts developed in the previous chapter to develop a two-dimensional scaffold on which the 
+existing cyber guidance, standards, and frameworks can be evaluated. The objective of this 
+scaffold is to show how the distribution of cyber and resilience terms is distributed across time 
+and scale alongside the co-occurrence between cyber and resilience terms.  
+
+66 
+ 
+Lastly, a broad search for existing cyber and resilience standards, guidance, and 
+frameworks is curated for analysis. The data set primarily includes guidance for cybersecurity 
+processes and practices but will also be expanded to include resilience guidance for other areas, 
+such as climate change, critical infrastructure, and national resilience to help baseline the results 
+from the analysis in this chapter. These existing cyber guidance, standards, and frameworks will 
+be assessed using both the scaffold and the prior data-centric analyses of resilience definitions. 
+This process will elicit the time and scale aspects of resilience in the existing guidance and 
+provides a parallel analysis of co-occurrence and cosine similarities for resilience-oriented terms 
+and topics from the tf*idf and LDA analyses in the previous chapter.  
+ 
+Curating a Dictionary of Cyber Definition using Large Language Models 
+ 
+Several government and industry sources provide extensive and curated lists of cyber 
+definitions. 4,465 terms were scraped or downloaded from the National Institute of Standards 
+and Technology Computer Security Resource Center, the Canadian Center for Cyber Security, 
+the National Initiative for Cybersecurity Careers and Studies program at the Cybersecurity & 
+Infrastructure Security Agency, the Committee on National Security Systems, and the SANS 
+Institute [29], [30], [118], [119], [120]. The definition set contains 9,203 definitions for the 4,465 
+terms, indicating duplicate coverage for most terms, at a minimum. The statistical descriptors for 
+the number of definitions per term are shown in Table 5:  
+ 
+ 
+ 67 
+Table 5: Statistical Descriptors for Curated Dictionary of Cyber Terms 
+Descriptor 
+Value 
+Total Number of Terms 
+4,465 
+Total Number of Definitions 
+9,203 
+Minimum Number of Definitions of a Term 
+1 
+Maximum Number of Definitions of a Term 
+121 
+Average Number of Definitions of a Term 
+2.061 
+Standard Deviation of Number of Definitions per Term 
+3.285 
+ 
+The term “resilience” set the maximum number of definitions at 121, as described in the previous 
+chapter, since those definitions were added to the list of terms. Without that term, the top ten 
+terms with the most definitions are: assessment, cryptographic key, information system, user, 
+authenticate, cyber threat, key, access control, digital signature, and approved (relating to 
+approved cryptographic algorithms), which had between 24-43 definitions each.  
+ 
+Assessing Definitions using BERT Algorithms 
+ 
+Working with 4,465 terms in assessing the existing cyber guidance would be 
+cumbersome, and many of the definitions have narrow applications in cyber fields, such as three-
+key triple data encryption algorithm (3TDEA), derived relationship mapping, prime number, or 
+s-box. To make data management and analysis easier with minimal loss of fidelity, the next phase 
+evaluates the dictionary terms using BERT algorithms for popularity or relevance. The use of 
+BERT algorithms allows the corpora of training data and weights in those algorithms to be used 
+to determine relevance or popularity of the term within the broader corpus, whether a general 
+
+68 
+training data set or a specified and tuned data set. For this analysis, a dual evaluation will be 
+performed using the DistilBERT Base Uncased algorithm, fine-tuned on the Stanford Sentiment 
+Treebank (SST-2) dataset, and the SecureBERT Plus algorithm, a RoBERTa algorithm fine-tuned 
+on 253,433 cybersecurity documents [121], [122]. Both algorithms were sourced from Hugging 
+Face and implemented using the following python packages: json (v3.13), matplotlib 
+(v3.8), Seaborn (v0.12.2), transformers (v4.42.3), pandas (v2.1.4), NumPy 
+(v1.24.3), and Scikit-Learn (v1.4.2) [123-131]. DistilBERT provides a faster and more 
+computationally efficient BERT algorithm that has been trained on a broad or general dataset. It 
+provides an appropriate counterweight to a tuned cybersecurity algorithm like SecureBERT Plus 
+to prevent biasing the results excessively toward the existing cyber literature. A weighted average 
+output of the two algorithms will create the final dictionary of terms.  
+ 
+The two models provided different results, as expected, based on their training corpora 
+and colloquial usage in those corpora. The DistilBERT algorithm produced the following results, 
+visualized in a word cloud and as a histogram by term relevance, for the most relevant terms 
+from the dictionary in common usage, shown in Figure 14 and Figure 15, below.  
+
+69 
+ 
+Figure 14: Word cloud of top 500 terms from DistilBERT ranking of cyber terms. 
+ 
+Figure 15: Histogram of cyber term relevance using the DistilBERT algorithm. 
+
+70 
+A qualitative review of the top 500 terms explains the left skew of the histogram: most of the 
+terms are not niche cyber terms, but terms that have multiple meanings within the broader 
+English language.  
+ 
+The SecureBERT Plus algorithm, on the other hand, produces a histogram that is closer to 
+normally distributed rather than the extreme skew of the DistilBERT results. This is an artifact of 
+the cyber-centric training corpora of the model. Since taking the top 500 results by relevance 
+score will only select the right-hand tail of the distribution, the terms within ±0.25 standard 
+deviations of the mean score will be selected. This selection was manually verified by checking 
+for common words, such as information, firewall, access control, etc. Those common terms were 
+not in the selection from the right hand tail but were present in the mean selection. This approach 
+yielded 939 terms, which are highlighted in the histogram showing in Figure 16 below.  
+ 
+Figure 16: Histogram of cyber term relevance using the SecureBERT Plus algorithm 
+
+71 
+The terms in this set are visualized with a word cloud, shown below in Figure 17. 
+ 
+Figure 17: Word cloud of terms within +/- 0.25 standard deviations of the mean score from the SecureBERT Plus algorithm 
+ 
+ 
+The terms selected from the outputs of these two models do have some overlap, as shown 
+in the Venn diagram in Figure 18. The diagram is based on the outputs of both models, not the 
+weighted average that will be performed to develop the final dictionary.  
+
+72 
+ 
+Figure 18: Venn diagram showing overlap of the two sets of top terms from the DistilBERT and SecureBERT Plus models. 
+ 
+The combined term set that will form the dictionary is combined by weighing the scores 
+for a term from the DistilBERT model and the SecureBERT Plus model in a 25/75 split. 
+Selection of the weighting ratio was arbitrary. This produced the following weighted term set of 
+1339 terms, approximately 30 percent of the original dictionary, visualized in a word cloud in 
+Figure 19. The final dictionary of terms is provided in Appendix 1.  
+
+73 
+ 
+Figure 19: Word cloud of the terms from a weighted average of the DistilBERT and SecureBERT Plus algorithms. 
+ 
+Understanding Existing Overlap Between Cyber and Resilience Terms 
+ 
+Hypotheses 3 and 4 seek to understand how well the existing cybersecurity documents 
+incorporate aspects of resilience (H3) and rise above the technical and sociotechnical aspects 
+(H4) of cybersecurity. Using the prior tf*idf and Latent Dirichlet Allocation analysis results, 
+along with the lemmatized set of resilience definitions, the final dictionary can be analyzed for 
+that overlap. This analysis of the dictionary against the resilience terms will provide a first look 
+into how the answers to those hypotheses are trending.  
+ 
+The use of the prior analyses and lemmatized set of resilience definitions will provide a 
+multi-faceted look at the dictionary. The lemmatized set of definitions provides a straightforward 
+comparison and overlap, regardless of term importance or frequency. It answers the broader 
+
+74 
+question of whether the dictionary has any relationship to the resilience definitions, regardless of 
+how the terms are used. The tf*idf and LDA analyses provide a focused overlap examination to 
+determine how much overlap there is between the dictionary terms and the most important terms 
+and topics from the resilience definitions.  
+ 
+Overall, the results of this analysis can be visualized as a four-set Venn diagram, 
+indicating the amount of overlap between the sets. Figure 20, below, shows the results of this 
+analysis.  
+  
+Figure 20: A Venn diagram showing the overlap of terms between the combined cyber terms dictionary, the set of lemmatized 
+resilience definitions, the tf*idf analysis results, and the Latent Dirichlet Allocation analysis results. 
+
+75 
+As is readily apparent, there is little overlap between the resilience analyses and the combined set 
+of cyber terms. The coverage ratio, a simple division of the total number of terms overlapping 
+the dictionary divided by the dictionary, is found to be 2.46%. The following words overlapped 
+with the dictionary:  
+ Tf*idf analysis (4): State, recovery, resource, and attack. 
+ LDA analysis (1): State. 
+ Lemmatized Resilience Definitions (33): Exposure, disruption, response, hazard, breach, 
+target, learning, operation, knowledge, skill, state, group, goal, attribute, author, failure, 
+attack, damage, degradation, capability, stage, vulnerability, problem, activity, asset, 
+resource, stability, recovery, incident, relationship, survivability, compromise, and 
+critical.  
+Given the research in Chapter 3 on the challenges of finding a resilience definition, it is possible 
+that the resilience terms simply are not popular or relevant enough to have made it into the 
+dictionary but may still be present in the broader corpus of 4,465 terms that were culled. The 
+same analyses can be performed on that broader set to account for this possibility. The results are 
+shown in Figure 21, below.  
+
+76 
+ 
+Figure 21: A Venn diagram showing the overlap of terms between the total corpus of cyber terms, the set of lemmatized resilience 
+definitions, the tf*idf analysis results, and the Latent Dirichlet Allocation analysis results. 
+The coverage ratio for this broader set is lower, at 1.43%. The reduction in coverage ratio 
+indicates that the overlapped terms are sufficiently relevant in the cyber term corpus to have 
+passed selection into the final dictionary, and that there are not proportionally more terms present 
+in the broader corpus that are unaccounted for. The overlapped terms are:  
+ Tf*idf analysis (15): State, recovery, resource, attack, environment, event, process, 
+disturbance, cyber, function, risk, outcome, identity, individual, and adversity.  
+ LDA analysis (8): State, variable, function, disturbance, process, event, mitigate, and 
+environment. 
+
+77 
+ Lemmatized Resilience Definitions (64): Exposure, environment, mitigate, challenge, 
+disruption, response, event, hazard, device, risk, breach, identity, cybersecurity, target, 
+bend, learning, operation, knowledge, process, skill, disturbance, cyber, parameter, 
+network, core, outcome, state, group, goal, individual, attribute, failure, author, actor, 
+specific, safety, attack, context, domain, aid, damage, adversity, degradation, threat, 
+comparison, capability, stage, vulnerability, baseline, problem, identify, activity, asset, 
+resource, stability, recovery, function, variable, incident, relationship, service, 
+survivability, compromise, and critical.   
+As this analysis shows, both the curated dictionary and the broader corpus of cyber-
+related terms have minimal exposure to the resilience terms identified in the previous chapter. A 
+portion of the resilience terms do appear in both the broader corpus and the final dictionary, but 
+the lack of broader context for the terms in the dictionary prevents a more thorough analysis of 
+co-occurrence and semantic relationships between the terms—are the resilience terms being used 
+in ways that connote resilience as the interdisciplinary community has loosely defined it? That 
+level of analysis will be saved for answering the central research question when the semantic 
+richness in whole documents can be used.  
+ 
+The Analytical Scaffold and Term Classification by Time and Scale 
+ 
+To assess how existing guidance supports the development of cyber resilience, the 
+concepts presented in this chapter can be used to create a conceptual scaffolding or framework 
+from which to analyze existing guidance. At the meta level, resilience has components across 
+both time and scale, as previously described in Chapter 4. These can be used to develop a two-
+
+78 
+dimensional scale similar to Figure 11 in Chapter 3. The use of a two-dimensional scale will 
+allow for both qualitative and quantitative analysis of the existing cyber guidance. Additionally, 
+the use of a two-dimensional scale also provides the start of a useful mental model for 
+practitioners to think through qualitatively, and potentially quantitatively, how to assess the level 
+of resilience in an organization or develop a strategy to improve cyber resilience.  
+ 
+The two-dimensional scaffold assesses each term for its localized point of action with 
+respect to time and scale. For example, a firewall operates at machine speed (time) and is a part 
+of the technical system (scale), whereas a cyber risk management and governance process in an 
+organization operates at human speeds (time), measured in days to weeks, and primarily at the 
+organizational level (scale). The qualitative classifiers will be assigned numerical values solely 
+for the purpose of quantitative analysis later, such as centroid calculations based on scatterplots 
+of the terms and similar approaches. To account for the log-log relationship identified in Chapter 
+4, and to provide further separation for quantitative analysis, the numerical values assigned to 
+each category of time and scale will be taken from the Fibonacci sequence rather than sequential 
+integers. Table 6, below, shows the classifier assignments. Further details on what each classified 
+generally covers will follow. 
+Table 6: Assignment of classifiers for time and scale attributes. Numerical assignment follows the Fibonacci sequence. 
+Numerical Assignment 
+Time 
+Scale 
+2 
+Immediate 
+Technical 
+3 
+Short 
+Sociotechnical 
+5 
+Mid 
+Organizational 
+8 
+Long 
+Community/Sector 
+13 
+Generational 
+National/International 
+
+79 
+For the time classifiers, the terms connote the following: 
+ Immediate: Seconds to minutes, machine speed, instantaneous, automated. May apply to 
+terms like automated logging, real-time alerts, intrusion detection systems, firewalls, etc.  
+ Short: Hours to days, benchmarked off human capacity for response and adaptation. May 
+apply to things like incident response, software patching, DevOps, security information 
+and event management (SIEM) systems, etc. 
+ Mid: Weeks to months, the time it takes organizations to implement longer term changes. 
+May apply to enterprise architecture updates, risk management, supply chain 
+management, policy changes, threat hunting, etc.  
+ Long: Years. These are system shifts or adaptations that evolve over an extended period, 
+such as implementation of new national or international regulations or standards. May 
+apply to public laws, governance and risk compliance activities, executive orders, long-
+term strategy, etc.   
+ Generational: Multiple decades to centuries. Not likely to be seen for cyber resilience 
+applications, but would apply to things like climate change, geopolitical shifts, evolution 
+of technology and norms, ecological changes, etc.  
+For the scale classifiers, the terms generally apply as follows:  
+ Technical: The focus is on individual technical components or a technical system that do 
+not require significant human interaction. May apply to terms like firewall, cryptographic 
+keys, wide area network, hard drive, etc.  
+ Sociotechnical: The combination of technical systems that require human interaction to 
+function properly. May apply to terms like identity and access management, access 
+
+80 
+controls, incident response, security information and event management systems, DevOps 
+pipelines, software development, threat hunting, vulnerability management, etc.  
+ Organizational: The human side of the sociotechnical system, where primarily human-
+driven activities take place. This includes terms like risk management, supply chain 
+management, governance, policy development, organizational strategy, organizational 
+culture, etc.  
+ Community/Sector: How the organization fits into a broader ecosystem. The ecosystem 
+has a generally identifiable set of norms, practices, and governance structure. This 
+includes terms like sector-specific policies, critical infrastructure, ecosystems, industry 
+standard development, interoperability, information sharing and analysis centers, etc.  
+ National/International: Focuses primarily on actions that operate on a national or 
+international scale. May apply to terms like national resilience, executive orders, United 
+Nations or other international body actions, such as the Convention on Climate Change 
+(COP29) framework on reduction targets, etc. Language here is expected to be far less 
+technical and more broadly applicable than for any other scale.   
+To assist in classification across both dimensions for each for the 1,339 terms, the above 
+information was fed into the Claude 3.5 Sonnet algorithm to generate example classifiers for 
+each scale to support follow on few-shot classification [132].7 The example classifiers are used in 
+with a Jaccard similarity calculation to determine overlap with terms to classify the terms by 
+time, scale, and numerical assignments, and export the results to a file for review. The output of 
+the classification script was manually reviewed to check for reasonableness of classifier 
+ 
+7 Several algorithms were tried, including ChatGPT and DistilBERT (via a python script), but Claude 3.5 Sonnet 
+proved more capable for this application of zero-shot application than the other algorithms.  
+
+81 
+assignment and its corresponding numerical assignment, and the classification was performed 
+iteratively to adjust example language. Several small, final adjustments were made manually to 
+arrive at a final classification and numerical assignment. The final dictionary, with classifiers but 
+without numerical assignments, is provided in Appendix 1 for further review.  
+ 
+Curating Cyber and Resilience Guidance and Standards for Evaluation 
+ 
+The central research question (RQ1) seeks to determine whether a single strategy, 
+standard, or other guidance document exists to provide organizations at multiple levels of society 
+with support for improving cyber resilience. An expansive search was conducted to gather as 
+many different cyber standards and other guidance documents as possible. 37 documents were 
+gathered, including those from U.S and other international government agencies, standards 
+organizations, and other sources, and from highly technical publications such as firmware 
+resiliency to holistic or sector-specific standards, such as critical infrastructure or cyber supply 
+chain risk management and cyber-resilient systems development:  
+ ISO/IEC 22301: Security and Resilience [135] 
+ ISO/IEC 27001: Information Security, Cybersecurity and Privacy Protection [136] 
+ ISO/IEC 27002: Information Security [137] 
+ ISO/IEC 31000: Risk Management Guidelines [138] 
+ NIST Cybersecurity Framework Version 2.0 [139] 
+ NIST SP 800-37: Risk Management Framework for Information Systems and 
+Organizations [140] 
+ NIST SP 800-50: Building a Cybersecurity and Privacy Learning Program [141] 
+
+82 
+ NIST SP 800-53: Assessing Security and Privacy Controls in Information Systems and 
+Organizations [31] 
+ NIST 800-61: Incident Response Recommendations and Considerations for 
+Cybersecurity Risk Management [142] 
+ NIST 800-82: Guide to Operational Technology Security [143] 
+ NIST SP 800-160 Volume 1: Systems Security Engineering [144] 
+ NIST SP 800-160 Volume 2: Developing Cyber-Resilient Systems [28] 
+ NIST SP 800-161: Cybersecurity Supply Chain Risk Management Practices for Systems 
+and Organizations [145] 
+ NIST SP 800-193: Platform Firmware Resiliency Guidelines [146] 
+ NIST SP 800-207: Zero Trust Architecture [147] 
+ NIST SP 800-221A: Information and Communications Technology Risk Outcomes [148] 
+ NIST SP 1800-35: Implementing Zero Trust Architecture [149] 
+ National Cyber Security Centre Cyber Assessment Framework Version 3.2 (United 
+Kingdom) [150] 
+ BSI Standard 100-1: Information Security Management Systems (Germany) [151] 
+ BSI Standard 200-1: Information Security Management Systems (Germany) [152] 
+ BSI Standard 200-2: IT-Grundschutz Methodology (Germany) [153] 
+ BSI Standard 200-3: Risk Analysis Based on IT-Grundschutz (Germany) [154] 
+ BSI IT-Grundschutz Compendium (Germany) [155] 
+ Center for Internet Security Critical Security Controls Version 8.1 [156] 
+ Department of Defense Cybersecurity Maturity Model Certification Version 2.0 [157] 
+ COBIT 5 Framework [158] 
+
+83 
+ Axelos ITIL 4: Framework for the Management of IT-Enabled Services [159] 
+ Department of Energy – Energy Sector Cybersecurity Framework Implementation 
+Guidance [160] 
+ Federal Financial Institutions Examination Council Cybersecurity Assessment Tool [161] 
+ OCTAVE Criteria Version 2.0 [162] 
+ Executive Order 14028 on Strengthening and Promoting Innovation in the Nation’s 
+Cybersecurity [163] 
+ World Economic Forum Cyber Resilience Index [164] 
+ MITRE Cyber Resiliency Engineering Aid [165] 
+ MITRE Cyber Resiliency Framework and Cyber Survivability Attributes [166] 
+ Lockheed Martin Cyber Resiliency Level [167] 
+ Business Resilience Council Operational Resilience Framework Version 2.0 [168] 
+ ENISA Cybersecurity Culture Guidelines [169] 
+To check the scaffolding for adequacy and provide juxtaposition for the cyber frameworks, 
+standards, and other guidance, an additional twelve sources were gathered from other disciplines 
+such as climate change and disaster response, national resilience, community resilience, and 
+social-ecological resilience, for a total of 49 documents. The search used iterative prompting 
+with GPT-4 to identify standards or other resilience strategy documents that would not be 
+forthcoming as easily through a traditional internet search [11]. This human-machine teaming 
+demonstrated that more than half of the documents below have similar features to the other 
+resilience documents and cybersecurity frameworks.  
+ National Resilience Strategy (United States) [170] 
+
+84 
+ National Resilience in a Changing Security Environment (Ukraine) [171] 
+ National Climate Resilience Framework (United States) [172] 
+ World Health Organization: Health Emergency and Disaster Risk Management 
+Framework [173] 
+ Basel Committee on Banking Supervision: Principles for Operational Resilience [174] 
+ Resilience Alliance: Assessing Resilience in Social-Ecological Systems [175] 
+ Community Resilience System Initiative Steering Committee – Final Report [176] 
+ Asia-Pacific Economic Cooperation Disaster Risk Reduction Framework [177] 
+ North American Electric Reliability Corporation Reliability Standards for the Bulk 
+Electric Systems of North America [178] 
+ Cybersecurity & Infrastructure Security Agency Infrastructure Resilience Planning 
+Framework [179] 
+ Cybersecurity & Infrastructure Security Agency National Infrastructure Protection Plan 
+[180] 
+ Organization for Economic Cooperation and Development Guidelines for Resilience 
+Systems Analysis [181] 
+ 
+As described in Chapter 2, the documents were passed through a curation pipeline to 
+clean the documents, remove stop words, and tokenize and lemmatize the text. Stop word 
+removal and tokenization was accomplished with the NLTK (V3.8.1) package along with a 
+custom stop word dictionary developed through an iterative approach during the resilience 
+document pre-processing and further customized based on additional iterative analysis with this 
+new document set [16], [22]. The tokenized definitions were lemmatized using the spaCy 
+
+85 
+(V3.7.5) package with a maximum character length set to 5,000,000 to account for the longest 
+texts [18].  
+ 
+A Data-Centric Understanding of the Corpus of 37 Cyber Documents 
+ 
+The remainder of this chapter analyzes the documents using tf*idf, Latent Dirichlet 
+Allocation, cosine similarity, and bigram analyses, on the full corpus, the 37 cyber texts, and the 
+twelve non-cyber texts, to understand the language in the documents. Splitting the analyses 
+between the two groups of text allows for greater understanding on how resilience terms appear 
+in cyber and non-cyber, but resilience related, texts. Classification with the previously developed 
+scaffolding and the analysis of those classification results will be performed in the next chapter.  
+ 
+Hypothesis 4 postulated that the cyber guidance, frameworks, standards, and other 
+strategies primarily involve the technical and related sociotechnical aspects of cyber security, not 
+the broader aspects of resilience as understood by the broader interdisciplinary community. The 
+analyses in this section indicate that the cyber documents in this study focus on risk management 
+as the central factor in achieving cybersecurity objectives. The analyses used for the upcoming 
+analyses use the following python packages: glob (V0.1.5), json (V3.13), pandas (V2.1.4), 
+numpy (V1.24.3), matplotlib (V3.8), seaborn (V0.12.2), scikit-learn (V1.4.2), 
+wordcloud (V1.9.3), and NLTK (V3.8.1) [16], [21], [22], [71], [72], [125], [126], [127], [130], 
+[131], [182]. LDA analyses were confined to ten topics with a limit of twenty iterations to 
+converge on the set of topics. As discussed in Chapter 3, ten topics is a reasonable starting point. 
+Heuristic and qualitative analysis was iteratively conducted on the LDA results to ensure 
+adequate topic separation content coverage. Ten topics proved sufficient to describe each of the 
+
+86 
+small texts and the corpus as a whole without much overlap. The results from each analysis will 
+be briefly described, followed by a more thorough and integrative analysis of each body of texts.  
+ 
+Time Frequency-Inverse Document Frequency Analysis 
+ 
+Each of the documents was analyzed through the tf*idf processing pipeline, and the 
+results at the document and corpus level were collected. At the level of an individual document, 
+the statistical descriptors in Table 7 below indicate that most terms did not have meaningful 
+significance within the body of the text. The mean score was close to zero, though the average 
+(mean) maximum score for a document was 0.863. Many of these documents are short compared 
+to broader machine learning data sets, so lower scores are expected since the terms simply cannot 
+repeat often enough to emerge with a higher score as they would be able to in a larger data set. 
+To understand the aggregate behavior across the 37 cyber texts, though, the scores for terms were 
+summed and the top 25 results printed. The results of those analyses are shown in Table 8 and 
+Figure 22 below.  
+Table 7: Statistical descriptors for the histogram of tf*idf scores from the cyber text corpus 
+Descriptor 
+Value 
+Mean 
+0.000957 
+Standard Deviation 
+0.007864 
+Minimum 
+0.0 
+Maximum 
+0.863318 
+ 
+
+87 
+Table 8: Top 25 terms by combined tf*idf score from the cyber text corpus 
+Term 
+Td-idf Score 
+Risk 
+7.675829 
+Security 
+6.618338 
+Information 
+5.538127 
+Organization 
+4.971197 
+Management 
+3.874349 
+Process 
+3.307799 
+Include 
+2.985525 
+Service 
+2.928825 
+Control 
+2.747019 
+Access 
+2.297922 
+Enterprise 
+2.270666 
+Requirement 
+2.212232 
+Cybersecurity 
+2.139381 
+Provide 
+2.137164 
+Cyber 
+2.116034 
+Organization 
+2.012935 
+Business 
+1.928364 
+Device 
+1.900593 
+Resource 
+1.848839 
+Datum 
+1.826995 
+Identify 
+1.813171 
+
+88 
+Network 
+1.812263 
+Level 
+1.803199 
+Need 
+1.697559 
+User 
+1.687856 
+ 
+ 
+Figure 22: Word cloud of the top 25 tf*idf terms from the corpus of 37 cyber texts. 
+ 
+As the word cloud and top terms indicate, the largest themes across the body of 37 cyber 
+texts are in risk and information management within an organization. While the efficacy of risk 
+management procedures will not be explored in this research, the prior literature in this area calls 
+its effectiveness into question [183]. Tellingly, the term resilien* does not appear in the top 25 
+terms, despite several of the texts identifying resilience as a stated objective of the guidance.  
+ 
+
+89 
+Latent Dirichlet Allocation Analysis 
+ 
+The Latent Dirichlet Allocation analysis results for the 37 cyber texts cover the major 
+themes of the current best practices in organizational cyber security. The ten topics are provided 
+in Table 9. As an unofficial or heuristic evaluation, the topics generally align with the Certified 
+Information System Security Practitioner (CISSP) and the Security+ topical domains and body 
+of knowledge, as should be expected with certifications demonstrating a solid fundamental 
+understanding of the core concepts and best practices in organizational cybersecurity.  
+Table 9: Topics and interpretations from a Latent Dirichlet Allocation analysis of the cyber text corpus 
+Topic 
+Terms in the Topic 
+Overall Theme 
+1 
+Carry, cyber, transfer, experience, 
+introduce, proper, arise, organizational 
+Organizational cybersecurity 
+2 
+Security, information, requirement, 
+support, human, organization, 
+consideration, zone, offer, frequently 
+Security requirements and support 
+3 
+Authority, treatment, role, risk, public, 
+position, asset, review, select, package 
+Asset management and authorization 
+4 
+Stage, risk, construct, team, market, 
+deployment, language, format, 
+significant, overall 
+Project management and 
+implementation 
+5 
+Member, fundamental, detect, ability, 
+enhance, patch, locate, perspective, 
+authentication, reference 
+Security enhancement and 
+authentication 
+
+90 
+6 
+Security, time, consideration, 
+management, information, 
+responsibilities, strategy, flow, room, 
+significantly 
+Security strategy 
+7 
+Inventory, problem, personnel, interact, 
+provision, future, skill, integrity, decide, 
+connection 
+Personnel and system integrity 
+8 
+Risk, security, information, 
+organization, management, process, 
+service, include, control, enterprise 
+Enterprise security controls 
+9 
+Similar, management, expectation, 
+trade, intrusion, profile, asset, useful, 
+conflict, large 
+Asset and intrusion management 
+10 
+Statement, artifact, staff, capture, 
+requirement, encryption, accord, 
+organize, hand, coordinate 
+Staff and security implementation 
+ 
+Cosine Similarity Analysis 
+ 
+Cosine similarity is a measure of relatedness between two texts. The similarity values can 
+fall between zero and one, with zero representing no overlap or similarity between the 
+documents, and one representing a high degree of similarity. In the analysis of the 37 cyber texts, 
+the majority of the cosine similarity scores, shown in the histogram in Figure 23 below fall 
+between 0.1 and 0.4, indicating that the documents do not possess a high degree of similarity and 
+
+91 
+maintain their distinctiveness. The low similarity scores suggest that the corpus of 37 cyber texts 
+will provide a broader perspective on cyber resilience than if the scores had a higher degree of 
+similarity.   
+ 
+Figure 23: Histogram of cosine similarities for 37 cyber texts. 
+ 
+ 
+The pair index, Figure 24, shows the rank ordering of similarity scores, revealing the 
+distribution shape and any outliers. While the histogram shows how many pairs have each 
+similarity score, the pair index plot shows which pairs represent the highest and lowest 
+similarities and how gradually or sharply the similarities change across all document pairs. This 
+helps identify clusters of similarly-related documents and spot unusual document relationships 
+that might be hidden in histogram bins. The "pair index" in the scatter plot represents the index 
+of the document pairs when the similarity values are flattened into a single list. The positions of 
+
+92 
+the similarity values and shape of the pair index provide an alternative visual interpretation of the 
+information in this histogram, particularly in highlighting how rapidly the paired similarity 
+scores change across the corpus. In this case, as the histogram in Figure 23 indicates, most of the 
+pairwise similarity scores indicate low similarity.   
+ 
+Figure 24: Pair index of sorted cosine similarities showing overall similarity trends in the corpus of 37 cyber texts. 
+ 
+Frequency of Word Pairings: Bigram Analysis 
+ 
+Finally, a bigram analysis of the texts indicates how often a particular word appears with 
+another word and provides greater insight into how a particular word tends to be used in the 
+texts. This analysis was performed on the 37 texts for the top bigrams containing the words 
+“resilience,” “risk,” and “security,” since the latter two words were dominant in the tf*idf 
+analysis from Table 8. For the bigrams containing “resilience,” the analysis is performed for both 
+
+93 
+the top bigrams containing “resilience” and the top bigrams in the documents with a higher tf*idf 
+score for resilience.   
+Table 10: Bigram analysis for "resilience" of 37 cyber texts, for bigrams containing "resilience" and document frequency for texts 
+containing "resilience" 
+Term: Resilience 
+Frequency 
+Term: Resilience 
+Document Frequency
+Cyber resilience 
+74 
+Risk management 
+33 
+Operational resilience 
+41 
+Risk assessment 
+32 
+System resilience 
+20 
+Information system 
+31 
+Security resilience  
+19 
+Information security 
+30 
+Organizational resilience 
+12 
+Internal external 
+28 
+Resilience engineering 
+12 
+Information technology 
+28 
+Resilience principle 
+9 
+Confidentiality integrity 
+27 
+Resilience safety 
+8 
+Security control 
+27 
+Culture resilience 
+8 
+Management system 
+26 
+Resilience survivability 
+7 
+Management process 
+26 
+ 
+Table 11: Top 10 bigrams containing "risk" or "security" in the 37 cyber texts and their frequency 
+Term: Risk 
+Frequency 
+Term: Security 
+Frequency 
+Risk management 
+1573 
+Information security 
+2017 
+Risk assessment 
+624 
+Security privacy 
+1346 
+Cybersecurity risk 
+478 
+System security 
+782 
+Risk analysis 
+339 
+Security aspect 
+730 
+Supply risk 
+337 
+Security requirement 
+693 
+
+94 
+Privacy risk 
+310 
+Security policy 
+566 
+Chain risk 
+299 
+Security concept 
+454 
+Security risk 
+267 
+Security safeguard 
+412 
+Risk response 
+221 
+Security incident 
+412 
+Risk supply 
+203 
+Security objective 
+351 
+ 
+ 
+Table 10 and Table 11 show a pronounced contrast in how the same set of texts treat 
+resilience with request to the common cybersecurity terms “risk” and “security.” The frequency 
+with which the documents discuss more traditional terms compared to resilience terms indicates, 
+despite the titles or stated objectives, these documents are not likely to address resilience 
+concepts at depth, or in a manner commensurate with the broader interdisciplinary community. 
+As Table 10 shows, the majority of the cyber texts discuss resilience in some capacity, but from 
+the documents that do discuss resilience, the top bigrams from those documents are traditional 
+cybersecurity terminology.  
+ 
+A Data-Centric Understanding of the Non-Cyber Document Corpus 
+ 
+The same analysis was performed on the twelve non-cyber documents to get a 
+comparative understanding against the 37 cyber documents. The tf*idf, Latent Dirichlet 
+Allocation, and bigram analyses indicate, as expected, a stronger focus on the concepts of 
+resilience. These documents were selected as a pseudo-control group since they were explicitly 
+resilience focused and originated from non-cyber perspectives. Of note, the results from these 
+analyses suggest that this corpus of texts also falls somewhat short of the interdisciplinary 
+
+95 
+definition of resilience and its related concepts, though it is clear that they are more closely 
+aligned than the cyber texts.  
+ 
+Time Frequency-Inverse Document Frequency Analysis 
+ 
+At the level of an individual document, the statistical descriptors of the non-cyber texts, 
+in Table 12 indicate that most terms did not have meaningful significance within the body of the 
+text. The mean score was close to zero, though the average (mean) maximum score for a 
+document was 0.722. Many of these documents are short compared to broader machine learning 
+data sets, so lower scores are expected since the terms simply cannot repeat often enough to 
+emerge with a higher score as they would be able to in a larger data set. The top 25 terms from 
+the tf*idf analysis are shown in Table 13, below, and visualized as a word cloud in Figure 25. 
+Table 12: Statistical descriptors for the histogram of tf*idf scores from the cyber text corpus 
+Descriptor 
+Value 
+Mean 
+0.001655 
+Standard Deviation 
+0.009891 
+Minimum 
+0.0 
+Maximum 
+0.722077 
+ 
+Table 13: Top 25 terms by combined tf*idf score from the cyber text corpus 
+Term 
+Td-idf Score 
+Resilience 
+2.693974 
+Community 
+2.347767 
+
+96 
+Risk 
+1.961130 
+Infrastructure 
+1.334006 
+Include 
+1.224391 
+Critical 
+1.140232 
+Provide 
+0.947927 
+National 
+0.926513 
+Plan 
+0.892367 
+Change 
+0.888363 
+Health 
+0.817340 
+Climate 
+0.813726 
+Disaster 
+0.807247 
+Security 
+0.805513 
+Management 
+0.793606 
+Support 
+0.742548 
+Identify 
+0.727888 
+Impact 
+0.714154 
+Resource 
+0.711756 
+Sector 
+0.680041 
+Information 
+0.679013 
+Process 
+0.652294 
+Need 
+0.593144 
+Ensure 
+0.592306 
+Emergency 
+0.590405 
+
+97 
+ 
+ 
+ 
+Figure 25: Word cloud of the top 25 tf*idf terms from the corpus of twelve non-cyber texts. 
+ 
+The tf*idf and word cloud analysis results indicate a much different corpus of texts than 
+for the 37 cyber texts. The twelve non-cyber texts place a greater emphasis on change and factors 
+beyond the organization’s control than for the 37 cyber texts.  
+ 
+Latent Dirichlet Allocation Analysis 
+ 
+The Latent Dirichlet Allocation analysis results in Table 14, contrary to the results in 
+Table 9 for the 37 cyber texts, implicitly emphasize adaptation, change, and cross-scale effects. 
+The set of topics generally addresses the time and scale aspects of resilience identified in the 
+previous chapter. For scale, the topics address organizational, community, national, and global 
+
+98 
+aspects of resilience. For time, the topics address near-term disaster recovery to longer term 
+recovery and adaptation.  
+ 
+Table 14: Topics and interpretations from a Latent Dirichlet Allocation analysis of the non-cyber text corpus 
+Topic
+Terms in the Topic 
+Overall Theme 
+1 
+Channel, setting, trip, follow, 
+leadership, receive, pc, circumstance 
+Leadership and operations 
+2 
+Owner, group, infrastructure, 
+implementation, contract, funding, 
+territorial, retire, traditional 
+Infrastructure and funding 
+3 
+Baseline, second, recovery, type, 
+process, attribute, significant, schedule, 
+place, stage 
+Recovery process 
+4 
+Strong, threat, resilience, coordinated, 
+modify, distance, line, infrastructure, 
+specific, grant 
+Infrastructure security 
+5 
+Natural, change, hazard, resilience, 
+ability, bank, early, experience, 
+community, mean 
+Community resilience 
+6 
+Resilience, community, risk, 
+infrastructure, critical, include, 
+national, plan, security, provide 
+National security planning 
+
+99 
+7 
+Legal, help, ramp, language, recover, 
+prevent, staff, determine, trust 
+Legal recovery 
+8 
+Characteristic, fund, flexibility, 
+resilience, shock, exist, climate, 
+guidance, safe, minute 
+Climate and resilience 
+9 
+Specification, focus, transition, leave, 
+miss, reactive, utilize, context, 
+infrastructure, list 
+Infrastructure transitions 
+10 
+Health, include, emergency, 
+subsequent, stress, challenge, people, 
+attachment, excursion, retire 
+Emergency and health response 
+ 
+Cosine Similarity Analysis 
+ 
+The cosine similarity analysis shows that the twelve non-cyber texts have equivalent 
+similarity metrics with the 37 cyber texts. The bulk of the documents had similarity scores 
+between 0.2 and 0.4, with all documents falling between 0.1 and 0.7, as showing in the histogram 
+in Figure 26. The pair index results for the twelve non-cyber texts, shown in Figure 27, indicate 
+that the corpus of texts shares low similarity scores. The generally linear progression of the pair 
+index shows no clustering of documents that would suggest greater similarity between a subset.  
+
+100 
+ 
+Figure 26: Histogram of cosine similarities for twelve non-cyber texts. 
+ 
+ 
+Figure 27: Pair index of sorted cosine similarities showing overall similarity trends in the corpus of twelve non-cyber texts. 
+
+101 
+ 
+Frequency of Word Pairings: Bigram Analysis 
+ 
+The same bigram analysis was repeated for the twelve non-cyber texts, with the results 
+shown in Table 15 and Table 16, below. The bigrams strike a different tone than for the 37 cyber 
+texts, with an emphasis on both traditional risk management and broader resilience concepts. The 
+terms also appear in greater numbers, as expected for resilience-focused documents. Notably, the 
+bigram “Security resilience” appeared in the list of top bigrams for the term “security,” which 
+indicates a likely connection between security and resilience outcomes in the documents.  
+ 
+Table 15: Bigram analysis for "resilience" of twelve non-cyber texts, for bigrams containing "resilience" and document frequency 
+for texts containing "resilience" 
+Term: Resilience 
+Frequency 
+Term: Resilience 
+Document Frequency
+National resilience 
+678 
+Risk assessment 
+11 
+Security resilience 
+360 
+Public private 
+10 
+Resilience ensure 
+306 
+Risk management 
+10 
+Community resilience 
+187 
+Good practice 
+10 
+Resilience system 
+121 
+System include 
+10 
+Resilience concept 
+83 
+Private sector 
+9 
+Climate resilience 
+74 
+Community region 
+9 
+System resilience 
+62 
+Natural hazard 
+9 
+Enhance resilience 
+54 
+Supply chain 
+9 
+Ensure resilience 
+53 
+Risk reduction 
+9 
+ 
+
+102 
+Table 16: Top 10 bigrams containing "risk" or "security" in the twelve non-cyber texts and their frequency 
+Term: Risk 
+Frequency 
+Term: Security 
+Frequency 
+Risk assessment 
+276 
+National security 
+511 
+Risk management  
+171 
+Security resilience 
+360 
+Risk threat 
+147 
+Cyber security 
+206 
+Disaster risk 
+63 
+Security plan 
+133 
+Assess risk 
+58 
+Security environment 
+121 
+Security risk 
+54 
+Infrastructure security 
+119 
+Reduce risk 
+50 
+Security defense 
+90 
+Manage risk 
+45 
+Physical security 
+78 
+Risk reduction 
+42 
+Security policy 
+61 
+National risk 
+41 
+Security ensure 
+55 
+ 
+A Data-Centric Understanding of the Entire Document Corpus 
+ 
+Intuitively, the sum of the two sets of text documents, the 37 cyber texts and the twelve 
+non-cyber texts, should be the sum of their group results to this point, but since several of the 
+methods, in particular Latent Dirichlet Allocation and cosine similarities, require the full corpus 
+of text, the results will be slightly different. This penultimate section repeats the same analyses 
+from the two separate blocks of texts. The final section of this chapter will make integrative 
+observations about the development of the texts and the heuristic-based results on how well the 
+37 cyber texts will address some or all aspects of cyber resilience.  
+ 
+
+103 
+Time Frequency-Inverse Document Frequency Analysis 
+ 
+At the level of an individual document, the statistical descriptors of the non-cyber texts, 
+in Table 17, below, indicate that most terms did not have meaningful significance within the 
+body of the text. The mean score was close to zero again, though the average (mean) maximum 
+score for a document was 0.858—closer to the maximum for the 37 cyber texts. The top 25 terms 
+from the tf*idf analysis are shown in Table 18, below, and visualized as a word cloud in Figure 
+28. 
+Table 17: Statistical descriptors for the histogram of tf*idf scores from the cyber text corpus 
+Descriptor 
+Value 
+Mean 
+0.007885 
+Standard Deviation 
+0.007094 
+Minimum 
+0.0 
+Maximum 
+0.858698 
+ 
+Table 18: Top 25 terms by combined tf*idf score from the cyber text corpus 
+Term 
+Td-idf Score 
+Risk 
+9.193893 
+Security 
+7.279186 
+Information 
+6.017220 
+Organization 
+5.132970 
+Management 
+4.481233 
+Include 
+3.977743 
+Resilience 
+3.831211 
+
+104 
+Process 
+3.815730 
+Service 
+3.352385 
+Control 
+2.960307 
+Provide 
+2.913416 
+Community 
+2.519514 
+Cyber 
+2.494043 
+Access 
+2.481754 
+Requirement 
+2.460009 
+Enterprise 
+2.425171 
+Identify 
+2.423940 
+Resource 
+4.413110 
+Cybersecurity 
+2.351744 
+Critical 
+2.298630 
+Business 
+2.296908 
+Level 
+2.265422 
+Support 
+2.201590 
+Plan 
+2.167644 
+Change 
+2.155858 
+ 
+
+105 
+ 
+Figure 28: Word cloud of the top 25 tf*idf terms from the corpus of 49 texts. 
+While the word cloud remains generally the same compared to the word cloud and tf*idf results 
+from the 37 cyber texts, in Figure 22 and Table 8, the inclusion of resilience, business, 
+community, and change show the influence of the non-cyber texts. The broad corpus of 
+documents seems to align with cybersecurity best practices and not be significantly influenced 
+by the interdisciplinary resilience research.  
+ 
+Latent Dirichlet Allocation Analysis 
+ 
+For the full body of texts, the Latent Dirichlet Allocation analysis strikes a balance 
+between traditional cybersecurity subject matter but does exhibit several aspects of resilience in 
+the topic list. In particular, Table 19 highlights topics related to investment and transition and 
+community resilience, and topic 5 on regulation could be defined as both cyber- and resilience-
+related.  
+
+106 
+ 
+Table 19: Topics and interpretations from a Latent Dirichlet Allocation analysis of the cyber text corpus 
+Topic
+Terms in the Topic 
+Overall Theme 
+1 
+Center, sector, critical, fail, information, 
+key, resilience, transfer, page, assess 
+Critical information assessment 
+2 
+Order, management, importance, zone, 
+hardware, container, resource, follow, 
+critical, supply 
+Resource management 
+3 
+Automate, room, reason, treatment, 
+previous, community, security, perform, 
+assistance, society 
+Community security 
+4 
+Stakeholder, continuity, minimize, 
+category, technical, determination, lesson, 
+furthermore, simple, path 
+Technical planning 
+5 
+Module, global, direction, ability, 
+evaluate, place, major, posture, regulation, 
+increase 
+Regulation 
+6 
+Risk, time, container, simulation, 
+restriction, establish, enterprise, fulfill, 
+rule, technical 
+Enterprise risk management 
+7 
+Lack, properly, investment, good, real, 
+post, social, introduction, deliver, 
+transition 
+Investments and transitions 
+
+107 
+8 
+Resilience, community, climate, central, 
+focus, external, disturbance, emergency, 
+retain, measurement 
+Community resilience 
+9 
+Risk, security, information, organization, 
+management, include, process, resilience, 
+service, control 
+Organizational security 
+10 
+Resource, assessment, station, stage, 
+category, environmental, http, accordance, 
+participate, cover 
+Environmental assessment 
+ 
+Cosine Similarity Analysis 
+ 
+The cosine similarity analysis does not reveal anything unexpected compared to the 
+previous analyses of the individual sets of texts. The low similarity scores, with most falling 
+between 0.1 and 0.4 (shown in Figure 29), indicate that each of the documents has a high degree 
+of independence from the others. There is minimal redundancy between the different texts, even 
+when adding the twelve non-cyber documents into the mix. Likewise, the pair index retains the 
+same basic shape as the prior analyses showed (in Figure 24 and Figure 27). The lack of 
+clustering in the pair index curve further reinforces the lack of independence between the 
+documents, and the shallow slope follows the same shape as the individual results.   
+
+108 
+ 
+Figure 29: Histogram of cosine similarities for the 49-text corpus. 
+ 
+Figure 30: Pair index of sorted cosine similarities showing overall similarity trends in the corpus of 49 texts. 
+
+109 
+Frequency of Word Pairings: Bigram Analysis 
+ 
+The bigram analyses of the full body of documents shown in Table 20 and Table 21 skew 
+heavily toward the traditional cybersecurity terminology. For documents that did mention 
+resilience, the top ten bigram pairs in those documents are associated with core cybersecurity 
+disciplines and practices. The addition of resilience-focused, non-cyber documents did assist in 
+ensuring that cyber texts had the right pairings measured in them. Of note, the frequency with 
+which major cybersecurity terms appeared indicates a strong tie between the cybersecurity texts, 
+potentially diminishing aspects of resilience, which did not make the top ten terms for risk or 
+security.  
+ 
+Table 20: Bigram analysis for "resilience" of all 49 texts, for bigrams containing "resilience" and document frequency for texts 
+containing "resilience" 
+Term: Resilience 
+Frequency 
+Term: Resilience 
+Document Frequency
+National resilience 
+678 
+Risk assessment 
+43 
+Security resilience 
+379 
+Risk management 
+43 
+Resilience ensure 
+307 
+Information system 
+39 
+Community resilience 
+187 
+Good practice 
+36 
+Resilience system 
+125 
+Supply chain 
+35 
+Resilience concept 
+85 
+Internal external 
+33 
+System resilience 
+82 
+Information technology 
+33 
+Operational resilience 
+81 
+Information security 
+33 
+Cyber resilience 
+74 
+Management system 
+32 
+Climate resilience 
+74 
+Management process 
+32 
+ 
+
+110 
+Table 21: Top 10 bigrams containing "risk" or "security" in all 49 texts and their frequency 
+Term: Risk 
+Frequency 
+Term: Security 
+Document Frequency
+Risk management 
+1744 
+Information security 
+2022 
+Risk assessment  
+900 
+Security privacy 
+1347 
+Cybersecurity risk 
+480 
+System security 
+788 
+Risk analysis 
+363 
+Security aspect 
+730 
+Supply risk 
+337 
+Security requirement 
+702 
+Security risk 
+321 
+Security policy 
+627 
+Privacy risk 
+310 
+National security 
+597 
+Chain risk 
+302 
+Security concept 
+461 
+Risk response 
+222 
+Security safeguard 
+446 
+Risk supply 
+203 
+Security incident 
+414 
+ 
+Brief Assessment of the Data-Driven Analysis of the Corpus 
+ 
+This chapter began with a data-driven approach to building a dictionary of cyber and 
+resilience terminology and finished with a holistic analysis of 49 cyber or resilience documents 
+to gain insight into how well the words the interdisciplinary community uses with respect to 
+resilience factor into cybersecurity guidance. The corpus of 37 cyber texts analyzed using tf*idf, 
+word cloud analysis, Latent Dirichlet Allocation analysis, cosine similarity analysis, and bigram 
+analyses reveal a body of cyber guidance that largely conforms to existing cybersecurity best 
+practices.  
+With respect to the time and scale aspects of resilience developed earlier in this chapter, 
+the corpus of 37 cyber texts qualitatively trends towards the machine and organizational levels 
+
+111 
+for time and scale, respectively. Analysis using the dictionary and classification framework will 
+be performed in the next chapter. However, the semantic analyses performed here indicate that 
+few to no documents discuss cyber resilience across time and scale in a way that would 
+correspond with the interdisciplinary research into resilience. This leads to the tentative 
+affirmation of Hypothesis 4 in that the documents focus primarily on technical and 
+sociotechnical cybersecurity and lack guidance on most or all aspects of resilience.  
+ 
+ 
+ 
+ 
+ 
+

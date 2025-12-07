@@ -1,0 +1,2054 @@
+Figure 9.1 Project management is a fundamental component of information systems. (modification of work “wocintech stock - 170”
+by WOCinTech Chat/Flickr, CC BY 2.0)
+Chapter Outline
+9.1 Foundations of Information Systems Project Management
+9.2 Setting Up and Managing Projects for Success
+9.3 Career Focus: Opportunities in Information Systems Project Management
+Introduction
+Project management is a fundamental component of IS and nontechnical projects. The history of information
+technology (IT) project management can be traced back to the 1950s, when huge computer systems were
+designed to be used by the government. As computer systems became more complex, formal project
+management practices emerged, such as a technique called the critical path method and the Program
+Evaluation and Review Technique.
+In the 1970s, project management became more structured with the development of standards such as the
+Project Management Body of Knowledge (PMBOK) created by the Project Management Institute (PMI). These
+standards enabled the profession to explode in the 1980s, and the establishment of the Project Management
+Professional certification further fueled this expansion. Since then, IT and IS project management has become
+a career many professionals with IS expertise choose—and businesses are eager to employ them.
+Today, IT and IS project management is one of the fastest growing professions in the world. It brings together
+the elements of IS—such as hardware and software, data management, information security and risks—with
+steps to keep the team and product in scope, on budget, and within schedule. With the emergence of new
+software, technologies, and methodologies, businesses need effective project management to optimize
+complex capital projects, strategic operational initiatives, and day-to-day operations.
+Information Systems Project Management
+9
+
+9.1 Foundations of Information Systems Project Management
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Identify concepts, skills, and techniques associated with project management
+•
+Distinguish between project management, program management, and portfolio management
+•
+Apply project management, program management, and portfolio management skills
+Project management is a fast-growing field. Businesses are complex and intricate systems that aim to provide
+products and services to their clients or customers. Project management is an aspect of business systems that
+provides specific tools and best practices to manage and lead the business. Project management focuses on
+people, assets, money, and time, and project managers use people, assets, money, and time to lead and
+manage initiatives that provide the products and services a business sells to its customers. In project
+management, an initiative, task, or activity is categorized as a project regardless of its complexity and who
+might oversee its implementation. For example, a task as simple as purchasing new phones or computers for
+employees can be categorized as a project because phones and computers are critical components of modern-
+day business and the process of purchasing has a time limit. Without these items, the business would probably
+not operate.
+Concepts and Methodologies of Project Management
+The Project Management Institute (PMI) is the main accrediting body for the project management process
+and certifies project managers, program managers, and portfolio managers. The PMI promotes the use of a
+structured, process-based approach to managing projects. The Project Management Body of Knowledge
+(PMBOK), developed by PMI, is a guide for handling projects using a systematic methodology and proven
+processes for initiating, planning, executing, managing, monitoring, and closing a project. PMBOK will be the
+basis for much of the project management foundations covered here.
+Overall project management describes the use of specific knowledge, skills, tools, and techniques to provide
+guidance through each stage of a project. Project management involves planning, organizing, and controlling
+resources—such as people and materials—to achieve specific goals or objectives within a defined timeline. The
+person responsible for leading the efforts to plan, organize, and control the resources using various tools and
+techniques to initiate, plan, execute, monitor, control, and close projects is called a project manager (PM). A
+project is a temporary initiative or endeavor to create a product, service, or result that has beginning and end
+dates. “Temporary” in this sense only means that a project must have a beginning and an end; it does not refer
+to the length of the project Figure 9.2. Expanding sales into a new market segment, developing an information
+system to manage an internal process, opening a new branch of the enterprise, and implementing disaster
+recovery after a system or security failure—these are all examples of projects.
+Figure 9.2 A project must have a start date and an end date. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0
+license; credit left: modification of work “Hands collection - star on hand - The Noun Project” by “icon4yu”/Wikimedia Commons, CC
+BY 3.0; credit left: modification of work “Idea/report icon” by “hidayat, ID, from The Noun Project”/Wikimedia Commons, CC BY 3.0;
+credit middle: modification of work “Online meeting (the Noun Project 1029565)” by Ismael Ruiz, from The Noun Project/Wikimedia
+Commons, CC BY 3.0; credit right: modification of work “Countdown (50361) - The Noun Project” by “Icons8”/Wikimedia Commons,
+CC0 1.0)
+A project can follow any timeline, lasting a week, a month, or many years, for example, as long as it meets the
+definition of a project. A project is considered completed once the scope or requirements have been met or
+332
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+once the objectives of the project have been achieved in accordance with the customer, sponsor of the project,
+or internal champion of the project. Projects can vary depending on the industry or the environment in which
+the projects are conducted. For example, a research institution might conduct research projects on new ways
+to upskill its workforce, while a pharmaceutical company might conduct a project on a new drug to cure
+Alzheimer’s. In the IS field, most projects involve technology and thus are considered technical in nature. An IS
+project manager might be involved in integrating a new technology into a university’s student information
+system or producing a new process to build electronic vehicles for a car manufacturer.
+Project management is used in some form in many organizations. It crosses over many disciplines like
+construction, business, health care, manufacturing, and other industries where businesses initiate projects
+that need to be managed by an expert (project manager) who can ensure the project stays within budget,
+scope, and schedule. A project manager is a key employee with skills in leadership, management, project
+management, human resources, finance, procurement, contracts, and operations.
+Differences Between Project Management, Program Management, and Portfolio
+Management
+Program management and portfolio management can be thought of as managing groups of projects. The
+coordinated organization, direction, and implementation of a group of related projects is called program
+management. This related group of projects seeks to achieve outcomes and realize benefits that are
+strategically important to the business. Being coordinated means there are common rules to manage each
+project, such as when to escalate an issue or that all documentation for each project is similarly organized to
+group the projects together within the business. A portfolio is simply a collection of projects or programs that
+are grouped together but may not be interdependent of each other. Usually, these projects are grouped
+together to more effectively manage the projects based on the business objectives. Therefore, portfolio
+management is the centralized management of a set of projects grouped together to identify, prioritize,
+authorize, and control the related work Figure 9.3.
+Figure 9.3 In portfolio management, programs or projects are grouped together to realize more efficiency between those programs
+or projects. Program management groups related projects together to realize a similar outcome for the business. (attribution:
+Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Understanding project management begins with understanding the underlying principles of the various
+methodologies used to manage projects. The PMI developed the PMBOK framework and certifies Agile and
+PRINCE2 frameworks. Each of these frameworks and their supporting methodologies have certain principles
+that impact how projects are managed. The one thing they have in common is that they all come with
+documentation, best practices, and processes for managing teams, assets, and deliverables, and they have a
+very prescribed way to measure the success of each component.
+Project management has many different components, complexities, and concepts to support the organization
+and success of projects. In most IS project management organizations, there is a hierarchical organization of
+the project management profession, similar to the various management and leadership levels found in health
+9.1 • Foundations of Information Systems Project Management
+333
+
+care, marketing, technology, finance, and higher education. Even though the structure is hierarchical, the team
+supporting the managers and leaders does not always report to the manager or leader of that department.
+Project Management Using Project Management Body of Knowledge
+The PMBOK is a waterfall approach, which means that each step is followed by the next step, which is followed
+by the next, and so on. While the sequential design of project steps is central to PMBOK, newer versions of the
+methodology emphasize that some concepts, such as risk, are more iterative (or repeated), and they must be
+revisited or monitored frequently.
+In PMBOK, the development, monitoring, and control of a project is called the project life cycle (PLC) (Figure
+9.4). The PLC is a sequence of phases that a project encounters as it progresses from start to finish. The phases
+include the following:
+•
+Feasibility: In this phase, it is determined whether the organization has the capability to deliver the
+product.
+•
+Design: This is the planning and analysis phase.
+•
+Building: This phase covers the actual implementation of the project and its project plan.
+•
+Testing: After building the project, the processes must be tested. In this phase, a quality review and
+inspection of the deliverables are conducted.
+•
+Deployment: With the other phases in the process complete, the project can be deployed. This is when all
+deliverables are finalized and transitioned to sustainability.
+•
+Closing: In this phase, all the knowledge and artifacts related to the project are archived, and the team
+members are released.
+Figure 9.4 The project life cycle is a series of phases that a project goes through from start to finish. (attribution: Copyright Rice
+University, OpenStax, under CC BY 4.0 license)
+The PMBOK also defines eight domains that guide project managers through the PLC (Figure 9.5). The
+domains are defined as what the project manager must focus on in each stage to complete that stage. These
+eight domains ensure successful delivery of the project:
+•
+Stakeholders: Anyone involved or impacted by the delivery of the projects is a stakeholder.
+•
+Team: People who are stakeholders but also invested in the project deliverables are part of the team.
+•
+Development approach: This is the manner in which the phases of the project are planned.
+•
+Planning: The focus of planning is the organization of the project and how it is going to be implemented.
+•
+Project work: The project work includes the necessary items and processes of each deliverable in the
+project.
+•
+Delivery: This is the actual transition of the project deliverables to the stakeholders.
+•
+Measurement: Measurement includes determining whether the performance of the project and the
+people are delivering within an expected quality level.
+334
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+•
+Uncertainty: The focus of this domain is management of the risks associated with the project.
+Figure 9.5 The eight domains of performance are what the project manager must focus on in each stage to complete that stage.
+(attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Let’s look briefly at some domains—stakeholders, team, development approach, and planning—to understand
+what it means to deliver a project on time within scope, on budget, within acceptable quality levels, and with
+minimal risk.
+Stakeholders’ Domain
+The stakeholders’ domain is a lot about communication and ensuring a good relationship is established with
+all the individuals associated with a project. Stakeholders include individuals, groups, or organizations that
+may affect, be affected by, or perceive themselves to be affected by a decision, activity, or outcome related to a
+project, program, or portfolio. A project’s stakeholders could include members of the organization’s leadership
+team, customers, clients, coworkers on the project team, middle management, vendors, regulatory bodies,
+steering committees—the list goes on and on. Communication and relationships with all stakeholders
+throughout the project are important to the success of the project. The stakeholders on a given project may
+shift over time, so keeping up with the list of individuals and groups can be challenging.
+In the stakeholders’ domain, three desired outcomes should be pursued:
+•
+maintaining a productive relationship throughout the project
+•
+making sure stakeholders are in agreement with the project objectives
+•
+ensuring that stakeholders, who are beneficiaries, are supportive of the project and do not negatively
+impact project outcomes, such as trying to change the scope of the project or vetoing budget items
+important to the project
+It is important to manage the stakeholders and their expectations both positively and negatively. For example,
+you could have a stakeholder who has not clearly understood the scope of the project and has additional
+requirements that are not included in the scope. As the project is developed and the project does not include
+these items, the stakeholder then believes the requirements have not been met. These expectations and
+beliefs must be identified as soon as possible.
+One way to manage stakeholders is to perform a stakeholder analysis. A stakeholder analysis is a review and
+evaluation of each stakeholder, their background, expertise, and impact on the project. It involves a systematic
+9.1 • Foundations of Information Systems Project Management
+335
+
+gathering of quantitative and qualitative data to determine whose interests in the project should be a priority.
+The stakeholder or group of stakeholders whose interests are a priority are likely to have more power and
+authority over the project than other stakeholders. These stakeholders are the ones to assure, so it’s also
+important to make sure they are informed and satisfied throughout the project.
+Team Domain
+The team consists of the individuals who are responsible for building or producing project deliverables. If team
+members don’t work well together, it reflects poorly on the project manager. In fact, it is the project manager’s
+job to create a work environment in which team members work to ensure that deliverables are of high quality
+and are delivered on time and within budget, with minimal risk. The successful outcome of the project is
+dependent on the project team and its performance. The need for communication and relationship building
+among diverse team members is one of the reasons a project manager must be a good leader and
+communicator in addition to knowing when to push and when to let the team manage its own
+accomplishments. Establishing a shared-team mindset when it comes to deliverables, quality, and timelines is
+the goal of the project manager.
+Development Approach and Life Cycle Domain
+There are many different approaches to project development, which is the process of planning a project and
+ensuring it has the resources necessary to successfully achieve its goals and objectives. The approaches to the
+PLC highlighted by PMBOK are predictive, adaptive, and incremental development (Figure 9.6).
+Figure 9.6 The predictive, adaptive, and incremental approaches to project development provide frameworks to develop different
+types of projects depending on an organization’s culture and specific project needs. (attribution: Copyright Rice University, OpenStax,
+under CC BY 4.0 license)
+The predictive development approach is generally used for projects that have specific requirements with
+336
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+well-defined goals and objectives. The entire project is planned from start to finish before the project begins,
+and once the project is implemented, the plan is followed carefully. This includes adhering to the scope of
+work and project deadlines to meet requirements, design, construct, test, and deliver outputs according to
+plan.
+When a project needs more flexibility, the adaptive development approach provides a framework that
+enables project team members to repeat the processes of cycle planning and task initiation as needed. This
+provides an opportunity to respond to client feedback and make changes in the project requirements as part
+of the ongoing processes. As they repeat the processes, team members are expected to learn by doing and
+then apply their new knowledge to improve the final project outputs.
+The incremental development approach enables a project to be divided into parts, or increments, that work
+together and build on each other to accomplish the overall project. Dividing a project into smaller parts makes
+each part more manageable. Typically, as each part of the project is done, the project team delivers the
+outputs for that part, providing an opportunity for feedback on the project’s progress. This allows for changes
+to be made as each part of the project is completed, ensuring that the final product meets the overall project
+goals and objectives.
+Each approach selected depends on the type of project, company culture, organizational structure,
+organizational capabilities, size of the team, and the location of the team. The workplace culture of the
+company or your stakeholders’ characteristics may dictate the development approach. When it comes to
+project management, there is never a one-size-fits-all approach. There are many factors to consider, and the
+approach and PLC can vary from project to project.
+Depending on the needs of the project and the culture of the organization, an iterative approach could involve
+a hybrid method with modifications as needed to fit the project. Another consideration when deciding which
+approach to use is the degree of innovation involved in a project. This refers to how much change a project
+introduces. Some projects are minimally innovative, offering incremental changes, while others are more
+radical, offering changes that are disruptive and even transformative to operations or products.
+For example, you may have a project that is very lengthy in duration with lots of interdependencies where the
+product must be delivered before the next process or components can be built. Say you are leading a project
+to build a space shuttle. There would be several components that would need to be developed prior to others,
+but there are some parts that can be delivered in conjunction with each other, like the engines and the capsule
+for the payload. You can develop the engines while you are developing the capsule because they are not
+necessarily dependent on each other. The engines are dependent on the weight of the payload, and the
+capsules can be developed to deliver up to the maximum payload. You could use a predictive approach or even
+an incremental approach for delivery.
+Planning Domain and Project Work
+The planning domain lasts throughout the length of the project and is associated with organizing,
+collaborating, and elaborating on the project and the project deliverables. The project work domain is about
+the execution of the project. It involves ensuring that the performance of the team and the product or service
+and the outcomes maintain the appropriate quality and map to the desired outcomes of the project. Each
+project requires the project manager to plan, coordinate, and manage the project in a holistic approach. No
+two projects are ever alike.
+As a project progresses, there is always a certain amount of feedback and information that needs to be
+assessed for its impact on the project and its outcomes. Each project will evolve over time. The process of
+determining the appropriate information to provide to the team needs to be handled and managed to achieve
+the desired outcomes. The time spent planning for a project and the desired outcomes should be appropriate
+to the project. Project planning and the project management documentation should always be sufficient to
+manage stakeholder expectations. There are several project management tools and documents that project
+9.1 • Foundations of Information Systems Project Management
+337
+
+managers use in the planning process, such as a vision statement, project charter, business case, initial project
+plan, or RACI (responsible, accountable, consulted, and informed) charts.
+LINK TO LEARNING
+Consider this case study (https://openstax.org/r/109CaseStudy) that discusses how extensive planning was
+used to address the disaster of roads being destroyed after a catastrophic weather event in British
+Columbia. This example illustrates how the tools and techniques of project management can be used in the
+professional and personal domains.
+Agile Project Management
+The Agile project management methodology involves taking an iterative and incremental approach to
+delivering projects (refer to 4.1 Systems Analysis and Design for Application Development for more about Agile
+methodologies). This means that instead of trying to plan and execute an entire project up front, the project
+manager breaks the project down into smaller, manageable tasks. Project management teams using the Agile
+method seek to deliver value incrementally and iteratively by delivering products frequently and engaging with
+customers to gather feedback. This feedback is then incorporated into the project’s direction and objectives
+immediately. The Agile approach ensures that the final product aligns closely with customer needs and
+provides maximum value, meaning that the product delivers on the customer’s requirements and vision. This
+approach is particularly good for projects where the client can’t agree on the entire scope of the project up
+front.
+Each chunk of work in an Agile project is broken into smaller components called user stories. User stories
+represent specific features or functionality required by the customer. Agile teams review and prioritize these
+functions and features. These tasks are then delivered in short iterations called sprints, which typically last
+from one to four weeks. A sprint typically involves a number of user stories being developed and completed at
+the same time. A meeting to discuss the user stories and divide the work is called a scrum meeting.
+In Agile project management, there are several frameworks to support the iterative and collaborative
+approach central to this methodology, including scrum, Kanban, and extreme programming.
+A scrum is an Agile framework that focuses on delivering value through small, cross-functional teams working
+in sprints, and the product backlog contains a prioritized list of user stories or features. [0]Prior to the start of
+the sprint session, items from the backlog to be completed are planned out and chosen by team members.
+During each sprint, the team members select items from the backlog to complete. Scrum meetings, often
+referred to as stand-up meetings, backlog refinement, sprint planning, sprint review, and retrospective
+sessions, usually happen daily, which enables the team to adapt and improve continuously. The leader of the
+scrum meeting is called the scrum master and usually has a certification from PMI or other certifying bodies.
+An Agile framework that helps managers visualize and optimize the flow of work. Kanban is a visual
+representation of tasks and how they flow through the project (Figure 9.7). A Kanban board typically consists of
+columns representing different stages of work, such as to do, in progress, or done. Each work item is
+represented by a card, and team members move the cards across the board as work progresses. As work is
+completed, team members start on the next task. The cards can be set up on a digital Kanban board (via tools
+such as Asana, Jira, or Smartsheet) or simply with sticky notes on a wall or whiteboard. The Kanban framework
+emphasizes limiting work in progress to maintain a smooth workflow while maintaining a continuous delivery
+schedule. This framework helps teams identify bottlenecks, optimize their processes, and respond quickly to
+changing priorities.
+338
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+Figure 9.7 Referred to as a Kanban board, this type of Agile framework identifies the position of each component of work as the
+project progresses. (credit: modification of work “Abstract Kanban Board” by Jennifer Falco/Wikimedia Commons, CC BY 4.0)
+Primarily used in the software engineering industry, extreme programming (XP) is an Agile methodology that
+emphasizes the use of software engineering practices to improve quality and responsiveness. Extreme
+programming also emphasizes customer involvement, short development cycles, and continuous integration
+and deployment. It incorporates practices like pair programming, test-driven development, frequent releases,
+and collective code ownership. By prioritizing customer value, XP teams can respond effectively to changing
+requirements and deliver high-quality software.
+The advantage of an Agile approach is that it allows for flexibility and adaptability throughout a project’s term,
+as teams can adjust their plans and incorporate feedback at the end of each sprint. The disadvantages are that
+the client must be willing to put in significant time since Agile requires many reviews and evaluations of work
+as the work continues. Many clients or companies do not have the time for their employees to be dedicated to
+a project in this manner. Overall, the Agile methodology works well for small- to medium-sized projects and in
+certain industries where flexibility and adaptability are crucial. For example, it might be suitable for a project
+that is highly regulated where standards may change frequently while you are building the deliverables, such
+as hospital information systems, or a new technology such as an AI application system where the capabilities
+grow daily.
+PRINCE2 Methodology
+PRINCE2 (Projects in Controlled Environments) is a project management methodology and certification that
+is widely recognized around the world. PRINCE2, much like PMBOK, uses a structured, process-based approach
+to managing projects, but it is designed to be scalable and adaptable, making it suitable for projects of various
+sizes and complexities. The PRINCE2 certification is often sought after by project managers, team members,
+and individuals involved in project management roles around the world because it provides individuals with a
+robust framework and a common language for managing projects effectively, as well as ensuring consistency
+and the use of best practices in project management processes. PRINCE2 is built on seven principles that guide
+its project management practices (Figure 9.8).
+9.1 • Foundations of Information Systems Project Management
+339
+
+Figure 9.8 The PRINCE2 methodology is composed of seven guiding principles of project management. (attribution: Copyright Rice
+University, OpenStax, under CC BY 4.0 license)
+Principle One: Continually Justify Project
+A PRINCE2 project must have a reason to be started, and that reason must make sense from a business point
+of view; therefore, business justification is essential. The reason for the project, the funding and resources
+needed, and the predicted return on investment (ROI) must all be identified. If the ROI is greater than the cost
+of the project, then the project should be initiated. Each company typically has its own method of determining
+a minimum ROI threshold before a project is started. In some cases, due to regulations or changing
+technologies, companies must invest in projects to remain compliant with laws or stay competitive, which
+should be taken into consideration. The business justification should be revisited throughout the project to
+ensure that the ROI and reason for the project remain aligned or, at very least, the ROI does not drop below
+expected levels.
+Principle Two: Learn from Experience
+This principle involves collecting data on lessons learned from previous projects to avoid repeating risky and
+costly mistakes. In PRINCE2, project teams are constantly looking at the outcomes of the project to assess how
+well it is progressing and to determine whether any lessons learned can be identified and used immediately as
+the project continues. Each project can be unique and have its own set of challenges. These challenges can
+create risks or unknowns. Project teams need to understand the nature of change and risk and adapt to new
+situations. One example of learning from experience is discussing with other project managers with different
+experiences how they might respond to the challenge you are facing.
+Principle Three: Define Roles and Responsibilities
+Determining the roles and responsibilities of stakeholders in a project is critical. In PRINCE2 methodology,
+there is a process for identifying stakeholders that involves sorting them into three categories:
+•
+Business sponsors: Stakeholders who make sure the project delivers value for money.
+•
+Users: Stakeholders who are usually the people who will use the products once they have been created.
+They benefit from completion of the project.
+•
+Suppliers: Stakeholders who provide the resources and expertise needed by the project to produce the
+products.
+Not all companies or organizations have a dedicated team of project managers and other employees focused
+340
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+just on delivering projects. Project teams can be made up of people from various departments and companies,
+and therefore, defining each team member’s roles and responsibilities with respect to the project is key to
+running it successfully and smoothly.
+Principle Four: Manage by Stages
+Like Agile project management, the PRINCE2 methodology aims to manage a project—and keep the project
+team flexible and responsive—by breaking the project up into chunks or smaller tasks that it refers to as
+stages. The three stages in PRINCE2 are planning, monitoring, and controlling, and they take place
+sequentially one stage at a time. The stages are separated by decision points, sometimes called control points.
+The need for continuous monitoring of the ROI is one of the reasons there are stages in PRINCE2. At the end
+of each stage, the team conducts a performance assessment of the last stage to decide whether the project
+should continue and, if it does continue, to determine any adjustments that need to be made.
+This is also a point at which lessons learned can be assessed and applied for the next stage of the project. Like
+in the Agile methodology where there are points along the way when customer or client feedback is called for,
+the decision points of PRINCE2 function similarly, but the feedback comes from both the customer and other
+stakeholders in the company and focuses not only on the product deliverables but also on the performance
+and processes of the project team.
+Principle Five: Manage by Exception
+When managing by exception, the project manager has some leeway in the oversight of tasks, such as the
+schedule, scope, and costs, defined in accordance with company policy. In PRINCE2, the leeway is referred to
+as the tolerance level, or the extent to which project managers can accept the risk or need to escalate it.
+Project managers know that if an issue in the project passes a certain tolerance level, they must escalate it. If
+the project stays within the acceptable tolerance levels, the project manager can make adjustments where
+needed to keep the project on budget, within scope, and on time. In PRINCE2, managing by exception means
+that each level of leadership in the project manages the tolerance level below it in the organizational structure.
+So, if there is a major issue with a project, you may hear a project manager say the risk is outside the tolerance
+level range, meaning the issue needs to be escalated to the next level in the organizational chain of command.
+There are six areas where tolerances or escalation points are applied: time, cost, quality, scope, risk, and
+benefit. This means the project manager must know the tolerance level for each of these areas and escalate an
+issue to the next level when necessary. For example, imagine your grandparents give you $500 on a credit card
+for transportation and dining out for the semester, with the instruction to let them know if the dollar amount
+gets too low or if you overspend by $20. This puts guidelines on the money but also ensures that the student
+does not have to get approval for every charge made that semester.
+Principle Six: Focus on Products
+Focusing on the product, its definition, and its requirements is important with PRINCE2. Project stakeholders
+join a project team bringing their own experiences and perspectives of the world, the project, and the product.
+Focusing on the details of the product is important to ensure there are no misunderstandings that waste time
+and money. To avoid this issue, the PRINCE2 methodology recommends developing a detailed product
+description that guides the project, manages expectations, and ensures the required deliverables. The product
+description should include a well-defined product purpose, composition, derivation, format, quality criteria,
+and quality process. It also determines a project’s resource requirements, dependencies, and activities.
+Principle Seven: Tailor to Project Environment
+The principle of tailoring to the project environment is specific to the PRINCE2 methodology. A project should
+be tailored to suit the project’s size, environment, complexity, capability, and risk. Similar to an Agile project
+being flexible and adaptable to the project needs, this principle means that managing really small projects
+does not require the full-blown documentation and requirements that more complex projects require. Some
+9.1 • Foundations of Information Systems Project Management
+341
+
+core principles must be followed to get the project delivered, but in PRINCE2, you should be cognizant of the
+environment in which the project should be managed. For example, if the environment of the company is one
+in which management is not focused on following every principle in the PRINCE2 methodology, then as the
+project manager, you should adapt to the environment and still deliver a quality product, on time, within
+budget, in scope, with minimal risks.
+Tools of the Trade
+There are several project management software tools that help project managers control the scope, schedule,
+and budget of a project. These tools can be as simple as using a spreadsheet to track deliverables and
+important milestones to expensive software designed specifically to manage large and complex projects. The
+size and complexity of the project would inform the decision as to which product to use.
+Small projects can easily be managed using a spreadsheet like Microsoft Excel or Google Sheets. These
+products have add-ons and functions that can be programmed into a spreadsheet to deliver a schedule or a
+budget. Project managers can even create a dashboard and alerts within spreadsheets to help them stay on
+top of the critical aspects of a project.
+Midsize projects might require more robust software tools such as Microsoft Project, Jira, and Asana. These
+tools feature items like Gantt charts, resource lists, and project budgets that are linked to a larger strategic
+budget or accounting system. They can also include several reporting features to allow the project manager to
+monitor schedule, costs, and scope, as well as robust graphics and color-coded systems to allow users to
+understand when something needs attention or when something is behind schedule. Artificial intelligence can
+be used to assist project managers in developing reports, monitoring schedules and budgets, and developing
+alerts to let project managers know when any of these components go beyond the escalation point.
+Larger complex projects, such as those found in the construction industry and occasionally in IT, may require
+an even more robust system that can be customized to the type of project and have the company’s strategic
+approach designed into the system, so that all users are using the same approaches and constraints. These
+complex systems also incorporate risks into their approach and provide various “what if” scenarios to help
+project managers compile the risks and constraints that may be part of a project. In addition, such systems
+serve as a knowledge base as they can store all the documentation and historical data associated with various
+projects. This assists with estimating pricing as well as developing future projects.
+LINK TO LEARNING
+Check out this list of top project management software tools (https://openstax.org/r/109SoftwareTool) that
+provides evaluations of products and the pros and cons for different types of projects.
+Project Management Office
+The project management office (PMO) is the department within an organization that provides the standards
+and guidelines to project managers for projects and governs how projects are initiated, planned, organized,
+implemented, managed, and closed. This group of individuals sits at the top of the entire project/program/
+portfolio management function. The PMO is equivalent to the C-suite of a company. Many times, project
+managers will be part of this department but not always. Some project managers may be serving as functional
+project managers while still residing in the department where they specialize. For example, an IS project
+manager may be part of the business side of the organization rather than in the PMO office or the IT
+department. The IS project manager might reside in the analytics, marketing, or operations departments.
+The PMO, along with other members of the organization’s leadership, might determine parameters like the
+structure of a project, who is able to manage such a project, the amount of risk the organization is willing to
+accept, and the escalation points for larger changes, issues, and risks. Additionally, the PMO might support
+342
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+project managers in various departments and make business decisions that the project manager cannot make
+to align the project with the organization. The PMO is also usually where project information and its historical
+data are kept. Any lessons learned from both successful and unsuccessful projects would be evaluated and
+policies would be put in place to facilitate a smooth project management process. Some organizations may not
+have a PMO but may still have units within the organization that govern and act like a PMO. In most
+organizations with a PMO, the primary functions of this group are as follows:
+•
+Manage shared resources across all projects.
+•
+Identify and develop project methodology, best practices, and standards.
+•
+Coach, mentor, and train project managers.
+•
+Monitor compliance with standards, policies, and templates, especially in highly regulated industries.
+•
+Develop and manage policies, procedures, and other shared documentation.
+•
+Coordinate communication across various projects.
+Project management offices can take many different shapes and sizes, but the principles by which they
+operate remain the same (Figure 9.9).
+Figure 9.9 Project management offices can take different shapes, sizes, and roles, depending on what is needed for a project.
+(attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Some examples of the types and functions of common PMOs are as follows:
+•
+Full service PMOs: They provide project management governance and guidance on how projects are
+delivered. They provide everything from policies, standards, best practices, approaches, and guidelines, to
+tools that project managers use.
+•
+Shared services PMOs: They offer services as needed for things such as planning activities, risk
+management, performance tracking, and any other support the project manager may need. This type of
+PMO usually exists in an organization where there are independent business units.
+•
+Information technology development PMOs: They oversee a portfolio, which is a collection of programs or
+groups of projects. These PMOs usually maintain oversight of all projects that require organizational
+approval and financial allocation. This type of PMO is centralized.
+•
+Enterprise-level PMOs: They link the implementation of an organization’s strategy with a portfolio of
+projects. This kind of PMO is established and tightly connected to the organization’s leadership and overall
+strategy, and it usually operates within organizations that develop new products or have different
+business units or even different entities engaged in the development of many products.
+•
+Decentralized PMOs: They usually implement innovative approaches in project management, such as the
+adaptive approach or Agile. This PMO plays more of a supporting role rather than serving an oversight
+function. The PMO takes a coaching approach to supporting project managers and business units and
+encourages training to make business owners and sponsors more effective at their jobs.
+Program and Portfolio Management
+Program and portfolio management are also part of an organization’s structure and dependent on the
+capabilities of the business and its organizational strategy (Figure 9.10). A group of related projects,
+subprograms, and program activities managed in a coordinated way to obtain value of delivery is known as
+program management. Program management is above project management because program management
+encompasses several projects and is part of the bigger, overall portfolio for an organization. In the context of
+project management, portfolio management refers to projects, programs, and subportfolios, and operations
+managed as a group to achieve strategic objectives or value for the organization. For example, you may have
+9.1 • Foundations of Information Systems Project Management
+343
+
+an IT portfolio where you are delivering several projects related to an enterprise resource planning (ERP)
+system. The ERP system has several different projects related to the various parts of the project, such as
+human resources functions and accounts payable and receivable. You might have different project managers
+working on the implementation of each function of the ERP system because it is a large undertaking. Each of
+the project managers may report to the program manager of the ERP system or product. Above that, you
+might have clients you are implementing this ERP product for, and each of those projects reports up to a
+portfolio manager who may be a vice president or executive with the company.
+Figure 9.10 Project, program, and portfolio management are tied to one another in a hierarchical way, with programs encompassing
+multiple projects and portfolios encompassing programs and projects. (attribution: Copyright Rice University, OpenStax, under CC BY
+4.0 license)
+The purpose of program and portfolio management is to consistently deliver products and services that
+produce better results and sustainability for the organization and its projects. The goals of portfolio, program,
+and project management are to deliver value. Value is what keeps an organization in business and gives it a
+competitive advantage. This is why program and portfolio management are so important to the strategic
+operations of an organization.
+Applying Project Management, Program Management, and Portfolio
+Management Skills
+Now, let’s consider a problem and determine which development approach—predictive, adaptive, or
+incremental—should be used. Pay particular attention to performance domains.
+Case Study: Choosing a Project Management Approach
+Pharrell is a consultant for a small financial company that has asked him to manage its ERP system project. An
+ERP system has functions for payroll, human resources, accounting, and finance. The company provides
+financial planning and advice to small business owners who need to set up 401(k) retirement accounts for their
+employees. The company’s ERP system needs to meet all federal and state regulations for institutions that
+handle financial transactions. These regulations are monitored and controlled by the State Department of
+Labor and several financial regulatory bodies. The ERP system must take into account that the company must
+344
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+ensure that its employees are not making fraudulent financial transactions on behalf of their clients nor
+violating any insider trading or financial regulations when they offer advice on the retirement accounts to the
+small businesses.
+The company is set up in a very flat organizational structure—meaning there are three vice presidents (one
+each for accounting and finance, operations, and sales) and a president who oversees all three vice presidents.
+There are several managers and supervisors in the company as well as administrative and operational
+employees who report to the three vice presidents. The company has just hired ten new staff to make a total of
+fifty-nine employees that work directly for the company. Some of the employees working on client accounts
+have legal backgrounds. The ERP is a big system for the company. It has chosen to implement such a large
+system because it wants to double its clients in the next two years, and this would mean hiring more
+employees.
+The company expects Pharrell to manage and implement the new ERP system without a lot of input from the
+internal company employees, except for the three vice presidents and the president. Only the leadership of the
+company will participate in the project, but all employees are stakeholders. The company will make employees
+available to test the system, but Pharrell is expected to provide all the other human resources needed for the
+project. Since he has implemented ERP systems before, he already has several individuals to work on this
+project and is confident he can do the work.
+Selecting a Project Development Approach
+Recall what you learned about predictive, adaptive, and incremental project development. Consider the pros
+and cons of each within the specifics of this project:
+•
+Degree of innovation: This project probably doesn’t require innovative thinking to solve a problem.
+According to Pharrell, he has a team that has worked together before; therefore, they do not need to
+consider assembling a team with innovative thinkers or use this approach.
+•
+Requirements certainty: The requirements for the system should be spelled out well since this is an
+implementation of an ERP system, and there is only so much that needs to be modified to meet the
+company’s requirements. So, a predictive approach may be the way to go.
+•
+Scope stability: The scope of the deliverables will probably not change given that this is an off-the-shelf
+ERP system, but since the actual end-user stakeholders aren’t involved, the scope may change, especially
+since the users are going to test the system. A predictive approach would be needed if the scope were
+stable.
+•
+Ease of change: This also deals with scope and stability. If the deliverables are not going to change much,
+then a predictive approach should be used.
+•
+Delivery options: Because an ERP system has many different functions, the project could be broken down
+into functions and different groups could work on each function that needs to be delivered; an
+incremental or iterative approach could be used.
+•
+Risk: One risk for the project would be that the deliverables may change once the end users are utilizing
+the system, or the vice presidents may not have the time to dedicate to the project to determine the
+requirements. For a project with these kinds of risks, a predictive approach would work best, at least in the
+beginning, as it would help define the requirements.
+•
+Safety requirements: The product should not have any safety-related requirements that would physically
+harm someone, so this consideration may not apply to the project.
+•
+Regulations: This project would be highly regulated since the nature of the company is in finance and
+retirement accounts. Even though the business of the company may not have a lot to do with the ERP
+system, other than accounts receivable, the project does have to implement some of the regulations
+required to manage the employees of the company.
+Based on this analysis of the various approaches, this project should be developed using the predictive
+approach. With the number of regulations to satisfy and the fact that the scope will probably not change much
+9.1 • Foundations of Information Systems Project Management
+345
+
+because of these regulations, this approach will serve Pharrell well. This doesn’t mean that later in the project
+an incremental or Agile-related approach would not be more useful, it just means that up front, the more
+planning Pharrell can put into this project, the better the project will be executed, and the greater chance that
+the delivery will be smooth.
+9.2 Setting Up and Managing Projects for Success
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Explain the stages of a project from initiation to closing
+•
+Explain how to develop a project plan and schedule
+•
+Determine how to identify, evaluate, and mitigate project risks
+Project management is about properly understanding the requirements for a project and being able to
+manage that project based on scope, costs, schedule, quality, and risks. Project managers need to understand
+the role each of these plays on the project from initiation to closing. The PMBOK approach provides guidance
+on how to set up and manage projects successfully.
+Project Stages
+In project management, the successful execution of a project depends on a structured approach applied
+across various stages. These stages provide a framework for managing projects from their inception to their
+completion. Typically, there are five stages of a project, and various tasks within each stage make up the
+project management framework (Figure 9.11). The five stages are as follows:
+1.
+project initiation
+2.
+project planning
+3.
+project execution
+4.
+monitoring and control
+5.
+project closure
+Figure 9.11 A PMBOK approach shows the five main stages of project management linearly. (attribution: Copyright Rice University,
+OpenStax, under CC BY 4.0 license)
+The PMBOK defines a comprehensive set of processes that guide project managers through each stage of a
+project. Following the processes ensures the project will be on time, be within scope and budget, have minimal
+risk, and be of acceptable quality.
+Project Initiation
+The project initiation stage marks the creation of a project and involves defining its purpose, objectives, and
+stakeholders. It’s like creating a road map for a project journey. Most times, projects come from the top down
+or bottom up—meaning that they are sometimes initiated by the company’s leadership and sometimes by
+managers within the company. The third way a project can be initiated is through a client. For example, your
+company may be selling a complex software application that requires the product to be carefully customized
+to a client’s operations. This would require a project to be initiated for the purpose of a sale made to a client.
+There are many factors that go into how an organization initiates projects and decides how they will be
+managed. During the initiation stage, project managers undertake several key activities.
+Project Identification and Selection
+Project identification entails recognizing opportunities or challenges that warrant a project’s initiation. Projects
+346
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+may be initiated to address market demands, meet organizational goals, or tackle specific problems. Once
+identified, potential projects undergo an evaluation based on factors such as strategic alignment, feasibility,
+and resource availability. Best practices suggest using methods like cost-benefit analysis, SWOT (strengths,
+weaknesses, opportunities, and threats) analysis, or business case development to assess project viability.
+Stakeholder Analysis
+Understanding stakeholders and their influence is crucial for project success. It is important to understand
+that failure to properly identify a key stakeholder can jeopardize an entire project. Project managers employ
+techniques like stakeholder mapping and analysis to identify key stakeholders, assess their expectations, and
+determine their level of involvement. Stakeholder engagement strategies are formulated to foster effective
+communication, collaboration, and stakeholder satisfaction throughout the project life cycle (PLC).
+Project Charter Development
+The project charter serves as a formal document that authorizes project initiation. Many large organizations
+may have a committee or leaders that determine which projects will be authorized to begin the charter
+initiation process. The project charter outlines the project’s objectives, scope, constraints, and success criteria.
+It also establishes your authority as the project manager and provides a high-level view of the risks and
+stakeholders involved. Developing a comprehensive project charter establishes a clear direction for the project
+and sets the stage for subsequent project planning activities.
+Project Planning
+Once your project has kicked off, it’s time to dive into creating a project management plan to ensure project
+success. This stage is about defining the project’s scope and the details of how progress will be accomplished.
+It is important to note that the scope, schedule, risks, and budget are all part of this stage and set the
+parameters for a successful project. A scope document, RACI documents, and project plan for how the project
+will be managed should all be considered during this stage.
+Scope Definition
+The scope includes the deliverables, objectives, and requirements of the project. Defining scope is like drawing
+the boundaries of your project. You want to be very clear about what’s included and what’s not. To establish a
+clear understanding of what the project entails, project managers employ a statement of work, a document
+detailing the requirements, deliverables, schedule, and responsibilities of the stakeholders of a project. Scope
+verification and control processes are also put in place to manage changes and ensure alignment with
+stakeholder expectations. Control processes mean setting up a change management process to keep track of
+the scope and the budget for these changes.
+As a project manager, one of your most important jobs is to minimize scope creep, which is where the scope
+of the project grows beyond what was agreed on in the planning stage of the project as requirements are
+changed or modified down the line. It is a good idea to set up processes to help manage the scope, such as
+getting sign-off on a scope document before the project begins and setting up a proper procedure for
+stakeholders to change or modify the scope, called a change management process.
+Schedule Development
+Developing an accurate project schedule involves sequencing project activities, estimating durations, and
+creating a timeline (Figure 9.12). Techniques like network diagrams, critical path analysis, and schedule
+compression aid in scheduling activities and identifying dependencies. Project managers use scheduling tools
+and software to optimize resource utilization, manage project constraints, and mitigate schedule risks.
+9.2 • Setting Up and Managing Projects for Success
+347
+
+Figure 9.12 Scheduling tools enable project managers and team members to visualize an entire project and understand how each
+step in the project coordinates to meet project deadlines, as in this example from a construction project. (credit: “Tasks” by Christine
+Nicholas/Flickr, CC BY 2.0)
+Resource Planning
+The task of determining what resources are needed and when they will be needed is called resource
+planning. Project managers assess the availability and capabilities of resources, both human and nonhuman,
+to ensure efficient resource utilization. By considering factors such as resource skill sets, costs, and
+constraints, project managers develop resource management plans that align with project objectives.
+Budgeting and Cost Management
+Effective cost management ensures that projects stay within budget constraints. Project managers estimate
+costs, create budgets, and monitor expenditures against actual project costs. Techniques such as cost
+estimation, cost aggregation, and earned value management aid in budget development and cost control.
+The planning stage is a perfect point in the project to ensure that you understand the PMO’s or the company’s
+escalation policies. Project managers use the PMO or company policies to decide when to escalate project
+overruns that can negatively impact the project. An escalation policy determines when the project manager
+should report budget issues, such as being under or over budget. Some projects may have specifications
+dictating that when projects are under budget, the client receives the excess portion to make additional
+changes later in the project or receives that money back on future payments. Think of a project like going on a
+weekend trip where your parent gives you a set amount of money to spend on the trip. They may say you can
+spend up to that amount, but if you don’t spend it all, you can’t keep the change, and if you go over that
+amount, it comes out of your pocket. This is why project managers need to be good at budgeting and
+managing costs on projects. Knowing the company’s policies and the client’s requirements is key to
+successfully managing budget and costs.
+Project Execution
+With a plan in place, it’s time to execute. This is where all the action happens. The project manager monitors
+progress, addresses issues as they arise, and ensures the project stays on track. The project execution stage
+involves implementing the project plan, managing resources, and monitoring progress. This stage focuses on
+coordinated effort and effective communication. This might be the shortest phase as far as the number of
+tasks to complete, but the work has just begun. The project manager goes from planning to executing the
+plans, which include a lot of other human beings and resources that need to be monitored.
+During project execution, project managers oversee the execution of planned activities, ensuring that work is
+performed in accordance with the project plan. This includes coordinating resources, managing risks, resolving
+348
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+issues, and ensuring quality control. Effective leadership and stakeholder engagement are critical in fostering
+collaboration and maintaining project momentum. This is the stage at which communication becomes critical.
+You might have leaders and supervisors who have never worked together before or never worked with you.
+Set expectations and make sure everyone knows their job for the project.
+Monitoring and Control
+Continuous monitoring and control are vital to tracking project performance and ensuring adherence to the
+project plan, all in service to ensuring a successful end project. Project managers employ techniques such as
+progress tracking, performance measurements, and variance analysis to assess project status. Key
+performance indicators are established to monitor project objectives, deliverables, and milestones. Timely
+identification of deviations enables project managers to take corrective actions, adjust plans, and manage
+project changes.
+The project manager may take on several different roles during this stage. They are leaders, managers,
+accountants, and human resources experts; they may also be technical experts depending on their
+backgrounds. Project managers must anticipate, imagine, adjust, fix, and stay on top of everything related to
+their project. If a project manager has a good team to work with, this part can be easy, but if the project
+manager’s team develops conflicts, this could mean a delay in deliverables or failure to deliver the right
+product or service.
+Part of monitoring and control and the planning stages is risk management. Identifying, analyzing, and
+responding to risks is crucial to project success; thus, risk management is one of the most important jobs of
+the project manager. The process of risk management encompasses risk identification, qualitative and
+quantitative analysis, risk response planning, and risk monitoring and control. By actively managing risks
+throughout the PLC, project managers enhance project resilience and minimize negative impacts.
+Project Closure
+The project closure stage brings the project to a formal conclusion, ensuring that all project objectives are
+met and deliverables are handed over. This is the stage at which team members return to their previous work,
+or they move on to the next project. This is not true for the project manager. The project manager must
+complete all the paperwork and ensure the client or customer is happy with the outcome of the project.
+Project managers will ensure they met the budget or even came in under budget numbers, and the timeline
+would be verified to ensure that the project was delivered within the timeline agreed on by the client.
+Deliverable Acceptance
+One of the important items on a project manager’s closeout checklist should be the acceptance of deliverables.
+At this point in the process, project managers verify that the deliverables have been assessed and that all
+deliverables meet the scope and stakeholder requirements of the project. Formal acceptance procedures and
+sign-offs are obtained to confirm the satisfactory completion of deliverables. Best practices recommend
+involving stakeholders in the acceptance process to validate deliverable quality and promote customer
+satisfaction.
+Project Evaluation: Knowledge Transfer and Documentation
+Postproject evaluation assesses the project’s overall performance, including its success in meeting objectives,
+adherence to schedule and budget, and stakeholder satisfaction. Evaluation findings contribute to
+organizational learning, enabling improvements in future project management processes and practices. As the
+project concludes, knowledge transfer takes place to capture lessons learned and share best practices.
+Documentation of project artifacts, reports, and records facilitates knowledge retention and supports future
+projects. Project managers conduct project reviews and retrospective meetings to analyze project
+performance, identify areas for improvement, and enhance organizational learning. Usually, the PMO or
+another project manager would conduct an audit of the project and survey stakeholders on how to improve
+9.2 • Setting Up and Managing Projects for Success
+349
+
+projects in the future. This information is collected and utilized to help PMOs change processes or policies to
+operate more efficiently. Some organizations may not have one electronic area within which to keep all of their
+project data, so it is important the project manager takes time to organize the knowledge and safely keep the
+data where it can be accessed for the next projects.
+Developing a Project Management Plan and Schedule
+To ensure successful project execution, project managers should develop a comprehensive project plan and
+schedule using real requirements and documentation. This phase involves several key steps, each of which
+plays a significant role in shaping the project’s direction and facilitating efficient execution.
+Defining Project Objectives
+The first thing the project manager must do is clearly articulate the project’s objectives and desired outcomes.
+This involves engaging stakeholders and understanding their expectations for the project and the deliverables.
+It is essential to establish SMART (specific, measurable, achievable, relevant, and time-bound) objectives to
+provide a clear direction for the project. Without this step, you can get to the end of the project and find the
+client is unhappy.
+Identifying Deliverables
+The project manager must identify with the stakeholders, including the client, specific deliverables the project
+will produce, including reporting and any other updating the stakeholders need. These deliverables can be
+tangible products, services, or outcomes that contribute to the project’s success. By identifying and defining
+deliverables, the project team gains a shared understanding of what needs to be accomplished.
+Defining Scope
+As you learned, the project scope defines the boundaries of the project, including what is included and what is
+excluded. A well-defined scope helps manage expectations, prevent scope creep, and ensure that the project
+remains focused on its intended outcomes. The project manager must also clearly document the project scope
+statement to provide a reference point throughout the project and ensure that the product and/or service
+being delivered meets stakeholder expectations as defined in the scope.
+Work Breakdown Structure
+A work breakdown structure (WBS) helps the project manager understand how the deliverables will be
+scheduled and any dependencies there might be in completing other deliverables, essentially breaking down
+the work into smaller, more manageable work packages and tasks. A WBS allows the project manager to see
+the project as bite-sized pieces and tackle them one by one. For example, if you have one team that needs to
+produce two deliverables, you may need to resource the first deliverable or divide the team if there are
+enough individuals to complete both deliverables on time. A WBS provides a structured view of the project’s
+tasks, activities, and subactivities, using some of these techniques:
+•
+Activity sequencing: A WBS can identify logical dependencies between project activities to determine
+which activities must be completed before others can begin and establish the sequence in which activities
+should be executed. Dependency relationships can be of various types, including finish-to-start, start-to-
+start, finish-to-finish, and start-to-finish. This step helps in determining the flow of tasks and
+understanding the project timeline.
+•
+Estimating activity durations: Accurate duration estimates help in creating a realistic project schedule. To
+estimate the time required to complete each activity, the project manager must consider resource
+availability, complexity, and dependencies. The project manager can use historical data or expert
+judgment if they have the experience. There are several estimation techniques that would be taught in a
+project management course or training, such as analogous estimating, parametric estimating, and three-
+point estimating to determine activity durations.
+•
+Resource planning: The project manager needs to identify the resources required to execute the project
+350
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+activities as well as assess the availability and allocation of resources. This requires a solid estimation of
+the team’s skills, expertise, and availability throughout the project. Resources could include human
+resources, equipment, materials, and any other necessary assets. Good resource planning ensures that
+the right resources are assigned to the right tasks at the right time.
+Developing the Schedule
+Using the activity durations, dependencies, and resource planning, the project manager can create a project
+schedule. The schedule outlines the start and end dates for each activity and provides a road map for project
+execution. The project manager also considers constraints, milestones, and critical path analysis to ensure that
+the schedule reflects realistic timelines and dependencies.
+Monitoring and Control
+When the project is ready to move along with its tasks, the project manager must establish processes and
+tools for monitoring the project’s progress and managing any deviations from the planned schedule. The
+project manager must regularly track the actual progress against the planned schedule, identify variations,
+and take corrective actions as necessary, sometimes in a very short period of time. The project manager also
+needs to conduct regular project status meetings, update the project plan and schedule, and communicate
+changes to stakeholders. This is one of the busiest times for a project manager.
+ETHICS IN IS
+The Ethics Guy Podcast
+Project managers need to make decisions on a regular basis that impact the project from an ethical
+perspective. This podcast episode specifically tackles project manager ethics (https://openstax.org/r/
+109PMEthics) and features Bruce Weinstein, “The Ethics Guy,” discussing what a project manager should do
+and whom they should be. The podcast Manage This is directed at project managers as they make
+important decisions not just for projects, but also for organizations, which involve resources, budgets, and
+leadership skills.
+The Plan and Schedule in Action
+To illustrate the importance of project planning and scheduling, consider a scenario of developing a new
+software application. Imagine you are a project manager responsible for overseeing the software development
+life cycle, from inception to deployment, at a high-tech firm that sells IT services to small- and medium-sized
+organizations. Your organization has recognized the need for a customer relationship management (CRM)
+system to enhance customer interactions and streamline business processes.
+To effectively support the sales and customer management processes of a medium-sized organization that
+sells search engine optimization (SEO) services to large organizations, the CRM system your organization
+needs encompasses a range of specific requirements. These requirements are tailored to the organization’s
+unique needs and the nature of the services it provides, such as reviewing SEO data to determine gaps in web
+strategy.
+The first thing you must do is accurately identify stakeholders in the project to ensure they are represented in
+the requirements gathering process. Once the stakeholders are identified, you can set up the processes for
+how to gather the needs and wants of the team and the organization. For example, should you have one big
+meeting, or should you break down various groups by function and meet with them separately? Or should you
+select certain individuals to be part of one higher-level meeting and then have others be part of another broad
+meeting to gather requirements?
+As a project manager, the hardest part of the requirements gathering process is determining the difference
+9.2 • Setting Up and Managing Projects for Success
+351
+
+between a “must-have” (needed) feature or function and one that is “nice to have” (wanted). Identifying both
+the needs and wants in the requirements is necessary when budgeting and designing the solution. If there is
+money left in the budget, you may be able to deliver on some of the wants instead of just the must-have
+features and functionality.
+Table 9.1 outlines the key requirements for the CRM system gathered through stakeholder meetings and
+analysis of the future needs of the organization for this scenario.
+Requirements Document for XYZ Corporation
+Through meetings with key stakeholders and end users, the following areas have been defined as
+departments or functions that will utilize the CRM:
+Lead management:
+•
+Capture and track leads generated through various marketing channels (e.g., website, social media,
+email campaigns).
+•
+Assign leads to sales representatives based on predefined criteria and territories.
+•
+Monitor lead progression through the sales pipeline and track relevant interactions and activities.
+•
+Provide automated lead nurturing capabilities to engage and convert potential customers.
+Contact and account management:
+•
+Maintain a centralized and up-to-date database of contacts and accounts, including key stakeholders
+within customer organizations.
+•
+Capture contact details, job titles, contact history, and any relevant notes or preferences.
+•
+Enable easy segmentation and categorization of contacts based on various criteria (e.g., industry,
+organization size, revenue).
+Opportunity and sales management:
+•
+Manage sales opportunities and track their progress through the sales cycle.
+•
+Record and update opportunity details, including deal value, estimated close dates, and associated
+activities.
+•
+Generate sales forecasts and reports to analyze sales performance and pipeline.
+Service management:
+•
+Support the management of SEO service delivery, including project tracking, task assignment, and
+progress monitoring.
+•
+Enable collaboration among sales, service delivery teams, and clients to ensure smooth execution and
+customer satisfaction.
+•
+Record and track service-related interactions, requests, and issues.
+Communication and collaboration:
+•
+Facilitate seamless communication and collaboration among sales representatives, account managers,
+and clients.
+•
+Enable email integration to capture and log email communications within the CRM system.
+•
+Provide a centralized platform for internal collaboration and knowledge sharing related to customer
+accounts and opportunities.
+Table 9.1 Sample Requirements Documentation A requirements document for selling SEO services might begin with something
+like this example.
+352
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+Requirements Document for XYZ Corporation
+Reporting and analytics:
+•
+Generate customizable reports and dashboards to monitor key sales metrics, performance, and trends.
+•
+Provide real-time visibility into sales pipeline, revenue forecasts, and customer engagement.
+•
+Support data-driven decision-making through advanced analytics and visualization capabilities.
+Integration and scalability:
+•
+Integrate with other relevant systems such as marketing automation, project management, and
+invoicing.
+•
+Allow customization and scalability to accommodate future growth and evolving business needs.
+•
+Ensure data integrity and consistency across integrated systems.
+Table 9.1 Sample Requirements Documentation A requirements document for selling SEO services might begin with something
+like this example.
+These requirements will be documented in the requirements document that eventually will become the scope
+of the project. Project managers need to have this requirements document to determine the solution, budget,
+and timeline for the project.
+Developing a well-structured project plan and schedule is critical to ensure a successful CRM software
+implementation. The project plan outlines the entire scope of work, including the specific deliverables,
+milestones, and activities required to complete the project. It serves as a road map, guiding the project team
+through the various phases of development, testing, and deployment.
+Planning for the Solution
+The next step in developing the project plan and schedule is to understand the solution or how the
+organization will go about finding the right solution. The solution can be developed in one of two ways: (1) use
+the requirements document to draft a request for proposal (RFP) to acquire vendors who can supply or build
+the solution or (2) determine the internal and external resources needed to build the solution and integrate it
+into the organization. Depending on the resources of the organization, it may be better to select a vendor who
+can deliver an off-the-shelf CRM system and integrate it with the internal organization. For the purposes of this
+scenario, a vendor will deliver the complete solution.
+Project Objectives
+In this case, the organization has defined the objectives to include improving customer satisfaction, increasing
+operational efficiency, and boosting sales revenue. These clearly defined objectives provide direction for the
+project and align the efforts of the project team with the organization’s strategic goals.
+Deliverables
+Since the organization is choosing an off-the-shelf solution and will have a vendor implement and integrate
+the CRM solution, the project manager’s deliverable is an RFP with the requirements categorized and defined,
+such as customer data management, sales pipeline tracking, and reporting functionalities. Under each of
+these categories, the actual requirements would be written to include in the RFP.
+Next comes the selection process. The project manager will need to develop the criteria and process for the
+selection of the vendor. This information will become part of the RFP, so vendors know what to expect. For
+example, you may require the vendor to submit a proposal and a detailed demonstration of the features and
+functionalities requested in the requirements. Or you may require the vendor to submit their proposal in
+person as a presentation to key stakeholders.
+9.2 • Setting Up and Managing Projects for Success
+353
+
+Last, you will need to detail the transition and management plan for the project. This plan describes how the
+organization will work with the vendor and who the key points of contact would be. Typically this includes the
+project manager and, depending on the questions the vendor may have about the specifics of the project,
+perhaps someone from the organization’s leadership team or technical department.
+Scope
+Once the objectives and deliverables are defined, the project manager proceeds with scoping the project.
+Determining the boundaries of the project involves establishing what is within the project’s scope and what is
+not. Scoping this project should be simple since you are selecting a CRM vendor who will provide a solution
+and integrate it into your organization. As a member of the company acquiring the software, all you must
+manage is the RFP process and how you will work with the vendor to implement the solution. The vendor
+should provide its own project manager to work with you.
+Creating a Work Breakdown Structure
+With the scope defined, the project manager then creates a WBS (Figure 9.13). In the case of the CRM software
+development, the WBS could include activities such as requirements gathering, system design, coding, testing,
+user training, and deployment. The WBS breaks down what needs to be part of the schedule and estimates
+how long each task might take. Earlier the work was defined as follows:
+•
+initiating the project
+•
+acquiring the project requirements
+•
+developing the RFP
+•
+selecting the vendor
+•
+overseeing the vendor’s implementation, integration, and training services
+First, organize these master tasks across the top of the WBS. Under each master task, break down the task into
+smaller tasks and organize those accordingly.
+Figure 9.13 A work breakdown structure helps to organize, prioritize, and visualize what steps are needed to complete a project.
+(attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+354
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+Sequencing
+Once the WBS is established, the project manager can identify the dependencies between activities and
+establish the sequence in which they should be executed. Sequence these subtasks for each master task and
+assign the number of work hours it will take to complete each task. For instance, system design cannot begin
+until the requirement’s gathering phase is completed. This activity sequencing ensures a logical flow of work
+and enables efficient resource allocation. Remember that your WBS will help you understand the
+dependencies of each task and the flow of the project and help determine the time each task will take to be
+completed.
+To estimate the duration of each activity, consider various factors such as resource availability, complexity, and
+dependencies. For example, acquiring the project requirements may take a while because this task is
+dependent on the schedule of the stakeholders involved and the approval process required.
+Next identify the resources required to carry out the project activities. This could include software developers,
+testers, and database administrators, as well as infrastructure resources for this project. Ensuring that the
+right resources are allocated to the right tasks at the right time is essential for maintaining project efficiency.
+Bringing It All Together
+Once the project plan is developed, the project manager will go to the calendar and begin using the WBS to
+turn the sequencing, resource allocations, and durations for each task into a project schedule. The schedule
+outlines the start and end dates for each activity, considering the estimated durations, dependencies, and
+resource availability. It provides a clear timeline for the project team and stakeholders, facilitating coordination
+and ensuring everyone is aware of key milestones and deadlines.
+FUTURE TECHNOLOGY
+Using Artificial Intelligence or GPT for Project Management
+Both AI and GPT are big in the business industry. How can project managers use GPT to assist in their work
+activities? Well, let’s ask Bing GPT, which was running on GPT Version 4 at the time this was written. In
+answer to this question, Bing GPT provided some very interesting information and an interesting
+recommendation.
+Hello, this is Bing. I’m glad you asked. AI or GPT can help with project management in many ways,
+such as:
+•
+Creating project plans and timelines by providing information on your assignment and getting
+suggestions from ChatGPT, an AI tool that uses machine learning to generate natural language
+responses.
+•
+Getting feedback or optimization tips on your existing project plans or timelines by asking ChatGPT
+questions and getting in-depth answers.
+•
+Delegating tasks to your team members by providing ChatGPT with the scope of the project and
+the strengths and weaknesses of each team member, then asking who should take on which task.
+•
+Boosting productivity and improving project workflows by using AI-powered solutions that can
+automate task creation, provide PM insights, and handle uncertainty and risk.
+However, there are also some limitations and challenges of using AI or GPT for project
+management, such as:
+•
+Lack of context or expertise in certain areas or industries, which may lead to weak or inaccurate
+recommendations.
+•
+Difficulty in dealing with complex or ambiguous situations that require human judgment or
+9.2 • Setting Up and Managing Projects for Success
+355
+
+creativity.
+•
+Ethical or legal issues that may arise from using AI-generated content or data without proper
+attribution or consent.
+It is important that, if used, AI or GPT serve as a supportive tool rather than a replacement for human
+project managers. You should always verify the quality and validity of any AI-generated content or data
+before using it for a project. You should also be aware of the ethical and legal implications of using AI or
+GPT for project management and follow the best practices and guidelines for responsible AI use.
+Project Risks
+Risk assessment and management are important in today’s business world. In project management, effective
+risk assessment is crucial for managing successful project outcomes. Identifying, evaluating, and mitigating
+project risks are essential processes that help managers project, anticipate, and address potential obstacles
+that can impact project objectives.
+Risk management is something people can use in every part of life, so the risk assessment described here can
+be applied to other activities, such as buying a car or getting a job, to determine what the impact of those risks
+would be on your life financially, time-wise, or in any other way.
+Identifying Risks
+The first step in a risk assessment is to define what a risk is and how it should be categorized. A risk is an
+event or condition that has a negative effect should it occur during a project. Identifying project risks involves
+systematically identifying potential events or circumstances that may have an adverse impact on project
+objectives. Project risks should be identified throughout the project and monitored for severity. Each time
+there is a delay in a deliverable, the chance of completing the project on time could become a risk or impact on
+the cost or budget of the project. There are various strategies for identifying risks in a project.
+Engaging Stakeholders
+Stakeholders possess valuable knowledge and perspectives on different aspects of the project that you may
+not have or that they are more familiar with. By involving stakeholders in risk identification activities, project
+managers can tap into their expertise and gain a comprehensive understanding of potential risks. Here are
+some tips on engaging stakeholders1 :
+•
+Brainstorming sessions: Organize brainstorming sessions with the project team, subject matter experts,
+and relevant stakeholders. It is the project manager’s job to encourage participants to freely express their
+thoughts and ideas about potential risks. This collaborative approach fosters creativity and allows for the
+identification of risks from diverse viewpoints.
+•
+Interviews and workshops: Conducting interviews or workshops with key stakeholders can elicit their
+insights on risks specific to their areas of expertise. These interactions provide an opportunity to explore
+risks associated with project requirements, technology, resources, and external factors.
+Utilizing Risk Identification Techniques
+In addition to stakeholder engagement, various techniques can be employed to systematically identify project
+risks2 :
+•
+Checklists: A favorite among project managers, checklists that cover a wide range of risk categories
+relevant to the project can serve as prompts to stimulate thinking and ensure comprehensive risk
+identification. Examples of checklists include industry-specific risk checklists, lessons learned from
+1
+Michael M. Bissonette, Project Risk Management: A Practical Implementation Approach. (Project Management Institute, 2016).
+2
+Michael M. Bissonette, Project Risk Management: A Practical Implementation Approach. (Project Management Institute, 2016).
+356
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+previous projects, or risk categories derived from standards and best practices. The key is not to reinvent a
+process but to use the resources you already have available. The PMI provides several resources for risk
+assessment documents.
+•
+Historical information review: Before you begin to gather risk data, analyze historical project data, lessons
+learned, and postmortem reports from previous projects to identify risks encountered in similar contexts.
+This technique leverages the experience and knowledge gained from past projects to proactively identify
+risks that may arise in the current project. Look for prior risk assessment documents from similar projects
+and determine if this project could encounter the same types of risks.
+•
+Cause-and-effect analysis: Apply cause-and-effect analysis techniques, such as fishbone (Ishikawa)
+diagrams (Figure 9.14) or the five-whys technique, to identify potential risks by exploring the underlying
+causes. This technique helps uncover risks that may not be immediately apparent and enables a deeper
+understanding of their root causes.
+•
+SWOT analysis: A SWOT analysis is used in business for determining new strategies and developing new
+products. The SWOT analysis identifies risks related to the project’s internal and external environment and
+helps identify potential threats and weaknesses that may impact the project’s success.
+•
+Expert judgment: More experienced project managers have a lot of history with various types of projects
+and can readily identify risks. Junior project managers should seek input from subject matter experts or
+experienced professionals who possess domain-specific knowledge. Their expertise can help the project
+manager identify risks that may be unique to the project domain or require specialized insights.
+Figure 9.14 A fishbone diagram can help to analyze cause and effect of potential risks, helping the project manager to plan for
+adjustments needed to the project, schedule, or budget. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Evaluating Risks
+Once risks are identified, they must be evaluated for their impact, probability, and severity related to the
+project. To evaluate risks of the project, conduct an overall risk assessment (Figure 9.15). The risk assessment
+provides the team with an overall level of risk or risk exposure number and takes into consideration any
+threats to the project, including its budget, scope, quality, and schedule. For example, it would consider what
+would happen if the budget were depleted or if a natural disaster occurred.
+9.2 • Setting Up and Managing Projects for Success
+357
+
+Figure 9.15 A risk assessment matrix can help project managers determine the level of impact of a risk by accounting for its
+probability and severity. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+For easy evaluation, the impact of a risk can be sorted across categories, such as the range from least to most
+in Figure 9.15. The likelihood of a risk (for example, an earthquake on the East Coast of the United States)
+happening is called the probability, which ranges from least to most. An earthquake on the East Coast of the
+United States has a least probability because history tells us this does not happen very often. The severity of
+the impact of a risk on a project’s cost, schedule, scope, and quality is also measured from least to most. A risk
+register documents the risk to the project being completed within budget, on time, within scope, with good
+quality, and with minimal risks. Figure 9.16 shows how a risk could be ranked. The project manager would then
+determine if the risk must be accepted or mitigated—or if it is so great that the project should be canceled.
+Figure 9.16 As part of a risk assessment, a project manager would use a matrix to determine the risk level of a project and record
+the risks using a risk register. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+The project manager assesses the probability and impact of risks with respect to the project. This is a hard
+task, especially for those lacking history or experience in this area or knowledge of disaster events like
+earthquakes. Here are some tips and a breakdown of the process to use when assessing the probability and
+impact of risks on your project3 :
+•
+Probability assessment: Evaluate the likelihood of each identified risk event happening. This can be done
+qualitatively by assigning probabilities (low, medium, high) or quantitatively by using historical data or
+statistical analysis to estimate the probability. The probability will be expressed as a percentage.
+•
+Impact assessment: Determine the potential consequences or impact that each risk event can have on the
+project, such as scope, schedule, budget, quality, and stakeholders. Assess the weight of these impacts
+3
+Megan Bell, “How to Use a Risk Matrix in Project Management,” Project Management Academy, August 24, 2022,
+https://projectmanagementacademy.net/resources/blog/risk-matrix/#what-is-risk-matrix
+358
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+based on their severity and significance to the project. For example, if a project that is to be undertaken in
+a war zone or during the monsoon season, there will likely be some major risks to the project both in
+completing the project and in protecting the human resources who are performing the tasks on the
+project.
+•
+Prioritizing risks: Prioritize risks based on their significance to the project. Prioritization will help you
+allocate resources so you can focus on managing the most critical risks. Known as risk scoring or ranking,
+the project manager assigns scores or ranks to each risk based on its evaluated probability and impact.
+For example, consider a project located in the polar ice caps during the winter season. The risk of getting
+enough goods and materials to this region is high in the coldest part of winter. This might be ranked as a
+high risk. Various techniques, such as risk matrixes, decision trees, or multicriteria decision analysis, can
+help evaluate these risks. The higher the score or rank, the greater the priority of the risk.
+•
+Consideration of project objectives: Take into account the project’s specific goals, constraints, and
+priorities when prioritizing risks. Some risks may be more critical to achieving project success, while others
+may have a lower impact on overall objectives. An example would be a slowdown in the supply of
+materials to complete a project, such as silicon chips due to a major pandemic, or finding human
+resources to complete the project. The project would fail without either of these resources, so the project
+manager must plan for these obstacles and ensure there is time in the schedule to overcome or mitigate
+these risks.
+•
+Review and refinement: Always regularly review and refine the prioritization of risks as new information
+becomes available or project circumstances change. This is critical because risks and situations can
+change frequently. For example, you could be at the end of a project when you realize your team doesn’t
+have a certain kind of tool to finish the highly technical assembly of some part. To help prepare for this,
+reassess the priority of risks at key project milestones or decision points to ensure that risk management
+remains aligned with project needs.
+Risk evaluation is an ongoing process that requires continuous monitoring and review throughout the PLC.
+Following are some simple ways to continuously evaluate risks:
+•
+Continuous monitoring: Continuously monitor the status of identified risks and track any changes in their
+probability or impact. Conduct regular risk assessments, status updates, and progress reports, and obtain
+stakeholder feedback.
+•
+Periodic reviews: If you have a project that doesn’t have very many high-level risks, you might be able to
+conduct periodic risk assessments to reassess the evaluated risks and their prioritization. Along with this,
+review the effectiveness of existing risk mitigation measures and identify any new risks that may have
+emerged.
+•
+Adjustments and updates: If you evaluate and measure each new development as it comes into the
+project, you likely encounter adjustments and updates. For example, maybe you have a change order. This
+would be a good time to adjust the risk assessment. You would adjust risk evaluations and priorities based
+on the current situation and any new project developments, and you would update risk response
+strategies, mitigation plans, and contingency measures to address any changes in the risk landscape.
+Mitigating Risks
+Mitigating project risks is a crucial aspect of risk management. It involves taking proactive measures to reduce
+the probability and impact of the risks that have been identified and evaluated. For example, suppose a project
+involves doing construction work during the monsoon season in Africa. Since there is very little rain in parts of
+Africa at most times, the project team might be able to mitigate this risk by scheduling around the monsoon
+season. Some risks may not be as easy to mitigate. In those cases, the project manager, along with the
+organization’s leadership, will need to determine how much risk the organization is willing to accept on the
+project. There are several strategies that can help project managers enhance their ability to navigate potential
+obstacles and improve project outcomes.
+9.2 • Setting Up and Managing Projects for Success
+359
+
+Developing Risk Response Strategies
+Once a project manager has identified and evaluated the risks associated with a project, the next step is to
+develop risk response strategies. These strategies define the actions to be taken in response to specific risks:
+•
+Avoidance: Identify risks that can be completely avoided by taking specific actions. You cannot avoid all
+risks, but if you can, do so. For example, if a project is at risk of exceeding the budget due to scope creep,
+establishing strict change control processes can help avoid unnecessary scope changes.
+•
+Transfer: If you cannot avoid a risk, then consider risks that can be transferred to external parties. This can
+be achieved through contractual agreements, insurance policies, or outsourcing certain project activities
+to specialized vendors or partners.
+•
+Mitigation: If other steps fail, implement measures to reduce the probability or impact of the risks. This
+may involve implementing additional quality control processes, conducting regular inspections, or
+enhancing project team skills through training.
+•
+Acceptance: If a risk cannot be avoided, transferred, or mitigated, accept the risk and prepare for any
+consequences. Acceptance involves acknowledging the risk and its potential impact while developing
+contingency plans to address any adverse effects.
+Implementing Risk Mitigation Measures
+Implementing mitigation measures ensures that the identified risks are effectively addressed. The project
+manager would need to be sure that all stakeholders are aware of the risks and that the individuals
+responsible for mitigation measures are involved in the risk process. Clearly define roles and responsibilities
+for implementing risk mitigation measures. Assign specific team members or stakeholders to oversee the
+execution of mitigation actions. The project manager could do this, but it is most likely that another team
+member or leadership can resolve the issues. The project manager would still need to follow up and ensure
+the risk is mitigated to everyone’s satisfaction.
+Next, develop a contingency plan. Identify potential fallback options or contingency plans to address risks that
+cannot be completely mitigated. A contingency plan outlines the actions the project manager would take if
+the risky event occurred, allowing for a quick and efficient response. Some companies may already have
+responses to these risks in their overall operations plan. Be sure that all stakeholders, including members of
+the leadership team, clients, and others, are aware of contingency plans. Communication is key in risk
+management, and when risk occurs, it can play a role in whether the end result is a successful project or one
+that goes wrong.
+Finally, monitor and track the risks to be sure to mitigate them in the future. Continuous monitoring is needed
+to measure the effectiveness of the mitigation plan. Regularly track the status of risks, assessing whether the
+planned actions are reducing the probability or impact as intended.
+Regularly Reviewing and Reassessing
+Risk reviews are an ongoing process. It is important to adapt and refine mitigation strategies as circumstances
+continuously change. As a project manager, it is your job to ensure that these risks are constantly being
+reviewed and reassessed. Besides doing periodic reviews, focus on lessons learned from other projects where
+similar risks may have occurred. If you can capture and document these risks during a lesson learned, it could
+save you a lot of time and money on newer projects. Review your own projects’ risks from previous projects
+and see how these risks impacted your project and then determine if there would have been a different
+solution that you could have applied. Regardless of the process or methodology you choose, you must stay on
+top of managing risks so your project goes as smoothly as possible.
+360
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+9.3 Career Focus: Opportunities in Information Systems Project
+Management
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Determine career opportunities in the field of project management
+•
+Explain what responsibilities, requirements, and characteristics are needed to be a project manager
+Project management in IS can be a rewarding and fulfilling career with a lucrative salary for a college graduate
+of any age or level of experience. When looking at careers in certain fields like health care or IT, consider
+combining industry experience with a few courses or training in project/program management to enhance
+career pathways in these fields and increase potential earnings.
+Career Opportunities in Project Management
+Project, program, and portfolio managers are all highly skilled individuals with expertise in managing projects,
+programs, and portfolios. Combining these skills with another expertise allows you to expand your career
+possibilities and earning potential. Project managers are needed in a variety of fields and industries, including
+business, manufacturing, engineering, IT, finance, education, health care, and logistics, among others. You will
+find many of these types of jobs on internet job boards. Explore PMI.org to find many articles, job
+announcements, and career resources that can help you plan your future and provide valuable project
+management tips for your life right now. Many roles and positions require project management training but
+do not hold the title of a project manager. Following are some of the career opportunities in IS project
+management:
+•
+project manager
+•
+program manager
+•
+portfolio manager
+•
+business analyst
+•
+IT consultant
+•
+technical project manager
+•
+IT operations manager
+•
+risk manager
+•
+Agile coach
+•
+scrum manager
+Each of these positions stems from the training or education you receive as a project manager. As an IS
+professional, you may not want to be an analyst or data manager or a network architect in the IT sector. You
+might prefer the management side of IS. If so, a strong background in project management will give an entry-
+level candidate an advantage over many other IS professionals.
+Practical experience is crucial for project managers. You can start building experience by looking for
+internships or co-op programs in project management or related roles. Your college or university institution or
+a career department can assist you in finding these types of internships. You can also reach out to smaller
+companies that may need that expertise and are willing to help reimburse tuition if you work with them during
+the summer and after graduation. These experiential learning opportunities allow you to apply theoretical
+knowledge in real-world situations, understand project life cycles, work with diverse teams, and gain exposure
+to project management methodologies and tools. Entry-level positions in project coordination or assistant
+roles can also provide valuable experience. Consider taking on some projects at your institution or with a
+current employer. This may be beneficial for both you and the organization you are working with.
+Project Management in Health Care
+Health care is a growing industry worth billions of dollars. There are hundreds of jobs for individuals who study
+9.3 • Career Focus: Opportunities in Information Systems Project Management
+361
+
+health care, but there are also many jobs for those who have degrees in other areas like project management
+(Figure 9.17). Here are a few interesting positions that combine health-care management and project
+management in the health-care industry:
+•
+Health-care project manager: This is a general project management role focused on overseeing and
+managing projects within health-care organizations. Health-care project managers may work on initiatives
+related to process improvement, technology implementation, facility expansion, or quality improvement.
+These project managers may have some background in health care or health-care systems.
+•
+Information technology project manager: Health-care organizations rely heavily on technology for various
+purposes, such as electronic medical records, telehealth systems, and data analytics. Information
+technology project managers in health care are responsible for managing technology-related projects,
+including system implementations, software upgrades, infrastructure enhancements, and cybersecurity
+initiatives. Positions in IT project management usually have higher salaries than other project
+management positions in health care.
+•
+Clinical project manager: Clinical project managers oversee projects related to clinical research, trials, or
+the development and implementation of new medical procedures or protocols. They work closely with
+clinical researchers, physicians, and regulatory bodies to ensure compliance, manage timelines, and
+monitor progress. These positions usually require a health-care background or degree. Many nurses
+advance to positions like these with the proper project management training.
+•
+Health-care informatics project manager: With the growing importance of health information systems and
+data analytics in health care, informatics project managers are responsible for projects related to data
+integration, data warehousing, data analysis, and health information exchange between doctors,
+hospitals, and other providers. They collaborate with many teams throughout the organization to ensure
+efficient and secure management of health-care data. Any position in informatics usually requires a
+background in informatics or health care.
+•
+Quality improvement project manager: Quality improvement is a critical aspect of health care, and project
+managers in this role focus on projects aimed at enhancing patient care, safety, and overall quality.
+Individuals in these positions are usually highly trained in health-care operations. They work on initiatives
+such as implementing evidence-based practices, developing quality metrics, and leading process
+improvement efforts. A lot of nurse leaders find themselves in positions like this after obtaining their
+master’s degree in leadership.
+•
+Compliance project manager: Compliance with regulations and standards is essential in health care.
+Compliance project managers ensure that health-care organizations meet regulatory requirements, such
+as HIPAA, GDPR, and industry-specific requirements. Because compliance project managers develop
+compliance programs, conduct audits, and implement measures to mitigate issues, these positions usually
+require experience in compliance.
+362
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+Figure 9.17 The health-care industry supports a wide range of project management positions. (credit: modification of work “NMCP
+Holds Nursing Skill Fair 211021-N-MY642-1009” by Navy Medicine/Flickr, Public Domain)
+These are just a few of the positions you can hold in the health-care industry as a project manager with a
+medical or health-care background. It’s important to read the job responsibilities for positions like these to
+determine the specific requirements and expectations.
+Project Management in Finance
+The financial industry also employs many different graduates from all types of background and degree
+programs. The financial industry is vast and ranges from small-town banks to large global investment firms.
+Depending on your expertise, experience, and the specific needs of the organization, you will find that project
+managers are paid very well in this industry. Following are some of the project manager positions in the
+financial industry:
+•
+Banking project manager: Like a health-care project manager in health care, this is a general project
+management position responsible for overseeing and managing projects across different areas of the
+bank. This may include projects related to process improvement, system implementations, regulatory
+compliance, customer experience enhancements, or product/service launches. Any project that requires
+scheduling, budgeting, quality, and risk oversight would be a job for a project manager.
+•
+Information technology project manager: Just as in health care, banks heavily rely on technology to
+provide secure services. Security and privacy are the most important responsibilities when dealing with
+people’s money. Information technology project managers in the financial industry manage many high-
+tech projects, such as banking system upgrades, software development, cybersecurity initiatives, digital
+transformation projects, AI, data analytics, and infrastructure enhancements.
+•
+Risk management project manager: Risk management is an important aspect of banking operations.
+Project managers are well equipped to handle risks and evaluate probability and impacts. In general, risk
+management project managers focus on projects related to identifying, assessing, and mitigating risks.
+They work on projects such as implementing risk management frameworks, regulatory compliance
+projects, operational risk mitigation initiatives, disaster management, or business continuity planning.
+Individuals in this position usually have a strong background in IT or security.
+•
+Digital banking project manager: With the rise of digital banking services, project managers in this role
+focus on projects related to digital transformation, online banking platforms, mobile banking applications,
+and digital payment solutions. They oversee projects that aim to enhance customer experience, increase
+self-service capabilities, and drive digital innovation within the bank. Digital project managers are
+becoming more popular in all industries but especially in banking.
+•
+Regulatory compliance project manager: Banks operate within a highly regulated environment. Regulatory
+compliance project managers ensure that the bank adheres to applicable laws, regulations, and industry
+9.3 • Career Focus: Opportunities in Information Systems Project Management
+363
+
+standards. They manage projects related to compliance with financial regulations, anti–money laundering
+initiatives, and data privacy regulations. In these positions, a project manager would need to have a
+background in regulatory matters and compliance in the financial industry.
+•
+Product development project manager: Banks continuously develop and launch new products and services
+to meet customer demands. Product development project managers lead development initiatives of new
+products and could oversee a portfolio of projects in the development area. Usually these project
+managers collaborate with cross-functional teams to ensure successful product delivery. This is a great
+position for a project manager who is very creative and likes to be on the cutting edge of product
+development.
+•
+Merger and acquisition project manager: In the financial industry, mergers, acquisitions, and integrations
+are common. Usually there is a separate merger and acquisition department that handles the merger and
+acquisition of companies interested in buying or investing in other companies. Usually, these positions are
+found in large investment brokerage companies that solely manage mergers and acquisitions. Project
+managers specializing in this area perform due diligence, integration planning, systems consolidation, and
+cultural alignment tasks. This is a very interesting career for someone who likes to work across various
+industries.
+The financial industry can be a very exciting and lucrative career for anyone who studies business and project
+management. Even if you don’t enjoy math or accounting, a project manager can still be successfully employed
+in the financial industry.
+Project Management in Manufacturing
+You may find yourself in a manufacturing industry where administrative and technical jobs are the focus, but
+where project managers play a significant role (Figure 9.18). Just as in other industries, project managers can
+hold various positions depending on the specific needs and projects within the organization. Having an
+engineering or technical degree or background can support a smooth transition to a project manager position
+in manufacturing.
+Figure 9.18 Many engineers study project management as part of their degree program. (credit: “Tesla Autobots” by Steve Jurvetson/
+Flickr, CC BY 2.0)
+These positions are common for engineers in manufacturing:
+•
+Manufacturing project manager: A general project management role within the manufacturing sector,
+these project managers oversee and coordinate projects related to process improvement, product
+development, facility expansion, equipment installation, and production optimization. They ensure
+projects are executed efficiently, are within budget, and meet quality standards.
+•
+Lean Six Sigma project manager: Lean Six Sigma is a methodology widely used in manufacturing to
+streamline processes, reduce waste, and improve efficiency. Lean Six Sigma certified project managers
+lead projects focused on process improvement, waste reduction, and quality enhancement. They can
+364
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+make a comfortable living by having a project manager certification and a Lean Six Sigma certification.
+They work closely with cross-functional teams to implement Lean Six Sigma methodologies and achieve
+operational excellence.
+•
+New product development project manager: Manufacturing companies often engage in developing and
+launching new products. New product development project managers oversee projects related to
+introducing new products to the market. They manage the entire product development life cycle, from
+concept design to prototyping, testing, and final production. With the manufacturing of any new product,
+systems are needed to develop the product that takes a long time to produce. This may be a good fit for
+those who like to be creative and have an engineering or manufacturing background.
+•
+Supply chain project manager: Supply chain project managers focus on optimizing the supply chain
+processes within manufacturing organizations. Many business majors with a specialization in supply chain
+work make great project managers in this industry. They work on projects related to supply chain network
+design, supplier management, logistics optimization, demand planning, and inventory management. They
+collaborate with various stakeholders to ensure smooth operations and cost-effective supply chain
+management. As the world becomes more integrated, supply chain management is expected to be a
+growing area. Supply chain management can be a very exciting and lucrative career that can take you all
+over the world. Project managers in this field can experience the same global career potential. Individuals
+in supply chain management come from many backgrounds and degree programs, like business,
+engineering, management, IT, and IS.
+•
+Quality assurance/quality control project manager: Companies can’t manufacture or supply products
+without quality control. Quality project managers oversee projects related to quality assurance and quality
+control. They establish and implement quality standards, develop quality management systems, conduct
+audits, and drive continuous improvement initiatives to enhance product quality and customer
+satisfaction. This role is a good match for those who want to be leaders and have good attention to detail.
+Project Management in Engineering
+Engineers can be employed in many different types of industries, so it may not be surprising that project
+managers with an engineering background are highly sought after (Figure 9.19). If you decide to study
+engineering, you may also want to have project management experience to boost your position and value to
+the organization. Having the expertise to manage scope, schedule, costs, risks, and quality are skills that every
+engineer must learn.
+Figure 9.19 Project management and engineering usually go together as engineers will be asked to lead projects as part of the job.
+(credit: “Flickr - Official U.S. Navy Imagery - A Navy engineering technician and the project manager for Pearl Harbor Naval Shipyard
+review installation plans for a 20,000-square-foot rooftop photovoltaic system” by Marshall Fukuki, U.S. Navy/Wikimedia Commons,
+9.3 • Career Focus: Opportunities in Information Systems Project Management
+365
+
+Public Domain)
+Here are some positions that project managers can have in the engineering industry:
+•
+Engineering project manager: This is a general project management role within the engineering industry.
+Engineering project managers oversee and manage projects related to infrastructure development,
+construction, product design and development, research and development, and engineering consulting.
+They are responsible for project planning, coordination, resource allocation, risk management, and
+ensuring successful project delivery.
+•
+Construction project manager: Construction project managers specialize in managing projects within the
+construction industry. They oversee the planning, execution, and completion of construction projects,
+including building construction, infrastructure development, and renovation projects. Construction project
+managers coordinate with architects, engineers, contractors, and other stakeholders to ensure projects
+are completed on time, are within budget, and meet quality standards.
+•
+Product development project manager: Product development project managers focus on projects
+involving the design, development, and launch of new products. They work closely with engineering
+teams, product designers, and marketing teams to define project scope, develop project plans, allocate
+resources, and manage the product development life cycle from concept to market launch.
+•
+Research and development (R&D) project manager: R&D project managers lead projects focused on
+research, innovation, and development of new technologies, products, or processes. They collaborate with
+engineers, scientists, and researchers to define project goals, allocate resources, manage timelines, and
+ensure the successful execution of R&D initiatives.
+•
+Systems engineering project manager: Systems engineering project managers oversee projects that
+involve complex systems integration, such as developing and implementing large-scale engineering
+systems or infrastructure. They coordinate activities across multiple engineering disciplines, manage
+project scope, ensure effective communication among stakeholders, and drive the integration and
+successful delivery of complex engineering systems.
+Project Management in Business
+Business majors are always in high demand to lead and manage some of the most influential companies in the
+world. Before you become a leader in business, you first must demonstrate your ability to manage and lead
+projects. A solid foundation in project management enhances any career choice, but in business, this is even
+more important (Figure 9.20).
+Figure 9.20 Business employs a vast number of individuals with various jobs, skills, and experience. Project management is just
+another skill set that can easily be part of any job or career for any business in the world. (credit: modification of work “wocintech-
+microsoft” by WOCInTech/nappy, Public Domain)
+Here are some common positions that project managers may have in the business sector:
+•
+Business project manager: This is a general project management role within the business field. Business
+366
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+project managers oversee and manage projects across various business functions, including marketing,
+operations, finance, human resources, and strategic planning. They ensure project goals are achieved,
+coordinate resources, manage project schedules, and monitor project budgets.
+•
+Information technology project manager: Information technology project managers specialize in
+managing projects related to IT or IS technology infrastructure upgrades, integrations, network
+installations, cybersecurity initiatives, and other IT-related projects. They collaborate with cross-functional
+and matrixed teams, stakeholders, and external vendors to ensure successful project delivery.
+•
+Marketing project manager: Marketing project managers focus on projects related to marketing
+campaigns, product launches, brand development, and market research. They coordinate the planning,
+execution, and monitoring of marketing initiatives, including advertising campaigns, digital marketing
+projects, social media campaigns, and market research studies. They often are knowledgeable in topics
+like search optimization and website analytics.
+•
+Operations project manager: Operations project managers are responsible for managing projects that
+improve operational efficiency, streamline processes, and optimize supply chain management operations
+within a company. They oversee projects related to process improvement, inventory management,
+logistics optimization, and operational cost reduction.
+•
+Strategy project manager: Strategy project managers are involved in projects related to strategic planning,
+business development, and organizational growth. They work on initiatives such as market analysis,
+competitive research, mergers and acquisitions, and strategic partnerships. Strategy project managers
+facilitate the development and execution of strategic initiatives to drive business success.
+What It Takes to Be a Project Manager
+Now that you’ve learned about the processes, theories, and skills involved in project management, and which
+industries employ project managers, let’s explore what it takes to get a job as a project manager. The main
+responsibilities of a project manager are to:
+•
+Plan, execute, and monitor projects from initiation to completion, ensuring adherence to project scope,
+timeline, and budget.
+•
+Develop and maintain project plans, including resource allocation, task assignments, and milestone
+tracking.
+•
+Coordinate and communicate with cross-functional teams, stakeholders, and clients to gather project
+requirements and ensure project goals are achieved.
+•
+Identify and manage project risks, issues, and changes, implementing appropriate mitigation strategies.
+•
+Track project progress, prepare status reports, and conduct regular project meetings to provide updates
+and address concerns.
+•
+Manage project budgets, including cost estimation, expenditure tracking, and financial reporting.
+•
+Ensure that project deliverables meet quality standards and stakeholder expectations.
+•
+Foster a collaborative and positive project culture, motivating team members and promoting effective
+teamwork.
+•
+Maintain documentation, project files, and lessons learned for future reference.
+Project management training or degree programs focus on developing skills for the responsibilities required
+and teaching students how to perform these tasks. The responsibilities are fundamental skills that project
+managers must perform and perform well to be within budget, scope, and costs while maintaining quality and
+accounting for risks.
+Following are some requirements of a project manager position4 :
+•
+bachelor’s degree in a relevant field (such as business, engineering, or computer science) or equivalent
+work experience
+4
+“Project Manager Job Description: Top Duties and Qualifications,” Indeed For Employers, updated January 13, 2025,
+https://www.indeed.com/hire/job-description/project-manager
+9.3 • Career Focus: Opportunities in Information Systems Project Management
+367
+
+•
+proven experience in project management, including planning, executing, and delivering projects on time
+and within budget
+•
+strong leadership and communication skills, with the ability to effectively manage teams and stakeholders
+•
+excellent organizational and time management skills to prioritize tasks and meet deadlines
+•
+analytical and problem-solving abilities to identify and resolve project challenges
+•
+proficiency in project management software and tools
+•
+project management certifications such as Project Management Professional (PMP) or Certified Associate
+in Project Management (CAPM)
+A wide range of bachelor’s degrees can qualify for this position. They include business, engineering, or
+computer science, along with a PMP or CAPM certification. No matter what you may study in college or
+through training, you can always add more training or skills in project management to increase your value in
+the market.
+Characteristics of Project Managers
+Project managers possess a range of characteristics that contribute to their success in leading projects. Here
+are some characteristics typical of successful project managers:5
+•
+Leadership: As a project manager, you need strong leadership skills to guide teams, to inspire, collaborate,
+and motivate individuals to achieve project goals. You must also be able to provide clear direction,
+delegate tasks, and foster a positive and productive work environment.
+•
+Communication: Effective communication is necessary for project managers to convey information, set
+expectations, and facilitate effective collaboration among team members, stakeholders, and clients.
+Project managers are skilled in active listening and clear verbal and written communication and are able
+to adapt their communication style to different audiences.
+•
+Organizational skills: Project managers must be highly organized to handle multiple tasks, deadlines, and
+resources effectively. Project managers develop detailed project plans, establish timelines, allocate
+resources, and track progress to ensure projects stay on track and within budget.
+•
+Problem-solving skills: Project managers encounter various challenges throughout projects. You should
+possess strong problem-solving skills to identify issues, analyze root causes, and develop effective
+solutions. You should be proactive in mitigating risks, handling conflicts, and making timely decisions to
+keep projects on course.
+•
+Adaptability: Projects often require flexibility and adaptability as circumstances change. You can expect
+that all projects have their challenges, and you need to think fast and adapt to those changes. Project
+managers can adjust their plans, resources, and strategies to accommodate unforeseen challenges or
+shifting priorities.
+•
+Collaboration: Even though the project manager has a lot of control and authority, a project manager is
+part of a team aiming to get projects completed through collaboration. Project managers work with cross-
+functional teams, stakeholders, and external partners. A project manager needs to excel in building
+relationships, fostering collaboration, and promoting teamwork.
+•
+Time management: Managing your time and your team’s time is a priority for project managers. Project
+managers are adept at managing time efficiently. They prioritize tasks, set realistic deadlines, and ensure
+project milestones are achieved on time.
+Many of these characteristics are soft skills required of any career. Colleges and universities pay close attention
+to developing these skills in their students. Characteristics like leadership, collaboration, and time
+management are all key skills for project managers and are taught in any project manager program.
+Developing foundational skills is a good way to achieve success as a project manager. You may discover you
+are very good at these skills already, and you don’t have to wait to practice them. Try applying budgeting,
+5
+Thanos Markousis, “Project Manager Job Description,” Resources for Employers, updated February 1, 2022,
+https://resources.workable.com/project-manager-job-description
+368
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+scheduling, and time management skills into your daily life. Seek out internships to get experience. Sign up to
+run a project for a student organization or take on a leadership role and focus on managing the organization
+and projects using best practices and skills you learned in your studies. Always seek out opportunities for
+teamwork and collaboration no matter where you are in life or where you may find the opportunities.
+Education and Certifications to Become a Project Manager
+A specific degree is not required but having some courses or training in project management or a related field
+can be advantageous. Pursuing a bachelor’s or master’s degree in fields such as business administration,
+engineering, computer science, or project management can provide an understanding of the principles and
+fundamentals of project management. Courses in specialty areas like IS offer opportunities to learn about
+project management methodologies, tools, and best practices through case studies and group projects.
+Project management certifications can enhance your credentials and earning power, as well as demonstrate
+your commitment to the field. The PMP certification, offered by the PMI, is one of the most recognized and
+respected certifications in the industry. To earn the PMP certification, you need a combination of education
+and project management experience, along with passing the PMP certification exam. If you don’t have enough
+experience to get the PMP certification, which requires three to five years of demonstrated project
+management work, you may want to consider a CAPM certification, which only requires two years of
+demonstrated experience in project management. Having demonstrated experience in project management
+doesn’t mean you have to have held the title of a project manager, only that you have performed various tasks
+in project manager task areas like initiating, managing, and closing projects. Both PMP and CAPM
+certifications require an individual to have a fixed number of hours of training before taking the exam, and
+they also require continuous professional development and ongoing training to maintain both certifications.
+PRINCE2 certification can also be pursued to showcase your knowledge and skills in project management. It
+also requires demonstrated experience in project management, an exam, and continuous professional
+development.
+Many project management positions will require some sort of certification. To obtain the best credentials in
+project management and earn the most in salary for the job, you will likely need a PMP certification or a
+certification in a specific Agile project management area like Scrum Master or PRINCE2.
+Project management is forever evolving, and staying updated with the latest trends, methodologies, and tools
+is important to maintain your certification and your expertise. As you complete college or training, you should
+think of learning as a lifelong endeavor. New technologies, new tools, and new best practices are progressing
+at a faster rate than ever before. Adopting a mindset of continuous learning and professional development is a
+must for long-term growth and sustainability. Attending industry conferences, workshops, and seminars, as
+well as engaging in online resources, webinars, and reading project management publications are all methods
+of continuous learning. Joining professional organizations and networking groups is a great way to connect
+with experienced project managers and learn from their experiences.
+9.3 • Career Focus: Opportunities in Information Systems Project Management
+369
+
+GLOBAL CONNECTIONS
+Global Outlook on Project Management
+According to PMI.org, demand for project managers through 2027 will grow faster than demand for other
+occupations. Through Anderson Economic Group (AEG), PMI conducted a study of job opportunities and
+growth associated with project management that covered eleven countries including the United States. The
+study revealed that through 2027, project management positions in the top seven industries will grow by 33
+percent, producing twenty-two million new jobs around the world. By 2027, employers will need around
+eighty-eight million individuals in project management. For example, in the United States, the Bureau of
+Labor Statistics projects the employment of project management specialists to grow by 7 percent between
+2023 and 2033.6 The countries with the most need for project managers will be China and India, together
+representing more than 75 percent of the total project management positions. Organizations are seeing
+the need for more project managers as productivity continues to grow.7
+6
+Bureau of Labor Statistics, “Project Management Specialists,” Occupational Outlook Handbook, U.S. Department of Labor, last
+modified August 29, 2024, https://www.bls.gov/ooh/business-and-financial/project-management-specialists.htm
+7
+Project Management Institute, Project Management Job Growth and Talent Gap 2017–2027 (Project Management Institute, 2017),
+https://www.pmi.org/learning/careers/job-growth
+370
+9 • Information Systems Project Management
+Access for free at openstax.org
+
+Key Terms
+adaptive development approach
+development approach that provides a framework that enables project
+team members to repeat the processes of cycle planning and task initiation as needed
+Agile project management
+type of project management that involves taking an iterative and incremental
+approach to delivering projects
+change management process
+proper procedure for stakeholders to change or modify the scope of the
+project
+contingency plan
+outlines the actions you would take if a risky event occurred
+escalation policy
+determines when the project manager should report budget issues, such as being under
+or over budget
+extreme programming (XP)
+Agile methodology that emphasizes the use of software engineering practices
+to improve quality and responsiveness
+incremental development approach
+development approach that enables a project to be divided into parts,
+or increments, that work together and build on each other
+Kanban
+Agile framework that helps managers visualize and optimize the flow of work through a visual
+representation of the tasks and how they flow through the project
+portfolio management
+centralized management of a set of projects grouped together to identify, prioritize,
+authorize, and control the related work
+predictive development approach
+development approach useful for projects that have specific
+requirements with well-defined goals and objectives
+PRINCE2 (Projects in Controlled Environments)
+project management methodology and certification
+process that is widely recognized around the world
+program management
+coordinated organization, direction, and implementation of a group of related
+projects to achieve outcomes and realize benefits that are strategically important to the business
+project
+temporary initiative or endeavor to create a product, service, or result that has a beginning and end
+date
+project charter
+formal document that authorizes project initiation
+project closure
+stage at which the project comes to a formal conclusion, ensuring that all project objectives
+are met and deliverables are handed over
+project development
+process of planning a project and ensuring that it has the resources necessary to
+successfully achieve its goals and objectives
+project execution
+stage that involves implementing the project plan, managing resources, and monitoring
+progress
+project initiation
+stage at which a project is created and involves defining its purpose, objectives, and
+stakeholders
+project life cycle (PLC)
+development, monitoring, and control of a project
+project management
+use of specific knowledge, skills, tools, and techniques to provide guidance through
+each stage of a project
+Project Management Body of Knowledge (PMBOK)
+guide for handling projects using a systematic
+methodology and proven processes for initiating, planning, executing, managing, monitoring, and closing a
+project
+Project Management Institute (PMI)
+accrediting body for the project management process that certifies
+project managers, program managers, and portfolio managers
+project management office (PMO)
+department within an organization that provides the standards and
+guidelines to project managers for projects and governs how projects are initiated, planned, organized,
+implemented, managed, and closed
+project manager (PM)
+person who applies knowledge of project management and uses various tools and
+techniques to initiate, plan, execute, monitor, control, and close projects
+resource planning
+task of determining what resources are needed and when they will be needed for the
+9 • Key Terms
+371
+
+project
+risk
+event or condition that has a negative effect should it occur during a project
+risk management
+process that encompasses risk identification, qualitative and quantitative analysis, risk
+response planning, and risk monitoring and control
+risk register
+document in which the results of risk analysis and risk response planning are recorded
+scope
+deliverables, objectives, and requirements of the project
+scope creep
+scope of the project grows beyond what was agreed to in the planning stage of the project as
+requirements are changed or modified
+scrum
+Agile framework that focuses on delivering value through small, cross-functional teams working in
+sprints, and the product backlog contains a prioritized list of user stories or features
+scrum master
+leader of the scrum meeting
+stakeholder analysis
+review and evaluation of each stakeholder, their background, expertise, and impact on
+the project
+statement of work
+document detailing the requirements, deliverables, schedule, and responsibilities of the
+stakeholders of a project to establish a clear understanding of what the project entails
+work breakdown structure (WBS)
+process that helps the project manager understand how the deliverables
+will be scheduled and any dependencies there might be in completing other deliverables, essentially
+breaking down a project into smaller, more manageable work packages and tasks
+Summary
+9.1 Foundations of Information Systems Project Management
+•
+Project management is a multidisciplinary way of ensuring that projects are on time, within budget, and in
+scope, and that deliverables are of good quality and risks are minimal.
+•
+There are many different project management methodologies, but three of the most well documented are
+PMBOK (waterfall), Agile, and PRINCE2.
+•
+The three most commonly used approaches for project development include predictive, adaptive, and
+incremental.
+•
+There are many tools and processes within project management including how to handle stakeholders,
+review of deliverables, assignment of resources and assets, planning and budgeting for projects,
+execution strategies, and lessons learned.
+9.2 Setting Up and Managing Projects for Success
+•
+There are five stages of a project, and various tasks within each stage make up the project management
+framework. They are (1) project initiation, (2) project planning, (3) project execution, (4) monitoring and
+control, and (5) project closure.
+•
+It is important to develop a comprehensive project plan and schedule. This phase of the project involves
+several key steps, each of which plays a significant role in shaping the project’s direction and facilitating
+efficient execution.
+•
+A WBS helps identify project tasks, dependencies, timelines, and resources needed.
+•
+Effective risk assessment is crucial for managing successful project outcomes.
+•
+A risk assessment is based on defining the risks to a project, evaluating the risks, assigning risk
+responsibility, and determining the risk mitigation strategy.
+9.3 Career Focus: Opportunities in Information Systems Project
+Management
+•
+There are project managers in many different career paths like business, health care, IT, education,
+manufacturing, logistics, and more.
+•
+Project management is a field or career where having a specialty area like health care or manufacturing
+can be an advantage.
+372
+9 • Summary
+Access for free at openstax.org
+
+•
+Most positions require a bachelor’s degree with experience or knowledge of project management.
+•
+Obtaining a certification in project management will help increase your salary as a project manager and
+further your career path.
+Review Questions
+1. What constitutes a project?
+a. an endeavor that is undertaken to create a product or service and has definite beginning and ending
+dates
+b. the application of knowledge, skills, tools, and technologies to project activities
+c. a portfolio of endeavors managed as a group to achieve strategic objectives
+d. an endeavor of activities that are used to drive value in delivery of products and services
+2. What performance domain is best used to help determine the approach to a project?
+a. planning performance domain
+b. team domain
+c. stakeholder domain
+d. development approach domain
+3. Which statement best distinguishes between stakeholders and teams in the project management
+domains?
+a. Stakeholders are part of the team.
+b. The team is part of the stakeholder’s domain.
+c. The team is invested in project deliverables.
+d. Stakeholders measure the quality level of a project.
+4. Which modifiers best describe the similarities between Agile, PRINCE2, and PMBOK?
+a. iterative and structured
+b. iterative and somewhat structured
+c. somewhat iterative and unstructured
+d. somewhat iterative and mostly structured
+5. What are the first three steps in developing a project plan?
+a. Define the scope, determine the budget, and determine the resources.
+b. Define the scope, determine the budget, and assess the risks.
+c. Assess the risks, define the scope, and determine the resources.
+d. Determine the budget, determine the resources, and assess the risks.
+6. Identify the five main stages in developing and managing a project.
+a. project initiation, project schedule, project execution and monitoring risks, and project closure
+b. project charter, project planning, project implementation and monitoring, and project closure
+c. project initiation, project planning, project development and monitoring risks, and project closure
+d. project initiation, project planning, project execution, monitoring and control, and project closure
+7. What steps are included in the execution portion of a project?
+a. coordinating resources, managing risks, resolving issues, and ensuring quality control
+b. assigning all resources, monitoring risks, maintaining the schedule, and setting up quality control
+measures
+c. managing resources, monitoring risks, resolving the schedule, and measuring quality control
+d. monitoring resources, managing risks, fixing issues, and guaranteeing quality control
+8. How do career opportunities in project management change depending on the field you go into?
+a. Some positions require a degree in project management.
+b. Some positions only require a certification or training in project management.
+9 • Review Questions
+373
+
+c. Some positions require a background in the specific industry or field of study (such as health care).
+d. Some positions remain the same regardless of the industry in which you have experience or
+background.
+9. Which certification is the most widely recognized and required for many project management jobs?
+a. Project Management Professional from Project Management Institute
+b. Certified Scrum Master from Axelos
+c. Certified Associate in Project Management from Project Management Institute
+d. PRINCE2 certification
+Check Your Understanding Questions
+1. Explain the project management approaches in the PMBOK (waterfall) methodology and why an
+organization would choose to use this methodology.
+2. Explain the aspects of the planning performance domain and how it impacts the success of the project.
+3. Briefly explain each of the project management methodologies: PMBOK, Agile, and PRINCE2.
+4. Which stage of a project uses a statement of work? Define the statement of work and explain how it is
+used during this stage.
+5. What is a work breakdown structure and how does it help a project manager?
+6. Why is it important to include stakeholders in risk assessment and management? How can stakeholders
+be engaged?
+7. Consider a recent college graduate in business with a minor in finance. They have some project
+management training but do not have a certification. They really like to get into the details surrounding
+regulations and laws and find research to be enjoyable. Which career(s) in business should they pursue
+that include project management, and why?
+8. Explain how a career as a project manager in manufacturing and a career as a project manager in
+engineering are similar.
+9. Read this summary of a project manager position in health care. Explain which characteristics of a project
+manager would be most beneficial in a role like this and why.
+Quality Improvement Project Manager: Quality improvement is a critical aspect of health care, and
+project managers in this role focus on projects aimed at enhancing patient care, safety, and
+overall quality. Individuals in these positions are usually highly trained in health-care operations.
+They work on initiatives such as implementing evidence-based practices, developing quality
+metrics, and leading process improvement efforts.
+Application Questions
+1. If you were a project manager, which of the eight performance domains of project management do you
+think you would excel at and why? Also, which of the eight domains would you need to work at and why?
+2. Develop a short project management scenario like the case study featured in this chapter where the best
+development approach would be the incremental approach.
+3. Develop a short video or slide presentation that explains the concept and structure of a project
+management office and provide examples that illustrate the differences between project, program, and
+portfolio management.
+4. You are a project manager for a hospital in the human resources department. The human resources team
+374
+9 • Check Your Understanding Questions
+Access for free at openstax.org
+
+is having trouble staffing radiology technicians. The vice president of human resources has called a team
+together to discuss the initiation of a project to hire or outsource more radiology technicians. The vice
+president asks you to lead the project. You meet with the team to begin planning for the project. One team
+member speaks up to ask: “How are we going to hire or outsource technicians when there is a shortage
+across the country of these individuals?” This brings up a discussion about the risks of the project.
+a.
+Come up with the top two risks associated with this project to deliver radiology technicians to fill the
+open positions and explain your reasoning for why this is a risk.
+b.
+Evaluate the risks you determined in the previous exercise. Fill in the risk register to determine the
+impact of those risks on the project.
+(attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+c.
+Prepare a brief recommendation on how to mitigate the risks you discovered and evaluated. If all the
+risks cannot be mitigated, provide a brief explanation as to why they cannot be mitigated and offer
+alternatives.
+d.
+Explain how these risks will impact the project’s costs, schedule, scope, quality and risk of the project.
+5. Considering your background, education, and experience, explain which industry you would be better
+suited to have a position as a project manager, and explain which type of project manager you would like
+to be.
+6. Go to a job search board like Indeed.com or CareerBuilder.com. Search for a project management position
+in business, health care, engineering, manufacturing, or finance. Read the job description and
+qualifications. Do an analysis of your resume and the qualifications for the job. Determine the gaps in your
+education, background, and learning in project management and describe how and where you can obtain
+the skills you still lack.
+9 • Application Questions
+375
+
+376
+9 • Application Questions
+Access for free at openstax.org

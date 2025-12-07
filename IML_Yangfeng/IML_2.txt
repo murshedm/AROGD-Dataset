@@ -1,0 +1,1134 @@
+CS 4501/6501 Interpretable Machine Learning
+Hanjie Chen, Yangfeng Ji
+Department of Computer Science
+University of Virginia
+{hc9mx, yangfeng}@virginia.edu
+1
+Introduction to Interpretability
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+2
+Machine Learning
+How many fruits?
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+3
+Machine Learning
+How many fruits?
+5
+3
+2
++
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+4
+Machine Learning
+How many fruits?
+5
+3
+2
++
+𝑥1: the number of apples 
+Features
+𝑥2: the number of strawberries 
+Rule
+𝑥1 + 𝑥2
+Output
+𝑦: the total number of fruits
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+5
+Machine Learning
+How many fruits?
+5
+3
+2
++
+𝑥1: the number of apples 
+Features
+𝑥2: the number of strawberries 
+Rule
+𝑥1 + 𝑥2
+Output
+𝑦: the total number of fruits
+What is the contribution 
+of each feature?
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+6
+Machine Learning
+How many fruits?
+5
+3
+2
++
+𝑥1: the number of apples 
+Features
+𝑥2: the number of strawberries 
+Rule
+𝑥1 + 𝑥2
+Output
+𝑦: the total number of fruits
+The contributions of 
+apple and strawberry 
+are 3 and 2 respectively 
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+7
+Machine Learning
+A more complex problem: predict the value of a house
+?
+Features
+Rule
+Output
+𝑥1: house size 
+𝑥2: location
+0.6𝑥1 + 0.3𝑥2 + 0.1𝑥3
+𝑦: house value
+𝑥3: floor type
+house size, location, and 
+floor type account for 60%, 
+30%, 10% respectively
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+8
+Machine Learning
+A more complex problem: predict the value of a house
+?
+Features
+Rule
+Output
+𝑥1: house size 
+𝑥2: location
+0.6𝑥1 + 0.3𝑥2 + 0.1𝑥3
+𝑦: house value
+𝑥3: floor type
+house size, location, and 
+floor type account for 60%, 
+30%, 10% respectively
+𝑥1 = 100,
+𝑥2 = 300,
+𝑥3 = 200
+𝑦= 170
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+9
+Machine Learning
+A more complex problem: predict the value of a house
+?
+Features
+Rule
+Output
+𝑥1: house size 
+𝑥2: location
+0.6𝑥1 + 0.3𝑥2 + 0.1𝑥3
+𝑦: house value
+𝑥3: floor type
+house size, location, and 
+floor type account for 60%, 
+30%, 10% respectively
+𝑥1 = 100,
+𝑥2 = 300,
+𝑥3 = 200
+𝑦= 170
+Contributions:
+𝑥1: 100 × 0.6 = 60
+𝑥2: 300 × 0.3 = 90
+𝑥3: 200 × 0.1 = 20
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+10
+Machine Learning
+A more complex problem: predict the value of a house
+?
+Features
+Rule
+Output
+𝑥1: house size 
+𝑥2: location
+?
+𝑦: house value
+𝑥3: floor type
+What if we do not 
+know the rule?
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+11
+Machine Learning
+Learn a rule from past house sales
+?
+Features
+Machine Learning
+Output
+𝒙= 𝑥1, 𝑥2, 𝑥3
+𝑦
+𝑓𝒘∙
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+12
+Machine Learning
+Learn a rule from past house sales
+?
+Features
+Machine Learning
+Output
+𝒙= 𝑥1, 𝑥2, 𝑥3
+𝑦
+𝑥1
+𝑥2
+𝑥3
+𝑤1
+𝑤2
+𝑤3
++
+𝑦′ = 𝑤1𝑥1 + 𝑤2𝑥2 + 𝑤3𝑥3
+𝑓𝒘∙
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+13
+Machine Learning
+Learn a rule from past house sales
+?
+Features
+Machine Learning
+Output
+𝒙= 𝑥1, 𝑥2, 𝑥3
+𝑦
+𝑥1
+𝑥2
+𝑥3
+𝑤1
+𝑤2
+𝑤3
++
+𝑦′ = 𝑤1𝑥1 + 𝑤2𝑥2 + 𝑤3𝑥3
+𝑓𝒘∙
+min
+𝒘𝐿𝑜𝑠𝑠𝑦, 𝑦′
+(e.g. 𝑦−𝑦′ 2)
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+14
+Machine Learning
+Learn a rule from past house sales
+?
+Features
+Machine Learning
+Output
+𝒙= 𝑥1, 𝑥2, 𝑥3
+𝑦
+𝑥1
+𝑥2
+𝑥3
+𝑤1
+𝑤2
+𝑤3
++
+𝑦′ = 𝑤1𝑥1 + 𝑤2𝑥2 + 𝑤3𝑥3
+𝑓𝒘∙
+min
+𝒘𝐿𝑜𝑠𝑠𝑦, 𝑦′
+−𝛾∇𝑤1𝐿𝑜𝑠𝑠
+−𝛾∇𝑤2𝐿𝑜𝑠𝑠
+−𝛾∇𝑤3𝐿𝑜𝑠𝑠
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+15
+Machine Learning
+Predict the house value via the 
+learned machine learning model
+?
+Machine Learning model
+𝑥1
+𝑥2
+𝑥3
+𝑤1
+𝑤2
+𝑤3
++
+𝑦′
+𝑓𝒘∙
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+16
+Machine Learning
+Predict the house value via the 
+learned machine learning model
+?
+Machine Learning model
+𝑥1
+𝑥2
+𝑥3
+𝑤1
+𝑤2
+𝑤3
++
+𝑦′
+𝑓𝒘∙
+Contributions:
+𝑥1: 𝑤1𝑥1
+𝑥2: 𝑤2𝑥2
+𝑥3: 𝑤3𝑥3
+Interpretable
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+17
+Machine Learning
+In reality, features and relationships can be more complex
+𝒙
+𝒚
+Machine Learning model
+(nonlinear and complex transformations)
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+18
+Machine Learning
+In reality, features and relationships can be more complex
+𝒙
+𝒚
+Machine Learning model
+(nonlinear and complex transformations)
+Uninterpretable
+It is difficult to 
+understand the model’s 
+inner working and trace 
+the contributions of 
+input features 
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+19
+Machine Learning
+Machine learning is a set of methods that computers use to make and improve 
+predictions or behaviors based on data
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+20
+Machine Learning
+Machine learning is a set of methods that computers use to make and improve 
+predictions or behaviors based on data
+1
+Collecting data
+Data
+Training
+Validation
+Test
+𝒙, 𝒚
+(Model training)
+(Model selection)
+(Model evaluation)
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+21
+Machine Learning
+Machine learning is a set of methods that computers use to make and improve 
+predictions or behaviors based on data
+1
+Collecting data
+2
+Training a machine 
+learning model
+𝒙, 𝒚
+𝑓𝒘∙
+Model 𝑓𝒘∙
+Data
+Training
+Validation
+Test
+(Model training)
+(Model selection)
+(Model evaluation)
+𝒙
+𝒚
+(Learning patterns from data)
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+22
+Machine Learning
+Machine learning is a set of methods that computers use to make and improve 
+predictions or behaviors based on data
+1
+Collecting data
+𝒙, 𝒚
+Data
+Training
+Validation
+Test
+(Model training)
+(Model selection)
+(Model evaluation)
+3
+Testing the model
+𝒚′ = 𝑓𝒘𝒙
+2
+Training a machine 
+learning model
+𝑓𝒘∙
+Model 𝑓𝒘∙
+𝒙
+𝒚
+(Learning patterns from data)
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+23
+Interpretability
+When data and tasks are complex, machine learning models are becoming 
+bigger and sophisticated
+𝒙
+𝒚
+Machine Learning model
+Black box
+(lack of interpretability)
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+24
+Interpretability
+What is interpretability?
+Why interpretability is important?
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+25
+Interpretability
+There is no standard or mathematical definition of interpretability
+• Interpretability is the degree to which a human can understand the cause of 
+a decision
+• Interpretability is the degree to which a human can consistently predict the 
+model's result
+[Miller, 2019]
+[Kim et al., 2016]
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+26
+Interpretability
+A simple model is usually more interpretable than a complex neural network model
+•
+Three parameters (𝑤1, 𝑤2, 𝑤3)
+•
+𝑦′ = 𝑤1𝑥1 + 𝑤2𝑥2 + 𝑤3𝑥3
+•
+Contributions:
+𝑥1: 𝑤1𝑥1
+𝑥2: 𝑤2𝑥2
+𝑥3: 𝑤3𝑥3
+•
+Millions of parameters
+•
+𝒚′ = 𝑓𝒘𝒙(complex transformations)
+•
+Model decision-making and feature 
+attributions are unclear
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+27
+Interpretability
+There is a trade-off between model performance and interpretability
+Bad performance
+Good interpretability 
+Good performance 
+Bad interpretability 
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+28
+Interpretability
+Depending on the specific task…
+Simple 
+task
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+29
+Interpretability
+Depending on the specific task…
+Simple 
+task
+Complex 
+task
+(low-risk)
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+30
+Interpretability
+Depending on the specific task…
+Simple 
+task
+Complex 
+task
+(low-risk)
+Complex 
+task
+High-stake:
+health care,
+criminal justice,
+economy…
+Sacrificing 
+performance 
+Improving 
+interpretability
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+31
+Interpretability
+Building a machine learning model
+• Performance (What the prediction is?)
+• Interpretability (Why it came to the prediction?)
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+32
+Desiderata of Interpretability
+• Trust
+• Causality
+• Transferability
+• Informativeness
+• Fair and Ethical Decision Making
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+33
+Desiderata of Interpretability
+• Trust
+-
+What is trust?
+-
+Is it simply confidence that a model will perform well? 
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+34
+Desiderata of Interpretability
+• Trust
+-
+What is trust?
+-
+Is it simply confidence that a model will perform well?
+-
+Trust can be defined subjectively
+For example: 
+People may trust an ML model if they are comfortable with relinquishing control to it 
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+35
+Desiderata of Interpretability
+• Trust
+-
+What is trust?
+-
+Is it simply confidence that a model will perform well?
+-
+Trust can be defined subjectively
+For example: 
+People may trust an ML model if they are comfortable with relinquishing control to it
+People may not only care about how often a model is right, but also for which examples
+it is right 
+-
+If the model tends to make mistakes on only those kinds of inputs where 
+humans also make mistakes
+-
+If a model tends to make mistakes for inputs that humans classify accurately
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+36
+Desiderata of Interpretability
+• Causality
+-
+Machine learning models are optimized to make associations
+-
+They are expected to infer properties of the natural world (e.g., smoking 
+and lung cancer)
+-
+The associations learned by models may not reflect causal relationships
+-
+Interpreting ML models can help provide clues about the causal 
+relationships between associated variables
+
+--------------------------------------------------------------------------------
+[End of Page 36]
+
+37
+Desiderata of Interpretability
+• Transferability
+-
+Training and test data are randomly sampled from the same distribution 
+-
+A model’s generalization error (transferability) is judged by the gap between its 
+performance on training and test data
+-
+Humans exhibit a far richer capacity to generalize, transferring learned skills to 
+unfamiliar situations
+
+--------------------------------------------------------------------------------
+[End of Page 37]
+
+38
+Desiderata of Interpretability
+• Transferability
+-
+Training and test data are randomly sampled from the same distribution 
+-
+A model’s generalization error (transferability) is judged by the gap between its 
+performance on training and test data
+-
+Humans exhibit a far richer capacity to generalize, transferring learned skills to 
+unfamiliar situations
+-
+Interpretability provides insights on model’s transferability
+For example: 
+A model trained to predict probability of death from pneumonia assigns less risk to 
+patients if they also had asthma
+Reason: The patients with asthma received more aggressive treatment 
+asthma
+less risk of death from pneumonia 
+Spurious 
+correlation
+
+--------------------------------------------------------------------------------
+[End of Page 38]
+
+39
+Desiderata of Interpretability
+• Informativeness
+-
+A model conveys information via its outputs
+-
+Interpretability can provide additional information to human users
+For example: 
+A diagnosis model might provide intuition to a human decision maker by pointing to 
+similar cases in support of a diagnostic decision 
+(skin cancer)
+
+--------------------------------------------------------------------------------
+[End of Page 39]
+
+40
+Desiderata of Interpretability
+• Fair and Ethical Decision Making
+Politicians, journalists, and researchers have expressed concern that 
+interpretations must be produced for assessing whether decisions 
+produced automatically by algorithms conform to ethical standards
+[Lipton, 2018]
+
+--------------------------------------------------------------------------------
+[End of Page 40]
+
+41
+Desiderata of Interpretability
+• Fair and Ethical Decision Making
+Politicians, journalists, and researchers have expressed concern that 
+interpretations must be produced for assessing whether decisions 
+produced automatically by algorithms conform to ethical standards
+[Lipton, 2018]
+Recidivism 
+System
+Release
+Detain
+-
+Predictions do not discriminate on race?
+-
+Accuracy or AUC (area under the curve) offer little 
+assurance that ML-based decisions will behave 
+acceptably
+-
+Demands for fairness often lead to demands for 
+interpretable models 
+
+--------------------------------------------------------------------------------
+[End of Page 41]
+
+42
+Interpretability
+What is interpretability?
+Why interpretability is important?
+
+--------------------------------------------------------------------------------
+[End of Page 42]
+
+43
+Why interpretability is important?
+The more a machine's decision affects a person's life, the more important 
+it is for the machine to explain its behavior
+You have the flu because 
+you are coughing and 
+have some fever… 
+Information
+Prediction: flu
+
+--------------------------------------------------------------------------------
+[End of Page 43]
+
+44
+Why interpretability is important?
+The more a machine's decision affects a person's life, the more important 
+it is for the machine to explain its behavior
+You have the flu because 
+you are coughing and 
+have some fever… 
+Information
+Prediction: flu
+Explanation: cough, 
+sneeze, fever
+Now I can trust 
+the prediction
+
+--------------------------------------------------------------------------------
+[End of Page 44]
+
+45
+Why interpretability is important?
+Interpretability reveals the knowledge captured by the model
+A recommendation system trained on a large dataset
+• It is impossible for human to understand the data
+• It is hard to decide whether the model prediction is trustworthy
+
+--------------------------------------------------------------------------------
+[End of Page 45]
+
+46
+Why interpretability is important?
+Interpretability reveals the knowledge captured by the model
+You bought some paint
+Recommendation: brush and ladder
+Interpretation: paint, brush and ladder are frequently bought together
+
+--------------------------------------------------------------------------------
+[End of Page 46]
+
+47
+Why interpretability is important?
+Interpretability for trustworthy AI
+• Increasing the trustworthiness of model predictions
+Object recognition
+Interpretation: highlighted pixels
+[Kim et al., 2017]
+
+--------------------------------------------------------------------------------
+[End of Page 47]
+
+48
+Why interpretability is important?
+Interpretability for trustworthy AI
+• Increasing the trustworthiness of model predictions
+Object recognition
+Interpretation: highlighted pixels
+[Kim et al., 2017]
+Interpretations tell people 
+whether the model makes 
+correct predictions based 
+on right reasons 
+
+--------------------------------------------------------------------------------
+[End of Page 48]
+
+49
+Why interpretability is important?
+Interpretability for trustworthy AI
+• Increasing the trustworthiness of model predictions
+Object recognition
+Interpretation: highlighted pixels
+[Ribeiro et al., 2021]
+
+--------------------------------------------------------------------------------
+[End of Page 49]
+
+50
+Why interpretability is important?
+Interpretability for trustworthy AI
+• Increasing the trustworthiness of model predictions
+Diagnose pneumonia
+Interpretation: highlighted pixels
+The model prediction is 
+based on the hospital logo, 
+not lung
+[Geirhos et al., 2021]
+
+--------------------------------------------------------------------------------
+[End of Page 50]
+
+51
+Why interpretability is important?
+Interpretability for trustworthy AI
+• Increasing the reliability of model predictions
+Neural network models are vulnerable to adversarial attacks
+[Goodfellow et al., 2015]
+
+--------------------------------------------------------------------------------
+[End of Page 51]
+
+52
+Why interpretability is important?
+Interpretability for trustworthy AI
+• Increasing the reliability of model predictions
+Neural network models are vulnerable to adversarial attacks
+
+--------------------------------------------------------------------------------
+[End of Page 52]
+
+53
+Why interpretability is important?
+Interpretability for trustworthy AI
+• Increasing the reliability of model predictions
+Interpretations for debugging
+Prediction: 
+monkey
+Prediction: 
+fish
+Interpretation
+[Boopathy et al., 2020]
+
+--------------------------------------------------------------------------------
+[End of Page 53]
+
+54
+Why interpretability is important?
+Interpretability for trustworthy AI
+• Increasing the reliability of model predictions
+Interpretations for debugging
+an
+exceedingly
+clever
+piece of 
+cinema
+an
+shockingly
+proficient
+piece
+of cinema
+Original text
+Adversarial text
+Prediction
+Positive
+Negative
+
+--------------------------------------------------------------------------------
+[End of Page 54]
+
+55
+Why interpretability is important?
+Interpretability for trustworthy AI
+• Increasing the reliability of model predictions
+Interpretations for debugging
+an
+exceedingly
+clever
+piece of 
+cinema
+an
+shockingly
+proficient
+piece
+of cinema
+Original text
+Adversarial text
+Prediction
+Positive
+Negative
+Interpretation
+an
+exceedingly
+clever
+piece of 
+cinema
+an
+shockingly
+proficient
+piece
+of cinema
+Pos
+Neg
+
+--------------------------------------------------------------------------------
+[End of Page 55]
+
+56
+Why interpretability is important?
+Interpretability for trustworthy AI
+• Increasing the fairness of model predictions
+Machine learning models are making biased decisions
+Higher error rate on darker female
+
+--------------------------------------------------------------------------------
+[End of Page 56]
+
+57
+Why interpretability is important?
+Interpretability for trustworthy AI
+• Increasing the fairness of model predictions
+Machine learning can amplify bias
+
+--------------------------------------------------------------------------------
+[End of Page 57]
+
+58
+Why interpretability is important?
+Interpretability for trustworthy AI
+• Increasing the fairness of model predictions
+Detecting and mitigating bias via interpretations
+[Rieger et al., 2020]
+
+--------------------------------------------------------------------------------
+[End of Page 58]
+
+59
+Why interpretability is important?
+Interpretability for trustworthy AI
+• Increasing the fairness of model predictions
+Detecting and mitigating bias via interpretations
+[Rieger et al., 2020]
+
+--------------------------------------------------------------------------------
+[End of Page 59]
+
+60
+Summary
+To solve complex problems, machine learning models are becoming bigger 
+and sophisticated (uninterpretable)
+Model interpretability is an important criterion beyond performance
+Improving model interpretability
+• Increasing social acceptance
+• Building trustworthy AI (trustworthiness, reliability, fairness)
+• Debugging and developing
+
+--------------------------------------------------------------------------------
+[End of Page 60]
+
+61
+Evaluation
+• Faithfulness to model
+How accurately an interpretation reflects the true reasoning process 
+of the model
+• Plausibility to humans
+How convincing the interpretation is to humans
+[Jacovi, 2020]
+
+--------------------------------------------------------------------------------
+[End of Page 61]
+
+62
+Evaluation
+• Faithfulness to model
+How accurately an interpretation reflects the true reasoning process 
+of the model
+• Plausibility to humans
+How convincing the interpretation is to humans
+[Jacovi, 2020]
+-
+Generally, we cannot satisfy both criteria 
+because of the gap between model 
+reasoning and human understanding
+-
+Faithfulness is the primary criterion 
+
+--------------------------------------------------------------------------------
+[End of Page 62]
+
+63
+Research topics
+• Post-hoc explanations (Week 4-6)
+Interpretation
+an
+exceedingly
+clever
+piece of 
+cinema
+an
+shockingly
+proficient
+piece
+of cinema
+Pos
+Neg
+-
+In the inference stage
+-
+Explaining well-trained models’ predictions
+-
+Inferring model decision making (perturbation, gradients, attention, interaction)
+
+--------------------------------------------------------------------------------
+[End of Page 63]
+
+64
+Research topics
+• Improving neural network intrinsic interpretability (Week 7)
+• Building interpretable neural network models (Week 9)
+[Rajagopal et al., 2021]
+[Du et al., 2019]
+-
+In the training stage
+-
+Do not change model architecture
+-
+Manipulating model prediction behavior 
+(to be more interpretable)
+-
+Model engineering and expert 
+knowledge
+-
+Designing self-interpretable
+models
+
+--------------------------------------------------------------------------------
+[End of Page 64]
+
+65
+Research topics
+• Rationalized neural networks (Week 10)
+• Interpretation and human understanding (Week 11)
+Extractor
+Predictor
+Input
+Output
+Rationales
+(important features)
+-
+Interpretation can help human understanding?
+-
+Interpretation may fool human decision?
+-
+How humans and models interact via interpretations?
+
+--------------------------------------------------------------------------------
+[End of Page 65]
+
+66
+Research topics
+• Robust interpretations (Week 12)
+• Connections with model performance, robustness, fairness (Week 13)
+[Chen et al., 2022]
+[Chen et al., 2019] 
+-
+Robustness of interpretations to input 
+perturbations
+-
+Robustness of interpretations to model 
+manipulations
+-
+Risks of interpretation vulnerability
+
+--------------------------------------------------------------------------------
+[End of Page 66]
+
+67
+Reference
+•
+Christoph Molnar, Interpretable Machine Learning, 2021
+•
+Murdoch, W. James, et al. "Definitions, methods, and applications in interpretable machine learning." Proceedings 
+of the National Academy of Sciences 116.44 (2019): 22071-22080.
+•
+Miller, Tim. "Explanation in artificial intelligence: Insights from the social sciences." Artificial intelligence 267 
+(2019): 1-38.
+•
+Kim, Been, Rajiv Khanna, and Oluwasanmi O. Koyejo. "Examples are not enough, learn to criticize! criticism for 
+interpretability." Advances in neural information processing systems 29 (2016).
+•
+Kim, Jinkyu, and John Canny. "Interpretable learning for self-driving cars by visualizing causal 
+attention." Proceedings of the IEEE international conference on computer vision. 2017.
+•
+Geirhos, Robert, et al. "Shortcut learning in deep neural networks." Nature Machine Intelligence 2.11 (2020): 665-
+673.
+•
+Ribeiro, Marco Tulio, Sameer Singh, and Carlos Guestrin. "" Why should i trust you?" Explaining the predictions of 
+any classifier." Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data 
+mining. 2016.
+•
+Boopathy, Akhilan, et al. "Proper network interpretability helps adversarial robustness in 
+classification." International Conference on Machine Learning. PMLR, 2020.
+•
+Rieger, Laura, et al. "Interpretations are useful: penalizing explanations to align neural networks with prior 
+knowledge." International Conference on Machine Learning. PMLR, 2020.
+
+--------------------------------------------------------------------------------
+[End of Page 67]
+
+68
+Reference
+•
+Du, Mengnan, et al. "Learning credible deep neural networks with rationale regularization." 2019 IEEE International 
+Conference on Data Mining (ICDM). IEEE, 2019.
+•
+Rajagopal, Dheeraj, et al. "SelfExplain: A Self-Explaining Architecture for Neural Text Classifiers." arXiv preprint 
+arXiv:2103.12279 (2021).
+•
+Jain, Sarthak, et al. "Learning to faithfully rationalize by construction." arXiv preprint arXiv:2005.00115 (2020).
+•
+Hase, Peter, and Mohit Bansal. "Evaluating explainable AI: Which algorithmic explanations help users predict model 
+behavior?." arXiv preprint arXiv:2005.01831 (2020).
+•
+Chen, Jiefeng, et al. "Robust attribution regularization." arXiv preprint arXiv:1905.09957 (2019).
+•
+Chen, Hanjie, and Ji, Yangfeng. "Adversarial Training for Improving Model Robustness? Look at Both Prediction and 
+Interpretation." The 36th AAAI Conference on Artificial Intelligence (2022).
+•
+Lipton, Zachary C. "The Mythos of Model Interpretability: In machine learning, the concept of interpretability is 
+both important and slippery." Queue 16.3 (2018): 31-57.
+•
+Jacovi, Alon, and Yoav Goldberg. "Towards faithfully interpretable NLP systems: How should we define and evaluate 
+faithfulness?." arXiv preprint arXiv:2004.03685 (2020).
+
+--------------------------------------------------------------------------------
+[End of Page 68]

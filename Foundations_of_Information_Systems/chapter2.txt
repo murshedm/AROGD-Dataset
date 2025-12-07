@@ -1,0 +1,2076 @@
+Figure 2.1 As technology advances, businesses and other organizations have many tools available to promote efficient operations.
+Robust data and information management strategies are necessary to ensure that these technological tools function optimally.
+(credit: modification of work “Voigtländer Vitoret - AZ Tower 3” by Jaroslav A. Polák/Flickr, CC0 1.0)
+Chapter Outline
+2.1 Practices and Frameworks for Data Management
+2.2 Strategies to Improve the Value of Information Technology Within Organizations
+2.3 Digital Business Models
+2.4 Business Process Management
+2.5 Digital Innovation Creation, Distribution, and Commercialization
+Introduction
+The days when organizations relied on paper files and simple data processing programs to maintain records
+and conduct business are long past. Technological advancements have given organizations the capability to
+handle massive amounts of data in a digital environment. Data provide organizations with vital information to
+improve efficiency and support competition in the marketplace. Businesses and other organizations must
+manage data and information effectively to promote their success and to avoid data inaccuracies,
+noncompliance with legal requirements, lost opportunities, increased costs, and dissatisfied customers. How
+organizations develop and maintain robust data and which systems they utilize are important to
+organizational success.
+2.1 Practices and Frameworks for Data Management
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Identify practices and frameworks in the management of data
+•
+Interpret the dimensions and characteristics of data needed to make decisions
+•
+Identify information system planning strategies and frameworks that inform an organization’s data
+management practices and processes
+Data Management and Information Systems Business
+Strategies
+2
+
+Organizations typically use digital technology to analyze data to get the information they need to run their
+businesses. With the exponential increase in computing capacity and the development of artificial intelligence
+(AI) and large-language models, businesses today rely heavily on efficient managers using sophisticated data
+storage and data analytics technologies. How can you align your organization’s data management and
+information strategies to deliver optimal results for the greatest number of stakeholders? Future data
+managers will have an obligation not only to understand information and data management but also to
+possess the ability to extract valuable insights from data, apply these insights strategically, and align them
+with the organization’s goals.
+In Chapter 1 Fundamentals of Information Systems, you learned that the term data refers to raw facts and
+figures that are processed and turned into meaningful information. Data represent discrete elements without
+context or meaning on their own, and data come in various forms—such as numbers, text, images, or audio.
+For example, a list of numbers or a collection of customer names and addresses is considered data.
+Information is the result of processing data through organization, analysis, and contextualization to derive
+meaning. If the data are a list of numbers, then the related information may be the trend of increasing sales of
+a product. This information can be used to make decisions, understand relationships, and gain insights.
+For any organization, information is an invaluable resource, hence data and data management have become
+critical. Effective data management aligns with data analytics capabilities, facilitating the automated discovery
+of trends, patterns, and anomalies through techniques like data mining and analysis. In today’s data-driven
+world, there’s increasing attention to the relevance of big data, highly complex and large datasets that require
+specialized processing techniques to extract valuable insights and make informed decisions. Managing any
+data involves activities such as cleaning, extracting, integrating, categorizing, labeling, and organizing. All
+these activities should be executed in a manner that ensures that the quality of the data is preserved, and the
+data remain secure but also easily retrievable. Organizations need people to manage data and control data
+accessibility, and they need to define roles and responsibilities for all the people working with and extracting
+information from their data. Decisions about data management have long-lasting impacts, so it is important
+for organizations to select suitable frameworks for managing data.
+Identifying Practices and Frameworks That Assist Data Management
+Analysts report that by 2025 the global volume of data is expected to reach 200 zettabytes.1 A zettabyte is a
+measure of digital storage capacity equal to a thousand exabytes, a billion terabytes, or a trillion gigabytes.
+Notably, most of these data are underutilized. For most enterprises, only about one-third of data is used for
+decision-making, while the remaining two-thirds is simply stored.2 When analysts are unable to find the
+appropriate and available data for decision-making, it can cost organizations billions of dollars each year. On
+the other hand, data archives are often required for regulatory reasons to ensure compliance with laws
+governing data retention, privacy, and security. For instance, industries like health care and finance have strict
+regulations regarding the retention of patient records and financial transactions data.
+Another important aspect of dealing with data is data governance, which involves the policies, procedures,
+and standards how an organization manages the availability, usability, integrity, and security of its data
+throughout the data life cycle. You probably have noticed that every time you use the internet, an app on your
+phone, or buy something online, websites and apps track what you do, and may track your location and other
+data. The world is full of sensors, electronic payments, tracking data, biometric information like fingerprints,
+and smart home devices that collect data. This kind of information is valuable, and this creates challenges for
+making sure data are handled well. Data governance is like a rulebook for how data are managed and making
+sure the right people are responsible for decisions about data.
+1
+Steve Morgan, “The World Will Store 200 Zettabytes of Data by 2025,” Cybersecurity Magazine, February 1, 2024,
+https://cybersecurityventures.com/the-world-will-store-200-zettabytes-of-data-by-2025/
+2
+“Wasted Data: Why So Much Enterprise Information Goes Unused,” MarketLogic, October 26, 2022,
+https://marketlogicsoftware.com/blog/wasted-info-why-so-much-enterprise-data-goes-
+unused/#:~:text=Unbelievably%2C%20only%20about%20one%20third,their%20data%20remains%20%E2%80%9Cdark%E2%80%9D
+42
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+Appropriate data management is crucial to an organization’s reputation and success. Data management
+parameters establish practices that organizations can use to ensure that their data are managed, protected¸
+and of high quality so they can be utilized to make informed decisions. The essential areas for managing data
+effectively are as follows (Figure 2.2)3 :
+•
+Data governance establishes policies, processes, standards, roles, and responsibilities to manage data
+as a valuable asset.
+•
+Data quality ensures that data are accurate, complete, and consistent. This is achieved through
+activities such as validation, cleansing, matching, and monitoring via metrics and reporting.
+•
+Data integration combines data from different systems and applications. It includes tasks such as
+mapping data elements, transforming data, and ensuring seamless integration using tools and best
+practices.
+•
+Data security protects data from unauthorized access, use, disclosure, disruption, modification, or
+destruction. It is achieved through measures like encryption, access controls, and adherence to
+security best practices.
+•
+Data privacy, like data security, safeguards personal data from unauthorized access, use, disclosure,
+disruption, modification, or destruction. It relies on the use of encryption, access controls, and privacy
+best practices.
+•
+Data retention involves storing data for a defined period based on legal, regulatory, and business
+requirements. It includes activities like archiving, purging, and the development of data retention
+policies.
+•
+Data architecture focuses on designing data models and database structures that align with business
+needs.
+•
+Data analytics involves analyzing data to extract insights and support decision-making. It includes
+implementing activities like data warehousing, mining, and visualization to achieve meaningful
+information extraction. These tools, techniques, and insights can be used in AI and machine learning
+applications. (George Firican, ”Data Management Framework 101”)
+3
+George Firican, “Data Management Framework 101,” LightsOnData, https://www.lightsondata.com/data-management-
+framework/
+2.1 • Practices and Frameworks for Data Management
+43
+
+Figure 2.2 Data governance plays a role in all data management areas. It ensures an organization’s data are of high quality and are
+managed and protected effectively so that the data can be used to make informed decisions. (attribution: Copyright Rice University,
+OpenStax, under CC BY 4.0 license)
+FUTURE TECHNOLOGY
+Data Management Technologies
+A new approach to data management, called a data mesh, is based on the principle of domain-driven
+design. In a data mesh, data are owned by the domain experts who create the data, and the data are made
+available to other users through a self-service model.
+Another powerful technique for data management is called data fabric. It involves a move toward data
+democratization, which means that data are made available to more people in the organization, not just
+those in information technology (IT) or data science roles. Through this approach, data can be accessed and
+consumed by anyone as long as they have proper security credentials for the level of data they desire.
+Another technology is federated analytics. Federated analytics allows users to analyze data without having
+to move it to a central repository. This can help to improve data security and privacy, and it can also make it
+easier to analyze data that reside in different locations. These three techniques address the growing
+complexity and scale of data management in modern organizations, especially as data becomes more
+distributed, diverse, and decentralized. These technologies provide innovative ways to manage, integrate,
+and analyze data at scale, which is necessary in the age of big data and advanced analytics.
+44
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+Businesses that strive to ensure they follow these data management parameters can decide to follow any
+framework. A framework is a structured and organized approach that provides a set of guidelines, principles,
+or tools to address complex problems or tasks in a systematic manner. It serves as a foundation to build and
+manage processes, systems, or projects, ensuring consistency, efficiency, and effectiveness. Following are
+some common data management frameworks:
+•
+DAMA-DMBOK: The Data Management Body of Knowledge, developed by the Data Management
+Association (DAMA International), provides comprehensive guidelines across ten key knowledge areas,
+including data governance, data architecture, and data quality.
+•
+MIKE2.0 IMM: This framework offers a structured way to assess an organization’s information maturity
+level.
+•
+IBM Data Governance Council Maturity Model: This model provides a road map for implementing effective
+data governance processes and controls.
+•
+Enterprise Data Management (EDM) Council Data Management Maturity Model: This comprehensive
+framework covers various aspects of data management, including data strategy, data operations, and data
+architecture.
+•
+Responsible Data Maturity Model: This model is an evolving concept that continues to gain importance as
+the role of data in our lives becomes more prominent.
+There are some differences in how each framework approaches data management. DAMA-DMBOK focuses on
+the technical aspects of data management, while MIKE2.0 focuses on the business aspects of information
+management. The IBM Data Governance Council Maturity Model and the EDM Council Data Management
+Maturity Model are both designed to help organizations assess their current data management practices and
+identify areas for improvement. The best framework for an organization will depend on its specific needs and
+requirements. However, all five frameworks can be valuable tools for improving data management and
+information quality. The optimal framework for managing data is one that is continuously developing to
+address advancements in data storage and changes in organizational policy.
+CAREERS IN IS
+Data Architect
+A data architect is responsible for designing, creating, and managing an organization’s data architecture.
+This includes creating frameworks and structures for collecting, storing, processing, and accessing data in a
+way that aligns with business goals, compliance requirements, and performance needs. In addition to
+designing traditional data architectures, many modern data architects now also focus on frameworks like
+data mesh, data fabric, and federated analytics as part of their responsibilities. A data architect needs
+strong knowledge of database technologies, data modeling, cloud platforms, and big data tools. They must
+also understand data governance practices, security protocols, and compliance regulations and be familiar
+with data pipelines, integration tools, and extract, transform, and tools. Having strong problem-solving
+skills will allow a data architect to design complex systems and solve integration challenges, ensuring data
+flows smoothly across different parts of the organization.
+Most data architects have a bachelor’s degree in computer science, information systems, business analytics,
+or a related field. Some also have a master’s degree, which can help give candidates a competitive edge or
+allow for a smoother transition from another field. There are also numerous certificates available for a data
+architect. Different organizations may require different certifications, but the Certified Data Management
+Professional certificate is one that many organizations prefer.
+To become a data architect, you typically need a combination of a strong educational foundation, hands-on
+experience working with data systems, and certifications in specialized tools and platforms. Ongoing
+learning and keeping up with industry trends are also helpful in this rapidly evolving field.
+2.1 • Practices and Frameworks for Data Management
+45
+
+Dimensions and Characteristics of Data to Inform Data Management
+Decisions
+For each type of data, an organization needs to define rules and policies to measure the quality of the data
+and the effectiveness of the data’s management. There are four key dimensions of big data known as the four
+Vs:
+•
+Volume: The dimension of volume refers to the vast amount of data generated and stored. Big data
+datasets are incredibly large and can grow exponentially.
+•
+Variety: The variety dimension encompasses the diverse array of data types and formats, which might
+include structured elements like user IDs, time stamps, and actions taken, as well as unstructured
+components such as user comments and feedback.
+•
+Velocity: The rapid pace at which data are generated and collected, thereby necessitating real-time
+processing, is characterized by velocity. Particularly evident during high-traffic events, such as online flash
+sales, the constant influx of clickstream data necessitates swift analysis to enable the system to offer
+tailored recommendations and insights to users navigating a dynamic digital landscape.
+•
+Veracity: The veracity dimension refers to the reliability, accuracy, and trustworthiness of the data,
+considering factors like data quality and consistency. As data originate from a multitude of sources and
+are influenced by user behaviors and tracking nuances, ensuring the quality of the data is imperative to
+avoiding misinterpretations of metrics like bounce rates and session durations.
+Different types of data are required for generating suitable information, and different types of data require
+different management approaches. There are two main categories of data—structured and unstructured. The
+first, structured data, exist in organized, fixed fields in a data repository. Structured data are typically defined
+in terms of field name and type (such as numeric or alphabetical). Structured data can be further categorized
+as follows:
+•
+Associated with operational or real-time applications, operational data include transactional data
+generated by day-to-day business operations. Operational data often require high availability, real-time
+processing, and quick access for operational decision-making. When managing operational data, the focus
+is on ensuring data integrity, availability, and performance to support critical business processes.
+•
+Serving as a system of record or reference for enterprise-wide use, master data represent core entities
+such as customers, products, or employees, and reference data include codes, classifications, or
+standards used across the organization. Maintaining data accuracy, consistency, and synchronization
+across multiple systems for these data types is necessary to ensure reliable and consistent information
+across the organization.
+•
+Used for data warehousing, business intelligence, and analysis-oriented applications, analytic data
+include aggregated and summarized data from various sources and enable in-depth analysis, reporting,
+and decision support. Analytic data require data integration, transformation, and optimization to provide a
+consolidated view and support complex analytics.
+The other data type, unstructured data, do not reside in a traditional relational database; examples of
+unstructured data generated within organizations are emails, documents, media (videos, images, audio), slide
+presentations, social media activity (such as posts, images, ratings, and recommendations), and web pages.
+There are several challenges associated with managing unstructured data. Their large volume can make them
+difficult to store and manage. Unstructured data also come in a variety of formats from multiple sources,
+including internal sources, personal sources, and external sources. Data can also come from the web in the
+form of blogs, podcasts, tweets, social media posts, online videos, texts, and radio-frequency identification
+tags and other wireless sensors. These technologies generate data that must be managed but are difficult to
+process and analyze. Unstructured data are often generated at high velocity. This can make it difficult to keep
+up with and make sense of the data.
+Despite the challenges, managing unstructured data can be valuable. Unstructured data can provide insights
+46
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+into customer behavior, identify trends, and improve decision-making. The management of unstructured data
+involves organizing, storing, and retrieving such content effectively. Techniques like content indexing, search,
+and metadata management are employed to enable efficient discovery and retrieval of relevant information.
+When managing unstructured data, it is also important to understand the decision-making priorities of an
+organization (which decisions require data and, consequently, necessitate data-driven information and
+knowledge processing). Also, it is often possible to convert unstructured data into structured data.
+Good data management strategies require the following:
+•
+Updating outdated data: A data management process should involve incorporating the latest information
+and revisions into the dataset, thereby ensuring it remains relevant and accurate.
+•
+Rectifying known inaccuracies: Identifying and correcting any inaccuracies or errors in the data are crucial
+to maintaining data integrity, which means ensuring data remain accurate, consistent, and reliable over
+their entire life cycle.
+•
+Addressing varied definitions: Dealing with diverse definitions across different data sources requires
+establishing a clear and standardized data definition, which is the instruction for how to organize
+information. These definitions tell a computer system what kind of data to expect (text, numbers, dates)
+and how the data should be formatted mapped to ensure consistency. For example, when the underlying
+data point is the same (the person’s date of birth), the specific term used (“Date of Birth” versus “Birth
+Date”) might differ based on the department using the data. However, the definition of the data point (the
+actual date) needs to be consistent throughout the system to ensure accurate analysis and reporting.
+•
+Resolving discrepancies in redundant data sources: When multiple sources provide similar data, it is
+important to reconcile any inconsistencies or differences to establish a reliable and accurate
+representation of the information.
+•
+Managing variations in opinions, forecasting techniques, or simulation models: Recognizing and
+addressing divergent viewpoints, methodologies, or models used for forecasting or simulation ensures
+transparency and reliability in the data analysis process.
+FUTURE TECHNOLOGY
+Master Data Management
+Master data management (MDM) ensures the creation and maintenance of a single, accurate source of
+truth for crucial data points within an organization. This centralized data repository eliminates
+inconsistencies and fosters seamless information exchange across different systems and applications. Let’s
+explore the importance of MDM in two specific contexts: health care and e-commerce retail.
+•
+In the health-care sector, creating a unified, digital infrastructure for health-care services facilitates the
+seamless exchange of health-related information among patients, health-care providers, and
+government agencies. Efficient MDM ensures that patient data, such as medical history, medications,
+and allergies, are organized, stored securely, and readily accessible by authorized personnel. This both
+improves the efficiency of health-care delivery and reduces the risk of errors and delays in treatment.
+•
+In the e-commerce sector, consider a large online retailer managing millions of product listings.
+Without MDM, product information like descriptions, specifications, and prices might be scattered
+across different data sources, potentially leading to inconsistencies. Master data management
+establishes a centralized repository for product data to ensure that customers see accurate and
+consistent information across all interfaces: web, mobile, on-site, and in marketing materials.
+Additionally, MDM facilitates efficient inventory management and product updates across various sales
+channels.
+2.1 • Practices and Frameworks for Data Management
+47
+
+Information System Planning and Management
+Information systems play an important role in data management by transforming raw data into a strategic
+asset. Information system planning and management involve selecting and implementing the right
+technology infrastructure for data storage, processing, analysis, and governance. Information technologies
+and systems play a vital role in facilitating data management within organizations, as they encompass
+activities such as data acquisition, organization, storage, access, analysis, and interpretation. In the current
+landscape, characterized by advanced information systems, quick and seamless access to information has
+become the norm.
+There is a distinction between information used for strategic planning and information used for management
+control. An organization’s strategic planning is its process of defining the organization’s mission, vision, goals,
+and objectives, and developing strategies to achieve them, often with the support of information systems,
+typically done by senior-level managers. In contrast, management control ensures efficient day-to-day
+operations and adherence to those strategic plans. The information required for each level serves a distinct
+purpose; hence, the data required also differ. The data need to be in user-friendly formats, enabling managers
+and analysts to easily comprehend and utilize the information according to their specific requirements (Figure
+2.3). Managers, drawing on their expertise and experience while analyzing data, can effectively leverage these
+insights to address complex business problems. This fosters a dynamic and adaptive approach of leveraging
+collective data to drive continuous improvement and growth.
+Figure 2.3 Data processing for particular purposes generates information, and when applied with business acumen, information
+creates knowledge. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license; credit Data: modification of work
+“Project 365 #195: 140709 Let’s Get Jiggy With It” by Pete/Flickr, Public Domain; credit Knowledge: modification of work “Thick arrow
+made from jigsaw puzzle pieces” by Old Photo Profile/Flickr, CC BY 2.0)
+Consider an example within the energy sector’s need for sustainable energy solutions. To plan information
+systems for a company in this sector, the chief information officer (CIO) must first understand what decisions
+need to be made and, correspondingly, what data these decisions require—strategic planning, management
+control, and operational control. The CIO should assess the different types of data currently available. These
+data can come from various sources across operations. The focus should be on ensuring existing data capture
+practices faithfully reflect what’s happening in the organization. Additionally, the CIO should consider how
+these data can be processed and transformed into actionable information that supports the identified decision
+needs. Finally, the CIO must assess how the different levels of planning and the different types of information
+fit together.
+LINK TO LEARNING
+Listen to this podcast about digital transformation at the energy company Shell (https://openstax.org/r/
+109DigitalTrans) across three levels: operational, management, and strategic.
+48
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+Frameworks for Data Management Practices and Processes
+In the realm of information systems, the Robert Anthony framework, named for the management accounting
+pioneer who developed it in 1964, helps in understanding information needs across different organizational
+levels. This framework categorizes decisions based on the level of certainty surrounding the problem and the
+solution. The Robert Anthony framework divides a problem, and by extension the data needed to resolve this
+problem, into three domains: operational control, management control, and strategic planning4 :
+•
+Operational control is the process of ensuring that the organization’s day-to-day operations are running
+smoothly. It involves setting production schedules, managing inventory levels, and processing customer
+orders. Operational control is typically done by frontline managers and employees.
+•
+Management control is the process of ensuring that the organization is meeting its strategic goals. It
+involves setting budgets, monitoring expenses, and tracking sales. Management control is typically done
+by middle management.
+•
+Strategic planning is the process of setting long-term goals for an organization. It involves identifying the
+organization’s mission, vision, and values, as well as its strategic objectives. Strategic planning is typically
+done by the organization’s top management team.
+By classifying information into these categories, Anthony’s framework provides a structured approach to
+gathering, analyzing, and utilizing information for effective planning and control within an organization. Table
+2.1 features data characteristics for the three types of domains.
+Domain
+Data Use
+Data Characteristics
+Operational
+Track and control day-to-day activities.
+Data are typically detailed and time sensitive.
+Management
+Make decisions about how to allocate
+resources and achieve goals.
+Data are typically summarized and less time
+sensitive than operational data.
+Strategic
+Set long-term goals and make strategic
+decisions.
+Data are typically aggregated and less time
+sensitive than management data.
+Table 2.1 Three Domains of the Robert Anthony Framework The three domains of the Robert Anthony framework—operational
+control, management control, and strategic planning—each work with different types of data for different purposes.
+Another data management framework developed by data scientist Herbert A. Simon in 1977, the decision-
+making framework breaks down decisions into two types: programmed decisions with clear procedures or
+nonprogrammed decisions requiring more judgment. Programmed decisions are also called structured
+decisions as they are routine and can be made based on preestablished rules and procedures. They often
+involve repetitive tasks that can be automated within the information system. Nonprogrammed decisions, on
+the other hand, are not structured as they are unique and complex, requiring judgment, analysis, and
+creativity. These decisions often arise when there are no predefined guidelines or precedents available. A
+three-step process determines which activities are programmable and nonprogrammable (Figure 2.4):
+1.
+Intelligence: Gather relevant information and assess the situation to understand the nature and
+requirements of the activities.
+2.
+Design: Analyze the collected information to make informed judgments about whether an activity can be
+effectively automated or requires human intervention.
+3.
+Choice: Based on the decisions made, select the appropriate approach for each activity—either
+programming it for automation or handling it through human involvement.
+4
+Robert N. Anthony, “Framework for Analysis,” Management Services: A Magazine of Planning, Systems, and Controls 1, no. 1
+(1964): 6, https://egrove.olemiss.edu/mgmtservices/vol1/iss1/6
+2.1 • Practices and Frameworks for Data Management
+49
+
+Figure 2.4 To identify whether an activity is programmable or nonprogrammable, a three-step process is followed in order to come
+to a decision. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Another framework, developed by Gorry and Scott Morton, combines elements of both the Robert Anthony
+and decision-making frameworks.5 Gorry and Scott Morton introduced the concept of IT into their framework,
+acknowledging the influence of technology on decision-making and information management. They
+highlighted the importance of aligning IT strategic planning with an organization’s decision-making needs and
+the potential benefits that technology can bring to the decision-making process. Gorry and Scott Morton
+suggest that for each business problem that involves information systems, data managers must first
+determine whether the problem is strategic, managerial, or operational in nature and then see whether the
+decision-makers and the intelligence required should be internal or external. If both the decision-makers
+(stakeholders) and intelligence needed can be found internally, as in the case of order entry and budgeting,
+then the problem qualifies as being structured. But if both the intelligence needed and the decision-makers
+are external to the organization, then the problem qualifies as being unstructured, for instance, in the case of
+systems for cash management or personnel management.
+When applying the Gorry and Scott Morton framework to review existing systems or to propose new systems
+that cater to user needs, an information systems designer or reviewer often investigates how available
+technology can support decision-making. This framework emphasizes both applications and decisions,
+necessitating input from a diverse range of users to understand the benefits of existing systems or
+expectations for new ones. It is important to gather user feedback through structured interviews and
+questionnaires as they can be utilized to collect user data and gauge user reactions to each system under
+consideration. Key inquiries may include the following:
+•
+In which directions should the development of new systems be oriented?
+•
+Are there specific demands for enhanced strategic planning applications or managerial and operational
+systems?
+•
+Do users want a system to support them with decisions that are less structured compared to those
+handled by existing systems?
+Furthermore, an analysis of previous systems developed in analogous situations could offer valuable insights
+into the potential benefits of a novel system.
+5
+George A. Gorry and Michael S. Scott Morton, “A Framework for Management Information Systems,” Working Paper No. 510-71,
+Alfred P. Sloan School of Management, Massachusetts Institute of Technology, February 1971.
+50
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+According to the Gorry and Scott Morton framework, management control primarily deals with overseeing and
+guiding people, while operational control focuses on the performance of designated activities or tasks, such as
+manufacturing a particular part. Typically, operational control systems have a limited ability to provide
+managerial control reports or data that are helpful for strategic decision-making. For example, an online retail
+system primarily focused on operational control can generate sales reports that may provide valuable data for
+both managerial and strategic decision-making. Similarly, an online retail system primarily focused on
+operational control can generate reports, such as a sales analysis report. While intended for operational
+purposes, such reports can also provide valuable data for both managerial and strategic decision-making. For
+instance, Zara has been able to use online retail system data for its supply chain management system to beat
+competitors in the time to market by offering new fashions to its customer base.6 These data can be leveraged
+to identify sales trends in specific regions, or product categories can inform decisions on marketing expansion,
+inventory management, and product diversification to drive future growth.
+To conduct a thorough examination of the information systems within an organization, a simplified Robert
+Anthony framework can be employed. First, classify each system requirement based on the user and the type
+of decision it supports—whether it pertains to operational control, managerial control, or strategic planning.
+Then, for existing systems, consider factors such as data availability and the governance policies that regulate
+access by decision-makers. This analysis should help identify whether the existing data align with the intended
+purpose of the information systems and if any modifications or enhancements are needed. This process may
+involve reviving outdated systems or proposing new systems.
+LINK TO LEARNING
+Implementing responsible data management requires an understanding of the legal and social
+responsibilities associated with processing data across its life cycle.7 To learn more, read about the
+Responsible Data Maturity Model (https://openstax.org/r/109RespDataMod) as it recommends how data
+should be managed to ensure privacy, transparency, sharing, and acquisition of data.
+2.2 Strategies to Improve the Value of Information Technology Within
+Organizations
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Evaluate and compare different methods to define the value of information technology
+•
+Analyze specific strategies to improve the value of information technology
+•
+Identify real-world strategies organizations use to generate value using information technology
+Founded over half a century ago, Domino’s Pizza has grown to establish itself as the world’s largest pizza
+company. By 2023, it boasted a global network exceeding 20,000 stores across ninety markets, solidifying its
+position as a top public restaurant brand. Beyond its impressive scale, Domino’s has emerged as a pioneer in
+leveraging technology to enhance customer experience, developing innovative delivery options like “drop-a-
+pin” ordering, facilitated by Google Maps Platform mobility services.8 Domino’s adopted NVIDIA’s ReOpt tool, a
+real-time logistics solution that analyzes vast datasets to calculate billions of potential routes, ensuring the
+fastest and most efficient pizza delivery for each customer.9 Domino’s has quantified the value of their IT
+investment by measuring improvements in delivery times, a key performance indicator directly linked to
+customer satisfaction.
+6
+“Zara Supply Chain Analysis—The Secret Behind Zara’s Retail Success,” QuickBooks Blog, Intuit Quickbooks, June 25, 2018,
+https://quickbooks.intuit.com/r/supply-chain/zara-supply-chain-its-secret-to-retail-success/
+7
+Rashik Parmar, Marc Peters, and Llewellyn D.W. Thomas, “What Is Responsible Computing?” Harvard Business Review, July 7, 2023,
+https://hbr.org/2023/07/what-is-responsible-computing
+8
+“Domino’s: Taking the Guesswork Out of Pizza Delivery with Google Maps Platform,” Google Cloud, accessed January 19, 2025,
+2.2 • Strategies to Improve the Value of Information Technology Within Organizations
+51
+
+In today’s ever-evolving business landscape, organizations have come to recognize the immense potential of
+IT to enhance the value of their products and services. Leveraging IT has become a key factor in staying
+competitive and relevant in the digital age. However, as businesses delve deeper into the realm of IT, they face
+an essential question: How can they effectively assess the value IT adds to their organization?
+Defining the Value of Information Technology Within Organizations
+Over the past decades, businesses and managers have focused on understanding how to employ IT systems
+to achieve goals in diverse organizational, consumer, and societal contexts. Transformative opportunities have
+been ushered in with the emergence of a new generation of IT, including elements such as:
+•
+crowdsourcing platforms: online marketplaces where businesses or individuals can outsource tasks or
+problems to a large, dispersed group of people
+•
+cloud computing: on-demand access to computing resources like storage and processing power
+•
+big data infrastructure: systems and technologies needed to manage and analyze massive datasets
+•
+AI: empowering machines to learn and make intelligent decisions
+•
+the Internet of Things: connecting everyday objects to the internet, enabling them to collect and share
+data
+Today’s IT systems have evolved and are used in handling tasks that involve high degrees of uncertainty and
+take place in dynamic and unstructured situations. Some examples of these situations include cars driving
+autonomously, chatbots supplanting customer service representatives, and email applications suggesting
+writing improvements. This paradigm shift demands that we explore novel relationships between the strategic
+value of IT systems and the performance of organizations.
+The most common means of understanding the value of information systems in a business is to measure the
+relationship between IT investments and output measures of revenue and human productivity. This evaluation
+can be conducted at both the industry level and organizational level. However, the business value of IT goes
+beyond direct output or revenue measures because IT often supports organizational redesign efforts, such as
+the traditional taxi services being disrupted by new ride services like Uber or Lyft. This type of business model
+innovation leverages IT to create entirely new business models, not just enhance existing ones.
+Managers should consider which of the following three primary methods of value IT brings to their
+organization (Figure 2.5):
+•
+automation of operation
+•
+information generation for managing people and resources
+•
+transformation of existing processes or combined tasks called routines
+https://cloud.google.com/customers/dominos-maps
+9
+Jacob Roach, “How Nvidia Is Using A.I. to Help Domino’s Deliver Pizzas Faster,” Digital Trends, November 9, 2021,
+https://www.digitaltrends.com/computing/nvidia-using-ai-to-help-dominos-deliver-pizzas-faster/
+52
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+Figure 2.5 Information technology creates value for organizations through automation, information generation, and transformation.
+(credit: modification of work “Tiling 6 simple” by T. Piesk/Wikimedia Commons, CC BY 4.0)
+The automation of repetitive and mundane tasks via IT enables organizations to increase efficiency and reduce
+human error. For example, automating inventory management processes can streamline supply chain
+operations, leading to cost savings and improved inventory control. Automation can also enhance customer
+service through the deployment of chatbots or virtual assistants that can handle routine inquiries and thereby
+free up human agents to focus on more complex customer needs. For instance, Domino’s leverages IT to
+automate tasks associated with delivery route planning, finding the most efficient delivery routes, reducing the
+need for manual planning, and saving valuable time for employees.
+Information generation through IT can also empower organizations to make strategic choices based on real-
+time and accurate data, which can lead to better decision-making and increased competitiveness. Information
+technology systems capture vast amounts of data from various sources, including customer interactions,
+market trends, and internal operations. Through advanced data analytics and business intelligence tools,
+organizations can derive valuable insights and make data-driven decisions. For instance, understanding
+customer preferences based on data analysis allows businesses to tailor their products and services to meet
+specific demands, improving customer satisfaction and loyalty. Domino’s utilizes various IT systems to
+generate real-time data on traffic conditions, delivery times, and customer locations. By analyzing this data,
+Domino’s gains valuable insights that inform decision-making. For instance, they can identify areas for
+improvement in delivery routes or optimize staffing levels based on anticipated demand.
+Through IT, organizations can transform and reimagine their products, services, and customer experiences.
+The rise of e-commerce transformed the retail industry, allowing companies to reach an international audience
+and provide personalized shopping experiences. Embracing cloud computing, AI, and data analytics can lead
+to innovation and new revenue streams, ultimately enhancing an organization’s overall value proposition. For
+example, Under Armour attempted to transform itself from a sports apparel brand into a holistic fitness and
+wellness company through the acquisition of MyFitnessPal and the development of its own fitness app. It
+planned for IT and its management to leverage data and technology to move beyond selling clothes and
+become a central hub for athletes and fitness enthusiasts.10
+LINK TO LEARNING
+Read more about Under Armour’s transformation strategy (https://openstax.org/r/109UnderArmour) and
+learn how it fared (https://openstax.org/r/109UASuccess) and how the company adapted their strategy
+10
+Parmy Olson, “Under Armour Buys Health-Tracking App MyFitnessPal for $475 Million,” Forbes, February 4, 2015,
+https://www.forbes.com/sites/parmyolson/2015/02/04/myfitnesspal-acquisition-under-armour/
+2.2 • Strategies to Improve the Value of Information Technology Within Organizations
+53
+
+moving forward.
+An individual department or functional area within a large organization may have its own specific IT
+application program known as a functional area information system (FAIS), an information system designed
+to support specific business functions within the organization. These FAISs are designed to enhance the
+internal efficiency and effectiveness of each department by providing valuable support tailored to each
+respective department’s functions. These information systems often generate a diverse range of reports. Some
+common examples of functional areas for FAIS include accounting, finance, production and operations
+management, marketing, and human resources. The indicators of value listed in Table 2.2 signify the positive
+outcomes and advantages that result from investing in IT within each functional area and system category.
+Functional
+Area
+Strategic
+Information
+Systems
+Managerial
+Information
+Systems
+Operational
+Information
+Systems
+Overall Value
+Indicators for
+Information
+Technology Investment
+Human
+resources
+Workforce
+optimization
+Data-driven
+human
+resources
+decision-making
+and analytics
+Efficient
+employee data
+management
+and self-
+service options
+Improved talent
+acquisition and
+retention, reduced
+human resources
+operational costs
+Finance and
+accounting
+Effectiveness of real-
+time financial insights
+and predictive
+analysis
+Streamlined
+budgeting and
+financial
+forecasting
+Automated
+accounting
+processes and
+payroll
+management
+Better financial decision-
+making, cost savings,
+minimized errors
+Sales and
+marketing
+Acquisition and
+retention of customer
+with data analysis for
+market trends and
+demand forecasting
+Sales
+performance
+tracking and
+sales pipeline
+management
+Target
+marketing
+campaigns and
+customer
+engagement
+Increased sales,
+enhanced customer
+satisfaction, improved
+marketing return on
+investment
+Manufacturing
+and
+operations
+Product life-cycle
+optimization and risk
+assessment
+Efficient
+materials and
+production
+planning
+Real-time shop
+floor
+monitoring
+and quality
+control
+Improved product
+quality, reduced
+production downtime,
+streamlined processes
+Supply chain
+management
+Supply chain visibility
+and demand
+forecasting
+Inventory
+optimization and
+supplier
+performance
+tracking
+Efficient order
+processing and
+shipment
+tracking
+Reduced inventory costs,
+improved supply chain
+efficiency
+Table 2.2 FAIS Values These indicators serve as metrics for evaluating information technology investments and demonstrate how
+technology can create value for organizations.
+54
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+Functional
+Area
+Strategic
+Information
+Systems
+Managerial
+Information
+Systems
+Operational
+Information
+Systems
+Overall Value
+Indicators for
+Information
+Technology Investment
+Customer
+service
+Acquisition and
+retention of
+customers; customer
+feedback and
+sentiment analysis
+Help desk
+performance
+analytics and
+ticket tracking
+Customer self-
+help
+knowledge
+base and issue
+resolution
+Enhanced customer
+satisfaction, reduced
+response time, and
+support costs
+Research and
+development
+Rate of collaborative
+innovation and new
+idea generation
+Project resource
+allocation and
+innovation
+tracking
+Idea evaluation
+and research
+and
+development
+process
+optimization
+Accelerated innovation,
+streamlined research
+and development
+processes, and
+successful product
+development
+Information
+technology
+and
+technology
+management
+Alignment of
+information
+technology
+investments with
+business goals and
+strategy
+Information
+technology
+project progress
+monitoring and
+resource
+optimization
+Efficient
+information
+technology
+service delivery
+and asset
+management
+Optimized information
+technology spending,
+improved project
+outcomes, and reduced
+operational disruptions
+Business
+intelligence
+and analytics
+Utilization of data for
+advanced analytics
+Data
+visualization for
+insights and
+decision-making
+Interactive
+dashboards for
+real-time
+performance
+tracking
+Data-driven decision-
+making, actionable
+insights, and improved
+business performance
+Table 2.2 FAIS Values These indicators serve as metrics for evaluating information technology investments and demonstrate how
+technology can create value for organizations.
+Strategies to Improve the Value of Information Technology for
+Organizations
+Understanding the role of business processes within an organization is vital to measuring the specific value
+that IT can deliver and the mechanisms through which it achieves this. Information systems professionals
+know that technology alone is not the sole determinant of digital success, and that strategy is an important
+catalyst in the digital domain. Business-IT alignment, or strategic alignment, refers to the strong integration of
+the IT function with an organization’s strategy, mission, and objectives. This simply means that IT directly
+supports the business goals of the organization. Successful alignment exhibits six key characteristics (Figure
+2.6):
+•
+Organizations consider IT to be a driver of innovation that continuously transforms the business, leading
+to new revenue opportunities.
+•
+Internal and external customers, as well as customer service, hold paramount importance for these
+organizations.
+•
+Business and IT professionals are cross-trained and move across different departments and job roles.
+2.2 • Strategies to Improve the Value of Information Technology Within Organizations
+55
+
+•
+Clear overarching goals are established and understood by both IT and business employees.
+•
+Information technology employees are informed about the company’s revenue generation and cost-
+saving mechanisms.
+•
+The organization fosters a vibrant and inclusive company culture.
+Figure 2.6 Successful strategic alignment occurs when information technology directly supports the business goals of the
+organization, guided by these six characteristics. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license; credit
+Innovation: modification of work “Idea (89054) - The Noun Project” by “Nice and Serious”/Wikimedia Commons, CC0 1.0; credit
+Customers: modification of work “Noun Project people icon 3376085” by Anhar Ismail, ID/Wikimedia Commons, CC BY 3.0; credit
+Collaboration: modification of work “Handshake, by David“ by David/Wikimedia Commons, CC BY 3.0; credit Goals: modification of
+work “Checklist Noun project 5166” by Aaron Dodson/Wikimedia Commons, CC BY 3.0; credit Financials: modification of work
+“Analysis (1510724) - The Noun Project” by Anwer Hossain/Wikimedia Commons, CC0 1.0; credit Culture: modification of work “Ethics
+of Open Sharing icon - Organizational culture” by Julius Uusikylä, KRUT Collective/Wikimedia Commons, CC0 1.0)
+Unfortunately, many organizations struggle to achieve such close alignment. The primary reasons for the gap
+between business and IT departments can usually be attributed to the following:
+•
+Different objectives: Business managers focus on achieving business goals and generating revenue, while
+IT managers concentrate on technology implementation and maintenance.
+•
+Lack of expertise awareness: Business and IT departments often lack awareness of each other’s expertise
+and perspectives, leading to misunderstandings and misalignment.
+•
+Lack of communication: Inadequate communication between business and IT executives hinders the
+exchange of valuable insights and requirements.
+Business and IT alignment as an integral unit, not separate entities, is vital. It is important that organizations
+view IT as a strategic partner, not just a support function. By fostering collaboration and communication
+between business and IT stakeholders, organizations can ensure that technology solutions directly address
+business needs and objectives. To improve business-IT alignment, organizations can employ several
+measures:11
+•
+Prioritize organizational communication: Encouraging effective dialogue between different departments,
+fostering interdepartmental partnerships, and promoting mutual understanding between business and IT
+teams ensures sufficient knowledge sharing, well-informed decision-making, and seamless collaboration.
+•
+Focus on strengthening governance: Organizations should involve IT in strategic planning to ensure
+technology initiatives align with overall business goals. Engaging IT in executive committees enhances the
+decision-making process. Implementing a structured reporting hierarchy establishes clear communication
+channels, and defining authorization for decision-making roles ensures efficient execution. Coordinated
+governance can help set criteria whereby IT projects are prioritized based on their alignment with
+business objectives.
+•
+Align scope and IT architecture: Evaluating IT solutions for their effectiveness and customizing them to
+suit specific scope and business needs can lead to better outcomes.
+•
+Emphasize the development of human skills: Cultivating readiness to embrace technological changes,
+adapting management styles to support successful IT implementation, and learning from previous
+experiences contribute to continuous improvement.
+11
+Sahar Alsharif, Nabila Benslimane, Mohamed Khalifa, and Colin Price, “Healthcare IT Strategic Alignment: Challenges and
+Recommendations,” Studies in Health Technology and Informatics 251 (2018): 207–210, https://doi.org/10.3233/
+978-1-61499-880-8-207
+56
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+Case Study: High-Tech Stumble of UK Identity Cards
+In the early 2000s, the UK government aimed to enhance national security, combat identity fraud, and improve
+public services through the introduction of a comprehensive identity card. These cards would store biometric
+data and personal details, providing a centralized system for identification. However, the plan faced fierce
+opposition from civil liberties groups, privacy advocates, and political parties. Critics argued that the identity
+cards would compromise individual privacy rights and lead to excessive surveillance of citizens. Concerns were
+raised about data misuse, potential breaches, and the vulnerability of a centralized database to hacking.
+Despite efforts to emphasize the benefits of the identity cards, the opposition prevailed, and the proposal was
+eventually abandoned. The incoming coalition government decided that the proposal was too costly and
+lacked significant advantages for national security, underscoring the misalignment between business and IT
+strategies. Although the national identity card plan was discontinued, specific ID cards, like the biometric
+residence permit for non–European Union nationals, were introduced as documentation of a person’s
+immigration status.
+The details of this case reveal a significant misalignment between IT and business perspectives concerning the
+technological aspect of identity cards. Overall, the disparity between the UK’s simple, traditional ID cards and
+the envisioned technological sophistication of the new cards highlighted the disconnect between IT and
+business perspectives: the clash between a simple, efficient approach and the pursuit of advanced technology.
+This case emphasizes the importance of fostering collaboration and understanding between IT and
+stakeholders to develop practical and effective solutions for many different business scenarios.
+Strategies to Generate Value Using Information Technology
+In today’s business landscape, there are five key strategies usually pursued by organizations when seeking to
+generate value using IT: cost leadership, differentiation, focus/innovation, operational effectiveness, and
+customer orientation.
+Cost leadership strategy is a business approach wherein a company aims to become the lowest-cost producer
+in its industry or market. The primary goal of this strategy is to offer products or services at the lowest possible
+price while maintaining acceptable quality levels. Walmart’s focus on cost leadership has allowed it to maintain
+a dominant position in the retail industry. It consistently outperforms competitors by offering lower prices and
+attracting a broad customer base, including price-sensitive shoppers. Despite its low-margin business,
+Walmart’s sheer scale and operational efficiency allow it to generate massive revenue while maintaining
+profitability.
+Differentiation strategy is a business approach wherein a company seeks to distinguish its products or services
+from those of its competitors in the industry. The primary goal of this strategy is to create a unique and
+desirable offering that customers perceive as superior and are willing to pay a premium for. Apple exemplifies
+the differentiation strategy in the marketplace. By designing sleek and user-friendly products, Apple sets itself
+apart from competitors. The company’s focus on design, seamless integration of hardware and software, and
+emphasis on creating a unique user experience differentiates its products in the market.
+Focus/innovation strategy is a business approach wherein a company focuses on introducing new products,
+services, or processes—or enhancing existing ones—to stay ahead of the competition and meet evolving
+customer needs. The primary goal of this strategy is to drive growth and create a competitive advantage by
+being at the forefront of innovation in the industry. Google is a prime example. Continuously introducing new
+products and features, such as Google Search, Gmail, and Google Maps, the company revolutionized the way
+people access and interact with information online.
+Operational effectiveness strategy is a business approach wherein a company focuses on improving the
+efficiency and effectiveness of its internal business processes to outperform competitors. The primary goal of
+this strategy is to achieve higher productivity, quality, and customer satisfaction while reducing operational
+costs and time to market. Amazon’s success is attributed to its operational effectiveness strategy. By
+2.2 • Strategies to Improve the Value of Information Technology Within Organizations
+57
+
+optimizing its e-commerce platform, warehouse management, and delivery network, Amazon ensures efficient
+order processing and swift delivery of products to customers.
+Customer-oriented strategy is a business approach wherein a company places a strong emphasis on
+understanding and meeting the needs, preferences, and expectations of its customers. Also known as the
+customer-centric strategy, the primary goal of this strategy is to build long-lasting and loyal customer
+relationships by providing personalized and exceptional experiences. Netflix thrives on a customer-oriented
+strategy. Utilizing sophisticated algorithms and user data, Netflix offers personalized content
+recommendations to each subscriber, tailoring their streaming experience based on their individual
+preferences.
+Each of these strategies has its pros and cons. For example, if a company focuses only on pursuing a cost
+leadership strategy, it might not have enough resources for research and development, and so it might lag in
+terms of innovation. Let’s say a company traditionally sells a one-size-fits-all software product, and they decide
+to shift toward a customer-oriented strategy by offering customizable features and personalized support
+options. A customer-oriented strategy impacts the scope, cost, schedule, risk, and quality dimensions of a
+project. While a customer-oriented approach can lead to higher initial costs, it can also bring significant
+benefits.
+2.3 Digital Business Models
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Compare digital business models and their design and integration components
+•
+Critique digital business models
+The use of IT offers businesses numerous opportunities to generate value. Since most businesses adopt IT,
+undergo digital transformation, or fundamentally change how the business operates and delivers value using
+digital technologies, the digital field is crowded with apps, services, platforms, and digital devices. Some
+businesses undergoing digital transformations thrive initially but then go bankrupt, and others pivot and
+survive. Many established companies like retailers, banks, travel agencies, and print media have struggled to
+survive in the face of digital disruption. Organizations confront a common challenge—the necessity to develop
+digital business models that deliver value to customers or users. Thus, business models act as the vital
+connector between technology and the strategic goals of an organization (Figure 2.7).
+Figure 2.7 The business model is the key to bridging the gap between technological potential and business success, paving the way
+for companies to thrive in the competitive landscape. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license;
+credit gears: modification of work “Noun project 1063” by Jeremy Minnick/Wikimedia Commons, CC0 1.0; credit people with laptops:
+modification of work “Noun project - Meeting with laptops” by Slava Strizh/Wikimedia Commons, CC BY 3.0; credit target:
+modification of work “Noun 108494 cc” by Dima Lagunov/Wikimedia Commons, CC BY 3.0)
+Defining Digital Business Models
+A successful digital business model provides a logical framework that unlocks the value of a technology,
+allowing businesses to benefit economically. The business model serves as a blueprint for how a company
+generates and captures value from new products, services, or innovations. It is not solely IT that determines
+success, but the business model behind it that plays a key role in enabling high-tech companies to achieve
+their strategic goals and objectives. There are several common digital business models, each of which has
+specific information technology strategies.
+58
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+The e-commerce model involves buying and selling goods or services online through websites or apps, and
+offers convenient shopping experience for various customer segments. Notable examples of companies using
+this model are Amazon, Alibaba, and Shopify. In terms of IT strategy, a company using this model should
+develop robust and secure e-commerce platforms to align with business objectives, such as providing a
+seamless customer journey, implementing secure payment gateways, and optimizing logistics for efficient
+order fulfillment. The organization should also align IT with marketing strategies to enable personalized
+product recommendations and targeted promotions, ultimately driving customer engagement and loyalty.
+The subscription model provides continuous value through recurring subscriptions that provide customers
+with ongoing premium content or services. The IT strategy for this model is to develop products and/or
+services, such as entertainment and transportation, that customers need routinely and are willing to make
+recurring payments for to have continued access to the products and/or services. Amazon Prime and YouTube
+are subscription models.
+The freemium model provides a free basic service, with the option to upgrade to a premium version for
+enhanced features or benefits, such as with the services offered by LinkedIn, DropBox, and MailChimp.
+Integrating IT should involve designing services that showcase the value of the basic offering to entice users to
+upgrade to premium features, such as a seamless onboarding process and data-driven user engagement
+tactics. Companies should also optimize the platform to manage both free and paying users effectively.
+Effective data analytics and user segmentation are necessary to identify potential premium users.
+Collaboration with marketing and sales teams can be used to design targeted conversion strategies, monitor
+user behavior to optimize premium feature adoption, and continuously improve the platform to increase
+conversion rates and drive revenue growth.
+In an affiliate model, one company earns commissions by promoting and selling other companies’ products
+or services through websites or social media channels. They help drive traffic and sales, receiving a percentage
+of the revenue from the companies they promote. Amazon Associates, ClickBank, and Commission Junction
+use this model. These organizations should work with IT to build effective tracking and reporting systems to
+accurately attribute sales to affiliates by implementing affiliate tracking software, optimizing landing pages for
+conversion, and ensuring a seamless user journey from the affiliate’s site to the merchant’s platform. Providing
+real-time data and performance insights to affiliates enables them to optimize their promotional strategies.
+Amazon, eBay, and Airbnb demonstrate the marketplace model, which brings buyers and sellers together on
+a single platform, with the enterprise acting as an intermediary that facilitates transactions between parties.
+This approach fosters a diverse range of goods and services offered by different sellers, making it a convenient
+hub for buyers. Effective IT strategy for this digital business model includes providing efficient search and
+filtering options for users, securing payment gateways, personalizing recommendations, and offering robust
+customer support systems that ensure smooth transactions and build trust between buyers and sellers.
+Organizations using this model should also enable a user-friendly interface, smooth transaction processes,
+and personalized product recommendations based on user behavior and preferences.
+The advertising model generates revenue through targeted ads purchased by other businesses. Ads are
+presented to customers when they view content, and since the content is supported by advertising revenue
+paid by other businesses, customers view the content free of charge. This is the model for Facebook and
+PeopleFun. IT strategy for this approach includes developing content that includes space for advertisements
+that can be presented to users as they browse content, and selling this space to other businesses to run their
+ads for an allotted time, based on the fees paid for the ads. Ads should be programmed and presented to
+attract users’ attention while also providing minimal disruption to users’ interaction with content.
+Kickstarter, Indiegogo, and GoFundMe operate through a crowdfunding model, which raises funds for a
+product, project, or idea through an online platform, leveraging the collective support of the public. In this
+scenario, contributors pledge funds to support initiatives and receive rewards or early access to products in
+return. Entities utilizing this model should ensure their IT strategy is designed to build secure payment
+2.3 • Digital Business Models
+59
+
+gateways, provide real-time updates on fundraising progress, offer personalized backer rewards, and
+implement social sharing features to enhance campaign visibility and engagement. They should also ensure a
+user-friendly platform for both project creators and contributors, enabling easy navigation and smooth
+communication channels.
+A sharing economy model involves individuals sharing resources or services through a peer-to-peer network,
+enabling efficient utilization of underused assets. This fosters collaboration and convenience among users
+seeking specific services or goods. Uber, Airbnb, and TaskRabbit are examples of companies using this model.
+In terms of IT strategy, those with a sharing economy model should build robust peer-to-peer communication
+systems that implement secure payment processing, real-time tracking features, and rating and review
+systems to build trust among users. It is also important to prioritize user safety and enable efficient
+communication between providers and consumers.
+Finally, the digital product model offers downloadable digital assets that may include actual products, such as
+e-books, or may be used to provide information such as education, assembly instructions, or details about a
+product’s components. The offerings seen from TurboTax and Apple’s iTunes Store are digital products that are
+downloaded. IT strategy focuses on developing products and services that can be delivered and used in an
+electronic format. Companies should provide customers with a seamless process that enables them to
+download products, such as software or music, or access services, such as an online class, on any device,
+including computers, tablets, and cell phones. They should also enable real-time access, provide prompt user
+support, and implement security protocols that ensure user safety when users download material or interact
+online.
+Today’s business environment has undergone significant transformations. Unlike the traditional stable and
+low-competition business world, the digital business realm is marked by complexity, dynamism, and high
+levels of uncertainty and competition. Consequently, in this intricate digital business setting, the business
+model must be explicit and highly flexible to adapt effectively. Embracing change is important for effectively
+navigating today’s business landscape.
+LINK TO LEARNING
+Learn about AI-generated music (https://openstax.org/r/109AIMusic) and how AI is disrupting the music
+industry as well as freemium and subscription business models.
+Case Study: Transforming Health Care Through the Sharing Economy Model
+The U.S. health-care industry faces a substantial inefficiency issue, with a large portion of capital expenditure
+going toward medical equipment that remains underutilized. Boston-based Cohealo recognized the potential
+of the sharing economy model to address these inefficiencies and created a platform that facilitates the
+seamless sharing of medical equipment across different facilities. Cohealo operates as a cloud-based platform
+supporting logistic capabilities and as an analytics-enabled information system that enables customers to
+manage medical equipment centrally and make it available on demand. Cohealo’s products include the
+following:
+1.
+Cohealo + C-suite: This product functions as a comprehensive customer relationship management
+platform, allowing hospital management to access and manage equipment-related data. The platform
+offers real-time data and usage analytics, centralized decision-making, and personalized dashboards,
+enabling clinics to optimize resource deployment effectively.
+2.
+Cohealo + Finance: Clinics can make data-driven capital decisions in real time with this tool, optimizing the
+utilization of their most critical technology investments. By spreading out costs and consumption, Cohealo
+enables new efficiencies, faster capital redeployment cycles, and improved return on investment.
+3.
+Cohealo + Clinical: This network-based application empowers clinics to locate and enlist any idle medical
+60
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+equipment across the network to support procedures wherever and whenever needed. This manufacturer-
+agnostic design puts the choice in the hands of clinics, freeing up administrative time for patient and
+physician care.
+4.
+Cohealo + Supply Chain: Cohealo streamlines equipment transportation, ensuring it reaches the required
+location optimally and returns to the original site after usage. The network effect, fostered by health-care
+institutions clustered in and around Boston, contributes to the success of Cohealo’s platform, enabling the
+emergence of disruptive business models.
+Several factors influence the success of the sharing economy model in the health-care sector, as observed in
+Cohealo’s case12 :
+•
+Resource characteristics: Medical equipment, being valuable and commercial in nature, is considered
+suitable for sharing.
+•
+Clustering of resources: The concentration of interconnected health-care companies and institutions in
+specific geographic locations facilitates the easy transfer of use rights.
+•
+Use of IT: Online platforms enable easy and efficient mediation and monitoring of contract terms.
+•
+Cost advantage: The cost of accessing shared resources through Cohealo is often significantly lower than
+the cost of ownership, promoting the adoption of the sharing economy model.
+•
+Institutional support: Factors like supply chain and logistics support, as well as governance considerations,
+enhance the feasibility of sharing resources within the health-care industry.13
+Digital Business Model Critiques
+The emergence of digital business models has created the space for a workforce through online
+platform–based work. While this has brought about innovative solutions for economic interactions between
+people seeking jobs and employers, it has opened new challenges. With the sharing economy business model,
+algorithmic reputation features play a central role in fostering trust and accountability. These reputation
+systems, based on customer feedback and ratings, have been hailed as a valuable trust mechanism resulting
+in efficient matches for a distributed workforce. Some criticism and challenges faced by digital business
+models include14 :
+•
+Unequal distribution of opportunities: Research has shed light on a concerning phenomenon observed in
+gig work platforms—the “rich get richer” effect. Workers with higher reputation scores and greater
+experience tend to receive more work, as clients prefer to engage with those perceived as more reliable.
+Consequently, this phenomenon results in an unequal distribution of opportunities, disadvantaging
+workers with lower scores and less experience.
+•
+System of control: Algorithmic systems, though designed to foster trust, inadvertently create a “system of
+control.” By standardizing metrics and homogenizing worker identities, platforms such as Uber or
+DoorDash wield significant power. Platforms can manipulate scoring and matching algorithms to influence
+job allocation decisions without involving the people using their platforms.
+•
+Opacity and lack of transparency: One of the most troubling aspects of algorithmic digital systems is their
+opacity. Proprietary algorithms protected by trade secrecy laws prevent external scrutiny, leaving users in
+the dark about the factors influencing their reputation scores or how changes to algorithms may impact
+their job opportunities. In digital platforms such as Upwork, there is electronic monitoring of user actions
+that affects their perceived autonomy.15
+12
+Ayushi Tandon, “Cohealo! Sharing Economy Determinants in Healthcare Industry,” SSRN, December 2017, http://dx.doi.org/
+10.2139/ssrn.3677462
+13
+Vijaya Sunder M and Sowmya Shashidhara, “Next Step in Healthcare: Sharing Economy to Overcome Resource Crisis,” Forbes
+India, October 8, 2021, https://www.forbesindia.com/article/isbinsight/next-step-in-healthcare-sharing-economy-to-overcome-
+resource-crisis/70893/1
+14
+Zhi Ming Tan, Nikita Aggarwal, Josh Cowls, Jessica Morley, Mariarosaria Taddeo, and Luciano Floridi, “The Ethical Debate About
+the Gig Economy: A Review and Critical Analysis,” Technology in Society 65 (May 2021): 101594, https://doi.org/10.1016/
+j.techsoc.2021.101594
+15
+Kristine M. Kuhn and Amir Maleki, “Micro-Entrepreneurs, Dependent Contractors, and Instaserfs: Understanding Online Labor
+Platform Workforces,” Academy of Management Perspectives 31, no. 3 (2017): 183–200, https://doi.org/10.5465/amp.2015.0111
+2.3 • Digital Business Models
+61
+
+ETHICS IN IS
+IBM’s Artificial Intelligence Ethics Initiatives
+IBM provides a notable example of IS ethics in AI decision-making. IBM has been actively working on ethical
+AI initiatives, emphasizing fairness, transparency, and accountability in algorithmic decision-making across
+various domains such as hiring, lending, and law enforcement. IBM’s approach involves developing AI
+systems that mitigate biases, ensuring inclusivity, and safeguarding privacy through responsible data
+practices. Their efforts include implementing ethical AI frameworks, promoting diverse datasets, and
+advocating for AI transparency and explainability to address societal concerns regarding algorithmic
+fairness and discrimination.16
+2.4 Business Process Management
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Describe a business process
+•
+Differentiate business process reengineering, improvement, and management
+•
+Discuss ways in which information systems enable business processes
+To promote success, businesses and other organizations need robust business processes that are well
+managed. Business processes help organizations be more efficient and effective—providing higher-quality
+products and services, and improving customer service and satisfaction. Business processes can be tailored to
+meet an organization’s specific needs, and information systems can be important tools to enhance business
+processes.
+Business Process
+A business process represents a continuous series of interconnected activities aimed at producing a valuable
+product or service for an organization, its business partners, and its customers. This process relies on three
+essential components:
+•
+Inputs: These encompass the materials, services, and information that flow through the process and
+undergo transformations as a consequence of the activities within the process.
+•
+Resources: People and other resources form the backbone of process activities, performing various tasks
+to facilitate the progression of the process.
+•
+Outputs: Outputs are the ultimate result of the process, ending in the creation of a specific product or
+service that is ready to be delivered to the intended recipient.
+Consider the design of an information system for booking a COVID-19/flu/RSV test online. As shown in Figure
+2.8, this business process includes procedures such as user registration, test availability search, appointment
+booking, secure payment, test result reporting, and verification. The information system may prioritize data
+privacy and offer reliable customer support to enhance user experience. Regular updates and maintenance
+ensure efficiency and compliance with evolving guidelines. In general, efficient and well-designed business
+processes are crucial for gaining a competitive advantage and ensuring organizational success. Such
+processes must enable the information system to function innovatively and with enhanced effectiveness and
+efficiency compared to its competitors. Conversely, poorly designed processes could become liabilities,
+hindering the information system’s responsiveness and productivity.
+16
+“What Is AI Ethics,” IBM, September 17, 2024, https://www.ibm.com/topics/ai-ethics
+62
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+Figure 2.8 Consider an example of booking a COVID-19/flu/RSV lab test through a mobile app. The inputs required from users are
+personal information and preferred testing locations, and the outputs generated are confirmation of booked slot and test details.
+Additionally, it involves identifying the resources needed, which in this case are testing facilities and health-care personnel, to ensure
+a smooth and seamless process. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Providing an easy-to-use, up-to-date information system that delivers swift responses to user queries is
+essential for attracting customers and increasing usage. Accuracy in displaying current information related, in
+this case, to available time slots, testing locations, and pricing is crucial to building trust and reliability among
+users. Conversely, an information system that fails to offer timely and accurate information or has slow
+response times can have adverse effects on its success and reputation.
+To assess whether the business processes of an information system are well designed, the first step is to
+document the entire process. By analyzing this process, the organization behind the information system can
+identify potential areas for improvement to gain competitive advantage, which refers to conditions and
+circumstances that enable a company to compete more effectively than its rivals in a given market. A
+competitive advantage helps an organization control a market and accrue profits.
+Business Process Reengineering, Improvement, and Management
+Table 2.3 identifies fundamental business processes performed in an organization’s functional areas. However,
+there are several other business processes, such as procurement and fulfillment, that span multiple functional
+areas. These processes are referred to as cross-functional business processes, where no single functional area
+solely bears the responsibility for their execution. To ensure the successful completion of a cross-functional
+process, each functional area involved must execute its specific steps in a well-coordinated and collaborative
+manner.
+2.4 • Business Process Management
+63
+
+Functional Area
+Business Process Examples
+Accounting
+•
+Processing vendor invoices and managing accounts payable
+•
+Handling customer invoicing and managing accounts receivable
+•
+Conducting bank account reconciliations for financial accuracy
+•
+Managing cash receipts and maintaining proper records
+•
+Preparing financial statements for reporting and analysis
+•
+Managing payroll and employee compensation
+Finance
+•
+Collecting outstanding payments from customers
+•
+Facilitating and processing bank loan applications
+•
+Generating business forecasts for financial planning
+•
+Conducting customer credit approval and setting credit terms
+•
+Managing investment portfolios and analyzing returns
+•
+Evaluating and negotiating financial contracts
+•
+Budgeting and controlling expenses
+Marketing
+•
+Engaging in postsale customer follow-up activities
+•
+Conducting customer satisfaction surveys to gather feedback
+•
+Developing marketing campaigns and strategies
+•
+Managing social media presence and online advertising
+•
+Analyzing market trends and competitor research
+•
+Launching new products and services
+Production/operations
+•
+Managing bills of materials for production processes
+•
+Processing manufacturing change orders for product
+improvements
+•
+Handling packing, storage, and distribution of finished goods
+•
+Conducting physical inventory checks for accurate stock levels
+•
+Overseeing quality control processes for finished products
+•
+Implementing lean manufacturing principles for efficiency
+•
+Managing supplier relationships and inventory procurement
+Table 2.3 Business Process of Different Functional Areas There are numerous fundamental business processes performed across
+an organization’s functional areas.
+64
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+Functional Area
+Business Process Examples
+Human resources
+•
+Administering HR policies and providing necessary support
+•
+Managing employee hiring and conducting orientation programs
+•
+Maintaining employee files and records for documentation
+•
+Handling health-care benefits and ensuring employee well-being
+•
+Managing performance appraisals and salary adjustments
+•
+Conducting employee training and development programs
+•
+Implementing workplace policies and compliance
+Management information
+systems
+•
+Implementing antivirus control measures for data security
+•
+Reporting and addressing computer security incidents
+•
+Conducting computer user training for efficient system usage
+•
+Applying disaster recovery procedures for data protection
+•
+Developing and implementing policies for email and internet use
+•
+Managing information technology infrastructure and system
+maintenance
+•
+Analyzing and improving business processes through technology
+Table 2.3 Business Process of Different Functional Areas There are numerous fundamental business processes performed across
+an organization’s functional areas.
+Organizations document any business process, and if any inefficiencies or bottlenecks are detected,
+modifications can be made to optimize the platform’s performance and enhance user experience. In the
+COVID-19 test booking example, modifications may include streamlining the booking flow, optimizing the
+database for faster information retrieval, and ensuring the platform’s scalability to handle increased demand
+during peak times. This is much like the e-ticketing process used in the airline industry. Here are some key
+measures of excellence when evaluating the execution of a business process:
+•
+User satisfaction: Efficient and well-designed business processes can contribute to a more positive work
+environment, leading to higher satisfaction and engagement of those using these processes.
+•
+Innovation: Streamlined processes can free up resources and time, allowing organizations to invest more
+in research and development, leading to greater innovation.
+•
+Flexibility and adaptability: Agile and adaptable business processes enable organizations to respond
+quickly to changes in the market or industry, enhancing their ability to stay relevant and competitive.
+•
+Cost reduction: By optimizing operational procedures and supplier processes, organizations can achieve
+cost-cutting objectives, leading to improved financial efficiency.
+•
+Quality: The optimization of design, development, and production processes results in the delivery of
+superior-quality products or services, which builds a reputation for excellence.
+•
+Differentiation: By optimizing marketing and innovation processes, organizations can create unique and
+distinctive offerings that set them apart from competitors and help them establish a competitive edge.
+•
+Customer satisfaction: Attaining strong customer contentment is a direct outcome of streamlining and
+harmonizing business processes to effectively meet the needs and preferences of customers.
+•
+Environmental impact: Optimized processes can lead to reduced waste and resource consumption,
+positively impacting the organization’s environmental footprint.
+•
+Compliance and governance: Well-structured processes can ensure that the organization complies with
+relevant regulations and governance standards, thereby reducing its legal and reputational risks.
+How does an organization ensure business process excellence? One approach developed in the 1990s is
+business process reengineering (BPR), which describes the radical rebuilding of core business processes to
+2.4 • Business Process Management
+65
+
+achieve optimization. This strategic approach strives to expand the productivity and profitability of an
+organization’s business processes. In essence, BPR requires organizations to scrutinize their business
+processes through an unprejudiced lens and subsequently determine the optimal means to reconstruct these
+processes to bolster their business functions. Business process reengineering originates from the capabilities
+IT offers, including process automation, standardization of several process steps, and error mitigation through
+improved interdepartmental communication.
+Although some enterprises have effectively implemented BPR, a significant number of organizations found
+this strategy to be excessively intricate and challenging to pursue. After encountering setbacks in BPR
+implementation, businesses increasingly shifted their focus toward organizing work around business
+processes rather than individual tasks. This shift led to a less disruptive and more gradual approach known as
+business process improvement (BPI), which is the valuation of existing business processes to identify areas
+for improvement. For instance, if a social media marketing platform were to experience a decline in click-
+through rate (CTR), a metric that measures the effectiveness of an online ad or link, the organization’s BPI
+team would investigate the root cause behind this issue. Likewise, if there was a broken machine on an
+assembly line leading to output variations, the BPI team would analyze the process to rectify the problem. The
+BPI team is composed of individuals with various roles and expertise. It typically includes the process owner,
+process experts, subject matter experts, data analysts, and cross-functional representatives from different
+departments. Continuous improvement specialists may also be part of the team, and a project manager or
+facilitator leads the efforts. Stakeholders, including customers or end users, may also be involved or consulted
+for their valuable input.
+For example, consider a social media marketing platform that developed a campaign promoting a new
+product launch. The initial CTR was 3.5 percent, and the marketing team aspired to improve this metric. By
+using the BPI methodology, the team investigated the possible reasons for the low CTR. On analysis, it found
+that the ads lacked visual appeal and failed to communicate the product’s unique selling points effectively.
+Additionally, the team discovered that the targeting parameters needed refinement, as the ads were reaching
+an audience that was not very likely to be interested in the product. Based on these insights, the marketing
+team implemented the following improvements:
+•
+Ad creative enhancement: The BPI team collaborated with a creative team to design visually captivating
+and compelling ad content that better communicated the product’s features and benefits.
+•
+Targeting refinement: The team revised the audience targeting parameters, focusing on demographics
+and interests more closely aligned with the product’s target market.
+•
+A/B testing: To gauge the effectiveness of the changes, the team conducted A/B testing with different
+versions of the ad, comparing their performances to determine which ones yield better results. An A/B test
+compares the performance of two versions of content to see which one appeals more to viewers.
+In addition to A/B testing, two popular methodologies used in BPI initiatives are design thinking and Agile. As
+a methodology, design thinking, which is an approach to problem solving that uses creativity and empathy to
+understand user needs in order to create user-centric products and services, has roots in the field of design
+and was popularized in the 1990s by companies such as IDEO. The methodology involves empathizing with
+customers to understand their pain points, defining the problem clearly, generating possible solutions,
+prototyping and testing these solutions, and finally, implementing the most effective ones. For instance, a
+financial institution may use design thinking to enhance its customer onboarding process. By integrating the
+human-centered approach of design thinking, organizations can create processes that resonate with their
+customers, improve user experience, and drive better business outcomes. The Agile methodology, as you’ve
+learned, is used in software development and other fields, particularly for projects with rapidly changing
+requirements and a need for frequent iterations, that emphasize flexibility, iterative development, and
+collaboration. For example, a software development team working on a mobile application might employ Agile
+to deliver incremental updates and new features in short development cycles (sprints). This iterative approach
+allows the team to gather continuous feedback from users and stakeholders, ensuring that the final product
+66
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+meets their evolving needs.
+To sustain BPI efforts over time, organizations can adopt business process management (BPM), which is the
+ongoing review and analysis of processes across an organization to identify opportunities for improvements or
+reengineering that will optimize core business processes. BPM relies heavily on process modeling to show
+stakeholders the dependencies between the people, systems, and information that interact to perform tasks
+successfully. Along with business activity monitoring, this approach strives to make BPI initiatives more
+congruent through optimization of core business processes.
+Business process management begins with process modeling, which is a graphical depiction of all steps in a
+process. Process modeling helps employees understand the interactions and dependencies among the people
+involved in a given process, the information systems they rely on, and the information they require to
+optimally perform their tasks. Business process management involves several key parameters that contribute
+to the successful digitalization of business process initiatives within an organization:17
+•
+Strategic alignment: Business process management must be closely aligned with the organization’s overall
+strategy. This alignment ensures that processes are designed, executed, managed, and measured in
+accordance with strategic priorities, enabling continuous and effective actions to improve performances of
+specific business processes. Business models act as the vital connector between the technology strategy
+and strategic goals of an organization.
+•
+Methods: Business process management methods consist of tools and techniques supporting activities
+throughout the process life cycle and enterprise-wide BPM initiatives. Examples include process modeling,
+analysis, and improvement techniques with approaches like design thinking and Six Sigma, a quality
+management methodology that utilizes statistical analysis to minimize defects and improve process
+efficiency.
+•
+Culture: A supportive organizational culture enhances BPM values and fosters an environment conducive
+to BPM success, although culture-related efforts may have a longer time horizon for significant impact
+compared to other factors.
+FUTURE TECHNOLOGY
+Heathrow Airport and the Rise of Digital Air Traffic Control Towers
+England’s Heathrow Airport, one of the busiest airports globally, exemplifies the challenges faced by
+traditional air traffic control (ATC) methods. Managing the complex flow of aircraft relies on human
+controllers stationed in a physical tower, with limitations in visibility and potential inefficiencies. For
+decades, ATC has relied on a well-established system: Controllers stationed in physical towers utilize radar
+and visual observation from windows to manage aircraft movements. While effective, this method has
+limitations, such as sight being compromised by low visibility conditions like fog or cloud cover, existing
+towers becoming geographically unsuitable as airports expand, the slowness and potential imprecision of
+manual methods for estimating aircraft turnaround times, and a shortage of qualified air traffic controllers.
+Digital ATC towers present a potential paradigm shift in air traffic management. These systems leverage
+cutting-edge technologies, such as high-definition cameras that create a panoramic view of runways and
+surrounding areas, AI-powered image analysis that can identify objects like support vehicles and overlay
+radar data on each aircraft for easier identification, and machine learning that automates tasks like
+turnaround time estimation and runway clearance in low visibility conditions, freeing up controllers for
+critical decision-making.
+17
+Jan vom Brocke and Michael Rosemann, eds., Handbook on Business Process Management 1: Introduction, Methods, and
+Information Systems (Springer, 2015).
+2.4 • Business Process Management
+67
+
+Heathrow has actively explored the potential of digital ATC towers. In collaboration with NATS, the UK’s ATC
+provider, they have implemented a trial system at the airport. This system utilizes high-definition cameras
+and AI algorithms, demonstrating the potential benefits of enhanced visibility, improved efficiency, and
+remote operation.18
+Despite the promising advancements of digital ATC towers, there are challenges to consider. Regulatory
+bodies like the Federal Aviation Administration in the United States have yet to fully certify digital towers,
+hindering widespread adoption. Transitioning to digital towers may require retraining or relocating existing
+air traffic controllers, potentially impacting jobs. And while AI can be a valuable tool, complete dependence
+on automation could pose safety risks. Human expertise remains crucial. The digital ATC tower revolution is
+in its early stages, but it represents a significant potential disruption to the traditional air traffic control
+landscape.
+Information Systems and Business Processes
+By capturing and managing data, monitoring performance, and facilitating communication, information
+systems contribute to improved efficiency, better decision-making, and overall business growth for any
+business process. Following are the primary areas in which information systems play a vital role:
+•
+Capturing and storing process data: Capturing and storing relevant data generated during business
+processes is one of the fundamental tasks of an information system. These data can come from various
+sources such as transactions, customer interactions, and inventory updates. For example, a retail store’s
+information system records each sales transaction, including the products sold, quantity, and customer
+information. These data are then stored in a database for further analysis, reporting, and decision-making.
+•
+Monitoring process performance: Information systems are also responsible for monitoring the
+performance of business processes. This involves tracking key performance indicators and metrics to
+assess how well a process is functioning and whether it meets the desired objectives. For instance, an e-
+commerce platform’s information system might track website traffic, conversion rates, and customer
+satisfaction to evaluate the effectiveness of its online sales process. In some cases, these monitoring tasks
+are fully automated. For instance, an information system can generate real-time reports and alerts when
+certain performance thresholds are reached or breached. This automation ensures that the organization
+can respond promptly to issues and make informed decisions.
+•
+Facilitating communication and coordination: Another important role of information systems is to
+facilitate communication and coordination among different functional areas within the organization. As
+businesses grow, the complexity of operations increases, and different departments need to work
+together seamlessly. Information systems enable smooth information flow, allowing employees from
+various departments to collaborate effectively. For example, a company’s enterprise resource planning
+(ERP) system integrates information from different departments, like finance, human resources, and
+supply chain, ensuring a coherent flow of data and streamlined processes.
+It is important to be aware that the level of automation in these roles can vary. Some tasks are fully
+automated, meaning the information system handles them entirely without human intervention. In contrast,
+other tasks require human input, where the information system relies on the judgment, expertise, and
+intuition of managers to make decisions based on the information provided.
+LINK TO LEARNING
+Learn about developments in CRM technology (https://openstax.org/r/109ITusingAI) and how AI can
+18
+“London’s Heathrow Airport Trials AI to Revolutionise Air Traffic Control,” London Daily News, December 3, 2024,
+https://www.londondaily.news/londons-heathrow-airport-trials-ai-to-revolutionise-air-traffic-control/
+68
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+generate value in business for customers using IT.
+2.5 Digital Innovation Creation, Distribution, and Commercialization
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Discuss digital innovation, and steps to create a digital innovation
+•
+Identify ways to integrate information technologies to innovate and transform an organization’s
+offerings
+Digital innovation continues to change the way we live. For example, Rio was a brand of portable digital audio
+players, first introduced in 1998 by the Diamond Multimedia company. iTunes was a media player, media
+library, and online store developed by Apple Inc. first released in 2001. In 2003, Apple introduced the iTunes
+Store, where users could purchase and download digital music, movies, and TV shows. The key difference
+between Rio and iTunes is that Rio was a dedicated hardware device (portable MP3 player), whereas iTunes
+started as software that could be used on computers. This made downloading music easy and convenient.
+Over time, Apple integrated iTunes with their iPod line of portable devices, creating a seamless ecosystem for
+purchasing, managing, and syncing digital content between computers and iPods. Rio was unable to compete
+with this new model, and the company discontinued them in 2005. Apple’s true innovation was the digital
+innovation of making the downloading of music easy and convenient by leveraging technology. More and
+more, organizations face mounting pressure to adopt digital technologies to revitalize and revolutionize their
+business models and adapt to ever-evolving digital trends.
+In 2020, the rapper Travis Scott teamed up with the popular online video game Fortnite for a virtual concert
+titled “Astronomical.” This event was remarkable for its integration of virtual technology within the gaming
+platform, attracting over twenty-seven million unique players who participated live across five days. It set a
+significant benchmark for the future of virtual music festivals, showcasing the potential for immersive digital
+experiences.19 Similarly, in response to the pandemic in 2020, the iconic event Burning Man transitioned to a
+virtual “Multiverse” leveraging VR technology to re-create its distinct atmosphere. Through dynamic 3D art
+installations, themed camps, and musical performances staged in various virtual locations, participants could
+still immerse themselves in Burning Man’s ethos, highlighting the resilience of community spirit and cultural
+exchange in a digital age. These examples illustrate how technology continues to revolutionize the way we
+experience music concerts and festivals, offering immersive alternatives that transcend geographical
+limitations and redefine traditional event formats. These VR concerts enable fans to experience performances
+from anywhere in the world, breaking geographical barriers.
+Digital Innovation and Its Adoption
+In management information systems (MIS) scholars have identified two main perspectives on innovation and
+its relation to IS. These perspectives offer valuable insights into how organizations adopt and leverage digital
+technologies to drive progress. The first perspective, known as “IT innovation,” focuses on how organizations
+integrate new IT-enabled business processes, products, and services. Simply put, this type of innovation refers
+to the adoption of an already-existing IT product or service that is new to an organization.
+The second perspective, digital innovation, centers on a product-oriented approach that examines how the
+combination of physical and digital products leads to the creation of entirely new offerings (Figure 2.9).20 This
+perspective also delves into the role of IT in facilitating or constraining the development of innovative
+products. By studying digital innovation, we gain insights into how organizations structure and manage their
+innovative endeavors more effectively.
+19
+Dave Thier, “A Staggering Number of People Saw Fortnite’s Travis Scott ‘Astronomical’ Event,” Forbes, April 28, 2020,
+https://www.forbes.com/sites/davidthier/2020/04/28/a-staggering-number-of-people-saw-fortnites-travis-scott-astronomical-event/
+2.5 • Digital Innovation Creation, Distribution, and Commercialization
+69
+
+Figure 2.9 The process of digital innovation follows distinct steps and is informed by the external competitive environment and the
+internal organizational environment to produce the desired outcomes. (attribution: Copyright Rice University, OpenStax, under CC BY
+4.0 license)
+Digital innovation encompasses a range of activities that include initiation, development, implementation, and
+exploitation. The first, initiation, involves the process of identifying and acquiring information on business
+processes and requirements from both internal and external sources within the organization. The goal is to
+find problems and opportunities that are well-suited for digital innovation—areas where implementing digital
+solutions can lead to significant improvements or create new opportunities for growth. For instance, there may
+be increasing demand for renewable energy sources and a need to reduce greenhouse gas emissions. This
+realization may prompt a company to explore opportunities in the renewable energy sector and invest in new
+digital technologies to address these challenges.
+Development focuses on the creation and design of new information systems. It encompasses various
+activities such as building entirely new solutions from scratch, customizing existing systems to better fit an
+organization’s needs, or adopting preexisting solutions that have proven to be effective elsewhere. The
+development phase lays the foundation for digital innovation to be implemented successfully. For instance, a
+company might invest in research and development to create advanced digital monitoring systems for its
+offshore oil platforms. These systems should leverage cutting-edge technology to minimize environmental
+impact.
+Once the digital innovation has been developed, the implementation phase begins. This involves the actual
+installation and deployment of the information system within the organization. Beyond the technical aspect of
+installation, it also includes ensuring that the new systems are integrated into the organization’s existing
+structure and processes. This may require setting up new governance systems, providing appropriate training
+to employees, and establishing new processes to support digital innovation. This may also involve installing
+digital systems in an organization’s satellite locations and providing the training its workforce needs to use the
+technologies effectively. The organization may also offer incentives to encourage employees to adopt and
+embrace the new digital tools.
+Exploitation refers to maximizing the value derived from the existing information system. After
+implementation, organizations leverage these systems to their fullest potential. This may involve reusing
+existing systems and technologies for different purposes, finding innovative ways to utilize the data collected
+by these systems, and continuously extracting value from the digital innovations to drive growth and
+efficiency. For instance, after digital innovation has been implemented, a company’s new advanced monitoring
+20
+Rajiv Kohli and Nigel P. Melville, “Digital Innovation: A Review and Synthesis,” Information Systems Journal 29, no. 1 (2018):
+200–223, https://doi.org/10.1111/isj.12193.
+70
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+systems may not only improve safety and efficiency but now also provide new data insights. The company
+could leverage this data to optimize its operations further, forecast maintenance needs, and enhance overall
+performance.
+Other important aspects of digital innovation are the internal organizational environment, the external
+competitive environment, and the outcomes. The internal organizational environment refers to the
+organizational backdrop in which digital innovation takes place. It includes factors such as the organization’s
+business and data strategies, how data are managed and shared within the organization, and the established
+business processes for doing things. The internal organizational environment heavily influences how
+effectively digital innovation will be adopted and integrated into the organization. The external competitive
+environment encompasses the broader market in which the organization operates. It includes factors such as
+industry trends, market fads, the behavior of competitors, and the preferences of consumers. Understanding
+the external competitive environment is crucial for organizations to ensure their digital innovations align with
+market demands and offer a competitive advantage. The outcomes of digital innovation refer to the end
+results achieved by adopting and implementing digital solutions. These outcomes can be either projected or
+actual results. Projected outcomes are the anticipated benefits and improvements expected from the digital
+innovation, while actual outcomes represent the tangible results realized after the implementation. These
+outcomes often include new and improved business processes, innovative products, and more efficient
+services that contribute to the organization’s overall success.
+It is essential to note that not all of these components are mandatory in every digital innovation effort, and
+they need not follow a prescribed order. In practice, these activities may intertwine to such an extent that it
+would be challenging to distinguish them.
+Deploying Information Technologies to Innovate
+Given that not every company starts with digital products and services, nor can every company benefit from
+them, the question arises: How should an organization pursue digital innovation or consider transforming its
+products in the digital age? The simple answer is that developing an understanding of the unique context of a
+business and adopting a well-defined framework can help the organization successfully leverage digital
+technologies to enhance its products and services, foster growth, and remain competitive in the digital age. A
+comprehensive framework that sheds light on how products and services can harness digital innovation
+consists of three popular approaches: opening the door to third parties, connecting customers, and
+connecting products in order to connect customers.21
+Opening the door to third parties refers to creating an ecosystem that allows external developers and
+businesses to integrate their products or services into the primary platform, thereby expanding its
+functionality and value for end users. This approach can transform a traditional product into a robust platform
+that caters to a broader range of needs and attracts a larger user base. Gojek is an Indonesian technology
+company that initially started as a ride-hailing and courier service. Over time, the company recognized the
+opportunity to expand its platform beyond transportation and ventured into various other services, including
+food delivery, grocery delivery, parcel delivery, digital payments, and more. To achieve this expansion and
+provide diverse services to its users, Gojek adopted the “opening the door to third parties” strategy. It created
+an open platform that welcomes third-party service providers to offer their services through the Gojek app. For
+instance, local restaurants can partner with Gojek to offer food delivery services, and independent drivers can
+register to provide ride-hailing services through the Gojek platform.22 By integrating numerous third-party
+services into its app, Gojek has become an all-in-one super app, catering to a wide range of everyday needs for
+millions of users.
+Connecting customers involves creating a platform that facilitates interactions and transactions between
+21
+Andrei Hagiu and Elizabeth J. Altman, “Finding the Platform in Your Product,” Harvard Business Review 95, no. 4 (July–August
+2017): 94–100.
+22
+Marc Steinberg, Rahul Mukherjee, and Aswin Punathambekar, “Media Power in Digital Asia: Super Apps and Megacorps,” Media,
+Culture & Society 44, no. 8 (2022): 1405–1419. https://doi.org/10.1177/01634437221127805
+2.5 • Digital Innovation Creation, Distribution, and Commercialization
+71
+
+customers, essentially forming a marketplace where buyers and sellers can connect with each other directly.
+This approach transforms the product into a platform that not only serves customers directly but also enables
+them to engage with each other, leading to increased network value for all participants. Instagram, a popular
+social media platform owned by Meta, started out primarily as a photo-sharing app where users could post
+pictures and videos to share with their followers. As the platform grew in popularity, businesses and individual
+sellers recognized its potential as a marketing and e-commerce tool. To capitalize on this opportunity,
+Instagram introduced Instagram Shopping, which allows businesses and individual sellers to set up virtual
+shops directly on the platform, showcasing their products through photos and videos. Users can explore these
+shops, browse products, and make purchases without leaving the app. By enabling this direct connection
+between sellers and potential buyers, Instagram became more than just a social media platform—it became a
+thriving marketplace where businesses could reach a large audience and customers could discover and
+purchase products seamlessly.
+Connecting products to connect customers involves creating a platform that connects various products or
+services to offer a comprehensive and seamless experience to customers. This approach aims to provide
+customers with a unified ecosystem where different products work together harmoniously, creating
+convenience and value for users. By connecting products, companies can strengthen customer loyalty,
+increase engagement, and establish a dominant position in their respective markets. Microsoft’s Windows
+operating system exemplifies the strategy of connecting products to connect customers. Windows is a
+platform that serves as the foundation for running a wide variety of software applications on personal
+computers. Microsoft recognized that by creating a unified ecosystem and connecting different software
+products to the Windows platform, it could increase its value and attract a larger user base. As a result, a vast
+array of applications, ranging from productivity tools to creative software and games, were made available to
+Windows users. This interconnected ecosystem made Windows an indispensable platform for PC users, as they
+could seamlessly install and use various software products for their specific needs. The availability of a diverse
+selection of software products contributed to the success and widespread adoption of the Windows operating
+system.
+72
+2 • Data Management and Information Systems Business Strategies
+Access for free at openstax.org
+
+Key Terms
+advertising model
+digital business model that generates revenue through targeted ads purchased by other
+businesses
+affiliate model
+digital business model in which one company earns commissions by promoting and selling
+other companies’ products or services through websites or social media channels
+analytic data
+type of structured datathat include aggregated and summarized data from various sources
+and enables in-depth analysis, reporting, and decision support
+big data
+large datasets that are complex in volume, variety, veracity, and volume and that require specialized
+processing techniques to extract valuable insights and make informed decisions
+business process
+continuous series of interconnected activities aimed at producing a valuable product or
+service for an organization, its business partners, and its customers
+business process improvement (BPI)
+evaluation of existing business processes to identify areas for
+improvement
+business process management (BPM)
+ongoing review and analysis of processes across an organization to
+identify opportunities for improvements or reengineering that will optimize core business processes
+business process reengineering (BPR)
+radical rebuilding of core business processes to achieve optimization
+competitive advantage
+conditions and circumstances that enable a company to compete more effectively
+than its rivals in a given market
+crowdfunding model
+digital business model that raises funds for a product, project, or idea through an
+online platform, leveraging the collective support of the public
+data definition
+instruction for how to organize information
+data governance
+policies, procedures, and standards that determine how an organization manages the
+availability, usability, integrity, and security of an organization’s data throughout the data life cycle
+data integrity
+accuracy and consistency of data throughout their entire life cycle
+decision-making framework
+breaks down decisions into two types: programmed decisions with clear
+procedures or nonprogrammed decisions requiring more judgment
+design thinking
+approach to problem solving that uses creativity and empathy to understand user needs in
+order to create user-centric products and services
+digital innovation
+perspective of management information systems that examines how the combination of
+physical and digital products leads to the creation of entirely new offerings
+digital product model
+digital business model offering downloadable digital assets that may include actual
+products, such as e-books, or may be used to provide information such as assembly instructions or details
+about a product’s components
+e-commerce model
+digital business model that involves buying and selling goods or services online through
+websites or apps, and offers convenient shopping experience for various customer segments
+freemium model
+digital business model offering a free basic service, with the option to upgrade to a
+premium version for enhanced features or benefits
+functional area information system (FAIS)
+information system designed to support specific business
+functions within an organization
+information quality
+accuracy, completeness, consistency, and timeliness of data
+marketplace model
+digital business model that brings buyers and sellers together on a single platform,
+with the enterprise acting as an intermediary that facilitates transactions between parties
+master data
+type of structured data that represent core entities such as customers, products, or employees
+operational data
+type of structured data that include transactional data generated by day-to-day business
+operations
+reference data
+type of structured data that include codes, classifications, or standards used across the
+organization
+Robert Anthony framework
+divides a problem, and by extension the data needed to resolve this problem,
+into three domains: operational control, management control, and strategic planning
+2 • Key Terms
+73
+
+sharing economy model
+digital business model in which individuals share resources or services through a
+peer-to-peer network, enabling efficient utilization of underused assets
+strategic planning
+process of defining an organization's mission, vision, goals, and objectives, and
+developing strategies to achieve them, often with the support of information systems, typically done by
+senior level managers
+subscription model
+digital business model offering continuous value through recurring subscriptions that
+provide customers with ongoing premium content or services
+variety
+key dimension of big datathat encompasses the diverse array of data types and formats
+velocity
+key dimension of big data that describes the rapid pace at which data are generated and collected,
+thereby necessitating real-time processing
+veracity
+key dimension of big data that refers to the reliability, accuracy, and trustworthiness of the data,
+considering factors like data quality and consistency
+volume
+key dimension of big data that refers to the vast amount of data generated and stored
+Summary
+2.1 Practices and Frameworks for Data Management
+•
+Data governance involves establishing policies, processes, standards, roles, and responsibilities to manage
+data as a valuable asset. One important part of data governance is information quality, which covers how
+accurate, complete, consistent, and readily accessible it is.
+•
+Data management is about figuring out the specific ways that data will be stored, analyzed, protected, and
+measured.
+•
+Data quality involves ensuring that data are accurate, complete, and consistent.
+•
+The four key dimensions of big data—known as the four Vs—include volume, variety, velocity, and veracity.
+•
+Different types of data are required for generating suitable information, and different types of data
+require different management approaches. There are two main categories of data: structured data and
+unstructured data.
+•
+Good data management strategies require updating outdated data, rectifying known inaccuracies,
+addressing varied definitions, resolving discrepancies in redundant data sources, and managing variations
+in opinions, forecasting techniques, or simulation models.
+•
+Information systems planning and management involve selecting and implementing the right technology
+infrastructure for data storage, processing, analysis, and governance.
+•
+There is a distinction between information used for strategic planning and information used for
+management control. Strategic planning focuses on the long-term goals and direction of the company,
+while management control ensures efficient day-to-day operations and adherence to those strategic
+plans.
+•
+Foundational frameworks include the Robert Anthony framework, Herbert A. Simon’s decision-making
+framework, and Gorry and Scott Morton’s framework, which combines elements of both the Robert
+Anthony framework and Simon’s decision-making frameworks.
+2.2 Strategies to Improve the Value of Information Technology Within
+Organizations
+•
+Information technology systems are used in handling tasks that involve high degrees of uncertainty and
+take place in dynamic and unstructured situations.
+•
+The most common means of understanding the value of IS in a business is to measure the relationship
+between IT investments and output measures of revenue and human productivity. However, the business
+value of IT goes beyond direct output or revenue measures because IT often supports organizational
+redesign efforts.
+•
+Data managers decide whether they need IT systems for operational purposes or for strategic planning.
+74
+2 • Summary
+Access for free at openstax.org
+
+•
+Managers see that IT can bring value through three primary methods, including automation of operation,
+information generation for managing people and resources, and transformation of existing processes or
+combined tasks.
+•
+Functional area information systems (FAIS) are designed to enhance the internal efficiency and
+effectiveness of each department in an organization by providing valuable support tailored to each
+respective department’s functions.
+•
+Business-IT alignment, or strategic alignment, refers to the strong integration of the IT function with an
+organization’s strategy, mission, and objectives.
+•
+Gaps between business and IT departments can usually be attributed to different objectives, lack of
+expertise awareness, and lack of communication.
+•
+To improve business-IT alignment, organizations should prioritize organizational communication, focus on
+strengthening their governance, align scope and IT architecture, and emphasize the development of
+human skills.
+•
+The five key strategies usually pursued by organizations when seeking to generate value include IT cost
+leadership strategy, differentiation strategy, focus/innovation strategy, operational effectiveness strategy,
+and customer-oriented strategy.
+2.3 Digital Business Models
+•
+Organizations need to develop digital business models that deliver value to customers or users by
+working as the vital connector between technology and the strategic goals of an organization.
+•
+A successful business model provides a logical framework that unlocks the hidden value of technologies,
+allowing businesses to benefit economically, as well as serving as a blueprint for how a company
+generates and captures value from new products, services, or innovations.
+•
+Common digital business models include e-commerce, subscription, freemium, affiliate, marketplace,
+advertising, crowdfunding, sharing economy, and digital product.
+•
+Digital business models face criticisms and challenges including unequal distribution of opportunities,
+level of control in algorithmic systems, and lack of transparency.
+2.4 Business Process Management
+•
+The business process relies on three essential components: inputs, resources, and outputs.
+•
+Efficient and well-designed business processes are crucial for gaining a competitive advantage and
+ensuring organizational success. Functional areas in the business process include accounting, finance,
+marketing, production/operations, human resources, and management.
+•
+Measures of excellence when evaluating the execution of a business process include user satisfaction,
+innovation, flexibility and adaptability, cost reduction, quality, differentiation, customer satisfaction,
+environmental impact, and compliance and governance.
+•
+Key parameters in BPM that contribute to the successful digitalization of business process initiatives
+within an organization include strategic alignment, methods, and culture.
+•
+By capturing and managing data, monitoring performance, and facilitating communication, information
+systems contribute to improved efficiency, better decision-making, and overall business growth for any
+business process.
+2.5 Digital Innovation Creation, Distribution, and Commercialization
+•
+In management information systems, IT innovation focuses on the integration of new IT-enabled business
+processes, products, and services within an organization, while digital innovation centers on the creation
+of new offerings through the combination of physical and digital products and examines IT's role in
+facilitating or constraining innovation.
+•
+The steps involved in digital innovation are initiation, development, implementation, and exploitation,
+which are informed by the external competitive environment and the internal organizational environment.
+Not all of these components are mandatory in every digital innovation effort, and they need not follow a
+2 • Summary
+75
+
+prescribed order.
+•
+Digital platform strategies include opening the door to third parties, which creates an ecosystem for
+external developers to integrate their products/services, enhancing platform functionality; connecting
+customers, which facilitates interactions and transactions between customers, forming a marketplace; and
+connecting products to connect customers, which links various products/services to provide a
+comprehensive, seamless customer experience.
+Review Questions
+1. Which parameter of data management focuses on safeguarding personal data from unauthorized access,
+use, disclosure, disruption, modification, or destruction?
+a. data security
+b. data governance
+c. data privacy
+d. data architecture
+2. Which dimension of big data characterizes the rapid pace at which data is generated and collected, which
+necessitates real-time processing?
+a. variety
+b. velocity
+c. veracity
+d. volume
+3. In the Robert Anthony framework, which domain ensures that an organization is meeting its strategic
+goals through activities such as setting budgets and tracking sales?
+a. strategic planning
+b. operational control
+c. intelligence
+d. management control
+4. Which functional area’s overall value indicators for information technology investment include improved
+product quality and streamlined processes?
+a. supply chain management
+b. manufacturing and operations
+c. research and development
+d. information technology and technology management
+5. Collaboration is one of the six key characteristics needed for successful business-IT alignment. What does
+collaboration mean?
+a. Clear overarching goals are established and understood by both information technology and business
+employees.
+b. The organization fosters a vibrant and inclusive company culture.
+c. Business and information technology professionals are cross-trained and move across different
+departments and job roles.
+d. Information technology is considered a driver of innovation that continuously transforms the business,
+leading to new revenue opportunities.
+6. Which strategy to generate value using information systems seeks to distinguish a business’s products
+and/or services from those of competitors?
+a. differentiation strategy
+b. operational effectiveness strategy
+c. focus/innovation strategy
+d. cost leadership strategy
+76
+2 • Review Questions
+Access for free at openstax.org
+
+7. Which business model earns commissions by promoting and selling other companies’ products or services
+through websites or social media channels?
+a. affiliate model
+b. e-commerce model
+c. marketplace model
+d. sharing economy model
+8. What has caused opacity and a lack of transparency in online platform–based work?
+a. standardized metrics and homogenized worker identities
+b. unequal distribution of opportunities
+c. algorithmic control systems
+d. proprietary algorithms protected by trade secrecy laws
+9. Which component of the business process is the backbone of process activities, ensuring that tasks in the
+process are completed?
+a. inputs
+b. resources
+c. outputs
+d. interconnected activities
+10. What tool enables information systems to promote business success by monitoring process performance?
+a. inventory updates
+b. key performance indicators
+c. A/B testing
+d. process modeling
+11. Which digital innovation activity refers to maximizing the value derived from the existing information
+systems?
+a. initiate
+b. develop
+c. implement
+d. exploit
+12. Which approach to digital innovation forms a marketplace where buyers and sellers can interact with each
+other directly?
+a. opening the door to third parties
+b. connecting customers
+c. connecting products to connect customers
+d. leveraging digital technologies
+Check Your Understanding Questions
+1. Define data governance.
+2. What are unstructured data? Include examples and explain the value of unstructured data that makes
+them worthwhile to manage despite challenges.
+3. In Simon’s decision-making framework, what three-step process is used to determine which activities are
+programmable and which ones are nonprogrammable? Explain each step.
+4. How does an organization view information technology as a strategic partner driving innovation and new
+revenue opportunities?
+5. How does an organization prioritize the needs of internal and external customers, with a focus on
+excellent customer service?
+2 • Check Your Understanding Questions
+77
+
+6. How can you determine whether there is a culture of cross-training and collaboration between business
+and information technology professionals?
+7. How are clear overarching goals established and understood by both information technology and
+business personnel?
+8. How does the freemium business model differ from the subscription business model?
+9. How can digital business models lead to unequal opportunities for platform workers?
+10. How can algorithmic control in digital platforms be problematic?
+11. How can an organization assess whether the business processes of an information system are well
+designed?
+12. How can analyzing the business processes of an information system help an organization identify
+potential areas for improvement and gain a competitive advantage?
+13. How can information technology serve as a pivotal catalyst in facilitating transformative change through
+business process reengineering?
+14. What are the two main perspectives in management information systems regarding innovation and its
+relationship with information systems? Briefly describe each one.
+15. What key activities are involved in digital innovation, and how do they contribute to organizational
+success?
+16. How does the “opening the door to third parties” approach contribute to digital innovation, as exemplified
+by Gojek?
+17. What is the significance of the “connecting customers” approach in digital innovation, as illustrated by
+Instagram?
+18. How does the “connecting products to connect customers” approach contribute to digital innovation, as
+demonstrated by Microsoft’s Windows operating system?
+Application Questions
+1. On December 23, 2021, the accounts of more than three million users of the U.S.-based FlexBooker
+appointment scheduling service were stolen and being traded on hacker forums. Customers were
+businesses needing to schedule appointments. This ranged from professionals like accountants and
+lawyers to service providers like hairdressers and dentists to owners of facilities like gyms and repair
+shops. Do some research on whether FlexBooker was following the best data security practices? Did it
+have well-defined user roles for who could access its data?
+2. In January 2020, Microsoft acknowledged that a customer support database containing anonymized user
+analytics had been accidentally exposed online. The data breach involved email addresses, IP addresses,
+and other details stored in the company’s customer support case analytics database. The exposed
+database contained over 250 million Microsoft customer records spanning fourteen years, without any
+password protection. Microsoft attributed the server exposure to misconfigured Azure (a cloud platform
+with data-related services) security rules implemented on December 5, 2019. Upon discovering the issue,
+Microsoft quickly addressed the configuration problem to prevent unauthorized access. How do you think
+this incident impacted clients of Azure, and what could they have done differently? Do some additional
+research to back up your answer.
+3. Imagine you are working on information technology strategy for a small local café in competition with a
+large fast-food chain like McDonald’s. If the small café wants to introduce a fancy new mobile app for
+customization of orders to improve customer experience, how would you evaluate the value and feasibility
+78
+2 • Application Questions
+Access for free at openstax.org
+
+of this information technology investment?
+4. Imagine you are an information system consultant, and you have been given a report from an
+organization’s business analysts that indicates that investments in information systems are projected not
+to affect the company’s efficiency or productivity and not to impact its revenue. Would you recommend
+that the organization proceed with such investments? Why or why not?
+5. Access the Clean Eatz (https://openstax.org/r/109CleanEatz) website. Prepare a list of all the services the
+company provides. Identify its digital business model and describe the information technology strategy
+implemented.
+6. Access the The Knot (https://openstax.org/r/109TheKnot) website. Identify its digital business model and
+describe the information technology strategy implemented.
+7. Enter the Alibaba.com (https://openstax.org/r/109Alibaba) website. Identify its digital business model and
+describe the information technology strategy implemented. How can such a site help a person who is
+making a purchase?
+8. Your IS team is debating which of two images for your website’s home page are more likely to appeal to
+website visitors. What process do you recommend to help the team make this decision and why?
+2 • Application Questions
+79
+
+80
+2 • Application Questions
+Access for free at openstax.org

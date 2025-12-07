@@ -1,0 +1,589 @@
+Chapter 2 – Literature Review and Existing Methods
+A peer-reviewed publication [18] previously addressed the literature review and discussion of existing 
+methods for sustainability in cement manufacturing. This chapter includes an updated version of part of 
+that publication. It also consists of a literature review of existing methods of causal inference optimization, 
+which has been addressed in another paper submitted for publication by the author.
+2.1 Literature Review: Cement Manufacturing and Sustainability
+According to a World Economic Forum publication in 2024, cement manufacturing remains one of the 
+most significant industrial contributors to global greenhouse gas emissions [19]. Demand for cement is 
+expected to increase as the need for infrastructure development continues to expand in emerging markets. 
+The tension between increasing construction needs and decarbonization goals creates a significant 
+sustainability dilemma. As a result, the decarbonization of the cement manufacturing process has received 
+research attention, and there is a lot of literature on CO2 mitigation methods. 
+2.1.1 Environmental Impact Factors in Cement Production
+The environmental impacts of cement manufacturing span across multiple dimensions and create a 
+complex sustainability challenge that requires a systems approach to address effectively. As already 
+identified, carbon emissions remain a challenge. Despite innovations in production methods and the 
+development of alternative materials, the fundamental chemistry of cement production makes complete 
+elimination of emissions challenging without carbon capture.
+Another factor is the energy consumed in the manufacturing of cement. Substantial thermal energy is 
+required for clinker production, and electrical energy is needed for grinding operations, motors, and material 
+movement and separation equipment. Fossil fuels are the sector's main source of thermal energy and make 
+up about 90% of the energy mix. At the same time, bioenergy, renewable, and non-renewable waste make 
+up the balance [11]. While electrical energy consumption is smaller in absolute terms than thermal 
+11
+energy consumption, it is still substantial, requiring 90-110kWh per ton of cement. In many regions where 
+cement is manufactured, electricity is also generated from fossil fuel sources, further contributing to the 
+carbon footprint of cement production.
+Other environmental impact factors of cement manufacturing include raw material consumption, water 
+and pollution, air and particulate emissions, waste generation and management, land use, and ecosystem 
+impacts [20]. Cement production places a lot of demand on natural resources, particularly limestone, the 
+primary raw material. Water is used in cement manufacturing for cooling equipment, controlling dust, and 
+processing materials. Apart from greenhouse gases, cement manufacturing also generates other air 
+pollutants (dust, nitrogen oxides, sulfur oxide, carbon monoxide, etc.) that affect local air quality and human 
+health. Cement production creates waste such as kiln dust, bypass dust, and rejected materials, some of 
+which cannot be recycled and require waste disposal. Cement plants and associated limestone quarries take 
+up large land areas, potentially leading to habitat loss, deforestation, and landscape alterations.
+2.1.2 Current Sustainability Approaches
+The decarbonization pathways in the cement industry include replacing clinker with supplementary 
+cementitious materials, alternative chemistries and processes to replace limestone from the clinker 
+production process, fuel switching and electrification, and carbon capture.
+Cement companies can leverage carbon capture and storage (CCS) technologies to capture CO2 from 
+significant point sources in their manufacturing process or the atmosphere, transport it, and store it 
+permanently underground. The paper in [21] examined limitations in deploying CCS technologies despite 
+their availability and maturity. The authors advocate for expanding government policies to incentivize the 
+adoption of CCS and mandate its deployment.
+Using alternative fuels properly can reduce the cement industry's environmental impacts. Related research 
+has advanced, indicating that introducing solid waste materials as alternative fuels in cement manufacturing 
+will lower energy consumption and reduce greenhouse gas emissions. By coupling the cement and waste 
+management industries, solid waste materials such as municipal solid waste, sewage sludge, biomass, end-
+12
+of-life tires, and meat and bone animal meal can be considered alternative fuels to replace or reduce the 
+consumption of non-renewable fossil fuels in cement manufacturing [22].
+More cement factories are now leveraging Waste Heat Recovery (WHR) systems to achieve energy 
+performance as required by standards and legislation. The waste heat from the kiln is used as a power 
+generation source, thus reducing thermal energy losses and improving the energy efficiency of the cement 
+manufacturing process. In [23], the authors evaluated the performance of a WHR system, comparing it to 
+the estimated performance from feasibility studies and proved positive financial indicators by comparing 
+actual to updated capital expenditures. In addition, energy efficiency can be improved in cement production 
+by leveraging process control and management systems, high-efficiency motors and drives, and efficient 
+grinding technologies.
+The process routes for cement manufacture are dry, semi-dry, semi-wet, and wet. The wet processes 
+consume more energy than the dry processes. While the choice of process is primarily determined by the 
+availability of raw materials, with expansion and significant improvements in the cement plant, semi-dry 
+processes can be changed to dry processes to reduce GHG emissions [10].
+Table 1 summarizes decarbonization methods in literature, the materials and equipment used, and cost 
+examples where available.
+2.1.3 Limitations to Sustainability Approaches in Cement Manufacturing
+The referenced publications [13,18] by the author cover key limitations of current sustainability 
+approaches in cement manufacturing, and they are highlighted below:
+2.1.3.1 Technical and Process Limitations
+1. Process emissions inherent to traditional chemistry: Approximately 60% of cement production 
+emissions come from the calcination process itself, making them difficult to eliminate without 
+fundamental changes to cement chemistry or using carbon capture technologies.
+13
+Table 1 Decarbonization methods
+Method Decarbonization 
+Lever
+Materials/
+Equipment
+Process 
+Summary
+Cost Example Reference
+Methods increasing the process energy efficiency - Process Decarbonization
+Introduction of 
+energy efficient 
+clinker 
+technology with 
+low cooling air 
+requirement
+Process 
+Decarbonization
+Modern grate 
+clinker coolers
+Optimization of 
+clinker coolers
+Varies due to 
+site specifics
+[24]
+Waste heat 
+recovery
+Boiler/turbine 
+system
+Waste heat used 
+for drying, steam 
+production, or 
+feeding local heat 
+network. 
+Decrease of 4 -15 
+kg CO2/t clinker
+Depends on 
+local power 
+prices
+Replacing long 
+wet/ semi-dry 
+kilns with energy 
+efficient preheater/precalciner kilns
+Construction 
+may be 
+required
+Raw material 
+lower moisture 
+content. 
+Additional 
+cyclone stage. 
+Thermal energy 
+decreases of 900 -
+2800 MJ/t 
+clinker. Electrical 
+energy decreases
+of 0 -5 kWh/t 
+clinker
+35M - 50M 
+EUR 
+investment. 
+2.85 - 9.2 
+EUR/t clinker 
+decrease in 
+operating cost
+Methods utilizing 
+alternative fuels -
+Circular Economy 
+E.g. Solid wastes, 
+different biomass 
+sorts, fuels with 
+lower heating 
+values
+Circular
+Economy
+Sewage 
+sludge, wood 
+waste, grain 
+rejects, animal 
+meal, mixed 
+industrial 
+waste, waste 
+oil, tires, 
+plastics
+Use for 
+combustion in 
+pre-calciner 
+vessel. Integrate 
+into waste 
+management. 
+Processing 
+compliant with 
+international 
+environmental 
+agreements and 
+local policies
+Investment 
+costs for 
+storage, 
+handling, 
+pretreatment. 
+Lower 
+operational 
+costs. 15 -
+30% of coal 
+price in 
+Europe.
+[24]
+Methods utilizing 
+different raw 
+materials to 
+reduce emissions 
+from limestone 
+decomposition -
+Circular Economy
+Circular
+Economy
+Already 
+decarbonated 
+materials E.g. 
+Metallurgical 
+slags, coal 
+ashes, 
+concrete 
+Limits process 
+related and fuel 
+related CO2 
+emissions
+Limited 
+availability of 
+materials
+[24]
+14
+crusher 
+residues
+Decarbonization strategies - Process Decarbonization
+Post-combustion 
+capture. 
+Decarbonizes flue 
+gases generated 
+from total 
+oxidation process
+Process
+Decarbonization
+Solvents that 
+react with CO2
+e.g. MDEA, 
+MEA, DEA, 
+AMP, PZ*
+CO2 absorbing 
+reaction, heat to 
+reverse 
+absorption, 
+moisture removal, 
+compression, 
+transportation, 
+storage/utilization
+$50.6/ton [25]
+[26]
+Natural and 
+synthetic 
+calcium-based 
+sorbents
+Polymeric 
+membranes
+Compress flue 
+gas, pass through 
+stages of 
+membranes and 
+compression to 
+capture CO2, 
+[27]
+Pre-combustion 
+capture. 
+Decarbonizes 
+syngas resulting 
+from fuel partial 
+oxidation process 
+before 
+combustion
+Synthetic gas 
+from feed 
+stock (e.g. 
+coal), steam, 
+air, heat
+Water-gas shift 
+reaction, CO2
+capture, 
+separation, 
+transportation, 
+sequestering
+$60/ton 
+capture cost [28]
+Oxy-combustion. 
+Uses oxygen 
+rather than air for 
+fuel total 
+oxidation
+Oxygen-rich 
+medium
+Fuel combustion 
+in pure or 
+enriched oxygen 
+stream
+60 - 70 
+EUR/ton CO2 
+avoided cost
+[29]
+Other methods
+Electrification and 
+Renewable 
+Procurement -
+Clean Energy
+Clean Energy Synchronous 
+power such as 
+hydropower 
+and biomass. 
+Variable 
+generation 
+such as wind 
+and solar
+Reusability, 
+recyclability, 
+product 
+longevity.
+Varies by site. 
+Influenced by 
+the price and 
+availability of 
+zero-carbon 
+electricity
+[30]
+Eco planet and 
+Efficiency Gains 
+in Construction -
+Carbon Efficient 
+Construction
+Carbon-efficient 
+Construction
+Design and 
+engineering 
+techniques to 
+reduce amount 
+of concrete 
+required
+Examples: curved 
+fabric molds, prestressed concrete 
+using tensioned 
+steel cables. 
+Concrete mixture 
+optimization.
+Varies.
+* MDEA - Methyl-Di-Ethanol-Amine DEA - Di-Ethanol-Amine AMP - 2-Amino-2-Methyl-1-
+Propanol PZ - Piperazine
+15
+2. Energy efficiency plateaus: According to an International Energy Agency Report, the intensity of 
+thermal energy use has plateaued at around 3.6 GJ/t after initial improvements, suggesting 
+conventional efficiency measures are reaching their limits [11].
+3. Contradictory optimization effects: Some thermal energy efficiency advancements have increased 
+electrical energy consumption, creating a trade-off rather than a net sustainability gain.
+2.1.3.2 Implementation and System Integration Challenges
+1. Capital-intensive infrastructure requirements: Many sustainability approaches require significant 
+capital investments with extended payback periods, thus creating financial barriers to adoption, 
+especially for aging cement plants.
+2. Siloed approaches: The overall effectiveness of current sustainability methods is often limited 
+because they focus on isolated aspects of production rather than viewing cement manufacturing as 
+an integrated system.
+3. Limited data utilization: Despite the potential of IoT and digitalization, there's a gap in effectively 
+utilizing operational data for optimization. Many cement plants fail to collect and store operational 
+data and do not invest in technical resources, resulting in a lack of leverage of advanced analytic 
+capabilities.
+4. Inconsistent measurement frameworks. Standardizing environmental impact measurements across 
+different production scenarios, technologies, and geographical regions presents challenges.
+These limitations collectively point to the need for more integrated, system-based approaches that combine 
+technological innovations with advanced analytics and consider environmental and economic factors within 
+a unified framework.
+2.1.4 Systems Perspective on Cement Manufacturing Sustainability
+In addition to process improvements, a comprehensive systems approach to cement manufacturing 
+sustainability considers the entire production value chain. Its scope covers from raw material extraction to 
+end-of-life considerations. This perspective considers the interconnections between various subsystems and 
+16
+stakeholders in the cement ecosystem. Within this view, concepts like circular economy, industry 4.0, and 
+digital technologies are powerful tools for implementing this systems approach to sustainability [31]. These 
+technologies can help manage the complex trade-offs between environmental impact, product quality, and 
+economic viability central to sustainable cement manufacturing.
+2.2 Literature Review: Optimization Methods in Cement Production
+Optimizing energy use in cement production has become an imperative rather than an option for 
+manufacturers. The cement manufacturing industry faces dual pressures of economic competition and 
+environmental sustainability. Cement manufacturing optimization spans multiple objectives: reducing 
+energy consumption, minimizing emissions, maintaining product quality, maximizing production 
+efficiency, and ensuring economic viability.
+2.2.1 Evolution of Optimization Approaches
+Literature on cement production optimization has evolved over the past two decades to reflect 
+technological advancements, analytical methods, and sustainability priorities. More recent literature has 
+gone beyond just focusing on mechanical and thermal efficiency improvements through equipment 
+upgrades and process modifications to following electrical energy optimization within several key themes: 
+"automation and process control, power generation from waste heat recovery systems, digitalization and 
+application of artificial intelligence" [13]. The advent of Industry 4.0 technologies enables more 
+sophisticated optimization methods to handle the complex, nonlinear relationships and multiple objective 
+characteristics of optimization in cement manufacturing.
+2.2.2 Scope and Organization of Literature Review
+Chapter 4 of this dissertation is an update on the author's publication of a systematic literature review 
+that synthesizes and analyzes existing scholarly works and industry reports on general methods and 
+approaches for electrical energy consumption in cement production. Optimization methods are evaluated 
+for their theoretical soundness and practical applicability in cement production plants. Consideration is 
+given to implementation challenges, data requirements, and demonstrated benefits.
+17
+The literature review in this chapter is restricted to methods for optimizing EEC through the lens of 
+‘causality’ – the idea that one event or action can lead to another event or outcome. This lens identifies more 
+accurate interventions and enables a better process understanding by examining direct causal relationships, 
+indirect causal paths, and confounding variables. It covers causal inference and Bayesian optimization 
+methods that explicitly model causal relationships between process variables, enabling more effective 
+interventions. The interventions can be applied directly to operation parameters at the cement plant to 
+realize a measurable reduction in electrical energy consumption. 
+2.2.3 Optimization Methods
+Leveraging causal inference and Bayesian statistical methods would be effective in determining the 
+measures of operational parameters that would yield optimal EEC, especially in the raw meal grinding 
+subsystem of the cement production system. The methods' applications suggest their effectiveness for 
+decision-making in this scenario, where understanding cause and effect is crucial, and interventions can be 
+applied to attain reduced levels of EEC at the cement plant.
+2.2.3.1 Iterative Causal Inference
+Iterative Causal Inference (ICI) leverages causal relationships among variables to optimize complex 
+systems. It's a methodology that enhances understanding underlying dynamics and improves decision 
+making. ICI employs causality-based learning to identify model structures and recover unobserved 
+variables, making it more resistant to random noise than purely data-driven methods [32]. The algorithm 
+creates mathematical models to estimate variables that can't be directly observed and treats these estimates 
+as if they were actual measurements. It focuses on local relationships between variables while incorporating 
+known constraints and leverages specialized techniques to prevent mathematical instabilities. The approach 
+leverages iterations that refine causal graphs based on conditional independence tests. Rohekar, Raanan Y., 
+et al. [33] present a comprehensive paper on the iterative causal discovery algorithm for recovering causal 
+graphs when there are latent confounders and selection bias. This approach assumes a directed acyclic graph 
+(DAG) for the underlying causal structure and focuses on learning it from observational data. 
+18
+Figure 4: Network visualization of causal relationships in the raw meal grinding process
+Figure 4 plots the causal relationships between EEC (Y) and the multiple variables of the raw meal grinding 
+system after dimension reduction to 3 variables (XV1, XV2, XV3) with the partial least square regression 
+algorithm. Process variables are nodes, and the causal relationship is depicted as arrows in the diagram. The 
+colors of the arrows indicate relationship strengths.
+Structural vector autoregressive (SVAR) processes, which are often employed in causal inference when 
+modeling time series data, can be rephrased as a linear Structural Causal Model (SCM) of stochastic 
+processes on a simple causal graph [34]. Peters et al. [35] provide a generalized definition of structural 
+causal models in their study of causal models for dynamical systems. 
+Suppose a structural causal model (SCM) of the raw meal grinding system is defined as
+M = (X, U, f, P(U)) (1)
+where:
+• X = {X1, X2, …, XN} are observed variables in the raw mill grinding data (e.g., limestone flow rate (T), 
+raw mill motor (kW))
+19
+• U = {U1, U2, …, UN} are exogenous variables (unobserved)
+• ƒ = {ƒ1, ƒ2, …, ƒN} are causal mechanisms
+• P(U) is a probability distribution over U
+Each variable is determined by Xi = ƒi(Pa(Xi), Ui), where Pa(Xi) are parents of Xi in the causal graph [36].
+Iterative causal inference combines causal discovery with optimization in a step-by-step iterative process 
+as follows:
+1. Causal Discovery. At iteration t in the causal discovery step, estimated causal effects are given 
+by:
+𝜏𝑖
+(𝑡) = 𝐸[𝑌|𝑑𝑜(𝑋𝑖 = 𝑥𝑖 + 𝛿)] − 𝐸[𝑌|𝑑𝑜(𝑋𝑖 = 𝑥𝑖
+)] (2)
+Using Python programming language, this is estimated with a method like Double Machine 
+Learning [37, 38]:
+𝜏𝑖
+(𝑡) =
+𝐸[(𝑌−𝐸[𝑌|𝑋\𝑖
+]).(𝑋𝑖−𝐸[𝑋𝑖
+|𝑋\𝑖
+])]
+𝐸[(𝑋𝑖−𝐸[𝑋𝑖
+|𝑋\𝑖
+])
+2]
+(3)
+2. Optimization. Variables are updated based on causal effects:
+𝑋𝑖
+(𝑡+1) = 𝑋𝑖
+(𝑡) − 𝜂. 𝜏𝑖
+(𝑡) where 𝜂 is the learning rate
+3. Constraint Application: 𝑋𝑖
+(𝑡+1) = 𝑐𝑙𝑖𝑝(𝑋𝑖
+(𝑡+1)
+,𝑋𝑖,𝑚𝑖𝑛,𝑋𝑖,𝑚𝑎𝑥)
+The causal effect 𝜏𝑖
+indicates how changing variable 𝑋𝑖 affects the target variable Y (EEC). If 𝜏𝑖 > 0, 
+increasing 𝑋𝑖
+increases Y. To make optimal adjustments to EEC, the update rule decreases variables with 
+positive causal effects and increases variables with negative effects, moving toward lower EEC. The 
+constraint application step captures the manufacturing requirements and limitations of the raw meal 
+grinding system. In practice, constraint values can be obtained from subject matter experts, raw meal 
+grinding equipment manuals, manufacturing process records, and the upper and lower-level bounds of the 
+variables in historical data. As variables change, their causal effects may change due to nonlinear 
+relationships. Re-estimating causal effects at each step addresses this. 
+20
+Iterative causal inference offers robust frameworks for understanding causal relationships and 
+optimizing a target variable by manipulating variables with direct causal relationships. Causal inference 
+handles confounding and ensures adjustments are based on true causal relationships rather than spurious 
+correlations. It also incorporates domain constraints. Its implementation provides statistical significance of 
+causal effects and a clear interpretation of variable interactions. This gives it the key advantage over 
+traditional optimization. However, it is important to recognize the limitations of assumptions of 
+independence and the possibility of model misspecification, which can lead to biased estimates. This 
+approach requires substantial historical data and is less adaptive to rapid system changes.
+2.2.3.2 Causal Bayesian Optimization Framework
+Causal Bayesian Optimization (CBO) is an advancement in the field of optimization that integrates 
+causal inference with Bayesian Optimization (BO) frameworks. CBO is particularly useful in scenarios 
+where understanding the causal relationships between variables can lead to more effective optimization 
+strategies. It addresses a fundamental limitation in traditional Bayesian optimization: the inability to 
+distinguish between correlation and causation in complex systems. CBO is apt for efficient and robust 
+optimization in a domain such as raw meal grinding, where interventions have downstream effects and 
+underlying causal mechanisms govern the relationship between variables. While CBO offers significant 
+advantages, it requires efficient intervention strategies and has scalability challenges in high-dimensional 
+settings. These challenges are being addressed through innovative algorithms and frameworks.
+Researchers have recently adopted different CBO applications to enable optimization strategies. The 
+architecture of the algorithms varies depending on the specific challenges they address. DAG recovery via 
+Bayesian Optimization (DrBO) is a framework that utilizes Bayesian optimization to identify high-scoring 
+DAGs from observational data [39] efficiently. The graph-agnostic CBO (GaCBO) algorithm outperforms 
+traditional methods by integrating causal discovery as a subtask within CBO, addressing cumulative regret 
+objectives in scenarios with unknown or partially known graphs [40]. High-dimensional CBO (HCBO) 
+enhances optimization in complex scenarios by employing causal intrinsic dimensionality and a scale-
+21
+normalized scoring function [41]. Constrained CBO (cCBO) optimizes target variables under constraints 
+by reducing the search space using known causal graph structures and observational data. It models target 
+and constraint quantities with Gaussian processes, selects interventions via a constrained expected 
+improvement acquisition function, and balances fast convergence with feasible interventions [42].
+The general algorithm for CBO is as follows:
+1. Initialize with prior causal knowledge or learn the causal structure from observational data.
+2. For 𝑡 = 1, 2, … , 𝑇:
+a) Update the surrogate model (statistical model, often a Gaussian Process) based on observed data
+b) Estimate causal effects for candidate interventions
+c) Select the next intervention point by optimizing the acquisition function
+d) Apply intervention and observe the outcome
+e) Update dataset
+In CBO, the optimization objective incorporates the causal effect of interventions:
+𝑥
+∗ = arg 𝑚𝑖𝑛𝑥∈𝑋 𝐸[𝑌|𝑑𝑜(𝑋 = 𝑥)] where 𝑑𝑜(𝑋 = 𝑥) represents setting variables 𝑋 to values 𝑥 through 
+intervention rather than mere observation. The surrogate model in CBO is built to approximate the 
+interventional distribution 𝑃(𝑌|𝑑𝑜(𝑋 = 𝑥)) rather than the observational distribution 𝑃(𝑌|𝑋 = 𝑥).
+CBO can use a linear regression approach for causal effect estimation:
+𝜏𝑗 = 𝐸[𝑌|𝑑𝑜(𝑋𝑗 = 𝑥𝑗)] − 𝐸[𝑌|𝑑𝑜(𝑋𝑗 = 𝑥𝑗
+′
+)] (4)
+Where 𝜏𝑗
+is the causal effect of variable 𝑋𝑗 on outcome 𝑌
+𝑑𝑜(𝑋𝑗 = 𝑥𝑗) represents the intervention of setting variable 𝑋𝑗
+to 𝑥𝑗
+𝐸[ ] denotes the expected value
+Implementation is via backdoor adjustment:
+𝜏𝑗 = ∫ 𝐸[𝑌|𝑋𝑗 = 𝑥𝑗
+, 𝑍 = 𝑧] . 𝑃(𝑍 = 𝑧)𝑑𝑧 − ∫ 𝐸[𝑌|𝑋𝑗 = 𝑥𝑗
+′
+, 𝑍 = 𝑧] . 𝑃(𝑍 = 𝑧)𝑑𝑧 (5)
+22
+𝑃(𝑍 = 𝑧) is the probability distribution of the confounding variables, and 𝑍 represents the set of 
+confounding variables. The integrals average over all possible values of the confounding variables. 
+The Gaussian process kernel [43] in CBO is a standard kernel with uniform length scales. The kernel 
+function that measures similarity between points 𝑥 and 𝑥
+′
+is defined as:
+𝑘(𝑥, 𝑥
+′
+) = 𝜎𝑓
+2
+exp (−
+1
+2
+∑
+(𝑥𝑗− 𝑥𝑗
+′
+)
+2
+𝑙
+𝑗
+2 )
+𝑑
+𝑗=1
+ (6)
+Where:
+𝜎𝑓
+2
+is the signal variance (amplitude parameter)
+𝑑 is the number of dimensions (variables)
+𝑥𝑗 𝑎𝑛𝑑 𝑥𝑗
+′
+are the 𝑗
+th components of vectors 𝑥 and 𝑥
+′
+𝑙𝑗 are the length scale parameters controlling how quickly correlation decreases with the gap between 
+different input points
+CBO selects interventions via a standard expected improvement acquisition function, uses simple 
+boundary constraints, and uses a standard Bayesian optimization loop in its optimization process.
+Standard Expected Improvement (EI) at point 𝑥 is given as:
+𝐸𝐼(𝑥) = 𝐸[max(𝑓(𝑥) − 𝑓(𝑥
++), 0)] and can be computed as 
+𝐸𝐼(𝑥) = (𝑓(𝑥
++) − 𝜇(𝑥))Φ(𝑍) + 𝜎(𝑥)𝜙(𝑍) (7)
+Where 𝑓(𝑥) is the true objective function and 𝑓(𝑥
++) is the current best observed value. μ(x) is the mean 
+prediction of the Gaussian process at 𝑥, and 𝜎(𝑥) is the standard deviation of the Gaussian process 
+prediction at 𝑥. ϕ(Z) represents the standard normal probability density function evaluated at Z.
+Key components of CBO are listed below:
+• Learning or identifying a causal structure. Some of the methods used include constraint-based 
+algorithms [44,45], score-based methods [46], intervention-based approaches [47], and expert 
+knowledge integration.
+23
+• Estimating causal effects. When all confounders are observed, an adjustment formula can be used, or 
+methods like double machine learning and causal forests can be used [48].
+• Modification of acquisition functions to account for causal information: causal expected improvement 
+[42], causal upper confidence bound [49], and knowledge gradient with causal information [50].
+CBO leverages the relationships between process variables to optimize EEC through interventions. This 
+approach models complex dependencies and captures the dynamics of processes, facilitating more informed 
+decision-making in the optimization task.
+Limitations and Open Challenges - despite its advantages, CBO faces several challenges:
+• Causal Discovery Uncertainty: Errors in causal structure learning can propagate to optimization
+• Computational Complexity: Integrating causal inference with BO increases computational demands
+• Limited Interventional Data: Many domains lack sufficient interventional data
+• High-dimensional Spaces: Scaling CBO to high-dimensional spaces remains challenging
+• Unobserved Confounding: Handling latent confounders in the optimization process. 
+There’s an opportunity to tune an application of CBO to address some of these challenges.

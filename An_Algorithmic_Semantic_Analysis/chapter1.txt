@@ -1,0 +1,165 @@
+1 
+CHAPTER 1: THE GLOBAL THREAT ENVIRONMENT AND THE CASE FOR CYBER 
+RESILIENCE 
+ 
+ 
+ 
+The world feels like a decidedly more dangerous place with each passing year. 
+Individuals, organizations, and nations face a wide array of challenges that threaten our mental 
+well-being, our ability to create and sustain, our capacity to cope with change and stress, and 
+even our way of life: climate change, threatened supply chains and food insecurity, increasing 
+political and sectarian violence, the specter of a major war or three between nuclear-armed 
+powers, the onslaught in cyberspace, and so many others. In this environment, survival depends 
+on our individual and collective ability to bounce back, to adapt, and to find new ways to cope 
+with our current challenges. Humanity has been doing this for millennia, though the needed pace 
+of adaptation seems to be accelerating as technology pushes the demands on our cognitive 
+systems toward machine speeds. Our ability to adapt and evolve has not quite kept pace, but in 
+lieu of that, humanity has a profound capacity for adaptation and resilience that helps us cope 
+with the accelerating changes around us. 
+The rise of the internet and the exponential increase in the complexity of the modern 
+world challenges our mental models for how we think the world works and how it ought to work. 
+The computing age and the recent explosion of artificial intelligence and machine leaning 
+capabilities strains the human capacity for understanding and coping with changes and threats to 
+our world. Evolution has not allowed us, yet, to cope with changes occurring at machine speed 
+and from avenues we cannot see, hear, taste, smell, or touch—the sensory capacity that helps us 
+make sense of our world. The cyber environment is tough to visualize, comprehend, and respond 
+to.  
+
+2 
+Cybersecurity generally began in response to the Morris worm in 1988, the first 
+documented case of what today we would term a cyberattack with malware, though it was 
+intended as a harmless tool to map the growing internet. Since then, both the industry and the 
+discipline of cybersecurity have grown tremendously in response to the increasing complexity of 
+computer networks, the growth of the internet, and the ability of people to exploit that 
+complexity to achieve sinister gains. The explosive growth of software in nearly every aspect of 
+human life has given cyber actors a great surface to attack, and a more challenging and complex 
+surface to defend. Hackers continue to do what they have always done: find and exploit 
+vulnerabilities in software that allow them to achieve their desired aims, whether financial, 
+political, or otherwise.  
+Defenders, on the other hand, must balance the need for information technology 
+resources and software to give an organization competitive advantage with the need to keep that 
+information and those systems protected from unauthorized access and undesired behaviors. As 
+the complexity of software and cybersecurity continues to grow, defenders are inundated with 
+new cybersecurity products designed to help them convert the deluge of data coming in at 
+machine speeds into actionable information that people can do something with at their speed.  
+But as the complexity of the systems that cyber defenders must manage increases, their 
+ability to fully understand the system of systems and its myriad behaviors decreases [1-5]. The 
+complex system of systems, or the complex sociotechnical system, has evolved to the point of no 
+longer being completely knowable by a single individual. That threshold has significant 
+ramifications for defense and both technical and sociotechnical system functioning. As software, 
+inclusive of cloud computing, becomes the central enabling technology that governs how we 
+work, how we deliver value, and how we run our lives, cyber defenders must design, integrate, 
+
+3 
+provision, and protect the systems that help us generate those outcomes. The increased number 
+of users, both internal and consumers, that interact with those systems has grown tremendously 
+over the last few decades. Current cybersecurity guidance treats people internal to the 
+organization, those accessing the systems to create value and do the work, as users to be trained 
+and monitored for appropriate system use and resistance to social engineering tactics. Each 
+customer becomes a potential threat vector for exploitation, whether through legitimate or 
+illegitimate access. News reports of data breaches and other cyber-attacks undermine our 
+capacity for trust in these systems.  
+The guidance available to the cybersecurity community provides the best practices to 
+secure systems, plan for and respond to incidents, manage user trust and access, and myriad other 
+topics. However, that guidance does not extend into the sociotechnical domain to help 
+organizations understand how they should be organized to do the work or minimize 
+vulnerabilities. In 1968, Melvin Conway applied this concept in his classic paper “How do 
+committees invent?” The paper offered the often-quoted law today, known as Conway’s Law: “to 
+the extent that an organization is not completely flexible in its communication structure, that 
+organization will stamp out an image of itself in every design in produces” [1]. While this 
+statement may seem pithy, it reveals a far greater truth about sociotechnical design and cyber 
+vulnerabilities. The interfaces between which components, systems, and organizations 
+communicate often become the entry point for hackers to try to gain control of the system. This 
+includes items not developed within the organization, such as leveraging commercial software 
+and open source software. Industry relates this discipline to mapping the attack surface, but the 
+methods for doing so make it difficult to capture the complexity of sociotechnical systems 
+design, let alone keep up with it as the system evolves daily, either intentionally or 
+
+4 
+unintentionally. Adversaries in cyberspace understand this implicitly and continually probe the 
+seams for entry points, from which they can escalate privileges or move laterally through the 
+system and begin conducting reconnaissance or attacks on the target, and each adversary’s 
+motives are different.  
+ 
+Security, Robustness, and Resilience 
+ 
+The global cyber threat environment challenges organizations, especially those in critical 
+infrastructure sectors, to operate without setbacks. Complicating this challenge is the 
+cybersecurity industry itself. While well-intentioned, the cybersecurity industry today uses 
+language in marketing and business development that muddies the water further. Often 
+conflating terms such as security, resilience, reliability, and robustness, the misuse of those terms 
+may lead organizations to believe they are more secure, reliable, or resilient than they are. 
+Definitions matter, and a firm foundation is needed to understand how terms such as security, 
+resilience, reliability, robustness, and many others, overlap and support each other. The academic 
+literature on resilience generally fails to agree on a single definition for resilience broadly, let 
+alone cyber resilience [2-9]. To be fair, the terms are related, but they are not synonymous.  
+ 
+Security, robustness, reliability, and resilience work in conjunction with each other to 
+describe features and phases in a complex adaptive system. From a cyber perspective, security 
+involves the actions necessary to prevent a cyberattack in the first place. Robustness is the ability 
+of the system to continue operating at prescribed levels while under attack. Reliability is another 
+facet of robustness in ensuring that the system can degrade gracefully or continue operating for 
+the required durations without failure. Resilience is generally the ability to adapt in the aftermath 
+
+5 
+of an attack. Resilience, as will be described in Chapter 3, is thus an emergent property of a 
+complex adaptive system. The technical systems in a cyberattack—those operating without the 
+human component—will not develop or exhibit emergent behaviors in response. For example, a 
+firewall can only block signals as defined by its rule set. But a human operating a firewall 
+becomes capable of emergent behaviors and can respond to a successful penetration by updating 
+the rule set and making the firewall harder to penetrate in the next attack.  
+ 
+The cybersecurity industry produces standards, frameworks, strategies, and other guiding 
+documents to help organizations, communities, sectors, and other ecosystems improve their 
+cyber readiness. These documents have begun to address resilience, but, as this research seeks to 
+understand, it remains to be seen if the usage of resilience in the documents actually fits with 
+what resilience is and encodes the features of resilience into the document to produce resilient 
+outcomes for the organization using it.  
+ 
+ 
+Research Questions and Expected Contributions 
+ 
+This research seeks to determine if existing literature, frameworks, standards, or other 
+guidance use resilience and its concepts properly as the interdisciplinary community understands 
+it. This includes an in-depth discussion of resilience as an interdisciplinary concept and seeks to 
+determine if the existing literature conflates resilience with other terms. Conflation of 
+terminology would make it more challenging for individuals and organizations to understand 
+how to create the conditions for resilience to emerge in their organization and the broader 
+ecosystem surrounding it. The key research questions and associated hypothesis are briefly 
+
+6 
+presented below. Chapter 2 provides a detailed discussion of the research questions, hypotheses, 
+falsification criteria, and the research design to evaluate these hypotheses.  
+ 
+Research Questions and Hypotheses 
+Research Question 1 (RQ1): Does a single strategy or guidance document exist to provide 
+organizations at multiple levels of society with support for improving cyber resilience?  
+Hypothesis 1 (H1): If no single document exists that addresses most or all aspects of 
+resilience, then organizations will not have sufficient guidance to develop complete strategies to 
+improve cyber resilience. Put plainly, does a document exist today that satisfies RQ1? The 
+foundational assumption for this work is that this document does not exist.  
+ 
+Hypothesis 2 (H2): If one or more documents exist that address some aspects of 
+resilience, then they can be leveraged and expanded to create a single document for organizations 
+to improve cyber resilience.    
+Research Question 2 (RQ2): How do existing documents address resilience?  
+Hypothesis 3 (H3): If the existing documents incorporate most or all aspects of resilience, 
+then there should be significant overlap with the interdisciplinary research and concepts on 
+resilience.    
+Hypothesis 4 (H4): If the existing documents focus primarily on the technical and 
+sociotechnical aspects of cybersecurity, then the documents will lack sufficient guidance on most 
+or all aspects of resilience.  
+ 
+
+7 
+Expected Contributions 
+ 
+This research will produce the following contributions. First, a classification framework 
+from which future frameworks or guiding documents can be assessed for features of resilience—
+cyber or otherwise. Second, an assessment of the existing frameworks and the extent to which 
+the framework addresses some or all aspects of resilience as the interdisciplinary community 
+understands it. Third, it will identify the gaps in the frameworks, or combined set of frameworks, 
+to show where the cybersecurity community can focus future efforts on developing guidance to 
+support all aspects of resilience, thus giving organizations the ability to develop strategies to 
+improve cyber resilience.  
+ 

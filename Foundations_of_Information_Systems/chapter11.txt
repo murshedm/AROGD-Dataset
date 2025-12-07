@@ -1,0 +1,1723 @@
+Figure 11.1 By utilizing digital innovation to become a smart city, Dubai, in the United Arab Emirates, has been improving public
+safety, energy efficiency, sustainability, and overall quality of life. (credit: modification of work “High High ... High Enough to Dream”
+by Maher Najm/Flickr, Public Domain)
+Chapter Outline
+11.1 The Importance of Global Information Systems
+11.2 Global Information Systems Business Models, Logistics, and Risk Management
+11.3 Culture in Information Systems and Global Information Systems Teams
+Introduction
+With digital innovation and advancements in global information systems, the world has become more tech
+savvy and interconnected. An example is the rise of smart cities, such as Dubai in the United Arab Emirates. In
+partnership with government agencies and private-sector organizations, the Digital Dubai Office has over 130
+initiatives intended to digitalize daily life in Dubai, making the city a better place to live as it becomes more
+efficient and competitive in the world marketplace. This even includes an initiative to make Dubai the happiest
+city on earth.1 Through this initiative, the city discovers what Dubai citizens need and want to be happy and
+then uses technology to meet those needs. As a result, there have been robust changes in the city’s housing,
+transportation system, and health-care services to promote Dubai citizens’ well-being.
+11.1 The Importance of Global Information Systems
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Explain the fundamentals and importance of global information systems
+•
+Distinguish between global information systems and traditional information systems
+•
+Describe the infrastructure of global information systems
+The business world is a network of interconnected companies operating across various continents linked by
+technology. This technology supports communication and collaboration with other businesses and
+Global Information Systems
+11
+1
+“Happiness Agenda,” Digital Dubai, accessed January 26, 2025, https://www.digitaldubai.ae/initiatives/happiness-agenda
+
+geographically dispersed teams. The smooth interchange of information is critical to global business
+operations. How is this accomplished? At the center of global information interchange lies a complex system
+known as a global information system, an intricate network of hardware, software, data, and
+telecommunications infrastructure that enables information collection, storage, management, processing,
+analysis, and dissemination worldwide. Global information systems are the backbone of international
+operations, allowing organizations to exchange information, communicate effectively, and collaborate. Global
+information systems enable companies to overcome geographical barriers and tap into new opportunities for
+growth and innovation through knowledge sharing.
+As Figure 11.2 shows, a global information system manages and analyzes information across countries and
+regions to support worldwide operations and decision-making. You can think of a global information system as
+an information hub—similar to a library—collecting, storing, managing, processing, analyzing, and
+disseminating information. The global information system is continually updated, providing real-time insights
+across geographic boundaries.
+Figure 11.2 The elements that make up a global information system are the methods, procedures, hardware, software, people, and
+data to process and share global data effectively, which differentiate these systems from more local information systems.
+(attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+A good example of a global information system is Tesla’s use of over-the-air (OTA) software updates. This
+system lets Tesla update its cars remotely, thereby improving performance, adding new features, and fixing
+problems without customers needing to go to a service center. The strategic impact of OTA updates is
+significant: they keep Tesla’s cars technologically advanced and continuously improve the customer
+experience, providing a key competitive advantage in the automotive industry. This system reduces costs
+associated with physical recalls and enhances the long-term value of Tesla vehicles, demonstrating how a
+global information system can facilitate cross-border collaboration and support sustainable growth in a
+complex global marketplace.2
+2
+Katie Rees, "What Are Tesla's Over-the-Air Updates?," MakeUseOf, October 21, 2023, https://www.makeuseof.com/what-are-tesla-
+over-the-air-updates/
+406
+11 • Global Information Systems
+Access for free at openstax.org
+
+You may come across a similar term, “geographic information system,” often abbreviated as “GIS,” but this
+type of system focuses on managing spatial or geographic data, including maps, satellite imagery, and
+location-based information. Geographic information systems can analyze terrain data for urban planning or
+track wildlife migration patterns, or support emergency response efforts. For example, during Hurricane
+Helene in 2024, emergency teams used geographic information systems to analyze flood risk zones, prioritize
+evacuations, and identify isolated communities.3 This real-time data helped responders prioritize evacuation
+orders and deploy rescue resources. There are many important applications of geographic information
+systems as a system themselves or as part of a global information system. A geographic information system
+can be a component of a global information system, but the latter may also include enterprise resource
+planning systems, global supply chain management systems, and customer relationship management
+systems that manage global operations. Many examples related to geographic information systems reinforce
+concepts that involve solving local problems, but the solutions can be applied to larger, more complex
+problems around the world.
+Global information systems play a different role. While global information systems may still include geographic
+data, the main goal is to help individuals, organizations, and governments connect and collaborate across the
+globe. An example of a global information system that many of us experience is Google Ads. When you search
+for a product, such as running shoes, on Google, you might notice ads for different brands appearing at the
+top of the search results. These ads are targeted specifically to you using data from your search history,
+location, and online behavior, whether you’re in New York, Tokyo, or Paris. Google Ads allows businesses to
+reach potential customers like you across the globe with personalized marketing, increasing the chances that
+their ads are relevant, driving sales, and maximizing their return on investment.
+The Role of Global Information Systems
+Global information systems are essential components of modern society and play a critical role by enabling
+organizations to coordinate operational activities on a global scale. For instance, Netflix uses a global
+information system that leverages big data and machine learning algorithms to recommend movies and
+shows to users across different countries, based on their viewing history, preferences, and behaviors.4
+One use of global information systems is to track the movement of raw materials across various continents,
+predict the path of a hurricane, or help you find the nearest shipping center. These systems are woven into
+society, shaping everything from global business efficiency to disaster response effectiveness. They also
+accelerate international expansion by providing organizations with the necessary infrastructure to enter new
+markets, adapt to diverse regulatory environments, and compete globally. For multinational corporations,
+global information systems streamline processes such as supply chain management, allowing for seamless
+coordination of production, distribution, and logistics operations across borders. In addition, global
+information systems support the standardization of business practices and workflows, ensuring consistency
+and efficiency across global operations. Global information systems are useful for breaking geographic
+barriers, facilitating global connectivity, and fostering global citizenship.
+Global information systems can also allow companies to overcome geographical barriers by providing a
+platform for sharing knowledge and resources regardless of physical distance. This opens new opportunities
+by tapping into global talent—skilled professionals from around the world—which allows for collaboration,
+leveraging diverse skills, and exploring new markets.
+A global information system enables individuals, organizations, and governments to connect and collaborate
+across vast distances. Through email, videoconferencing, social media, and other digital platforms, global
+information systems have transformed how people communicate and share information, transcending local
+barriers of time and location. For example, a medical team in Montreal can consult with a specialist about a
+3
+“Navigating Devastation: GIS Aids Hurricane Helene Response,” Esri ArcNews, Winter 2025, https://www.esri.com/about/
+newsroom/arcnews/navigating-devastation-gis-aids-hurricane-helene-response/
+4
+Miriam Chandi, "How Does Netflix Use Technology to Improve Their Business?," Start Motion Media, September 23, 2024,
+https://www.startmotionmedia.com/how-does-netflix-use-technology-to-improve-their-business/
+11.1 • The Importance of Global Information Systems
+407
+
+patient located in a remote Nordic village using videoconferencing software.
+Another benefit of a global information system is that it can promote global citizenship by increasing
+awareness of international issues and facilitating cross-cultural understanding. This is accomplished by
+providing access to information, educational resources, digital tools, online forums, or interactive platforms
+where individuals, organizations, and communities can actively engage in decision-making processes, share
+knowledge, collaborate on projects, and contribute to discussions.
+In addition to international connections, global information systems can grow businesses by nurturing
+innovation and creativity, enhancing operational efficiency, and supporting informed decision making. Global
+information systems encourage innovation and creativity within organizations. Global teams can collaborate
+on projects, share ideas, and leverage diverse perspectives as they develop innovative solutions to complex
+problems. For example, cross-continental meetings where teams work together in real time to tackle specific
+challenges and prototype new ideas allow employees the opportunity to contribute ideas and refine concepts
+collaboratively.
+Global information systems can also support informed decision-making: In crises like natural disasters or
+epidemics decision-makers need accurate, timely data to respond effectively. A global information system
+integrates and visualizes data from sources like weather patterns, population density, and resource availability.
+By providing clear, actionable insights, global information systems help decision-makers improve business
+operations, policy development, and strategic planning.
+Finally, global information systems streamline business processes, improve workflow efficiency, and optimize
+resource allocation. Logistics companies—like FedEx, UPS, and DHL—can optimize delivery routes based on
+traffic conditions displayed through systems, saving time and fuel, leading to cost savings and improved
+customer service (Figure 11.3). Utility companies can pinpoint the source of outages by analyzing real-time
+data on power grids and infrastructure, leading to faster repairs and improved service.
+Figure 11.3 A global information system allows a delivery business, like FedEx, to optimize its delivery routes and meet its customers’
+needs. (credit: modification of work “MEM FedeEX flight line” by Steve Knight/Flickr, CC BY 2.0)
+408
+11 • Global Information Systems
+Access for free at openstax.org
+
+Let’s look at global information systems in action by looking at Nike. Nike uses global information systems to
+manage its extensive global supply chain, which spans from factories in Vietnam to stores worldwide. Global
+information systems enable Nike to track raw materials, streamline production, and optimize delivery routes,
+ensuring timely and cost-effective operations. Beyond logistics, global information systems help Nike identify
+new market opportunities, such as expanding into South America, by analyzing data to tailor marketing
+strategies and product offerings. Global information systems help Nike manage inventory and track customer
+preferences across various regions. This integration supports Nike’s e-commerce platform by providing
+accurate inventory levels and efficient order fulfillment globally. Additionally, global information system data
+allow Nike to tailor online marketing strategies and product recommendations based on regional trends and
+consumer behavior, ensuring a personalized shopping experience and effective market expansion.5
+Another example is the Real-Time Air Quality Index Visual Map that provides real-time information about the
+air quality and air pollution in different regions of the world.6 The map helps those traveling to make informed
+decisions concerning their destinations, especially if they have any form of respiratory disease.
+ETHICS IN IS
+Global Information Systems for Humanitarian Efforts
+The United Nations (UN) uses global information systems to boost its humanitarian efforts around the
+world. One notable example is during the Syrian refugee crisis.7 As millions of Syrians fled their homes to
+escape conflict, the UN relied on geographic information systems to coordinate aid distribution, track
+refugee movements, and plan the establishment of refugee camps. These allowed UN agencies and
+humanitarian organizations to analyze satellite imagery to identify suitable locations for refugee camps,
+considering factors such as accessibility, terrain, and proximity to essential services like water sources and
+medical facilities. Working in conjunction, global information systems helped with the integration of various
+datasets, encompassing not only geographic data but also nonspatial information from diverse sources,
+such as demographic data, epidemiological data, health-care infrastructure, and disease transmission
+patterns from multiple regions worldwide. This data-driven approach helped foster international
+collaboration and cross-border coordination between UN agencies and other humanitarian organizations to
+optimize the placement of camps to ensure efficient delivery of aid and support to displaced populations.
+How Global Information Systems Differ from Traditional Information Systems
+Consider a logistics company with warehouses scattered across the globe. A traditional information system
+might track inventory levels within each warehouse but wouldn’t be able to show the bigger picture—the real-
+time location of shipments, customer preferences based on location, or potential bottlenecks in the supply
+chain. This is where a global information system comes into play.
+Global information systems are designed to manage and handle the complexities of global operations. Unlike
+traditional information systems, which are typically limited to a specific geographic location or organizational
+boundary, global information systems excel at handling and managing data regardless of geographic location.
+Characteristics that set a global information system apart from a traditional information system (Figure 11.4)
+include its global reach, the types of data it works with, and its integration with other systems.
+5
+CleanChain Editorial Team, "How Does Nike’s Supply Chain Work?," ADEC Innovations, May 12, 2020, https://www.adec-
+innovations.com/blogs/how-does-nikes-supply-chain-work/
+6
+“Air Pollution in World: Real-Time Air Quality Index Visual Map,” The World Air Quality Index Project, accessed January 26, 2025,
+https://aqicn.org/map/world/
+7
+Eyad Ghattasheh, “Managing Syrian Refugee Camps Using ArcGIS,” Esri ArcUser, Fall 2017, https://www.esri.com/about/
+newsroom/arcuser/managing-syrian-refugee-camps-using-arcgis
+11.1 • The Importance of Global Information Systems
+409
+
+Figure 11.4 A GIS and an IS differ in their location reach, data structure, and integration capabilities. (attribution: Copyright Rice
+University, OpenStax, under CC BY 4.0 license)
+One of the key differences between a global information system and a traditional information system is their
+scope of operations. While a traditional information system is focused on supporting the internal operations of
+a single organization or a specific geographic region, a global information system is designed to facilitate
+communication, collaboration, and decision-making across multiple organizations and geographic boundaries.
+This allows users to see the entire operation across the globe, from bustling city centers to remote rural areas.
+In addition, a global information system is equipped with advanced features such as multilingual support,
+currency conversion, and internationalization capabilities to accommodate the diverse needs of organizations
+worldwide. A traditional information system is typically designed for internal data management within a single
+organization or a specific geographic region. An information system might track sales figures for all of a
+company’s stores, but it wouldn’t inherently know each store’s physical location or how sales figures relate to
+other factors like demographics or traffic patterns.
+While both traditional information systems and global information systems manage data, they handle them in
+a fundamentally different way. A traditional information system typically deals with structured data, such as
+sales transactions or inventory levels, which are relatively straightforward to manage; they are organized and
+categorized in a predefined format. Imagine a customer database that includes columns for a customer’s
+name, address, phone number, and purchase history. Each piece of data occupies a specific slot, making it easy
+for the information system to store, retrieve, and analyze. However, a traditional information system struggles
+with the complexity of geographic data that come in a variety of formats. A global information system often
+deals with unstructured data, which do not have a predefined organization, or semi-structured data, which are
+somewhat organized but lack the fixed schema of a traditional database. Examples of unstructured and semi-
+structured data include social media feeds, sensor data (information collected by a device that detects and
+responds to a physical input, such as temperature), and satellite imagery. These types of data require more
+sophisticated processing techniques, such as data mining, natural language processing, and machine learning,
+to extract meaningful insights. Consider a utility company managing a network of power lines. A traditional
+information system might struggle to analyze outages based on location. However, since a global information
+system has the ability to model the network’s spatial layout, the company can pinpoint the outage zones and
+identify affected customers much faster. This specialized data structure empowers a global information system
+to unlock the full potential of location-based data for analysis and visualization.
+Finally, a global information system is characterized by its ability to integrate and analyze data from multiple
+410
+11 • Global Information Systems
+Access for free at openstax.org
+
+sources, including internal systems, external databases, and the internet, enabling a more complete picture to
+emerge. Sales trends can be analyzed alongside weather patterns, or delivery routes can be optimized based
+on traffic congestion in a specific area. This integration capability is essential for supporting global operations
+as it allows organizations to access and combine data from different sources to gain a comprehensive view of
+their operations and make informed decisions.
+Facilitating Communication and Collaboration with Global Information Systems
+A global information system facilitates communication and collaboration across different locations by
+transcending the barriers of distance, time zones, cultural differences, and language barriers. This
+transformative power of global information system empowers organizations to operate seamlessly on a global
+scale, a feat that was once considered nearly impossible.
+Integration of Operations
+A global information system enables organizations to integrate their operations across locations, facilitating
+centralized data management, streamlined processes, and operational consistency. For instance, a
+multinational corporation like Toyota leverages global information systems to integrate its manufacturing,
+distribution, and sales operations across the globe.8 This integration is essential for achieving economies of
+scale, reducing duplication of efforts, and optimizing resource utilization, which is the efficient and effective
+allocation and management of resources such as time, money, materials, or personnel to achieve desired
+objectives or outcomes. By harnessing global information system capabilities, Toyota is consistent in product
+quality and operational efficiency across its worldwide operations. This is imperative for business
+competitiveness and customer satisfaction, as well as for driving innovation and organizational agility.
+Real-Time Communication
+A global information system provides real-time communication tools such as email, instant messaging, and
+videoconferencing, allowing employees in different locations to collaborate and communicate effectively.
+Consider SpaceX’s international project team. Team members must communicate effectively, address technical
+challenges promptly, and ensure project milestones are met on time.9 Global information system-enabled
+videoconferencing and instant messaging tools allow real-time communication for coordinating activities and
+resolving issues quickly, enhancing project success. An added benefit is that this technology can help foster a
+sense of teamwork among geographically dispersed teams despite being separated by thousands of miles.
+Access to Global Information
+A global information system provides a wealth of global information including market trends, competitor
+analysis, regulatory requirements, and cultural insights. This information is essential for making informed
+decisions, identifying new opportunities, and mitigating risks associated with global operations.
+Standardization of Processes
+A global information system enables organizations to standardize processes and procedures across different
+locations, ensuring consistency in quality, compliance, and performance. This standardization is essential for
+maintaining brand reputation, meeting customer expectations, and achieving operational excellence. For
+instance, multinational banks leverage global information systems to standardize compliance procedures
+across branches worldwide, ensuring regulatory compliance and reducing operational risks.
+8
+Hassan Ali, "Toyota’s JIT and AI: A Powerful Combination for Supply Chain Optimization," LinkedIn, October 3, 2024,
+https://www.linkedin.com/pulse/toyotas-jit-ai-powerful-combination-supply-chain-optimization-ali-knoie/
+9
+Maria Thomas, "How SpaceX is Transforming Project Management Practices," MPUG, https://mpug.com/how-spacex-
+transforming-project-management-practices/
+11.1 • The Importance of Global Information Systems
+411
+
+Cost Reduction and Customer Satisfaction
+A global information system can help reduce costs associated with global operations by enabling
+organizations to optimize their supply chain, reduce inventory levels, and minimize travel expenses. FedEx, for
+example, uses a global information system to reduce operating costs and enhance profitability while
+maintaining service quality. By analyzing transportation routes and warehouse locations, minimizing shipping
+distances, consolidating inventory, and optimizing resource allocation, FedEx can deliver expediently to its
+customers, and this customer-centric approach is essential for building loyalty and driving repeat business.10
+While a global information system can lead to cost reductions for organizations with global operations, it is
+important to recognize that there may be higher costs initially due to the complexity of the system’s size and
+its scope of connectedness. While global information systems offer cost-saving opportunities in future years,
+organizations must carefully manage these complexities to ensure overall financial sustainability.
+Improving Decision-Making Processes with Global Information Systems
+Whether strategic, operational, or tactical, decisions influence every aspect of an organization’s performance,
+from resource allocation to market positioning. In today's dynamic and competitive business environment, the
+ability to make timely and informed decisions is essential for organizations to thrive and adapt to change. A
+global information system facilitates comprehensive analysis, providing decision-makers with a holistic view of
+the factors influencing their operations. For example, a retail chain may use a global information system to
+integrate sales data with demographic information, helping them make informed decisions about where to
+expand and how to increase their presence in the global market.
+Visualization of Spatial Data
+Visual representation is a powerful tool for understanding complex data and communicating insights
+effectively (see 8.2 Foundations of Business Intelligence and Analytics). Within a global information system, a
+geographic information system enables organizations to visualize spatial data through interactive maps,
+charts, and dashboards. The term spatial analysis refers to the process of examining patterns, trends, and
+relationships within geographic data to gain insights and make informed decisions about spatial phenomena.
+By using spatial analysis, decision-makers gain valuable insights, visualize complex information, and develop
+informed strategies. Imagine you have a map of your neighborhood with all the places where people have
+complained about noisy pet dogs. Spatial analysis would help you see if the complaints are clustered in certain
+areas or spread out. This way, you could find out if there’s a pattern, like if noisy dogs are more common near
+certain types of homes or parks, helping you decide where to focus your efforts to address the issue. Another
+example would be a city planning department using geographic information system maps to visualize
+population density, land-use patterns, and transportation networks to inform urban development strategies.
+Scenario Models and Predictive Analysis
+Anticipating future trends and outcomes is essential for proactive decision-making. A geographic information
+system allows organizations to assess the potential impacts of various strategies and courses of action by
+conducting predictive analysis, which is the use of data, specifically statistical algorithms, to help
+organizations identify patterns and make predictions that will enhance the operational results (see more about
+predictive analytics in 8.2 Foundations of Business Intelligence and Analytics). By simulating various scenarios
+and analyzing their potential outcomes, decision-makers can evaluate risks, identify opportunities, and
+develop robust strategies to achieve their goals. Utility companies leverage GIS-based predictive analysis to
+forecast electricity demand and optimize infrastructure investments, ensuring efficient resource allocation and
+strategic planning.
+10
+Jacquelyn Haas, Jeff McLeod, Rick Dezemplen, and Rodney Conger, "Using GIS in Strategic Planning and Execution at FedEx
+Express" (paper presented at ESRI 2010 International User Conference, Paper: 1520), https://proceedings.esri.com/library/userconf/
+proc10/uc/papers/pap_1520.pdf
+412
+11 • Global Information Systems
+Access for free at openstax.org
+
+Geographic Context and Spatial Relationships
+Understanding geographic context, or considering the impact of location on operations, is critical for making
+informed decisions, especially in urban planning, natural resource management, and emergency response.
+For instance, a forestry company may use a geographic information system to assess the location and
+distribution of timber resources, environmental constraints, and market demand. By incorporating geographic
+context into decision-making processes, organizations can mitigate risks, optimize resource allocation, and
+maximize opportunities for success.
+FUTURE TECHNOLOGY
+Geographic Information Systems for Emergency Response Planning
+The city of Los Angeles stands out for its innovative use of geographic information system technology in
+bolstering its emergency response planning processes, leveraging its functionalities at each stage with
+precision.11 The city not only optimizes local emergency response efforts but connects to global resources,
+such as best practices and disaster models. For instance, lessons from other earthquake-prone cities like
+Tokyo inform how Los Angeles prepares its evacuation routes and resource allocations.
+A geographic information system integrates a plethora of datasets from various sources, encompassing
+population demographics, infrastructure locations, and emergency response resources into a centralized
+platform. This consolidation provides decision-makers with a holistic view of the city’s physical features (like
+roads, buildings, hospitals, and fire stations) as well as demographic data (population density, vulnerable
+communities) and infrastructure elements (utilities, communication network)—in other words, the city’s
+landscape—facilitating cross-disciplinary analysis and informed resource allocation to identify and address
+gaps in emergency response readiness.
+By visualizing critical infrastructure data such as hospitals, fire stations, and evacuation routes, alongside
+demographic data, city officials communicate emergency plans to the public and coordinate response
+efforts across various agencies. A geographic information system enables detailed scenario planning by
+simulating complex disaster scenarios such as earthquakes and wildfires across the city’s vast and varied
+terrain. Decision-makers evaluate the potential impacts of each scenario, leveraging spatial data to assess
+resource requirements and communicate collaboratively. Notably, the city makes much of its mapping data
+available to residents of the LA area, and facilitates neighborhood use of its geographic data.
+The result is comprehensive contingency plans that are tailored to mitigate risks and ensure a coordinated
+response. Through geographic information system platforms, stakeholders from different departments and
+agencies throughout the city can share information, exchange insights, and coordinate efforts. A
+geographic information system enables communication with international agencies when necessary,
+extending its reach into a global information system and allowing for the integration of global best
+practices and resources into local emergency response strategies.
+Global Information System Infrastructure
+A global information system infrastructure refers to the foundational framework of hardware, software,
+data storage, network, and cloud-based services that support global information system operations within an
+organization. It serves as the backbone for managing, analyzing, and visualizing spatial data to support
+decision-making, operational efficiency, and strategic planning on a global scale. This intricate network, much
+like the nervous system of a living organism, serves as the conduit for the flow of information that empowers
+global communication, economic exchange, and organizational advancement. A robust global information
+11
+Ron Galperin, “Get Ready, Stay Prepared: A Guide to Emergency Planning in the City of Los Angeles,” L.A. Controller Ron Galperin,
+accessed January 7, 2025, https://storymaps.arcgis.com/stories/d32f5d0d03d64964be022b0de6c2b290
+11.1 • The Importance of Global Information Systems
+413
+
+system infrastructure ensures reliability, scalability, and performance, allowing organizations to derive
+maximum value from collective information.
+The global information system infrastructure is built on the interconnection of local, national, and
+international communication networks. This includes infrastructure like fiber optic cables, satellites, and
+communication towers that transmit data and connect hardware devices, software applications, and data
+storage systems across the globe. Reliable network infrastructure supports data sharing, communication, and
+collaboration within global information system environments. The network infrastructure encompasses
+network components such as routers, switches, firewalls, and wireless access points that facilitate data
+exchange and collaboration. Common network architectures include client-server, peer-to-peer, and cloud-
+based architectures.
+Cloud computing services are accessible anywhere in the world with an internet connection, empowering
+employees, partners, and clients to connect and collaborate in real time. Cloud providers work hard to ensure
+availability of their services, meaning they are operational nearly 24/7, further enhancing communication
+reliability. Storage area networks are high-speed networks specifically designed to connect storage devices to
+servers. They allow for faster data access compared to traditional storage solutions.
+Communication protocols are an established sets of rules that govern how devices communicate within the
+global information system infrastructure. They define how data are formatted, transmitted, and received,
+ensuring compatibility between different systems and software applications. Common protocols include TCP/
+IP (Transmission Control Protocol/Internet Protocol) and HTTP (hypertext transfer protocol) and FTP (File
+Transfer Protocol).
+An interoperability standard is a guideline, protocol, or specification that enables different systems,
+technologies, or platforms to communicate, exchange data, or work together seamlessly. Security measures,
+such as encryption and access controls, safeguard global information system infrastructure from unauthorized
+access and breaches. Scalability and flexibility allow the systems to adapt to evolving needs and technological
+advancements, while maintenance and support ensure optimal performance through updates and
+troubleshooting.
+ETHICS IN IS
+Beyond the Essentials: Security and Safeguarding Data
+Ethics in a global information system focuses on security and privacy. Interoperability standards ensure that
+different systems can work together effectively, protecting user privacy and maintaining trust. These
+standards provide a common framework for system compatibility and data exchange. Security measures,
+such as encryption and access controls, are vital for preventing unauthorized access and protecting data
+integrity. Together, these practices ensure that data are handled responsibly and ethically. Public health
+agencies often rely on global information system infrastructure to help track and analyze the spread of
+infectious diseases. Patient locations and demographics of reported cases allow for targeted interventions
+and resource allocation.
+Security measures like encryption and access controls are critical to protect data and ensure public trust.
+Encryption scrambles data into an unreadable format, making it virtually impossible for unauthorized users
+to access confidential information even if intercepted. Access controls determine who can view, edit, or
+delete specific data within the system’s infrastructure. These controls can be implemented through user
+authentication and role-based access permissions. It’s important to note that different organizations
+maintain their own datasets, and protocols must account for this diversity in data management and
+security.
+414
+11 • Global Information Systems
+Access for free at openstax.org
+
+Hardware
+The global information system infrastructure also relies on a variety of hardware and software components to
+function. Hardware includes computers, workstations, routers, and peripherals, such as cables, printers, and
+scanners, and encompasses servers, storage devices, and end-user devices necessary for processing and
+storing data. High-performance servers for data processing and storage are essential for handling the large
+volumes of data exchanged in global operations. These devices handle the computational demands of
+operations, enabling faster data processing, storage, and retrieval and enhancing the overall efficiency and
+performance of workflows. Compared to traditional IT hardware, global information systems need more
+specialized equipment. While standard servers and workstations are fine for general business tasks, global
+information system hardware is designed for high-performance computing and large data storage. For
+example, global information systems often uses fiber optic cables, which offer faster data transfer and less
+interference than traditional copper cables.
+Software
+Software components include operating systems, communication protocols, and applications and tools
+needed to create, edit, analyze, and share data effectively. A global database is akin to a vast library containing
+information from around the globe. For example, a global database might keep track of environmental data,
+like deforestation and pollution, which people across the world can use to make decisions. It serves as a
+central repository that can be accessed and analyzed on a global scale. Robust data storage solutions enable
+organizations to store and retrieve data efficiently, supporting real-time analysis, decision-making, and
+collaboration.
+Global information system-specific applications—such as those for supply chain management and customer
+relationship management—allow organizations to navigate complexities, optimize processes, and deliver
+exceptional value across their supply chains, customer relationships, and strategic decision-making endeavors.
+A company’s supply chain management (SCM) software helps them manage goods and services from the point
+of origin to the point of consumption. It includes tools for planning, sourcing, production, inventory
+management, and logistics. This software provides real-time visibility into the supply chain, enabling
+organizations strategize effectively. For example, Starbucks uses a global information system to optimize its
+global coffee supply chain. By mapping coffee farms, tracking product quality, and assessing climate change
+risks, Starbucks ensures a reliable and sustainable supply of coffee beans. This technology helps the company
+improve efficiency, reduce costs, and support sustainable practices.12
+A customer relationship management (CRM) software system encompasses the management of customer
+interactions throughout their life cycle, aiming to enhance satisfaction and foster loyalty. A CRM merges data
+from disparate sources like sales, marketing, and customer service into a centralized database. This
+integration empowers organizations to delve into customer behavior, tailor marketing initiatives, and refine
+service delivery. The benefits include heightened customer satisfaction and loyalty, increased retention rates,
+expanded cross-selling and upselling prospects, and enriched insights facilitating informed decision-making.
+Designing and Implementing a Global Information System Infrastructure
+Building a robust global information system infrastructure requires thorough planning and execution to align
+with an organization’s strategic goals and operational needs. Figure 11.5 shows the steps for designing and
+implementing a global GIS infrastructure.
+12
+"Starbucks Supply Chain Management: Optimizing Global Coffee Distribution Through Risk Mitigation and Sustainable Practices,"
+SFK Inc., SKK Marine, SFK SecCon, July 19, 2024, https://sfkcorp.com/starbucks-supply-chain-management-optimizing-global-coffee-
+distribution-through-risk-mitigation-and-sustainable-practices/
+11.1 • The Importance of Global Information Systems
+415
+
+Figure 11.5 Most companies follow these nine basic steps when designing a global information system infrastructure. (attribution:
+Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Step 1: Understanding the Organization’s Needs
+Start by conducting a thorough assessment of the organization’s specific requirements, considering factors
+such as size, geographic distribution, operational scope, and information needs. Decision-makers at Toyota,
+for example, would consider the company’s manufacturing, distribution, and sales operations across
+continents, with the goal of improving economies of scale and operational efficiency.
+Step 2: Defining Clear Objectives
+Establish SMART (specific, measurable, achievable, relevant, and time-bound) objectives for the global
+information system infrastructure that contribute to the organization’s business goals. For instance, SpaceX
+could aim to increase collaboration efficiency among international project teams by 30 percent within six
+months, with an anticipated result of a 15 percent reduction in spacecraft development time by the end of the
+fiscal year.
+Step 3: Assessing Technology Needs
+Conduct a comprehensive needs assessment of technology requirements A needs assessment is the gathering
+and analyzing of data to identify and evaluate the current state, areas for improvement, and interventions
+needed to get to a more improved state It should include the following:
+•
+hardware and software needs
+•
+network infrastructure and security considerations
+•
+scalability and interoperability with existing systems
+•
+ability to handle future growth in data volume and users
+For example, in a needs assessment, consumer goods company Procter & Gamble would consider the
+technology requirements for accessing market trends and competitor analysis data in new markets. They
+would evaluate the necessary hardware and software to support data analysis, ensure their network
+infrastructure can securely handle the influx of data and users, and verify that their systems can scale and
+integrate with existing platforms. This needs assessment will help to tailor marketing strategies and optimize
+product portfolios.
+Step 4: Selecting the Right Technologies
+Based on the needs assessment, choose the most suitable technologies with cost, reliability, performance, and
+vendor support in mind. Explore options like cloud services, enterprise resource planning (ERP) systems,
+416
+11 • Global Information Systems
+Access for free at openstax.org
+
+customer relationship management (CRM) systems, and other relevant applications, such as business
+intelligence (BI) tools. For example, FedEx considered the cost, reliability, performance, and vendor support
+needed to optimize transportation routes and strategically locate warehouses, minimizing shipping distances
+and enhancing customer satisfaction.
+Step 5: Designing the Infrastructure
+In designing the infrastructure, carefully consider the following:
+•
+network setup
+•
+data storage and management strategies
+•
+robust security measures
+•
+comprehensive disaster recovery plan
+•
+scalability, flexibility, and the ability of the design to support future growth
+The planning team for the city of Los Angeles would consider this list in designing a global information system
+infrastructure that will use a geographic information system to visualize population density, land-use patterns,
+and transportation networks in order to inform urban development strategies.
+Step 6: Phasing Implementation
+The infrastructure should be implemented in phases. Start with a pilot project to test the infrastructure and
+use what is learned during the pilot to refine the system before a full rollout. Adding this step helps to correct
+any issues and fix any bugs in the system before full deployment. Make sure to develop clear documentation
+and communication plans and keep stakeholders informed. For example, the Federal Emergency Management
+Agency launched a pilot program as part of its implementation for decision-making and response during
+emergencies before rolling out the full program. The pilot program revealed ways to improve hazard
+mitigation plans, such as methods to use artificial intelligence and provide communities with customized
+disaster preparedness and response plans that meet citizens’ specific needs in a geographic area.
+Step 7: Training and Ongoing Support
+To ensure proficient use of the global infrastructure, it is necessary to train employees. This includes
+developing and implementing user manuals and help desks to address initial challenges. For example, Target
+has trained its employees to use a global information system to track customers’ locations in real time. With
+this information, employees bring orders to the front of a store just in time to place the order in a customer’s
+automobile as soon as they arrive at the store. Not only does this minimize the amount of time that customers
+must wait, it also ensures that perishables, such as frozen goods, do not spoil while customers are en route to
+pick up their orders.
+Step 8: Continuous Monitoring and Maintenance
+It is imperative to implement a regular monitoring plan to ensure optimal infrastructure performance.
+Schedule routine maintenance to keep the system up to date with the latest security patches and ensure
+smooth operation. Make sure any issues are promptly addressed to minimize downtime.
+Step 9: Soliciting Feedback and Improvement
+Actively solicit and implement user feedback to drive continuous improvement. This ensures the system’s
+infrastructure evolves to meet the organization’s ever-changing needs, optimizing service quality and
+efficiency.
+Challenges of Managing a Global Information System Infrastructure
+Managing a global information system infrastructure demands skilled navigation of various challenges, such
+as data interoperability and accuracy, security and privacy concerns, legal and regulatory compliance,
+infrastructure resilience, and disaster recovery mechanisms.
+11.1 • The Importance of Global Information Systems
+417
+
+Data Interoperability and Accuracy
+Ensuring data interoperability, accuracy, and compatibility across diverse systems and sources is a major
+challenge. The ability of diverse data systems or formats to exchange, integrate, and interpret data accurately
+and efficiently is considered data interoperability, and it often includes processes like data cleaning and
+standardization (see Chapter 2 Data Management and Information Systems Business Strategies). The accuracy
+of data is vital, and organizations may use a variety of software and data formats, making exchanging and
+integrating data difficult. Managing the system’s infrastructure across regions requires hardware and software
+platform compatibility. Optimization of the performance of global information system infrastructure is needed
+to ensure that it meets the needs of users and applications. This includes monitoring performance metrics,
+identifying bottlenecks, and implementing measures to improve performance, such as hardware upgrades or
+software optimizations.
+Security and Privacy
+From customer demographics to classified project locations, an organization’s global information system holds
+a wealth of sensitive information that needs protection. It is imperative to protect sensitive data from
+unauthorized access and breaches and ensure compliance with data sovereignty laws and intellectual property
+rights. Security tools such as encryption, firewalls, intrusion detection systems, and multi factor authentication
+are crucial in protecting this data.
+Infrastructure Resilience
+To ensure a global information system’s infrastructure remains resilient in facing a cyberattack, organizations
+must proactively prepare for the worst-case scenario and build systems that can weather the attack. By
+implementing robust cybersecurity measures and fortifying the physical infrastructure, such as servers, data
+centers, and networking equipment, from risks (such as natural disasters, power outages, theft), organizations
+can minimize downtime, protect data, and keep operations running smoothly.
+Cost and Scalability
+A global information system infrastructure is complex, involving a wide range of hardware, software, data, and
+networks that must work together seamlessly. Managing this complexity requires careful planning,
+coordination, and technical expertise to ensure all components are integrated and functioning properly. Other
+challenges with global information system infrastructure include cost and scalability. A global information
+system infrastructure involves investments in hardware, software, data, and networks, as well as ongoing
+maintenance and support costs. Balancing these costs with an organization’s budget and strategic goals is key
+to staying on track. From budgeting wisely to optimizing resource allocation, keeping a keen eye on the
+bottom line ensures the system’s infrastructure remains both effective and economical in the long run.
+Additionally, a global information system infrastructure needs to be scalable to accommodate changing needs
+and requirements. Anticipating future growth and capacity needs is important for staying ahead of the curve.
+From expanding storage capacity to accommodating increased data traffic, having the flexibility to scale a
+global information system infrastructure ensures that an organization is ready for whatever comes its way.
+Building Versus Outsourcing Global Information Systems
+The decision to build or outsource (or buy) a global information system is an important one in modern
+business operations. Imagine that a multinational e-commerce company is seeking to expand its online sales
+operations across different countries. The decision of whether to develop a custom system or to purchase a
+pre-built solution to manage its global operations can have far-reaching implications on the organization. It is
+important to assess the company’s existing information technology and information system infrastructures
+and identify which current or external systems can be integrated with a new global information system. This
+can help to reduce costs, improve efficiency, and avoid duplication of efforts. For example, a transportation
+system could be integrated with a global weather system to improve delivery planning, optimize resource
+418
+11 • Global Information Systems
+Access for free at openstax.org
+
+allocation, and enhance customer satisfaction. By anticipating potential disruptions and making adjustments,
+companies can minimize delays and ensure timely deliveries.
+As businesses navigate this decision-making process, they must carefully weigh various factors to determine
+the most suitable approach and to ensure alignment with organizational objectives. When considering
+building a system in-house, an organization should consider these questions:
+•
+In addition to build costs, how much will integration, implementation, training, and ongoing maintenance
+cost?
+•
+Can the company absorb the time it will take to build an in-house system, or are there time-to-market
+considerations that may become a competitive disadvantage?
+•
+Does the business have adequate in-house expertise and resources to develop, implement, and maintain
+an in-house system?
+•
+Are there intellectual property concerns that would be best protected by building a proprietary system?
+Systems that are outsourced through a vendor or purchased outright require these considerations:
+•
+How much value will the company derive from a vendor’s expertise and services to implement and
+maintain an outside system?
+•
+Are the system’s preset features sufficient, and if not, to what extent can the system be tailored to meet
+specific needs?
+•
+What reputation do potential vendors have in terms of reliability, maintenance services, and technical
+support?
+•
+Will a purchased system be compatible with and integrate smoothly into existing company systems?
+For any of the options, the business should consider these important questions:
+•
+What are the year-over-year cost outlays of building versus purchasing or outsourcing?
+•
+Does one option or the other offer an advantage in terms of future scalability requirements and the
+flexibility to adapt to changing business needs and technological advancements?
+•
+Will the migration of data into the new system be a smoother and better transition with one option over
+the other?
+•
+How easily will the system comply with data protection regulations, industry standards, and the security
+measures needed?
+11.2 Global Information Systems Business Models, Logistics, and Risk
+Management
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Identify different types of global e-business models and enterprise strategies
+•
+Describe logistics issues, models, and strategies
+•
+Explain risk management and mitigation strategies associated with global data and systems sharing
+As technology has transformed international business operations, e-business has become a vital tool, along
+with robust logistics processes and risk mitigation for the global stage. In the global marketplace, information
+systems are revolutionizing how these processes are handled, shaping the future of global organizations and
+helping them use technology to be more efficient and competitive throughout the world.
+Global E-Business
+A global e-business refers to the use of electronic communication and digital technologies to conduct
+business on a worldwide scale. It encompasses a wide range of activities including online sales, marketing,
+customer service, and collaboration with partners and suppliers across the globe. Global e-business has
+become increasingly important in today’s digital economy, enabling organizations to reach customers and
+11.2 • Global Information Systems Business Models, Logistics, and Risk Management
+419
+
+markets beyond their traditional geographical boundaries.
+The shift to global e-business has revolutionized how companies operate. Businesses can now reach new
+markets and expand their customer base, streamline internal processes with online tools, and offer enhanced
+customer experience through global support and personalized online interactions. Consider a sports apparel
+company looking to compete on a global scale. Without e-business, they have limited market opportunities as
+they are reduced to selling in physical stores only, restricting their customer base to their domestic market,
+and limiting their brand awareness to their local market. With an e-business model, they can launch an online
+store, reach new customers worldwide, and establish their brand as a global player.
+Online platforms enable businesses to operate around the clock, catering to different time zones and
+increasing sales opportunities. E-businesses often have lower overhead costs compared to brick-and-mortar
+operations as they save on expenses like rent, utilities, and on-site staff. E-business equips companies to
+compete effectively, streamlining operations, reaching new markets, and building a strong global brand in
+today’s global marketplace.
+Types of E-Business Models
+An e-business model refers to the strategies and structures that businesses use to operate and generate
+revenue online. Table 11.1 outlines some of the primary e-business models. Each model leverages the
+connectivity and reach of the internet to create value and drive revenue.
+Type
+Description
+Examples
+Business-to-
+consumer
+(B2C)
+Businesses sell products or services directly to
+consumers
+Amazon, Zappos
+Business-to-
+business (B2B)
+Businesses sell products or services to other
+businesses
+Salesforce, Smartsheet
+Consumer-to-
+consumer
+(C2C)
+Consumers sell products or services to other
+consumers, often facilitated by a third-party
+platform
+eBay, Craigslist
+Consumer-to-
+business (C2B)
+Consumers offer products or services to
+businesses
+Freelancer platforms like Upwork, and
+crowdsourcing platforms like
+99designs
+Business-to-
+government
+(B2G)
+Businesses provide goods or services to
+government entities
+Military equipment suppliers,
+construction companies
+Government-
+to-business
+(G2B)
+Government entities provide services or
+information to businesses
+Trade licenses, public-private
+partnerships
+Government-
+to-consumer
+(G2C)
+Government entities provide services or
+information directly to consumers
+Tax filing portals, driver’s license
+services
+Table 11.1 Types of E-Business Models These e-business models can be used independently or in combination, depending on the
+business strategy and market needs.
+420
+11 • Global Information Systems
+Access for free at openstax.org
+
+Global Enterprise Strategies
+A global enterprise strategy is a comprehensive plan outlining how an organization will achieve its goals and
+objectives in a global marketplace, or the road map to an organization’s success. Developing and
+implementing global enterprise strategies involve creating comprehensive plans that align with an
+organization’s overall goals and objectives while considering the complexities of operating in a global
+environment. Effective global enterprise strategies are important for companies seeking to expand their
+operations and achieve success. Examples of companies with global enterprise strategies include Coca-Cola,
+Toyota, Microsoft, McDonald’s, and Apple.
+By developing and embracing innovative global strategies, organizations can unlock growth, navigate
+complexities, and thrive in today’s interconnected world. Strategies might include the following:
+•
+reaching out to new customers and revenue streams beyond domestic borders
+•
+tapping into a global pool of talent, capital, and raw materials
+•
+spreading operations across regions to mitigate economic and political risks
+•
+gaining a global advantage through increased footprint and brand recognition
+•
+sparking creativity by accessing diverse ideas and best practices worldwide
+•
+establishing a strong, consistent brand identity across international markets
+•
+expanding responsibly, considering environmental and social impacts
+To implement a successful global enterprise strategy, an organization should proceed through these steps:
+1.
+Complete a thorough analysis of the global business environment. This includes examining market trends,
+competitor strategies, regulatory requirements, and cultural factors.
+2.
+Create clearly defined SMART (specific, measurable, achievable, relevant, and time-bound) objectives for
+global expansion.
+3.
+Outline the specific actions required to achieve the organization’s goals and incorporate the
+environmental analysis and objectives. Include details on employing market entry methods, managing
+cultural differences, addressing regulatory requirements, and building a strong global brand.
+4.
+Determine the resources needed. These resources include financial capital, human resources with
+international expertise, and technological infrastructure to support global operations.
+5.
+Assemble a diverse and talented team to execute the global enterprise strategy. This team should include
+individuals with expertise in international business, marketing, finance, operations, and other relevant
+areas, depending on the specific industry and target markets.
+6.
+Measure key performance indicators such as market share, revenue growth, and profitability to assess the
+effectiveness and the progress of the strategy. Based on ongoing monitoring and evaluation, adjustments
+to the global enterprise strategy may be necessary. This might involve revising the market entry approach,
+realigning resource allocation, or refining product offerings to better meet the needs of global customers.
+LINK TO LEARNING
+The Strategy Institute is an organization that offers certifications for global information systems
+professionals (https://openstax.org/r/109GISCert) and provides other resources to help these professionals
+excel.
+Global Logistics
+The process of global logistics involves planning and managing the international transportation of goods to
+their destination. Global logistics is how clothing, shoes, medications, health products, or food can be ordered
+online and delivered to you a few days later. Global logistics entails detailed planning of how goods will be
+transported, what routes to take, and how to navigate customs regulations around the world. It considers the
+11.2 • Global Information Systems Business Models, Logistics, and Risk Management
+421
+
+transportation mix (air, land, and water means) needed for the efficient movement of goods, and factors
+including cost, speed, and cargo type. It ensures the right amount of stock is in the optimal places with the
+goals of avoiding stock-outs and minimizing storage costs. It uses technology to track shipments, manage
+inventory, and ensure smooth communication across the supply chain.
+Types of Logistics Models
+Organizations employ different logistics models to efficiently manage the flow of goods, information, and
+resources. These models each offer distinct advantages and come with their own set of challenges. Choosing a
+suitable model depends on various factors, including the nature of the business, customer demand patterns,
+geographical reach, and cost considerations. Three common types of logistics models are third-party, just-in-
+time, and hub-and-spoke.
+Third-party logistics (3PL) involves outsourcing logistics operations to a third-party service provider.
+Outsourcing can reduce operational costs by leveraging the provider’s established networks and economies of
+scale. These vendors manage transportation, warehousing, distribution, and other logistics-related activities
+on behalf of the company. Providers of 3PL bring specialized knowledge and expertise, helping businesses
+optimize their supply chain. They also offer flexibility in scaling operations up or down based on fluctuations in
+demand without significant capital investment from the business using their services. Keep in mind that heavy
+reliance on a third-party provider can pose risks if the provider faces issues or disruptions.
+Just-in-time (JIT) logistics focuses on minimizing inventory levels by receiving goods only as they are needed in
+the production process. This model strives to reduce costs and increase efficiency by lowering inventory levels,
+reducing storage costs, and minimizing waste from unsold or obsolete products. JIT offers streamlined
+operations, and reduced lead times can enhance supply chain efficiency, plus it promotes responsiveness to
+market demand, reducing excess stock. However, JIT is highly sensitive to supply chain disruptions, and delays
+from suppliers can halt production.
+Hub-and-spoke logistics uses a central hub (distribution center) to consolidate and distribute goods to various
+spokes (destinations). Centralizing distribution can lead to significant cost savings in transportation and
+warehousing. Consolidation at the hub allows for efficient sorting, routing, and scheduling of deliveries,
+allowing expansion of networks and increased volumes. Managing a hub and spoke network requires
+sophisticated planning and coordination to ensure timely deliveries.
+Why Use a Global Logistics Information System?
+The implementation of a global logistics information system offers a compelling solution to several business
+problems. A global logistics information system (GLIS) is designed to manage and track the flow of goods
+across international borders, encompassing all aspects of a global supply chain. Imagine the transformative
+potential of possessing real-time visibility into the entirety of the supply chain. This includes both a
+comprehensive inventory overview and the precise location of every shipment in transit. Such transparency
+empowers a proactive approach to problem-solving and facilitates the formulation of informed decisions
+based on the most current data available.
+The benefits of a GLIS extend far beyond mere visibility. It optimizes transportation routes to minimize costs
+and delivery times and automates repetitive tasks, minimizing human error and streamlining operational
+workflows. By providing accurate delivery estimates and proactively communicating potential delays, a GLIS
+empowers an organization to become a customer champion. A GLIS equips organizations with the agility
+necessary to adapt to the ever-evolving market landscape and seamlessly scale operations in support of global
+expansion. The consequence of these improvements is a leaner and more cost-effective logistics operation
+with a reduced risk profile. This is achieved through improved supply chain visibility, robust security features
+that safeguard sensitive data, and the ability to leverage data-driven insights to optimize decision-making
+across the entire logistics spectrum.
+422
+11 • Global Information Systems
+Access for free at openstax.org
+
+Global Supply Chain Management
+Imagine you are managing the global supply chain for a company that designs cutting-edge athletic wear. The
+framework of global supply chain management keeps this global operation running smoothly. It encompasses
+everything from the first stitch to the final delivery, across international borders. The process of global supply
+chain management (GSCM) involves the planning, coordination, and optimization of the flow of goods,
+information, and finances across international borders to meet customer demands. It involves managing the
+entire supply chain from sourcing raw materials to delivering finished products to end customers, taking into
+account factors such as global sourcing, production, distribution, and logistics.
+Types of Supply Chain Management Models
+Choosing the right supply chain model is critical for businesses. It can affect everything from cost control to
+risk management and brand reputation. Table 11.2 shows six common models that organizations utilize based
+on the best fit for the company. There’s no one-size-fits-all model, and selecting the right one depends on the
+specific industry, products, and business goals of the organization.
+Supply Chain
+Management
+Model
+Description
+Businesses Best
+Suited For
+Advantages
+Disadvantages
+Continuous
+flow
+Streamlined
+operations with
+minimal waste
+Industries
+characterized by
+stable demand
+and production
+patterns
+Fits ideally with the
+production of
+standardized goods
+Is inflexible and
+therefore less
+suitable for dynamic
+markets with rapidly
+evolving consumer
+preferences
+Fast chain
+Expeditious delivery
+of trend-driven
+products to market,
+capitalizing on
+short-lived
+consumer interest
+Businesses
+operating in
+environments with
+short product life
+cycles, such as the
+fashion industry
+Fosters
+competitiveness
+Necessitates a high
+degree of
+adaptability and can
+be susceptible to
+disruptions in the
+supply chain
+Efficient chain
+Prioritization of
+efficiencies and cost
+reduction
+Highly competitive
+industries with
+tight profit
+margins
+Offers meticulous
+production
+forecasting to
+ensure minimal
+waste and optimal
+resource utilization
+Is vulnerable to
+disruptions and
+requires accurate
+forecasting
+Agile
+Handling of
+expensive specialty
+goods
+Businesses dealing
+with high-value,
+specialty products
+that demand
+precise handling
+Utilizes premium
+pricing
+Requires expertise
+in product
+transportation and
+handling
+Table 11.2 Supply Chain Management Models Organizations should consider their strategic business goals, and the pros and cons
+of different models, when selecting a supply chain management system.
+11.2 • Global Information Systems Business Models, Logistics, and Risk Management
+423
+
+Supply Chain
+Management
+Model
+Description
+Businesses Best
+Suited For
+Advantages
+Disadvantages
+Custom
+configured
+Combining
+elements of both
+agile and
+continuous flow
+models
+Companies
+engaged in
+prototype design
+and low-volume,
+customized
+production
+Facilitates tailoring
+products to specific
+customer needs
+Often necessitates a
+significant financial
+investment in
+customization
+processes
+Flexible
+Scales to
+fluctuating supply
+chain needs
+Businesses
+grappling with
+variable demand
+patterns
+throughout the
+year
+Allows for scaling
+production up or
+down in response to
+market fluctuations,
+minimizing stocking
+risks
+Carries potential for
+increased
+complexity and
+challenging
+coordination
+Table 11.2 Supply Chain Management Models Organizations should consider their strategic business goals, and the pros and cons
+of different models, when selecting a supply chain management system.
+Effective Supply Chain Management
+Managing the supply chain effectively involves overseeing processes such as sourcing, procuring, producing,
+and delivering goods and services to customers while optimizing costs, quality, and delivery times. Supply
+chain managers need to develop strong relationships with suppliers as well as communicate regularly, share
+information, and collaborate with partners to ensure timely delivery of high-quality goods and services. To
+align production and inventory levels with customer demand, reducing stock-outs and preventing excess
+inventory, companies need to consider historical data, evaluate market trends, and assess customer insights.
+Managing costs is also a critical component of effective SCM. This includes using inventory management
+practices to minimize holding costs while ensuring product availability that can meet customer demands. Risk
+management is another important component of effective SCM, allowing for identification of potential risks
+and supply chain disruptions in order to minimize their impact. One area that cannot be overlooked is the use
+of performance indicators to monitor and measure supply chain performance so that areas of improvement
+can be identified and addressed.
+Challenges of Global Risk Management
+Understanding global enterprise risk management (ERM) is essential for businesses working internationally.
+For example, Uber uses a system for dynamic pricing, or surge pricing, which changes fare prices based on
+factors like where riders and drivers are, traffic conditions, and past data.13 This system helps Uber manage
+supply and demand. By adjusting prices in real time, Uber makes sure riders can get a ride when they need
+one and encourages drivers to work in busy areas. However, managing this system globally comes with
+challenges like ensuring data accuracy and following different regional laws.
+The importance of developing and implementing effective strategic and global ERM strategies boils down to
+two key concepts: proactive protection and sustainability. Enterprise risk management helps to proactively
+identify and mitigate global threats, safeguarding an organization’s reputation, building resilience in a volatile
+world, and ensuring avoidance of costly mistakes. Informed decision-making, optimized resource allocation,
+13
+Rohan Whitehead, “How Uber Utilises Data Science,” Institute of Analytics, May 30, 2024, https://ioaglobal.org/blog/how-uber-
+utilises-data-science/
+424
+11 • Global Information Systems
+Access for free at openstax.org
+
+and a competitive edge all stem from a strong ERM strategy that fosters sustained success.
+Developing and implementing a strategic and global ERM strategy is essential for success, but it’s not without
+its hurdles. Here’s a breakdown of the key challenges and considerations:
+•
+Gaining a comprehensive view of risks across a global organization: Data silos, cultural differences in
+reporting, and complex supply chains can hinder risk identification and assessment.
+•
+Standardizing risk management practices across diverse geographical locations: Differences in
+regulations, languages, and risk tolerances can lead to inconsistencies in how risks are identified,
+assessed, and managed.
+•
+Failing to consider cultural differences can lead to misinterpretations and ineffective risk mitigation
+strategies: Communication styles, legal frameworks, and risk perceptions can vary greatly across regions.
+•
+Implementing a global ERM program requires dedicated resources like personnel, technology, and budget
+allocation.
+•
+Securing buy-in from all levels of leadership and employees is crucial for successful system
+implementation.
+By acknowledging these challenges, organizations can develop a robust and effective global ERM strategy that
+protects their operations and fosters long-term success in today’s interconnected world. For example, in 2017,
+global shipping giant Maersk fell victim to a cyberattack perpetrated by the NotPetya malware.14 Maersk
+utilizes a complex global information system to manage its vast network of shipping containers, ports, and
+logistics across the globe. The NotPetya attack, disguised as a ransomware, infiltrated Maersk’s global
+information system and wreaked havoc. Terminals closed down, shipping schedules were disrupted, and
+communication between locations became nearly impossible. This resulted in significant financial losses and
+delays for Maersk and its clients. Moreover, the attack potentially exposed sensitive information within the
+system, such as customer data, shipment details, and internal communications. The Maersk attack serves as a
+reminder of the importance of robust security measures within global information system supply chain
+management.
+11.3 Culture in Information Systems and Global Information Systems
+Teams
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Describe the concept of culture and its impact on organizations and information systems
+•
+Explain the role of culture on technology adoption and use
+•
+Describe global information system teams
+•
+Explain what a cross-functional enterprise means to information systems
+Culture is a set of rules and beliefs that shape people’s thinking and attitudes. It is important to understand
+cultural differences and their importance in making technology work well in different situations. Culture
+affects technology adoption and can influence whether people embrace a new technology or are reticent
+toward change. For example, a global company might introduce a new global information system to
+employees in different countries. In some cultures, there might be a preference for hierarchical decision-
+making, while in others, a more collaborative approach might be favored. Understanding these cultural
+differences is essential for ensuring that the global information system is implemented effectively and aligns
+with local cultures.
+The Impact of Culture on Organizations and Information Systems
+Culture influences the values, norms, beliefs, and behaviors of individuals and organizations and plays an
+14
+Jacob Gronholt-Pedersen, “Maersk Says Global IT Breakdown Caused by Cyber Attack,” Reuters, June 27, 2017,
+https://www.reuters.com/article/technology/maersk-says-global-it-breakdown-caused-by-cyber-attack-idUSKBN19I1N5/
+11.3 • Culture in Information Systems and Global Information Systems Teams
+425
+
+important role in shaping the way technology is developed, implemented, and utilized in a company. Imagine
+an organization with leaders who foster a culture of innovation and risk-taking. Employees are encouraged to
+experiment with new ideas and embrace failure as a learning opportunity. What type of employee do you think
+this company is looking to hire? Someone who values stability and prefers well-defined processes? Or
+someone who is willing to take risks and experiment?
+A broad and intricate concept, culture encompasses the beliefs, behaviors, customs, values, norms, symbols,
+and practices shared by a group or organization. Culture defines that group’s way of life, shaping their
+perceptions, interactions, and understanding of the world, including their approach to technology and
+innovation. Culture is not static, but dynamic and ever-evolving, influenced by historical, social, economic, and
+environmental factors.
+An organizational culture refers to the shared values, beliefs, and norms that influence how people interact,
+work together, and make decisions within an organization. It develops through shared experiences, leadership
+styles, policies, and workplace practices (Figure 11.6). Organizational culture is critical in how new technologies
+are perceived, adopted, and integrated into workflows. A culture that values innovation and adaptability is
+more likely to embrace technological changes, while a more risk-averse culture may resist them.
+Figure 11.6 Organizational culture can impact how an organization does business, especially when that culture is different from
+other global businesses or varies across a single organization’s locations. (attribution: Copyright Rice University, OpenStax, under CC
+BY 4.0 license)
+LINK TO LEARNING
+Learn more about types of organizational culture (https://openstax.org/r/109OrgCulture) in this article.
+A personal culture encompasses a person’s unique experiences, beliefs, and personality traits that affect how
+they perceive and engage with their environment. An individual’s history, social influences, education, religion,
+and reflections shape personal culture, which in turn can influence a person’s interactions with technology,
+openness to new tools, and readiness to adapt to technological changes. Personal attitudes toward technology
+can affect enthusiasm and proficiency in using new systems. Some of the significant ways that culture typically
+impacts organizations include the company’s and individuals’ values and beliefs, norms and practices, power
+dynamics, and approaches to decision-making and planning.
+At the personal level, values and beliefs impact attitudes toward digital privacy, data security, and innovation.
+For example, an individual’s belief in the importance of privacy may influence their preferences for secure
+communication channels within information systems. Similarly, an organization’s values regarding
+transparency, efficiency, and customer centricity inform their technological strategies and approaches to IS
+implementation. These values shape organizational culture, driving technological initiatives and shaping the
+426
+11 • Global Information Systems
+Access for free at openstax.org
+
+digital environment in which individuals operate.
+Norms and practices establish the rules and expectations regarding appropriate behavior. These norms may
+include personal conduct in the workplace, such as punctuality or communication etiquette, and within a
+global information system, these norms may include guidelines for online communication, data privacy
+practices, and technology usage. For organizations, norms may encompass policies and procedures governing
+employee behavior, teamwork, and decision-making processes. Norms may also govern IT security protocols,
+data management procedures, and collaboration practices within global information system platforms.
+Power structures and dynamics can influence access and control within information systems. While some
+colleagues might prefer flat or shifting structures, others may appreciate a more hierarchal approach. Some
+employees prefer working as a team, while others prefer working alone. In organizational cultures with
+hierarchical power structures, access to IT might be restricted to certain groups, while more egalitarian
+organizational cultures might strive for wider access. For instance, in some organizations with clear hierarchies
+and those in power having more control and decision-making authority than others, only senior management
+might have access to certain data systems. In an organizational culture that values creative input from people
+at all levels, access might be more broadly distributed. The benefit of limited access to data systems for senior
+management is greater control and security, but the drawback is that it may slow decision-making and reduce
+employee empowerment. In more egalitarian cultures, broader access allows for faster decision-making and
+increased collaboration, but it may pose challenges in maintaining data security and control.
+Decision-making and planning approaches will also vary. More often than not, different perspectives lead to
+creative solutions and collaboration enhances communication skills within the team. Keep in mind that
+misunderstandings can happen when people don’t appreciate or respond thoughtfully to these differences.
+Understanding organizational cultural dimensions is key to fostering inclusive design, promoting effective
+collaboration, and ensuring that information systems serve the diverse needs of the global business
+community. The cultural iceberg model, shown in Figure 11.7, explains how both visible and hidden cultural
+elements impact the use of information systems within an organization. Visible aspects (above the surface)
+include language, user interface preferences, and basic norms that can be easily adjusted, such as adapting
+interfaces to local languages. Hidden aspects (below the surface) involve deeper cultural values like privacy
+concerns, trust in technology, and decision-making processes, which can affect how technology and
+information systems are perceived and used.
+11.3 • Culture in Information Systems and Global Information Systems Teams
+427
+
+Figure 11.7 The cultural iceberg model demonstrates how some cultural elements are visible, while others remain more hidden.
+Both impact the use of the global information system within an organization. (credit: modification of work from Psychiatric-Mental
+Health Nursing. attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Culture and Technology Adoption
+Organizations often encounter challenges when implementing new technologies, and these challenges can
+expand when technology is implemented across diverse cultural contexts. Communication barriers pose
+significant challenges and stem from differences in communication styles, languages, and norms across
+cultural boundaries. These barriers can impede effective collaboration and understanding among team
+members, hindering adoption.
+Cultural resistance to change presents another obstacle, as individuals and groups may be hesitant to
+embrace new technologies that challenge established practices or norms. Cultural misunderstandings further
+complicate matters, as different interpretations of communication or behavior can lead to conflicts and
+breakdowns in cooperation. Addressing these challenges requires organizations to proactively foster cultural
+sensitivity, promote open dialogue, and develop strategies accommodating diverse cultural perspectives to
+foster successful adoption of technology.
+Cultural Factors that Influence Technology Adoption
+Technology adoption is influenced by a variety of factors, and they can vary significantly across different
+cultures. Understanding these is necessary for designing and implementing technology solutions that are
+culturally appropriate and effective. Companies should consider the role of culture—organizational, regional,
+personal, and so on—in their approach to how technology and information systems are adopted and
+implemented. This includes attention to differences like openness to innovation, collaboration and
+communication styles, language barriers, localization of information, and the digital divide.
+Organizational cultures that prioritize innovation are more likely to embrace new technologies and invest in
+their implementation. Those valuing stability and tradition may resist change and be slower to adopt new
+systems or less open to workflow and process changes. Individuals who are early adopters and technology
+enthusiasts can drive cultural change within the organization, promoting a more innovative and tech-friendly
+428
+11 • Global Information Systems
+Access for free at openstax.org
+
+environment.
+Cultures encouraging collaboration and open communication facilitate the implementation of technologies
+requiring teamwork. In hierarchical cultures where decisions are made by senior management and passed
+down through limited communication channels, technology may be implemented without consulting end-
+users. This can result in resistance and poor adoption. In flat and participatory cultures, where users are
+actively involved in decision-making processes, technology is more likely to be embraced if changes include
+attention to employees’ feedback and needs.
+In a global organization, language barriers can lead to communication breakdowns that hinder data
+interpretation and decision-making. Technology design should be mindful of possible language barriers and
+the meaning of colors and symbols in the user interface. This includes menus, tooltips, and other textual
+elements being effectively adapted for user languages. Organizations should also ensure data labels, attribute
+names, and metadata reflect cultural nuances, and that users from different linguistic backgrounds can access
+and comprehend vital information seamlessly. Direct translations can fail to capture linguistic nuances. A
+system optimized for English-language acronyms might be meaningless in a French translation that uses
+different acronyms or in a language with a different alphabet. Consider the example of Google Maps in India,
+which supports transliteration of points of interest in ten local languages. This transliteration, which focuses
+on converting the sounds and characters of one language to another (rather than translation of words and
+their meanings), allows users to more effectively search for places within the software.15
+Localization of information can create more value from systems. For example, incorporating local knowledge
+into geographic information systems (achieved through cultural visuals like signs and symbols, community
+mapping workshops, citizen science projects, interviews, and collaboration with local organizations) adds
+another layer of richness and context to the data. Local users can provide insights that may not have been
+captured in standard datasets. Integrating this information into systems enhances the relevance and accuracy
+of spatial information and can foster a stronger connection between the technology and the communities it
+serves.
+Finally, companies should be aware of impacts of the digital divide. Cultures with better infrastructure, such as
+electricity and internet connectivity are more readily equipped to adopt technology than those with limited
+access. In a culture where technology has been more recently introduced, investment in training and support
+programs can lead to better user adoption of new systems.
+LINK TO LEARNING
+Cultural variations impact business practices and communication. In this TED talk, Valerie Hoeks discusses
+cultural differences in business (https://openstax.org/r/109TEDHoeks) and offers practical examples and
+strategies for navigating these differences effectively.
+Identifying Cultural Barriers in Technology
+Identifying cultural barriers in technology ensures successful implementation and user acceptance. There are
+various ways to identify cultural differences to understand how these factors influence attitudes, behaviors,
+and practices toward technology within an organization, including these methods:
+•
+Conduct cultural assessments: Utilize surveys and questionnaires to gather information on attitudes and
+beliefs regarding technology. Focus groups and interviews with employees can be used to gather
+information about the perceptions of and concerns about technology.
+•
+Analyze communication styles: Observe employees and use feedback mechanisms to identify differences
+15
+Tribune Web Desk, “Google Maps Improves Discoverability in Indian Languages,” The Tribune, January 27, 2021,
+https://www.tribuneindia.com/news/science-technology/google-maps-improves-discoverability-in-indian-languages-204096/
+11.3 • Culture in Information Systems and Global Information Systems Teams
+429
+
+in communication patterns and barriers.
+•
+Skill assessment: Use assessments to evaluate current technological skills and literacy levels and to
+identify gaps and cultural factors that affect training.
+•
+Evaluate the organizational culture: Use culture audits and surveys. Look at past technology
+implementations and analyze the lessons learned to identify recurring issues. Consider engaging experts
+to gain insights into cross-cultural communication and organizational behavior.
+•
+Use pilot tests: Prior to adoption, technology can be pilot tested on a small scale to identify cultural
+barriers as well as gather detailed feedback from pilot participants to refine the adoption, implementation,
+and use of the technology.
+•
+Use frameworks: Frameworks can be used by companies to identify and understand differences. For
+example, Hofstede’s Cultural Dimension examines six factors—power, individualism, gender, uncertainty,
+time, and control—to understand culture in the workplace (Figure 11.8).16 , 17
+Figure 11.8 Hofstede’s Cultural Dimensions can help analyze cultural differences within an organization. (attribution: Copyright Rice
+University, OpenStax, under CC BY 4.0 license)
+Designing Culturally Appropriate Technology and Systems
+Global information system development often involves teams that span multiple countries and cultures. For
+example, the International Space Station (ISS) represents an extraordinary global collaboration in the field of
+science and technology. Five space agencies, representing fifteen nations, have worked together to build and
+maintain the ISS.18 Effective cross-cultural collaboration is essential for successful global information system
+development. This type of collaboration involves navigating and integrating diverse perspectives, values,
+communication styles, and practices that arise from cultural differences, as well as a commitment to building
+trust, communication, and collaboration across cultural boundaries. It is imperative that this collaboration is
+facilitated by senior leaders. Following are some strategies for effective cross-cultural collaboration:
+•
+Foster inclusive leadership that recognizes and values the contributions of team members from diverse
+cultural backgrounds.
+•
+Develop cultural awareness among team members to provide an understanding of the cultural values,
+norms, and communication styles of team members.
+•
+Establish clear and open communication channels to facilitate understanding and collaboration. Use
+translation tools and supports to ensure proficiency in a common language.
+•
+Encourage flexibility and a willingness to adapt systems development processes to accommodate different
+cultural preferences and practices.
+•
+Develop and implement strategies for resolving conflicts that may arise due to cultural differences.
+16
+Geert Hofstede, “The 6-D Model of National Culture,” accessed January 27, 2025, https://geerthofstede.com/culture-geert-
+hofstede-gert-jan-hofstede/6d-model-of-national-culture/
+17
+Charlotte Nickerson, “Hofstede’s Cultural Dimensions Theory & Examples,” Simply Psychology, October 24, 2023,
+https://www.simplypsychology.org/hofstedes-cultural-dimensions-theory.html
+18
+“Station Facts,” National Aeronautics and Space Administration (NASA), accessed January 27, 2025, https://www.nasa.gov/
+international-space-station/space-station-facts-and-figures/
+430
+11 • Global Information Systems
+Access for free at openstax.org
+
+•
+Implement platforms that support diverse languages, multiple time zones, and various cultural contexts.
+Understanding cultural influences is essential for designing technology that is culturally sensitive, inclusive,
+and effective in meeting the needs and preferences of stakeholders using the systems. Here is a list of key
+principles to follow:
+•
+Research the cultural norms, values, and practices of your target users. Consider how these factors might
+influence how they will interact with the technology.
+•
+Involve a diverse group of employees including differing cultures, genders, ages, abilities, and technical
+skills, throughout the design process. Gather their feedback on features, language, and overall usability.
+•
+Use clear, culturally appropriate language in interfaces and instructions. Consider symbols, icons, and
+metaphors that will resonate with employees.
+•
+Design technology that allows for customization. This could include different language settings, options
+for displaying information, or adapting to local cultural norms. For example, a global e-commerce
+business like Amazon.com allows users to customize their experience by selecting different language
+settings, adjusting currency preferences, and choosing regional product recommendations to match local
+shopping habits.
+•
+Ensure the technology is usable by employees with varying levels of digital literacy. Consider creating clear
+interfaces, text-to-speech options, and support materials in multiple languages.
+•
+Consider the ethical implications of the technology. This includes respecting user privacy, ensuring data
+security, and avoiding any form of cultural appropriation.
+Global Information System Teams
+Global information system teams play a critical role in organizations, especially in the context of cross-
+functional collaboration. These teams are responsible for developing, implementing, and maintaining
+information systems that support the organization’s global operations. Global information system teams must
+collaborate closely to understand their requirements, align the system’s strategies with business objectives,
+and ensure that the system’s solutions meet the needs of all stakeholders.
+An organization’s global information system team is the group of professionals responsible for designing,
+implementing, managing, and securing the complex systems that enable the flow of information across
+international borders. Figure 11.9 shows the key roles in these teams.
+Figure 11.9 Global information system teams typically consist of members from different functional areas within the company—such
+as IT, finance, marketing, and operations—working together to achieve common goals. (attribution: Copyright Rice University,
+OpenStax, under CC BY 4.0 license)
+In terms of the technical management of global information systems and coordination with IT services, the
+global information system team should ensure it has roles for these functions:
+•
+IT leadership: Sets the direction, allocates resources, and ensures IT aligns with business goals, including
+policies, standards, budgets, projects, and compliance.
+•
+Regional IT: Manages IT operations and support in specific regions (infrastructure, user support, regional
+11.3 • Culture in Information Systems and Global Information Systems Teams
+431
+
+projects, local regulations, culture).
+•
+Infrastructure: Designs, deploys, and maintains the organization’s global IT infrastructure (networks,
+servers, data centers) for effective availability, performance, and security (cloud, resource optimization).
+•
+Applications: Develops, deploys, and supports enterprise applications used globally (development,
+customization, life-cycle management, user support, integration, data integrity/security).
+•
+Data governance and compliance: Ensures data management practices follow regulations and internal
+policies (data governance policies, data quality and integrity, privacy and protection, compliance audits).
+•
+Security: Protects IT assets and data from cyber threats (security policies, audits, monitoring, incident
+response, security awareness training).
+Since geographic information system teams are typically spread across various locations around the world,
+managing such diverse teams requires key strategies such as the following
+•
+cultural awareness, where team members respect and navigate cultural differences
+•
+use of videoconferencing, chat platforms, and project management software to keep everyone informed
+and aligned, considering time zone variations
+•
+open communication, idea sharing, and feedback through collaborative tools
+•
+defined team goals and roles that align with the organization’s vision statement
+•
+acknowledgment of accomplishments and rewards for outstanding performance
+•
+addressing of conflicts promptly and constructively, fostering open dialogue and seeking mutually
+agreeable solutions
+Cross-Functional Enterprises
+Global enterprises need to navigate complex markets and diverse customer needs, and this is where a cross-
+functional enterprise comes in. A cross-functional enterprise is an organization that breaks down
+departmental silos and fosters collaboration between different functions (such as marketing, finance, and IT)
+to achieve common goals. The most successful organizations abandon a siloed structure, where departments
+operate independently, and create a collaborative network where departments work together as a cohesive
+unit. This approach unlocks a range of benefits:
+•
+Diverse teams often generate innovative ideas and solutions.
+•
+Streamlined communication and collaboration eliminate redundancies.
+•
+Teams quickly mobilize resources to address new challenges.
+•
+Diverse perspectives can lead to well-rounded decisions.
+•
+Opportunities for cross-functional work can boost morale.
+•
+Enhanced efficiency, innovation, and agility fuel global expansion.
+Cross-functional enterprises come in various forms, each with distinct characteristics and roles. Table 11.3
+describes these structural approaches.
+432
+11 • Global Information Systems
+Access for free at openstax.org
+
+Enterprise
+Type
+Description
+Matrix
+organization
+These types of organizations feature a dual reporting structure where employees report to
+both a functional manager (such as IT, marketing, or finance) and a project or product
+manager. This enables efficient resource and expertise allocation across functions for
+specific projects.
+Network
+organization
+These organizations have a flexible and decentralized structure where employees, partners,
+and suppliers collaborate in a networked environment, often using technology to facilitate
+communication and collaboration across functions and locations.
+Global
+enterprise
+These enterprises operate across multiple countries and regions, navigating diverse
+cultural, regulatory, and market environments. They use cross-functional teams to manage
+global operations, address local market needs, and ensure regulatory compliance.
+Project-
+based
+enterprise
+These enterprises focus on delivering projects or initiatives with a prioritization on project
+management to complete projects on time, within budget, and to quality standards They
+use cross-functional teams—temporary groups from different functional areas formed to
+work on specific projects or solve particular problems—which allows leverage of diverse
+skills and expertise to achieve their objectives.
+Agile
+organization
+These organizations adapt quickly to change and customer needs, using cross-functional
+teams to develop and deliver products and services in short, iterative cycles, allowing rapid
+response to market changes and customer feedback.
+Table 11.3 Types of Cross-Functional Enterprises By fostering collaboration across departments, cross-functional enterprises
+empower global organizations to navigate the complexities of the international marketplace and achieve sustainable success.
+Managing cross-functional organizations requires a focus on building strong teams with diverse skill sets and
+clearly defined roles. Fostering open communication and shared goals is crucial, alongside effective leadership
+that navigates cultural sensitivities and resolves conflicts constructively. Investing in training, recognizing
+achievements, and implementing performance management empowers teams and unlocks their potential for
+driving global success.
+11.3 • Culture in Information Systems and Global Information Systems Teams
+433
+
+Key Terms
+cross-functional enterprise
+organization that breaks down departmental silos and fosters collaboration
+between different functions (such as marketing, finance, and IT) to achieve common goals
+culture
+beliefs, behaviors, values, norms, symbols, and practices shared by a group or organization
+data interoperability
+ability of diverse data systems or formats to exchange, integrate, and interpret data
+accurately and efficiently
+e-business model
+strategies and structures that businesses use to operate and generate revenue online
+geographic context
+impact of location on operations
+global e-business
+use of electronic communication and digital technologies to conduct business on a
+worldwide scale
+global enterprise strategy
+comprehensive plan outlining how an organization will achieve its goals and
+objectives in a global marketplace
+global information system
+intricate network of hardware, software, data, and telecommunications
+infrastructure that enables information collection, storage, management, processing, analysis, and
+dissemination worldwide
+global information system infrastructure
+foundational framework of hardware, software, data storage,
+network, and cloud-based services that supports global information system operations within an
+organization
+global information system team
+group of professionals responsible for designing, implementing,
+managing, and securing the complex systems that enable the flow of information across international
+borders
+global logistics
+planning and managing the international transportation of goods to their destination
+global logistics information system (GLIS)
+system designed to manage and track the flow of goods across
+international borders, encompassing all aspects of a global supply chain
+global supply chain management (GSCM)
+planning, coordinating, and optimizing the flow of goods,
+information, and finances across international borders to meet customer demands
+interoperability standard
+guideline, protocol, or specification that enables different systems, technologies,
+or platforms to communicate, exchange data, or work together seamlessly
+needs assessment
+gathering and analyzing data to identify and evaluate the current state, areas for
+improvement, and interventions needed to get to a more improved state
+organizational culture
+shared values, beliefs, and norms that influence how people interact, work together,
+and make decisions within an organization
+personal culture
+a person’s experiences, beliefs, and personality traits that affect how an individual
+perceives and interacts with their environment
+predictive analysis
+use of data, specifically statistical algorithms, to help organizations identify patterns and
+make predictions that will enhance the operational results
+resource utilization
+efficient and effective allocation and management of resources such as time, money,
+materials, or personnel to achieve desired objectives or outcomes
+spatial analysis
+process of examining patterns, trends, and relationships within geographic data to gain
+insights and make informed decisions about spatial phenomena
+Summary
+11.1 The Importance of Global Information Systems
+•
+Global information systems support the standardization of business practices and workflows, ensuring
+consistency and efficiency across global operations. They are crucial in facilitating global connectivity,
+supporting informed decision-making, enhancing operational efficiency, breaking geographical barriers,
+nurturing innovation and creativity, and fostering global citizenship.
+•
+Global information systems enable organizations to integrate their operations across locations, facilitating
+434
+11 • Key Terms
+Access for free at openstax.org
+
+centralized data management, streamlined processes, and operational consistency.
+•
+Anticipating future trends and outcomes, global information systems allow organizations to create
+scenario models and conduct predictive analysis to assess the potential impacts of various strategies and
+courses of action.
+•
+The global information system infrastructure relies on a variety of hardware and software components to
+function, including computers, workstations, routers, and peripherals, such as cables, printers, and
+scanners, as well as servers, storage devices, and end-user devices necessary for processing and storing
+data. Software components include operating systems, communication protocols, and GIS applications
+and tools needed to create, edit, analyze, and share data effectively.
+•
+Building a robust global information system infrastructure requires understanding the organization’s
+needs, defining clear objectives, assessing technology needs, selecting the right technologies, designing
+the infrastructure, phasing implementation, providing training and ongoing support, providing continuous
+monitoring and maintenance, and soliciting feedback and making improvements.
+•
+A global information system enhances BI by using geographic information systems for spatial data
+analysis, which leads to improved decision-making, enhanced operational efficiency, heightened
+competitiveness, refined strategic planning, and the identification of new business prospects.
+11.2 Global Information Systems Business Models, Logistics, and Risk
+Management
+•
+E-business models allow businesses to reach new markets, streamline operations, and offer enhanced
+customer experiences.
+•
+Developing a global organizational strategy is essential for companies seeking international success.
+Considerations include market analysis, SMART objectives, outlining actions to be taken, securing
+resources, and establishing a diverse team for execution. Monitoring and adapting the strategy based on
+performance indicators is crucial for long-term success.
+•
+Global logistics involves meticulous planning for transporting goods internationally, considering factors
+like cost, speed, and regulations. Businesses can leverage different logistics to optimize their supply
+chains.
+•
+Global supply chain management encompasses the entire flow of goods, information, and finances across
+international borders. Businesses can choose from various supply chain models to best suit their needs.
+•
+Effective SCM helps businesses optimize costs, expand market reach, diversify suppliers, and adapt to
+market fluctuations.
+•
+Strong risk management is crucial for organizations engaging in global operations and data sharing.
+11.3 Culture in Information Systems and Global Information Systems
+Teams
+•
+Culture shapes how people view and use technology. Personal and organizational cultures influence
+openness to new technology and adoption rates.
+•
+It is important to evaluate cultural differences to support successful development, adoption,
+implementation and use of technology and systems.
+•
+Cross-cultural collaboration is essential as successful global information systems development requires
+understanding and respecting cultural differences in communication, teamwork, and decision-making.
+•
+Design technology that considers culture is imperative for organizations. User research, clear language,
+customizable features, and ethical considerations are necessary for culturally appropriate technology.
+•
+Global information system teams design, implement, and maintain information systems that enable
+global operations to operate successfully.
+•
+Effective global information systems teams require cultural awareness, clear communication, and efficient
+collaboration tools to successfully manage teams across borders.
+•
+Cross-functional companies break down departmental silos and leverage diverse teams for better
+decision-making, innovation, and agility.
+11 • Summary
+435
+
+Review Questions
+1. How does a global information system enhance global collaboration and surmount geographic obstacles?
+a. by eliminating physical barriers between nations
+b. by facilitating cross-border information exchange and communication
+c. by protecting access to data and information
+d. by focusing businesses’ reach solely on one market
+2. What is the primary role of global information systems in multinational enterprises and international
+groups?
+a. eliminating the need for communication among global teams
+b. fostering competition between different regions
+c. supporting innovation and collaboration across continents
+d. explaining growth and expansion opportunities
+3. Which aspect of a global information system makes it instrumental in emergency response and disaster
+management?
+a. provides historical data on hazards and vulnerabilities
+b. eliminates the need for real-time information
+c. enables efficient coordination of emergency efforts
+d. substitutes for communication channels among responders
+4. What sets global information systems apart from traditional information systems regarding their scope of
+operations?
+a. They support internal operations within a single organization.
+b. They offer advanced features for managing data across multiple organizations and geographic
+boundaries.
+c. They limit the need for managing structured data.
+d. They minimize the need for integration with external databases.
+5. What feature of a global information system ensures compatibility among different global information
+systems, enhancing data exchange?
+a. scalability measurements
+b. communication protocols
+c. cloud computing services
+d. interoperability standard
+6. What is the first step when designing a global information system infrastructure?
+a. defining clear objectives
+b. assessing technology needs
+c. understanding the organization’s needs
+d. selecting the right technologies
+7. Which feature of a global information system can help organizations improve decision-making, be more
+efficient, and identify new business prospects?
+a. supply chain management
+b. scalability
+c. spatial analysis
+d. data migration
+8. Which of the following is not a benefit of e-business for global enterprises?
+a. increased brand awareness
+b. limited market expansion
+c. streamlined operations
+436
+11 • Review Questions
+Access for free at openstax.org
+
+d. enhanced customer experiences
+9. What is the primary focus of the just-in-time logistics model?
+a. minimizing inventory levels
+b. reducing transportation costs
+c. ensuring timely deliveries
+d. increasing storage capacity
+10. How does a well-managed global supply chain benefit a company?
+a. reduced risk of data breaches
+b. outsourcing of customer service
+c. lowered production costs
+d. increased number of communication systems
+11. What is a SMART objective for a global expansion strategy?
+a. increase brand awareness internationally
+b. expand into five new markets within two years
+c. improve customer satisfaction globally
+d. develop a global marketing plan
+12. Why is strong risk management important for organizations engaging in global data sharing?
+a. avoid delays in project deadlines
+b. ensure data are used for marketing purposes
+c. minimize potential threats to data and systems
+d. simplify the process of sharing data
+13. When designing a culturally sensitive system, what is the least important factor to consider?
+a. implementing a user-centered design approach involving target users
+b. translating content into local languages
+c. using the latest technology available
+d. adapting the system to be flexible and customizable
+14. Culturally sensitive design requires ongoing efforts. Which of the following is the best way to ensure a
+system remains culturally appropriate over time?
+a. relying solely on the initial cultural research conducted before design
+b. implementing feedback mechanisms for users to suggest improvements
+c. translating the system into as many languages as possible
+d. avoiding any cultural references altogether
+15. What is a primary responsibility of global information system teams?
+a. managing social media accounts
+b. designing and maintaining information systems for global operations
+c. overseeing marketing campaigns
+d. handling customer service inquiries
+16. What is a key benefit of cross-functional teams?
+a. increased departmental competition
+b. improved communication and collaboration
+c. limited sharing of information
+d. slower decision-making processes
+Check Your Understanding Questions
+1. How does a global information system enhance decision-making processes in organizations?
+11 • Check Your Understanding Questions
+437
+
+2. How does a global information system contribute to cost reduction and customer satisfaction in global
+operations?
+3. Explain the differences among the e-business models of business-to-consumer, business-to-business,
+consumer-to-consumer, and government-to-business.
+4. What is the hub-and-spoke model of logistics? What are the benefits of this model, and what must
+organizations consider if they use it?
+5. Which supply chain management model is most appropriate for highly competitive industries with tight
+profit margins? Why is this model the most appropriate for these types of businesses?
+6. What legal and regulatory risks are posed by global data and systems sharing and how can these affect
+organizations?
+7. Name at least three challenges of risk management.
+8. How can a strong emphasis on hierarchy within an organizational culture hinder the adoption of a new
+collaborative technology?
+9. Describe the importance of global information system teams in global enterprises.
+Application Questions
+1. How does the scope of operations differ between global information systems and traditional information
+systems, and what specialized features do global information systems offer for managing global
+operations?
+2. You are a consultant advising a small clothing company that is looking to expand its business
+internationally. What are some key considerations related to e-business and global logistics that you would
+recommend they address?
+3. Your company is facing increasing competition from emerging markets. To maintain a competitive edge,
+you’ve decided to implement a digital transformation strategy. Given your experience with global
+information systems, how would you leverage global information systems to support this digital
+transformation and enhance your company’s competitiveness?
+4. You are the CEO of a company that manufactures high-end athletic wear. You’ve identified a significant
+market opportunity in a developing country with a rapidly growing middle class. However, this country also
+has stricter regulations on labor practices and environmental sustainability compared to your current
+markets. Develop SMART goals to guide the global enterprise strategy for entering this new market.
+5. How can global information systems be used to support sustainability initiatives within a global
+enterprise?
+6. Discuss how global information system technology enhances supply chain management in real-world
+scenarios, and provide an example to illustrate its application.
+7. Imagine you’re tasked with designing a new global information system for a global company. The global
+information system will be used in offices located in both the United States (individualistic, low power
+distance) and Japan (collectivistic, high power distance). How might these cultural differences influence
+your design approach, and what challenges might you anticipate for user adoption in each location?
+Explain your answer.
+8. An organization is considering implementing a global information system to improve data sharing and
+collaboration across their international offices. The company culture is one that values careful
+consideration and thorough review before making changes. How can this company navigate the potential
+conflict between their established culture and the fast-paced nature of implementing and utilizing a new
+438
+11 • Application Questions
+Access for free at openstax.org
+
+global information system worldwide?
+11 • Application Questions
+439
+
+440
+11 • Application Questions
+Access for free at openstax.org

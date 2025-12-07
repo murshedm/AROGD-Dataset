@@ -1,0 +1,1347 @@
+CS 4501/6501 Interpretable Machine Learning
+Hanjie Chen, Yangfeng Ji
+Department of Computer Science
+University of Virginia
+{hc9mx, yangfeng}@virginia.edu
+1
+Interpretations for improving model performance, 
+robustness, fairness
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+2
+Risks of black-box models
+Unexpected failures
+Bias and unfairness
+Vulnerability
+…
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+3
+Risks of black-box models
+Improving model interpretability
+Unexpected failures
+Bias and unfairness
+Vulnerability
+…
+Post-hoc explanations
+Improving intrinsic interpretability
+Building self-interpretable models
+Rationalized Neural Networks
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+4
+Risks of black-box models
+Improving model interpretability
+Unexpected failures
+Bias and unfairness
+Vulnerability
+…
+Post-hoc explanations
+Improving intrinsic interpretability
+Building self-interpretable models
+Rationalized Neural Networks
+Building better models
+Trustworthiness
+Fairness
+Robustness
+Performance
+…
+…
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+5
+Towards Interpreting and Mitigating Shortcut 
+Learning Behavior of NLU Models
+Mengnan Du, Varun Manjunatha, Rajiv Jain, Ruchi Deshpande, 
+Franck Dernoncourt, Jiuxiang Gu, Tong Sun, Xia Hu
+(NAACL, 2021)
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+6
+Shortcuts
+Neural networks make correct predictions based on wrong reasons
+Failures under different circumstances
+Training set
+…
+Test
+Prediction: cow 
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+7
+Shortcuts
+Neural networks make correct predictions based on wrong reasons
+Failures under different circumstances
+Training set
+…
+Test
+Spurious correlation
+cow ↔grass
+Object or background?
+Prediction: cow 
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+8
+Shortcuts
+Neural networks make correct predictions based on wrong reasons
+Failures under different circumstances
+Training set
+…
+Test
+Prediction: cow 
+Spurious correlation
+cow ↔grass
+Out-of-domain (OOD) Test
+×
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+9
+Shortcuts
+Shortcuts are decision rules that perform well on standard benchmarks but 
+fail to transfer to more challenging testing conditions
+[R. Geirhos, et al., 2020]
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+10
+Shortcuts
+Shortcuts are decision rules that perform well on standard benchmarks but 
+fail to transfer to more challenging testing conditions
+[R. Geirhos, et al., 2020]
+Decision rules:
+• by shape
+• by counting the number 
+of white pixels (moons 
+are smaller than stars)
+• by location
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+11
+Shortcuts
+Shortcut features: high-frequency words associated with labels (lexical bias)
+Example
+[Pos] “I love coffee”
+[Pos] “I like coffee”
+“Coffee” is a 
+positive word
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+12
+Shortcuts
+Shortcut features: high-frequency words associated with labels (lexical bias)
+Example
+[Pos] “I love coffee”
+[Pos] “I like coffee”
+“Coffee” is a 
+positive word
+[Pos] “I love movie”
+I do not know 
+“love” is positive
+O.O.D Test
+Negative
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+13
+Shortcuts
+Local mutual information (LMI)
+[Schuster et al., 2019]
+is the number of occurrences of words in training set
+LMI
+Long-tailed distribution
+Head
+Functional words: stop 
+words, negation words, 
+punctuation, numbers, etc.
+Informative words
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+14
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+15
+Long-Tailed Phenomenon
+Preference for features of high local mutual information (LMI)
+• Dataset statistics
+• Model Behavior
+Post-hoc explanation method: IG
+"!
+Feature attributions: # "!
+I
+love
+coffee
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+16
+Long-Tailed Phenomenon
+Preference for features of high local mutual information (LMI)
+• Comparing Model and Dataset
+I
+love
+coffee
+Model interpretation
+Dataset statistics
+5%
+Shortcut degree $! = 1
+"!
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+17
+Long-Tailed Phenomenon
+Preference for features of high local mutual information (LMI)
+• Comparing Model and Dataset
+I
+love
+coffee
+Model interpretation
+Dataset statistics
+5%
+Shortcut degree $! = 0
+"!
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+18
+Long-Tailed Phenomenon
+Preference for features of high local mutual information (LMI)
+• Shortcuts features are learned first
+epoch=1
+epoch=2
+epoch=K
+(" )
+(# )
+($ )
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+19
+Long-Tailed Phenomenon
+Preference for features of high local mutual information (LMI)
+• Shortcuts features are learned first
+epoch=1
+epoch=2
+epoch=K
+(" )
+(# )
+($ )
+If (" "! ≠($ "! , "! is a hard example
+Shortcut degree +! = 0
+If (" "! = ($ "! , "! may contain 
+shortcut features
+Shortcut degree +! = ,-. # (" "!
+, # ($ "!
+,-. ),) : cosine similarity
+# (" "!
+: IG explanation vector
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+20
+Long-Tailed Phenomenon
+Preference for features of high local mutual information (LMI)
+• Shortcut degree measurement
+0! = 1-23($! + +!)
+Data statistics
+Learning dynamics
+0! ∈0, 1
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+21
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+22
+Mitigation
+LTGR (Long-Tailed distribution Guided Regularizer)
+• Force the model to down-weight its reliance on shortcut features 
+• Encourage the model to shift its attention to more task-relevant features
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+23
+Mitigation
+LTGR (Long-Tailed distribution Guided Regularizer)
+• Force the model to down-weight its reliance on shortcut features 
+• Encourage the model to shift its attention to more task-relevant features
+Smoothing Softmax
+Biased teacher model (%
+Teacher model
+"!
+Logit value
+Softmax value
+8!
+%
+9 8!
+% = 9 8!
+%
+", ⋯, 9 8!
+%
+$
+Smooth the original probability
+.! = .!,", ⋯, .!,$
+.!,' =
+9 8!
+%
+'
+"()!
+∑*+"
+$
+9 8!
+%
+*
+"()!
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+24
+Mitigation
+LTGR (Long-Tailed distribution Guided Regularizer)
+• Force the model to down-weight its reliance on shortcut features 
+• Encourage the model to shift its attention to more task-relevant features
+Smoothing Softmax
+Biased teacher model (%
+Teacher model
+"!
+Logit value
+Softmax value
+8!
+%
+9 8!
+% = 9 8!
+%
+", ⋯, 9 8!
+%
+$
+Smooth the original probability
+.! = .!,", ⋯, .!,$
+.!,' =
+9 8!
+%
+'
+"()!
+∑*+"
+$
+9 8!
+%
+*
+"()!
+-
+If 0! = 0, .! = 9 8!
+%
+-
+If 0! = 1, .! has the same value on < labels
+-
+Keep model from giving over-confident predictions 
+for samples with large shortcut degree
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+25
+Mitigation
+LTGR (Long-Tailed distribution Guided Regularizer)
+• Force the model to down-weight its reliance on shortcut features 
+• Encourage the model to shift its attention to more task-relevant features
+Self knowledge distillation
+Utilize the smoothed probability output .! from the teacher model to train a student model (,
+Unbiased student model (,
+Student model
+"!
+9 8!
+,
+ℒ-.// = 1 −? ℒ@!, 9 8!
+,
++ ?ℒ.!, 9 8!
+,
+same architecture
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+26
+Mitigation
+LTGR (Long-Tailed distribution Guided Regularizer)
+• Force the model to down-weight its reliance on shortcut features 
+• Encourage the model to shift its attention to more task-relevant features
+fixed
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+27
+Mitigation
+LTGR (Long-Tailed distribution Guided Regularizer)
+• Force the model to down-weight its reliance on shortcut features 
+• Encourage the model to shift its attention to more task-relevant features
+updated
+discarded
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+28
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+29
+Experiments
+Datasets
+• FEVER
+[Thorne et al., 2018]
+Task: infer the relationship of a claim and an evidence as “refute”, “support” or 
+“not enough information”
+Adversarial sets: Symmetric v1 and v2 (Sym1 and Sym 2, Schuster et al., 2019), 
+where a shortcut word appears in both support and refute label
+Test model generalizability
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+30
+Experiments
+Datasets
+• FEVER
+[Thorne et al., 2018]
+Task: infer the relationship of a claim and an evidence as “refute”, “support” or 
+“not enough information”
+Adversarial sets: Symmetric v1 and v2 (Sym1 and Sym 2, Schuster et al., 2019), 
+where a shortcut word appears in both support and refute label
+Test model generalizability
+• MNLI
+[Williams et al., 2018]
+Task: infer the relationship of a premise and a hypothesis as “entailment”, 
+“contradiction” or “neutral”
+Adversarial sets: HANS (McCoy et al., 2019) and MNLI hard set (Gururangan et al., 2018)
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+31
+Experiments
+Datasets
+• MNLI-backdoor
+Randomly select out 10% of the training samples with the entailment label 
+and append the double quotation mark “ to the beginning of the hypothesis
+Adversarial sets: MNLI hard set (Gururangan et al., 2018), append the hypothesis of all 
+samples with “
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+32
+Experiments
+Models
+• BERT + bidirectional LSTM
+• DistilBERT + bidirectional LSTM
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+33
+Shortcut Behavior Analysis
+• Models pay the highest attention to shortcut features 
+• Models only pay attention to one branch of the inputs
+Sentence 1
+Sentence 2
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+34
+Shortcut Behavior Analysis
+• Preference for head of distribution
+The ratio of the training samples with the largest integrated gradient words located in the 
+5% head of the long-tailed distributions
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+35
+Shortcut Behavior Analysis
+• Preference for one branch of input
+The word with the largest integrated gradient value usually lies in one branch of input 
+(e.g., “hypothesis” branch of MNLI)
+“hypothesis” branch
+“claim” branch
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+36
+Shortcut Behavior Analysis
+• Preference for one branch of input
+The word with the largest integrated gradient value usually lies in one branch of input 
+(e.g., “hypothesis” branch of MNLI)
+“hypothesis” branch
+“claim” branch
+Data artifacts: some common 
+strategy and use a limited 
+dictionary of words for 
+annotation (e.g., negation 
+words for contradiction)
+
+--------------------------------------------------------------------------------
+[End of Page 36]
+
+38
+Mitigation Performance Analysis
+• Models that rely on shortcut features have decent performance for in-distribution 
+data, but generalize poorly on other OOD data
+
+--------------------------------------------------------------------------------
+[End of Page 37]
+
+39
+Mitigation Performance Analysis
+• Models that rely on shortcut features have decent performance for in-distribution 
+data, but generalize poorly on other OOD data
+• LTGR does not sacrifice in-distribution test accuracy, while improves the OOD 
+generalization accuracy
+
+--------------------------------------------------------------------------------
+[End of Page 38]
+
+40
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 39]
+
+41
+Adversarial Training for Improving Model Robustness? 
+Look at Both Prediction and Interpretation
+Hanjie Chen, Yangfeng Ji
+(AAAI, 2022)
+
+--------------------------------------------------------------------------------
+[End of Page 40]
+
+42
+Vulnerability to Adversarial Attacks
+Neural network 
+Correct prediction
+Wrong prediction
+
+--------------------------------------------------------------------------------
+[End of Page 41]
+
+43
+Adversarial Examples
+• Inputs formed by applying small but intentionally worst-case perturbations to 
+examples from the dataset
+[Goodfellow et al., 2015]
+• Similar to original examples
+• Fool the model to output wrong predictions
+
+--------------------------------------------------------------------------------
+[End of Page 42]
+
+44
+Adversarial Examples in NLP
+Neural language models are vulnerable to adversarial attacks
+Original prediction: Entailment
+Premise: A runner wearing purple strives for the finish line
+Hypothesis: A runner wants to head for the finish line
+Adversarial prediction: Contradiction
+Premise: A runner wearing purple strives for the finish line
+Hypothesis: A racer wants to head for the finish line
+• Natural language inference
+
+--------------------------------------------------------------------------------
+[End of Page 43]
+
+45
+Adversarial Examples in NLP
+Paragraph: The largest portion of the Huguenots to settle in the Cape arrived between 1688 
+and 1689…but quite a few arrived as late as 1700; thereafter, the numbers declined. 
+Question: The number of new Huguenot colonists declined after what year?
+Original prediction: 1700
+• Question answering
+
+--------------------------------------------------------------------------------
+[End of Page 44]
+
+46
+Adversarial Examples in NLP
+Paragraph: The largest portion of the Huguenots to settle in the Cape arrived between 1688 
+and 1689…but quite a few arrived as late as 1700; thereafter, the numbers declined. The 
+number of old Acadian colonists declined after the year of 1675.
+Question: The number of new Huguenot colonists declined after what year?
+Original prediction: 1700
+Prediction under adversary: 1675
+• Question answering
+
+--------------------------------------------------------------------------------
+[End of Page 45]
+
+47
+Adversarial Examples in NLP
+• Sentiment classification
+Original text: This interesting movie…
+Adversarial text: This interesting movia…
+Original prediction: positive
+Prediction under adversary: negative
+
+--------------------------------------------------------------------------------
+[End of Page 46]
+
+48
+Adversarial Examples in NLP
+•
+Sentence-level
+(adding additional sentences, paraphrasing)
+•
+Word-level
+( substituting synonyms , adding/removing/swapping words)
+•
+Character-level
+(typos)
+•
+Malicious triggers
+(input-agnostic sequences of tokens)
+•
+…
+ü Maintain the original semantic meaning 
+and lexical and grammatical correctness
+
+--------------------------------------------------------------------------------
+[End of Page 47]
+
+49
+Adversarial Training
+1
+Collecting adversarial examples
+Target 
+model
+Original 
+examples
+Perturbations
+Successful attack
+Failed attack
+Adversarial 
+examples
+Fine-tuning the model
+Target 
+model
+Original 
+examples
+Adversarial 
+examples
++
+Fine-tune
+2
+ü Improve robustness 
+
+--------------------------------------------------------------------------------
+[End of Page 48]
+
+50
+Adversarial Training
+Training objective: making the model produce the same and correct predictions on 
+original/adversarial examples
+Model prediction behaviors are consistent 
+on original/adversarial example pairs?
+
+--------------------------------------------------------------------------------
+[End of Page 49]
+
+51
+Model Interpretation
+• We utilize IG and LIME to analyze model prediction behavior
+• Consistent model interpretations on original/adversarial examples 
+indicate robust predictions
+[Pos]
+Ori.
+[Pos]
+Adv.
+an
+exceedingly
+clever
+piece of 
+cinema
+an
+shockingly
+proficient
+piece
+of cinema
+Prediction
+Interpretation
+
+--------------------------------------------------------------------------------
+[End of Page 50]
+
+52
+Problem
+Traditional adversarial training ignores the consistency between model 
+decision-makings on original/adversarial example pairs
+Model Prediction
+Interpretation
+Robustness
+A
+B
+[Pos]
+Ori.
+[Neg]
+Adv.
+an
+exceedingly
+clever
+piece of 
+cinema
+an
+shockingly
+proficient
+piece
+of cinema
+Prediction
+Interpretation
+[Pos]
+Ori.
+[Pos]
+Adv.
+an
+exceedingly
+clever
+piece of 
+cinema
+an
+shockingly
+proficient
+piece
+of cinema
+Prediction
+Interpretation
+Pos
+Neg
+
+--------------------------------------------------------------------------------
+[End of Page 51]
+
+53
+Correct predictions cannot guarantee model robustness
+Model Prediction
+Interpretation
+Robustness
+B
+[Pos]
+Ori.
+[Pos]
+Adv.
+an
+exceedingly
+clever
+piece of 
+cinema
+an
+shockingly
+proficient
+piece
+of cinema
+Prediction
+Interpretation
+Pos
+Neg
+B
+[Neg]
+Ori.
+[Pos]
+Adv.
+an
+exceedingly
+dull
+piece of 
+cinema
+an
+shockingly
+pesky
+piece
+of cinema
+Prediction
+Interpretation
+Attack B
+Problem
+
+--------------------------------------------------------------------------------
+[End of Page 52]
+
+54
+Motivation
+Robust model
+• Consistent prediction behaviors on original/adversarial example pairs
+• Making the same predictions (what) based on the same reasons (how) (consistent interpretations)
+Model Prediction
+Interpretation
+Robustness
+C
+[Pos]
+Ori.
+[Pos]
+Adv.
+an
+exceedingly
+clever
+piece of 
+cinema
+an
+shockingly
+proficient
+piece
+of cinema
+Prediction
+Interpretation
+Pos
+Neg
+C
+[Neg]
+Ori.
+[Neg]
+Adv.
+an
+exceedingly
+dull
+piece of 
+cinema
+an
+shockingly
+pesky
+piece
+of cinema
+Prediction
+Interpretation
+
+--------------------------------------------------------------------------------
+[End of Page 53]
+
+55
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 54]
+
+56
+Feature-level adversarial training (FLAT)
+Ori.
+a fantastic movie
+a marvelous movie
+Adv.
+Model
+positive
+positive
+Teach the model to make the same and correct predictions on an original/adversarial 
+example pair based on the corresponding important words
+
+--------------------------------------------------------------------------------
+[End of Page 55]
+
+57
+Feature-level adversarial training (FLAT)
+Two desiderata for FLAT
+•
+Global feature importance scores A:
+teach the model to recognize the replaced words in an original example and their substitutions 
+in the adversarial counterpart as the same important (or unimportant) for predictions
+Vocab
+!!
+!"
+⋮
+Importance
+##!
+##"
+⋮
+### ∈(0, 1)
+
+--------------------------------------------------------------------------------
+[End of Page 56]
+
+58
+Feature-level adversarial training (FLAT)
+Two desiderata for FLAT
+•
+Global feature importance scores A:
+teach the model to recognize the replaced words in an original example and their substitutions 
+in the adversarial counterpart as the same important (or unimportant) for predictions
+•
+Feature selection function #0 )
+guide the model to make predictions based on the corresponding important words in the 
+original and adversarial example respectively
+Vocab
+!!
+!"
+⋮
+Importance
+##!
+##"
+⋮
+!
+*$ !
+### ∈(0, 1)
+
+--------------------------------------------------------------------------------
+[End of Page 57]
+
+59
+Feature-level adversarial training (FLAT)
+Objective
+min
+0,1 ℒ2345 + Eℒ!62
+ℒ%&'(
+= - #,* ~, ℒ.- *$ !
+, /
++ - #$,* ~,$ ℒ.- *$ !′
+, /
+ℒ./% = - #,#$ ~,∪,$
+2
+., ##1##$
+# ## −###$
+ℒ4,4 : cross entropy loss
+ℒ4,4 : cross entropy loss
+!: original example
+!′: adversarial example
+
+--------------------------------------------------------------------------------
+[End of Page 58]
+
+60
+Feature-level adversarial training (FLAT)
+Objective
+min
+0,1 ℒ2345 + Eℒ!62
+ℒ./% = - #,#$ ~,∪,$
+2
+., ##1##$
+# ## −###$
+ℒ4,4 : cross entropy loss
+How to learn 5 ?
+How to select words via *$ 4 ?
+ℒ4,4 : cross entropy loss
+!: original example
+!′: adversarial example
+ℒ%&'(
+= - #,* ~, ℒ.- *$ !
+, /
++ - #$,* ~,$ ℒ.- *$ !′
+, /
+
+--------------------------------------------------------------------------------
+[End of Page 59]
+
+61
+Feature-level adversarial training (FLAT)
+Learning with variational word masks (VMASK)
+Hanjie Chen and Yangfeng Ji. “Learning variational word masks to improve the interpretability of neural text 
+classifiers.” EMNLP, 2020
+Model
+!
+I
+love
+movie
+this
+Embedding layer
+!!
+⋯
+⋯
+!"
+!2
+!3
+Layers …
+Prediction
+VMASK
+7!
+⋯
+7"
+72
+73
+7 = *$ !
+= 8⨀!
+:4# ∈{0, 1}
+•
+Mask out irrelevant or noisy words
+•
+Forward important words to the model
+=
+Training stage
+Vocab
+!5!
+!5"
+!5%
+⋯
+Masks
+##&!
+⋯
+##&"
+##&%
+⋯
+###: global word importance
+•
+:4#~?@ABCDEEF ###
+•
+7. = :4# 4 !., :4# ∈{0, 1}
+
+--------------------------------------------------------------------------------
+[End of Page 60]
+
+62
+Feature-level adversarial training (FLAT)
+Learning with variational word masks (VMASK)
+Hanjie Chen and Yangfeng Ji. “Learning variational word masks to improve the interpretability of neural text 
+classifiers.” EMNLP, 2020
+Model
+!
+I
+love
+movie
+this
+Embedding layer
+!!
+⋯
+⋯
+!"
+!2
+!3
+Layers …
+Prediction
+VMASK
+7!
+⋯
+7"
+72
+73
+Update
+G
+Inference network #
+Training stage
+Vocab
+!5!
+!5"
+!5%
+⋯
+Masks
+##&!
+⋯
+##&"
+##&%
+⋯
+Information bottleneck
+max
+",$ $ %,& ~( $) log ( ) *, ,
++ . / 0) * ,
+max
+6
+K L; N −O 4 K(L; P)
+lower bound
+=
+
+--------------------------------------------------------------------------------
+[End of Page 61]
+
+63
+Feature-level adversarial training (FLAT)
+Objective
+min
+0,1 ℒ2345 + Eℒ!62
+ℒ%&'( = - #,* ~, -7 ℒ.- 8⨀! , /
+−O 4 Q7 8 !
++ - #$,* ~,$ -7$ ℒ.- 8′⨀!′ , /
+−O 4 Q7 8′ !′
+ℒ./% = - #,#$ ~,∪,$
+2
+., ##1##$
+# ## −###$
+ℒ4,4 : cross entropy loss, Q7 4 4 : conditional entropy
+R = R$ 8 ! and R′ = R′$ 8′ !′ denote the distributions of word 
+masks on the original example ! and adversarial example !’ respectively
+
+--------------------------------------------------------------------------------
+[End of Page 62]
+
+64
+Feature-level adversarial training (FLAT)
+Objective
+min
+0,1 ℒ2345 + Eℒ!62
+ℒ%&'( = - #,* ~, -7 ℒ.- 8⨀! , /
+−O 4 Q7 8 !
++ - #$,* ~,$ -7$ ℒ.- 8′⨀!′ , /
+−O 4 Q7 8′ !′
+ℒ./% = - #,#$ ~,∪,$
+2
+., ##1##$
+# ## −###$
+ℒ4,4 : cross entropy loss, Q7 4 4 : conditional entropy
+R = R$ 8 ! and R′ = R′$ 8′ !′ denote the distributions of word 
+masks on the original example ! and adversarial example !’ respectively
+Connection
+FLAT degrades to traditional adversarial 
+training when F = G and E = 0
+
+--------------------------------------------------------------------------------
+[End of Page 63]
+
+65
+Feature-level adversarial training (FLAT)
+
+--------------------------------------------------------------------------------
+[End of Page 64]
+
+66
+Experimental Setup
+Models
+•
+Recurrent neural network [Hochreiter and Schmidhuber 1997, LSTM]
+•
+Convolutional neural network [Kim 2014, CNN]
+•
+BERT [Devlin et al., 2019]
+•
+DeBERTa [He et al., 2021]
+Attacks
+•
+Textfooler [Jin et al. 2020]
+•
+PWWS [Ren et al. 2019]
+Datasets
+•
+IMDB [Maas et al., 2011]
+•
+SST-2 [Socher et al., 2013]
+•
+AG News (AG) [Zhang et al.,2015]
+•
+TREC [Li and Roth, 2002]
+(TextAttack benchmark [Morris et al. 2020])
+
+--------------------------------------------------------------------------------
+[End of Page 65]
+
+67
+Experiments
+Prediction accuracy (%) on standard test sets
+“-base”: the base model trained on the clean data
+“-adv”: the model trained via traditional adversarial training
+“-FLAT”: the model trained via FLAT
+ü Adversarial training (“adv” and “FLAT”) does not 
+hurt model performance on clean data, and even 
+improves prediction accuracy in some cases
+
+--------------------------------------------------------------------------------
+[End of Page 66]
+
+68
+Experiments
+Prediction robustness
+CNN
+LSTM
+BERT DeBERTa
+v
+AA(%)
+0
+10
+20
+30
+Base
+Adv
+FLAT
+After-attack accuracy (AA): model prediction accuracy on adversarial examples 
+(Textfooler, SST2)
+ü Adversarial training improves model 
+prediction robustness
+ü FLAT consistently outperforms traditional
+adversarial training
+
+--------------------------------------------------------------------------------
+[End of Page 67]
+
+69
+Experiments
+Interpretation Consistency
+CNN
+LSTM
+BERT DeBERTa
+v
+KT
+0
+0.2
+0.4
+0.6
+CNN
+LSTM
+BERT DeBERTa
+v
+0
+0.2
+0.4
+0.6
+TI
+0.8
+•
+Post-hoc interpretations: IG, LIME
+•
+Kendall’s Tau order rank correlation (KT): overall rankings of word attributions between different interpretations
+•
+Top-k intersection (TI): the proportion of intersection of top k important features identified by different interpretations
+(Textfooler, SST2)
+[Chen et al. 2019; Ghorbani et al. 2019, Boopathy et al. 2020] 
+Base
+Adv
+FLAT
+[Pos]
+Ori.
+[Pos]
+Adv.
+an
+exceedingly
+clever
+piece of 
+cinema
+an
+shockingly
+proficient
+piece
+of cinema
+
+--------------------------------------------------------------------------------
+[End of Page 68]
+
+70
+Experiments
+Interpretation Consistency
+CNN
+LSTM
+BERT DeBERTa
+v
+KT
+0
+0.2
+0.4
+0.6
+CNN
+LSTM
+BERT DeBERTa
+v
+0
+0.2
+0.4
+0.6
+TI
+0.8
+•
+Post-hoc interpretations: IG, LIME
+•
+Kendall’s Tau order rank correlation (KT): overall rankings of word attributions between different interpretations
+•
+Top-k intersection (TI): the proportion of intersection of top k important features identified by different interpretations
+(Textfooler, SST2)
+[Chen et al. 2019; Ghorbani et al. 2019, Boopathy et al. 2020] 
+Base
+Adv
+FLAT
+ü Traditional adversarial training 
+cannot guarantee model 
+robustness regarding 
+interpretation discrepancy
+ü FLAT consistently improves 
+model interpretation 
+consistency
+[Pos]
+Ori.
+[Pos]
+Adv.
+an
+exceedingly
+clever
+piece of 
+cinema
+an
+shockingly
+proficient
+piece
+of cinema
+
+--------------------------------------------------------------------------------
+[End of Page 69]
+
+71
+Experiments
+Visualization of interpretations
+Both LSTM-FLAT and CNN-FLAT correctly predict the original/adversarial example pairs 
+with consistent interpretations
+
+--------------------------------------------------------------------------------
+[End of Page 70]
+
+72
+Experiments
+Transferability of model robustness
+Test with six unforeseen adversarial attacks: PWWS [Ren et al. 2019], Gene [Alzantot et al. 2018], IGA 
+[Wang et al. 2019], PSO [Zang et al. 2020], Clare [Li et al. 2021], and BAE [Garg and Ramakrishnan 2020]
+ü The models trained via FLAT show 
+better robustness than baseline 
+models across different attacks
+
+--------------------------------------------------------------------------------
+[End of Page 71]
+
+73
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 72]
+
+74
+Reference
+•
+Du, Mengnan, et al. "Towards interpreting and mitigating shortcut learning behavior of NLU models." arXiv
+preprint arXiv:2103.06922 (2021).
+•
+Chen, Hanjie, and Yangfeng Ji. "Adversarial Training for Improving Model Robustness? Look at Both Prediction 
+and Interpretation." arXiv preprint arXiv:2203.12709 (2022).
+•
+Geirhos, Robert, et al. "Shortcut learning in deep neural networks." Nature Machine Intelligence 2.11 (2020): 
+665-673.
+•
+Tal Schuster, Darsh J Shah, Yun Jie Serene Yeo, Daniel Filizzola, Enrico Santus, and Regina Barzilay. 2019. 
+Towards debiasing fact verification models. Empirical Methods in Natural Language Processing (EMNLP).
+
+--------------------------------------------------------------------------------
+[End of Page 73]

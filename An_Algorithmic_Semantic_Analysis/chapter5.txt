@@ -1,0 +1,232 @@
+112 
+CHAPTER 5:  CLASSIFICATION RESULTS AND ANALYSIS 
+ 
+ 
+ 
+ 
+To answer the central research question—whether an existing strategy or other document 
+exists to provide organizations at multiple levels of society with enough support for improving 
+cyber resilience—Chapters 3 and 4 developed the interdisciplinary concept of resilience, a 
+dictionary of cyber and resilience terminology, and a classification framework from which to 
+evaluate 37 cyber-oriented texts against that question. The use of twelve non-cyber, resilience 
+texts provides a pseudo-control group for comparison, since those documents intuitively should 
+have higher resilience content than the cyber texts. The analysis in the previous chapter revealed 
+that the cyber texts potentially validated research Hypothesis 4 since the semantic analyses 
+indicated that, even though resilience was mentioned, the content tended to focus on the 
+technical and sociotechnical aspects of cybersecurity only. To confirm that finding, this chapter 
+will evaluate the texts individually, as opposed to collectively as a corpus, against the cyber 
+resilience dictionary and the classification framework.  
+ 
+ 
+Classifying the Documents for Topics Associated with Time and Scale  
+ 
+The classification framework developed in the previous chapter evaluates each text on the 
+basis of how well the terminology in the text corresponds to the descriptors across both the time 
+and scale dimensions of resilience. The framework uses Fibonacci numbering to connote the 
+non-linearity of each scale. As a recap, the time classifiers are coded as:  
+ 2: Immediate – seconds to minutes; machine speed 
+ 3: Short – hours to days, and the benchmark for human capacity 
+ 5: Mid = weeks to months  
+
+113 
+ 8: Long – an extended period, on the order of months, but more likely years  
+ 13: Generational – multiple decades to centuries 
+For the scale classifiers:  
+ 2: Technical – individual technical components with little to no human interaction 
+ 3: Sociotechnical – the combination of technical systems that require continual human 
+interaction 
+ 5: Organizational – the human side of sociotechnical, where human-driven activities take 
+place 
+ 8: Community/Sector – above the organization and how it fits into a broader ecosystem 
+ 13: National/International – actions at the national or international scale 
+Appendix 1 contains the final dictionary of terms with their time and scale classifiers.  
+The 49 texts were processed through a script that created a classification analyzer 
+algorithm. The Python script used the following packages to implement: os (v3.13), json 
+(v3.13), matplotlib (v3.8), Seaborn (v0.12.2), pandas (v2.1.4), and NumPy (v1.24.3) 
+[125-130]. The texts were processed individually, and the mean and standard deviation of time 
+and scale values stored as a json file for follow-on analysis. Each text, and the corpus of 49 
+texts, were visualized using a contour plot. The initial, combined plot of the results is shown 
+below in Figure 31. The word clouds were generated with a separate script implementing a tf*idf 
+analysis and using the above packages along with scikit-learn (v1.4.2) and WordCloud 
+(v1.9.3) [71], [131].  
+ 
+
+114 
+ 
+Figure 31: Contour plot with Fibonacci scaling representing the classification of 49 texts for aspects of resilience across time 
+and scale. 
+ 
+As predicted in Chapter 2 with the motivating research question and Hypothesis 1, none 
+of the existing body of documents, to include the twelve non-cyber texts used as a pseudo-
+control group, contain topics associated with resilience at all levels of time and scale. It is 
+unreasonable to assume that specific cybersecurity guidance would contain discrete topics 
+
+115 
+associated with long-term or greater effects at the community/sector level or above. That should 
+be the realm of national cyber resilience strategies. The resilience strategies for both the United 
+States and Ukraine were in the twelve non-cyber texts, and the lack of coverage on the combined 
+contour plot indicates that, at least according to the analytical procedures used in this research, 
+even these strategies lack elements across time and scale related to cyber resilience. Figure 32 
+and Figure 33, below, show the contour plots for the cyber and non-cyber texts for comparison. 
+Note the contouring scale differences between the two plots, though the same general 
+distribution and dispersion of the features from classification remains visually consistent 
+between the two bodies of texts.  
+
+116 
+ 
+Figure 32: Contour plot showing the classification of resilience features across time and scale for 37 cyber texts. 
+
+117 
+ 
+Figure 33: Contour plot showing the classification of resilience features across time and scale for twelve non-cyber texts. 
+ 
+ 
+ 
+
+118 
+Numerical Results from the Classification Algorithm 
+ 
+From the classification, the mean time and scale values for each document can be 
+calculated, along with the mean values for the cyber, non-cyber, and full corpus of documents. 
+Given the plot densities shown in Figure 31, the mean values are somewhere between 2-3 for 
+time and scale. Figure 34, below, shows the data for these mean values, with the accompanying 
+standard deviations, in box plot format. The mean values for the three sets were between 2.65-
+2.73 for the time parameter and 2.33-2.68 for the scale parameters. 
+ 
+Figure 34: Box plots of the mean time and scale values from the classification algorithm, with their standard deviations, for the 
+combined, cyber, and non-cyber documents. 
+The non-cyber texts had slightly higher mean values, but the results are well within the standard 
+deviation for the combined corpus for the time values to be not statistically significant. There are 
+significant changes in the scale values and these can be attributed to the fact that those twelve 
+documents were primarily targeting audiences at the community/sector to national-international 
+levels, so that the language would necessarily be classified into that range over the technical and 
+sociotechnical range.  
+
+119 
+ 
+For additional clarity on how the two sets of documents classified, Figure 35, below, 
+shows the plotted mean time and scale values for each document, coded by whether the 
+document was cyber or non-cyber.  
+ 
+Figure 35: Scatter plot of the mean time and scale values for each of the 49 texts, coded by color for inclusion in the cyber or 
+non-cyber texts groupings. 
+
+120 
+The zoomed in graphic shows the tight grouping of the mean time and scale values for the 
+distribution of documents. As is visually apparent, there is no significant clustering between the 
+cyber and non-cyber texts, as the markers are commingled.   
+ 
+Documents with the Highest Mean Time and Scale Values 
+ 
+Intuitively, the higher the mean value for time or scale for a given document, the broader 
+the coverage across all levels of time or scale. The combined plot of all documents, Figure 31, 
+reveals that the corpus does not have any coverage at the highest levels of time or scale, which is 
+understandable and expected. The contour indicates that the majority of the features in the 
+combined corpus are primarily at the lower ends of the scales. For the cyber and non-cyber 
+subgroupings of documents, the two documents that had the highest mean time and scale values, 
+and thus the most likely to contain guidance that might satisfy Hypothesis 1, were:  
+ Draft NIST Special Publication 1800-35 Implementing a Zero Trust Architecture [149] 
+ Community System Resilience Initiative Steering Committee Final Report [176] 
+An in-depth, qualitative analysis of each document would be necessary to identify which topics 
+and features the algorithm extracted that drove the classification to the maximum mean values 
+from the corpus. But from the contour plots of both documents, in Figure 36 and Figure 38, it is 
+clear that while the preponderance of features are at the technical to sociotechnical and short 
+time scales, there is a greater proportion of features that classify at higher values of both time and 
+scale, especially at the organizational level for scale and mid-term time level. A word cloud 
+analysis for both documents, in Figure 37 and Figure 39, shows the top fifty terms in each text, 
+
+121 
+providing a rapid look at whether the language is different enough to drive the higher mean 
+scores.  
+ 
+ 
+Figure 36: Contour plot of the highest scoring cyber document from the classification algorithm, the draft NIST Special 
+Publication 1800-35 Implementing a Zero Trust Architecture [149]. 
+ 
+
+122 
+ 
+Figure 37: Word cloud analysis of the top fifty terms from a tf*idf analysis on the draft NIST SP 1800-35 Implementing a Zero 
+Trust Architecture [149]. 
+
+123 
+ 
+Figure 38: Contour plot of the highest scoring non-cyber document from the classification algorithm, the Community System 
+Resilience Initiative Steering Committee Final Report [176]. 
+ 
+
+124 
+ 
+Figure 39: Word cloud analysis of the top fifty terms from a tf*idf analysis on the Community System Resilience Initiative 
+Steering Committee Final Report [176]. 
+ 
+As Figure 39 indicates, the language is closer to the terms identified in Chapter 3, and markedly 
+different from the language used in the cyber texts analyzed in Chapter 4. Figure 37, however, 
+reveals that the high mean score is likely, however, reveals that the high mean score is most 
+likely a flaw in the classification algorithm—a false positive, per se—rather than the text being 
+fundamentally different from the other cyber texts in terms of its cyber resilience content. The 
+top fifty terms in that text closely mirror the technical language in the other cyber texts, as 
+identified in Chapter 4. Zero trust principles are a key concept for developing robust systems and 
+resilience, but NIST SP 1800-35 does not appear to offer guidance at all levels of time and scale 
+for improving cyber resilience based on this analysis.  
+ 
+ 
+
+125 
+Comparison to Explicit Cyber Resilience and National Resilience Strategies 
+ 
+This final section considers several documents that explicitly identify cyber resilience or 
+national resilience as their stated objectives. While the combined contour plot in Figure 31 
+includes the results of those documents, the analysis here is meant to reinforce the conclusions 
+thus far with respect to the primary research question and Hypothesis 1: does a single document 
+exist to provide organizations at multiple levels of society with support for improving cyber 
+resilience? These three documents appear to be the closest, colloquially, to meeting that intent:  
+ World Economic Forum’s Cyber Resilience Index [164] 
+ National Resilience Strategy of the United States [170] 
+ Ukraine’s strategy on National Resilience in a Changing Security Environment [171] 
+ The set of contour plots and word clouds for these documents follow.  
+
+126 
+ 
+Figure 40: Contour plot from the classification algorithm for the World Economic Forum's Cyber Resilience Index [164]. 
+ 
+
+127 
+ 
+Figure 41: Word cloud analysis of the top fifty terms from a tf*idf analysis on the World Economic Forum's Cyber Resilience 
+Index [164]. 
+
+128 
+ 
+Figure 42: Contour plot from the classification algorithm for the National Resilience Strategy of the United States [170]. 
+ 
+
+129 
+ 
+Figure 43: Word cloud analysis of the top fifty terms from a tf*idf analysis on the National Resilience Strategy of the United 
+States [170]. 
+
+130 
+ 
+Figure 44: Contour plot from the classification algorithm for Ukraine's National Resilience in a Changing Security Environment 
+[171]. 
+ 
+
+131 
+ 
+Figure 45: Word cloud analysis of the top fifty terms from a tf*idf analysis on Ukraine's strategy on National Resilience in a 
+Changing Security Environment [171].  
+ 
+All three texts show a better distribution of features across multiple scales compared to the body 
+of cyber texts, with greater frequencies of topics at the organizational or community levels for 
+scale and the longer time scales, emphasizing a broader reach of the strategies and greater 
+guidance. However, the national strategies of the United States and Ukraine are not meant to 
+provide individual organizations or communities with guidance to improve resilience; instead, 
+they are meant to align national priorities and resources to achieve national-level resilience 
+outcomes. The World Economic Forum’s Cyber Resilience Index qualitatively comes the closest 
+to meeting the objective sought by the research question, but a more thorough analysis of that 
+document would be needed to assess it for improvements to address all aspects of time and scale 
+for improving cyber resilience.  
+ 
+ 
+ 

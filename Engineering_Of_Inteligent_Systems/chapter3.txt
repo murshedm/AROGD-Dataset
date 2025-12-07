@@ -1,0 +1,627 @@
+Chapter 3 – Continuous Assessment of Decarbonization Improvements
+3.1 Lifecycle Assessment and Techno-Economic Assessment
+Lifecycle assessment (LCA) and techno-economic assessment (TEA) are often part of the validation 
+for proposals of technologies aimed at reducing CO2 emissions of industries, and carbon capture and 
+utilization technologies are part of decarbonization options considered. When introducing new technology 
+to reduce CO2 emission, lower energy consumption, or capture and utilize carbon, it is imperative to perform 
+LCA and TEA to ascertain the value added from the new technology or process change introduced. LCA 
+aims to track the global environmental impacts of the production, use, and disposal of the product or service. 
+TEA assesses the economic viability of the technology and is a tool for making decisions on research, 
+development, investments, and policy.
+Challenges with assessing technologies in their early stages result in an escalation of assessment efforts 
+and potential mismatches of research results with the needs of stakeholders. To address this, [51] presented 
+the best practices for adapting assessment methodologies to the technology readiness level (TRL) of the 
+technology when assessing early-stage climate change mitigation CCU technologies. The authors advocate 
+for meeting stakeholders’ needs by aligning TEA/LCA goals and scope with TRL rather than commercial 
+interests, estimating missing data using standard estimation tools, and evaluating and communicating 
+uncertainties in the assessment. They also recommend collaboration across technology developers and 
+TEA/LCA practitioners as a workaround for coping with limited resources. With consensus on 
+technological measures for decarbonization, industry watchers advocate for coupling effective policy with 
+a body of research on technical solutions to cement and concrete decarbonization [52]. More decisive policy 
+actions will help promote the adoption of technological measures to decarbonize the cement industry. In 
+addition, cement producers would benefit from a systematic way to continuously monitor and report the 
+environmental impact of production processes to validate compliance with decarbonization policies as they 
+adopt these technological measures.
+25
+The LCA and TEA in this study analyze emission and cost reduction opportunities from alternative 
+manufacturing inputs in four different scenarios at a US cement plant. In addition, the study demonstrates 
+a practical approach to integrating sustainability into cement manufacturing with a deployment framework 
+for the continuous assessment of cement production's economic and environmental performance.
+3.2 Materials and Methods
+Digitalization and data-driven process optimization of cement manufacturing will help the industry 
+better manage energy consumption and reduce emissions and raw material inefficiencies [17,53]. There has 
+been improvement in sensors, data management, related IoT toolkits, and increased maturity levels of 
+artificial intelligence. These, and the templatization of lifecycle and techno-economic assessments, all 
+contribute to a deployment framework for continuously assessing the economic and environmental impact 
+of process improvements in cement manufacturing.
+Advancing innovative near-zero emission production routes, and promoting material efficiency, are two 
+of the key carbon-cutting strategies that would contribute the most to direct emission reductions in the Net 
+Zero Scenario [24]. Near zero or net zero emission production of cement would require incorporating 
+carbon capture in the production process, thereby increasing the cost of production. However, significant 
+carbon emission reduction is possible by promoting material efficiency. This study explores material 
+efficiency options in demonstrating the deployment framework using the Union Bridge, Maryland plant of 
+Lehigh Cement (LC) as a case study. Heidelberg Cement of Germany wholly owns LC and has affiliations 
+with technically advanced cement operations and construction-related materials activities. LC’s original 
+plant was built in 1910 and has since undergone several modernizations, including replacing four long-dry 
+kilns with one preheater/pre-calciner kiln system. At the time of this study, the LC plant in Union Bridge, 
+Maryland, is transitioning from producing ordinary Portland cement to Portland-limestone cement, which 
+uses innovative technology to increase limestone content and reduce clinker used. The product called 
+EcoCemPLC contains as much as 10% more limestone but performs equivalent to ordinary Portland 
+cement in concrete compressive, flexural strength, and durability [54]. 
+26
+To demonstrate how the deployment framework can be leveraged for the continuous assessment and 
+improvement of cement production's economic and environmental impact, we review its production at the 
+LC plant in Union Bridge under four scenarios, as listed in Table 2 below.
+Table 2. Cement production scenarios modeled
+# Scenario Product Thermal Energy
+1. OPC + Coal Ordinary Portland Cement Coal
+2. PLC + Coal Portland-Limestone Cement Coal
+3. OPC + DBS Ordinary Portland Cement Dried Biosolids
+4. PLC + DBS Portland-Limestone Cement Dried Biosolids
+In the first two scenarios, thermal energy for producing ordinary Portland cement and Portlandlimestone cement is provided by coal combustion. In comparison, in the other two scenarios, thermal energy 
+is provided by the combustion of dried biosolids from processed sewage sludge. These scenarios were 
+examined using the templates developed by the University of Michigan Global CO2 Initiative [55].
+3.2.1 Lifecycle Assessment (LCA)
+The international standard ISO 14040 defined LCA as a study of environmental and other potential 
+impacts throughout a product's life. The product's life, often called ‘cradle-to-grave,' includes raw material 
+acquisition, production, use, and disposal. Environmental impacts include resource use, human health, and 
+ecological consequences [56]. A detailed assessment of the whole life of a product that serves as an input 
+in another product can be complicated. As a result, many researchers in practice limit the LCA to the use 
+phase, often called 'cradle-to-gate.' The concept of LCA is based on a simplified system analysis. Therefore, 
+meaningfully selecting and defining system boundaries are important albeit labor-intensive tasks within the 
+LCA process. LCA can be applied to product development and improvement, public policy making, 
+strategic planning, and marketing, amongst other direct applications. The main parts of the LCA are –
+• goal and scope definition (including functional unit and system boundaries)
+27
+• life cycle inventory (LCI)
+• life cycle impact assessment (LCIA)
+• interpretation 
+As defined by the ISO standard 14040, the scope and goal of the LCA have to be clearly defined and 
+consistent with the intended application. The inventory analysis involves compiling and quantifying inputs 
+and outputs required throughout the product lifecycle. The impact assessment component of the LCA aims 
+to understand and evaluate potential environmental impacts throughout the product lifecycle. In the 
+interpretation phase, conclusions are drawn from the inventory analysis and impact assessment, and 
+recommendations are made to satisfy the study's objective.
+LCA of cement manufacturing has been the subject of many research efforts [57-59]. In addition, 
+different localized research efforts focus on the environmental impact of cement manufacturing in different 
+parts of the world, including India, Brazil, Europe, and China. [60,61]. Leading international standards on 
+LCA focus mainly on the process of performing LCA. Its principles and framework are described by ISO 
+14040, and ISO 14044 specifies requirements and provides guidelines [62].
+Countries across the globe have also formulated a variety of standards and guidelines, such as the UK's 
+PAS 2050 [63], France’s BP X30-323, and Japan’s EcoLeaf Environmental Labeling Program. However, 
+the nature of a comprehensive life cycle analysis requires consideration of the inputs into the manufacturing 
+process which often differ from one location to another. It also requires consideration of the context of each 
+manufacturing plant's infrastructure, processes, policies, and quality control requirements. As a result, 
+literature reviewed for LCA on cement manufacturing have varied in methodological approach and scope
+with each author articulating the environmental impact of cement production through differing lens based 
+on their goal of doing the analysis. As indicated in Table 3, LCA is used to study the environmental impact 
+of different lifecycle stages of cement production and usage, such as clinker, cement, mortar, and concrete.
+In addition, literature review identified other materials that can be used as additives in cement 
+manufacturing or in the mix of mortar and concrete to reduce the carbon footprints of the products. These 
+28
+materials and the resulting estimated reduction in GHG emissions from their use include the following: 
+marble waste sludges in cement – 34% [64], ornamental stone waste in cement – 9% [65], blast furnace fly 
+ash and slag in concrete – 32% [66], ash from wastewater treatment plant sludges in concrete – 9% [67], 
+plastic waste and carbon fibers in cement mortars – 13.69% [68], and glass powder in cement mortar – 20% 
+[69].
+Practitioners agree that integrating LCA into day-to-day management routines will be beneficial, 
+however, the execution of LCA is challenging. The LCA process can be kept simple without compromising 
+comprehensiveness and reliability by using standard procedures and assumptions, adopting techniques that 
+allow comparisons between different impact categories, access to high-quality data, and using adequate 
+software [70]. Integrating LCA into management routines of cement plants has become feasible with 
+international standards for LCA through the ISO process, increasing the number of cement plants getting 
+more digitized and adopting IoT sensors for gathering data, and improved interconnectivity and access to 
+databases through application programming interfaces (API). Section 2.3 demonstrates a theoretical 
+framework for the continuous assessment of the environmental impact of cement production.
+3.2.1.1 Scope of the model: Functional Unit and System Boundaries
+The functional unit adopted on a mass basis is the production of 1 metric ton of cement. The cradleto-gate system boundary is used for this study. Only activities that occur before arriving at and within the 
+cement plant are considered since performance and impacts after the cement plant are identical across 
+product systems and irrelevant for impact comparison purposes. 
+29
+Table 3. Parts of LCA and examples compiled from literature
+Lifecycle 
+Stage
+Cement Cement Clinker Clinker Concrete Concrete
+Goal and 
+Scope 
+Definition 
+Functional 
+Unit
+1 ton Portland 
+cement
+1-ton ordinary 
+Portland 
+cement and 1 
+ton of clinker
+1 ton clinker 1 kg of clinker Varied specific measure 
+of concrete
+1 cubic meter of 
+concrete
+System 
+Boundaries
+Raw materials 
+and fuels 
+extraction, 
+transportation, 
+electricity 
+usage, emissions
+Life Cycle 
+Inventory 
+analysis
+Cradle-to-gate 
+LCA model. 
+Clinker 
+production in 
+cement kiln 
+excluding 
+blending and 
+grinding
+Cradle-to-gate 
+LCA for old and 
+new cement 
+production lines. 
+Clinker 
+production 
+excluding 
+blending and 
+grinding
+Modified cradle-to-gate. 
+Comparison of traditional 
+and 'green' concrete
+Cradle-to-gate 
+LCA of graphene 
+production and use 
+in concrete
+Country Brazil China Switzerland Spain N/A UK
+Lifecycle 
+Inventory 
+(LCI)
+Inputs and
+outputs
+In - Sand, 
+Limestone, 
+Clinker, 
+chemical 
+additives, 
+transportation. 
+Out - NOx, 
+CO2, HCl, HF, 
+Hg, Pb, Cd, Ta, 
+Dioxins
+In -
+Limestone, 
+sandstone, 
+ferrous tailings 
+and gypsums, 
+energy from 
+coal and 
+electricity, 
+admixtures 
+(fly ash and 
+furnace slag, 
+fresh water.
+Out - GHG, 
+primary 
+In - Alternative 
+fuel and raw 
+materials (tires, 
+prepared 
+industrial 
+waste, dried 
+sewage sludge, 
+blast furnace 
+slag). 
+Out - Carbon, 
+nitrogen, 
+chloride, 
+fluoride 
+compounds, 
+In - Limestone, 
+sand, iron ore, 
+clay, electricity 
+generation, heat. 
+Out - CO2, NOx, 
+SO2 Particulates
+In - Minerals and fossil 
+fuels, land use. 
+Out - NOx, SOx, NH3, 
+pesticides, heavy metals, 
+CO2, 
+hydrochlorofluorocarbons 
+(HCFC), nuclides, 
+polycyclic aromatic 
+hydrocarbons (PAHs), 
+volatile organic 
+compounds, suspended 
+particulate matter (SPM)
+In - Portland 
+cement, Ground 
+Granulated Blastfurnace Slag, 
+Limestone, Sand, 
+Water, 
+Superplasticizer, 
+Graphene 
+nanoplatelets 
+Paste, Input 
+Energy
+30
+pollution, 
+hazardous air 
+pollutants, 
+noise, heavy 
+metal 
+emissions
+clinker, raw 
+meal, cement 
+kiln dust
+Data 
+Source
+Plant, National 
+statistics, 
+Ecoinvent 
+database
+On site, 18 
+cement plants 
+with 30 
+production 
+lines from 
+2004 to 2007
+On site, 
+Ecoinvent 
+database
+On site plant 
+data. SimaPro 
+7.2 software. 
+Ecoinvent 3.0
+LCA related journals Commercial 
+Companies and 
+scientific 
+literature. SimaPro 
+software
+Lifecycle
+Impact
+Assessme
+nt
+LCIA 
+method
+ISO 
+Environmental 
+Management -
+Life Cycle 
+Assessment
+Cumulative 
+Exergy 
+Demand 
+(CExD) [30], 
+Eco-indicator
+Cumulative 
+Exergy Demand 
+(CExD) [71]
+IPCC 2007 Global 
+Warming Potential 
+(GWP) impact method
+Impact 2002 + 
+methodology [74]
+Impact 
+Analyzed
+Ozone 
+depletion, 
+photochemical 
+oxidant 
+formation, 
+terrestrial 
+acidification, 
+freshwater and 
+marine 
+eutrophication, 
+metal and fossil 
+depletion
+Freshwater 
+consumption, 
+noise 
+emissions, 
+heavy metal 
+and hazardous 
+pollution 
+emissions, 
+indirect 
+consumptions 
+of oil and coal
+Gas emissions Global warming, 
+acidification, 
+eutrophication, 
+abiotic 
+depletion, ozone 
+layer depletion, 
+freshwater 
+aquatic 
+ecotoxicity, 
+photochemical 
+oxidation
+Acidification, 
+eutrophication, 
+ecotoxicity, climate 
+change, ozone layer 
+depletion, ionizing 
+radiation, respiratory 
+effects, carcinogenic
+Carcinogens and 
+non-carcinogens, 
+respiratory 
+inorganics, aquatic 
+and terrestrial 
+ecotoxicity, global 
+warming, nonrenewable energy 
+and mineral 
+extraction
+Reference [60] [61] [71] [59] [72] [73] 
+31
+Figure 5 shows a representation of the system boundaries, system elements, and unit processes depicting 
+the exchange of energy (E), particulate emissions (PE), gaseous emissions (GE), and heat (H) in the 
+quarrying, crushing, grinding, dry mixing and blending, preheater, rotary kiln, clinker cooling, additives, 
+and final grinding processes in cement production.
+Figure 5. Graphical representation of the system boundaries, system elements, and unit processes
+3.2.1.2 Life Cycle Inventory
+This is the compilation of information on the inputs, outputs, waste generated, electricity, and thermal 
+energy required to produce a functional unit of the product within the defined system boundary. The system 
+boundary covers the following emission units listed by Lehigh Cement company in its operating permit as 
+subject to Title V requirements and having applicable requirements [75]:
+• Union Bridge Quarry Operations
+• New Windsor Quarry Operations
+• Raw Material Transport and Storage
+• Raw Grinding
+• Raw Meal – Kiln Feed
+• Kiln and Clinker Cooler
+• Coal Grinding Mill for Kiln
+32
+• Clinker Transport & Storage 
+• Clinker Finish Mills
+• Cement Storage and Shipping with Bag Packing
+• Dried Biosolids Related Processes
+• Emergency Generator
+The data switching for the scenarios for ordinary Portland cement, Portland-limestone cement, and the 
+coal and alternative fuels are implemented using Excel’s IF function on the cells of the inventory sheet 
+highlighted in Figure 6 (also see the ‘INVENTORY’ sheet of the quantitative data spreadsheet). Relevant 
+inventory data and impact assessment factors are sourced from data on power consumption and expert 
+opinion at the Union Bridge plant of Lehigh Cement, documentation from the parent company Heidelberg 
+Materials, calculation by coefficients and derivations from secondary data sources including libraries and 
+databases from literature listed in notes, and amongst the sources listed in the ‘SOURCE GUIDE’ sheet of 
+the quantitative datasheet in the supplementary material. Electricity from the national grid powers the 
+crushing, grinding, conveying, and machine operation. Coal is used to generate the thermal energy required 
+for the calcination process. This study also models production using thermal energy from the combustion 
+of biosolids from treated sewage sludge from the Hampstead Waste Water Treatment Center in Carroll 
+County, where the Lehigh Cement plant is situated. Dried biosolids are typically made from sewage sludge 
+by maceration, pressurization, heating, decarboxylation reaction, and drying.
+3.2.1.3 Life Cycle Impact Modeling
+The attributional LCA approach described in [76] was adopted for this demonstration. This approach 
+does not analyze the indirect consequences of the product's manufacture. It is generally restricted to using 
+average impact data to allocate the environmental impacts of factors in the product's life cycle stages. The 
+impact assessment factors are limited to the climate change impact category considered for this study (see 
+the quantitative data spreadsheet's 'Impact Assessment' sheet). Carbon dioxide (CO2), methane (CH4), and 
+nitrous oxide (N2O) are the relevant gases related to the greenhouse effect. However, the relative 
+33
+contribution of CO2 predominates, being between 98.8% and 100%, because it is emitted at much higher 
+quantities than the other gases [77]. Therefore, emissions from methane and nitrous oxide were excluded 
+from this LCI.
+Figure 6. Subsection of the Inventory sheet in the LCA
+3.2.2 Techno-economic Assessment
+The techno-economic assessment of the introduction of new technology or process is an important step 
+when aiming to set a large-scale process, especially at the industrial level. To assess the economic viability 
+of the change, TEA combines process modeling and engineering design with economic evaluation. TEA is 
+apt for assessing decarbonization efforts from emission reduction methods in cement production. 
+System dynamics are considered suitable for handling the complexities of understanding the economic 
+behavior of CCU technologies. Apart from investments and operational costs, other factors such as 
+government policies, market conditions, material and information delays, and the feedback process in the 
+supply chain impact the economic behavior of CCU technologies [78]. In the referenced article, the authors 
+simulated indirect carbonation using different hydroxides as absorbent precursors to reduce CO2 emissions 
+in clinker production. They performed an analysis of the CO2 captured using a system dynamics model. 
+34
+They determined that CO2 capture costs 65 to 140 USD/tCO2 in the carbonation process and that a tax 
+policy of 80 USD/tCO2 or more will encourage the implementation of CO2 capture.
+In another assessment, the authors in [79] evaluated two Calcium Looping (CaL) processes for 
+capturing CO2 in cement plants – the first integrates the CaL in the cement kiln at the tail-end such that the 
+placement of the CO2 capture process is downstream in the clinker burning line and with fluidized bed 
+reactors (CaO-rich sorbent). The other process integrates the CaL system with entrained flow reactors in 
+which the carbonator is integrated with the preheater of the clinker burning line, treating only the flue gas 
+from the rotary kiln. In their analysis, the authors determined that the tail-end and integrated CO2 capture 
+processes increased the cost of cement by 67% and, 74%, respectively, while the cost of CO2 avoided was 
+52 EUR/tCO2 and 58.6 EUR tCO2, respectively. Example metrics of emissions captured and the related cost 
+of leveraging oxy-combustion with calcium looping vary from 94% emissions captured at $17/tCO2 [80] 
+to 60% emissions captured at $40.6/tCO2 [81]. 
+The following are instrumental to reducing cement prices and CO2 emissions: carbon tax, CO2 capture 
+efficiency, cost-effective and energy-efficient amine blend, energy penalty, and CO2 sales price [82]. Even 
+with the opportunities for CO2 capture from the process emissions from calcination, which by concession 
+from literature accounts for about 60% of cement production emissions, the cement industry is cautious 
+about incorporating new technology that might affect clinker composition [83]. Therefore, alternative fuels 
+with lower carbon footprints and technologies leading to lower energy requirements for heat generation for 
+the kiln are also assessed for their economic viability at an industrial scale. The thermal energy (about 3.2 
+– 6.3 GJ per ton of clinker) required for cement production is provided by fossil fuels such as petroleum 
+coke, natural gas, and coal. Alternative fuels considered in literature for cement production include tirederived fuels, commercial and industrial wastes, sewage sludge, meat and bone meal produced from 
+slaughterhouse residue, agricultural biomass, and spent pot linings [84].
+In a study exploring the economic feasibility of a waste recovery system that captures radiation emitted 
+from the surface of a rotary kiln [85], the authors determined that for markets with electricity costing as 
+much as 0.1 USD/kWh, the method could yield as much as 5% return on investment (ROI) or net present 
+35
+value of $0.06 million. The authors evaluated the system by combining computational fluid dynamics 
+simulations with process modeling, including mass, energy, and exergy balances
+3.2.2.1 Techno-economic assessment method
+Process costs for the estimated annual production of 2 million tons of cement at Lehigh Cement plant 
+were considered in the techno-economic assessment. It evaluates the leading economic indicators, such as 
+capital and cement production costs, including raw material, energy, property, plant, and equipment. Figure 
+3 is a summary table and pie chart for TEA indicators showing the distribution of overhead costs for the 
+annual production of 2 million tons of ordinary Portland cement using coal for thermal energy. Equipment 
+cost estimation was conservatively deduced from the acquisition cost of machines without accounting for 
+freight, installation and taxes, and other capitalizable costs. Local pricing of production materials was used 
+where available and national averages were adopted in other inputs. For instance, $0.1396/kWh, the average 
+electricity price in Maryland [86], was adopted for electricity (see electricity cost sensitivity analysis in 
+Section 3.3). In contrast, coal and dried biosolids' national average sales price was used.
+Figure 7. TEA Indicator estimates for annual production in the “OPC + Coal” scenario
+36
+Using actual vendor quotes is recommended for TEA accuracy. However, ballpark estimates for TEA 
+parameters such as energy and raw material pricing are sufficient for hotspot analysis and for generating 
+order-of-magnitude estimations [87]. It should be noted that this study is focused on demonstrating the 
+implementation of the continuous assessment and improvement framework; practitioners that adopt this 
+framework for business decisions are encouraged to use actual vendor-provided quotes for their 
+implementation.
+3.2.3 Continuous assessment and improvement deployment framework
+Secured deployment of IoT-enabled solutions in the cement industry is drawing the attention of 
+stakeholders because of the significant value in cost reduction, the increased efficiency, and the greater 
+visibility that IoT devices can provide. IoT-related technologies have been explored in the following areas 
+with trials in the cement industry:
+• Secured deployment [88]
+• Event tracking in supervisory control and data acquisition system [89]
+• Fuzzy logic-based flame image processing for rotary kiln temperature control [90]
+• IoT-regulated moisture sensor [91]
+• Real-time carbon dioxide monitoring based on IoT cloud technologies – MQ135 carbon dioxide 
+sensor, ESP8266 Wi-Fi module, Firebase cloud storage service, and Android application [92]
+Figure 8 is a simplified depiction of the use of connected devices in the production of Portland cement 
+through the dry method. Sensors measure raw materials from the quarry for quality, moisture, and pH value. 
+Transportation of raw materials to the plant is tracked to measure cost and related emissions. Energy 
+requirements of the crushers, fuel consumption, and CO2 emission due to calcination at the kiln, moisture 
+level, temperature, and coolers and grinders’ energy consumption are all measured and then transmitted to 
+cloud-based servers through a gateway device.
+37
+Figure 8. IoT-enabled cement production
+CCUS pathways that need early-stage economic and environmental performance assessment template 
+development were identified in the work in [55]. The authors synthesized existing guidelines and 
+approaches into actual templates that can be adopted for early-stage LCA and TEA. These templates are 
+editable with a programming language with Excel handling libraries to enable database integration, 
+sensitivity and uncertainty analysis, and advanced visualizations for decision-making. Python programming 
+language has several open-source libraries for Excel and can be adopted for integrating LCA and TEA 
+templates [93]. In addition, the required scripting, macros, and user-defined functionalities are available in 
+the free version of the open-source Python library Xlwings, which also supports Numpy arrays, Pandas 
+Series, and DataFrames on Windows and macOS.
+Figure 9 shows the schematic diagram of a continuous assessment and improvement framework for 
+analyzing the environmental and economic impact of a cement production process improvement and 
+feeding back data-informed decisions for managing the plant. In this framework, data is transmitted from 
+the IoT-enabled cement plant to the cloud data platform via gateway devices that connect the disparate 
+networks and translate communications from one protocol to another, thus allowing bidirectional data flow 
+between the cloud and the IoT devices at the cement plant.
+38
+Figure 9. Continuous assessment and improvement framework
+The cloud services include computing infrastructure, platforms, and cloud-native applications that 
+facilitate data flow from IoT sensors to storage and data processing platform. Integration with a data 
+warehouse is seamless with connectors and APIs, giving the platform access to life cycle inventory 
+databases and other economic and operations data required for analysis in near real-time or batch processes. 
+Relevant metrics measured from the cement plant are inserted into the LCA and TEA templates with Python 
+installed on the platform. Similarly, the metrics are fed into sensitivity analysis and data visualization with 
+Python. Economic and environmental improvement insights drawn out of these are used for business 
+decisions, reporting for compliance, and as feedback for improving the production process.
+3.3 LCA – TEA Results and Discussion
+3.3.1 Impacts Analysis
+Assessing the impact of the significant drivers of CO2 emission for the four scenarios highlights the 
+possible carbon reduction potentials of materials efficiencies from producing Portland-limestone cement to 
+replace ordinary Portland cement and adopting dried biosolids as a thermal energy alternative to coal. Figure 
+10 shows the impact assessment results from the "OPC + Coal" scenario, estimating the contributions of 
+the major drivers to climate change when using coal for thermal heating to manufacture ordinary Portland 
+cement at the plant. Based on this impact assessment, calcination leads to more than half of process 
+39
+emissions (about 54%), with the emissions attributable to combustion comprising most of the remaining 
+emissions burden (about 40%). The emission from the other drivers, such as electricity, water, and 
+transportation, contribute an estimated 6% of process emissions. 
+The production of a ton of ordinary Portland cement with thermal energy from coal is estimated to 
+result in a global warming potential (GWP) of 856 kg CO2-eq. 100-year time horizon GWP, as provided by 
+Intergovernmental Panel on Climate Change [94], gives a standard unit of measure of how much energy 
+the emissions of a ton of a gas will absorb over some time relative to the emissions of a ton of carbon 
+dioxide, the gas used as a reference.
+The estimate of climate change contribution by drivers varies under different scenarios, such as the 
+production of Portland-limestone cement and the use of dried biosolids. Table 4 summarizes the climate 
+change driver contributions in these scenarios. The results indicate the potential of reducing greenhouse gas 
+emissions from 856 kg CO2-eq per ton of ordinary Portland cement using coal for heating, to 788 kg CO2-
+eq per ton of Portland-limestone cement using dried biosolids for heating. This is an opportunity for a 7.9% 
+reduction in CO2 emission from material efficiency.
+Figure 10. Summary and pie chart for LCA impact assessment
+40
+Table 4. Summary of climate change driver contributions for four raw material scenarios
+# Scenario Calcination Combustion Others GWP 
+(kg CO2 eq)
+1. OPC + Coal 54.3% 39.6% 6.1% 856
+2. OPC + DBS 55.1% 38.7% 6.2% 844
+3. PLC + Coal 51.3% 42.4% 6.4% 801
+4. PLC + DBS 52.1% 41.1% 6.5% 788
+OPC = Ordinary Portland Cement DBS = Dried Biosolids
+PLC = Portland-limestone Cement GWP = Global Warming Potential
+GWP 100 = 100-year time horizon GWP provided by the IPCC 2013 Fifth Assessment Report [94]
+Portland-limestone blended cement, which has additional limestone used as an ingredient amounting 
+to about 15% of the mass, has reduced calcination and fuel combustion CO2 emissions when compared to 
+ordinary Portland cement. The assessment indicates that the production of the blended cement has a 6.4% 
+lower carbon footprint than the production of the ordinary Portland cement at the Lehigh Cement plant at 
+Union Bridge, reducing emissions from 856 kg CO2-eq/t to 801 kg CO2-eq/t. Going by annual production 
+of 2 million tons of cement, the switch to the Portland-limestone cement positions the plant to avoid 
+approximately 123,000 tons of carbon dioxide emissions annually. This could be a cost more than $3million 
+if there were a tax of $25/ton. In 2022 carbon tax rates in the United Kingdom was $24/ton and as high as 
+$137/ton in Uruguay [95]. Using renewable energy sources for electricity to power the crushers and grinders 
+would further reduce the climate change arising from process electricity use. However, we need to be 
+circumspect when interpreting data for impact categories because emerging LCA impact categories and 
+inventory items are still under development, can vary depending on the source of data and specific situations 
+in the analysis, and can have high levels of uncertainty that preclude acceptance pending further 
+development.
+Using a continuous emission monitoring system (CEMS) is vital for emission data input in 
+implementing the continuous assessment and improvement framework. CEMS is the equipment required 
+to determine the gas concentration or emission rate. It is required for some United States Environmental 
+Protection Agency regulations for continual compliance or to determine if emission standards are exceeded. 
+41
+CEMS use pollutant analyzer measurements and a conversion equation, graph, or computer program to 
+produce results in units of the applicable emission limitation or standard [96].
+3.3.2. Economic Analysis
+The economic analysis is premised on the annual production of 2 million tons of cement at Lehigh 
+Cement’s Union Bridge plant. Based on the indicator summary, the estimated optimal cost of producing a 
+ton of ordinary Portland cement using coal is $58.69. However, producing similarly performant Portlandlimestone cement using dried biosolids can reduce this cost by 10.87% to $52.31/ton (see the ‘Indicators’ 
+and ‘Inventory’ sheets of the quantitative data spreadsheet in supplementary material).
+The sensitivity analysis of the production volume of cement at the plant indicates that given the 
+estimated data points, the cost-optimal production volume is 2.4 million tons at the cost of $58.6/ton. Figure 
+11 plots the manufacturing cost sensitivity of ordinary Portland cement to the production volume at the 
+plant. The inflection point on the cost is at an annual production volume of 800,000 tons.
+Figure 11. Cost sensitivity to production volumes
+In addition, sensitivity analysis of the cost of electricity indicates that production cost increases by 12% 
+to $65.77 when cost of electricity goes up from $0.15/kWh to $0.33/kWh. September 2021 average costs 
+of electricity in US states ranged from $0.10 in Arkansas to $0.33 in Hawaii [97]. Figure 12 is a plot of 
+manufacturing cost sensitivity to the cost of electricity. Distance from the quarry to the plant can also impact 
+Inflection Point
+42
+the cost of production due to the increase in transportation costs. However, the cost in this analysis is 
+premised on the proximity of the New Windsor quarry to the cement plant. The crushed material from the 
+quarry is transported to the cement plant via 4.5 miles-long overland conveyor.
+The uncertainty analysis indicates that the number of personnel available on work shifts did not 
+significantly affect the cost of production because plant personnel cost is only 0.2% of the cost of 
+production. However, fluctuations in the cost of other raw materials can impact the cost of production
+Figure 12. Production cost sensitivity to electricity cost
+Figure 13 plots the cost sensitivities to production volumes for the four production scenarios highlighted 
+in Table 4. It visually compares the cost sensitivity to production volume using the different production 
+inputs in the four scenarios. The visualization was created using the subplot() function in Matplotlib that 
+enables drawing multiple graphs in a single plot. Matplotlib is a comprehensive Python library for creating 
+static, animated, and interactive visualizations [98].
+The plots have a similar shape with declining cost/ton as production volume increases until the point 
+of inflection when cost/ton remains stable despite further production increases. Notice, however, that 
+production cost is lower in the scenarios where thermal heat is provided from the combustion of dried 
+biosolids. The model uses fair market pricing for dried biosolids made from drying sewage sludge with a 
+heating value of approximately 7,000 Btu/lb. The economic analysis can be expanded to include the capital 
+43
+investment required to dry the sewage sludge if it is within the boundary of the analysis for a production 
+plant that produces its alternative fuel as part of the circular economic process.
+Figure 13. Plots of cost sensitivity to production volumes in four production scenarios
+3.3.3. The Deployment Framework
+This study contributes to developing practical approaches to integrating sustainability into cement 
+production. It addresses integrating economic and environmental impact assessments into cement 
+production operations. The framework can facilitate the dynamic implementation of sustainability 
+innovations and the continuous measurement of their performance. Beyond mere rhetoric, cement 
+manufacturers that have made a public commitment to fighting climate change can leverage this 
+deployment framework in whole, or parts, to be on their way to meeting their emission reduction targets. 
+This is demonstrated using production scenarios at a US cement plant.
+The continuous assessment and improvement deployment framework enables dynamic management of 
+production inputs to optimize the cost of production and reduce carbon emissions. The problem is expressed 
+44
+as a minimization of production cost by defining it as a linear function subject to linear constraints. The 
+constraints considered include the demand for cement types, the cost, and availability of raw materials such 
+as alternative fuels, emission compliance requirements, and the company's commitment to lower emissions. 
+The computation is executed as a linear programming problem to find the feasible region and optimal 
+solution. Data to define the linear constraints based on cost, availability, operational policies, and 
+compliance are pulled from readings at the plant and supplied interactively by process managers. Complex 
+computations and graphical representations of the information are enabled by leveraging appropriate 
+libraries and APIs in the cloud platform. Insights thus generated aid decision-making and position the 
+cement plant as a dynamic, innovative, and responsible business committed to its operations' sustainability 
+and open to rapid testing and experimentation.
+The framework has opportunities for further optimization. It can also be coupled with other business 
+operation and reporting systems to source actual operations and financial metrics as input data and directly 
+supply needed information to the other systems. Business uncertainties such as raw material price volatility 
+can be quantified using Python libraries for Monte Carlo simulation.

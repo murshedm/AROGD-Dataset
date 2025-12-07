@@ -1,0 +1,1405 @@
+CS 4501/6501 Interpretable
+Machine Learning
+Neural Networks and Deep Learning
+Yangfeng Ji
+Department of Computer Science
+University of Virginia
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+Overview
+1. What is a white box looks like?
+2. What is a neural network?
+3. Why we need neural network models?
+4. Why neural network is a black box?
+1
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+What is a white box looks like?
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+Linear Models
+Directly modeling a linear classiﬁer as
+ℎ푦(풙) = 풘T
+푦풙+ 푏푦
+(1)
+▶풙∈ℕ푉: vector, bag-of-words representation
+▶풘푦∈ℝ푉: vector, classiﬁcation weights associated with label 푦
+▶푏푦∈ℝ: scalar, label bias in the training set 푦
+3
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+Logistic Regression
+Rewrite the linear decision function in the log probabilistic form
+log 푃(푦| 풙) ∝풘T
+푦풙+ 푏푦
+|     {z     }
+ℎ푦(풙)
+(2)
+4
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+Logistic Regression
+Rewrite the linear decision function in the log probabilistic form
+log 푃(푦| 풙) ∝풘T
+푦풙+ 푏푦
+|     {z     }
+ℎ푦(풙)
+(2)
+or, the probabilistic form is
+푃(푦| 풙) ∝exp(풘T
+푦풙+ 푏푦)
+(3)
+4
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+Logistic Regression
+Rewrite the linear decision function in the log probabilistic form
+log 푃(푦| 풙) ∝풘T
+푦풙+ 푏푦
+|     {z     }
+ℎ푦(풙)
+(2)
+or, the probabilistic form is
+푃(푦| 풙) ∝exp(풘T
+푦풙+ 푏푦)
+(3)
+To make sure 푃(푦| 풙) is a valid deﬁnition of probability, we need to
+make sure Í
+푦푃(푦| 풙) = 1,
+푃(푦| 풙) =
+exp(풘T
+푦풙+ 푏푦)
+Í
+푦′∈Yexp(풘T
+푦′풙+ 푏푦′)
+(4)
+4
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+Alternative Form
+Rewriting 풙and 풘as
+▶풙T = [푥1, 푥2, · · · , 푥푉, 1]
+▶풘T
+푦= [푤1, 푤2, · · · , 푤푉, 푏푦]
+allows us to have a more concise form
+푃(푦| 풙) =
+exp(풘T
+푦풙)
+Í
+푦′∈Yexp(풘T
+푦′풙)
+(5)
+5
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+Alternative Form
+Rewriting 풙and 풘as
+▶풙T = [푥1, 푥2, · · · , 푥푉, 1]
+▶풘T
+푦= [푤1, 푤2, · · · , 푤푉, 푏푦]
+allows us to have a more concise form
+푃(푦| 풙) =
+exp(풘T
+푦풙)
+Í
+푦′∈Yexp(풘T
+푦′풙)
+(5)
+Comments:
+▶
+exp(푎)
+Í
+푎′ exp(푎′) is the softmax function
+▶This form works with any size of Y— it does not have to be a
+binary classiﬁcation problem.
+5
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+Binary Classiﬁer
+Assume Y = {neg, pos}, then the corresponding logistic regression
+classiﬁer with 푌= Pos is
+푃(푌= Pos | 풙) =
+1
+1 + exp(−풘T풙)
+(6)
+where 풘is the only parameter.
+6
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+Binary Classiﬁer
+Assume Y = {neg, pos}, then the corresponding logistic regression
+classiﬁer with 푌= Pos is
+푃(푌= Pos | 풙) =
+1
+1 + exp(−풘T풙)
+(6)
+where 풘is the only parameter.
+▶푃(푌= Neg | 풙) = 1 −푃(푌= Pos | 풙)
+6
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+Binary Classiﬁer
+Assume Y = {neg, pos}, then the corresponding logistic regression
+classiﬁer with 푌= Pos is
+푃(푌= Pos | 풙) =
+1
+1 + exp(−풘T풙)
+(6)
+where 풘is the only parameter.
+▶푃(푌= Neg | 풙) = 1 −푃(푌= Pos | 풙)
+▶
+1
+1+exp(−푧) is the Sigmoid function
+6
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+Two Questions on Building LR Models
+... of building a logistic regression classiﬁer
+푃(푦| 풙) =
+exp(풘T
+푦풙)
+Í
+푦′∈Yexp(풘T
+푦′풙)
+(7)
+▶How to learn the parameters 푾= {풘푦}푦∈Y?
+7
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+Two Questions on Building LR Models
+... of building a logistic regression classiﬁer
+푃(푦| 풙) =
+exp(풘T
+푦풙)
+Í
+푦′∈Yexp(풘T
+푦′풙)
+(7)
+▶How to learn the parameters 푾= {풘푦}푦∈Y?
+▶Can 풙be better than the bag-of-words representations?
+7
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+Review: (Log)-likelihood Function
+With a collection of training examples {(풙(푖), 푦(푖))}푚
+푖=1, the likelihood
+function of {풘푦}푦∈Y is
+퐿(푾) =
+푚
+Ö
+푖=1
+푃(푦(푖) | 풙(푖))
+(8)
+and the log-likelihood function is
+ℓ({풘푦}) =
+푚
+Õ
+푖=1
+log 푃(푦(푖) | 풙(푖))
+(9)
+8
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+Log-likelihood Function of a LR Model
+With the deﬁnition of a LR model
+푃(푦| 풙) =
+exp(풘T
+푦풙)
+Í
+푦′∈Yexp(풘T
+푦′풙)
+(10)
+the log-likelihood function is
+ℓ(푾)
+=
+푚
+Õ
+푖=1
+log 푃(푦(푖) | 풙(푖))
+(11)
+=
+푚
+Õ
+푖=1
+
+풘T
+푦(푖)풙(푖) −log
+Õ
+푦′∈Y
+exp(풘T
+푦′풙(푖))	
+(12)
+Given the training examples {(풙(푖), 푦(푖))}푚
+푖=1, ℓ(푾) is a function of
+푾= {풘푦}.
+9
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+Optimization with Gradient
+MLE is equivalent to minimize the Negative Log-Likelihood (NLL) as
+NLL(푾)
+=
+−ℓ(푾)
+=
+푚
+Õ
+푖=1
+
+−풘T
+푦(푖)풙(푖) + log
+Õ
+푦′∈Y
+exp(풘T
+푦′풙)	
+then, the parameter 풘푦associated with label 푦can be updated as
+풘푦←풘푦−휂·
+휕NLL({풘푦})
+휕풘푦
+,
+∀푦∈Y
+(13)
+where 휂is called learning rate.
+10
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+Optimization with Gradient (II)
+Two questions answered by the update equation
+(1) which direction?
+(2) how far it should go?
+[Jurafsky and Martin, 2022]
+11
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+Optimization with Gradient (II)
+Two questions answered by the update equation
+(1) which direction?
+(2) how far it should go?
+풘푦←풘푦−
+휂
+|{z}
+(2)
+·
+휕NLL({풘푦})
+휕풘푦
+|           {z           }
+(1)
+(14)
+[Jurafsky and Martin, 2022]
+11
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+Optimization with Gradient (II)
+Two questions answered by the update equation
+(1) which direction?
+(2) how far it should go?
+풘푦←풘푦−
+휂
+|{z}
+(2)
+·
+휕NLL({풘푦})
+휕풘푦
+|           {z           }
+(1)
+(14)
+[Jurafsky and Martin, 2022]
+11
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+Training Procedure
+Steps for parameter estimation, given the current parameter {풘푦}
+1. Compute the derivative
+휕NLL({풘푦})
+휕풘푦
+,
+∀푦∈Y
+2. Update parameters with
+풘푦←풘푦−휂·
+휕NLL({풘푦})
+휕풘푦
+,
+∀푦∈Y
+3. If not done, return to step 1
+12
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+Neural Network Demo
+A simple demo with 2-dimensional inputs
+https://phiresky.github.io/neural-network-demo/
+13
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+Sentiment Classiﬁcation
+A few training examples from Yelp Review
+Label
+Text
+5
+Love the staff, love the meat, love the place.
+Prepare for a long line around lunch or dinner
+hours ...
+5
+Super simple place but amazing nonetheless. It’s
+been around since the 30’s and they still serve
+the same thing ...
+14
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+Sentiment Classiﬁcation
+A few training examples from Yelp Review
+Label
+Text
+5
+Love the staff, love the meat, love the place.
+Prepare for a long line around lunch or dinner
+hours ...
+5
+Super simple place but amazing nonetheless. It’s
+been around since the 30’s and they still serve
+the same thing ...
+1
+Actually I would like to give them a big fat zero.
+Any vet’s office that would tell ...
+14
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+Sentiment Classiﬁcation
+A few training examples from Yelp Review
+Label
+Text
+5
+Love the staff, love the meat, love the place.
+Prepare for a long line around lunch or dinner
+hours ...
+5
+Super simple place but amazing nonetheless. It’s
+been around since the 30’s and they still serve
+the same thing ...
+1
+Actually I would like to give them a big fat zero.
+Any vet’s office that would tell ...
+2
+OK so first off the the burger was great as far as
+the taste. But I got super sick after eating it
+...
+14
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+Classiﬁcation Conﬁguration and Performance
+Vocabulary size
+17,490
+Training size
+40K
+Development size
+5K
+Classiﬁer
+Logistic regression
+Regularization parameter
+퐶= 1
+Training accuracy
+88.48%
+Development accuracy
+61.22%
+You can ﬁnd the demo code via the link
+15
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+Interpretability: Global
+rating
+features
+1
+worst awful horrible disgusting disgusted joke terrible
+zero luck pathetic
+2
+meh mediocre tacky nope renovations cheddar sand-
+which underwhelmed passable tasteless
+16
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+Interpretability: Global
+rating
+features
+1
+worst awful horrible disgusting disgusted joke terrible
+zero luck pathetic
+2
+meh mediocre tacky nope renovations cheddar sand-
+which underwhelmed passable tasteless
+3
+feelings mains healthier remind hearty bleu overrated
+unsure smelling rules
+16
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+Interpretability: Global
+rating
+features
+1
+worst awful horrible disgusting disgusted joke terrible
+zero luck pathetic
+2
+meh mediocre tacky nope renovations cheddar sand-
+which underwhelmed passable tasteless
+3
+feelings mains healthier remind hearty bleu overrated
+unsure smelling rules
+4
+default hankering drawback bojangles pleasantly hazel-
+nut customize gratuity excellent tremendously
+5
+phenomenal incredible amazing gem excellent pleas-
+antly hesitate master magniﬁcent spotless
+16
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+Interpretability: Local
+The prediction on the following is 5
+I love the service here , they ’ re on it !
+After pre-processing, we remove the high-frequency word I and the
+punctuation
+17
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+Interpretability: Local
+The prediction on the following is 5
+I love the service here , they ’ re on it !
+After pre-processing, we remove the high-frequency word I and the
+punctuation
+feature
+classification weight
+love
+0.85
+service
+0.04
+on
+0.01
+they
+-0.00
+it
+-0.02
+the
+-0.06
+re
+-0.13
+here
+-0.15
+17
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+What is a neural network?
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+Logistic Regression
+▶An uniﬁed form for 푦∈{−1, +1}
+푝(푌= +1 | 풙) =
+1
+1 + exp(−⟨풘, 풙⟩)
+(15)
+19
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+Logistic Regression
+▶An uniﬁed form for 푦∈{−1, +1}
+푝(푌= +1 | 풙) =
+1
+1 + exp(−⟨풘, 풙⟩)
+(15)
+▶The sigmoid function 휎(푎) with 푎∈ℝ
+휎(푎) =
+1
+1 + exp(−푎)
+(16)
+19
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+Graphical Representation
+▶A speciﬁc example of LR
+푝(푌= 1 | 풙) = 휎(
+4
+Õ
+푗=1
+푤푗풙·,푗)
+(17)
+▶The graphical representation of this LR model is
+푥1
+푥2
+푥3
+푥4
+Input
+layer
+푦
+Output
+layer
+20
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+Capacity of a LR
+Logistic regression gives a linear decision boundary
+푥1
+푥2
+21
+
+--------------------------------------------------------------------------------
+[End of Page 36]
+
+From LR to Neural Networks
+Build upon logistic regression, a simple neural network can be
+constructed as
+푧푘
+=
+휎(
+푑
+Õ
+푗=1
+푤(1)
+푘,푗푥·,푗)
+푘∈[퐾]
+(18)
+푃(푦= 1 | 풙)
+=
+휎(
+퐾
+Õ
+푘=1
+푤(표)
+푘푧푘)
+(19)
+▶풙∈ℝ푑: 푑-dimensional input
+▶푦∈{−1, +1} (binary classiﬁcation problem)
+22
+
+--------------------------------------------------------------------------------
+[End of Page 37]
+
+From LR to Neural Networks
+Build upon logistic regression, a simple neural network can be
+constructed as
+푧푘
+=
+휎(
+푑
+Õ
+푗=1
+푤(1)
+푘,푗푥·,푗)
+푘∈[퐾]
+(18)
+푃(푦= 1 | 풙)
+=
+휎(
+퐾
+Õ
+푘=1
+푤(표)
+푘푧푘)
+(19)
+▶풙∈ℝ푑: 푑-dimensional input
+▶푦∈{−1, +1} (binary classiﬁcation problem)
+▶{푤(1)
+푘,푖} and {푤(표)
+푘} are two sets of the parameters, and
+▶퐾is the number of hidden units, each of them has the same form
+as a LR.
+22
+
+--------------------------------------------------------------------------------
+[End of Page 38]
+
+Graphical Representation
+푥1
+푥2
+푥3
+푥4
+Input
+layer
+푧1
+푧2
+푧3
+푧4
+푧5
+Hidden
+layer
+푦
+Output
+layer
+▶Depth: 2 (two-layer neural network)
+▶Width: 5 (the maximal number of units in each layer)
+23
+
+--------------------------------------------------------------------------------
+[End of Page 39]
+
+Hypothesis Space
+The hypothesis space of neural networks is usually deﬁned by the
+architecture of the network, which includes
+▶the nodes in the network,
+▶the connections in the network, and
+▶the activation function (e.g., 휎)
+푥1
+푥2
+푥3
+푥4
+Input
+layer
+푧1
+푧2
+푧3
+푧4
+푧5
+Hidden
+layer
+푦
+Output
+layer
+24
+
+--------------------------------------------------------------------------------
+[End of Page 40]
+
+Other Activation Functions
+(a) Sign function
+25
+
+--------------------------------------------------------------------------------
+[End of Page 41]
+
+Other Activation Functions
+(a) Sign function
+(b) Tanh function
+25
+
+--------------------------------------------------------------------------------
+[End of Page 42]
+
+Other Activation Functions
+(a) Sign function
+(b) Tanh function
+(c)
+ReLU
+function
+[Jarrett et al., 2009]
+25
+
+--------------------------------------------------------------------------------
+[End of Page 43]
+
+Mathematical Formulation
+▶Element-wise formulation
+푧푘
+=
+휎(
+푑
+Õ
+푗=1
+푤(1)
+푘,푗푥푗)
+푘∈[퐾]
+(20)
+푃(푦= +1 | 풙)
+=
+휎(
+퐾
+Õ
+푘=1
+푤(표)
+푘푧푘)
+(21)
+26
+
+--------------------------------------------------------------------------------
+[End of Page 44]
+
+Mathematical Formulation
+▶Element-wise formulation
+푧푘
+=
+휎(
+푑
+Õ
+푗=1
+푤(1)
+푘,푗푥푗)
+푘∈[퐾]
+(20)
+푃(푦= +1 | 풙)
+=
+휎(
+퐾
+Õ
+푘=1
+푤(표)
+푘푧푘)
+(21)
+▶Matrix-vector formulation
+풛
+=
+휎(W풙)
+(22)
+푃(푦= +1 | 풙)
+=
+휎(풘T풛)
+(23)
+where W ∈ℝ퐾×푑and w ∈ℝ퐾
+26
+
+--------------------------------------------------------------------------------
+[End of Page 45]
+
+Network Architecture
+We are going to build a simple neural network for text classiﬁcation.
+It includes three layers as the previous example
+▶Input layer
+▶Hidden layer
+▶Output layer
+푥1
+푥2
+푥3
+푥4
+Input
+layer
+푧1
+푧2
+푧3
+푧4
+푧5
+Hidden
+layer
+푦
+Output
+layer
+27
+
+--------------------------------------------------------------------------------
+[End of Page 46]
+
+Example
+Consider the following special case, where we have a 4-dimensional
+BoW representation 풙∈ℝ4 and a weight matrix 푾∈ℝ5×4
+푾풙
+=
+
+0.1
+0.3
+0.7
+0.9
+0.2
+0.8
+0.3
+0.5
+0.4
+0.8
+0.6
+0.1
+0.7
+0.2
+0.9
+0.2
+0.4
+0.5
+0.8
+0.9
+
+·
+
+0
+1
+0
+1
+
+(24)
+(25)
+28
+
+--------------------------------------------------------------------------------
+[End of Page 47]
+
+Example
+Consider the following special case, where we have a 4-dimensional
+BoW representation 풙∈ℝ4 and a weight matrix 푾∈ℝ5×4
+푾풙
+=
+
+0.1
+0.3
+0.7
+0.9
+0.2
+0.8
+0.3
+0.5
+0.4
+0.8
+0.6
+0.1
+0.7
+0.2
+0.9
+0.2
+0.4
+0.5
+0.8
+0.9
+
+·
+
+0
+1
+0
+1
+
+(24)
+=
+
+0.3
+0.8
+0.8
+0.2
+0.5
+
++
+
+0.9
+0.5
+0.1
+0.2
+0.9
+
+(25)
+28
+
+--------------------------------------------------------------------------------
+[End of Page 48]
+
+Example
+Consider the following special case, where we have a 4-dimensional
+BoW representation 풙∈ℝ4 and a weight matrix 푾∈ℝ5×4
+푾풙
+=
+
+0.1
+0.3
+0.7
+0.9
+0.2
+0.8
+0.3
+0.5
+0.4
+0.8
+0.6
+0.1
+0.7
+0.2
+0.9
+0.2
+0.4
+0.5
+0.8
+0.9
+
+·
+
+0
+1
+0
+1
+
+(24)
+=
+
+0.3
+0.8
+0.8
+0.2
+0.5
+
++
+
+0.9
+0.5
+0.1
+0.2
+0.9
+
+(25)
+▶Each column vector in 푾corresponds one word in the BoW
+representation
+▶The column vectors can be considered as representations of
+words, in other words, word embeddings
+28
+
+--------------------------------------------------------------------------------
+[End of Page 49]
+
+Output Layer
+For the same text classiﬁcation task, we use the following
+conﬁguration:
+▶Input dimension: 풙∈ℝ17퐾
+▶Hidden layer: 풉∈ℝ32
+▶Output layer: 푦∈{1, . . . , 5}
+You can ﬁnd an extremely simple implementation via the same link,
+the dev accuracy is 65%
+29
+
+--------------------------------------------------------------------------------
+[End of Page 50]
+
+Why we need neural network mod-
+els?
+
+--------------------------------------------------------------------------------
+[End of Page 51]
+
+Distributed Representation
+▶Bag-of-words representations
+Vocab
+coffee
+love
+like
+· · ·
+tea
+you
+love
+(0
+1
+0
+· · ·
+0
+0)
+1I made up those numbers for illustration purpose
+31
+
+--------------------------------------------------------------------------------
+[End of Page 52]
+
+Distributed Representation
+▶Bag-of-words representations
+Vocab
+coffee
+love
+like
+· · ·
+tea
+you
+love
+(0
+1
+0
+· · ·
+0
+0)
+▶Distributed representations1
+love
+(0.1
+0.8
+-1.0
+0.3)
+1I made up those numbers for illustration purpose
+31
+
+--------------------------------------------------------------------------------
+[End of Page 53]
+
+Distributed Representation
+▶Bag-of-words representations
+Vocab
+coffee
+love
+like
+· · ·
+tea
+you
+love
+(0
+1
+0
+· · ·
+0
+0)
+like
+(0
+0
+1
+· · ·
+0
+0)
+▶Distributed representations1
+love
+(0.1
+0.8
+-1.0
+0.3)
+1I made up those numbers for illustration purpose
+31
+
+--------------------------------------------------------------------------------
+[End of Page 54]
+
+Distributed Representation
+▶Bag-of-words representations
+Vocab
+coffee
+love
+like
+· · ·
+tea
+you
+love
+(0
+1
+0
+· · ·
+0
+0)
+like
+(0
+0
+1
+· · ·
+0
+0)
+▶Distributed representations1
+love
+(0.1
+0.8
+-1.0
+0.3)
+like
+(0.2
+0.7
+-0.9
+0.3)
+1I made up those numbers for illustration purpose
+31
+
+--------------------------------------------------------------------------------
+[End of Page 55]
+
+Distributed Representation
+▶Bag-of-words representations
+Vocab
+coffee
+love
+like
+· · ·
+tea
+you
+love
+(0
+1
+0
+· · ·
+0
+0)
+like
+(0
+0
+1
+· · ·
+0
+0)
+▶Distributed representations1
+love
+(0.1
+0.8
+-1.0
+0.3)
+like
+(0.2
+0.7
+-0.9
+0.3)
+▶Distributed representations allow simple algebraic operations for
+semantic meanings
+▶E.g., the cosine value between two word embeddings measures
+their semantic similarity
+1I made up those numbers for illustration purpose
+31
+
+--------------------------------------------------------------------------------
+[End of Page 56]
+
+The Value of Diﬀerent Representations
+Diﬀerent representations lead to diﬀerent levels of challenge in
+machine learning
+32
+
+--------------------------------------------------------------------------------
+[End of Page 57]
+
+Advantage of Representation Learning
+Driven by supervision signals, the model can learn some task-speciﬁc
+information and encoded in word embeddings
+Similar advantage exists in any other supervised learning tasks
+[Bengio et al., 2013]
+33
+
+--------------------------------------------------------------------------------
+[End of Page 58]
+
+Neural Network as Universal Approximators
+Neural network as universal approximators
+▶With arbitrary width and bounded depth [Cybenko, 1989]
+▶With arbitrary depth and limited width [Kidger and Lyons, 2020]
+34
+
+--------------------------------------------------------------------------------
+[End of Page 59]
+
+Model Capacity via Function Composition
+A Toy Example about Function Composition:
+https://playground.tensorflow.org/
+35
+
+--------------------------------------------------------------------------------
+[End of Page 60]
+
+Model Capacity via Function Composition
+An example of function composition to extract high-level features
+[Goodfellow et al., 2016]
+36
+
+--------------------------------------------------------------------------------
+[End of Page 61]
+
+Why neural network is a black
+box?
+
+--------------------------------------------------------------------------------
+[End of Page 62]
+
+Is Neural Network a Black Box?
+Not exactly, we can analyze what it learns when the model is small
+38
+
+--------------------------------------------------------------------------------
+[End of Page 63]
+
+Example
+Model interpretability: model predictions can be interpreted as
+certain rules associated with inputs2
+This is equivalent to a logistic regression model
+2This is by no means a formal deﬁnition of interpretability
+39
+
+--------------------------------------------------------------------------------
+[End of Page 64]
+
+Example
+Model interpretability: model predictions can be interpreted as
+certain rules associated with inputs2
+This is equivalent to a logistic regression model
+2This is by no means a formal deﬁnition of interpretability
+39
+
+--------------------------------------------------------------------------------
+[End of Page 65]
+
+With a Simple Neural Network
+With randomly initialized weights (classifying all examples as
+negative), the neural network (with one hidden layer) can easily learn
+a classiﬁer with 100%
+40
+
+--------------------------------------------------------------------------------
+[End of Page 66]
+
+With a Simple Neural Network
+With randomly initialized weights (classifying all examples as
+negative), the neural network (with one hidden layer) can easily learn
+a classiﬁer with 100%
+With the visualization, it is not diﬃcult to identify the second and the
+third neurons are important.
+40
+
+--------------------------------------------------------------------------------
+[End of Page 67]
+
+Distributed Representations (II)
+With another set of randomly initialized weights (clasifying all
+examples as negative), the learned classiﬁer gives a very similar
+decision boundary
+41
+
+--------------------------------------------------------------------------------
+[End of Page 68]
+
+Distributed Representations (II)
+With another set of randomly initialized weights (clasifying all
+examples as negative), the learned classiﬁer gives a very similar
+decision boundary
+With the visualization, it is not diﬃcult to identify the second and the
+third neurons are important.
+41
+
+--------------------------------------------------------------------------------
+[End of Page 69]
+
+Distributed Representation (III)
+▶The contributions of the second and third neurons from the these
+two neural networks are contradicted with each other
+42
+
+--------------------------------------------------------------------------------
+[End of Page 70]
+
+Distributed Representation (III)
+▶The contributions of the second and third neurons from the these
+two neural networks are contradicted with each other
+▶Actually, it is still explainable, if we also consider the
+contribution from the previous layer
+42
+
+--------------------------------------------------------------------------------
+[End of Page 71]
+
+Try to Explain the Following Two Models?
+▶The neural network has more parameters than the task actually
+needs
+▶The contributions of hidden neurons are randomly distributed
+43
+
+--------------------------------------------------------------------------------
+[End of Page 72]
+
+Number of Layers
+Similar challenge for interpreting the contributions when we increase
+the number of layers
+44
+
+--------------------------------------------------------------------------------
+[End of Page 73]
+
+Number of Layers
+Similar challenge for interpreting the contributions when we increase
+the number of layers
+44
+
+--------------------------------------------------------------------------------
+[End of Page 74]
+
+Number of Layers
+Similar challenge for interpreting the contributions when we increase
+the number of layers
+44
+
+--------------------------------------------------------------------------------
+[End of Page 75]
+
+Number of Layers
+Similar challenge for interpreting the contributions when we increase
+the number of layers
+44
+
+--------------------------------------------------------------------------------
+[End of Page 76]
+
+Number of Layers
+Similar challenge for interpreting the contributions when we increase
+the number of layers
+44
+
+--------------------------------------------------------------------------------
+[End of Page 77]
+
+Question
+Can we train a neural network that maintains good performance and
+is also interpretable?
+45
+
+--------------------------------------------------------------------------------
+[End of Page 78]
+
+Reference
+Bengio, Y., Courville, A., and Vincent, P. (2013).
+Representation learning: A review and new perspectives.
+IEEE transactions on pattern analysis and machine intelligence, 35(8):1798–1828.
+Cybenko, G. (1989).
+Approximation by superpositions of a sigmoidal function.
+Mathematics of control, signals and systems, 2(4):303–314.
+Goodfellow, I., Bengio, Y., and Courville, A. (2016).
+Deep Learning.
+MIT Press.
+http://www.deeplearningbook.org.
+Jarrett, K., Kavukcuoglu, K., Ranzato, M., and LeCun, Y. (2009).
+What is the best multi-stage architecture for object recognition?
+In Proceedings of the 12th International Conference on Computer Vision, pages 2146–2153. IEEE.
+Jurafsky, D. and Martin, J. H. (2022).
+Speech and Language Processing.
+Online.
+Kidger, P. and Lyons, T. (2020).
+Universal approximation with deep narrow networks.
+In Conference on learning theory, pages 2306–2327. PMLR.
+46
+
+--------------------------------------------------------------------------------
+[End of Page 79]

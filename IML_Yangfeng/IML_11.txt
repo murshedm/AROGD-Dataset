@@ -1,0 +1,836 @@
+CS 4501/6501 Interpretable Machine Learning
+Hanjie Chen, Yangfeng Ji
+Department of Computer Science
+University of Virginia
+{hc9mx, yangfeng}@virginia.edu
+1
+Interpretation and Human Understanding
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+2
+Properties
+• Faithfulness to model
+How accurately an interpretation reflects the true reasoning process 
+of the model
+• Plausibility to humans
+How convincing the interpretation is to humans
+[Jacovi and Yoav, 2020]
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+3
+Properties
+• Faithfulness to model
+How accurately an interpretation reflects the true reasoning process 
+of the model
+• Plausibility to humans
+How convincing the interpretation is to humans
+-
+Generally, it is not easy to satisfy both 
+criteria because of the gap between model 
+reasoning and human understanding
+-
+Faithfulness is the primary criterion 
+[Jacovi and Yoav, 2020]
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+4
+Simulatability
+A model is simulatable when a person can predict its behavior on new inputs
+[Doshi-Velez and Kim, 2017]
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+5
+Simulatability
+A model is simulatable when a person can predict its behavior on new inputs
+[Doshi-Velez and Kim, 2017]
+Human-subject tasks
+• Forward simulation: given an input and an explanation, users must predict 
+what a model would output for the given input
+Input
+Output
+explanation
+?
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+6
+Simulatability
+A model is simulatable when a person can predict its behavior on new inputs
+[Doshi-Velez and Kim, 2017]
+• Counterfactual simulation: users are given an input, a model’s output for that 
+input, and an explanation of that output, and then they must predict what the 
+model will output when given a perturbation of the original input
+Human-subject tasks
+Input
+Output
+explanation
+Input
+Output
+?
+Perturbation
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+7
+Evaluating Explainable AI: Which Algorithmic 
+Explanations Help Users Predict Model Behavior?
+Peter Hase and Mohit Bansal
+(ACL, 2020)
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+8
+Problem
+• Forward simulation
+• Counterfactual simulation
+• Humans really understand model 
+prediction behavior?
+• Explanations give away the answers?
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+9
+Method
+•
+Separate the explained instances from the test instances to prevent explanations from giving away 
+the answers
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+10
+Method
+•
+Separate the explained instances from the test instances to prevent explanations from giving away 
+the answers
+•
+Evaluate the effect of explanations against a baseline where users see the same example data 
+points without explanations
+Baselines
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+11
+Method
+•
+Separate the explained instances from the test instances to prevent explanations from giving away 
+the answers
+•
+Evaluate the effect of explanations against a baseline where users see the same example data 
+points without explanations
+•
+Balance data by model correctness (users cannot succeed simply by guessing the true label)
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+12
+Method
+•
+Separate the explained instances from the test instances to prevent explanations from giving away 
+the answers
+•
+Evaluate the effect of explanations against a baseline where users see the same example data 
+points without explanations
+•
+Balance data by model correctness (users cannot succeed simply by guessing the true label) 
+•
+Force user predictions on every input (not favor some explanations)
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+13
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+14
+Explanations
+LIME [Ribeiro, 2016]
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+15
+Explanations
+LIME [Ribeiro, 2016]
+Anchors
+[Ribeiro, 2018]
+Local rule lists
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+16
+Explanations
+LIME [Ribeiro, 2016]
+Anchors
+[Ribeiro, 2018]
+Local rule lists
+Prototype
+𝑓𝑥! = max
+"!∈$" 𝑎𝑔𝑥, 𝑝%
+𝑐: class
+𝑃!: a set of prototype vectors
+𝑎: similarity function
+𝑔: a neural network
+𝐴𝑡𝑡𝑟𝑥& = 𝑓𝑥! −𝑓𝑥\(# !
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+17
+Explanations
+LIME [Ribeiro, 2016]
+Anchors
+[Ribeiro, 2018]
+Local rule lists
+Prototype
+𝑐: class
+𝑃!: a set of prototype vectors
+𝑎: similarity function
+𝑔: a neural network
+𝐴𝑡𝑡𝑟𝑥& = 𝑓𝑥! −𝑓𝑥\(# !
+Decision Boundary
+𝑓𝑥! = max
+"!∈$" 𝑎𝑔𝑥, 𝑝%
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+18
+Explanations
+LIME [Ribeiro, 2016]
+Anchors
+[Ribeiro, 2018]
+Local rule lists
+Prototype
+𝑐: class
+𝑃!: a set of prototype vectors
+𝑎: similarity function
+𝑔: a neural network
+𝐴𝑡𝑡𝑟𝑥& = 𝑓𝑥! −𝑓𝑥\(# !
+Decision Boundary
+Composite Approach
+Combine 
+LIME/Anchors/Prototy
+pe/Decision Boundary 
+𝑓𝑥! = max
+"!∈$" 𝑎𝑔𝑥, 𝑝%
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+19
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+20
+Experiments
+• Data and task models
+-
+Movie Reviews
+[Pang et al., 2002]
+Task: binary sentiment classification
+Model: hierarchical attention network
+[Yang et al., 2016]
+-
+Tabular Adult Data
+[Dua and Graff, 2017]
+Task: predict whether the annual income is more than $50,000
+Model: a neural network with two hidden layers
+[Ribeiro, 2018]
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+21
+Experiments
+• User pool
+-
+32 trained undergraduates who had taken at least one course in computer 
+science or statistics
+-
+gather over 2100 responses via in-person tests
+-
+screen out invalid responses (low scores in screening test, task completion 
+time is extremely low)
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+22
+Experiments
+• Forward simulation
+16 examples: labels, 
+model predictions, 
+no explanations
+Predict the model 
+output for 16/32 
+new examples
+First round (baseline)
+Second round
+The same examples: 
+labels, model predictions, 
+with explanations
+Predict the model 
+behavior again
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+23
+Experiments
+• Forward simulation
+16 examples: labels, 
+model predictions, 
+no explanations
+Predict the model 
+output for 16/32 
+new examples
+First round (baseline)
+Second round
+The same examples: 
+labels, model predictions, 
+with explanations
+Predict the model 
+behavior again
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+24
+Experiments
+• Counterfactual simulation
+Ask users to predict how a model will behave on a perturbation of a given data point
+Examples: labels, 
+model predictions, 
+no explanations, 
+perturbations
+(e.g., randomly substitute
+words with their neighbors)
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+25
+Experiments
+• Counterfactual simulation
+Ask users to predict how a model will behave on a perturbation of a given data point
+Examples: labels, 
+model predictions, 
+no explanations, 
+perturbations
+(e.g., randomly substitute
+words with their neighbors)
+The same examples 
+with explanations
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+26
+Experiments
+• Data Balancing
+-
+Goal : prevent users from succeeding on the tests simply by guessing the true label 
+-
+True positives, false positives, true negatives, and false negatives are equally represented
+-
+For the counterfactual test, there is a 50% chance that the perturbation receives the same 
+prediction as the original input
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+27
+Results
+Do explanations help users?
+Explanation effectiveness: 
+the difference in user
+accuracy across prediction 
+phases in simulation tests
+confidence interval
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+28
+Results
+Do explanations help users?
+• LIME improves simulatability with tabular data, while other methods do not 
+definitively improve simulatability in either domain
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+29
+Results
+Do explanations help users?
+• LIME improves simulatability with tabular data, while other methods do not 
+definitively improve simulatability in either domain
+• Even with combined explanations in the Composite method, no definitive 
+effects on model simulatability
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+30
+Results
+Do explanations help users?
+• LIME improves simulatability with tabular data, while other methods do not 
+definitively improve simulatability in either domain
+• Even with combined explanations in the Composite method, no definitive 
+effects on model simulatability
+Explanation methods may not 
+help users understand how 
+models will behave
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+31
+Results
+How do users rate explanations?
+Users rate each method on a 7-point scale, in response to the question, 
+“Does this explanation show me why the system thought what it did?”
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+32
+Results
+How do users rate explanations?
+Users rate each method on a 7-point scale, in response to the question, 
+“Does this explanation show me why the system thought what it did?”
+•
+Users rated explanations based on quality rather than model correctness
+•
+Ratings are generally higher for tabular data, relative to text data
+•
+The Composite and LIME methods receive the highest ratings
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+33
+Results
+Can users predict explanation effectiveness?
+Measure how explanation ratings relate to user correctness in the Post phase of 
+the counterfactual simulation test 
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+34
+Results
+Can users predict explanation effectiveness?
+Measure how explanation ratings relate to user correctness in the Post phase of 
+the counterfactual simulation test 
+There is no evidence that explanation ratings are predictive of user correctness
+Example:
+Rating: 4 -> 5
+Correctness: -2.9 ~ 5.2 percentage point change
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+35
+Qualitative Analysis
+• Explanation failure example
+Counterfactual !𝑦& = 𝑛𝑒𝑔: “A teary film, simple in form but vibrant 
+with devoid events.”
+Original !𝑦= 𝑝𝑜𝑠: “A bittersweet film, simple in form but rich with 
+human events.”
+Only 7 of 13 responses were correct after seeing explanations (with no 
+method improving correctness)
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+36
+Discussion
+• Forward tests stretch user memory
+Some users reported that it was difficult to retain insights from the learning 
+phase during later prediction rounds
+• Counterfactual examples are out of the data distribution 
+
+--------------------------------------------------------------------------------
+[End of Page 36]
+
+37
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 37]
+
+38
+Explain, Edit, and Understand: Rethinking User 
+Study Design for Evaluating Model Explanations
+Siddhant Arora, Danish Pruthi, Norman Sadeh, 
+WilliamW. Cohen, Zachary C. Lipton, Graham Neubig
+(AAAI, 2022)
+
+--------------------------------------------------------------------------------
+[End of Page 38]
+
+39
+Problem
+Doshi-Velez and Kim, 2017
+Forward simulation
+Counterfactual simulation
+Hase and Bansal, 2020
+Separate the explained instances from the test instances, compare with a baseline
+Explanations give away the answers
+
+--------------------------------------------------------------------------------
+[End of Page 39]
+
+40
+Problem
+Doshi-Velez and Kim, 2017
+Forward simulation
+Counterfactual simulation
+Hase and Bansal, 2020
+Separate the explained instances from the test instances, compare with a baseline
+Explanations give away the answers
+Stretch user memory, no 
+interaction between 
+users and models
+
+--------------------------------------------------------------------------------
+[End of Page 40]
+
+41
+Method
+• Provide participants with query access to the model
+Users can alter input documents to observe how model predictions and explanations 
+change in real time
+• Prompt participants to edit examples to reduce the model confidence 
+towards the predicted class
+
+--------------------------------------------------------------------------------
+[End of Page 41]
+
+42
+Interface
+
+--------------------------------------------------------------------------------
+[End of Page 42]
+
+43
+Research Questions
+• Which attribution techniques improve humans’ ability to guess the model 
+output, or edit the input examples to lower the model confidence?
+• Whether the interactive environment with query access to the models 
+makes it possible to distinguish the relative value of different attributions?
+
+--------------------------------------------------------------------------------
+[End of Page 43]
+
+44
+Experiments
+Training phase
+Test phase
+Participants first read the input example, and are challenged to guess the model prediction
+
+--------------------------------------------------------------------------------
+[End of Page 44]
+
+45
+Experiments
+Training phase
+Test phase
+Then participants see the model output, model confidence and an explanation
+
+--------------------------------------------------------------------------------
+[End of Page 45]
+
+46
+Experiments
+Training phase
+Test phase
+Prompt participants to edit the input text with a goal to lower the confidence of the model prediction
+
+--------------------------------------------------------------------------------
+[End of Page 46]
+
+47
+Experiments
+Training phase
+Test phase
+Prompt participants to edit the input text with a goal to lower the confidence of the model prediction
+Users can validate any 
+hypothesis about the 
+input-output associations
+
+--------------------------------------------------------------------------------
+[End of Page 47]
+
+48
+Experiments
+Training phase
+Test phase
+• Explanations are not available during testing
+• Similar to the training phase
+Eliminate concerns that the explanations might trivially leak the output
+• Iterative training and test 
+two training examples + one test example
+
+--------------------------------------------------------------------------------
+[End of Page 48]
+
+49
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 49]
+
+50
+A Case Study of Deception Detection
+• Task: distinguishing between fake and real hotel reviews
+[Ott et al., 2011]
+-
+Machine learning models perform much better than humans
+-
+Models may exploit subtle, unknown and possibly counter-intuitive 
+associations to drive prediction
+
+--------------------------------------------------------------------------------
+[End of Page 50]
+
+51
+A Case Study of Deception Detection
+• Task: distinguishing between fake and real hotel reviews
+[Ott et al., 2011]
+-
+Machine learning models perform much better than humans
+-
+Models may exploit subtle, unknown and possibly counter-intuitive 
+associations to drive prediction
+Explanations help humans in 
+understanding the input-output 
+associations that models exploit?
+
+--------------------------------------------------------------------------------
+[End of Page 51]
+
+52
+A Case Study of Deception Detection
+• What are permissible edits?
+-
+Participants cannot alter the staying experience conveyed through the hotel review
+-
+If the review is positive, negative or mixed, then the edited version should maintain that stance
+-
+Participants are allowed to paraphrase and can remove or change information not relevant to the 
+experience about the hotel
+“My husband and I” -> “We”
+Add “The staff was unfriendly”
+
+--------------------------------------------------------------------------------
+[End of Page 52]
+
+53
+A Case Study of Deception Detection
+• Model and explanations
+-
+Logistic regression
+-
+BERT
+Explanations: feature coefficients of unigram features
+Local explanations: LIME, IG
+Global explanations:
+Linear student model ≈BERT
+feature coefficients 
+
+--------------------------------------------------------------------------------
+[End of Page 53]
+
+54
+Results
+Do explanations help humans simulate models?
+Investigate if the query access to the model’s predictions and explanations during the 
+training phase enables participants to understand the models sufficiently to simulate its 
+output on unseen test examples
+
+--------------------------------------------------------------------------------
+[End of Page 54]
+
+55
+Results
+Do explanations help humans simulate models?
+Investigate if the query access to the model’s predictions and explanations during the 
+training phase enables participants to understand the models sufficiently to simulate its 
+output on unseen test examples
+No evidence of improved simulatability
+No explanations
+None of the explanations help 
+improve simulation accuracy
+
+--------------------------------------------------------------------------------
+[End of Page 55]
+
+56
+Results
+Do explanations help humans perform edits that reduce the model confidence?
+Examine if participants gain sufficient understanding during the training phase to perform 
+edits that cause the models to lower the confidence towards the originally predicted class
+
+--------------------------------------------------------------------------------
+[End of Page 56]
+
+57
+Results
+Do explanations help humans perform edits that reduce the model confidence?
+Examine if participants gain sufficient understanding during the training phase to perform 
+edits that cause the models to lower the confidence towards the originally predicted class
+Logistic regression coefficient 
+weights help participants reduce 
+the model confidence
+
+--------------------------------------------------------------------------------
+[End of Page 57]
+
+58
+Results
+Do explanations help humans perform edits that reduce the model confidence?
+Examine if participants gain sufficient understanding during the training phase to perform 
+edits that cause the models to lower the confidence towards the originally predicted class
+During the training phase, 
+users are able to flip more 
+predictions, however, this 
+ability does not transfer to 
+the test phase
+
+--------------------------------------------------------------------------------
+[End of Page 58]
+
+59
+Results
+Do explanations help humans perform edits that reduce the model confidence?
+Examine if participants gain sufficient understanding during the training phase to perform 
+edits that cause the models to lower the confidence towards the originally predicted class
+For the BERT model, neither 
+LIME nor IG help participants flip 
+more predictions or reduce 
+confidence at the test phase
+
+--------------------------------------------------------------------------------
+[End of Page 59]
+
+60
+Results
+Do explanations help humans perform edits that reduce the model confidence?
+Examine if participants gain sufficient understanding during the training phase to perform 
+edits that cause the models to lower the confidence towards the originally predicted class
+Global interpretations from the 
+linear student model help 
+participants flip more predictions 
+and reduce confidence
+
+--------------------------------------------------------------------------------
+[End of Page 60]
+
+61
+Results
+Do participants edit tokens highlighted as explanations? Are their edits effective?
+-
+Monitor whether participants are paying attention to the explanations, specifically by 
+measuring how they respond to highlighted words
+-
+Record the fraction of times edits are performed on a word that is among the top-20% 
+of highlighted words in a given input text
+
+--------------------------------------------------------------------------------
+[End of Page 61]
+
+62
+Results
+Do participants edit tokens highlighted as explanations? Are their edits effective?
+-
+Monitor whether participants are paying attention to the explanations, specifically by 
+measuring how they respond to highlighted words
+-
+Record the fraction of times edits are performed on a word that is among the top-20% 
+of highlighted words in a given input text
+Yes, participants edit the highlighted words significantly more often
+
+--------------------------------------------------------------------------------
+[End of Page 62]
+
+63
+Results
+Do participants edit tokens highlighted as explanations? Are their edits effective?
+-
+Monitor whether participants are paying attention to the explanations, specifically by 
+measuring how they respond to highlighted words
+-
+Record the fraction of times edits are performed on a word that is among the top-20% 
+of highlighted words in a given input text
+Yes, participants edit the highlighted words significantly more often
+The edits on the top-20% highlighted words 
+are effective in reducing model confidence?
+on the top-20% highlighted words
+-
+Yes, the edits on highlighted words are 
+more effective
+-
+IG and global interpretations are more 
+effective than LIME
+
+--------------------------------------------------------------------------------
+[End of Page 63]
+
+64
+Discussion
+• Separating learning and predicting phase is too challenging for humans 
+to understand model prediction behavior
+• The number of examples for learning is limited 
+
+--------------------------------------------------------------------------------
+[End of Page 64]
+
+65
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 65]
+
+66
+Reference
+•
+Jacovi, Alon, and Yoav Goldberg. "Towards faithfully interpretable NLP systems: How should we define and 
+evaluate faithfulness?." arXiv preprint arXiv:2004.03685 (2020).
+•
+Hase, Peter, and Mohit Bansal. "Evaluating explainable AI: Which algorithmic explanations help users predict 
+model behavior?." arXiv preprint arXiv:2005.01831 (2020).
+•
+Doshi-Velez, Finale, and Been Kim. "Towards a rigorous science of interpretable machine learning." arXiv
+preprint arXiv:1702.08608 (2017).
+•
+Arora, Siddhant, et al. "Explain, Edit, and Understand: Rethinking User Study Design for Evaluating Model 
+Explanations." arXiv preprint arXiv:2112.09669 (2021).
+•
+Marco Tulio Ribeiro, Sameer Singh, and Carlos Guestrin. 2018. Anchors: High-precision model agnostic 
+explanations. In AAAI Conference on Artificial Intelligence.
+
+--------------------------------------------------------------------------------
+[End of Page 66]

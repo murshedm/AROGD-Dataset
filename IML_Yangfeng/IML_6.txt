@@ -1,0 +1,1518 @@
+CS 4501/6501 Interpretable Machine Learning
+Hanjie Chen, Yangfeng Ji
+Department of Computer Science
+University of Virginia
+{hc9mx, yangfeng}@virginia.edu
+1
+Post-hoc explanations: gradient/attention-based methods
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+2
+Explaining Black-box Model
+Black Box
+Input
+Output
+𝒙
+𝒚
+Perturbation-based methods
+Interpreter
+•
+Model-agnostic (black-box)
+•
+Perturbing the input and observing 
+model prediction change
+•
+Extracting relationships between 
+input features and the output
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+3
+Explaining Black-box Model
+Black Box
+Input
+Output
+𝒙
+𝒚
+Perturbation-based methods
+Interpreter
+•
+Model-agnostic (black-box)
+•
+Perturbing the input and observing 
+model prediction change
+•
+Extracting relationships between 
+input features and the output
+•
+Applicable to any black-box models
+•
+Computational complexity
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+4
+Explaining Black-box Model
+Model
+Input
+Output
+𝒙
+𝒚
+Additional information from the model
+Interpreter
+•
+Model-dependent (white-box)
+•
+Additional information: gradients, 
+attentions
+•
+Simple, fast, efficient
+•
+Not applicable if no such 
+information available
+(gradients, attentions)
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+5
+Explaining Black-box Model
+• Gradient-based methods
+• Attention-based methods
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+6
+Gradient-based Explanation
+The gradient of a function 𝑓on 𝒙∈ℝ! is
+∇𝑓𝒙=
+𝜕𝑓
+𝜕𝑥"
+⋮
+𝜕𝑓
+𝜕𝑥!
+Source: https://towardsdatascience.com/basics-gradient-input-as-explanation-bca79bb80de0
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+7
+Gradient-based Explanation
+The gradient of a function 𝑓on 𝒙∈ℝ! is
+∇𝑓𝒙=
+𝜕𝑓
+𝜕𝑥"
+⋮
+𝜕𝑓
+𝜕𝑥!
+Source: https://towardsdatascience.com/basics-gradient-input-as-explanation-bca79bb80de0
+The derivative #$
+#%! indicates how 
+much 𝑓will change when 𝑥&
+increases a little bit
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+8
+Gradient-based Explanation
+Model 𝑓
+⋮
+𝑥"
+𝑥'
+𝑥!
+𝒙
+𝑓𝒙
+Gradient
+𝜕𝑓
+𝜕𝑥"
+𝜕𝑓
+𝜕𝑥!
+⋮
+⋮
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+9
+Gradient-based Explanation
+Model 𝑓
+⋮
+𝑥"
+𝑥'
+𝑥!
+𝒙
+𝑓𝒙
+Gradient
+𝜕𝑓
+𝜕𝑥"
+𝜕𝑓
+𝜕𝑥!
+⋮
+⋮
+Feature importance
+The influence of “tiny change” to the 
+feature on the model prediction
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+10
+Gradient-based Explanation
+Model 𝑓
+⋮
+𝑥"
+𝑥'
+𝑥!
+𝒙
+𝑓𝒙
+Gradient
+𝜕𝑓
+𝜕𝑥"
+𝜕𝑓
+𝜕𝑥!
+⋮
+⋮
+ü One backpropagation
+ü Simple, fast
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+11
+Gradient-based Explanation
+𝑥"
+𝑥'
+𝒙
+𝑥" is more important than 𝑥'
+∇!!𝑓
+∇!"𝑓
+ü Changing 𝑥! can flip the model prediction
+ü Changing 𝑥" would not influence the 
+model prediction
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+12
+Gradient-based Explanation
+Problem 1: saturated outputs lead to unintuitive gradients
+(Shrikumar et al., 2017)
+𝑦= ,𝑥" + 𝑥',
+𝑤ℎ𝑒𝑛𝑥" + 𝑥' < 1
+1,
+𝑤ℎ𝑒𝑛𝑥" + 𝑥' ≥1
+𝑥" + 𝑥'
+𝑦
+0
+1
+2
+1
+𝑥! = 1, 𝑥" = 1
+The gradient on 𝑥! or 𝑥" is 
+0, but that does not mean 
+neither is important
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+13
+Gradient-based Explanation
+Problem 2: discontinuous gradients (e.g., thresholding) are problematic
+(Shrikumar et al., 2017)
+𝑥
+𝑦
+0
+10
+𝑦= 𝑚𝑎𝑥0, 𝑥−10
+The gradient changes dramatically
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+14
+Gradient-based Explanation
+Problem 2: discontinuous gradients (e.g., thresholding) are problematic
+(Shrikumar et al., 2017)
+𝑥
+𝑦
+0
+10
+𝑦= 𝑚𝑎𝑥0, 𝑥−10
+The gradient changes dramatically
+Need to replace “Relu” with 
+“Softplus” activation
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+15
+Gradient-based Explanation
+Problem 3: input gradient is sensitive to slight perturbations
+𝑥"
+𝑥'
+𝒙
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+16
+Gradient-based Explanation
+Problem 3: input gradient is sensitive to slight perturbations
+(Smilkov et al., 2017)
+Input gradients are misleading, resulting in a noisy saliency map
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+17
+Gradient-based Explanation
+Do NOT rely on a single gradient calculation
+(Smilkov et al., 2017)
+• SmoothGrad: add gaussian noise to 
+inputs and average the gradients
+Source: EMNLP 2020 Tutorial on Interpreting Predictions of NLP Models
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+18
+Gradient-based Explanation
+Do NOT rely on a single gradient calculation
+(Smilkov et al., 2017)
+• SmoothGrad: add gaussian noise to 
+inputs and average the gradients
+Source: EMNLP 2020 Tutorial on Interpreting Predictions of NLP Models
+• Integrated Gradients: average gradients 
+along a path from baseline to the input
+(Sundararajan et al., 2017)
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+19
+Gradient-based Explanation
+Do NOT rely on a single gradient calculation
+(Smilkov et al., 2017)
+• SmoothGrad: add gaussian noise to 
+inputs and average the gradients
+Source: EMNLP 2020 Tutorial on Interpreting Predictions of NLP Models
+• Integrated Gradients: average gradients 
+along a path from baseline to the input
+(Sundararajan et al., 2017)
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+20
+IG
+Axiomatic Attribution for Deep Networks
+Mukund Sundararajan, Ankur Taly, Qiqi Yan
+(ICML, 2017)
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+21
+Two Fundamental Axioms
+• Sensitivity
+For every input and baseline that differ in one feature but have different 
+predictions then the differing feature should be given a non-zero attribution
+Input
+a
+clever
+piece
+of
+cinema
+𝒙!
+𝒙"
+𝒙#
+𝒙$
+𝒙%
+Baseline
+a
+clever
+piece
+of
+cinema
+𝒙!
+𝒙#
+𝒙$
+𝒙%
+Prediction
+Positive
+Negative
+𝑎" = 0.46
+clever
+Attribution
+(𝑎" ≠0)
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+22
+Two Fundamental Axioms
+• Sensitivity
+Gradients violate Sensitivity
+𝑦= ,𝑥,
+𝑤ℎ𝑒𝑛𝑥< 1
+1,
+𝑤ℎ𝑒𝑛𝑥≥1
+𝑥
+𝑦
+0
+1
+2
+1
+Input
+𝑥= 2
+Baseline
+𝑥= 0
+The output changes 1, while the 
+gradient method gives attribution 
+of 0 to 𝑥
+Output
+𝑦= 1
+𝑦= 0
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+23
+Two Fundamental Axioms
+• Implementation invariance
+The attributions are always identical for two functionally equivalent networks
+The outputs of two networks are 
+equal for all inputs, despite having 
+very different implementations
+𝑓ℎ" 𝑥
+= 𝑓ℎ' 𝑥
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+24
+Two Fundamental Axioms
+• Implementation invariance
+The attributions are always identical for two functionally equivalent networks
+Gradients are invariant to implementation
+The chain-rule for gradients is essentially about implementation invariance: 
+𝜕𝑓
+𝜕𝑥= 𝜕𝑓
+𝜕ℎ; 𝜕ℎ
+𝜕𝑔; 𝜕𝑔
+𝜕𝑥
+𝑥
+𝑓𝑥
+𝑔
+ℎ
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+25
+Two Fundamental Axioms
+• Implementation invariance
+The attributions are always identical for two functionally equivalent networks
+Gradients are invariant to implementation
+The chain-rule for gradients is essential for implementation invariance: 
+𝜕𝑓
+𝜕𝑥= 𝜕𝑓
+𝜕ℎ; 𝜕ℎ
+𝜕𝑔; 𝜕𝑔
+𝜕𝑥
+𝑥
+𝑓𝑥
+𝑔
+ℎ
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+26
+Two Fundamental Axioms
+• Implementation invariance
+The attributions are always identical for two functionally equivalent networks
+Gradients are invariant to implementation
+The chain-rule for gradients is essential for implementation invariance: 
+𝜕𝑓
+𝜕𝑥= 𝜕𝑓
+𝜕ℎ; 𝜕ℎ
+𝜕𝑔; 𝜕𝑔
+𝜕𝑥
+𝑥
+𝑓𝑥
+𝑔
+ℎ
+Some methods (e.g., LRP and DeepLift) do 
+not satisfy the implementation invariance 
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+27
+IG
+• Integrated Gradients
+𝑓: neural network
+𝒙∈ℝ!: input
+𝒙′ ∈ℝ! : baseline
+(e.g., black image, zero 
+embedding vector)
+𝒙′
+𝒙
+Get samples along the straight line from 𝒙′ to 𝒙
+𝒙& + 𝛼𝒙−𝒙’
+𝛼∈0, 1
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+28
+IG
+• Integrated Gradients
+𝑓: neural network
+(e.g., black image, zero 
+embedding vector)
+𝒙′
+𝒙
+Compute gradients at all points along the path 
+𝒙& + 𝛼𝒙−𝒙’
+𝛼∈0, 1
+𝒙∈ℝ!: input
+𝒙′ ∈ℝ! : baseline
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+29
+IG
+• Integrated Gradients
+𝑓: neural network
+(e.g., black image, zero 
+embedding vector)
+𝒙′
+𝒙
+Cumulate these gradients
+𝒙& + 𝛼𝒙−𝒙’
+𝛼∈0, 1
+𝐼𝐺' 𝒙= 𝑥' −𝑥'′ × 7
+()*
+!
+𝜕𝑓𝒙& + 𝛼𝒙−𝒙’
+𝜕𝑥'
+𝑑𝛼
+On the 𝑖+, dimension
+𝒙∈ℝ!: input
+𝒙′ ∈ℝ! : baseline
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+30
+IG
+• Integrated Gradients
+Axiom: completeness
+The attributions add up to the difference between the output of 𝑓at the input 𝒙
+and the baseline 𝒙′
+<
+')!
+-
+𝐼𝐺' 𝒙= 𝑓𝒙−𝑓𝒙′
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+31
+IG
+• Integrated Gradients
+Axiom: completeness
+The attributions add up to the difference between the output of 𝑓at the input 𝒙
+and the baseline 𝒙′
+<
+')!
+-
+𝐼𝐺' 𝒙= 𝑓𝒙−𝑓𝒙′
+Sensitivity: for every input and 
+baseline that differ in one feature 
+but have different predictions 
+then the differing feature should 
+be given a non-zero attribution
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+32
+IG
+• Integrated Gradients
+Axiom: completeness
+The attributions add up to the difference between the output of 𝑓at the input 𝒙
+and the baseline 𝒙′
+<
+')!
+-
+𝐼𝐺' 𝒙= 𝑓𝒙−𝑓𝒙′
+Sensitivity: for every input and 
+baseline that differ in one feature 
+but have different predictions 
+then the differing feature should 
+be given a non-zero attribution
+Sensitivity
+Implementation invariance
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+33
+IG
+• Integrated Gradients
+Axiom: completeness
+The attributions add up to the difference between the output of 𝑓at the input 𝒙
+and the baseline 𝒙′
+<
+')!
+-
+𝐼𝐺' 𝒙= 𝑓𝒙−𝑓𝒙′
+𝑓𝒙′ ≈0
+Shapley
+𝑔𝑧= 𝜙* + ∑')!
+-
+𝜙'𝑧'
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+34
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+35
+IG
+• Uniqueness of Integrated Gradients
+𝒙′
+𝒙
+Each path yields a different attribution method
+𝑃𝑎𝑡ℎ𝐼𝐺' 𝒙= 7
+()*
+!
+𝜕𝑓𝛾𝛼
+𝜕𝛾' 𝛼
+𝜕𝛾' 𝛼
+𝜕𝛼
+𝑑𝛼
+𝛾𝛼: path function, 𝛾0 = 𝒙′, 𝛾1 = 𝒙
+IG is the straight path:
+𝛾𝛼= 𝒙" + 𝛼𝒙−𝒙’
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+36
+IG
+• Uniqueness of Integrated Gradients
+𝒙′
+𝒙
+Each path yields a different attribution method
+𝑃𝑎𝑡ℎ𝐼𝐺' 𝒙= 7
+()*
+!
+𝜕𝑓𝛾𝛼
+𝜕𝛾' 𝛼
+𝜕𝛾' 𝛼
+𝜕𝛼
+𝑑𝛼
+𝛾𝛼: path function, 𝛾0 = 𝒙′, 𝛾1 = 𝒙
+Sensitivity
+Implementation invariance
+
+--------------------------------------------------------------------------------
+[End of Page 36]
+
+37
+IG
+• Uniqueness of Integrated Gradients
+𝒙′
+𝒙
+Why the straightline path chosen by integrated gradients is canonical?
+ü The simplest path
+ü Preserving symmetry
+For all inputs and baselines that have identical 
+values for symmetric variables, the symmetric 
+variables receive identical attributions
+Swapping the two variables 
+does not change the function
+𝑓𝑥, 𝑦= 𝑓(𝑦, 𝑥)
+
+--------------------------------------------------------------------------------
+[End of Page 37]
+
+38
+IG
+• Uniqueness of Integrated Gradients
+𝒙′
+𝒙
+Why the straightline path chosen by integrated gradients is canonical?
+ü The simplest path
+ü Preserving symmetry
+For all inputs and baselines that have identical 
+values for symmetric variables, the symmetric 
+variables receive identical attributions
+Example
+𝑙𝑜𝑔𝑖𝑠𝑡𝑖𝑐_𝑟𝑒𝑔𝑟𝑒𝑠𝑠𝑖𝑜𝑛(𝑥# + 𝑥$)
+Input: 𝑥# = 𝑥$ = 1
+Baseline: 𝑥# = 𝑥$ = 0
+𝐴𝑡𝑡𝑟(𝑥#) = 𝐴𝑡𝑡𝑟(𝑥$)
+
+--------------------------------------------------------------------------------
+[End of Page 38]
+
+39
+IG
+• Uniqueness of Integrated Gradients
+𝒙′
+𝒙
+Why the straightline path chosen by integrated gradients is canonical?
+ü The simplest path
+ü Preserving symmetry
+For all inputs and baselines that have identical 
+values for symmetric variables, the symmetric 
+variables receive identical attributions
+Example
+𝑙𝑜𝑔𝑖𝑠𝑡𝑖𝑐_𝑟𝑒𝑔𝑟𝑒𝑠𝑠𝑖𝑜𝑛(𝑥# + 𝑥$)
+Input: 𝑥# = 𝑥$ = 1
+Baseline: 𝑥# = 𝑥$ = 0
+𝐴𝑡𝑡𝑟(𝑥#) = 𝐴𝑡𝑡𝑟(𝑥$)
+Theorem: IG is the unique 
+path method that is 
+symmetry-preserving
+
+--------------------------------------------------------------------------------
+[End of Page 39]
+
+40
+IG
+• Applying Integrated Gradients
+The integral of integrated gradients can be efficiently approximated via a summation
+𝐼𝐺' 𝒙≈𝑥' −𝑥'′ × <
+.)!
+/ 𝜕𝑓𝒙& + 𝑘
+𝑚𝒙−𝒙’
+𝜕𝑥'
+× 1
+𝑚
+𝑚: the number of steps
+
+--------------------------------------------------------------------------------
+[End of Page 40]
+
+41
+IG
+• Applications of Integrated Gradients
+Task: object recognition
+Model: GoogleNet
+Dataset: ImageNet
+Integrated gradients 
+are better at reflecting 
+distinctive features of 
+the input image
+
+--------------------------------------------------------------------------------
+[End of Page 41]
+
+42
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 42]
+
+43
+Explaining Black-box Model
+• Gradient-based methods
+• Attention-based methods
+
+--------------------------------------------------------------------------------
+[End of Page 43]
+
+44
+Attention
+What is attention?
+Source: https://www.analyticsvidhya.com/blog/2019/11/comprehensive-guide-attention-
+mechanism-deep-learning/
+In psychology, attention is the cognitive process of selectively concentrating on one or a few 
+things while ignoring others
+
+--------------------------------------------------------------------------------
+[End of Page 44]
+
+45
+Attention
+What is attention?
+Source: https://www.analyticsvidhya.com/blog/2019/11/comprehensive-guide-attention-
+mechanism-deep-learning/
+In psychology, attention is the cognitive process of selectively concentrating on one or a few 
+things while ignoring others
+The attention mechanism 
+for neural networks is to 
+mimic human brain actions 
+in a simplified manner
+
+--------------------------------------------------------------------------------
+[End of Page 45]
+
+46
+Attention
+Light up natural language procession (NLP)
+Transformer
+(Vaswani et al., 2017)
+BERT
+(Devlin et al., 2018)
+GPT
+(Radford et al., 2018)
+
+--------------------------------------------------------------------------------
+[End of Page 46]
+
+47
+Attention
+Context vector: a good summary of the input
+Hidden layer
+⋮
+𝑥"
+𝑥'
+𝑥!
+⋮
+𝒉"
+𝒉'
+𝒉!
+⨁
+𝒄C
+𝒔C
+⋮
+⋮
+𝒔CD"
+𝑦CD"
+𝑦C
+Input
+Output
+Encoder 
+hidden states
+Decoder 
+hidden states
+
+--------------------------------------------------------------------------------
+[End of Page 47]
+
+48
+Attention
+Context vector: a good summary of the input
+Hidden layer
+⋮
+𝑥"
+𝑥'
+𝑥!
+⋮
+𝒉"
+𝒉'
+𝒉!
+⨁
+𝒄C
+𝒄+ = <
+')!
+-
+𝛼+'𝒉'
+𝛼+' = 𝑎𝑙𝑖𝑔𝑛𝑦+, 𝑥'
+=
+𝑒𝑥𝑝𝑠𝑐𝑜𝑟𝑒𝒔+0!, 𝒉'
+∑.)!
+-
+𝑒𝑥𝑝𝑠𝑐𝑜𝑟𝑒𝒔+0!, 𝒉.
+𝒔C
+⋮
+⋮
+𝒔CD"
+𝑦CD"
+𝑦C
+Context vector for output 𝑦+
+How well 𝑦+ and 𝑥' are aligned   
+Softmax of some predefined 
+alignment score
+Input
+Output
+Encoder 
+hidden states
+Decoder 
+hidden states
+
+--------------------------------------------------------------------------------
+[End of Page 48]
+
+49
+Attention
+Context vector: a good summary of the input
+Hidden layer
+⋮
+𝑥"
+𝑥'
+𝑥!
+⋮
+𝒉"
+𝒉'
+𝒉!
+⨁
+𝒄C
+𝒄+ = <
+')!
+-
+𝛼+'𝒉'
+𝛼+' = 𝑎𝑙𝑖𝑔𝑛𝑦+, 𝑥'
+=
+𝑒𝑥𝑝𝑠𝑐𝑜𝑟𝑒𝒔+0!, 𝒉'
+∑.)!
+-
+𝑒𝑥𝑝𝑠𝑐𝑜𝑟𝑒𝒔+0!, 𝒉.
+𝒔C
+⋮
+⋮
+𝒔CD"
+𝑦CD"
+𝑦C
+Context vector for output 𝑦+
+How well 𝑦+ and 𝑥' are aligned   
+Softmax of some predefined 
+alignment score
+Can be parametrized by 
+a feed-forward network 
+jointly trained with other 
+parts of the model
+Input
+Output
+Encoder 
+hidden states
+Decoder 
+hidden states
+
+--------------------------------------------------------------------------------
+[End of Page 49]
+
+50
+Attention
+𝑥"
+𝑥'
+𝑥!
+𝑦CD"
+𝑦C
+Input
+Output
+The attention weights 𝛼C& somehow indicate how much of each input 
+feature contributes to each output
+⋮
+⋮
+⋮
+⋮
+𝛼C"
+𝛼C'
+𝛼C!
+ü Simple, fast
+ü No additional computation
+
+--------------------------------------------------------------------------------
+[End of Page 50]
+
+51
+Attention
+Self-attention mechanism 
+Self-attention
+⋮
+𝒙"
+𝒙'
+𝒙!
+⋮
+Input or hidden 
+representations
+𝒙"′
+𝒙'′
+𝒙!′
+With context 
+information
+
+--------------------------------------------------------------------------------
+[End of Page 51]
+
+52
+Attention
+Self-attention mechanism 
+Self-attention
+⋮
+𝒙"
+𝒙'
+𝒙!
+𝒙"′
+With context 
+information
+Input or hidden 
+representations
+
+--------------------------------------------------------------------------------
+[End of Page 52]
+
+53
+Attention
+Self-attention mechanism 
+𝒙"
+𝒙'
+𝒙E
+Query: 𝒒
+Key: 𝒌
+Value: 𝒗
+𝒙F
+𝒌"
+𝒒"
+𝒒! = 𝑊1𝒙!
+𝒌! = 𝑊.𝒙!
+𝒌" = 𝑊.𝒙"
+𝒌# = 𝑊.𝒙#
+𝒌$ = 𝑊.𝒙$
+𝒌'
+𝒌F
+𝒌E
+
+--------------------------------------------------------------------------------
+[End of Page 53]
+
+54
+Attention
+Self-attention mechanism 
+𝒙"
+𝒙'
+𝒙E
+Query: 𝒒
+Key: 𝒌
+Value: 𝒗
+𝒙F
+𝒌"
+𝒒"
+𝒒! = 𝑊1𝒙!
+𝒌! = 𝑊.𝒙!
+𝒌" = 𝑊.𝒙"
+𝒌# = 𝑊.𝒙#
+𝒌$ = 𝑊.𝒙$
+𝒌'
+𝒌F
+𝒌E
+𝜶"
+𝜶'
+𝜶F
+𝜶E
+
+--------------------------------------------------------------------------------
+[End of Page 54]
+
+55
+Attention
+Self-attention mechanism 
+𝒙"
+𝒙'
+𝒙E
+Query: 𝒒
+Key: 𝒌
+Value: 𝒗
+𝒙F
+𝒌"
+𝒒"
+𝒒! = 𝑊1𝒙!
+𝒌! = 𝑊.𝒙!
+𝒌" = 𝑊.𝒙"
+𝒌# = 𝑊.𝒙#
+𝒌$ = 𝑊.𝒙$
+𝒌'
+𝒌F
+𝒌E
+𝜶"
+𝜶'
+𝜶F
+𝜶E
+Softmax
+𝜶"′
+𝜶'′
+𝜶F′
+𝜶E′
+
+--------------------------------------------------------------------------------
+[End of Page 55]
+
+56
+Attention
+Self-attention mechanism 
+𝒙"
+𝒙'
+𝒙E
+Query: 𝒒
+Key: 𝒌
+Value: 𝒗
+𝒙F
+𝒌"
+𝒒"
+𝒒! = 𝑊1𝒙!
+𝒌! = 𝑊.𝒙!
+𝒌" = 𝑊.𝒙"
+𝒌# = 𝑊.𝒙#
+𝒌$ = 𝑊.𝒙$
+𝒌'
+𝒌F
+𝒌E
+𝜶"
+𝜶'
+𝜶F
+𝜶E
+Softmax
+𝜶"′
+𝜶'′
+𝜶F′
+𝜶E′
+Sum to 1
+Attention weight
+
+--------------------------------------------------------------------------------
+[End of Page 56]
+
+57
+Attention
+Self-attention mechanism 
+𝒙"
+𝒙'
+𝒙E
+Query: 𝒒
+Key: 𝒌
+Value: 𝒗
+𝒙F
+𝒌"
+𝒒"
+𝒒! = 𝑊1𝒙!
+𝒌! = 𝑊.𝒙!
+𝒌" = 𝑊.𝒙"
+𝒌# = 𝑊.𝒙#
+𝒌$ = 𝑊.𝒙$
+𝒌'
+𝒌F
+𝒌E
+𝜶"′
+𝜶'′
+𝜶F′
+𝜶E′
+𝒗"
+𝒗'
+𝒗F
+𝒗E
+𝒗! = 𝑊2𝒙!
+𝒗" = 𝑊2𝒙"
+𝒗# = 𝑊2𝒙#
+𝒗$ = 𝑊2𝒙$
+
+--------------------------------------------------------------------------------
+[End of Page 57]
+
+58
+Attention
+Self-attention mechanism 
+𝒙"
+𝒙'
+𝒙E
+Query: 𝒒
+Key: 𝒌
+Value: 𝒗
+𝒙F
+𝒌"
+𝒒"
+𝒒! = 𝑊1𝒙!
+𝒌! = 𝑊.𝒙!
+𝒌" = 𝑊.𝒙"
+𝒌# = 𝑊.𝒙#
+𝒌$ = 𝑊.𝒙$
+𝒌'
+𝒌F
+𝒌E
+𝜶"′
+𝜶'′
+𝜶F′
+𝜶E′
+𝒗"
+𝒗'
+𝒗F
+𝒗E
+𝒗! = 𝑊2𝒙!
+𝒗" = 𝑊2𝒙"
+𝒗# = 𝑊2𝒙#
+𝒗$ = 𝑊2𝒙$
+⨂
+⨂
+⨂
+⨂
+𝒙"′
+
+--------------------------------------------------------------------------------
+[End of Page 58]
+
+59
+Attention
+Self-attention mechanism 
+Self-attention
+⋮
+𝒙"
+𝒙'
+𝒙!
+⋮
+Input or hidden 
+representations
+𝒙"′
+𝒙'′
+𝒙!′
+With context 
+information
+𝐴𝑡𝑡𝑒𝑛𝑡𝑖𝑜𝑛𝐾, 𝑉, 𝑄= 𝑠𝑜𝑓𝑡𝑚𝑎𝑥𝑄𝐾%
+𝑛
+𝑉
+
+--------------------------------------------------------------------------------
+[End of Page 59]
+
+60
+Attention
+Composite embeddings based on attentions
+Source: https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1
+
+--------------------------------------------------------------------------------
+[End of Page 60]
+
+61
+Attention
+Consider the last attention layer for model interpretation
+BERT
+Transformer
+Multi-Head Attention
+
+--------------------------------------------------------------------------------
+[End of Page 61]
+
+62
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 62]
+
+63
+Is Attention Interpretable?
+Sofia Serrano, Noah A. Smith
+(ACL, 2019)
+
+--------------------------------------------------------------------------------
+[End of Page 63]
+
+64
+Attention weights can be highly inconsistent with model prediction
+Attention for Explanation
+𝑥"
+𝑥'
+𝑥!
+Input
+⋮
+Attention
+𝑎"
+𝑎'
+𝑎!
+⋮
+Sum to 1
+
+--------------------------------------------------------------------------------
+[End of Page 64]
+
+65
+Intermediate Representation Erasure 
+•
+Explanation 𝐼: a ranking of importance of the attention layer’s input representations
+•
+Exam the impact of some contextualized inputs to an attention layer, 𝐼′ ⊂𝐼, on the model’s output
+
+--------------------------------------------------------------------------------
+[End of Page 65]
+
+66
+Intermediate Representation Erasure 
+•
+Explanation 𝐼: a ranking of importance of the attention layer’s input representations
+•
+Exam the impact of some contextualized inputs to an attention layer, 𝐼′ ⊂𝐼, on the model’s output
+•
+Running the model twice: once without any modification, once with the attention weights of 𝐼′
+zeroed out
+
+--------------------------------------------------------------------------------
+[End of Page 66]
+
+67
+Intermediate Representation Erasure 
+Evaluate model prediction change
+•
+Jensen-Shannon (JS) divergence between 
+output distributions 𝑝and 𝑞3&
+•
+Difference between the argmaxes of 𝑝and 𝑞3&
+(decision flip) 
+𝐽𝑆𝑃𝑄= 1
+2 𝐾𝐿𝑃𝑀+ 1
+2 𝐾𝐿𝑄𝑀
+𝑀= 1
+2 𝑃+ 1
+2 𝑄
+
+--------------------------------------------------------------------------------
+[End of Page 67]
+
+68
+Single Attention Weight Importance
+Remove the component 𝑖∗∈𝐼with the highest attention weight 𝛼'∗
+Comparison: a random component 𝑟drawn from 𝐼
+𝐽𝑆𝑝, 𝑞&∗
+𝐽𝑆𝑝, 𝑞'
+
+--------------------------------------------------------------------------------
+[End of Page 68]
+
+69
+Single Attention Weight Importance
+Remove the component 𝑖∗∈𝐼with the highest attention weight 𝛼'∗
+Comparison: a random component 𝑟drawn from 𝐼
+𝐽𝑆𝑝, 𝑞&∗
+𝐽𝑆𝑝, 𝑞'
+Indicate how important 𝑖∗
+is wrt 𝑟. Intuitively, if 
+∇𝛼= 𝛼'∗−𝛼5 is larger, 
+∇𝐽𝑆should be larger.
+∇𝐽𝑆= 𝐽𝑆𝑝, 𝑞'∗
+−𝐽𝑆𝑝, 𝑞5
+
+--------------------------------------------------------------------------------
+[End of Page 69]
+
+70
+Single Attention Weight Importance
+Remove the component 𝑖∗∈𝐼with the highest attention weight 𝛼'∗
+Comparison: a random component 𝑟drawn from 𝐼
+𝐽𝑆𝑝, 𝑞&∗
+𝐽𝑆𝑝, 𝑞'
+∇𝐽𝑆= 𝐽𝑆𝑝, 𝑞'∗
+−𝐽𝑆𝑝, 𝑞5
+∇𝐽𝑆
+∇𝛼= 𝛼&∗−𝛼'
+ü If 𝑖∗is more important, ∇𝐽𝑆is larger
+ü When ∇𝐽𝑆is small (close to 0), ∇𝛼tends 
+to be small
+(𝑖∗and 𝑟are nearly “tied” in attention) 
+
+--------------------------------------------------------------------------------
+[End of Page 70]
+
+71
+Single Attention Weight Importance
+Remove the component 𝑖∗∈𝐼with the highest attention weight 𝛼'∗
+Comparison: a random component 𝑟drawn from 𝐼
+𝐽𝑆𝑝, 𝑞&∗
+𝐽𝑆𝑝, 𝑞'
+∇𝐽𝑆= 𝐽𝑆𝑝, 𝑞'∗
+−𝐽𝑆𝑝, 𝑞5
+∇𝐽𝑆
+∇𝛼= 𝛼&∗−𝛼'
+ü If 𝑖∗is more important, ∇𝐽𝑆is larger
+ü When ∇𝐽𝑆is small (close to 0), ∇𝛼tends 
+to be small
+(𝑖∗and 𝑟are nearly “tied” in attention) 
+ü When ∇𝛼is about 0.4, ∇𝐽𝑆is still close to 0 
+How much the attention 
+weight can express the 
+importance of a feature?
+
+--------------------------------------------------------------------------------
+[End of Page 71]
+
+72
+Single Attention Weight Importance
+Decision flips caused by zeroing attention
+Remove the component 𝑖∗∈𝐼with the highest attention weight 𝛼'∗
+Comparison: a random component 𝑟drawn from 𝐼
+Intuitively, upper-right values 
+should be much larger than 
+lower-left values
+
+--------------------------------------------------------------------------------
+[End of Page 72]
+
+73
+Single Attention Weight Importance
+Decision flips caused by zeroing attention
+Remove the component 𝑖∗∈𝐼with the highest attention weight 𝛼'∗
+Comparison: a random component 𝑟drawn from 𝐼
+ü Upper-right values are larger than lower-left 
+values (removing 𝑖∗is easier to flip decision)
+
+--------------------------------------------------------------------------------
+[End of Page 73]
+
+74
+Single Attention Weight Importance
+Decision flips caused by zeroing attention
+Remove the component 𝑖∗∈𝐼with the highest attention weight 𝛼'∗
+Comparison: a random component 𝑟drawn from 𝐼
+ü Upper-right values are larger than lower-left 
+values (removing 𝑖∗is easier to flip decision)
+ü In most cases (lower-right values), erasing 
+𝑖∗does not change the decision
+The highest attention weight indicates 
+the most important feature?
+
+--------------------------------------------------------------------------------
+[End of Page 74]
+
+75
+Single Attention Weight Importance
+𝐼
+𝛼"
+𝛼'
+𝛼F
+𝛼E
+⋮
+𝛼!
+(descending order of importance)
+
+--------------------------------------------------------------------------------
+[End of Page 75]
+
+76
+Single Attention Weight Importance
+𝐼
+𝛼"
+𝛼'
+𝛼F
+𝛼E
+⋮
+𝛼!
+(descending order of importance)
+𝐼
+𝛼"
+𝛼'
+𝛼F
+𝛼E
+⋮
+𝛼!
+(descending order of importance)
+Intuitively, the top items in a truly useful 
+ranking of importance would comprise a 
+minimal necessary set of information for 
+making the model’s decision
+
+--------------------------------------------------------------------------------
+[End of Page 76]
+
+77
+Importance of Sets of Attention Weights
+Test how multiple attention weights perform together as importance predictors
+Erasing representations from the top of the ranking downward until the model’s decision changes
+𝐼
+𝛼"
+𝛼'
+𝛼F
+𝛼E
+⋮
+𝛼!
+Prediction change
+
+--------------------------------------------------------------------------------
+[End of Page 77]
+
+78
+Importance of Sets of Attention Weights
+Test how multiple attention weights perform together as importance predictors
+Erasing representations from the top of the ranking downward until the model’s decision changes
+𝐼
+𝛼"
+𝛼'
+𝛼F
+𝛼E
+⋮
+𝛼!
+Prediction change
+𝐼"
+𝛼"
+𝛼'
+𝛼F
+𝛼E
+⋮
+𝛼!
+Prediction change
+(Alternative rankings 
+of importance)
+Attention may not be a good 
+interpretation method
+
+--------------------------------------------------------------------------------
+[End of Page 78]
+
+79
+Importance of Sets of Attention Weights
+Baselines
+•
+Random rankings
+•
+Gradients
+•
+Gradients × Attentions
+ü Both a high attention weight and 
+a high calculated gradient indicate 
+an important component
+Fractions of original components removed before first 
+decision flip under different importance rankings
+
+--------------------------------------------------------------------------------
+[End of Page 79]
+
+80
+Lipton (2016) describes a model as “transparent”:
+a person can contemplate the entire model at once
+Explanations are concise
+Attention suggests a large part of features as “important”
+
+--------------------------------------------------------------------------------
+[End of Page 80]
+
+81
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 81]
+
+82
+Reference
+•
+Shrikumar, Avanti, Peyton Greenside, and Anshul Kundaje. "Learning important features through propagating 
+activation differences." International conference on machine learning. PMLR, 2017.
+•
+Sundararajan, Mukund, Ankur Taly, and Qiqi Yan. "Axiomatic attribution for deep networks." International 
+conference on machine learning. PMLR, 2017.
+•
+Serrano, Sofia, and Noah A. Smith. "Is attention interpretable?." arXiv preprint arXiv:1906.03731 (2019).
+•
+Smilkov, Daniel, et al. "Smoothgrad: removing noise by adding noise." arXiv preprint arXiv:1706.03825 (2017).
+•
+Vaswani, Ashish, et al. "Attention is all you need." Advances in neural information processing systems 30 (2017).
+•
+Devlin, Jacob, et al. "Bert: Pre-training of deep bidirectional transformers for language understanding." arXiv
+preprint arXiv:1810.04805 (2018).
+•
+Radford, Alec, et al. "Improving language understanding by generative pre-training." (2018).
+
+--------------------------------------------------------------------------------
+[End of Page 82]

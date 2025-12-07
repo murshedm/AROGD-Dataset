@@ -1,0 +1,4985 @@
+132 
+CHAPTER 6:  CONCLUSIONS AND FUTURE RESEARCH  
+ 
+ 
+ 
+Conclusions  
+With software serving as a central enabling technology that governs how we work, 
+deliver value, and manage our lives, cyber defenders are tasked with designing, integrating, 
+provisioning, and protecting systems that facilitate these outcomes. The growing number of 
+users, both internal and external, that interact with those systems has expanded exponentially in 
+recent decades. Reports of data breaches and other cyberattacks erode our trust in these systems. 
+The guidance available to the cybersecurity community offers best practices for securing 
+systems, planning for and responding to incidents, managing user trust and access, and numerous 
+other topics. However, this guidance does not extend into the sociotechnical domain to help 
+organizations understand how they should be operating to improve their cyber resilience.  
+In the global cyber threat environment, organizations in all sectors must operate without 
+setbacks. However, the cybersecurity industry's language can blur the lines among terms such as 
+security, resilience, reliability, and robustness. This research conducted an extensive, 
+interdisciplinary study of resilience to determine the central concepts that define it using 
+statistical modeling tools and machine learning algorithms. The topical results from the Latent 
+Dirichlet Allocation analysis (Table 4) provide a concise summary of what the interdisciplinary 
+community defines as resilient:  
+ Resilience is related to the system’s capability to handle stress and experiences in a 
+positive light  
+
+133 
+ Resilience is related to the process a system uses to respond to stressful events over a 
+time scale 
+ Resilience is related to disruptive, impactful, and other extreme events and the ability 
+to survive those events 
+ Resilience is related to the ability and capacity for a system to change in response to 
+an event 
+ Resilience is related to a system’s functions across scales or a community (vice 
+individual or organizational) in response to crises or stressors 
+ Resilience is related to a system’s capability or ability to respond to a disturbance or 
+stressor 
+ Resilience is related to the ability of a system to recover within a given state 
+ Resilience is related to a system’s capacity to absorb a disturbance, continue 
+functioning, and change in response 
+ Resilience is related to mitigating the effects of stressors through social capacities and 
+the environment 
+ Resilience is related to a system’s ability to respond positively under variable 
+conditions 
+ Resilience is related to a system’s ability to adapt in response to specified or 
+particular shocks 
+Thus, resilience cannot be easily defined with a single definition. Instead, it is best understood as 
+a set of concepts that describe overarching emergent behavior. That behavior is highly dependent 
+on the overall outcomes that the organization seeks—in a sense, it is a type of optimization 
+problem. Biasing to be resilient toward one set of outcomes may make the organization brittle to 
+
+134 
+other crises that it is not primarily oriented to receive. Thus, general resilience may be a fleeting 
+goal.  
+ 
+ 
+Summary Review of Research Questions and Hypotheses 
+ 
+Couched by the interdisciplinary study into resilience, this research sought to answer two 
+primary questions: First, does a single strategy or guidance document exist to provide 
+organizations at multiple levels of society with support for improving cyber resilience? Second, 
+how do those existing documents address resilience? This generated four hypotheses with 
+associated falsification criteria, and the analyses produced the following results.  
+ Hypothesis 1 (H1): If no single document exists that addresses most or all aspects of 
+resilience, then organizations will not have sufficient guidance to develop complete 
+strategies to improve cyber resilience.  
+o Falsification 1 (F1): A document exists that addresses most or all aspects of 
+resilience as identified in the work to test Hypothesis 3 (H3).   
+o Result: From the results in Chapters 4 and 5, summarized by Figure 31, no 
+document exists that addresses most or all of the aspects of resilience. Thus, we 
+can reject the Falsification 1 criteria and accept Hypothesis 1 as true.  
+ Hypothesis 2 (H2): If one or more documents exist that address some aspects of 
+resilience, then they can be leveraged and expanded to create a single document for 
+organizations to improve cyber resilience.    
+o Falsification 2 (F2): Hypothesis 1 (H1) is proven true.  
+
+135 
+o Result: Since we accept Hypothesis 1 is true, that satisfies the Falsification 2 
+criteria. We must reject Hypothesis 2. No combination of documents exist that can 
+be leveraged to create a single document for organizations to improve cyber 
+resilience.  
+ Hypothesis 3 (H3): If the existing documents incorporate most or all aspects of resilience, 
+then there should be significant overlap with the interdisciplinary research and concepts 
+on resilience.    
+o Falsification 3 (F3): The analysis indicates gaps between the interdisciplinary 
+concepts on resilience and the existing documents.  
+o Result: The results of the tf*idf analysis, Latent Dirichlet Allocation analysis, and 
+similarity analyses in Chapters 3 and 5 comparing the documents with the 
+interdisciplinary concept of resilience validates the Falsification 3 criteria—gaps 
+do exist between the two sets of work, which is ultimately evidenced in the 
+acceptance of Hypothesis 1.  
+ Hypothesis 4 (H4): If the existing documents focus primarily on the technical and 
+sociotechnical aspects of cybersecurity, then the documents will lack sufficient guidance 
+on most or all aspects of resilience.  
+o Falsification 4 (F4): The analysis indicates few to no gaps in one or more existing 
+documents.     
+o Result: The mean time and scale values for the 37 cyber texts and twelve non-
+cyber tests (the box plots in Figure 34) and the various contour plots presented in 
+Chapter 5 all indicate a strong bias toward the technical and sociotechnical ends 
+of the time and scale axes. We can accept Hypothesis 4.  
+
+136 
+In summary, the acceptance of Hypotheses 1 and 4 and rejection of Hypotheses 2 and 3 in 
+this research leads to the conclusion that the existing body of cybersecurity documents, even 
+ones that seek to provide guidance on fostering cyber resilience to organizations, lack a sufficient 
+connection to the interdisciplinary conceptualization of resilience. Further developments will be 
+needed to better address the aspects of resilience across time and scale to provide organizations 
+with the necessary information and tools to develop strategies to improve their cyber resilience.  
+ 
+Contributions 
+ 
+This research makes several contributions in the areas of research on cyber resilience, 
+practical contributions that organizations can draw on, and theoretical contributions from the 
+methodology used. As stated in Chapter 1, this research expected to make the following three 
+primary contributions toward cyber resilience and did so with the specified results.  
+1. A classification framework from which future frameworks or guiding documents can be 
+assessed for features of resilience—cyber or otherwise.  
+a. Result: The development of a classification algorithm based on statistical 
+modeling and machine learning techniques provides an algorithm that can be used 
+to assess future cyber security or other resilience texts. It also provides a basis for 
+continued development and refinement of the algorithm through expanding the 
+dictionary and better or finer grained measurements for time and scale properties. 
+The utilization of a standard data curation pipeline approach simplifies 
+implementation on future texts.  
+
+137 
+2. An assessment of the existing frameworks and the extent to which the framework 
+addresses some or all aspects of resilience as the interdisciplinary community 
+understands it.  
+a. Result: This research assessed 37 cyber security related texts encompassing 
+narrow technical publications to sector- or industry-specific frameworks 
+promoting resilience and found that no single framework adequately addresses 
+resilience as the interdisciplinary community understands it. Of note, this research 
+also analyzed twelve non-cyber, but resilience-related texts and found gaps in 
+coverage from the interdisciplinary community’s understanding of resilience.  
+3. Identify the gaps in the frameworks, or combined set of frameworks, to show where the 
+cybersecurity community can focus future efforts on developing guidance to support all 
+aspects of resilience, thus giving organizations the ability to develop strategies to 
+improve cyber resilience. 
+a. Result: Chapter 5 showed that the cybersecurity texts, as expected, primarily 
+focus on the technical and sociotechnical aspects of cybersecurity, with 
+insufficient to no coverage on some aspects of resilience.  
+ 
+Practical Contributions for Organizations 
+ 
+From a practical standpoint, organizations can use the results of this research to reframe 
+resilience objectives and improve cyber resilience strategies. While not explicitly stated or 
+oriented as such, this research makes three contributions that practitioners can leverage to 
+improve organizational cyber resilience.  
+
+138 
+1. A coding scheme that can be used with a body of organizational documentation to assess 
+the current language against the resilience and cybersecurity dictionaries, potentially 
+providing a quantitative measure that can be used as a basis for measuring improvement. 
+2. Identification of areas where existing cybersecurity guidance falls short of meeting 
+resilience objectives, giving organizations the knowledge that their efforts may not be 
+fully meeting expectations.  
+3. A detailed development of what resilience is, and the set of behaviors or attributes that 
+define resilient systems. The prior literature focuses on a singular definition of resilience, 
+which can be difficult for practitioners or organizations to easily adapt to their specific 
+situation or ecosystem. The decomposition of resilience from a single definition approach 
+into a collection of attributes gives practitioners greater granularity, from which they can 
+better understand how their organization measures up. There is future work in this area to 
+further explore the connections with related concepts, such as high reliability 
+organizations, system safety, organizational culture, etc. and how those bodies of work 
+might link to and enhance organizational resilience.  
+ 
+For the broader cybersecurity community, the natural progression of this research would 
+be to begin mapping the controls in the 37 cybersecurity frameworks into a broader scaffolding 
+around the major themes present. By aligning the controls with the attributes of resilience more 
+narrowly, the community will be able to determine where existing controls meet the desired 
+outcomes. The technical and sociotechnical controls, as presented in this research, ensure that 
+those domains would be well-represented in this broader scaffolding, whereas the organizational 
+controls, governance, risk, and compliance, and integration with the broader business strategy 
+
+139 
+and value proposition areas would likely need attention. In recent years, corporate boards have 
+begun to realize their role in cybersecurity and its connection to delivering business value, but 
+the debate on the proper role of the board, its ability to link business outcomes to cybersecurity 
+lines of effort, and define the desired resilient attributes, such as the critical functions of the 
+business and acceptance of certain thresholds for providing value, are still being debated. 
+Fundamental to this debate is understanding what resilience is, determining how the organization 
+would like to define its desired resilient outcomes, and understanding how to link existing 
+cybersecurity processes to resilient outcomes.  
+This research sought to provide the foundations of that next step, since the classification 
+of existing cybersecurity controls onto the classification framework and identification of new 
+resilience controls or practices must be explicitly tied to the organization’s desired resilience 
+outcomes. Broad research across the cybersecurity and interdisciplinary communities is needed 
+to develop a core set of resilience controls that most organizations can adopt, akin to what each 
+of the cybersecurity texts, such as the NIST Cybersecurity Framework 2.0, sought to provide for 
+security purposes. Development of these controls, as has been the case for development of 
+cybersecurity standards, will involve much learning, debate, and experimentation to determine 
+which controls are more effective. This will likely require the explicit bridging or integration of 
+cybersecurity with traditional business domains, viewed through the lens of resilience.  
+ 
+
+140 
+Theoretical Contributions 
+ 
+Finally, this research produced several theoretical contributions that are topical or 
+methodological. These serve the research community by providing new insights or methods. This 
+research made four primary theoretical or methodological contributions.  
+1. The use of statistical modeling and machine learning algorithms on the interdisciplinary 
+body of knowledge on resilience appears to be novel. The extensive literature review 
+conducted to develop the resilience dictionary did not uncover any existing research that 
+used this approach. The topical results from the Latent Dirichlet Allocation analysis, for 
+example, summarize a large body of interdisciplinary research in a way that is not present 
+in the existing literature. This approach may be useful in other areas of research where 
+there is a substantial interdisciplinary component.  
+2. This research expanded and integrated the concept of resilience by demonstrating that 
+efforts toward a universal definition may not be as beneficial as coalescing around the set 
+of attributes associated with resilient systems. The literature review did uncover several 
+meta-studies on resilience, but the majority of these studies were focused on a singular 
+definition with qualitative analyses.  
+3. The development of a novel classification framework using the same statistical modeling 
+and machine learning approaches with a data curation pipeline to conduct large scale 
+semantic analysis of texts appears to be novel. While natural language processing and 
+other semantic analyses are in widespread use, the literature review and associated 
+research for this dissertation did not uncover any similar approaches to analyzing a 
+corpus.  
+
+141 
+4. This research contributed to a broader understanding of the relationship between existing 
+cybersecurity guidance and literature and the broader corpus of work on resilience, 
+complex adaptive systems, and related concepts. This opens new opportunities for future 
+research.  
+ 
+Future Research 
+ 
+This integrative study opens up multiple opportunities for future research. The integration 
+of an already interdisciplinary field with data science techniques necessarily results in the initial 
+development of new techniques and knowledge and should offer multiple avenues of new 
+research as a result. This final section organizes those opportunities around the theoretical and 
+the practical.  
+ 
+Theoretical Opportunities 
+1. Investigate and improve the classifiers for the time and scale aspects of resilience against 
+cybersecurity applications. The use of a Fibonacci scale was only a first order 
+approximation to convey non-linearity; there is opportunity to refine the scaling into a 
+more quantitative system with true non-linearity, to include quantification of the adaptive 
+cycles and panarchy.  
+2. Improve and expand the resilience and cybersecurity dictionary. The initial GPT-aided 
+classification of terms provided a starting point. There is ample opportunity here for 
+qualitative and quantitative research into the classification of those terms.  
+
+142 
+3. Leverage and connect previous research into quantitative measurements of resilience and 
+cybersecurity to develop this body of research into a quantitative system.   
+4. Investigation into the “ideal” centroid or mean scores for time and scale values from a 
+classification framework. It is assumed that an unweighted centroid with equal 
+representation at all intersections will not be ideal since there should likely be a bias 
+toward local times and scales, but identification of an ideal centroid position would be of 
+value to the academic and practitioner communities.  
+ 
+Practical Opportunities 
+1. The large corpus of business-oriented books around human activities, such as strategy, 
+sociotechnical systems, supply chain security and resilience, culture, etc. is ripe for 
+evaluation with the classification framework. This provides the opportunity to link these 
+bodies of knowledge into a coherent whole.  
+2. Development of a cybersecurity framework that encompasses the majority of the time 
+and scale attributes of resilience. Further, investigation into what types of 
+recommendations or best practices can be truly scale free.  
+3. Analyzing the roles of the sixteen critical infrastructure sectors identified by CISA with 
+respect to the resilience attributes presented here and how they influence the adaptive 
+cycles above (national to international) and below (sector and below) them [184].  
+ 
+
+143 
+REFERENCES 
+ 
+ 
+ 
+[1] 
+M. E. Conway, “How do committees invent?,” Datamation, pp. 28–31, 1968. 
+[2] 
+S. Smith, “Towards a Scientific Definition of Cyber Resilience,” Int. Conf. Cyber Warf. 
+Secur., vol. 18, no. 1, Art. no. 1, Feb. 2023, doi: 10.34190/iccws.18.1.960. 
+[3] 
+S. M. Alhidaifi, M. R. Asghar, and I. S. Ansari, “A Survey on Cyber Resilience: Key 
+Strategies, Research Challenges, and Future Directions,” ACM Comput Surv, vol. 56, no. 
+8, p. 196:1-196:48, Apr. 2024, doi: 10.1145/3649218. 
+[4] 
+E. Barasa, R. Mbau, and L. Gilson, “What Is Resilience and How Can It Be Nurtured? A 
+Systematic Review of Empirical Literature on Organizational Resilience,” Int. J. Health 
+Policy Manag., vol. 7, no. 6, p. 491, Jun. 2018, doi: 10.15171/IJHPM.2018.06. 
+[5] 
+J. F. Carías, S. Arrizabalaga, L. Labaka, and J. Hernantes, “Cyber Resilience Progression 
+Model,” Appl. Sci., vol. 10, no. 21, Art. no. 21, Jan. 2020, doi: 10.3390/app10217393. 
+[6] 
+Y. Y. Haimes, “On the Definition of Resilience in Systems,” Risk Anal. Int. J., vol. 29, no. 
+4, pp. 498–501, Apr. 2009, doi: 10.1111/j.1539-6924.2009.01216.x. 
+[7] 
+H. Herrman, D. E. Stewart, N. Diaz-Granados, E. L. Berger, B. Jackson, and T. Yuen, 
+“What is Resilience?,” Can. J. Psychiatry, vol. 56, no. 5, pp. 258–265, May 2011, doi: 
+10.1177/070674371105600504. 
+[8] 
+A. J. Masys, “The Cyber-Ecosystem Enabling Resilience Through the Comprehensive 
+Approach,” in Disaster Management: Enabling Resilience, A. Masys, Ed., in Lecture 
+Notes in Social Networks. , Cham: Springer International Publishing, 2015, pp. 143–154. 
+doi: 10.1007/978-3-319-08819-8_8. 
+[9] 
+B. Walker, “Resilience: what it is and is not,” Ecol. Soc., vol. 25, Jun. 2020, doi: 
+10.5751/ES-11647-250211. 
+[10] J. W. Creswell and J. D. Creswell, Research Design: Qualitative, Quantitative, and Mixed 
+Methods Approaches. SAGE Publications, 2018. 
+[11] ChatGPT. OpenAI. Accessed: Dec. 10, 2023. [Large Language Model (LLM)]. Available: 
+https://chat.openai.com 
+[12] pypdf: A pure-python PDF library capable of splitting, merging, cropping, and 
+transforming PDF files. Python. 
+[13] “PyMuPDF 1.24.10 documentation.” Accessed: Sep. 22, 2024. [Online]. Available: 
+https://pymupdf.readthedocs.io/en/latest/index.html 
+[14] “csv — CSV File Reading and Writing,” Python documentation. Accessed: Sep. 22, 2024. 
+[Online]. Available: https://docs.python.org/3/library/csv.html 
+[15] W. J. Wilbur and K. Sirotkin, “The automatic identification of stop words,” J. Inf. Sci., 
+vol. 18, no. 1, pp. 45–55, Feb. 1992, doi: 10.1177/016555159201800106. 
+[16] “NLTKௗ:: Natural Language Toolkit.” Accessed: Sep. 22, 2024. [Online]. Available: 
+https://www.nltk.org/ 
+[17] “re — Regular expression operations — Python 3.12.6 documentation.” Accessed: Sep. 
+22, 2024. [Online]. Available: https://docs.python.org/3/library/re.html 
+[18] “spaCy · Industrial-strength Natural Language Processing in Python.” Accessed: Sep. 22, 
+2024. [Online]. Available: https://spacy.io/ 
+[19] “pickle — Python object serialization,” Python documentation. Accessed: Sep. 22, 2024. 
+[Online]. Available: https://docs.python.org/3/library/pickle.html 
+
+144 
+[20] “os — Miscellaneous operating system interfaces — Python 3.12.6 documentation.” 
+Accessed: Sep. 22, 2024. [Online]. Available: https://docs.python.org/3/library/os.html 
+[21] “collections — Container datatypes,” Python documentation. Accessed: Sep. 22, 2024. 
+[Online]. Available: https://docs.python.org/3/library/collections.html 
+[22] E. Loper and S. Bird, “NLTK: The Natural Language Toolkit,” May 17, 2002, arXiv: 
+arXiv:cs/0205028. doi: 10.48550/arXiv.cs/0205028. 
+[23] J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, “BERT: Pre-training of Deep 
+Bidirectional Transformers for Language Understanding,” May 24, 2019, arXiv: 
+arXiv:1810.04805. doi: 10.48550/arXiv.1810.04805. 
+[24] G. Salton and C. Buckley, “Term-weighting approaches in automatic text retrieval,” Inf. 
+Process. Manag., vol. 24, no. 5, pp. 513–523, Jan. 1988, doi: 10.1016/0306-
+4573(88)90021-0. 
+[25] J. Ramos, “Using TF-IDF to Determine Word Relevance in Document Queries,” in 
+Proceedings of the first instructional conference on machine learning, 2003, pp. 29–48. 
+[Online]. Available: https://www.researchgate.net/profile/Farshad-
+Madani/post/In_information_retrieval_tf-
+idf_calculation_why_we_dont_divide_tf_by_the_length_of_the_related_document/attach
+ment/59d6446679197b807799fae0/AS%3A448525403201536%401483948197307/downl
+oad/Using+TF-IDF+to+Determine+Word+Relevance+in+Document+Queries.pdf 
+[26] K. Giles and W. H. Ii, “Divided by a Common Language: Cyber Definitions in Chinese, 
+Russian and English,” presented at the 2013 5th International Conference on Cyber 
+Conflict, Tallinn, Estonia: NATO CCD COE Publications, 2013. [Online]. Available: 
+https://www.ccdcoe.org/uploads/2018/10/22_d3r1s1_giles.pdf 
+[27] Jacobellis v. Ohio. 1694. [Online]. Available: https://tile.loc.gov/storage-
+services/service/ll/usrep/usrep378/usrep378184/usrep378184.pdf 
+[28] R. Ross, V. Pillitteri, R. Graubart, D. Bodeau, and R. McQuaid, “Developing cyber-
+resilient systemsௗ: a systems security engineering approach,” National Institute of 
+Standards and Technology (U.S.), Gaithersburg, MD, NIST SP 800-160v2r1, Dec. 2021. 
+doi: 10.6028/NIST.SP.800-160v2r1. 
+[29] “Glossary | CSRC.” Accessed: Jul. 11, 2024. [Online]. Available: 
+https://csrc.nist.gov/glossary 
+[30] “Committee on National Security Systems Glossary.” Committee on National Security 
+Systems, Mar. 02, 2022. Accessed: Apr. 14, 2024. [Online]. Available: 
+https://www.cnss.gov/CNSS/issuances/Instructions.cfm 
+[31] Joint Task Force, “Assessing security and privacy controls in information systems and 
+organizations,” National Institute of Standards and Technology (U.S.), Gaithersburg, MD, 
+NIST SP 800-53Ar5, Jan. 2022. doi: 10.6028/NIST.SP.800-53Ar5. 
+[32] K. Stouffer et al., “Cybersecurity Framework Version 1.1 Manufacturing Profile,” 
+National Institute of Standards and Technology, Oct. 2020. doi: 10.6028/NIST.IR.8183r1. 
+[33] X. Xue, L. Wang, and R. J. Yang, “Exploring the science of resilience: critical review and 
+bibliometric analysis,” Nat. Hazards, vol. 90, no. 1, pp. 477–510, Jan. 2018, doi: 
+10.1007/s11069-017-3040-y. 
+[34] C. S. Holling, “Resilience and Stability of Ecological Systems,” Annu. Rev. Ecol. Evol. 
+Syst., vol. 4, no. Volume 4, 1973, pp. 1–23, Nov. 1973, doi: 
+10.1146/annurev.es.04.110173.000245. 
+
+145 
+[35] D. G. Angeler and C. R. Allen, “Quantifying resilience,” J. Appl. Ecol., vol. 53, no. 3, pp. 
+617–624, 2016. 
+[36] A. Annarelli and G. Palombi, “Digitalization Capabilities for Sustainable Cyber 
+Resilience: A Conceptual Framework,” Sustainability, vol. 13, no. 23, Art. no. 23, Jan. 
+2021, doi: 10.3390/su132313065. 
+[37] R. Arghandeh, A. Von Meier, L. Mehrmanesh, and L. Mili, “On the definition of cyber-
+physical resilience in power systems,” Renew. Sustain. Energy Rev., vol. 58, pp. 1060–
+1069, May 2016, doi: 10.1016/J.RSER.2015.12.193. 
+[38] R. M. Bakker, J. Raab, and H. B. Milward, “A preliminary theory of dark network 
+resilience,” J. Policy Anal. Manage., vol. 31, no. 1, pp. 33–62, 2012, doi: 
+10.1002/pam.20619. 
+[39] F. Björck, M. Henkel, J. Stirna, and J. Zdravkovic, “Cyber Resilience – Fundamentals for 
+a Definition,” in New Contributions in Information Systems and Technologies, A. Rocha, 
+A. M. Correia, S. Costanzo, and L. P. Reis, Eds., Cham: Springer International Publishing, 
+2015, pp. 311–316. doi: 10.1007/978-3-319-16486-1_31. 
+[40] E. B. Connelly, C. R. Allen, K. Hatfield, J. M. Palma-Oliveira, D. D. Woods, and I. 
+Linkov, “Features of resilience,” Environ. Syst. Decis., vol. 37, no. 1, pp. 46–50, Mar. 
+2017, doi: 10.1007/s10669-017-9634-9. 
+[41] B. Dupont, “The cyber-resilience of financial institutions: significance and applicability,” 
+J. Cybersecurity, vol. 5, no. 1, p. tyz013, Jan. 2019, doi: 10.1093/cybsec/tyz013. 
+[42] B. Dupont, C. Shearing, M. Bernier, and R. Leukfeldt, “The tensions of cyber-resilience: 
+From sensemaking to practice,” Comput. Secur., vol. 132, p. 103372, Sep. 2023, doi: 
+10.1016/j.cose.2023.103372. 
+[43] B. D. Fath, C. A. Dean, and H. Katzmair, “Navigating the adaptive cycle: an approach to 
+managing the resilience of social systems,” Ecol. Soc., vol. 20, no. 2, 2015, Accessed: Jul. 
+29, 2023. [Online]. Available: https://www.jstor.org/stable/26270208 
+[44] C. Folke, S. R. Carpenter, B. Walker, M. Scheffer, T. Chapin, and J. Rockström, 
+“Resilience Thinking: Integrating Resilience, Adaptability and Transformability,” Ecol. 
+Soc., vol. 15, no. 4, 2010, Accessed: Aug. 26, 2024. [Online]. Available: 
+https://www.jstor.org/stable/26268226 
+[45] G. Hornor, “Resilience,” J. Pediatr. Health Care, vol. 31, no. 3, pp. 384–390, May 2017, 
+doi: 10.1016/j.pedhc.2016.09.005. 
+[46] D. Jackson, A. Firtko, and M. Edenborough, “Personal resilience as a strategy for 
+surviving and thriving in the face of workplace adversity: a literature review,” J. Adv. 
+Nurs., vol. 60, no. 1, pp. 1–9, 2007, doi: 10.1111/j.1365-2648.2007.04412.x. 
+[47] C. Johansen, J. Horney, and I. Tien, “Metrics for Evaluating and Improving Community 
+Resilience,” J. Infrastruct. Syst., vol. 23, no. 2, p. 04016032, Jun. 2017, doi: 
+10.1061/(ASCE)IS.1943-555X.0000329. 
+[48] A. Kott, M. S. Golan, B. D. Trump, and I. Linkov, “Cyber Resilience: By Design or by 
+Intervention?,” Computer, vol. 54, no. 8, pp. 112–117, Aug. 2021, doi: 
+10.1109/MC.2021.3082836. 
+[49] A. Kott et al., “Russian Cyber Onslaught was Blunted by Ukrainian Cyber Resilience, not 
+Merely Security,” arXiv.org. Accessed: Sep. 18, 2024. [Online]. Available: 
+https://arxiv.org/abs/2408.14667v1 
+[50] M. E. Kruk et al., “Building resilient health systems: a proposal for a resilience index,” 
+BMJ, p. j2323, May 2017, doi: 10.1136/bmj.j2323. 
+
+146 
+[51] S. B. Manyena, “The concept of resilience revisited,” Disasters, vol. 30, no. 4, pp. 434–
+450, 2006, doi: 10.1111/j.0361-3666.2006.00331.x. 
+[52] T. H. Oliver, N. J. B. Isaac, T. A. August, B. A. Woodcock, D. B. Roy, and J. M. Bullock, 
+“Declining resilience of ecosystem functions under biodiversity loss,” Nat. Commun. 2015 
+61, vol. 6, no. 1, pp. 1–8, Dec. 2015, doi: 10.1038/ncomms10122. 
+[53] R. Patriarca, G. Di Gravio, F. Costantino, A. Falegnami, and F. Bilotta, “An Analytic 
+Framework to Assess Organizational Resilience,” Saf. Health Work, vol. 9, no. 3, pp. 265–
+276, Sep. 2018, doi: 10.1016/J.SHAW.2017.10.005. 
+[54] F. H. Norris, S. P. Stevens, B. Pfefferbaum, K. F. Wyche, and R. L. Pfefferbaum, 
+“Community Resilience as a Metaphor, Theory, Set of Capacities, and Strategy for 
+Disaster Readiness,” Am. J. Community Psychol., vol. 41, no. 1, pp. 127–150, Mar. 2008, 
+doi: 10.1007/s10464-007-9156-6. 
+[55] K. A. Pettersen and P. R. Schulman, “Drift, adaptation, resilience and reliability: Toward 
+an empirical clarification,” Saf. Sci., vol. 117, pp. 460–468, Aug. 2019, doi: 
+10.1016/j.ssci.2016.03.004. 
+[56] C. Rapaport, T. Hornik-Lurie, O. Cohen, M. Lahad, D. Leykin, and L. Aharonson-Daniel, 
+“The relationship between community type and community resilience,” Int. J. Disaster 
+Risk Reduct., vol. 31, pp. 470–477, Oct. 2018, doi: 10.1016/j.ijdrr.2018.05.020. 
+[57] R. M. Reischuk, “Cybersecurity: Balancing Efficiency with Long-Term Resilience in 
+Connected Ecosystems,” in Connected Business, O. Gassmann and F. Ferrandina, Eds., 
+Cham: Springer International Publishing, 2021, pp. 233–246. doi: 10.1007/978-3-030-
+76897-3_13. 
+[58] M. Rutter, “Resilience as a dynamic concept,” Dev. Psychopathol., vol. 24, no. 2, pp. 335–
+344, May 2012, doi: 10.1017/S0954579412000028. 
+[59] M. F. Safitra, M. Lubis, and M. T. Kurniawan, “Cyber Resilience: Research 
+Opportunities,” in Proceedings of the 2023 6th International Conference on Electronics, 
+Communications and Control Engineering, Fukuoka Japan: ACM, Mar. 2023, pp. 99–104. 
+doi: 10.1145/3592307.3592323. 
+[60] A. Sharifi, “A critical review of selected tools for assessing community resilience,” Ecol. 
+Indic., vol. 69, pp. 629–647, Oct. 2016, doi: 10.1016/j.ecolind.2016.05.023. 
+[61] S. M. Southwick, G. A. Bonanno, A. S. Masten, C. Panter-Brick, and R. Yehuda, 
+“Resilience definitions, theory, and challenges: interdisciplinary perspectives,” Eur. J. 
+Psychotraumatology, vol. 5, p. 10.3402/ejpt.v5.25338, Oct. 2014, doi: 
+10.3402/ejpt.v5.25338. 
+[62] H. T. Tran, M. Balchanos, J. C. Domerçant, and D. N. Mavris, “A framework for the 
+quantitative assessment of performance-based system resilience,” Reliab. Eng. Syst. Saf., 
+vol. 158, pp. 73–84, Feb. 2017, doi: 10.1016/j.ress.2016.10.014. 
+[63] R. van der Kleij and R. Leukfeldt, “Cyber Resilient Behavior: Integrating Human 
+Behavioral Models and Resilience Engineering Capabilities into Cyber Security,” in 
+Advances in Human Factors in Cybersecurity, vol. 960, T. Ahram and W. Karwowski, 
+Eds., in Advances in Intelligent Systems and Computing, vol. 960. , Cham: Springer 
+International Publishing, 2020, pp. 16–27. doi: 10.1007/978-3-030-20488-4_2. 
+[64] S. E. van der Merwe, R. Biggs, and R. Preiser, “A framework for conceptualizing and 
+assessing the resilience of essential services produced by socio-technical systems,” Ecol. 
+Soc., vol. 23, no. 2, 2018, Accessed: Jan. 10, 2024. [Online]. Available: 
+https://www.jstor.org/stable/26799110 
+
+147 
+[65] B. Walker, C. S. Holling, S. R. Carpenter, and A. Kinzig, “Resilience, Adaptability and 
+Transformability in Social–ecological Systems,” Ecol. Soc. Publ. Online Sep 16 2004 
+Doi105751ES-00650-090205, vol. 9, no. 2, Sep. 2004, doi: 10.5751/ES-00650-090205. 
+[66] A. Williams, G. Whiteman, and S. Kennedy, “Cross-Scale Systemic Resilience: 
+Implications for Organization Studies,” Bus. Soc., vol. 60, no. 1, pp. 95–124, Jan. 2021, 
+doi: 10.1177/0007650319825870. 
+[67] D. D. Woods, “Four concepts for resilience and the implications for the future of 
+resilience engineering,” Reliab. Eng. Syst. Saf., vol. 141, pp. 5–9, Sep. 2015, doi: 
+10.1016/j.ress.2015.03.018. 
+[68] X. Zhang, E. Miller-Hooks, and K. Denny, “Assessing the role of network topology in 
+transportation network resilience,” J. Transp. Geogr., vol. 46, pp. 35–45, Jun. 2015, doi: 
+10.1016/j.jtrangeo.2015.05.006. 
+[69] D. D. Woods, “The theory of graceful extensibility: basic rules that govern adaptive 
+systems,” Environ. Syst. Decis., vol. 38, no. 4, pp. 433–457, Dec. 2018, doi: 
+10.1007/s10669-018-9708-3. 
+[70] D. D. Woods, Resilience Engineering: Concepts and Precepts. CRC Press, 2017. 
+[71] wordcloud: A little word cloud generator. Accessed: Nov. 01, 2024. [Online]. Available: 
+https://github.com/amueller/word_cloud 
+[72] “CountVectorizer,” scikit-learn. Accessed: Nov. 01, 2024. [Online]. Available: 
+https://scikit-
+learn/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html 
+[73] S. Niwattanakul, J. Singthongchai, E. Naenudorn, and S. Wanapu, “Using of Jaccard 
+Coefficient for Keywords Similarity,” in Proceedings of the International 
+MultiConference of Engineers and Computer Scientists, Hong Kong, China, Mar. 2013. 
+[Online]. Available: https://www.iaeng.org/publication/IMECS2013/IMECS2013_pp380-
+384.pdf 
+[74] M. Röder, A. Both, and A. Hinneburg, “Exploring the Space of Topic Coherence 
+Measures,” in Proceedings of the Eighth ACM International Conference on Web Search 
+and Data Mining, in WSDM ’15. New York, NY, USA: Association for Computing 
+Machinery, Feb. 2015, pp. 399–408. doi: 10.1145/2684822.2685324. 
+[75] J. Chang, S. Gerrish, C. Wang, J. Boyd-graber, and D. Blei, “Reading Tea Leaves: How 
+Humans Interpret Topic Models,” in Advances in Neural Information Processing Systems, 
+Curran Associates, Inc., 2009. Accessed: Mar. 04, 2025. [Online]. Available: 
+https://proceedings.neurips.cc/paper_files/paper/2009/hash/f92586a25bb3145facd64ab20f
+d554ff-Abstract.html 
+[76] B. Fuglede and F. Topsoe, “Jensen-Shannon divergence and Hilbert space embedding,” in 
+International Symposium onInformation Theory, 2004. ISIT 2004. Proceedings., Jun. 
+2004, pp. 31-. doi: 10.1109/ISIT.2004.1365067. 
+[77] J. H. Holland, “Complex Adaptive Systems,” Daedalus, vol. 121, no. 1, pp. 17–30, 1992. 
+[78] I. Linkov and A. Kott, “Fundamental Concepts of Cyber Resilience: Introduction and 
+Overview,” in Cyber Resilience of Systems and Networks, A. Kott and I. Linkov, Eds., 
+Cham: Springer International Publishing, 2019, pp. 1–25. doi: 10.1007/978-3-319-77492-
+3_1. 
+[79] “Review of the Summer 2023 Microsoft Exchange Online Intrusion,” Cybersecurity & 
+Infrastructure Security Agency, 2023. [Online]. Available: 
+
+148 
+https://www.cisa.gov/sites/default/files/2024-
+04/CSRB_Review_of_the_Summer_2023_MEO_Intrusion_Final_508c.pdf 
+[80] A. Ribeiro, “Trump administration dismantles CSRB, leaves future of cybersecurity 
+oversight in question,” Industrial Cyber. Accessed: Mar. 04, 2025. [Online]. Available: 
+https://industrialcyber.co/regulation-standards-and-compliance/trump-administration-
+dismantles-csrb-leaves-future-of-cybersecurity-oversight-in-question/ 
+[81] D. P. Aldrich and M. A. Meyer, “Social Capital and Community Resilience,” Am. Behav. 
+Sci., vol. 59, no. 2, pp. 254–269, Feb. 2015, doi: 10.1177/0002764214550299. 
+[82] N. Leveson, N. Dulac, K. Marais, and J. Carroll, “Moving Beyond Normal Accidents and 
+High Reliability Organizations: A Systems Approach to Safety in Complex Systems,” 
+Organ. Stud., vol. 30, no. 2–3, pp. 227–249, Feb. 2009, doi: 10.1177/0170840608101478. 
+[83] K. E. Weick, “Organizational Culture as a Source of High Reliability,” Calif. Manage. 
+Rev., vol. 29, no. 2, pp. 112–127, Jan. 1987, doi: 10.2307/41165243. 
+[84] J. D. Orton and K. E. Weick, “Loosely Coupled Systems: A Reconceptualization,” Acad. 
+Manage. Rev., vol. 15, no. 2, pp. 203–223, Apr. 1990, doi: 10.5465/amr.1990.4308154. 
+[85] C. Nemeth and R. Cook, “Reliability versus Resilience: What Does Healthcare Need?,” 
+Proc. Hum. Factors Ergon. Soc. Annu. Meet., vol. 51, no. 11, pp. 621–625, Oct. 2007, doi: 
+10.1177/154193120705101104. 
+[86] C. P. Nemeth and E. Hollnagel, Eds., Advancing Resilient Performance. Cham: Springer 
+International Publishing, 2022. doi: 10.1007/978-3-030-74689-6. 
+[87] T. K. Haavik, S. Antonsen, R. Rosness, and A. Hale, “HRO and RE: A pragmatic 
+perspective,” Saf. Sci., vol. 117, pp. 479–489, Aug. 2019, doi: 10.1016/j.ssci.2016.08.010. 
+[88] C. J. Foster, K. L. Plant, and N. A. Stanton, “Adaptation as a source of safety in complex 
+socio-technical systems: A literature review and model development,” Saf. Sci., vol. 118, 
+pp. 617–631, Oct. 2019, doi: 10.1016/j.ssci.2019.05.035. 
+[89] A. S. Downing, E. H. van Nes, W. M. Mooij, and M. Scheffer, “The Resilience and 
+Resistance of an Ecosystem to a Collapse of Diversity,” PLOS ONE, vol. 7, no. 9, p. 
+e46135, Sep. 2012, doi: 10.1371/JOURNAL.PONE.0046135. 
+[90] B. Walker, A. Kinzig, and J. Langridge, “Plant Attribute Diversity, Resilience, and 
+Ecosystem Function: The Nature and Significance of Dominant and Minor Species”. 
+[91] J. J. Stachowicz and J. E. Byrnes, “Species diversity, invasion success, and ecosystem 
+functioning: Disentangling the influence of resource competition, facilitation, and 
+extrinsic factors,” Mar. Ecol. Prog. Ser., vol. 311, pp. 251–262, 2006, doi: 
+10.3354/meps311251. 
+[92] D. J. Rapport, W. G. Whitford, and M. Hildén, “Common Patterns of Ecosystem 
+Breakdown Under Stress,” Environ. Monit. Assess., vol. 51, no. 1/2, pp. 171–178, 1998, 
+doi: 10.1023/A:1005935202518. 
+[93] T. H. Oliver et al., “Biodiversity and Resilience of Ecosystem Functions,” Trends Ecol. 
+Evol., vol. 30, no. 11, pp. 673–684, Nov. 2015, doi: 10.1016/j.tree.2015.08.009. 
+[94] D. J. Rapport, H. A. Regier, and T. C. Hutchinson, “Ecosystem Behavior Under Stress,” 
+Am. Nat., vol. 125, no. 5, pp. 617–640, May 1985, doi: 10.1086/284368. 
+[95] I. M. Côté and E. S. Darling, “Rethinking Ecosystem Resilience in the Face of Climate 
+Change,” PLOS Biol., vol. 8, no. 7, p. e1000438, Jul. 2010, doi: 
+10.1371/journal.pbio.1000438. 
+[96] E. Hollnagel, D. Woods, and N. Leveson, “Resilience Engineeringௗ: Concepts and 
+Precepts,” Resil. Eng. Concepts Precepts, Feb. 2006. 
+
+149 
+[97] C. R. Allen, D. G. Angeler, A. S. Garmestani, L. H. Gunderson, and C. S. Holling, 
+“Panarchy: Theory and Application,” Ecosystems, vol. 17, no. 4, pp. 578–589, Jun. 2014, 
+doi: 10.1007/s10021-013-9744-2. 
+[98] C. S. Holling, “Surprise for Science, Resilience for Ecosystems, and Incentives for 
+People,” Ecol. Appl., vol. 6, no. 3, pp. 733–735, Aug. 1996, doi: 10.2307/2269475. 
+[99] C. S. Holling, “Understanding the Complexity of Economic, Ecological, and Social 
+Systems,” Ecosystems, vol. 4, no. 5, pp. 390–405, Aug. 2001, doi: 10.1007/s10021-001-
+0101-5. 
+[100] C. Folke, J. Colding, and F. Berkes, “Building resilience and adaptive capacity in social-
+ecological systems”. 
+[101] E. Geller, “The US Government Has a Microsoft Problem,” Wired. Accessed: Jun. 19, 
+2024. [Online]. Available: https://www.wired.com/story/the-us-government-has-a-
+microsoft-problem/ 
+[102] Z. Siddiqui, “US State Dept broadens security vendor list amid Microsoft hacking woes,” 
+Reuters, May 07, 2024. Accessed: Jun. 19, 2024. [Online]. Available: 
+https://www.reuters.com/technology/cybersecurity/us-state-dept-broadens-security-
+vendor-list-amid-microsoft-hacking-woes-2024-05-07/ 
+[103] E. Kovacs, “Microsoft Criticized Over Handling of Critical Power Platform 
+Vulnerability,” SecurityWeek. Accessed: Jun. 19, 2024. [Online]. Available: 
+https://www.securityweek.com/microsoft-criticized-over-handling-of-critical-power-
+platform-vulnerability/ 
+[104] S. Aren and H. Nayman Hamamcı, “Biases in managerial decision making: Regret 
+aversion, endowment, confirmation, self-control, recency,” vol. 8, pp. 62–69, Jul. 2021. 
+[105] H.-M. Darley, “Dangers of succumbing to bias in cyber securityௗ: An evaluation of the 
+impact of cognitive biases on threat assessments and cyber security strategies,” Cyber 
+Secur. Peer-Rev. J., vol. 6, no. 3, pp. 211–219, Jan. 2023. 
+[106] M. Schwartz, A Seat at the Table. IT Revolution, 2017. Accessed: May 06, 2024. [Online]. 
+Available: https://itrevolution.com/product/a-seat-at-the-table/ 
+[107] M. X. Heiligenstein, “Microsoft Data Breaches: Full Timeline Through 2024,” Firewall 
+Times. Accessed: Jun. 19, 2024. [Online]. Available: https://firewalltimes.com/microsoft-
+data-breach-timeline/ 
+[108] R. Naraine, “Microsoft’s Security Chickens Have Come Home to Roost,” SecurityWeek. 
+Accessed: Jun. 19, 2024. [Online]. Available: https://www.securityweek.com/microsofts-
+security-chickens-have-come-home-to-roost/ 
+[109] B. Levin and L. Downes, “Microsoft, Google, and a New Era of Antitrust,” Harvard 
+Business Review, Feb. 17, 2023. Accessed: Jun. 19, 2024. [Online]. Available: 
+https://hbr.org/2023/02/microsoft-google-and-a-new-era-of-antitrust 
+[110] R. D. Burke Doris, “Microsoft Chose Profit Over Security and Left U.S. Government 
+Vulnerable to Russian Hack, Whistleblower Says,” ProPublica. Accessed: Jun. 14, 2024. 
+[Online]. Available: https://www.propublica.org/article/microsoft-solarwinds-golden-
+saml-data-breach-russian-hackers 
+[111] J. Collins, Good to Great: Why Some Companies Make the Leap...And Others Don’t, First 
+Edition. New York, NY: Harper Business, 2001. 
+[112] S. J. Spear, The High-Velocity Edge: How Market Leaders Leverage Operational 
+Excellence to Beat the Competition, 2nd edition. McGraw Hill, 2010. 
+
+150 
+[113] E. Terrell, “Finding General Electric | Inside Adams,” The Library of Congress. Accessed: 
+May 16, 2024. [Online]. Available: https://blogs.loc.gov/inside_adams/2019/09/ge 
+[114] “About the Microsoft Security Development Lifecycle.” Accessed: Jun. 21, 2024. 
+[Online]. Available: https://www.microsoft.com/en-us/securityengineering/sdl/about 
+[115] “Memo from Bill Gates,” Stories. Accessed: Apr. 29, 2024. [Online]. Available: 
+https://news.microsoft.com/2012/01/11/memo-from-bill-gates/ 
+[116] B. Smith, “A new world of security: Microsoft’s Secure Future Initiative,” Microsoft On 
+the Issues. Accessed: Apr. 29, 2024. [Online]. Available: https://blogs.microsoft.com/on-
+the-issues/2023/11/02/secure-future-initiative-sfi-cybersecurity-cyberattacks/ 
+[117] R. Cook and J. Rasmussen, “‘Going solid’: a model of system dynamics and consequences 
+for patient safety,” BMJ Qual. Saf., vol. 14, no. 2, pp. 130–134, Apr. 2005, doi: 
+10.1136/qshc.2003.009530. 
+[118] “Glossary of Security Terms | SANS Institute.” Accessed: Jul. 11, 2024. [Online]. 
+Available: https://www.sans.org/security-resources/glossary-of-terms/ 
+[119] C. S. E. Canada, “Glossary,” Canadian Centre for Cyber Security. Accessed: Jul. 11, 2024. 
+[Online]. Available: https://www.cyber.gc.ca/en/glossary 
+[120] “Vocabulary | NICCS.” Accessed: Jul. 11, 2024. [Online]. Available: 
+https://niccs.cisa.gov/cybersecurity-career-resources/vocabulary 
+[121] V. Sanh, L. Debut, J. Chaumond, and T. Wolf, “DistilBERT, a distilled version of BERT: 
+smaller, faster, cheaper and lighter,” Mar. 01, 2020, arXiv: arXiv:1910.01108. doi: 
+10.48550/arXiv.1910.01108. 
+[122] E. Aghaei, X. Niu, W. Shadid, and E. Al-Shaer, “SecureBERT: A Domain-Specific 
+Language Model for Cybersecurity,” in Security and Privacy in Communication Networks, 
+F. Li, K. Liang, Z. Lin, and S. K. Katsikas, Eds., Cham: Springer Nature Switzerland, 
+2023, pp. 39–56. doi: 10.1007/978-3-031-25538-0_3. 
+[123] “distilbert/distilbert-base-uncased-finetuned-sst-2-english · Hugging Face.” Accessed: Jan. 
+18, 2025. [Online]. Available: https://huggingface.co/distilbert/distilbert-base-uncased-
+finetuned-sst-2-english 
+[124] “ehsanaghaei/SecureBERT_Plus · Hugging Face.” Accessed: Jan. 18, 2025. [Online]. 
+Available: https://huggingface.co/ehsanaghaei/SecureBERT_Plus 
+[125] “json — JSON encoder and decoder,” Python documentation. Accessed: Jan. 19, 2025. 
+[Online]. Available: https://docs.python.org/3/library/json.html 
+[126] matplotlib: Python plotting package. Python. Accessed: Jan. 19, 2025. [Online]. 
+Available: https://matplotlib.org 
+[127] seaborn: Statistical data visualization. Python. 
+[128] transformers: State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow. 
+Python. Accessed: Jan. 19, 2025. [OS Independent]. Available: 
+https://github.com/huggingface/transformers 
+[129] pandas: Powerful data structures for data analysis, time series, and statistics. Cython, 
+Python. Accessed: Jan. 19, 2025. [OS Independent]. Available: https://pandas.pydata.org 
+[130] “NumPy.” Accessed: Jan. 19, 2025. [Online]. Available: https://numpy.org/ 
+[131] scikit-learn: A set of python modules for machine learning and data mining. C, Python. 
+[132] “Claude 3.5 Sonnet,” Anthropic. Accessed: Jan. 20, 2025. [Online]. Available: 
+https://claude.ai/new 
+
+151 
+[133] N. Reimers and I. Gurevych, “Sentence-BERT: Sentence Embeddings using Siamese 
+BERT-Networks,” Aug. 27, 2019, arXiv: arXiv:1908.10084. doi: 
+10.48550/arXiv.1908.10084. 
+[134] “SentenceTransformers Documentation — Sentence Transformers documentation.” 
+Accessed: Jan. 20, 2025. [Online]. Available: https://sbert.net/ 
+[135] 14:00-17:00, “ISO 22301:2019,” ISO. Accessed: Jul. 06, 2024. [Online]. Available: 
+https://www.iso.org/standard/75106.html 
+[136] 14:00-17:00, “ISO/IEC 27001:2022,” ISO. Accessed: Jul. 06, 2024. [Online]. Available: 
+https://www.iso.org/standard/27001 
+[137] 14:00-17:00, “ISO/IEC 27002:2022,” ISO. Accessed: Jul. 06, 2024. [Online]. Available: 
+https://www.iso.org/standard/75652.html 
+[138] “ISO 31000:2018,” ISO. Accessed: Jan. 18, 2025. [Online]. Available: 
+https://www.iso.org/standard/65694.html 
+[139] National Institute of Standards and Technology, “The NIST Cybersecurity Framework 
+(CSF) 2.0,” National Institute of Standards and Technology, Gaithersburg, MD, NIST 
+CSWP 29, Feb. 2024. doi: 10.6028/NIST.CSWP.29. 
+[140] “Risk Management Framework for Information Systems and Organizations: A System 
+Life Cycle Approach for Security and Privacy,” National Institute of Standards and 
+Technology, NIST Special Publication (SP) 800-37 Rev. 2, Dec. 2018. doi: 
+10.6028/NIST.SP.800-37r2. 
+[141] M. Merritt, S. Hansche, B. Ellis, K. Sanchez-Cherry, J. Snyder, and D. Walden, “Building 
+a Cybersecurity and Privacy Learning Program,” National Institute of Standards and 
+Technology, NIST Special Publication (SP) 800-50 Rev. 1 (Draft), Aug. 2023. doi: 
+10.6028/NIST.SP.800-50r1.ipd. 
+[142] A. Nelson, S. Rekhi, M. Souppaya, and K. Scarfone, “Incident Response 
+Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 
+Community Profile,” National Institute of Standards and Technology, NIST Special 
+Publication (SP) 800-61 Rev. 3 (Draft), Apr. 2024. doi: 10.6028/NIST.SP.800-61r3.ipd. 
+[143] K. Stouffer et al., “Guide to Operational Technology (OT) Security,” National Institute of 
+Standards and Technology, NIST Special Publication (SP) 800-82 Rev. 3, Sep. 2023. doi: 
+10.6028/NIST.SP.800-82r3. 
+[144] R. Ross, M. McEvilley, and J. Carrier Oren, “Systems Security Engineering: 
+Considerations for a Multidisciplinary Approach in the Engineering of Trustworthy Secure 
+Systems,” National Institute of Standards and Technology, NIST SP 800-160, Nov. 2016. 
+doi: 10.6028/NIST.SP.800-160. 
+[145] J. Boyens, A. Smith, N. Bartol, K. Winkler, A. Holbrook, and M. Fallon, “Cybersecurity 
+Supply Chain Risk Management Practices for Systems and Organizations,” National 
+Institute of Standards and Technology, NIST Special Publication (SP) 800-161 Rev. 1, 
+May 2022. doi: 10.6028/NIST.SP.800-161r1. 
+[146] A. Regenscheid, “Platform Firmware Resiliency Guidelines,” National Institute of 
+Standards and Technology, NIST Special Publication (SP) 800-193, May 2018. doi: 
+10.6028/NIST.SP.800-193. 
+[147] S. Rose, O. Borchert, S. Mitchell, and S. Connelly, “Zero Trust Architecture,” National 
+Institute of Standards and Technology, Aug. 2020. doi: 10.6028/NIST.SP.800-207. 
+[148] S. Quinn et al., “Information and Communications Technology (ICT) Risk Outcomes: 
+Integrating ICT Risk Management Programs with the Enterprise Risk Portfolio,” National 
+
+152 
+Institute of Standards and Technology, NIST Special Publication (SP) 800-221A, Nov. 
+2023. doi: 10.6028/NIST.SP.800-221A. 
+[149] “Implementing a Zero Trust Architecture,” National Institute of Standards and 
+Technology, NIST Special Publication (SP) 1800-35 (Draft), Aug. 2023. Accessed: Jul. 
+06, 2024. [Online]. Available: https://csrc.nist.gov/pubs/sp/1800/35/3prd 
+[150] “Cyber Assessment Framework.” National Cyber Security Centre, Apr. 15, 2024. 
+Accessed: Jul. 06, 2024. [Online]. Available: https://www.ncsc.gov.uk/collection/cyber-
+assessment-framework/introduction-to-caf 
+[151] BSI-Standard 100-1: Information Security Management Systems (ISMS). Accessed: Jul. 
+06, 2024. [Online]. Available: 
+https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/BSIStandards/stan
+dard_100-1_e_pdf.html?nn=132646 
+[152] BSI-Standard 200-1 - Information Security Management Systems (ISMS). 
+[153] BSI-Standard 200-2 - IT-Grundschutz Methodology. 
+[154] BSI-Standard 200-3 - Risk Analysis based on IT-Grundschutz. 
+[155] “IT-Grundschutz-Compendium.” German Federal Office for Information Security, Feb. 
+2022. Accessed: Jul. 06, 2024. [Online]. Available: 
+https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Grundschutz/International/bsi_i
+t_gs_comp_2022.pdf?__blob=publicationFile&v=2 
+[156] “CIS Critical Security Controls Version 8.1,” CIS. Accessed: Jul. 06, 2024. [Online]. 
+Available: https://www.cisecurity.org/controls/ 
+[157] “Cybersecurity Maturity Model Certification.” Accessed: Jul. 06, 2024. [Online]. 
+Available: https://dodcio.defense.gov/CMMC/ 
+[158] “COBIT 5.” 2019. Accessed: Jul. 06, 2024. [Online]. Available: 
+https://store.isaca.org/s/store#/store/browse/detail/a2S4w000004KoCDEA0 
+[159] “ITIL 4: the framework for the management of IT-enabled services.” Axelos, 2019. 
+Accessed: Jul. 06, 2024. [Online]. Available: https://www.axelos.com/certifications/itil-
+service-management 
+[160] “Energy Sector Cybersecurity Framework Implementation Guidance,” U.S. Department of 
+Energy, Jan. 2015. Accessed: Jan. 18, 2025. [Online]. Available: 
+https://www.energy.gov/ceser/articles/energy-sector-cybersecurity-framework-
+implementation-guidance 
+[161] “FFIEC Cybersecurity Assessment Tool.” 2017. Accessed: Jul. 06, 2024. [Online]. 
+Available: https://www.ffiec.gov/cyberassessmenttool.htm#tool 
+[162] “OCTAVE Criteria, Version 2.0.” Accessed: Jul. 06, 2024. [Online]. Available: 
+https://insights.sei.cmu.edu/library/octave-criteria-version-20/ 
+[163] T. W. House, “Executive Order on Strengthening and Promoting Innovation in the 
+Nation’s Cybersecurity,” The White House. Accessed: Jan. 18, 2025. [Online]. Available: 
+https://www.whitehouse.gov/briefing-room/presidential-actions/2025/01/16/executive-
+order-on-strengthening-and-promoting-innovation-in-the-nations-cybersecurity/ 
+[164] “The Cyber Resilience Index: Advancing Organizational Cyber Resilience,” World 
+Economic Forum. Accessed: Jul. 06, 2024. [Online]. Available: 
+https://www.weforum.org/publications/the-cyber-resilience-index-advancing-
+organizational-cyber-resilience/ 
+[165] D. Bodeau, R. Graubart, W. Heinbockel, and E. Laderman, “Cyber Resiliency 
+Engineering Aid—The Updated Cyber Resiliency Engineering Framework and Guidance 
+
+153 
+on Applying Cyber Resiliency Techniques,” May 2015, Accessed: Jul. 06, 2024. [Online]. 
+Available: https://www.mitre.org/news-insights/publication/cyber-resiliency-engineering-
+aid-updated-cyber-resiliency-engineering 
+[166] E. Laderman, D. Bodeau, R. Graubart, and L. K. Jones, “Cyber Resiliency Framework and 
+Cyber Survivability Attributes,” Jan. 2024, Accessed: Jul. 06, 2024. [Online]. Available: 
+https://www.mitre.org/news-insights/publication/cyber-resiliency-framework-and-cyber-
+survivability-attributes 
+[167] “Cyber Resiliency Level®,” Lockheed Martin. Accessed: Jul. 07, 2024. [Online]. 
+Available: https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-resiliency-
+level.html 
+[168] “Operational Resilience Framework,” Global Resilience Foundation. Accessed: May 18, 
+2024. [Online]. Available: https://www.grf.org/orf 
+[169] “Cybersecurity Culture Guidelines: Behavioural Aspects of Cybersecurity,” Report/Study. 
+Accessed: Jul. 06, 2024. [Online]. Available: 
+https://www.enisa.europa.eu/publications/cybersecurity-culture-guidelines-behavioural-
+aspects-of-cybersecurity 
+[170] “National Resilience Strategy,” Jan. 2025. Accessed: Jan. 19, 2025. [Online]. Available: 
+https://www.whitehouse.gov/briefing-room/statements-releases/2025/01/18/national-
+resilience-strategy/ 
+[171] O. Reznikova, “National Resilience In a Changing Security Environment,” National 
+Institute for Strategic Studies, Kyiv, Ukraine. [Online]. Available: 
+https://www.marshallcenter.org/sites/default/files/files/2023-
+01/National%20Resilience_EN.pdf 
+[172] “National Climate Resilience Framework,” Sep. 2023. Accessed: Jan. 18, 2025. [Online]. 
+Available: https://www.whitehouse.gov/wp-content/uploads/2023/09/National-Climate-
+Resilience-Framework-FINAL.pdf 
+[173] “Health Emergency and Disaster Risk Management Framework.” Accessed: Jan. 18, 2025. 
+[Online]. Available: https://www.who.int/publications/i/item/9789241516181 
+[174] “Principles for operational resilience,” Mar. 2021. Accessed: Jan. 18, 2025. [Online]. 
+Available: https://www.bis.org/bcbs/publ/d516.htm 
+[175] “Assessing Resilinece in Social-Ecological Systems: Workbook for Practitioners,” 2010. 
+Accessed: Jan. 18, 2025. [Online]. Available: 
+https://www.resalliance.org/files/ResilienceAssessmentV2_2.pdf 
+[176] “Community Resilience System Initiative Steering Committee - Final Report,” 
+Community & Regional Resilience Institute, Aug. 2011. [Online]. Available: 
+https://merid.org/wp-content/uploads/2019/08/CRSI-Final-Report.pdf 
+[177] “APEC Disaster Risk Reduction Framework,” Nov. 2015. Accessed: Jan. 18, 2025. 
+[Online]. Available: https://www.apec.org/docs/default-
+source/groups/epwg/2024/apecdisasterriskreductionframework_endorsed.pdf?sfvrsn=8d9c
+e067_2 
+[178] Reliability Standards for the Bulk Electric Systems of North America, Jun. 03, 2024. 
+Accessed: Jul. 06, 2024. [Online]. Available: 
+https://www.nerc.com/pa/Stand/Pages/default.aspx 
+[179] “Infrastructure Resilience Planning Framework (IRPF),” 2024. 
+[180] “National Infrastructure Protection Plan,” Cybersecurity & Infrastructure Security 
+Agency, 2013. Accessed: Jan. 18, 2025. [Online]. Available: 
+
+154 
+https://www.cisa.gov/sites/default/files/2022-11/national-infrastructure-protection-plan-
+2013-508.pdf 
+[181] “Guidelines for Resilience Systems Analysis: How to Analyse Risk and Build a Roadmap 
+to Resilience,” OECD. Accessed: Jan. 18, 2025. [Online]. Available: 
+https://www.oecd.org/en/publications/guidelines-for-resilience-systems-analysis-how-to-
+analyse-risk-and-build-a-roadmap-to-resilience_3b1d3efe-en.html 
+[182] “glob — Unix style pathname pattern expansion,” Python documentation. Accessed: Jan. 
+26, 2025. [Online]. Available: https://docs.python.org/3/library/glob.html 
+[183] D. W. Hubbard and R. Seiersen, How to Measure Anything in Cybersecurity Risk. John 
+Wiley & Sons, 2016. 
+[184] “Critical Infrastructure Sectors.” Accessed: Jun. 20, 2024. [Online]. Available: 
+https://www.cisa.gov/topics/critical-infrastructure-security-and-resilience/critical-
+infrastructure-sectors 
+ 
+
+155 
+APPENDIX 1: FINAL DICTIONARY AND CATEGORIZATION OF CYBER RESILIENCE 
+TERMINOLOGY 
+ 
+ 
+ 
+Custom Stop Word Dictionary 
+ 
+The custom stop word dictionary was developed iteratively during tf*idf analyses. It 
+contains: mark, color, annotation, library, pdf, yellow, highlight, note, highlighting, highlighted, 
+highlighter, highlighters, highlighted, highlighting, item, one, two, three, four, five, six, seven, 
+eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, 
+twenty, may, approach, also, based, author, different, note, event, used, new, way, end, term, 
+within, use, note, many, however, set, high, well, begin, calendar, generator, voltage, relay, shed, 
+whichever, swing, equal, and impedance. 
+ 
+Final Time-Scale Classification Dictionary 
+Term 
+Time Classifier 
+Scale Classifier 
+aad 
+Immediate 
+Technical 
+acceptable use agreement 
+Immediate 
+Sociotechnical 
+access 
+Short 
+Sociotechnical 
+access control mechanism 
+Short 
+Sociotechnical 
+access level 
+Short 
+Sociotechnical 
+access type 
+Short 
+Sociotechnical 
+access vector 
+Short 
+Sociotechnical 
+account 
+Immediate 
+Sociotechnical 
+accredit 
+Immediate 
+Technical 
+accuracy 
+Immediate 
+Technical 
+accuracy (absolute) 
+Immediate 
+Technical 
+accuracy (relative) 
+Immediate 
+Technical 
+acm 
+Immediate 
+Technical 
+active attack 
+Immediate 
+Technical 
+active content 
+Immediate 
+Technical 
+active state 
+Immediate 
+Technical 
+
+156 
+active tag 
+Immediate 
+Technical 
+activity 
+Immediate 
+Technical 
+actuating capability 
+Long 
+Technical 
+adaptability 
+Immediate 
+Technical 
+adaptive capacity 
+Mid 
+Technical 
+adaptive cycle 
+Mid 
+Organizational 
+adequate security 
+Immediate 
+Technical 
+adjudicative entity 
+Immediate 
+Technical 
+advanced cyber threat 
+Short 
+Sociotechnical 
+advanced technology attachment 
+Mid 
+Technical 
+adversary 
+Immediate 
+Technical 
+adverse consequence 
+Immediate 
+Technical 
+ae 
+Immediate 
+Technical 
+aes 
+Immediate 
+Technical 
+agency dashboard 
+Immediate 
+Sociotechnical 
+agility 
+Immediate 
+Technical 
+agreement 
+Immediate 
+Technical 
+air gap 
+Immediate 
+Technical 
+algorithm 
+Immediate 
+Technical 
+all-source intelligence 
+Mid 
+Sociotechnical 
+ambiguity rule 
+Immediate 
+Technical 
+analysis 
+Short 
+Technical 
+anonymized information 
+Immediate 
+Community/Sector 
+anonymizers 
+Immediate 
+Technical 
+anti-forensic 
+Immediate 
+Technical 
+anti-spoof 
+Immediate 
+Technical 
+Anti-virus software 
+Immediate 
+Technical 
+aperiodic templates test 
+Immediate 
+Technical 
+applicability statement 
+Immediate 
+Technical 
+application translation 
+Immediate 
+Technical 
+application-proxy gateway 
+Immediate 
+Technical 
+approval status 
+Immediate 
+Technical 
+approval to operate 
+Immediate 
+Technical 
+approved 
+Immediate 
+Technical 
+apt 
+Immediate 
+Technical 
+architecture constructs 
+Mid 
+Technical 
+architecture description 
+Mid 
+Sociotechnical 
+architecture design principles 
+Mid 
+Sociotechnical 
+architecture framework 
+Mid 
+Sociotechnical 
+archive 
+Immediate 
+Technical 
+Artificial intelligence 
+Immediate 
+Technical 
+assembly 
+Immediate 
+Technical 
+assessment 
+Mid 
+Technical 
+
+157 
+assessment criterion/criteria 
+Mid 
+Technical 
+assessment element attribute 
+Mid 
+Technical 
+asset 
+Immediate 
+Technical 
+asset identification 
+Immediate 
+Technical 
+asset reporting format 
+Immediate 
+Technical 
+asset tag 
+Immediate 
+Technical 
+assignment statement 
+Immediate 
+Technical 
+associated data 
+Immediate 
+Technical 
+assurance 
+Mid 
+Technical 
+assurance case 
+Mid 
+Technical 
+assurance evidence 
+Mid 
+Organizational 
+assurance message 
+Mid 
+Technical 
+assurance of domain parameter validity 
+Mid 
+Technical 
+assurance of integrity 
+Mid 
+Technical 
+assurance of possession 
+Mid 
+Technical 
+assurance of public key validity 
+Mid 
+Technical 
+assurance of validity 
+Mid 
+Technical 
+assurance- signature 
+Immediate 
+Technical 
+assured information sharing 
+Mid 
+Community/Sector 
+assured software 
+Immediate 
+Technical 
+ata 
+Immediate 
+Technical 
+attack 
+Immediate 
+Technical 
+attack method 
+Immediate 
+Technical 
+attack pattern 
+Short 
+Sociotechnical 
+attack signature 
+Immediate 
+Technical 
+attack tree 
+Immediate 
+Technical 
+attacker 
+Immediate 
+Technical 
+attribute 
+Immediate 
+Technical 
+attribute authority 
+Immediate 
+Organizational 
+attribute bundle 
+Immediate 
+Technical 
+attribute-value pair 
+Immediate 
+Technical 
+audience 
+Immediate 
+Technical 
+audit administrator 
+Immediate 
+Sociotechnical 
+audit log 
+Immediate 
+Technical 
+audit record 
+Immediate 
+Technical 
+audit reduction tools 
+Immediate 
+Technical 
+auditor 
+Short 
+Organizational 
+authenticable entity 
+Immediate 
+Technical 
+authenticate 
+Immediate 
+Technical 
+authenticated decryption 
+Immediate 
+Technical 
+authenticated encryption 
+Immediate 
+Technical 
+authentication mechanism 
+Immediate 
+Technical 
+authenticity 
+Immediate 
+Technical 
+
+158 
+author 
+Short 
+Sociotechnical 
+authoritative source 
+Immediate 
+Technical 
+authority to operate 
+Immediate 
+Organizational 
+authorized 
+Immediate 
+Sociotechnical 
+automated security monitoring 
+Immediate 
+Technical 
+availability 
+Immediate 
+Technical 
+availability impact 
+Immediate 
+Technical 
+avp 
+Immediate 
+Technical 
+awareness 
+Immediate 
+Technical 
+back-channel communication 
+Immediate 
+Sociotechnical 
+backdoor 
+Immediate 
+Technical 
+bad 
+Immediate 
+Technical 
+banner grabbing 
+Immediate 
+Technical 
+base point 
+Immediate 
+Technical 
+base standards 
+Long 
+Organizational 
+baseline security 
+Immediate 
+Technical 
+basis vector 
+Immediate 
+Technical 
+bastion host 
+Immediate 
+Technical 
+beacon 
+Immediate 
+Technical 
+Beaconing 
+Immediate 
+Technical 
+benchmark producer 
+Immediate 
+Technical 
+benign environment 
+Immediate 
+Technical 
+ber-tlv data object 
+Immediate 
+Technical 
+best practice 
+Short 
+Community/Sector 
+bias 
+Immediate 
+Technical 
+biased 
+Immediate 
+Technical 
+bi-directional (cds) 
+Immediate 
+Technical 
+binary sequence 
+Immediate 
+Technical 
+binding 
+Immediate 
+Technical 
+binomial distribution 
+Immediate 
+Technical 
+bio 
+Immediate 
+Technical 
+biometric authentication (bio, bio-a) 
+Immediate 
+Technical 
+bit 
+Immediate 
+Technical 
+bit error 
+Immediate 
+Technical 
+bit error rate 
+Immediate 
+Technical 
+bit length 
+Immediate 
+Technical 
+bit stream imaging 
+Immediate 
+Technical 
+bit string 
+Immediate 
+Technical 
+black 
+Immediate 
+Technical 
+black data 
+Immediate 
+Technical 
+blacklist 
+Immediate 
+Technical 
+blacklisting 
+Immediate 
+Sociotechnical 
+block 
+Immediate 
+Technical 
+
+159 
+block cipher 
+Immediate 
+Technical 
+block cipher algorithm 
+Immediate 
+Technical 
+block data 
+Immediate 
+Technical 
+block header 
+Immediate 
+Technical 
+blockchain implementation 
+Short 
+Technical 
+blockchain network 
+Immediate 
+Technical 
+blockchain technology 
+Mid 
+Technical 
+blocklist 
+Immediate 
+Technical 
+body of evidence 
+Immediate 
+Technical 
+botnet 
+Immediate 
+Technical 
+Boundary interface 
+Immediate 
+Technical 
+boundary protection 
+Immediate 
+Technical 
+breach 
+Immediate 
+Technical 
+breadth 
+Immediate 
+Technical 
+breakdown structure 
+Immediate 
+Technical 
+broad network access 
+Immediate 
+Technical 
+brokered trust 
+Immediate 
+Technical 
+Browser-based exploitation 
+Immediate 
+Sociotechnical 
+buffer overflow attack 
+Immediate 
+Technical 
+bug 
+Short 
+Technical 
+bug bounty 
+Short 
+Technical 
+build security in 
+Immediate 
+Technical 
+buyer 
+Mid 
+Organizational 
+byte 
+Immediate 
+Technical 
+call back 
+Immediate 
+Technical 
+canister (comsec) 
+Immediate 
+Technical 
+capabilities catalog 
+Immediate 
+Technical 
+capability 
+Long 
+Technical 
+capability list 
+Long 
+Technical 
+capability, behavior management 
+Long 
+Sociotechnical 
+capability, boundary management 
+Long 
+Sociotechnical 
+capability, event preparation 
+management 
+Long 
+Sociotechnical 
+capability, hardware asset 
+management 
+Long 
+Technical 
+capability, iscm 
+Immediate 
+Technical 
+capability, manage and assess risk 
+Mid 
+Organizational 
+capability, perform resilient systems 
+engineering 
+Generational 
+Technical 
+capability, privilege and account 
+management 
+Long 
+Sociotechnical 
+capability, security 
+Immediate 
+Technical 
+capability, software asset management 
+Long 
+Technical 
+capability, trust management 
+Long 
+Sociotechnical 
+
+160 
+capture 
+Immediate 
+Technical 
+card verifiable 
+Immediate 
+Technical 
+catalog 
+Immediate 
+Technical 
+category 
+Immediate 
+Technical 
+cbeff sub-header 
+Immediate 
+Technical 
+ccb 
+Immediate 
+Technical 
+cdm 
+Immediate 
+Technical 
+cd-rewritable 
+Immediate 
+Technical 
+cd-rw 
+Immediate 
+Technical 
+central office of record 
+Immediate 
+Technical 
+central oversight authority 
+Immediate 
+Organizational 
+central services node 
+Immediate 
+Technical 
+certificate 
+Immediate 
+Technical 
+certificate management 
+Long 
+Sociotechnical 
+certificate transparency 
+Immediate 
+Technical 
+certificate-inventory management 
+Long 
+Sociotechnical 
+certificate-related information 
+Immediate 
+Community/Sector 
+certification 
+Long 
+Technical 
+certification analyst 
+Long 
+Technical 
+certifier 
+Immediate 
+Technical 
+chain 
+Immediate 
+Technical 
+chain of custody 
+Immediate 
+Technical 
+chain of trust 
+Immediate 
+Technical 
+chaining 
+Immediate 
+Technical 
+challenge-response protocol 
+Immediate 
+Technical 
+check word 
+Immediate 
+Technical 
+checking disabled 
+Immediate 
+Technical 
+checklist 
+Immediate 
+Technical 
+checklist type 
+Immediate 
+Technical 
+checksum 
+Immediate 
+Technical 
+choreography 
+Immediate 
+Sociotechnical 
+cio 
+Immediate 
+Technical 
+ckms designer 
+Immediate 
+Technical 
+ckms developer 
+Short 
+Sociotechnical 
+ckms hierarchy 
+Immediate 
+Technical 
+claimed address 
+Immediate 
+Technical 
+clean host 
+Immediate 
+Technical 
+clean word list 
+Immediate 
+Technical 
+clear 
+Immediate 
+Technical 
+cleartext 
+Immediate 
+Technical 
+client application 
+Immediate 
+Technical 
+client node 
+Immediate 
+Technical 
+clock 
+Immediate 
+Technical 
+
+161 
+closed source operating system 
+Immediate 
+Technical 
+closed storage 
+Immediate 
+Technical 
+closed system 
+Immediate 
+Technical 
+cluster 
+Immediate 
+Technical 
+cmac 
+Immediate 
+Technical 
+cmrr 
+Immediate 
+Technical 
+code 
+Short 
+Technical 
+code vocabulary 
+Short 
+Technical 
+codec 
+Immediate 
+Technical 
+cold site 
+Short 
+Organizational 
+collection system 
+Immediate 
+Technical 
+collision 
+Immediate 
+Technical 
+collision resistance 
+Immediate 
+Technical 
+commercial-off-the-shelf (cots) 
+Immediate 
+Technical 
+committee draft 
+Immediate 
+Technical 
+commodity service 
+Immediate 
+Technical 
+common control provider 
+Immediate 
+Technical 
+common platform enumeration (cpe) 
+Immediate 
+Technical 
+common services provider (csp) 
+Immediate 
+Sociotechnical 
+common vulnerabilities and exposures 
+identifiers 
+Immediate 
+Technical 
+communications deception 
+Immediate 
+Technical 
+communications router 
+Immediate 
+Technical 
+community of interest (coi) 
+Immediate 
+Community/Sector 
+compensating security control 
+Immediate 
+Technical 
+competency 
+Immediate 
+Technical 
+competent security official 
+Immediate 
+Technical 
+component specification 
+Immediate 
+Technical 
+compromise 
+Immediate 
+Technical 
+compromise recovery 
+Short 
+Technical 
+compromised key list (ckl) 
+Immediate 
+Technical 
+compromised state 
+Immediate 
+Technical 
+Compromising emanations 
+Immediate 
+Technical 
+computer abuse 
+Immediate 
+Technical 
+computer network attack (cna) 
+Immediate 
+Sociotechnical 
+computer network exploitation (cne) 
+Immediate 
+Sociotechnical 
+computer network operations (cno) 
+Short 
+Sociotechnical 
+computer security subsystem 
+Immediate 
+Technical 
+COMSEC 
+Immediate 
+Technical 
+comsec account manager 
+Short 
+Sociotechnical 
+COMSEC incident 
+Short 
+Sociotechnical 
+comsec insecurity 
+Immediate 
+Technical 
+COMSEC material 
+Immediate 
+Technical 
+
+162 
+comsec monitoring 
+Immediate 
+Sociotechnical 
+comsec profile 
+Immediate 
+Technical 
+comsec system data 
+Immediate 
+Technical 
+concept of operations 
+Mid 
+Sociotechnical 
+concept relationship style 
+Immediate 
+Technical 
+condition coverage 
+Immediate 
+Technical 
+confidentiality impact 
+Immediate 
+Technical 
+configurable 
+Immediate 
+Technical 
+configuration baseline 
+Short 
+Technical 
+configuration settings 
+Short 
+Technical 
+conflict 
+Immediate 
+Technical 
+conflict resolution 
+Short 
+Technical 
+confluent hypergeometric function 
+Immediate 
+Technical 
+consensus model 
+Immediate 
+Technical 
+consent banner 
+Immediate 
+Technical 
+consequence 
+Immediate 
+Technical 
+consortium 
+Long 
+Community/Sector 
+container runtime 
+Immediate 
+Technical 
+contamination 
+Immediate 
+Technical 
+content signing certificate 
+Immediate 
+Technical 
+content type 
+Immediate 
+Technical 
+continuity of operations plan 
+Immediate 
+Sociotechnical 
+continuous monitoring as a service 
+Immediate 
+Technical 
+control algorithm 
+Immediate 
+Technical 
+control baseline 
+Immediate 
+Technical 
+control effectiveness 
+Immediate 
+Technical 
+control enhancement 
+Immediate 
+Technical 
+controlled cryptographic item (cci) 
+assembly 
+Immediate 
+Technical 
+controlled cryptographic item (cci) 
+component 
+Immediate 
+Technical 
+controlled space 
+Immediate 
+Technical 
+coordination 
+Immediate 
+Technical 
+copy (data) 
+Immediate 
+Technical 
+cor 
+Immediate 
+Technical 
+corporate-owned personally-enabled 
+(cope) 
+Immediate 
+Technical 
+correct re-identifications 
+Immediate 
+Technical 
+correctness proof 
+Immediate 
+Technical 
+counterfeit 
+Immediate 
+Technical 
+counterintelligence 
+Long 
+Sociotechnical 
+countermeasures 
+Immediate 
+Technical 
+course of action 
+Immediate 
+Technical 
+
+163 
+covert channel 
+Immediate 
+Technical 
+covert storage channel 
+Immediate 
+Technical 
+cp 
+Immediate 
+Technical 
+critical 
+Immediate 
+Technical 
+critical asset 
+Immediate 
+Technical 
+critical value 
+Immediate 
+Technical 
+crl 
+Immediate 
+Technical 
+cross domain baseline list 
+Immediate 
+Technical 
+cross domain sunset list 
+Immediate 
+Technical 
+cryptanalysis 
+Short 
+Sociotechnical 
+cryptographic algorithm 
+Immediate 
+Technical 
+cryptographic api: next generation 
+Immediate 
+Technical 
+cryptographic application 
+Immediate 
+Technical 
+cryptographic checksum 
+Immediate 
+Technical 
+cryptographic ignition key 
+Immediate 
+Technical 
+cryptographic key 
+Immediate 
+Technical 
+cryptographic randomization 
+Immediate 
+Technical 
+cryptographic system review 
+Immediate 
+Technical 
+csf category 
+Immediate 
+Technical 
+csf core 
+Immediate 
+Technical 
+csf organizational profile 
+Long 
+Organizational 
+csm 
+Immediate 
+Technical 
+csn 
+Immediate 
+Technical 
+csp 
+Immediate 
+Technical 
+csr 
+Immediate 
+Technical 
+cut 
+Immediate 
+Technical 
+cve 
+Immediate 
+Technical 
+Cyber attack 
+Immediate 
+Technical 
+cyber attack 
+Immediate 
+Technical 
+cyber incident 
+Short 
+Sociotechnical 
+cyber resiliency construct 
+Mid 
+Organizational 
+cyber resiliency control 
+Immediate 
+Technical 
+Cyber security 
+Immediate 
+Technical 
+Cyberattack 
+Immediate 
+Technical 
+cybersecurity event 
+Immediate 
+Technical 
+cybersecurity risks throughout the 
+supply chain 
+Immediate 
+Community/Sector 
+cybersecurity supply chain risk 
+assessment 
+Mid 
+Organizational 
+cybersecurity-aware 
+Short 
+Sociotechnical 
+dac 
+Immediate 
+Technical 
+damage 
+Immediate 
+Technical 
+dao 
+Immediate 
+Technical 
+
+164 
+dashboard 
+Immediate 
+Technical 
+data asset 
+Immediate 
+Technical 
+data breach 
+Immediate 
+Organizational 
+data collector 
+Immediate 
+Technical 
+data encryption standard 
+Immediate 
+Technical 
+data link layer 
+Immediate 
+Technical 
+data loss 
+Immediate 
+Technical 
+data mining 
+Immediate 
+Technical 
+data origin authentication 
+Immediate 
+Technical 
+data provenance 
+Immediate 
+Technical 
+data spillage 
+Immediate 
+Sociotechnical 
+data theft 
+Immediate 
+Sociotechnical 
+data transfer solution 
+Immediate 
+Technical 
+data universe 
+Immediate 
+Technical 
+data-encryption key 
+Immediate 
+Technical 
+db 
+Immediate 
+Technical 
+DBaaS 
+Immediate 
+Technical 
+DDoS 
+Immediate 
+Technical 
+decentralized autonomous 
+organization 
+Immediate 
+Technical 
+decertification 
+Immediate 
+Technical 
+decision or branch coverage 
+Immediate 
+Organizational 
+decode 
+Immediate 
+Technical 
+decrypt 
+Immediate 
+Technical 
+decryption-verification 
+Immediate 
+Technical 
+Decryptor 
+Immediate 
+Technical 
+defect 
+Immediate 
+Technical 
+defect check 
+Immediate 
+Technical 
+defect type 
+Immediate 
+Technical 
+defensive design 
+Immediate 
+Technical 
+degauss 
+Immediate 
+Technical 
+degradation 
+Immediate 
+Technical 
+degraded cybersecurity state 
+Immediate 
+Technical 
+deleted file 
+Immediate 
+Technical 
+denial of service 
+Immediate 
+Technical 
+denial of service (dos) 
+Immediate 
+Technical 
+Denial-of-Service attack 
+Immediate 
+Technical 
+deny by default 
+Immediate 
+Technical 
+Deny list 
+Immediate 
+Technical 
+de-perimeterization 
+Immediate 
+Technical 
+deprecated identifier name 
+Immediate 
+Technical 
+depth 
+Immediate 
+Technical 
+derived piv application 
+Immediate 
+Technical 
+
+165 
+derived piv credential 
+Immediate 
+Technical 
+derived test requirement 
+Immediate 
+Technical 
+descriptive label 
+Immediate 
+Technical 
+design margin 
+Immediate 
+Technical 
+designated approval authority (daa) 
+Immediate 
+Organizational 
+destroy 
+Immediate 
+Technical 
+destroyed state 
+Immediate 
+Technical 
+detailed assessment 
+Mid 
+Technical 
+Detection 
+Immediate 
+Technical 
+deterministic algorithm 
+Immediate 
+Technical 
+developer 
+Immediate 
+Technical 
+DevOps 
+Short 
+Sociotechnical 
+di 
+Immediate 
+Technical 
+diagnostics 
+Immediate 
+Technical 
+dictionary creator 
+Immediate 
+Technical 
+dictionary maintainer 
+Immediate 
+Technical 
+dictionary search 
+Immediate 
+Technical 
+dictionary user 
+Short 
+Sociotechnical 
+differential privacy 
+Immediate 
+Technical 
+diffie hellman (algorithm) 
+Immediate 
+Technical 
+diffie-hellman 
+Immediate 
+Technical 
+digital 
+Long 
+Technical 
+digital asset 
+Long 
+Technical 
+digital identity 
+Long 
+Technical 
+digital rights management 
+Long 
+Sociotechnical 
+digital signature 
+Long 
+Technical 
+digital versatile disc-recordable 
+Long 
+Technical 
+direct black wireline 
+Immediate 
+Technical 
+direct random string 
+Immediate 
+Technical 
+directly identifying variables 
+Immediate 
+Technical 
+discovery 
+Immediate 
+Technical 
+discrete fourier transform test 
+Immediate 
+Technical 
+discrete logarithm cryptography 
+Immediate 
+Technical 
+discussion 
+Short 
+Sociotechnical 
+disinfecting 
+Immediate 
+Technical 
+disinformation 
+Immediate 
+Technical 
+Disinformationists 
+Immediate 
+Technical 
+disintegration 
+Immediate 
+Technical 
+disk image 
+Immediate 
+Technical 
+disposal 
+Immediate 
+Technical 
+disruption 
+Immediate 
+Technical 
+disruptionware 
+Immediate 
+Technical 
+distinguishable information 
+Immediate 
+Community/Sector 
+
+166 
+distributed denial of service 
+Immediate 
+Technical 
+distributed denial of service (ddos) 
+Immediate 
+Technical 
+Distributed Denial-of-Service attack 
+Immediate 
+Technical 
+distributed self-assessment 
+Immediate 
+Technical 
+dlc 
+Immediate 
+Technical 
+dmz 
+Immediate 
+Technical 
+dnp3 
+Immediate 
+Technical 
+dns administrator 
+Short 
+Sociotechnical 
+domain name server 
+Immediate 
+Technical 
+dominance rule 
+Immediate 
+Technical 
+dos 
+Immediate 
+Technical 
+double spend (problem) 
+Immediate 
+Technical 
+downgrading 
+Immediate 
+Technical 
+dpc 
+Immediate 
+Technical 
+drbg mechanism 
+Immediate 
+Technical 
+dual_ec_drbg 
+Immediate 
+Technical 
+duplicate digital evidence 
+Long 
+Technical 
+duty cycle 
+Immediate 
+Technical 
+dvd+r 
+Immediate 
+Technical 
+dvd-rewritable 
+Immediate 
+Technical 
+dvd-rw 
+Immediate 
+Technical 
+dynamic attack surface 
+Immediate 
+Technical 
+ease-of-use 
+Short 
+Sociotechnical 
+e-authentication assurance level 
+Mid 
+Technical 
+education 
+Mid 
+Organizational 
+effective period 
+Immediate 
+Technical 
+electronic credentials 
+Immediate 
+Technical 
+electronic signature 
+Immediate 
+Technical 
+element 
+Immediate 
+Technical 
+element processes 
+Immediate 
+Sociotechnical 
+elliptic curve digital signature algorithm 
+Long 
+Technical 
+emergence 
+Immediate 
+Technical 
+enabling system 
+Immediate 
+Technical 
+encryption certificate 
+Immediate 
+Technical 
+end cryptographic unit (ecu) 
+Immediate 
+Technical 
+end-point protection platform 
+Immediate 
+Technical 
+engineered system 
+Short 
+Sociotechnical 
+enhanced overlay 
+Immediate 
+Technical 
+enhanced security requirements 
+Immediate 
+Technical 
+enrollment 
+Immediate 
+Technical 
+enterprise 
+Immediate 
+Technical 
+enterprise information technology 
+Mid 
+Community/Sector 
+enterprise risk 
+Mid 
+Organizational 
+
+167 
+enterprise service 
+Immediate 
+Technical 
+entropy source 
+Immediate 
+Technical 
+environmental support 
+Long 
+Sociotechnical 
+equivalent process 
+Mid 
+Organizational 
+erm 
+Immediate 
+Technical 
+error 
+Immediate 
+Technical 
+error detection code 
+Immediate 
+Technical 
+examination 
+Immediate 
+Technical 
+examine 
+Short 
+Sociotechnical 
+execute in place 
+Immediate 
+Technical 
+exercise briefing 
+Short 
+Sociotechnical 
+exfiltration 
+Immediate 
+Technical 
+expected output 
+Immediate 
+Technical 
+expert determination 
+Short 
+Sociotechnical 
+exposure 
+Immediate 
+Technical 
+extensible configuration checklist 
+description format (xccdf) 
+Short 
+Technical 
+extension 
+Immediate 
+Technical 
+external coordinator 
+Immediate 
+Technical 
+external security testing 
+Immediate 
+Technical 
+facility 
+Immediate 
+Technical 
+fail safe 
+Immediate 
+Technical 
+fail secure 
+Immediate 
+Technical 
+fail soft 
+Immediate 
+Technical 
+fail to known state 
+Immediate 
+Technical 
+failover 
+Immediate 
+Technical 
+failure 
+Immediate 
+Technical 
+failure access 
+Short 
+Sociotechnical 
+failure control 
+Immediate 
+Technical 
+fair information practice principles 
+Immediate 
+Community/Sector 
+fal 
+Immediate 
+Technical 
+false accept rate (far) 
+Immediate 
+Technical 
+false match rate (fmr) 
+Immediate 
+Technical 
+false negative 
+Immediate 
+Technical 
+false non-match rate 
+Immediate 
+Technical 
+false reject rate (frr) 
+Immediate 
+Technical 
+far 
+Immediate 
+Technical 
+fcb 
+Immediate 
+Technical 
+fckms documentation 
+Immediate 
+Sociotechnical 
+fckms functions 
+Immediate 
+Technical 
+fckms personnel 
+Immediate 
+Technical 
+fckms security domain 
+Immediate 
+Technical 
+fckms services (protections) 
+Immediate 
+Technical 
+
+168 
+fckms service-using organization 
+Immediate 
+Technical 
+feature phone 
+Immediate 
+Technical 
+feature set 
+Immediate 
+Technical 
+features 
+Immediate 
+Technical 
+federal information security 
+Immediate 
+Technical 
+federal information system 
+Immediate 
+Organizational 
+federal information systems security 
+educatorsâ€™ association 
+Immediate 
+Technical 
+federated trust 
+Immediate 
+Technical 
+federation 
+Immediate 
+Technical 
+FedRAMP-compliant 
+Immediate 
+Sociotechnical 
+file name anomaly 
+Immediate 
+Technical 
+file signature anomaly 
+Immediate 
+Technical 
+file slack 
+Immediate 
+Technical 
+file system 
+Immediate 
+Technical 
+fill device 
+Immediate 
+Technical 
+final checklist 
+Immediate 
+Technical 
+fingerprint segmentation 
+Immediate 
+Technical 
+fips pub 
+Immediate 
+Technical 
+firefly 
+Immediate 
+Technical 
+fit for purpose 
+Immediate 
+Technical 
+flaw 
+Immediate 
+Technical 
+focal document 
+Immediate 
+Technical 
+focal document element 
+Immediate 
+Technical 
+focused observation 
+Immediate 
+Technical 
+forced command 
+Immediate 
+Sociotechnical 
+forced ranking optimization 
+Immediate 
+Technical 
+forensic science 
+Immediate 
+Technical 
+formal method 
+Immediate 
+Technical 
+free field 
+Immediate 
+Technical 
+free space 
+Immediate 
+Technical 
+frequency accuracy 
+Immediate 
+Technical 
+frequency drift 
+Immediate 
+Technical 
+fresh 
+Immediate 
+Technical 
+front-channel communication 
+Immediate 
+Sociotechnical 
+frr 
+Immediate 
+Technical 
+full node 
+Immediate 
+Technical 
+functional exercise 
+Immediate 
+Technical 
+fuzz testing 
+Immediate 
+Sociotechnical 
+galois counter mode (algorithm) 
+Immediate 
+Technical 
+Gateway 
+Immediate 
+Technical 
+generation-encryption 
+Immediate 
+Technical 
+geolocation 
+Immediate 
+Technical 
+
+169 
+geometric random variable 
+Immediate 
+Technical 
+georedundancy 
+Immediate 
+Technical 
+global structure/global value 
+Generational 
+National/International
+global system for mobile 
+communications (gsm) 
+Immediate 
+Technical 
+globally unique identifier 
+Immediate 
+Technical 
+goal 
+Immediate 
+Technical 
+gprs location information 
+Immediate 
+Community/Sector 
+graceful extensibility 
+Mid 
+Organizational 
+graded label 
+Immediate 
+Technical 
+gray market 
+Long 
+Community/Sector 
+graylist 
+Immediate 
+Sociotechnical 
+greatest common divisor 
+Immediate 
+Technical 
+group 
+Immediate 
+Technical 
+group identifier level 1 
+Immediate 
+Technical 
+group order 
+Immediate 
+Technical 
+guest operating system 
+Immediate 
+Technical 
+hackathon 
+Short 
+Sociotechnical 
+hacker 
+Immediate 
+Technical 
+handshake 
+Immediate 
+Technical 
+hardware 
+Immediate 
+Technical 
+hardware asset management 
+Long 
+Technical 
+hardware device 
+Immediate 
+Technical 
+harm 
+Immediate 
+Technical 
+hash chain 
+Immediate 
+Technical 
+hazard 
+Immediate 
+Technical 
+header 
+Immediate 
+Technical 
+health information technology for 
+economic and clinical health act 
+Long 
+National/International
+health insurance portability and 
+accountability act 
+Long 
+National/International
+heap 
+Immediate 
+Technical 
+high availability 
+Immediate 
+Technical 
+high impact 
+Immediate 
+Technical 
+high-impact system 
+Immediate 
+Technical 
+high-power transmitter 
+Immediate 
+Technical 
+high-value asset 
+Immediate 
+Technical 
+Honeyport 
+Immediate 
+Technical 
+Honeypot 
+Immediate 
+Technical 
+host operating system 
+Immediate 
+Technical 
+hosted virtualization 
+Immediate 
+Technical 
+hot site 
+Short 
+Sociotechnical 
+https 
+Immediate 
+Technical 
+
+170 
+human user interface capability 
+Short 
+Sociotechnical 
+hypertext transfer protocol secure 
+(https) 
+Immediate 
+Technical 
+hypothesis (null) 
+Immediate 
+Technical 
+ial 
+Immediate 
+Technical 
+ibgp 
+Immediate 
+Technical 
+ict 
+Immediate 
+Technical 
+ict supply chain 
+Immediate 
+Community/Sector 
+ict supply chain risk management 
+Mid 
+Organizational 
+ideal random bitstring 
+Immediate 
+Technical 
+identification and authentication 
+Immediate 
+Technical 
+identified information 
+Immediate 
+Community/Sector 
+identifier cpe name 
+Immediate 
+Technical 
+identifying information 
+Immediate 
+Community/Sector 
+identity and access management 
+Short 
+Sociotechnical 
+identity certificate 
+Immediate 
+Technical 
+identity evidence 
+Immediate 
+Technical 
+identity fraud and identity theft 
+Immediate 
+Technical 
+identity key 
+Immediate 
+Technical 
+identity management system (idms) 
+Immediate 
+Technical 
+identity provider (idp) 
+Immediate 
+Technical 
+identity-based access control 
+Short 
+Sociotechnical 
+identity-based authentication 
+Immediate 
+Technical 
+ied 
+Immediate 
+Technical 
+IIoT 
+Immediate 
+Technical 
+impact level 
+Immediate 
+Organizational 
+impact value 
+Immediate 
+Technical 
+implant 
+Immediate 
+Technical 
+implementation 
+Short 
+Technical 
+incident 
+Short 
+Sociotechnical 
+incident management 
+Short 
+Sociotechnical 
+incineration 
+Immediate 
+Technical 
+incomplete gamma function 
+Immediate 
+Technical 
+independent qualified reviewer 
+Immediate 
+Technical 
+individual accountability 
+Immediate 
+Technical 
+information assurance 
+Mid 
+Organizational 
+information environment 
+Immediate 
+Community/Sector 
+information exchange 
+Immediate 
+Community/Sector 
+information leakage 
+Immediate 
+Community/Sector 
+information life cycle 
+Immediate 
+Community/Sector 
+information relevant to cybersecurity 
+Immediate 
+Community/Sector 
+information resources 
+Immediate 
+Community/Sector 
+information sharing 
+Mid 
+Community/Sector 
+
+171 
+information sharing environment (ise) 
+Immediate 
+Community/Sector 
+information system component 
+Immediate 
+Technical 
+information system life cycle 
+Immediate 
+Technical 
+information system resilience 
+Immediate 
+Technical 
+information systems security (infosec) 
+boundary 
+Immediate 
+Technical 
+information technology 
+Mid 
+Community/Sector 
+information technology product 
+Mid 
+Community/Sector 
+information value 
+Immediate 
+Community/Sector 
+informational label 
+Immediate 
+Technical 
+informative reference developer 
+Immediate 
+Technical 
+informative references 
+Immediate 
+Technical 
+infrastructure as code 
+Short 
+Technical 
+inheritance 
+Immediate 
+Technical 
+initialization vector (iv) 
+Immediate 
+Technical 
+Injury 
+Immediate 
+Technical 
+Injury level 
+Immediate 
+Technical 
+input block 
+Immediate 
+Technical 
+inspection 
+Immediate 
+Technical 
+integrated circuit card id (iccid) 
+Immediate 
+Technical 
+integrated circuit card identification 
+Immediate 
+Technical 
+integrated risk management 
+Mid 
+Sociotechnical 
+integrity 
+Immediate 
+Technical 
+integrity impact 
+Immediate 
+Technical 
+integrity protection 
+Immediate 
+Technical 
+Intellectual property 
+Immediate 
+Sociotechnical 
+intelligence 
+Immediate 
+Technical 
+intelligence activities 
+Immediate 
+Technical 
+interchangeable 
+Immediate 
+Technical 
+interconnection 
+Immediate 
+Technical 
+interconnection security agreement 
+(isa) 
+Immediate 
+Technical 
+interface capabilities 
+Immediate 
+Technical 
+interim approval to operate 
+Immediate 
+Technical 
+interim authorization to test (iatt) 
+Immediate 
+Technical 
+intermittent ad-hoc connection 
+Immediate 
+Technical 
+internal border gateway protocol 
+Immediate 
+Organizational 
+internal control 
+Immediate 
+Organizational 
+international mobile subscriber identity 
+(imsi) 
+Immediate 
+National/International
+Internet-of-things 
+Immediate 
+Technical 
+invalidate 
+Immediate 
+Technical 
+inventory management 
+Long 
+Sociotechnical 
+
+172 
+IoC 
+Immediate 
+Technical 
+ip 
+Immediate 
+Technical 
+ip security 
+Immediate 
+Technical 
+ipcomp 
+Immediate 
+Technical 
+isa 
+Immediate 
+Technical 
+isao 
+Immediate 
+Technical 
+island of security 
+Immediate 
+Technical 
+isogeny 
+Immediate 
+Technical 
+isolation 
+Immediate 
+Technical 
+issuing source 
+Immediate 
+Technical 
+it asset 
+Immediate 
+Technical 
+ivn 
+Immediate 
+Technical 
+jpeg 
+Immediate 
+Technical 
+judgment value 
+Immediate 
+Technical 
+kas1-basic 
+Immediate 
+Technical 
+kas1-party_v-confirmation 
+Immediate 
+Technical 
+kas2-basic 
+Immediate 
+Technical 
+kas2-party_u-confirmation 
+Immediate 
+Technical 
+kdk 
+Immediate 
+Technical 
+key 
+Immediate 
+Technical 
+key agreement 
+Immediate 
+Technical 
+key bundle 
+Immediate 
+Technical 
+key center 
+Immediate 
+Technical 
+key certification 
+Long 
+Technical 
+key destruction 
+Immediate 
+Technical 
+key escrow system 
+Immediate 
+Technical 
+key establishment 
+Immediate 
+Technical 
+key expansion 
+Immediate 
+Technical 
+key format 
+Immediate 
+Technical 
+key generation 
+Immediate 
+Technical 
+key generation material 
+Immediate 
+Technical 
+key information 
+Immediate 
+Technical 
+key inventory 
+Immediate 
+Technical 
+key life cycle 
+Immediate 
+Technical 
+key list 
+Immediate 
+Technical 
+Key management 
+Long 
+Sociotechnical 
+key management 
+Long 
+Sociotechnical 
+key management components 
+Long 
+Technical 
+key management entity (kme) 
+Long 
+Sociotechnical 
+key recovery 
+Short 
+Sociotechnical 
+key schedule 
+Immediate 
+Technical 
+key share 
+Immediate 
+Technical 
+key signing key (ksk) 
+Immediate 
+Technical 
+
+173 
+key size 
+Immediate 
+Technical 
+key states 
+Immediate 
+Technical 
+key translation center (ktc) 
+Immediate 
+Technical 
+key wrapping 
+Immediate 
+Technical 
+key-center environment 
+Immediate 
+Technical 
+key-derivation key 
+Immediate 
+Technical 
+key-derivation method 
+Immediate 
+Technical 
+key-encryption-key (kek) 
+Immediate 
+Technical 
+key-establishment transaction 
+Immediate 
+Technical 
+keying material 
+Immediate 
+Technical 
+kibi byte 
+Immediate 
+Technical 
+kmi-aware device 
+Immediate 
+Technical 
+kmn 
+Immediate 
+Technical 
+knowledge 
+Long 
+Sociotechnical 
+knowledge levels 
+Long 
+Sociotechnical 
+knowledge-based authentication 
+Immediate 
+Technical 
+koa agent 
+Immediate 
+Technical 
+koa registration manager 
+Immediate 
+Technical 
+l 
+Immediate 
+Technical 
+labeled security protections 
+Immediate 
+Technical 
+laboratory attack 
+Immediate 
+Sociotechnical 
+lan 
+Immediate 
+Technical 
+learning 
+Immediate 
+Technical 
+learning objective 
+Immediate 
+Technical 
+least common multiple 
+Immediate 
+Technical 
+least trust 
+Immediate 
+Technical 
+legacy environment 
+Long 
+Technical 
+level 3 
+Immediate 
+Technical 
+level of assurance 
+Mid 
+Technical 
+life cycle 
+Immediate 
+Technical 
+life cycle security concepts 
+Immediate 
+Technical 
+lightweight directory access protocol 
+(ldap) 
+Short 
+Sociotechnical 
+lightweight node 
+Immediate 
+Technical 
+likelihood 
+Immediate 
+Technical 
+line conditioning 
+Immediate 
+Technical 
+link encryption 
+Immediate 
+Technical 
+linkable information 
+Immediate 
+Community/Sector 
+linked information 
+Immediate 
+Community/Sector 
+local access 
+Short 
+Sociotechnical 
+local element 
+Immediate 
+Technical 
+local registration authority (lra) 
+Immediate 
+Organizational 
+location information (loci) 
+Immediate 
+Technical 
+
+174 
+log archival 
+Immediate 
+Technical 
+log compression 
+Immediate 
+Technical 
+log parsing 
+Immediate 
+Technical 
+log preservation 
+Immediate 
+Technical 
+log reporting 
+Immediate 
+Technical 
+log retention 
+Immediate 
+Technical 
+logic bomb 
+Immediate 
+Technical 
+logical access control system 
+Immediate 
+Technical 
+logical backup 
+Immediate 
+Technical 
+logical perimeter 
+Immediate 
+Technical 
+logical test 
+Immediate 
+Technical 
+logical volume 
+Immediate 
+Technical 
+long runs of ones test 
+Immediate 
+Technical 
+long title 
+Immediate 
+Technical 
+low impact 
+Immediate 
+Technical 
+low probability of detection (lpd) 
+Immediate 
+Sociotechnical 
+low probability of positioning 
+Immediate 
+Technical 
+low-impact system 
+Immediate 
+Technical 
+low-power transmitter 
+Immediate 
+Technical 
+mac key 
+Immediate 
+Technical 
+mac tag 
+Immediate 
+Technical 
+machine-readable 
+Immediate 
+Technical 
+mail transfer agent (mta) 
+Immediate 
+Sociotechnical 
+mail user agent (mua) 
+Short 
+Sociotechnical 
+malicious applet 
+Immediate 
+Technical 
+malicious code 
+Short 
+Technical 
+malicious logic 
+Immediate 
+Technical 
+Malvertising 
+Immediate 
+Technical 
+malware 
+Immediate 
+Technical 
+manage boundaries 
+Immediate 
+Technical 
+manageability 
+Immediate 
+Technical 
+managed environment 
+Immediate 
+Technical 
+management client (mgc) 
+Long 
+Sociotechnical 
+manipulative communications 
+deception 
+Immediate 
+Technical 
+manual cryptosystem 
+Immediate 
+Technical 
+manual remote rekeying 
+Immediate 
+Technical 
+manufacturer usage description (mud) 
+Immediate 
+Technical 
+manufacturing operations 
+Immediate 
+Sociotechnical 
+mapping 
+Immediate 
+Technical 
+margin 
+Immediate 
+Technical 
+market research 
+Long 
+Community/Sector 
+master key 
+Immediate 
+Technical 
+
+175 
+master terminal unit (mtu) 
+Immediate 
+Technical 
+match 
+Immediate 
+Technical 
+matching 
+Immediate 
+Technical 
+materiality 
+Immediate 
+Technical 
+md 
+Immediate 
+Technical 
+means 
+Immediate 
+Technical 
+media access control (mac) 
+Short 
+Sociotechnical 
+medium 
+Immediate 
+Technical 
+medium access control 
+Short 
+Sociotechnical 
+melting 
+Immediate 
+Technical 
+message digest 
+Immediate 
+Technical 
+message inject 
+Immediate 
+Technical 
+microservice 
+Immediate 
+Technical 
+misconfiguration 
+Immediate 
+Technical 
+misnamed files 
+Immediate 
+Technical 
+mission assurance 
+Mid 
+Organizational 
+mission objective 
+Mid 
+Organizational 
+mission resilience 
+Mid 
+Organizational 
+mission-critical element 
+Immediate 
+Technical 
+mission-critical functionality 
+Immediate 
+Technical 
+misuse of controlled unclassified 
+information (cui) 
+Short 
+Community/Sector 
+mms 
+Immediate 
+Technical 
+mobile code risk categories 
+Short 
+Technical 
+model 
+Immediate 
+Technical 
+modern key 
+Immediate 
+Technical 
+moving target defense 
+Immediate 
+Technical 
+mtd 
+Immediate 
+Technical 
+multifactor 
+Immediate 
+Technical 
+multi-level security domain 
+Immediate 
+Technical 
+multiple-center group 
+Immediate 
+Technical 
+multi-releasable 
+Immediate 
+Technical 
+multi-signature 
+Immediate 
+Technical 
+namespace isolation 
+Immediate 
+Technical 
+national comsec incident reporting 
+system (ncirs) 
+Mid 
+Organizational 
+national security information (nsi) 
+Long 
+National/International
+negative risk 
+Mid 
+Organizational 
+network access 
+Immediate 
+Technical 
+network administrator 
+Immediate 
+Technical 
+network interconnection 
+Immediate 
+Technical 
+network intrusion detection system 
+Immediate 
+Technical 
+network resilience 
+Short 
+Organizational 
+
+176 
+nfiq 
+Immediate 
+Technical 
+nft 
+Immediate 
+Technical 
+nist checklist repository 
+Immediate 
+Technical 
+nist standard 
+Immediate 
+Technical 
+noise injection 
+Immediate 
+Technical 
+no-lone zone (nlz) 
+Immediate 
+Technical 
+non-automated checklist 
+Immediate 
+Technical 
+non-custodial 
+Immediate 
+Technical 
+nonfederal system 
+Immediate 
+Technical 
+nonfungible 
+Immediate 
+Technical 
+nppi 
+Immediate 
+Technical 
+obscured data 
+Immediate 
+Technical 
+observable 
+Immediate 
+Sociotechnical 
+offensive cyberspace operations (oco) 
+Short 
+Organizational 
+official information 
+Immediate 
+Community/Sector 
+offline attack 
+Immediate 
+Technical 
+off-line cryptosystem 
+Immediate 
+Technical 
+olir program 
+Mid 
+Technical 
+on-access scanning 
+Immediate 
+Technical 
+one-time cryptosystem 
+Immediate 
+Sociotechnical 
+one-time pad (otp) 
+Immediate 
+Sociotechnical 
+online attack 
+Immediate 
+Technical 
+open pretty good privacy (openpgp) 
+Immediate 
+Technical 
+open storage 
+Immediate 
+Technical 
+open system 
+Immediate 
+Technical 
+open vulnerability and assessment 
+language (oval) 
+Short 
+Technical 
+OpenIOC 
+Immediate 
+Technical 
+operate & maintain 
+Immediate 
+Technical 
+operation 
+Immediate 
+Technical 
+operational concept 
+Mid 
+Organizational 
+operational environment 
+Immediate 
+Organizational 
+operational margin 
+Immediate 
+Organizational 
+operational phase 
+Immediate 
+Organizational 
+operational resilience 
+Short 
+Organizational 
+operations code (opcode) 
+Short 
+Technical 
+opportunity 
+Immediate 
+Technical 
+opsec 
+Immediate 
+Technical 
+oracle 
+Immediate 
+Technical 
+orphan block 
+Immediate 
+Technical 
+oscillator 
+Immediate 
+Technical 
+other system 
+Immediate 
+Technical 
+otherinput 
+Immediate 
+Technical 
+
+177 
+output space 
+Immediate 
+Technical 
+outside( r) threat 
+Short 
+Technical 
+Overfitting 
+Immediate 
+Sociotechnical 
+overlay network 
+Immediate 
+Technical 
+overt channel 
+Immediate 
+Technical 
+Overwrite 
+Immediate 
+Technical 
+overwrite 
+Immediate 
+Technical 
+package management system 
+Immediate 
+Technical 
+page check 
+Short 
+Sociotechnical 
+pairwise pseudonymous identifier 
+Immediate 
+Technical 
+pairwise trust 
+Immediate 
+Technical 
+paravirtualization 
+Immediate 
+Technical 
+paring code 
+Short 
+Technical 
+passive security testing 
+Immediate 
+Technical 
+passive tag 
+Immediate 
+Technical 
+passwordless 
+Immediate 
+Technical 
+patching 
+Short 
+Sociotechnical 
+ped 
+Immediate 
+Technical 
+Pentester 
+Immediate 
+Technical 
+performance-based 
+Immediate 
+Organizational 
+permanent connection 
+Immediate 
+Technical 
+person 
+Mid 
+Sociotechnical 
+personal accountability 
+Short 
+Sociotechnical 
+personal digital assistant (pda) 
+Long 
+Technical 
+personal firewall 
+Immediate 
+Technical 
+personal information 
+Immediate 
+Organizational 
+personnel security 
+Mid 
+Organizational 
+personnel-security compromise 
+Short 
+Organizational 
+pfs 
+Immediate 
+Technical 
+phase 
+Immediate 
+Technical 
+phishing 
+Immediate 
+Technical 
+physical destruction 
+Immediate 
+Technical 
+physical identifier 
+Immediate 
+Technical 
+pii processing 
+Immediate 
+Technical 
+PIV 
+Immediate 
+Technical 
+piv credential 
+Immediate 
+Technical 
+piv key type 
+Immediate 
+Technical 
+piv visual credential authentication 
+(vis) 
+Immediate 
+Technical 
+pivoting 
+Immediate 
+Technical 
+pkc 
+Immediate 
+Technical 
+plan of action and milestones 
+Immediate 
+Technical 
+plc 
+Immediate 
+Technical 
+
+178 
+Point of presence 
+Immediate 
+Technical 
+portable electronic device (ped) 
+Immediate 
+Sociotechnical 
+portable storage device 
+Immediate 
+Technical 
+positioning 
+Immediate 
+Technical 
+positive control material 
+Short 
+Sociotechnical 
+possession and control of an 
+authenticator 
+Immediate 
+Technical 
+post-market capability 
+Long 
+Technical 
+potential impact 
+Immediate 
+Technical 
+pr 
+Immediate 
+Technical 
+precision 
+Immediate 
+Technical 
+predictability 
+Immediate 
+Technical 
+preimage 
+Immediate 
+Technical 
+preimage resistance 
+Immediate 
+Technical 
+pre-market capability 
+Long 
+Technical 
+prepare for events 
+Immediate 
+Technical 
+preparedness 
+Immediate 
+Technical 
+presentation attack 
+Immediate 
+Technical 
+prf 
+Immediate 
+Technical 
+primary services node (prsn) 
+Immediate 
+Technical 
+prime number 
+Immediate 
+Technical 
+prime number generation seed 
+Immediate 
+Technical 
+primitive 
+Immediate 
+Technical 
+principal authorizing official (pao) 
+Short 
+Sociotechnical 
+privacy impact assessment (pia) 
+Mid 
+Sociotechnical 
+privacy loss 
+Immediate 
+Sociotechnical 
+privacy loss budget 
+Mid 
+Technical 
+private key 
+Immediate 
+Technical 
+private key/private signature key 
+Immediate 
+Technical 
+privilege 
+Immediate 
+Sociotechnical 
+privileged command 
+Immediate 
+Technical 
+probable prime 
+Immediate 
+Technical 
+problem 
+Immediate 
+Technical 
+problematic data action 
+Immediate 
+Technical 
+process outcome 
+Mid 
+Organizational 
+process purpose 
+Mid 
+Organizational 
+processing 
+Immediate 
+Technical 
+product component host 
+Immediate 
+Technical 
+product source node (psn) 
+Immediate 
+Technical 
+profile features 
+Immediate 
+Technical 
+proof of possession (pop) 
+Immediate 
+Technical 
+proof of work consensus model 
+Immediate 
+Technical 
+proper working state 
+Immediate 
+Technical 
+
+179 
+prose checklist 
+Immediate 
+Technical 
+protect & defend 
+Immediate 
+Organizational 
+protected distribution system (pds) 
+Immediate 
+Technical 
+protection 
+Immediate 
+Technical 
+protection bits 
+Immediate 
+Technical 
+provable prime 
+Immediate 
+Technical 
+provider 
+Immediate 
+Sociotechnical 
+Proxyjacking 
+Immediate 
+Technical 
+pseudonymous identifier 
+Immediate 
+Technical 
+pseudorandom 
+Immediate 
+Technical 
+PTaaS 
+Immediate 
+Technical 
+public credentials 
+Immediate 
+Sociotechnical 
+public information 
+Immediate 
+Community/Sector 
+public key 
+Immediate 
+Technical 
+public key cryptographic algorithm 
+Immediate 
+Technical 
+public key infrastructure (pki) 
+Mid 
+National/International
+public seed 
+Immediate 
+Technical 
+p-value 
+Immediate 
+Technical 
+qemu (quick emulator) 
+Immediate 
+Technical 
+quadratic twist 
+Immediate 
+Technical 
+qualified products list 
+Immediate 
+Technical 
+quality assurance 
+Mid 
+Organizational 
+quality characteristic 
+Mid 
+Organizational 
+quality management 
+Mid 
+Organizational 
+quality property 
+Mid 
+Organizational 
+Quantum computing 
+Immediate 
+Technical 
+questionnaire 
+Immediate 
+Technical 
+random number 
+Immediate 
+Technical 
+random value 
+Immediate 
+Technical 
+randomized hashing 
+Immediate 
+Technical 
+randomized message 
+Immediate 
+Technical 
+randomness source 
+Immediate 
+Technical 
+range 
+Immediate 
+Technical 
+rank (of a matrix) 
+Immediate 
+Technical 
+ransomware 
+Immediate 
+Sociotechnical 
+rapid elasticity 
+Immediate 
+Technical 
+rate 
+Immediate 
+Technical 
+rbac 
+Mid 
+Sociotechnical 
+reader 
+Immediate 
+Technical 
+reader spoofing 
+Immediate 
+Technical 
+real mode 
+Immediate 
+Technical 
+real time reaction 
+Immediate 
+Technical 
+recipient-usage period 
+Immediate 
+Technical 
+
+180 
+reciprocity 
+Short 
+Sociotechnical 
+recommendation 
+Immediate 
+Technical 
+record 
+Immediate 
+Technical 
+records 
+Immediate 
+Technical 
+recovery 
+Short 
+Technical 
+recovery point objective 
+Short 
+Technical 
+recovery time objective 
+Short 
+Technical 
+red key 
+Immediate 
+Technical 
+red team/blue team approach 
+Mid 
+Organizational 
+red wireline 
+Immediate 
+Technical 
+Redaction 
+Immediate 
+Technical 
+redaction 
+Immediate 
+Technical 
+redundancy 
+Short 
+Sociotechnical 
+reference document element 
+Immediate 
+Technical 
+reference monitor 
+Immediate 
+Technical 
+relationship 
+Immediate 
+Technical 
+relationship identifier 
+Immediate 
+Technical 
+relationship style 
+Immediate 
+Technical 
+relationship type 
+Immediate 
+Technical 
+relatively prime 
+Immediate 
+Technical 
+release prefix 
+Immediate 
+Technical 
+relevant event 
+Immediate 
+Technical 
+remote access server 
+Short 
+Technical 
+remote rekeying 
+Immediate 
+Technical 
+replay attack 
+Immediate 
+Technical 
+replay resistance 
+Immediate 
+Technical 
+reporter 
+Immediate 
+Technical 
+representational state transfer (rest) 
+Immediate 
+Technical 
+request for comments 
+Immediate 
+Technical 
+residue 
+Immediate 
+Technical 
+resilience 
+Short 
+Organizational 
+resource 
+Mid 
+Organizational 
+resource pooling 
+Mid 
+Organizational 
+response 
+Short 
+Technical 
+rest 
+Immediate 
+Technical 
+restoration 
+Immediate 
+Technical 
+results 
+Immediate 
+Technical 
+reward system 
+Immediate 
+Technical 
+ripe ncc 
+Immediate 
+Technical 
+risk detail report 
+Short 
+Sociotechnical 
+risk elevation 
+Mid 
+Organizational 
+risk escalation 
+Mid 
+Organizational 
+risk factor 
+Short 
+Sociotechnical 
+
+181 
+risk identification 
+Short 
+Organizational 
+risk management level 
+Mid 
+Sociotechnical 
+risk optimization 
+Mid 
+Organizational 
+risk response 
+Short 
+Organizational 
+risk treatment 
+Mid 
+Organizational 
+risk-based data management 
+Mid 
+Organizational 
+rmf 
+Immediate 
+Technical 
+rng seed 
+Immediate 
+Technical 
+robustness 
+Immediate 
+Technical 
+rogue device 
+Immediate 
+Technical 
+root certificate 
+Immediate 
+Technical 
+root user 
+Short 
+Sociotechnical 
+roots of trust 
+Immediate 
+Sociotechnical 
+rot 
+Immediate 
+Technical 
+route origin attestation 
+Immediate 
+Technical 
+rpo 
+Immediate 
+Technical 
+rs 
+Immediate 
+Technical 
+rtr 
+Immediate 
+Technical 
+rule-based event correlation 
+Immediate 
+Technical 
+run 
+Immediate 
+Technical 
+safety requirements 
+Immediate 
+Technical 
+salt 
+Immediate 
+Technical 
+sap 
+Short 
+Organizational 
+satisfaction 
+Immediate 
+Technical 
+sbom 
+Mid 
+Sociotechnical 
+scada 
+Immediate 
+Technical 
+scap capability 
+Long 
+Technical 
+scap content checklist 
+Immediate 
+Technical 
+scatternet 
+Immediate 
+Technical 
+scenario test 
+Immediate 
+Technical 
+scheduled data transfer 
+Immediate 
+Technical 
+scheme 
+Immediate 
+Technical 
+scheme owner 
+Short 
+Sociotechnical 
+scoping guidance 
+Immediate 
+Technical 
+scrm 
+Mid 
+Organizational 
+sdo 
+Immediate 
+Technical 
+seal of approval 
+Immediate 
+Technical 
+second preimage resistance 
+Immediate 
+Technical 
+secret key (symmetric) cryptographic 
+algorithm 
+Immediate 
+Technical 
+secure communication protocol 
+Immediate 
+Sociotechnical 
+secure communications 
+Immediate 
+Technical 
+Secure erasure 
+Immediate 
+Technical 
+
+182 
+secure state 
+Immediate 
+Technical 
+secure transport 
+Immediate 
+Technical 
+securely provision 
+Short 
+Sociotechnical 
+securely resilient 
+Short 
+Sociotechnical 
+security association database (sad) 
+Immediate 
+Technical 
+security banner 
+Immediate 
+Technical 
+security control and privacy control 
+Immediate 
+Technical 
+security control effectiveness 
+Immediate 
+Sociotechnical 
+security engineering 
+Immediate 
+Technical 
+security information and event 
+management 
+Short 
+Sociotechnical 
+security inspection 
+Immediate 
+Technical 
+security life of data 
+Immediate 
+Technical 
+security marking 
+Immediate 
+Technical 
+security mechanism 
+Immediate 
+Technical 
+security perimeter 
+Immediate 
+Technical 
+security range 
+Immediate 
+Technical 
+security solution 
+Immediate 
+Technical 
+security strength 
+Immediate 
+Technical 
+security-oriented code review 
+Short 
+Technical 
+seed 
+Immediate 
+Technical 
+seed period 
+Immediate 
+Technical 
+selection statement 
+Immediate 
+Technical 
+self-encrypting devices / self-
+encrypting drives (sed) 
+Immediate 
+Technical 
+sensitive 
+Short 
+Sociotechnical 
+sensitive information 
+Short 
+Organizational 
+sensitivity 
+Immediate 
+Technical 
+serial test 
+Immediate 
+Technical 
+service composition 
+Immediate 
+Technical 
+sha-256 
+Immediate 
+Technical 
+shadow stack 
+Immediate 
+Technical 
+short title 
+Immediate 
+Technical 
+short title assignment requester (star) 
+Immediate 
+Technical 
+short-term stability 
+Immediate 
+Technical 
+shrinkage 
+Immediate 
+Technical 
+side-channel attack 
+Immediate 
+Technical 
+signature 
+Immediate 
+Technical 
+signature generation 
+Immediate 
+Technical 
+signature-in-question 
+Immediate 
+Technical 
+significant consequences 
+Immediate 
+Technical 
+sim 
+Immediate 
+Technical 
+similarity digest 
+Immediate 
+Technical 
+
+183 
+skill 
+Immediate 
+Technical 
+sla 
+Immediate 
+Technical 
+slack space 
+Immediate 
+Technical 
+smart data 
+Immediate 
+Technical 
+smart meter 
+Immediate 
+Sociotechnical 
+sniffer 
+Immediate 
+Technical 
+so 
+Immediate 
+Technical 
+soap header 
+Immediate 
+Technical 
+soap message 
+Immediate 
+Technical 
+sod 
+Immediate 
+Technical 
+solid-state drive 
+Immediate 
+Technical 
+sor 
+Immediate 
+Technical 
+source content 
+Immediate 
+Technical 
+source of randomness 
+Immediate 
+Technical 
+source restriction 
+Immediate 
+Technical 
+source value 
+Immediate 
+Technical 
+sp 
+Immediate 
+Technical 
+space structures 
+Immediate 
+Organizational 
+spam 
+Immediate 
+Technical 
+sparql 
+Immediate 
+Technical 
+special character 
+Immediate 
+Technical 
+specification versioning 
+Immediate 
+Technical 
+sponsor 
+Immediate 
+Technical 
+sponsor (of a certificate) 
+Immediate 
+Technical 
+sponsor (of a key) 
+Immediate 
+Technical 
+spread spectrum 
+Immediate 
+Technical 
+ssh client 
+Immediate 
+Technical 
+ssp 
+Immediate 
+Technical 
+stability 
+Immediate 
+Technical 
+stage 
+Immediate 
+Technical 
+staking 
+Immediate 
+Technical 
+standards developing organization 
+Long 
+Organizational 
+state 
+Immediate 
+Technical 
+strength of function 
+Immediate 
+Technical 
+strength of mechanism (som) 
+Immediate 
+Technical 
+string 
+Immediate 
+Technical 
+strong authentication 
+Immediate 
+Technical 
+subject alternative name 
+Immediate 
+Technical 
+subscriber 
+Immediate 
+Technical 
+suitability and credentialing executive 
+agent 
+Immediate 
+Technical 
+suite a 
+Immediate 
+Technical 
+superior certification authority 
+Long 
+Organizational 
+
+184 
+supplierâ€™s declaration of conformity 
+Immediate 
+Technical 
+supply chain attack 
+Mid 
+Organizational 
+supply chain risk information 
+Mid 
+Organizational 
+support 
+Short 
+Sociotechnical 
+support a security strength 
+Immediate 
+Technical 
+supporting capabilities 
+Immediate 
+Technical 
+supporting parties 
+Immediate 
+Technical 
+supporting services 
+Immediate 
+Technical 
+supportive relationship mapping 
+Short 
+Organizational 
+survivability 
+Immediate 
+Technical 
+suspension 
+Immediate 
+Technical 
+switch 
+Immediate 
+Technical 
+switchport 
+Immediate 
+Technical 
+sybil attack 
+Immediate 
+Technical 
+syncable authenticators 
+Immediate 
+Technical 
+system administration 
+Immediate 
+Technical 
+system developer 
+Short 
+Sociotechnical 
+system flash memory 
+Immediate 
+Technical 
+system high 
+Immediate 
+Technical 
+system integrity 
+Immediate 
+Technical 
+system interconnection 
+Immediate 
+Technical 
+system low 
+Immediate 
+Technical 
+system test 
+Immediate 
+Technical 
+systems development 
+Mid 
+Technical 
+tactical edge 
+Immediate 
+Technical 
+tailored trustworthy space 
+Immediate 
+Technical 
+tamper resistant 
+Mid 
+Sociotechnical 
+target 
+Immediate 
+Technical 
+target data 
+Immediate 
+Technical 
+target value 
+Immediate 
+Technical 
+target vulnerability validation 
+techniques 
+Short 
+Sociotechnical 
+targets 
+Immediate 
+Technical 
+tcp 
+Immediate 
+Technical 
+te 
+Immediate 
+Technical 
+technical reference model (trm) 
+Mid 
+Sociotechnical 
+technical risk 
+Mid 
+Organizational 
+technique 
+Immediate 
+Technical 
+tee 
+Immediate 
+Technical 
+telecommuting 
+Immediate 
+Sociotechnical 
+telework 
+Immediate 
+Sociotechnical 
+test 
+Immediate 
+Technical 
+test action 
+Immediate 
+Technical 
+
+185 
+test guide 
+Immediate 
+Technical 
+test tools 
+Immediate 
+Technical 
+test, training, and exercise (tt&e) plan 
+Mid 
+Organizational 
+three-key triple data encryption 
+algorithm 
+Immediate 
+Technical 
+tier iv checklist 
+Immediate 
+Technical 
+time bomb 
+Immediate 
+Technical 
+timestamp 
+Immediate 
+Technical 
+tls 
+Immediate 
+Technical 
+token 
+Immediate 
+Technical 
+tool configuration 
+Short 
+Technical 
+total risk 
+Mid 
+Organizational 
+TRA 
+Immediate 
+Technical 
+tradecraft identity 
+Immediate 
+Technical 
+trade-off 
+Immediate 
+Technical 
+traffic flow confidentiality (tfc) padding 
+Immediate 
+Technical 
+traffic light protocol 
+Immediate 
+Technical 
+training assessment 
+Short 
+Sociotechnical 
+training effectiveness 
+Short 
+Sociotechnical 
+training key 
+Short 
+Sociotechnical 
+training matrix 
+Short 
+Sociotechnical 
+tranquility 
+Immediate 
+Technical 
+transdisciplinary 
+Immediate 
+Technical 
+transducer capabilities 
+Immediate 
+Technical 
+transforming application 
+Immediate 
+Technical 
+transmission security 
+Immediate 
+Technical 
+transparency 
+Immediate 
+Technical 
+transport mode 
+Immediate 
+Technical 
+Trojanize 
+Immediate 
+Technical 
+trust 
+Immediate 
+Sociotechnical 
+trust anchor 
+Immediate 
+Technical 
+trust list 
+Immediate 
+Technical 
+trust relationship 
+Immediate 
+Sociotechnical 
+trusted 
+Immediate 
+Technical 
+trusted agent (ta) 
+Immediate 
+Sociotechnical 
+trusted association 
+Immediate 
+Technical 
+trusted operating system 
+Immediate 
+Technical 
+trusted timestamp authority (tta) 
+Immediate 
+Organizational 
+trustworthy information system 
+Immediate 
+Technical 
+tsec nomenclature 
+Immediate 
+Technical 
+tsig key 
+Immediate 
+Technical 
+tta 
+Immediate 
+Technical 
+turing complete 
+Immediate 
+Technical 
+
+186 
+two-person control 
+Immediate 
+Technical 
+uniform resource locator 
+Immediate 
+Technical 
+universal description, discovery, and 
+integration (uddi) 
+Immediate 
+Sociotechnical 
+universal integrated circuit card 
+Immediate 
+Technical 
+universal resource identifier 
+Immediate 
+Sociotechnical 
+universal resource locator 
+Immediate 
+Technical 
+update server 
+Immediate 
+Technical 
+upgrade management system 
+Immediate 
+Sociotechnical 
+url 
+Immediate 
+Technical 
+usability 
+Immediate 
+Sociotechnical 
+user activity monitoring 
+Immediate 
+Sociotechnical 
+user principal name 
+Short 
+Sociotechnical 
+valid data element 
+Immediate 
+Technical 
+valid length 
+Immediate 
+Technical 
+validate 
+Immediate 
+Technical 
+validated roa payload 
+Immediate 
+Technical 
+validation 
+Immediate 
+Technical 
+validation model 
+Immediate 
+Technical 
+validator 
+Immediate 
+Technical 
+validity period 
+Immediate 
+Technical 
+value 
+Immediate 
+Technical 
+value string 
+Immediate 
+Technical 
+variable-value configuration 
+Short 
+Technical 
+virtual local area network 
+Immediate 
+Technical 
+virtualized host 
+Immediate 
+Technical 
+voice over internet protocol (voip) 
+Immediate 
+Sociotechnical 
+volatile data 
+Immediate 
+Technical 
+volatile memory 
+Immediate 
+Technical 
+vrp 
+Immediate 
+Technical 
+vulnerability 
+Short 
+Technical 
+vulnerability assessment and 
+management 
+Short 
+Sociotechnical 
+wan 
+Immediate 
+Technical 
+wander 
+Immediate 
+Technical 
+Wargaming 
+Immediate 
+Technical 
+warm site 
+Short 
+Organizational 
+watering hole 
+Immediate 
+Technical 
+watering hole attack 
+Immediate 
+Technical 
+weakest judgment algorithm 
+Immediate 
+Technical 
+weakness 
+Immediate 
+Technical 
+web bug 
+Short 
+Technical 
+web portal 
+Immediate 
+Technical 
+
+187 
+web service interoperability (ws-i) basic 
+profile 
+Immediate 
+Technical 
+well-formed 
+Immediate 
+Technical 
+well-formed cpe name 
+Immediate 
+Technical 
+white team 
+Short 
+Sociotechnical 
+whitelist 
+Immediate 
+Technical 
+whitelisting 
+Immediate 
+Technical 
+wi-fi 
+Immediate 
+Technical 
+wireless application protocol (wap) 
+Immediate 
+Technical 
+wireless markup language 
+Immediate 
+Technical 
+word 
+Immediate 
+Technical 
+workcraft identify 
+Immediate 
+Technical 
+write-blocker 
+Immediate 
+Technical 
+x.509 certificate 
+Immediate 
+Technical 
+xml information security marking (xml-
+ism) 
+Immediate 
+Technical 
+xquery 
+Immediate 
+Technical 
+zero fill 
+Immediate 
+Technical 
+zero trust 
+Immediate 
+Sociotechnical 
+zero trust architecture 
+Mid 
+Organizational 
+zeroization 
+Immediate 
+Technical 
+zeroize 
+Immediate 
+Technical 
+zone signing key (zsk) 
+Immediate 
+Technical 
+zt 
+Immediate 
+Technical 
+ 
+ 
+
+ 
+ 
+ProQuest Number:  
+ 
+ 
+INFORMATION TO ALL USERS 
+The quality and completeness of this reproduction is dependent on the quality  
+and completeness of the copy made available to ProQuest. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Distributed by  
+ProQuest LLC a part of Clarivate (         ). 
+Copyright of the Dissertation is held by the Author unless otherwise noted. 
+ 
+ 
+This work is protected against unauthorized copying under Title 17,  
+United States Code and other applicable copyright laws. 
+ 
+ 
+This work may be used in accordance with the terms of the Creative Commons license  
+or other rights statement, as indicated in the copyright statement or in the metadata  
+associated with this work. Unless otherwise specified in the copyright statement  
+or the metadata, all rights are reserved by the copyright holder. 
+ 
+ 
+ProQuest LLC 
+789 East Eisenhower Parkway 
+Ann Arbor, MI 48108 USA 
+31934738
+2025
+

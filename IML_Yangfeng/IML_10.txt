@@ -1,0 +1,928 @@
+CS 4501/6501 Interpretable Machine Learning
+Hanjie Chen, Yangfeng Ji
+Department of Computer Science
+University of Virginia
+{hc9mx, yangfeng}@virginia.edu
+1
+Rationalized Neural Networks
+
+--------------------------------------------------------------------------------
+[End of Page 1]
+
+2
+What is the difference?  
+Explaining a model from the post-hoc manner 
+Improving a model’s intrinsic interpretability
+Model
+Model
+freeze
+train
+•
+Inference stage
+•
+Training stage
+•
+Explain model predictions
+•
+No change on model 
+decision making
+•
+Make model prediction 
+behavior more interpretable
+•
+No (or minor) change on model 
+architecture
+Building Interpretable Neural Network Models
+Model
+Self-interpretable
+Rationalized Neural Networks
+input
+Extractor
+rationale
+output
+Predictor
+
+--------------------------------------------------------------------------------
+[End of Page 2]
+
+3
+Rationalized Neural Networks
+• Rationalizing Neural Predictions
+• FRESH
+
+--------------------------------------------------------------------------------
+[End of Page 3]
+
+4
+Rationalizing Neural Predictions
+Tao Lei, Regina Barzilay and Tommi Jaakkola
+(EMNLP, 2016)
+
+--------------------------------------------------------------------------------
+[End of Page 4]
+
+5
+Rationalizing Neural Predictions
+• Rationales: interpretable justifications for model predictions
+• Learning problem
+-
+Prediction
+-
+Rationale generation
+
+--------------------------------------------------------------------------------
+[End of Page 5]
+
+6
+Rationalizing Neural Predictions
+• Rationales: interpretable justifications for model predictions
+• Learning problem
+-
+Prediction
+-
+Rationale generation
+(subsets of words extracted from the input)
+•
+short and coherent pieces of text 
+(e.g., phrases)
+•
+suffice for prediction
+
+--------------------------------------------------------------------------------
+[End of Page 6]
+
+7
+Extractive Rationale Generation
+𝒙= 𝑥!, 𝑥", ⋯, 𝑥#
+A sequence of words generator
+𝑔𝑒𝑛(𝒙)
+Rationale
+encoder
+𝑒𝑛𝑐(𝑔𝑒𝑛𝒙)
+Prediction
+short and 
+sufficient
+≈𝑒𝑛𝑐(𝒙)
+
+--------------------------------------------------------------------------------
+[End of Page 7]
+
+8
+Extractive Rationale Generation
+𝒙= 𝑥!, 𝑥", ⋯, 𝑥#
+A sequence of words
+𝑔𝑒𝑛(𝒙)
+Rationale
+encoder
+𝑒𝑛𝑐(𝑔𝑒𝑛𝒙)
+Prediction
+short and 
+sufficient
+≈𝑒𝑛𝑐(𝒙)
+𝑔𝑒𝑛(-): a tagging model
+0,1, ⋯, 0 #
+generator
+
+--------------------------------------------------------------------------------
+[End of Page 8]
+
+9
+Extractive Rationale Generation
+𝒙= 𝑥!, 𝑥", ⋯, 𝑥#
+A sequence of words
+𝑔𝑒𝑛(𝒙)
+Rationale
+encoder
+𝑒𝑛𝑐(𝑔𝑒𝑛𝒙)
+Prediction
+short and 
+sufficient
+≈𝑒𝑛𝑐(𝒙)
+𝑔𝑒𝑛(-): a tagging model
+0,1, ⋯, 0 #
+generator
+Train 
+jointly
+No additional 
+supervision
+
+--------------------------------------------------------------------------------
+[End of Page 9]
+
+10
+Encoder and Generator
+Encoder 𝒆𝒏𝒄(-)
+3𝑦= 𝑒𝑛𝑐(𝒙)
+ℒ𝒙, 𝑦=
+3𝑦−𝑦"
+" =
+𝑒𝑛𝑐(𝒙) −𝑦"
+"
+
+--------------------------------------------------------------------------------
+[End of Page 10]
+
+11
+Encoder and Generator
+Generator 𝒈𝒆𝒏(-)
+𝒛~𝑔𝑒𝑛𝒙≡𝑝𝒛𝒙
+𝑧$ ∈0, 1
+𝑔𝑒𝑛𝒙
+𝒛= 𝑧!, 𝑧", ⋯, 𝑧#
+
+--------------------------------------------------------------------------------
+[End of Page 11]
+
+12
+Encoder and Generator
+Generator 𝒈𝒆𝒏(-)
+𝒛~𝑔𝑒𝑛𝒙≡𝑝𝒛𝒙
+𝑧$ ∈0, 1
+𝑔𝑒𝑛𝒙
+𝒛= 𝑧!, 𝑧", ⋯, 𝑧#
+𝑝𝒛𝒙= >
+$%!
+#
+𝑝𝑧$ 𝒙
+(independent selection)
+
+--------------------------------------------------------------------------------
+[End of Page 12]
+
+13
+Encoder and Generator
+Generator 𝒈𝒆𝒏(-)
+𝒛~𝑔𝑒𝑛𝒙≡𝑝𝒛𝒙
+𝑧$ ∈0, 1
+𝑔𝑒𝑛𝒙
+𝒛= 𝑧!, 𝑧", ⋯, 𝑧#
+𝑝𝒛𝒙= >
+$%!
+#
+𝑝𝑧$ 𝒙
+(independent selection)
+𝑝𝒛𝒙= >
+$%!
+#
+𝑝𝑧$ 𝒙, 𝑧! ⋯, 𝑧$&𝟏
+(recurrent selection)
+Or
+
+--------------------------------------------------------------------------------
+[End of Page 13]
+
+14
+Encoder and Generator
+Generator 𝒈𝒆𝒏(-)
+𝒛~𝑔𝑒𝑛𝒙≡𝑝𝒛𝒙
+𝑧$ ∈0, 1
+𝑔𝑒𝑛𝒙
+𝒛= 𝑧!, 𝑧", ⋯, 𝑧#
+𝑝𝒛𝒙= >
+$%!
+#
+𝑝𝑧$ 𝒙
+(independent selection)
+𝑝𝒛𝒙= >
+$%!
+#
+𝑝𝑧$ 𝒙, 𝑧! ⋯, 𝑧$&𝟏
+(recurrent selection)
+Or
+The component distributions are 
+modeled via a shared bi-directional 
+recurrent neural network
+
+--------------------------------------------------------------------------------
+[End of Page 14]
+
+15
+Encoder and Generator
+Joint objective
+A rationale 𝒛, 𝒙corresponds to the selected words, i.e., 𝑥$ 𝑧$ = 1
+The rationale should suffice as a replacement for the input text:
+ℒ𝒛, 𝒙, 𝑦=
+𝑒𝑛𝑐(𝒛, 𝒙) −𝑦"
+"
+
+--------------------------------------------------------------------------------
+[End of Page 15]
+
+16
+Encoder and Generator
+Joint objective
+A rationale 𝒛, 𝒙corresponds to the selected words, i.e., 𝑥$ 𝑧$ = 1
+The rationale should suffice as a replacement for the input text:
+The loss function depends directly on 
+the encoder but only indirectly on the 
+generator via the sampled selection
+ℒ𝒛, 𝒙, 𝑦=
+𝑒𝑛𝑐(𝒛, 𝒙) −𝑦"
+"
+
+--------------------------------------------------------------------------------
+[End of Page 16]
+
+17
+Encoder and Generator
+Joint objective
+A rationale 𝒛, 𝒙corresponds to the selected words, i.e., 𝑥$ 𝑧$ = 1
+The rationale should suffice as a replacement for the input text:
+ℒ𝒛, 𝒙, 𝑦=
+𝑒𝑛𝑐(𝒛, 𝒙) −𝑦"
+"
+The rationale should be short and coherent:
+(A few and consecutive words, e.g., phrases)
+Ω 𝒛= 𝜆! 𝒛+ 𝜆" B
+$
+𝑧$ −𝑧$&!
+(Encourage the continuity 
+of selections)
+(Control the number 
+of selections)
+
+--------------------------------------------------------------------------------
+[End of Page 17]
+
+18
+Encoder and Generator
+Joint objective
+A rationale 𝒛, 𝒙corresponds to the selected words, i.e., 𝑥$ 𝑧$ = 1
+The rationale should suffice as a replacement for the input text:
+ℒ𝒛, 𝒙, 𝑦=
+𝑒𝑛𝑐(𝒛, 𝒙) −𝑦"
+"
+The rationale should be short and coherent:
+(A few and consecutive words, e.g., phrases)
+Ω 𝒛= 𝜆! 𝒛+ 𝜆" B
+$
+𝑧$ −𝑧$&!
+Objective
+ℒ𝒛, 𝒙, 𝑦+ Ω 𝒛
+
+--------------------------------------------------------------------------------
+[End of Page 18]
+
+19
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 19]
+
+20
+Experiments
+Multi-aspect Sentiment Analysis
+Dataset: BeerAdvocate review (McAuley et al., 2012)
+-
+1.5 million reviews written by the website users
+-
+the reviews are naturally multi-aspect
+-
+each of them contains multiple sentences
+-
+describing the overall impression 
+-
+one particular aspect of a beer (appearance, smell, palate, taste)
+-
+an overall score ([0, 1]) and the score for each aspect
+-
+Sentence-level annotations: indicating what aspect a sentence covers
+
+--------------------------------------------------------------------------------
+[End of Page 20]
+
+21
+Experiments
+Multi-aspect Sentiment Analysis
+Assessing different neural encoder architectures
+(recurrent convolutional 
+neural networks)
+
+--------------------------------------------------------------------------------
+[End of Page 21]
+
+22
+Experiments
+Multi-aspect Sentiment Analysis
+Assessing different neural encoder architectures
+(recurrent convolutional 
+neural networks)
+The generator is also 
+constructed with RCNN units
+
+--------------------------------------------------------------------------------
+[End of Page 22]
+
+23
+Experiments
+Multi-aspect Sentiment Analysis
+Prediction performance
+MSE
+Percentage of text
+Sacrifice of performance
+
+--------------------------------------------------------------------------------
+[End of Page 23]
+
+24
+Experiments
+Multi-aspect Sentiment Analysis
+Rationale selection
+Precision
+Percentage of text
+SVM successively extracts unigram
+or bigram with the highest feature
+The attention-based model selects 
+words based on their attention weights
+
+--------------------------------------------------------------------------------
+[End of Page 24]
+
+25
+Experiments
+Multi-aspect Sentiment Analysis
+Rationale selection
+Precision
+Percentage of text
+ü The encoder-generator 
+network extracts text pieces 
+describing the target aspect 
+with high precision
+
+--------------------------------------------------------------------------------
+[End of Page 25]
+
+26
+Experiments
+Multi-aspect Sentiment Analysis
+Rationale selection
+(appearance, smell, palate)
+
+--------------------------------------------------------------------------------
+[End of Page 26]
+
+27
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 27]
+
+28
+Rationalized Neural Networks
+• Rationalizing Neural Predictions
+• FRESH
+
+--------------------------------------------------------------------------------
+[End of Page 28]
+
+29
+Learning to Faithfully Rationalize by Construction
+Sarthak Jain, Sarah Wiegreffe, Yuval Pinter, Byron C. Wallace
+(ACL, 2020)
+
+--------------------------------------------------------------------------------
+[End of Page 29]
+
+30
+Key Property
+Faithfulness: an explanation provided by a model is faithful if it reflects the 
+information actually used by said model to come to a disposition
+(Lipton, 2018)
+
+--------------------------------------------------------------------------------
+[End of Page 30]
+
+31
+Problem
+(Lei et al., 2016)
+input
+Extractor
+rationale
+output
+Predictor
+The difficulty of training the two components jointly under only 
+instance-level supervision
+
+--------------------------------------------------------------------------------
+[End of Page 31]
+
+32
+Problem
+(Lei et al., 2016)
+input
+Extractor
+rationale
+output
+Predictor
+The difficulty of training the two components jointly under only 
+instance-level supervision
+No supervision 
+(e.g., token labels)
+The discrete selection over 
+input tokens complicates
+training, leading to high 
+variance and requiring careful 
+hyperparameter tuning
+
+--------------------------------------------------------------------------------
+[End of Page 32]
+
+33
+FRESH
+Faithful Rationale Extraction from Saliency tHresholding (FRESH)
+input
+Extractor
+rationale
+output
+Predictor
+Train separately
+
+--------------------------------------------------------------------------------
+[End of Page 33]
+
+34
+FRESH
+Faithful Rationale Extraction from Saliency tHresholding (FRESH)
+input
+Extractor
+rationale
+output
+Predictor
+Train separately
+FRESH is faithful by construction: 
+the snippet that is ultimately used 
+to inform a prediction can be 
+presented as a faithful explanation
+
+--------------------------------------------------------------------------------
+[End of Page 34]
+
+35
+FRESH
+Faithful Rationale Extraction from Saliency tHresholding (FRESH)
+input
+Extractor
+rationale
+output
+Predictor
+Train separately
+FRESH is plausible: the extracted 
+rationales are intuitive to humans
+
+--------------------------------------------------------------------------------
+[End of Page 35]
+
+36
+FRESH
+End-to-End Rationale Extraction
+𝑛input documents 𝑥!, 𝑥", ⋯, 𝑥(
+Assigned labels 𝑦!, 𝑦", ⋯, 𝑦(
+Text classification task
+
+--------------------------------------------------------------------------------
+[End of Page 36]
+
+37
+FRESH
+End-to-End Rationale Extraction
+𝑛input documents 𝑥!, 𝑥", ⋯, 𝑥(
+Assigned labels 𝑦!, 𝑦", ⋯, 𝑦(
+Text classification task
+Generator
+Encoder
+𝑥)
+𝑧)~𝑔𝑒𝑛(𝑥))
+C𝑦= 𝑒𝑛𝑐(𝑥), 𝑧))
+
+--------------------------------------------------------------------------------
+[End of Page 37]
+
+38
+FRESH
+End-to-End Rationale Extraction
+𝑛input documents 𝑥!, 𝑥", ⋯, 𝑥(
+Assigned labels 𝑦!, 𝑦", ⋯, 𝑦(
+Text classification task
+Generator
+Encoder
+𝑥)
+𝑧)~𝑔𝑒𝑛(𝑥))
+C𝑦= 𝑒𝑛𝑐(𝑥), 𝑧))
+Objective
+min
+*!"#,*$!"
+∑)%!
+(
+𝐸,%~./((1%)ℒ𝑒𝑛𝑐𝑥), 𝑧) , 𝑦)
+
+--------------------------------------------------------------------------------
+[End of Page 38]
+
+39
+FRESH
+End-to-End Rationale Extraction
+𝑛input documents 𝑥!, 𝑥", ⋯, 𝑥(
+Assigned labels 𝑦!, 𝑦", ⋯, 𝑦(
+Text classification task
+Generator
+Encoder
+𝑥)
+𝑧)~𝑔𝑒𝑛(𝑥))
+C𝑦= 𝑒𝑛𝑐(𝑥), 𝑧))
+Objective
+min
+*!"#,*$!"
+∑)%!
+(
+𝐸,%~./((1%)ℒ𝑒𝑛𝑐𝑥), 𝑧) , 𝑦)
+Marginalizing over all 
+possible rationales 𝑧causes 
+difficulty in optimization
+
+--------------------------------------------------------------------------------
+[End of Page 39]
+
+40
+FRESH
+End-to-End Rationale Extraction
+𝑛input documents 𝑥!, 𝑥", ⋯, 𝑥(
+Assigned labels 𝑦!, 𝑦", ⋯, 𝑦(
+Text classification task
+Generator
+Encoder
+𝑥)
+𝑧)~𝑔𝑒𝑛(𝑥))
+C𝑦= 𝑒𝑛𝑐(𝑥), 𝑧))
+Objective
+min
+*!"#,*$!"
+∑)%!
+(
+𝐸,%~./((1%)ℒ𝑒𝑛𝑐𝑥), 𝑧) , 𝑦)
+Conciseness and contiguity  
+Ω 𝒛= 𝜆!𝑚𝑎𝑥0, 𝑧
+𝐿−𝑑
++ 𝜆" B
+$
+𝑧$ −𝑧$&!
+𝐿−1
+
+--------------------------------------------------------------------------------
+[End of Page 40]
+
+41
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 41]
+
+42
+FRESH
+Three independent components
+Support model 
+(supp)
+Extractor model 
+(ext)
+Classifier
+(pred)
+
+--------------------------------------------------------------------------------
+[End of Page 42]
+
+43
+FRESH
+Three independent components
+Support model 
+(supp)
+Extractor model 
+(ext)
+Classifier
+(pred)
+• Train supp end-to-end to predict 𝑦
+• Use its outputs only to extract continuous 
+feature importance scores
+(post-hoc explanations)
+
+--------------------------------------------------------------------------------
+[End of Page 43]
+
+44
+FRESH
+Three independent components
+Support model 
+(supp)
+Extractor model 
+(ext)
+Classifier
+(pred)
+• Use the importance 
+scores to train ext
+(e.g., treating the top 
+k tokens as the tartget
+rationale)
+• Extract snippets
+
+--------------------------------------------------------------------------------
+[End of Page 44]
+
+45
+FRESH
+Three independent components
+Support model 
+(supp)
+Extractor model 
+(ext)
+Classifier
+(pred)
+• Train pred on 
+the extracted 
+snippets
+
+--------------------------------------------------------------------------------
+[End of Page 45]
+
+46
+FRESH
+Implementation
+Support model 
+(supp)
+Extractor model 
+(ext)
+Classifier
+(pred)
+BERT encoder
+Attention/gradient-based 
+importance scores
+Discretizing Soft Scores
+•
+Contiguous: select the span of length 
+k with the highest total score
+•
+Top-k (non-contiguous): select top-k 
+individual tokens
+
+--------------------------------------------------------------------------------
+[End of Page 46]
+
+47
+FRESH
+Implementation
+Support model 
+(supp)
+Extractor model 
+(ext)
+Classifier
+(pred)
+BERT encoder
+Attention/gradient-based 
+importance scores
+discretization heuristics
+or
+BERT for sequencing 
+tagging
+
+--------------------------------------------------------------------------------
+[End of Page 47]
+
+48
+FRESH
+Implementation
+Support model 
+(supp)
+Extractor model 
+(ext)
+Classifier
+(pred)
+BERT encoder
+Attention/gradient-based 
+importance scores
+discretization heuristics
+or
+BERT for sequencing 
+tagging
+BERT for classification
+
+--------------------------------------------------------------------------------
+[End of Page 48]
+
+49
+FRESH
+Implementation
+Support model 
+(supp)
+Extractor model 
+(ext)
+Classifier
+(pred)
+BERT encoder
+Attention/gradient-based 
+importance scores
+discretization heuristics
+or
+BERT for sequencing 
+tagging
+BERT for classification
+Leverage post-hoc explanations 
+to guide rationale extraction
+
+--------------------------------------------------------------------------------
+[End of Page 49]
+
+50
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 50]
+
+51
+Experiments
+Empirical results
+(Lei et al., 2016)
+• Hyperparameter sensitivity
+ℒ𝒛, 𝒙, 𝑦=
+𝑒𝑛𝑐(𝒛, 𝒙) −𝑦"
+"
+Ω 𝒛= 𝜆! 𝒛+ 𝜆" B
+$
+𝑧$ −𝑧$&!
+•
+Model performance is sensitive 
+to hyperparameters (𝜆!, 𝜆")
+•
+Hyperparameter search is time-
+consuming
+
+--------------------------------------------------------------------------------
+[End of Page 51]
+
+52
+Experiments
+Empirical results
+(Lei et al., 2016)
+• Hyperparameter sensitivity
+ℒ𝒛, 𝒙, 𝑦=
+𝑒𝑛𝑐(𝒛, 𝒙) −𝑦"
+"
+Ω 𝒛= 𝜆! 𝒛+ 𝜆" B
+$
+𝑧$ −𝑧$&!
+•
+Model performance is sensitive 
+to hyperparameters (𝜆!, 𝜆")
+•
+Hyperparameter search is time-
+consuming
+• High variance in performance
+Performance varies across different random seeds
+
+--------------------------------------------------------------------------------
+[End of Page 52]
+
+53
+Experiments
+Prediction performance
+•
+Outperform baseline methods
+•
+Performance drops compared with the baseline with full text as input
+
+--------------------------------------------------------------------------------
+[End of Page 53]
+
+54
+Experiments
+Varying rationale length
+The effectiveness of FRESH even in constrained settings
+
+--------------------------------------------------------------------------------
+[End of Page 54]
+
+55
+Experiments
+Incorporating human rationale supervision
+•
+Varying amounts of rationale-level supervision (0, 20%, 50%, 100%)
+•
+Introducing an additional binary cross entropy term into the objective
+•
+Overall, mixing in rationale-level supervision can improve performance (not much)
+
+--------------------------------------------------------------------------------
+[End of Page 55]
+
+56
+Human Analysis
+Sufficiency: Can a human predict the correct label given only the rationale? 
+Readability and understandability: test the user’s preference for a certain style of 
+rationale beyond their ability to predict the correct label 
+(one hypothesis is that humans will prefer contiguous to non-contiguous rationales)
+
+--------------------------------------------------------------------------------
+[End of Page 56]
+
+57
+Human Analysis
+Sufficiency: Can a human predict the correct label given only the rationale? 
+Readability and understandability: test the user’s preference for a certain style of 
+rationale beyond their ability to predict the correct label 
+(one hypothesis is that humans will prefer contiguous to non-contiguous rationales)
+FRESH rationales (both contiguous and noncontiguous)
+Baselines:
+-
+Human rationales
+-
+Randomly selected “rationales” of length k
+-
+Rationales from Lei et al., 2016 models
+
+--------------------------------------------------------------------------------
+[End of Page 57]
+
+58
+Human Analysis
+Rationales
+-
+Classify examples
+-
+Rate their confidence (1-4)
+-
+Rate how easy the text is to read 
+and understand (1-5)
+
+--------------------------------------------------------------------------------
+[End of Page 58]
+
+59
+Human Analysis
+Rationales
+-
+Classify examples
+-
+Rate their confidence (1-4)
+-
+Rate how easy the text is to read 
+and understand (1-5)
+• Humans achieve the best 
+performance on FRESH rationales
+• Humans exhibit a strong preference 
+for contiguous rationales
+
+--------------------------------------------------------------------------------
+[End of Page 59]
+
+60
+Question?
+
+--------------------------------------------------------------------------------
+[End of Page 60]
+
+61
+Reference
+•
+Lei, Tao, Regina Barzilay, and Tommi Jaakkola. "Rationalizing neural predictions." arXiv preprint 
+arXiv:1606.04155 (2016).
+•
+Jain, Sarthak, et al. "Learning to faithfully rationalize by construction." arXiv preprint arXiv:2005.00115 (2020).
+
+--------------------------------------------------------------------------------
+[End of Page 61]

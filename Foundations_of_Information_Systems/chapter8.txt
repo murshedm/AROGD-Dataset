@@ -1,0 +1,1864 @@
+Figure 8.1 Data analytics can involve analyzing large volumes of data to help guide business decisions. (credit: modification of work
+“2022 Data Center” by Aileen Devlin, Jefferson Lab/Flickr, Public Domain)
+Chapter Outline
+8.1 The Business Analytics Process
+8.2 Foundations of Business Intelligence and Analytics
+8.3 Analytics to Improve Decision-Making
+8.4 Web Analytics
+Introduction
+In today’s world, all types of businesses across every industry rely on data analytics to some degree.
+Companies now more than ever recognize the incredible potential behind this growing resource and use it to
+gain actionable insights, make informed decisions, and increase revenue. The purpose of data analytics is to
+extract meaningful information from huge amounts of raw data. This is how modern organizations
+differentiate themselves. At the heart of data analytics lies the foundational skills needed to reveal patterns
+and generate insight. For example, a company might want to know how well their product is performing in a
+specific market. By delving into the data, they may uncover trends such as higher sales during certain seasons,
+preferences for specific product variations, or correlations between marketing campaigns and sales spikes.
+These patterns offer valuable insights into consumer behavior and market dynamics, enabling the company to
+optimize its marketing strategies, tailor products to meet customer needs more effectively, and ultimately
+enhance overall performance in target markets. In the realm of business operations, the application of data
+analytics provides a foundation for informing the business analysis process and empowers organizations to
+make informed decisions based on insightful interpretations of market trends and consumer behavior. The
+goal is to produce results that generate insights that help management team members make decisions that
+have the greatest impact on an organization’s success.
+Data Analytics and Modeling
+8
+
+8.1 The Business Analytics Process
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Define the terms associated with data analytics
+•
+Identify the importance and challenges of collecting and using big data
+•
+Describe the process of data acquisition
+•
+Explain the business analytics process
+The process of data analytics involves examining datasets to draw conclusions and insights, typically using
+statistical and computational methods to inform decision-making or solve problems. It involves techniques
+and processes for exploring data, often with the aid of technology, to drive actionable intelligence. Analytics is
+a tool that enables organizations to derive competitive advantage by analyzing historical data, forecasting
+trends, and optimizing business processes.
+The evolution of analytics is described as having three distinct eras:1
+•
+Analytics 1.0: focused on data warehouses and traditional business intelligence (historical reporting and
+descriptive analytics)
+•
+Analytics 2.0: the rise of big data with unstructured and high-velocity data, driven by new technologies like
+Apache Hadoop
+•
+Analytics 3.0: a modern era where businesses blend big data with traditional analytics to create data
+products that deliver real-time value
+Big data allows organizations to gain a comprehensive understanding of their target market and customer
+base. For example, have you had the experience of searching for a particular item online, such as a new pair of
+shoes, and then noticed that your social media feed is inundated with ads for shoes and related items? This is
+a result of the kind of automated market research resulting from data analytics. Organizations gather
+information about features such as customer demographics, preferences, purchase history, and online
+behavior. Using this information, analysts can identify patterns and trends. Then, leaders on the marketing
+team can tailor the organization’s products, services, and marketing campaigns to meet the specific demands
+of their customers, enhancing customer satisfaction and loyalty.
+Importance of and Challenges with Big Data
+Every generation presents a new disruptive technology that changes the face of business for those who
+recognize the potential. Innovations such as the cotton gin, textile mills, the steam engine, and the telegraph
+all revolutionized some aspects of the world and pushed technology along. In the future, historians will add to
+this list the processing of big data, which is an extremely large set of structured and unstructured data that
+cannot be processed or analyzed using traditional database and software techniques. British mathematician
+Clive Humby is credited with stating, “Big Data is the new oil.”2 If he is right, then analysts and companies that
+recognize the potential for insight will be those who “strike oil” in the business world. So in a sense, like oil
+extraction, the modern breakthrough is data mining, or analyzing large datasets to discover patterns, trends,
+and insights using statistical and computational techniques. Companies like Google have led the way with
+marketing tools that capitalize on big data, helping organizations better understand consumer behavior.3
+1
+Thomas H. Davenport, “Analytics 3.0,” Harvard Business Review 91, no. 12 (December 2013): 64–72, https://hbr.org/2013/12/
+analytics-30
+2
+Clive Humby, “Data Is the New Oil,” lecture at Association of National Advertisers conference, Orlando, FL, April 30–May 2, 2006.
+3
+Christena Garduno, “How Big Data Is Helping Advertisers Solve Problems,” Forbes, March 15, 2022, https://www.forbes.com/sites/
+forbesagencycouncil/2022/03/15/how-big-data-is-helping-advertisers-solve-problems/
+290
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+Challenge: Volume
+The collection and use of big data have become increasingly important in today’s business landscape, yet
+harnessing the very real potential of big data comes with significant challenges. The sheer volume, velocity of
+production, and variety of data can overwhelm those who cling to traditional data management and analysis
+methods. Analysts report that by 2025 the global volume of digital information is expected to reach 200
+zettabytes.4 Organizations must grapple with storing and processing enormous amounts of data. Designers
+and analysts need to work together to create and maintain scalable infrastructure capable of hosting
+advanced analytics tools.
+Challenge: Quality
+In addition to volume, the quality of big data poses challenges, as unstructured and noisy data can hinder
+accurate analysis and interpretation. This has prompted concern in situations where data analytics is key to
+success. Reliability issues stem from multiple causes. They can include inaccurate data, redundant entries, and
+simple human error in data entry.
+Duplicated, or redundant, entries are multiple entries placed in the same dataset by mistake. There are various
+methods to respond to redundant entries. The first and most obvious is to simply remove them. Data
+engineers may use tools such as basic Python code and spreadsheet functions to filter out corrupt data at
+prescribed levels to produce a more accurate dataset. Input tools such as QR code scanners can help by
+automating the process. Another technique to address the issue of redundancy is to assign another value to
+an outlier (an observation that deviates significantly from the rest of the dataset), potentially indicating
+anomalies, errors, or unique patterns that require special attention during analysis. In other words, you would
+choose a value with significantly lower impact on the dataset to replace the outliers, such as an average value.
+Challenge: Governance
+Have you ever had your identity stolen? If not, you may know someone who has. These concerns relate to
+privacy and data governance, which is the overall management of the availability, usability, integrity, and
+security of data used in an enterprise. At the business level, companies do their best to comply with
+regulations and protect sensitive information. However, enforcement of strict digital privacy laws can vary from
+state to state, or nation to nation. Companies that do business in Europe must also abide by Europe’s General
+Data Protection Regulation (GDPR), which as you may recall from 6.1 Key Concepts in Data Privacy and Data
+Security, is a leading global regulation in terms of enforcing transparency in how data are handled and strictly
+forbids the purchase and sale of personally identifiable data while allowing individuals the right to be
+forgotten. The GDPR is built upon several fundamental principles aimed at protecting the personal data of
+individuals within the European Union (EU). Refer to 6.4 Managing Enterprise Risk and Compliance to review
+these fundamental principles.
+Challenge: Actionable Insights
+The process of systematically using statistical and logical techniques to review, sort, and condense data for the
+purpose of gaining insight on areas of interest is called data analysis. Effective data analysis is critical for
+ensuring that the information is accurate so that an organization can then extract actionable insights from it.
+Extracting these insights is, however, a significant challenge. First, it requires special training to increase skills
+and expertise in this area. Data scientists and analysts must possess a combination of statistical knowledge,
+programming skills, and domain expertise to navigate the complexities of big data analysis. Additionally, it is
+important to be able to comprehend the results and to communicate them effectively to a broad audience.
+Incorrectly linking correlation to causation during data analysis can be an issue with both experts and
+software, and false positives and false negatives can lead conclusions astray. Additional challenges can arise
+from the regulations in some regions, such as the EU, that prohibit collecting and storing meaningful data to
+4
+Steve Morgan, “The World Will Store 200 Zettabytes of Data by 2025,” Cybersecurity Magazine, February 1, 2024,
+https://cybersecurityventures.com/the-world-will-store-200-zettabytes-of-data-by-2025/
+8.1 • The Business Analytics Process
+291
+
+ensure privacy or decrypting encrypted data.
+LINK TO LEARNING
+Explore the transformative power of big data in the article “Big Data: 6 Real-Life Business Cases,” which
+delves into six compelling real-world examples (https://openstax.org/r/109BigData) where big data
+analytics have revolutionized business operations across diverse industries.
+Data Acquisition
+With modern web analytics tools, companies analyze market trends and competitor activities in real time. By
+collecting and analyzing data from various sources—including social media, industry reports, customer
+reviews, and online forums—organizations can stay well-informed about market dynamics, emerging trends,
+and competitor strategies. Interested key decision-makers can then use this information to identify
+opportunities, anticipate market shifts, and proactively adapt their business strategies to maintain a
+competitive edge.
+Analysts employ several methods to identify and acquire data from various sources, such as web scraping,
+sensor data collection, social media monitoring, data marketplaces and application programming interfaces
+(APIs), and internal data collection. Moreover, social media monitoring offers a window into public sentiment
+and trends, while internal data sources provide valuable organizational insights. These methodologies form
+the cornerstone of modern data analysis practices.
+Automated extraction of data from online sources, typically using software to simulate human browsing
+behavior and retrieve information from web pages, is called web scraping. These techniques involve
+employing automated tools or scripts that can gather relevant information from multiple web pages, including
+but not limited to customer reviews, social media data, news articles, or publicly available datasets.
+With the proliferation of Internet of Things devices, analysts can use sensor data collection, which involves
+gathering data from sensors designed to detect and respond to physical or environmental conditions, such as
+temperature, pressure, or motion. These sensors generate real-time data on parameters like temperature,
+humidity, location, or movement, providing valuable insights for industries such as manufacturing, health
+care, or logistics.
+Social media monitoring involves monitoring and collecting data from social media platforms to gain insight
+into customer sentiment, behavior, and trends. By analyzing social media conversations, comments, likes, and
+shares, analysts can identify emerging topics, consumer preferences, or even potential brand issues.
+Some organizations provide data marketplaces or application programming interfaces. A data marketplace is
+an online platform or ecosystem where data providers and consumers can buy, sell, or exchange datasets and
+related services. These marketplaces facilitate the discovery, transaction, and access to data in various
+formats, often integrating tools for analytics, visualization, and compliance management. An application
+programming interface (API) is the means by which software applications communicate and interact with
+each other for the purpose of exchanging data and functionality. These platforms offer a range of data
+sources, including financial data, weather data, demographic data, and industry-specific datasets. For
+example, a search using the Google search engine can also lead to ads on Facebook based on user data.
+Additionally, when you engage a search for specific items, such as a new smartwatch, your query becomes a
+data point that may be gathered and shared with companies tagging the term “smartwatch.” This will prompt
+marketing tools in sites like Facebook and Instagram to promote customized ads with smartwatches.
+The final main methodology for data acquisition is collection from internal data sources. Organizations often
+have extensive internal data sources, including transaction records, customer databases, sales data, or
+operational logs. Analysts can tap into these sources to gather relevant data for analysis and gain insight into
+292
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+their own business operations. This can represent a challenge gathering accurate data if the source becomes
+adversely affected, such as when a natural disaster occurs.
+When collecting big data, analysts should also adhere to ethical considerations, follow data privacy
+regulations, and obtain proper permissions or consent when required. The importance of big data collection
+and use cannot be overstated. Organizations that can harness the power of big data gain a competitive edge
+by leveraging valuable insights for strategic decision-making. However, the challenges associated with big
+data, including its volume, quality, and the need for specialized skills, must be addressed effectively to unlock
+its full potential. By overcoming these challenges, businesses can capitalize on the immense value that big
+data offers and pave the way for innovation, growth, and success in the data-driven era.
+The Business Analytics Process
+The business analytics process consists of several stages, each one often influencing and informing the next.
+The process enables organizations to derive actionable insights from data (Figure 8.2).
+Figure 8.2 The business analytics process begins with problem definition, paving the way for data preparation, analysis,
+interpretation, and implementation. Note that in some cases, it may be necessary to repeat as new problems may have been
+identified in the process. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Step 1: Problem Definition
+The first step in the process is problem definition. Here, the company sets out to name the problem or
+challenge that needs a solution that involves using analytics. To illustrate this process, consider an
+organization studying botany that sets out to classify varieties of iris. By clearly defining the problem,
+organizational leaders can focus their data analytics efforts and ensure alignment with the organization’s
+goals. They can then begin to gather information to form the classifications.
+Step 2: Data Preparation
+Next comes collecting, cleaning, and transforming the data for analysis. This step includes gathering data from
+various sources, integrating separate datasets, and ensuring data quality. That can be a cumbersome task,
+since the organization will attempt to address issues such as missing values, outliers, or inconsistencies.
+Techniques for data cleaning and data transformation, such as data normalization or feature engineering, may
+be applied to ensure the data are suitable for analysis.
+Data normalization involves adjusting data so that they have a standard scale, making it easier to compare
+different types of values. It ensures that one feature does not dominate others due to its scale. Dividing irises
+into categories is a relatively simple analysis and does not require data normalization. Other examples that
+would benefit from data normalization include comparing salary in thousands of dollars to years of
+8.1 • The Business Analytics Process
+293
+
+experience, or comparing house prices and sizes. In the latter example, normalizing the size (by dividing all
+sizes by the largest size) can put that variable on a comparable scale to prices.
+Feature engineering is transforming raw data into useful inputs for a model by creating, modifying, or
+selecting features (data points). It helps models understand patterns better by making relevant information
+more accessible. As an example, for predicting house prices, creating a new feature like “price per square foot”
+combines raw price and size into something more insightful.
+As a simple use case, imagine predicting student test scores using hours studied and study material pages
+read. These features can be normalized so that the number of pages read does not overpower the number of
+hours studied, and a feature like efficiency (pages read per hour) can be engineered to capture how productive
+a student is. Effective data preparation is crucial for accurate and reliable results in subsequent stages of the
+analytics process.
+Data Acquisition
+There are typically three methods of data acquisition: using built-in libraries, using external datasets, or
+manually entering data. Each approach has its own merits. Libraries can save time but may be incomplete if
+the data focus on some items that evolve over time, such as technology. External data are convenient, but
+large datasets may be challenging to work with, especially if there are multiple sources of data. Manually
+entering data could prove cumbersome, especially if time is an important factor.
+Built-in Libraries
+Many programming languages, like Python, can use built-in libraries for the purpose of testing models. If you
+use Python for data analytics, you’ll find it equipped with powerful libraries of built-in code segments and
+datasets tailored for various tasks, such as NumPy and Pandas. NumPy is useful for numerical calculations,
+while Pandas excels in handling data analytics tasks.
+With these available libraries, Python becomes an ideal choice for scientific analysis and data-driven
+applications. Let’s use the classic public domain dataset for iris classification from R. A. Fisher5 for this
+example. The following snippet shows the code for importing the library and creating a pie chart. The example
+output is shown in Figure 8.3. Note that the line from sklearn import datasets instructs Python to use the
+library sklearn, which allows access to data on the iris species. You are also importing the matplotlib to create
+the pie chart.
+# Iris Species Data Study
+# Import libraries
+from sklearn import datasets
+import pandas as pd
+import matplotlib.pyplot as plt
+# Load the Iris dataset
+iris_data = datasets.load_iris()
+# Create a DataFrame using the data and feature names
+iris = pd.DataFrame(iris_data.data, columns=iris_data.feature_names)
+# Add the species column by mapping the target integer values to species names
+iris['species'] = iris_data.target_names[iris_data.target]
+5
+R. A. Fisher, “The Use of Multiple Measurements in Taxonomic Problems,” Annals of Eugenics 7, no. 2 (September 1936): 179–88.
+https://doi.org/10.1111/j.1469-1809.1936.tb02137.x
+294
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+# Plot a pie chart showing the distribution of species in the dataset
+species_count = iris['species'].value_counts() # Count occurrences of each species
+plt.figure(figsize=(7, 7))
+plt.pie(species_count, labels=species_count.index, autopct='%1.1f%%', startangle=90)
+plt.title('Distribution of Iris Species')
+plt.show()
+Figure 8.3 Python code was written to load and create a pie chart of various species of iris plants. (data source: R. A. Fisher, “The Use
+of Multiple Measurements in Taxonomic Problems,” Annals of Eugenics 7, no. 2 (September 1936): 179–88. https://doi.org/10.1111/
+j.1469-1809.1936.tb02137.x; attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+You can observe how the code created a simple pie chart output to show the proportion of species of irises.
+External Datasets
+Using external datasets is the most common method of data collection. Here, the goal is to specify a path and
+a file name and then import the dataset from another location, which is often a spreadsheet or other standard
+data file type. The following Python code snippet accomplishes the same task as the previous example. The
+only difference is that it pulls the data from an external file instead of calling on Python’s self-contained
+libraries.
+# Pull Data from an Excel Spreadsheet
+import pandas as pd
+import matplotlib.pyplot as plt
+# Load the Excel file
+df = pd.read_excel('C:/Users/daxbr/iris.xlsx')
+# Count the occurrences of each species
+x = df['Species'].value_counts()
+# Get the labels (species names) from the value counts theLabels
+= x.index.tolist()
+# Plot the pie chart of species distribution
+plt.pie(x, labels=theLabels, autopct='%1.1f%%', startangle=90)
+plt.title('Distribution of Iris Species')
+plt.show()
+In this example, Python is instructed to access an Excel file and run analysis on the information contained in
+the file.
+8.1 • The Business Analytics Process
+295
+
+Manually Entered Data
+With a small enough dataset, a third option is to manually enter the information. The drawbacks of manually
+entering data include the time involved in entering data for a large dataset and the possibility of introducing
+errors in the form of typos. The following code snippet produces an output similar to the previous two
+examples:
+# Enter Your Own Data
+theSlices = [33.3, 33.3, 33.3]
+theLabels = ["Virginica", "Versicolor", "Setosa"]
+theColors = ['#96f97b','#ff81c0','r']
+# Plot the pie chart
+import matplotlib.pyplot as plt
+plt.pie(theSlices, labels=theLabels, colors=theColors, autopct='%1.1f%%',
+startangle=90)
+plt.title('Iris Species Distribution')
+plt.show()
+The choice to use internal libraries, external data, or manually entered data is made on a case-by-case basis. In
+practice, it is important to keep in mind that data acquisition may involve a combination of methods
+depending on where the source data are for a project. For example, in this process where the hypothetical
+organization conducts a botany study, it may be most appropriate to use the built-in library, since features of
+iris plants have not changed recently and are generally agreed on in the scientific community. Manually
+entering the data would be unnecessary.
+Step 3: Statistical Analysis
+Once the data are prepared, data analysts apply statistical analysis to uncover patterns, relationships, and
+insights. This stage involves using statistical methods, machine learning algorithms, or data mining
+techniques, or a combination of methods, to explore and analyze the data (Figure 8.4). Depending on the
+nature of the data, analysts may employ descriptive statistics, regression analysis, clustering, classification, or
+predictive modeling. Analysts use these tools to run simulations. This provides opportunities to observe
+potential costs, predict return on investment (ROI), and identify metrics. Descriptive statistics help to give a
+“snapshot” of data and provide a jumping-off point for analysis.
+Figure 8.4 Some analysis methods can be categorized as statistical methods, machine learning algorithms, or data mining
+techniques, but many can fit into more than one category. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+296
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+Causality or Correlation?
+Correlation does not imply causation, but does one attribute affect another? Returning to the iris data, the
+following simple command can explore the correlation of sepal length and petal length (Figure 8.5).:
+df.corr()
+Figure 8.5 The simple Python command generates a comparison of the lengths and widths of petals and sepals and shows a positive
+correlation between the sepal length and petal length. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+We can recognize that the petal length and the sepal length are strongly correlated; however, that correlation
+does not prove causality. It is a common pitfall for an analyst to believe that they have proven causation
+because of a strong correlation. The challenge in statistics is to remain objective and be cautious about using
+the word “proof.” For example, there is 100 percent correlation between eating chocolate and being born.
+Every person who eats chocolate has been born, but being born does not cause one to eat chocolate. In the
+iris case study, we showed correlation between sepal length and petal length only. There is no evidence from
+this data that either sepal length causes petal length or petal length causes sepal length.
+Step 4: Results Interpretation
+The next step is results interpretation, where the insights are translated into actionable information. Analysts
+evaluate the findings in the context of the problem at hand, interpret the statistical results, and draw
+conclusions. They often create visualizations, charts, or reports from the data to effectively communicate
+insights to stakeholders.
+LINK TO LEARNING
+GeeksforGeeks has done their own analysis of the iris dataset (https://openstax.org/r/109IrisDataset) where
+you can notice a number of different visualizations of the data and the Python code that produced the
+output.
+Step 5: Implementation
+The best data in the world are functionally useless without action. In the final phase, implementation involves
+applying the obtained insights and recommendations to practice. This may involve strategic decision-making,
+process improvements, or operational changes based on the findings. Implementation may also require
+collaboration across departments or the integration of analytical models into existing systems or workflows.
+LINK TO LEARNING
+Exploratory data analysis (EDA) is the process of examining and understanding data to uncover patterns,
+trends, and relationships before formal modeling or hypothesis testing. Watch this video demonstration on
+8.1 • The Business Analytics Process
+297
+
+EDA using Python (https://openstax.org/r/109EDA) and the freely available iris dataset.
+8.2 Foundations of Business Intelligence and Analytics
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Discuss the importance of business intelligence and analytics
+•
+Explain how organizations use business intelligence and analytics
+•
+Describe tools used in business and data analytics
+•
+Evaluate various analytical models
+In modern business management, organizations are constantly evaluating ways to leverage information and
+gain valuable insights to drive the decision-making processes. One way businesses can do this is by using
+predictive analytics, which can help identify emerging trends and consumer preferences, guiding product
+development efforts. For example, Netflix uses data to predict consumer preferences, which helps it determine
+which new series and movies to develop. Analyzing customer feedback and behavior can also help companies
+identify the most desirable features and incorporate them into their products. For example, Stitch Fix uses
+consumer preference data to design its own private-label fashion products, aligning them with popular trends.
+Predictive analytics can also help businesses stay ahead of market changes by identifying emerging trends and
+opportunities. For example, L’Oréal Paris analyzed data from Google searches and social media to create a new
+ombre hair coloring kit, which allowed them to capitalize on a trend. Personalized recommendations based on
+consumer behavior can increase sales and customer satisfaction. For example, Amazon uses predictive
+analytics to preemptively ship products to distribution centers near consumers, reducing delivery time and
+encouraging purchases. Similarly, identifying regional patterns of demand and stocking preferences can help
+businesses reduce overstock and avoid stock-outs. For example, Walmart leveraged business intelligence tools
+to optimize inventory management and improve supply chain efficiency. They analyzed real-time sales data
+across stores using business intelligence (BI) dashboards and streamlined inventory costs and improved
+customer satisfaction by ensuring the availability of high-demand products. Walmart’s BI-enabled decisions
+exemplify how actionable insights from data can drive operational efficiency and enhance customer
+experience.
+The Importance of Business Intelligence and Analytics
+You may have heard the phrase, “work smarter, not harder.” This adage holds true for any industry. The
+success or failure of a business can come down to the ability to ask the right questions and thus make
+decisions that best capitalize on the finite resources available. The process of business intelligence (BI)
+involves collecting, analyzing, and interpreting data to inform business decision-making and improve
+organizational performance. Business intelligence seeks to provide a set of tools that allows decision-makers
+to do just that—work smarter instead of harder. Business intelligence tools offer numerous benefits to
+organizations across various business sectors. With BI, organizations can identify trends, patterns, and
+correlations within their data that could enable them to understand customer behavior, market dynamics, and
+operational performance. There are many additional benefits to using BI tools to enhance organizational
+management.
+Valuable Insights
+If data truly make up the “new oil,” then that analogy can go a step further. Raw data—like crude oil—are
+completely useless until trained individuals use the proper tools to refine them. Once they refine the data, then
+business leaders can glean valuable information from that data. Simply put, the data are initially too
+overwhelming for humans to manually sift through. Data analytics automates the sifting process by deploying
+298
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+various analytics tools and algorithms to identify and highlight important information.
+In the current business landscape, decision-making must be based on accurate and currently relevant
+information. Business intelligence and analytics play a vital role in this process. By consolidating data from
+various sources and transforming that data into meaningful insights, BI equips decision-makers with a
+comprehensive understanding of the organization’s current state and its prospects. With analytics, decision-
+makers can evaluate different scenarios, perform predictive modeling, and simulate potential outcomes. These
+capabilities enable them to make informed decisions with less uncertainty.
+Visualization
+Another benefit of BI tools is the ability to produce a visualization, or a graphical representation of data and
+information to facilitate understanding, analysis, and communication of insights and trends. Many executive
+leaders may have a firm grasp on fundamental statistics, but they may lack the training and experience to
+derive real meaning from large amounts of data. This is where visuals are helpful for communicating vital
+information. Figure 8.6 shows a dashboard that is an example of an effective way to provide visual expressions
+from multiple data sources at once. A dashboard can facilitate easier communication of sometimes complex
+ideas more effectively, especially to an audience with minimal experience in technical fields.
+Figure 8.6 A dashboard tool brings metrics from multiple sources into one page for quick comparison. (credit: modification of work
+“Data visualization” by “Kabuttey”/Wikimedia Commons, CC BY 4.0)
+Key Performance Indicators and Benchmarking
+Business leaders are often analyzing how an organization is doing, and key performance indicators (KPIs) are
+an important part of that analysis. A key performance indicators (KPIs) is a measurable value that
+demonstrates how effectively a company is achieving its key business objectives and goals. Related to that is
+the concept of benchmarking, which is the comparison of an organization's performance against industry
+standards and competing businesses to identify areas for improvement and drive performance optimization.
+Business intelligence tools make it possible to identify KPIs and benchmark levels centered around efficiency,
+profit, and other metrics and assess the performance of the project or initiatives in real time.
+8.2 • Foundations of Business Intelligence and Analytics
+299
+
+Inventory Management
+Business intelligence tools make life easier in terms of purchasing, procurement, and inventory management.
+Companies can generate reports on shipping and receiving and automate the process of ordering materials
+before they are below a certain threshold. Business intelligence also tracks outbound materials, so
+organizations can identify purchasing trends and reduce or eliminate wasteful spending. One way to quickly
+observe trends, costs, and other metrics is through a visual tool similar to the dashboard shown in Figure 8.6
+that would instead show multiple metrics such as the on-hand quantity of products, the value of goods issued,
+and links to tasks such as ordering new stock.
+Customer Analytics
+The process of customer analytics represents a step forward in creating value from data by analyzing and
+synthesizing information about the customer, providing a customer-centric focus, and providing decision-
+making support. Through the careful analysis of customer data, business leaders can better understand the
+expectations, habits, and preferences of potential customers. These data are used to build consumer
+engagement and loyalty, improve the performance of marketing campaigns, and even identify additional
+distribution channels. It is helpful if customer analytics provides predictive recommendations.
+For example, suppose you run a clothing store, and you wish to track the popularity of a specific design of
+pants. After you run some data queries on social media, mobile, and cloud media communications using web
+crawlers, you might discover a group of people with similar traits or features, as they are referred to in
+analytics. The results reveal that the typical customer is between twenty and twenty-four years old, and that
+the pants sell online 80 percent of the time (rather than in a physical store). This information indicates where
+your marketing efforts should be focused. In this case, the company should promote the pants online with less
+emphasis on the physical location and should direct ads to consumers under the age of thirty. To make that
+determination, an organization can use BI tools to conduct a recency, frequency, and monetary (RFM)
+analysis, which is the task of customer segmentation or grouping based on their purchasing habits. Essentially,
+four pieces of information are needed to create RFM scores:
+•
+identity: depersonalized information, such as a customer ID
+•
+recency: how long ago the last purchase was made
+•
+frequency: how many purchases or conversions the customer made over a specified period
+•
+monetary: total spent
+Note that RFM is not strictly a tool used by for-profit companies. It can be beneficial for a variety of
+organizations, including hospitals and places of higher education. In health-care settings, RFM analysis can
+help prioritize patients based on their recency of visits, frequency of appointments, and monetary value of
+services utilized, facilitating targeted outreach and resource allocation. An RFM analysis can help with patient
+retention by classifying patients based on recent visits and service usage to design personalized follow-ups or
+wellness programs, and it can help with service optimization by prioritizing high-value patients for loyalty
+programs or preventive care services. In the education sector, RFM can help with targeted student
+engagement by identifying students who are most engaged (high frequency and recency of interaction) to
+tailor resources or interventions, and in donor analysis by recognizing high-value alumni donors based on
+donation patterns for optimized fundraising efforts. Using this information, you would then define an RFM
+score on a scale of 1 to 6 for each customer. An RFM analysis primarily focuses on behavioral data rather than
+personal traits like age or income level. While RFM analysis does not directly incorporate personal traits, it can
+indirectly reflect certain characteristics of customers based on their purchasing behavior.
+Business Intelligence Tools Offer Competitive Advantage
+In an environment where companies scramble to outdo one another, BI tools offer a competitive advantage
+crucial for sustainable success and also provide a pathway toward achieving this advantage. For people
+working in an increasingly competitive market, the ability to make fast decisions is part of the job, but knowing
+300
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+those decisions are based on hard evidence provided by data-driven insights offers greater confidence. By
+harnessing the power of big data, businesses can uncover hidden opportunities, identify emerging trends, and
+anticipate market shifts. This enables them to stay ahead of their competitors, respond quickly to changing
+customer needs, and capitalize on new business prospects.
+By recognizing the benefits of BI and analytics, understanding the part these tools can play in decision-
+making, and leveraging them to gain a competitive advantage, organizations can position themselves for
+success in today’s data-centric commerce environment. By deploying BI analytics tools, organizations gain
+superior insights into their operations, customers, and competitive landscape; find new potential customers;
+and make more well-informed decisions.
+Customer data analytics can revolutionize business performance and customer loyalty. Data-driven customer
+insights are invaluable, but successful deployment requires a strategic focus on ROI and customer-centric
+innovation. Data are no longer limited to reporting; data are now deeply embedded in operational and
+decision-making systems. For example, companies such as Amazon, Google, and Netflix use data as a product
+to drive innovations like recommendation engines. Personalized offers and experiences make customers feel
+valued, increasing their loyalty to the company. Analytics is not just a tool; it is a strategy that aligns with a
+company’s objectives and operations.
+How Organizations Use Business Intelligence and Analytics
+Organizations use BI and analytics across various functions of the business. Specific BI and analytics tools
+businesses can use to guide their operations include decision-making, time-series analysis, decision trees,
+marketing, financial analysis, and supply chain analysis.
+Decision-Making
+Business intelligence and analytics provide organizations with the necessary insights to make informed and
+strategic choices. By analyzing data from multiple sources, organizations can identify trends, patterns, and
+correlations that impact their operations. These insights enable decision-makers to evaluate different
+scenarios, assess risks, and determine the most effective course of action. For instance, a retail company
+analyzing customer purchasing patterns through BI might discover that certain products experience increased
+demand during specific seasons, prompting them to adjust inventory levels and tailor promotional strategies
+accordingly, resulting in optimized sales performance and customer satisfaction.
+Time-Series Analysis
+Time-series data consists of information collected on the same topic over a specified period. Examples can
+include the employment rate in a country over one year, the stock price of a specific company over the last
+year, or the attrition rate at a college from the fall through the following summer. Any data recorded
+continuously at different time intervals is considered time-series data. For example, Figure 8.7 shows a chart of
+time-series data from the National Park Service that compares horse population growth and foal production
+over several decades.
+8.2 • Foundations of Business Intelligence and Analytics
+301
+
+Figure 8.7 A time-series graph can compare multiple sets of data over the same period, such as the horse population growth and
+foal production on Assateague Island National Seashore, Maryland. The blue line represents the horse population, and the red line
+represents foal births. (credit: modification of work "Population Growth and Foal Production" by NPS/National Park Service, Public
+Domain)
+Continuous time-series data refers to a stream of information that is collected or recorded over time without
+interruptions. It’s essentially taking measurements or observations regularly, such as every minute, hour, or
+day, to track how something changes over a period. It could be, for example, monitoring temperature every
+hour throughout the day to observe how it fluctuates.
+Decision Trees
+Contemporary management challenges are not influenced by isolated decisions but rather by a series of
+decisions. Business leaders recognize the importance of how decisions made today may have a profound
+impact on future conditions. One analytics tool that speaks to this concept involves the use of decision trees. A
+decision tree in BI or data analytics is a decision-making tool that uses a tree structure diagram in which
+branches represent choices and their outcomes. They start with a question, then branch out based on the
+answers to subsequent questions, finally leading to a decision or prediction. For instance, in retail, a decision
+tree might help decide which customers are likely to buy a product based on factors like their age, purchase
+history, and location, helping businesses target their marketing efforts effectively.
+Decision trees provide a framework to visualize the potential cause-and-effect relationship between decisions
+and future outcomes. They present a visual guide to show decision-making processes and future outcomes.
+The parts of a decision tree include the following:
+•
+root node: the beginning, where the decision tree starts
+•
+leaf node: the end, or the final output node
+•
+splitting: dividing from decision nodes into subnodes according to the given conditions
+•
+subtree: a subsection or branch
+To better appreciate decision trees, consider Figure 8.8, which shows how it is possible to break down the
+decision of what drink to buy from a coffee shop. The first root node involves deciding between tea and coffee.
+If the customer decides to buy tea, they want it to be herbal. If the coffee shop does not have herbal tea, they
+want it to be iced. What if the coffee shop doesn’t carry tea at all? What beverage will they drink then?
+302
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+Figure 8.8 A decision tree can step through a user’s choices for deciding on a drink at a coffee shop. (attribution: Copyright Rice
+University, OpenStax, under CC BY 4.0 license)
+Marketing
+Business intelligence and analytics also play a critical role in understanding customer behavior, preferences,
+and market trends. By analyzing customer data, organizations can develop targeted marketing campaigns,
+personalized promotions, and tailored product offerings. Targeted marketing involves knowing who your
+audience is and providing services accordingly. For example, Rakuten Travel understands that international
+customers prefer a clean, simple user interface, whereas potential customers from their home country of
+Japan typically prefer a busier page with more options, and Rakuten directs users to the appropriate version of
+the site accordingly.6 Additionally, BI and analytics help organizations assess the effectiveness of marketing
+initiatives, track campaign performance, and measure customer satisfaction, enabling them to optimize their
+marketing strategies for maximum impact. In today’s digital age, organizations leverage advanced BI and
+analytics technologies to assess the effectiveness of their marketing initiatives, track campaign performance,
+and measure customer satisfaction in ways that were not possible a decade or so ago.
+For assessing the effectiveness of marketing initiatives, modern organizations harness the power of predictive
+analytics, machine learning algorithms, and data visualization tools.
+When it comes to tracking campaign performance, real-time analytics platforms and marketing automation
+software play a crucial role. These tools provide organizations with immediate feedback on KPIs such as click-
+through rates, conversion rates, and engagement metrics. By monitoring these metrics in real time,
+organizations can make timely adjustments to their campaigns to optimize performance and maximize
+impact.
+Furthermore, measuring customer satisfaction has been revolutionized by the advent of sentiment analysis
+tools and customer feedback platforms. These technologies allow organizations to analyze customer feedback
+from various channels, including social media, surveys, and online reviews. By understanding customer
+sentiment and identifying areas for improvement, organizations can enhance the overall customer experience
+and strengthen customer loyalty.
+6
+“Marketing Case Study #5: Rakuten Travel and the Target Market Strategy,” Krows Digital, 2023, https://krows-digital.com/
+marketing-case-study-5-rakuten-travel-target-market-strategy/
+8.2 • Foundations of Business Intelligence and Analytics
+303
+
+In essence, the integration of modern BI and analytics technologies enables organizations to assess the
+effectiveness of their marketing initiatives and track campaign performance and measure customer
+satisfaction with unprecedented accuracy and efficiency.
+Financial Analysis
+BI and analytics prove invaluable in financial analysis. Organizations can use these tools to consolidate and
+analyze financial data, identify cost-saving opportunities, detect anomalies or fraud, create sales projections,
+and optimize budget allocation. In Figure 8.9, a projection is made by analyzing historic sales data and
+extrapolating potential future sales in units over time. By gaining a comprehensive view of their financial
+performance, organizations can make data-driven decisions that improve profitability and financial stability.
+Figure 8.9 A time-series chart can project potential sales based on historical data. (attribution: Copyright Rice University, OpenStax,
+under CC BY 4.0 license)
+Supply Chain Analysis
+The process of supply chain analysis is crucial for optimizing operational efficiency and ensuring timely
+delivery of goods and services. Business intelligence and analytics enable organizations to track inventory
+levels, monitor supplier performance, analyze demand patterns, and identify areas for cost reduction and
+process improvement. Companies can leverage BI to examine the benefits of decisions and identify
+opportunities to reduce costs using tools such as a cost-benefit analysis, which is a systematic approach to
+assessing the costs and benefits of a proposed project, investment, or decision to determine its feasibility and
+potential ROI. For example, metrics obtained from the supply chain can help better understand driver
+behavior and lead to more efficient routes. This data-driven approach enhances supply chain visibility,
+streamlines logistics, and ultimately improves customer satisfaction. Business intelligence tools enable
+organizations to transform raw data into actionable insights, empowering them to make informed decisions,
+adapt to market dynamics, and maximize their potential for success.
+Business and Data Analytics Tools
+To effectively work with data in the field of BI, you must become familiar with a variety of tools and concepts.
+There are tools for data storage, data cleaning, data modeling, and data analysis, and techniques for predictive
+analytics. Two important types of tools are those for visualization and data mining. Visualization tools help
+with effectively communicating data analysis, and data mining tools help extract meaningful subsets of data
+for use in data analysis.
+304
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+Tools for Visualization
+Data visualization is a key aspect of data analysis and communication. Effective data visualization not only
+helps to convey complex information but also aids in decision-making by providing a clear and intuitive
+understanding of the data.
+In terms of modeling and analysis, tools such as Excel, R, and Python can be useful. They provide a wide range
+of statistical and analytical functionalities that enable users to explore and analyze datasets. Data analytics
+professionals apply quantitative and qualitative data analysis techniques, understand statistical concepts, and
+use these tools to build models for predictive analytics and decision support. Today, there are many options
+for visuals that are typical static charts, but there are also newer interactive charts that allow viewers to explore
+the data in greater detail or with different parameters. Demonstrations like this can have a strong impact on
+an audience.
+LINK TO LEARNING
+To fully understand the capabilities of interactive charts, read this article on some compelling uses of
+interactivity in data visualization (https://openstax.org/r/109Interactivty) from the Datalabs Agency.
+Data Mining
+Another important concept, data mining, involves the extraction of valuable information and patterns from
+large datasets. Data mining can be applied to solve real-world problems and support decision-making
+processes. One remarkable success story in data mining comes from Netflix’s recommendation system. Using
+a custom algorithm, the streaming company analyzes billions of data points to predict what content a viewer
+may like.7
+LINK TO LEARNING
+A key component in data analytics involves the mining of data. There are multiple techniques and technical
+skills commonly needed in this aspect of the industry. Read this article to examine how data science
+professionals accomplish this (https://openstax.org/r/109DataMining) in more detail.
+Professionals who develop proficiency with tools will be able to work with data effectively, conduct quantitative
+and qualitative analysis, apply data mining techniques, and present findings in a visually compelling manner.
+This knowledge can further enable you to uncover insights and KPIs, make informed decisions, and contribute
+to the success of an organization in the field of BI and analytics.
+Analytical Models
+Several analytical models can enable organizations to gain insights from data and make informed decisions
+that can lead to overall success. Predictive analytics and BI reporting are two of these powerful tools.
+Predictive Analytics
+The use of statistical modeling, data mining, machine learning, and other analytical techniques to forecast
+future outcomes based on historical data patterns is called predictive analytics. The key principle is to identify
+meaningful relationships and patterns within the data that can be used to make predictions. This involves
+understanding concepts such as training and testing data, feature selection, model evaluation, and accuracy
+7
+Cyril Shaji, Jayanth MK, Sarah Banadaki, Francisco Quartin de Macedo, and Gladys Choque Ulloa, “What Are Some Real-World Data
+Mining Success Stories? Netflix and Recommender Systems,” LinkedIn accessed January 24, 2025, https://www.linkedin.com/advice/
+1/what-some-real-world-data-mining-success-stories-gwaqf
+8.2 • Foundations of Business Intelligence and Analytics
+305
+
+assessment.
+To learn how predictive analytics works, consider this question: If you study more hours, will your midterm
+exam score increase? In other words, you want to determine whether there is a positive relationship between
+the number of hours studied and the score on midterm exams. Although the answer to this question might
+seem obvious, it is an effective scenario to demonstrate predictive analytics.
+To illustrate prediction and regression, suppose the dataset comes from a group of ten people who take a fifty-
+question exam and provide the number hours they spent preparing for the exam. Each question is worth one
+point. If you were to chart the results for each participant with the x-axis representing the time they spent
+studying and the y-axis representing the resulting grade, it would be possible to generate a visualization like
+the one in Figure 8.10. This demonstrates regression, which is a statistical analysis method used to quantify
+the relationship between variables and to make predictions. Note that analysts would typically use regression
+to form a hypothesis on a dataset that is much larger than our sample population of ten. This smaller example
+is used for illustrative purposes only.
+Figure 8.10 This regression analysis shows the results from a hypothetical study exploring the correlation between time spent
+studying and test scores. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Simple linear regression is a method that presents the relationship between variables as a linear equation on
+a graph, for example, predicting house prices based on features like size, location, and number of bedrooms.
+It involves plotting x and y points along a line and determining whether there is a relationship between the
+variables, and by what margin. If the plotted data follow an upward trend from left to right, there is a positive
+correlation. Figure 8.10 shows a positive correlation between time spent studying and exam scores.
+In a positive correlation, both variables are moving in a positive direction together. There is one dependent
+variable (the y-variable), which is the score on the exam, and one independent variable (the x-variable), which
+is the time spent studying.
+There are three important points to remember about linear regression:
+•
+To get an ideal solution, you need data from the whole population. Since that may not be feasible, you
+could pull a sample to represent the population.
+•
+After acquiring the data, you must choose a relevant model. This can be a daunting task at first but can be
+done by considering the volume of data, determining whether it is continuous and deciding whether to
+perform classification or prediction.
+•
+After modeling, you can form predictions.
+In linear regression, the term “linear” implies that as the value of one item increases, the other is changing in
+parallel. Consider the equation for a line: y = mx + b, where the following is true:
+•
+y is a dependent variable (outcome). This is the predicted value. In this example, the y-variable is the exam
+score.
+306
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+•
+x is an independent variable. It is usually time or some other linear value. In this example, the x-variable is
+the time spent studying.
+•
+m is the slope of the line.
+•
+b is the y-intercept value.
+In the equation of a line, y is a function of x. To make a solid prediction, you need to find the values of m and b.
+The variable m represents the slope of the line, which is the rate of change in the dependent variable (y) per
+unit change in the independent variable (x). In simpler terms, it shows how much y increases (or decreases) for
+each additional unit of x. So, if m is positive, it means that as x increases, y tends to increase, and if m is
+negative, it means that as x increases, y tends to decrease.
+The variable b represents the y-intercept of the line, which is the value of y when x is equal to zero. In other
+words, it gives the starting point of the line on the y-axis.
+In the example of time spent studying (x) and exam scores (y), the slope (m) would show how much the grade
+tends to increase (or decrease) for each additional hour of study time. The intercept (b) would represent the
+grade a student might get if they didn’t study at all (x = 0).
+The variables m and b are not degrees of correlation but rather parameters that help to define the regression
+line and understand the relationship between the variables. They provide crucial information about the
+direction, steepness, and starting point of the line that best fits the data.
+In Table 8.1, the values from the study of ten participants with the number of hours studied and the number of
+correct answers on the fifty-question exam are shown.
+x (Hours)
+y (Score)
+2
+5
+4
+10
+6
+11
+8
+14
+10
+16
+12
+23
+14
+25
+16
+30
+18
+35
+Table 8.1 Sample Study Data
+In the hypothetical study, the
+number of hours spent
+studying correlates positively
+with the number of correct
+answers.
+8.2 • Foundations of Business Intelligence and Analytics
+307
+
+x (Hours)
+y (Score)
+20
+40
+110
+209
+Table 8.1 Sample Study Data
+In the hypothetical study, the
+number of hours spent
+studying correlates positively
+with the number of correct
+answers.
+After checking some new x values (time) to predict the scores, it becomes possible to form a prediction based
+on new y values. Now, you can identify predicted scores and how much they vary from the actual score,
+expressed in terms of error. Refer to Table 8.2 for the computed values, and view Figure 8.11 for how the
+predictions would plot on a graph.
+x (study time)
+y (exam score)
+x × y
+x2
+y (predicted score)
+Error
+2
+5
+10
+4
+4.447
+0.553
+4
+10
+40
+16
+8.227
+1.773
+6
+11
+66
+36
+12.007
+−1.007
+8
+14
+112
+64
+15.787
+−1.787
+10
+16
+160
+100
+19.567
+−3.567
+12
+23
+276
+144
+23.347
+−0.347
+14
+25
+350
+196
+27.127
+−2.127
+16
+30
+480
+256
+30.907
+−0.907
+18
+35
+630
+324
+34.687
+0.313
+20
+40
+800
+400
+38.467
+1.533
+New x values
+25
+47.917
+30
+57.367
+Table 8.2 Predicting Scores and Calculating Error You can determine the error between the actual
+value and the predicted value, and you can use the existing data to predict scores based on new
+values.
+308
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+x (study time)
+y (exam score)
+x × y
+x2
+y (predicted score)
+Error
+35
+66.817
+40
+76.267
+Table 8.2 Predicting Scores and Calculating Error You can determine the error between the actual
+value and the predicted value, and you can use the existing data to predict scores based on new
+values.
+Figure 8.11 Values from the study are plugged in and calculated, forming predicted grades that can be plotted on a graph.
+(attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Notice that the values of the predicted score surpassed the maximum score of the fifty-question exam. The
+implication is that studying thirty hours or more would result in getting a higher than perfect score, which
+obviously is not possible. This highlights the important fact that no predictive model is perfect. However, the
+example does demonstrate positive correlation.
+Forecasting
+To apply predictive analytics techniques, analysts gather relevant information from historical data. Presumably,
+the more information they gather, the more accurate their model is. The data are gathered and entered in the
+model in a process called training, which uses labeled or historical data to teach machine learning algorithms
+or models to recognize patterns, relationships, and trends, enabling them to make predictions or
+classifications on new data. The trained models are then used to make predictions on new, unseen data.
+Predictive analytics techniques can be applied across multiple disciplines, including sales forecasting, demand
+prediction, and future stock performance. To perform analysis on historical data, analysts sometimes turn to
+libraries, or freely available code segments, to augment an algorithm with additional features.
+Decision-Making
+Predictive analytics tools help stakeholders make decisions. The historical data and associated trends help
+organizational leaders anticipate future scenarios and make data-driven decisions. For example, predictive
+analytics can help businesses optimize inventory levels, develop targeted marketing campaigns, optimize
+pricing strategies, or predict equipment failures to plan maintenance activities proactively. Note that
+descriptive analytics, diagnostic analytics, and prescriptive analytics are all used as decision-making tools.
+Analysis of historical data to gain insights into past events, trends, and patterns within an organization or
+specific business processes is called descriptive analytics. A full descriptive study can also help identify
+external events that disrupted the data. In the example of a stock price analysis, sudden global events can
+8.2 • Foundations of Business Intelligence and Analytics
+309
+
+produce a profound impact, as seen with the COVID-19 pandemic. Descriptive analytics focuses on
+summarizing and visualizing data to answer questions like the following:
+•
+“What happened?”
+•
+“What are the key trends?”
+•
+“How can we leverage the organization to take advantage of this data?”
+The process of examining patterns in data to identify correlations and causes of certain events or outcomes is
+called diagnostic analytics. For instance, in the context of customer attrition, diagnostic analytics might
+uncover correlations between customer behavior and service quality issues, allowing organizations to address
+underlying issues more effectively and thereby retain more customers.
+The process of using data analysis and modeling techniques to recommend specific actions or strategies to
+optimize business processes and outcomes is called prescriptive analytics. It takes a proactive approach by
+providing recommendations on the best course of action to optimize future outcomes. It leverages advanced
+analytics techniques to simulate various scenarios and determine the most optimal decision or action to
+achieve desired outcomes.
+Business Intelligence Reporting
+The process of collecting, analyzing, and presenting data in a format that communicates insights derived from
+BI analysis to support decision-making within an organization is called business intelligence reporting. It
+focuses on transforming raw data into meaningful information and insights through an interactive dashboard,
+reports, and visualizations. The goal is to provide stakeholders with accurate, relevant, and timely information
+to support strategic, tactical, and operational decision-making.
+CAREERS IN IS
+Average Salary for Jobs with Predictive Analytics and Modeling Skills
+The field of predictive analytics is experiencing rapid growth, creating exciting career opportunities for
+individuals with strong analytical and data-related skills. As businesses increasingly recognize the value of
+leveraging data to make informed decisions and gain a competitive edge, professionals specializing in
+predictive analytics are in high demand to develop models, forecast trends, and drive actionable insights
+from vast amounts of data. In 2024, base salaries averaged over $250,000.8
+Data scientists and analysts play a critical role in designing and developing BI reports. They identify KPIs,
+define data requirements, select appropriate visualizations, and create reports that cater to the specific needs
+of stakeholders. This process involves data modeling, report design, and development of data-driven
+visualizations. Data visualization tools like Tableau, Microsoft Power BI, or custom-built solutions play a vital
+role in aiding managers in decision-making processes.
+Here are several ways in which BI reporting supports managers:
+•
+access to real-time and accurate information
+•
+performance monitoring and KPIs
+•
+data visualization and analysis
+•
+identification of trends and opportunities
+•
+data-driven decision-making
+Despite its advantages, BI reporting also has potential disadvantages that organizations may encounter:
+8
+“Average Salary for Jobs with Predictive Analytics and Modeling Skills,” Salary.com, accessed December 11, 2024,
+https://www.salary.com/research/salary/skill/predictive-analytics-and-modeling-salary
+310
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+•
+Implementation can be complex and costly.
+•
+Business intelligence reporting relies heavily on data accuracy, so data quality and successful integration
+are important.
+•
+Organizations may become overly reliant on technology and infrastructure.
+•
+Business intelligence reporting involves handling sensitive business data, so it is necessary for
+organizations to maintain privacy and security.
+LINK TO LEARNING
+Data extraction has been described as the backbone of analytics. The process prepares the data for
+analysis, transmission, and storage. Read this article from Rivery to examine the process of and types of
+data extraction (https://openstax.org/r/109DataExtract) in more detail.
+Ethical and Legal Aspects of Data Collection
+As you learned in 5.2 Security Technologies and Solutions and 6.2 Vulnerabilities and Threats in Web
+Applications and IoT Technology, ethical and legal considerations surrounding data collection have become
+increasingly important as organizations gather and analyze vast amounts of data. Further, there have been
+some ethical concerns with AI in data analytics, such as bias in algorithms and the ethics of data usage without
+consent. Organizations must prioritize transparency and inform individuals about the purpose of data
+collection, the types of data being collected, and how it will be used.
+This means ensuring the lawful basis for data collection, implementing data retention policies, and providing
+individuals with the right to access, modify, or delete their data as required by the law. Ultimately, ethical and
+legal aspects of data collection aim to strike a balance between leveraging data for insights and innovation
+while safeguarding individual privacy rights and ensuring responsible data handling practices.
+ETHICS IN IS
+The Rise of Data and AI Ethics9
+Governmental bodies are showing signs of becoming more socially and ethically responsible regarding
+ethical data consumption. Leading the way is the EU’s GDPR, which enforces tight restrictions. The GDPR
+was the first organization to give citizens the right to be “forgotten,” paving the way for other governments
+to follow suit. There are obvious advantages of GDPR compliance, but it is critical to be aware of potential
+drawbacks as well. Challenges include the high cost of compliance, complexity, and the impact on small
+businesses that may lack resources for full obedience.10 Other developed countries have created their own
+oversight groups to enforce data security.
+9
+Nihar Dalmia and David Schatsky, “The Rise of Data and AI Ethics: Managing the Ethical Complexities of the Age of Big Data,”
+Deloitte Insights, June 24, 2019, https://www2.deloitte.com/us/en/insights/industry/public-sector/government-trends/2020/
+government-data-ai-ethics.html
+10
+Terence Jackson, “The Pros, Cons and True Impact of GDPR One Year Later,” Cyber Defense Magazine, July 8, 2019.
+https://www.cyberdefensemagazine.com/the-pros-cons-and-true-impact-of-gdpr-one-year-later/
+8.2 • Foundations of Business Intelligence and Analytics
+311
+
+8.3 Analytics to Improve Decision-Making
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Explain the role and importance of analytics in decision-making
+•
+Examine how organizations use business analytics for decision-making
+•
+Apply analytics to the decision-making process
+Data analytics is a powerful tool that has revolutionized the way businesses make informed decisions. It
+involves the systematic collection, interpretation, and analysis of vast amounts of data to uncover valuable
+insights and patterns. By harnessing the potential of data analytics, organizations can gain a deeper
+understanding of their operations, customer behavior, and market trends.
+Role and Importance of Analytics in Decision-Making
+In today’s rapidly evolving business landscape, the ability to make informed decisions is paramount to the
+success of organizations across industries. By leveraging advanced analytical techniques and tools, businesses
+can transform raw data into actionable intelligence, enabling them to anticipate market trends, optimize
+operational efficiency, and enhance customer experiences. There are three fundamental analytics
+methodologies—decision trees, regression analysis, and clustering—that underpin data-driven decision-
+making processes and offer valuable insights into various aspects of business operations and strategy.
+Decision Trees
+Decision trees, are commonly used to classify and predict outcomes by splitting the data based on predictor
+variables if data are discrete. If data are continuous, then the decision may be based on some absolute
+characteristic, such as whether the value is less than a certain value. For example, a bank can use a decision
+tree to determine whether to approve or deny a loan application. The tree might split at criteria like credit
+score, income level, debt-to-income ratio, and employment status. Using a decision tree standardizes the
+evaluation of an applicant’s criteria, automates the process of approval, ensures transparency in the approval
+process, and allows the bank to make data-driven decisions.
+Regression
+Another powerful tool in data analytics is regression, which is a statistical analysis method used to quantify
+the relationship between variables and to make predictions. Linear regression is one type of regression. By
+analyzing historical data and identifying patterns, regression models can forecast future trends and outcomes.
+This enables businesses to make informed decisions based on quantifiable insights. For example, a retail
+company can use regression to predict future sales based on several factors, such as the amount spent on
+advertising, seasonality, and price changes. By using linear regression, the company can model how these
+independent variables affect sales and make more accurate predictions. The company can also optimize their
+marketing budget, manage inventory more accurately, determine how price changes can impact sales, and
+analyze how seasonality affects sales.
+Neural Networks
+A neural network provides a means of machine learning by establishing a network of thousands or even
+millions of nodes in a weighted system of forward-moving data. Patterned loosely after biological conceptual
+models of how humans understand cognition, images are “trained” to provide a basis for pattern recognition.
+Neural networks are used in customer support chatbots to handle customer inquiries, provide
+recommendations, and resolve issues. Chatbots that use deep learning can enhance customer experience by
+understanding natural language and context and by offering personalized responses. They can also improve
+their accuracy in response generation and ultimately improve efficiency, leading to cost reduction and a faster
+response time.
+312
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+Clustering
+The unsupervised learning technique used to group similar data points together based on their intrinsic
+characteristics or attributes is called clustering. This approach is valuable for segmentation and customer
+profiling, allowing organizations to identify distinct groups within their target audience. By understanding
+these segments, businesses can tailor their marketing strategies, product offerings, and customer experiences
+to better meet the needs and preferences of each group. Clustering is an effective method to use in health
+care to improve patient care by segmenting patients based on their medical conditions, lifestyle factors, and
+response to treatment. The health-care organization would be able to identify groups of patients who share
+similar characteristics, allowing the provider to tailor treatment plans more effectively and improve outcomes.
+Choosing Appropriate Models or Tools
+When choosing which models to implement, organizations consider several factors. First, they evaluate the
+nature of the problem or decision at hand. Decision trees are often used when there are multiple decision
+paths, while regression analysis is suitable for predictive modeling. Clustering is employed when segmenting
+data is essential for personalized targeting. Second, organizations assess the availability, quality, and
+complexity of the data. Some models, like decision trees, provide easily interpretable results, while others,
+such as neural networks, may offer higher accuracy but are more challenging to interpret. Ultimately,
+organizations strive to select the most appropriate model that aligns with their goals, data availability,
+interpretability needs, and computational capabilities.
+How Organizations Use Business Analytics for Decision-Making
+Organizations use business analytics to make different kinds of decisions, communicate results to
+stakeholders, and attend to a variety of ethical and social considerations. By leveraging data-driven insights,
+businesses can improve decision-making across various functions, including marketing, finance, operations,
+and human relations, ensuring that strategies are informed by the data they collect. Furthermore, business
+analytics enables organizations to present clear and actionable insights to stakeholders, fostering
+transparency and trust while supporting informed decision-making at all levels. However, as organizations
+collect and analyze vast amounts of data, they must also address ethical concerns such as data privacy, bias in
+algorithms, and the social impact of automation, ensuring that their use of analytics aligns with societal values
+and regulatory standards.
+Operational, Tactical, and Strategic Decision-Making
+Analytics play a vital role in helping businesses utilize different decision-making processes, including
+operational, tactical, and strategic decision-making. An operational decision is focused on day-to-day
+activities and involves optimizing processes, allocating resources, and managing immediate operational
+challenges. Analysts support operational decision-making by using analytics to monitor KPIs, identifying
+bottlenecks, and suggesting process improvements. As an example, suppose a retail store manager decides to
+adjust the store’s inventory levels based on daily sales data and customer demand forecasts. This decision
+involves managing day-to-day operations such as stocking shelves, replenishing inventory, and scheduling
+staff to meet immediate customer needs and maintain efficient store operations.
+A tactical decision is a medium-term decision made by an organization to achieve specific objectives or goals
+within a defined time frame. These decisions involve resource allocation, budgeting, and setting targets.
+Analysts assist in tactical decision-making by conducting trend analysis, forecasting, and scenario planning.
+For example, a marketing manager makes a tactical decision when they launch a targeted advertising
+campaign for a new product line based on market research, customer segmentation analysis, and competitor
+benchmarking. This decision would involve developing specific marketing strategies and tactics to achieve
+short- to medium-term objectives, such as increasing brand awareness, expanding market share, or driving
+sales growth within a particular market segment.
+8.3 • Analytics to Improve Decision-Making
+313
+
+A strategic decision is a long-term decision made by an organization to define its overall direction, goals, and
+competitive positioning in the market. Strategic decisions involve evaluating market trends, assessing the
+competitive landscape, and identifying growth opportunities. Analysts support strategic decision-making by
+conducting market research, competitive analysis, and trend forecasting. For example, consider a CEO of a
+multinational corporation who decides to enter a new international market by acquiring a competitor or
+forming a strategic partnership. This decision is based on comprehensive market analysis, macroeconomic
+trends, geopolitical factors, and long-term business goals. It involves setting overarching objectives, defining
+corporate strategies, and allocating resources to position the organization for sustained growth and
+competitive advantage in the global marketplace.
+Communicating Results
+Analysts use classification and prediction models to communicate results to stakeholders in a clear and
+understandable manner. Classification models, such as decision trees or logistic regression, are utilized to
+categorize data into different classes or groups. Logistic regression is a statistical modeling technique used to
+predict a binary or categorical outcome based on one or more independent variables. Unlike linear regression,
+it uses the logistic function (sigmoid curve) to model probabilities, ensuring predictions remain between zero
+and one. For example, logistic regression can be used to predict whether a patient has a disease based on
+factors like age, blood pressure, and cholesterol levels. It is widely used in classification problems, such as
+spam detection, customer churn prediction, or medical diagnosis.
+These models help analysts communicate findings by presenting the factors or attributes that contribute to a
+particular classification. For example, in a marketing context, a classification model can be used to identify
+customer segments based on demographic or behavioral characteristics, enabling analysts to communicate
+the characteristics that define each segment to stakeholders.
+Prediction models, such as linear regression or neural networks, are employed to make forecasts or estimate
+future outcomes based on historical data patterns. For example, imagine a retail company using a neural
+network model to predict customer purchasing behavior. By analyzing relevant data, the neural network can
+learn complex patterns and relationships within the data and then forecast which products customers are
+likely to buy in the future and anticipate changes in demand. Analysts can present the predicted values or
+trends to stakeholders so that they can make decisions accordingly.
+Ethical and Social Considerations
+Ethical concerns relating to handling data for classification and prediction models include using data for
+legitimate purposes, avoiding biases and discrimination, and ensuring fairness and accountability in the
+modeling process. Analysts must also remain objectively aware of the potential social implications of their
+models.
+Models can inadvertently perpetuate biases or reinforce existing inequalities if the training data are biased or
+lack diversity. The human factor is the most important influence over bias and diversity in data. Because
+humans are responsible for choosing what data are fed into the algorithms and how the results will be
+applied, unconscious bias may enter the process if the analysts do not pay special attention to the data they
+use. For example, a NIST study11 reported that AI facial recognition tools misidentified many people of color.
+Analysts should carefully evaluate these biases to avoid negative consequences. Ensuring the ethical and
+unbiased use of facial recognition technology, especially in areas such as law enforcement, requires a
+multifaceted approach. Here are some key considerations and strategies analysts can employ:
+•
+Ensure that the datasets used to train facial recognition algorithms are diverse and representative of the
+population they are meant to serve. This means including a wide range of ethnicities, ages, genders, and
+other relevant demographic factors in the training data.
+11
+Patrick Grother, Mei Ngan, and Kayee Hanaoka, "Face Recognition Vendor Test (FRVT). Part 3: Demographic Effects," NISTIR 8280,
+National Institute of Standards and Technology, December 2019, https://doi.org/10.6028/NIST.IR.8280
+314
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+•
+Implement rigorous testing procedures to detect and mitigate biases in facial recognition algorithms. This
+can involve analyzing the performance of the algorithm across different demographic groups and
+identifying any disparities in accuracy rates. Bias mitigation techniques such as algorithmic adjustments,
+data augmentation, and fairness-aware algorithms can help address these disparities.
+•
+Promote transparency and accountability in the use of facial recognition technology by law enforcement
+agencies. This includes providing clear documentation on how the technology is used, the potential risks
+and limitations, and mechanisms for oversight and review by external stakeholders, including civil rights
+organizations and community members.
+Data science professionals play an important role in effectively communicating the results of classification and
+prediction models to stakeholders, while simultaneously addressing ethical and social considerations to
+ensure responsible data handling and decision-making.
+Case Study: Applying Analytics to the Decision-Making Process
+A retail company is considering expanding its product offerings by introducing a new line of clothing targeted
+at a younger demographic. The decision-makers want to assess the potential success of this new venture and
+make an informed decision based on data analytics.
+1.
+The first step is problem definition, which involves clearly identifying and defining the problem or decision
+to be made. In this case, the problem is whether the introduction of a new clothing line for a younger
+demographic will be a profitable venture for the company.
+2.
+The next step is data collection to support the decision-making process. Data can be obtained from
+various sources, such as market research and customer surveys. When collecting consumer data for
+decision-making processes in areas such as market research and customer surveys, it is important to
+focus on gathering information that directly informs the objectives and goals of the decision-making
+process. Here is a breakdown of relevant consumer data the company has collected using market research
+and their own existing customer data:
+◦
+Demographic information: Understanding the demographic characteristics of the target audience,
+including age, gender, income level, education level, occupation, and geographic location, can help
+tailor products, services, and marketing strategies to specific consumer segments. The company has
+determined that in their suburban geographic area there is a large group of potential customers ages
+sixteen to thirty years who identify among a variety of genders. They are primarily from families at the
+low to middle income level, and they have some disposable income. The potential customers who are
+not in high school are in college or are working professionals.
+◦
+Purchase history: Analyzing consumers’ past purchase behavior provides insights into their
+preferences, buying habits, brand loyalty, and spending patterns. This information can help identify
+trends, predict future purchasing behavior, and personalize marketing messages and product
+recommendations. The consumers in the company’s target audience have some disposable income, so
+they tend to buy clothing that is on trend and are loyal to popular brands.
+◦
+Psychographic data: Psychographic data delve into consumers’ lifestyles, interests, values, attitudes,
+and personality traits. This information helps marketers understand consumers’ motivations,
+aspirations, and pain points, allowing for more effective targeting and messaging. The company has
+found that the potential consumers in their region are socially conscious and like to follow trends.
+◦
+Data that might not be as relevant: Collecting demographic data that do not align with the target
+audience or objectives of the decision-making process may not provide actionable insights and could
+lead to misinformed decisions. In addition, gathering excessive or irrelevant behavioral data that do not
+directly correlate with the decision-making goals may result in information overload and detract from
+actionable insights. Finally, relying solely on anecdotal evidence, unsubstantiated opinions, or
+speculative assumptions without empirical support may lead to biased or unreliable conclusions and
+ineffective decision-making.
+8.3 • Analytics to Improve Decision-Making
+315
+
+3.
+In the final step, the company must perform detailed data analysis to create actionable insights. Analysts
+can use various techniques such as classification, regression, and clustering (Figure 8.12). For instance,
+regression analysis can be used to identify the relationship between customer age and purchasing
+behavior, helping determine the potential demand for the new clothing line. In classification, data points
+are grouped according to their values, which tend to appear together. In regression, data points are
+differentiated according to whether they are above or below the line in a regression study. Finally, in
+clustering, data points are grouped by similarity. For this case study, the clothing retailer used regression
+and determined that the purchasing behavior of their target audience will likely lead to success in their
+new clothing line.
+Figure 8.12 Data analysts often use (a) classification, (b) regression, and (c) clustering to help with decision-making. (attribution:
+Copyright Rice University, OpenStax, under CC BY 4.0 license)
+The company in this case study has done thorough data collection and analysis and determined that there is a
+market for a gender-neutral clothing line of pants and shirts that is likely to be profitable. The analysts present
+the data and their conclusions to the stakeholders using some effective visuals, and they agree to move
+forward with it.
+8.4 Web Analytics
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Explain the role and importance of web analytics
+•
+Examine how web data are collected
+•
+Discuss the web analytics techniques used by businesses to drive site recognition and sales
+•
+Explain search engine optimization
+Web analytics is a powerful tool that provides valuable insights into the performance and behavior of websites.
+The process of web analytics involves the collection, measurement, analysis, and reporting of data related to
+website usage and user interactions to understand and optimize user behavior, engagement, and overall
+performance. With it, organizations can track various metrics such as website traffic, page views, bounce rates,
+conversion rates, and user demographics. These metrics enable businesses to gain a deeper understanding of
+their online presence, user engagement, and marketing effectiveness, such as determining the potential buyer
+personas and building an understanding of the individuals accessing the website.
+The Role and Importance of Web Analytics
+With the proliferation of internet usage and the exponential growth of online businesses, the ability to track,
+analyze, and interpret user behavior on websites has become indispensable. Web analytics provides
+organizations with invaluable insights into their audience demographics, preferences, and interactions,
+enabling them to make informed decisions and refine their online strategies. By harnessing the power of data-
+driven insights, businesses can enhance user experiences, optimize key metrics, and ultimately drive growth
+and success in the competitive online landscape.
+316
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+Improving an Organization’s Online Presence
+Web analytics play an important role in helping organizations optimize their websites and improve their online
+presence. By analyzing the data obtained, organizations can identify areas for improvement and make data-
+driven decisions to enhance their websites. For example, through web analytics, organizations can identify
+pages with high bounce rates and low conversion rates, indicating potential issues in user experience or
+content. A bounce rate in web analytics refers to the percentage of visitors who navigate away from a website
+after viewing only one page, indicating a lack of engagement or interaction with additional content. A
+conversion rate in web analytics refers to the percentage of website visitors who complete a desired action,
+such as making a purchase, filling out a form, or signing up for a newsletter.
+Based on the data, an organization can make targeted improvements, such as optimizing page load times,
+enhancing navigation, or refining the messaging on those pages. This knowledge enables organizations to
+tailor their online strategies, optimize marketing efforts, and create a seamless user experience, ultimately
+driving higher customer satisfaction and better online performance.
+Optimizing Metrics
+A metric is a quantifiable measure used to track and evaluate the performance, progress, or success of a
+particular aspect of a business, campaign, or activity. Metrics provide specific data points that can be analyzed
+to gain insights into how well a website or digital platform is performing. They can include a wide range of
+measurements, such as website traffic, conversion rates, bounce rates, session duration, and many others. A
+KPI is one type of metric, for example. These are typically high-level metrics that directly align with the
+organization’s goals and are critical for assessing performance and progress.
+The ability to use these metrics to measure website performance and user behavior allows organizations to
+gauge the effectiveness of their online presence. Web analytics provide insights into KPIs such as the number
+of unique visitors, page views, average session duration, and conversion rates. These metrics allow
+organizations to track and measure their website’s success over time and compare it against predefined goals
+and benchmarks. They can also identify opportunities for optimization, refine marketing strategies, and create
+personalized user experiences based on user preferences and patterns.
+Gaining Insights
+By using the data from web analytics, decision-makers can gain a comprehensive understanding of their
+website’s performance, identify areas of improvement, and assess the impact of various marketing initiatives
+or website changes. For example, web analytics can help determine the effectiveness of different advertising
+campaigns by tracking referral sources, click-through rates, and conversion rates associated with each
+campaign.
+Measured as a percentage, the click-through rate (CTR) tells the viewer how effective an ad is at attracting
+clicks. The CTR represents the total clicks an ad receives divided by the total impressions, or instances the ad is
+loaded on a page. A 2 to 5 percent CTR is generally accepted as being successful, but this varies by industry. So
+if an ad was viewed 10,000 times and was clicked on 500 times, that’s a 5 percent CTR. The CTR helps assess
+the effectiveness of digital marketing efforts. It allows decision-makers to allocate resources effectively and
+invest in strategies that generate the highest ROI.
+GLOBAL CONNECTIONS
+Web Analytics Tools Abroad
+The methods by which information systems teams analyze web metrics are universal. Techniques include
+funnel analysis, page view tracking, search engine optimization, bounce rates, and others. However, rules
+and local practices vary internationally, which begs the question: what tools are used in other developed
+8.4 • Web Analytics
+317
+
+countries?
+In South Korea, a web metric analysis tool that has made waves is Naver Analytics. The project grew out of a
+search engine tool and now deploys AI-based algorithms to process user behavioral data. In China, a
+popular tool for web metric analysis is Baidu Tongji (called Baidu Analytics outside of China). Like the
+popular Google Analytics, the tool requires webmasters to insert some JavaScript code into each page of a
+website for tracking important KPIs.
+Web Data Collection
+Different web analytics tools and techniques collect website data using various methods. Here are a few
+common approaches:
+•
+Page tagging: The method of embedding a snippet of JavaScript code, known as a tracking tag or pixel, on
+each webpage to track user interactions, behaviors, and events is called page tagging. When a user visits
+the website, the tag sends information to the organization’s analytics tool, which captures data such as
+page views, clicks, and user interactions. Page tagging is widely used and allows for detailed tracking and
+customization, as the code can be modified to collect specific data points.
+•
+Log file analysis: Analyzing server log files to gather data on website traffic, user behavior, and server
+performance, providing insights into website usage patterns and potential issues is called log file
+analysis. Log files record every request made to an organization’s server, including details such as IP
+addresses, user agents, and accessed URLs. This can provide information about website traffic, user
+behavior, and errors. However, log file analysis requires expertise in the handling and interpreting of raw
+log data.
+•
+JavaScript events: Web analytics tools can track specific user interactions through JavaScript events. Any
+time a user completes an action such as submitting a form or adding an item to a cart, this creates a
+conversion event. These events are typically tracked using JavaScript code embedded on the website,
+allowing the organization’s analytics tool to collect data as the events occur.
+Web Data Analysis
+Data scientists can leverage various web analytics tools and techniques to analyze website data and derive
+meaningful insights. Some of the common tools include web analytics platforms, data extraction and
+transformation, statistical analysis and modeling, and custom analysis and visualization tools.
+Web Analytics Platforms
+Web analytics platforms offer a wide range of features and functionalities to explore and analyze website data.
+Data scientists can access prebuilt dashboards, reports, and visualizations provided by these tools to gain
+insight into website performance, user behavior, and conversion metrics. They can segment data based on
+various dimensions, apply filters, and conduct in-depth analysis using available metrics and dimensions.
+Additionally, these platforms often offer advanced features like custom event tracking, goal tracking, and e-
+commerce tracking, enabling data scientists to perform detailed analyses tailored to specific business goals.
+Data Extraction and Transformation
+Data scientists can extract data from web sources using their APIs or data export tools. Extraction involves
+removing data, often in multiple forms, from an online source or repository. Frequently, the data file types vary
+and come in an unstructured form. Extraction makes it possible to filter, organize, and store the data in a
+common location. Analysts can programmatically retrieve raw data, such as page views, events, and user
+demographics. To put the data into usable context, it may be helpful to extract data from multiple sources,
+transform the data into a usable format, and load the data into a data warehouse for data analytics, a process
+called extract-transform-load (ETL) (Figure 8.13). These steps are as follows:
+318
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+1.
+Information is extracted from one or more sources and is prepared for transformation.
+2.
+Transformation may involve cleaning up missing or inconsistent data, creating new derived variables, and
+transforming data into a suitable format for analysis. The data are filtered and organized.
+3.
+The transformed data are loaded into a centralized location.
+Figure 8.13 ETL is part of the overall workflow for moving data from a database, transforming it, and loading it to a data warehouse
+for transmission and analysis. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+FUTURE TECHNOLOGY
+Self-Service Business Intelligence
+Some research suggests that the digital divide appears to be closing. Thanks to self-service ad hoc tools, an
+increasing number of people can perform tasks previously only possible with the help of professional data
+analysts and engineers. Historically, data professionals function as “gatekeepers” of the data analysis tools,
+turning raw data into insightful material. As the name implies, self-service BI provides an opportunity for
+individuals to proactively derive actionable insights without the need for highly trained professionals to
+provide oversight.12 The future of BI may very well eliminate the middleman, allowing executives and other
+interested parties to run queries, build visualizations, and create dashboards without specialized training.
+Statistical Analysis and Modeling
+With data that have undergone the ETL process, data scientists can apply various statistical analysis
+techniques and modeling approaches to gain insights and make predictions. They can use tools like
+exploratory data analysis classification and customer segmentation.
+Exploratory Data Analysis
+Exploratory data analysis (EDA) is the process of conducting the initial review of a dataset to spot any patterns
+or trends early on. Data analysis at this stage looks for relationships between variables. When one feature
+increases, does another feature do the same? What are the correlations, if any? This initial overview helps data
+scientists formulate the right questions to ask. Visual outputs can help by providing clues to these
+relationships. Consider the scatterplot diagram in Figure 8.14. This data from an educational environment
+recorded student absences and cross-referenced them with the final grade point average (GPA).
+12
+Michael Segner, “The Future of Business Intelligence,” Monte Carlo, updated January 20, 2024. https://www.montecarlodata.com/
+blog-the-future-of-business-intelligence/
+8.4 • Web Analytics
+319
+
+Figure 8.14 Scatterplot diagrams can provide evidence of correlation between features such as absences and GPA. (attribution:
+Copyright Rice University, OpenStax, under CC BY 4.0 license)
+You can observe quickly that there is indeed a relationship between the variables of absences and GPA. The
+lower the absences (the independent variable), the higher the GPA. The trend goes downward and to the right,
+signifying a negative correlation.
+Classification
+A scatterplot like the one in the previous example is helpful not only for seeing trends but also for classifying
+data. One such approach involves clustering, which involves identifying the most relevant characteristics of the
+data and plotting them out, with the idea being that similar data points will appear to cluster together near
+the average value, or centroid. Using the iris dataset (refer to 8.1 The Business Analytics Process), you can plot
+data on petal width (Figure 8.15). For clarity, the apparent clusters are colored differently to communicate the
+distinctions better visually. For example, the Iris setosa data group together in the lower-left portion of the
+chart and are colored purple.
+Figure 8.15 In plotting petal width of iris species, the graph reveals three very clear clusters of data. Purple circles = Iris setosa;
+green circles = Iris versicolor; blue circles = Iris virginica. (source: modification of work “Iris dataset scatterplot” by
+“Nicoguaro”/Wikimedia Commons, CC BY 4.0)
+Customer Segmentation
+To better determine how to market goods and services, organizations must understand their audience. By
+studying customer behavior patterns and other features, organizations can divide customers into groups,
+which will make the target audience easier to reach. One way is to use k-means clustering, which is an
+unsupervised machine learning algorithm used for clustering data into distinct groups based on similarity. It
+works by dividing a dataset into k clusters, where each data point belongs to the cluster with the nearest mean
+(centroid). The algorithm iteratively updates the centroids and reassigns data points until the clusters stabilize
+or reach a convergence criterion. For example, k-means can segment customers based on purchasing
+behavior to identify distinct buyer personas.
+Consider an example. Suppose you are tasked with breaking a group of customers down into manageable
+320
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+groups with labels so the marketing team can plan the advertising campaigns more effectively. The first thing
+you might do is conduct a study that classifies the sample data into age, annual income, and spending score.
+Spending score is assigned to each member of the study and is based on historic information such as
+spending habits and other customer behavior (Table 8.3).
+CustomerID
+Age
+Annual Income (in $1,000)
+Spending Score (1–100)
+1
+18
+99
+58
+2
+21
+43
+48
+3
+19
+129
+21
+4
+35
+77
+29
+5
+31
+86
+28
+6
+24
+143
+25
+Table 8.3 Customer Segment In this example table, customer features are listed in a dataset for
+analysis. Note that no customer is personally identified. (data source: Zubair Mustafa, "Shopping
+Mall Customer Segmentation Data," Kaggle, updated April 2024, https://www.kaggle.com/
+datasets/zubairmustafa/shopping-mall-customer-segmentation-data)
+After this, you might perform an EDA to remove outliers. For example, suppose that in the summary statistics,
+you notice that the average income for consumers aged twenty-five to thirty years is $45,000; however, one
+data point has a twenty-six-year-old influencer who earns $2.6 million. This will throw off the averages and
+results dramatically, so that value is excluded. Cleaning the data using the ETL process will make it more
+accurate and effective for the next stage of the process—analysis and visualization.
+Custom Analysis and Visualization
+Data scientists can also utilize programming languages such as Python or R to perform custom analysis on the
+cleaned data. They can leverage libraries and packages specific to web analytics, such as the Google Analytics
+Reporting API client libraries for Python or R, to access and analyze data programmatically. To gain greater
+flexibility in conducting advanced analysis, implementing specific algorithms, and creating tailored
+visualizations to communicate insights effectively, data scientists often write custom code.
+Using the data from the customers in your study to help the marketing team, after you clean the data, your
+next goal might be to identify which characteristics have the most impact on the customer’s spending score.
+You could investigate this by trying to plot age versus spending score (Figure 8.16).
+8.4 • Web Analytics
+321
+
+Figure 8.16 Plotting the relationship between spending score and age reveals some groups of customers that may need further
+analysis. (data source: Zubair Mustafa, "Shopping Mall Customer Segmentation Data," Kaggle, updated April 2024,
+https://www.kaggle.com/datasets/zubairmustafa/shopping-mallcustomer-segmentation-data; attribution: Copyright Rice University,
+OpenStax, under CC BY 4.0 license)
+Looking at the resulting scatterplot, you can observe that the data seem to be distributed evenly across the
+whole graph. However, looking more closely, you can see some groups of data, such as a spending score over
+eighty in people ages seventy to ninety years, a spending score between forty and sixty in people ages forty to
+sixty years, and a spending score between twenty and forty in people ages twenty to forty years. These
+distributions likely do not tell the whole story, which can lead you to examine the relationship between age
+and annual income to determine if that provides any insights (Figure 8.17).
+Figure 8.17 Comparing annual income and age in the customer data again reveals several subtle clusters. (data source: Zubair
+Mustafa, "Shopping Mall Customer Segmentation Data," Kaggle, updated April 2024, https://www.kaggle.com/datasets/
+zubairmustafa/shopping-mallcustomer- segmentation-data; attribution: Copyright Rice University, OpenStax, under CC BY 4.0
+license)
+Again, the data here is distributed somewhat evenly across the graph, but there are some clusters of data. The
+first shows one cluster of people between ages forty and sixty years with the highest annual incomes, between
+$150,000 and $200,000, and another cluster shows people between the ages of twenty and forty with incomes
+between $100,000 and $150,000.
+With this data in mind, the next step is to examine the correlation between spending score and annual income
+322
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+(Figure 8.18).
+Figure 8.18 Comparing the customers' annual income and spending score reveals additional information that may help to find the
+best groups to target with a marketing campaign. (data source: Kaggle: Zubair Mustafa; attribution: Copyright Rice University,
+OpenStax, under CC BY 4.0 license)
+Here, there are several clusters of data that give the marketing team a better idea of who their target audience
+is. Spending score is highest across all income groups but especially for customers who earn $100,000 to
+$150,000 annually. There is also a cluster of customers ages twenty to forty in that income group, but the
+customers ages seventy to ninety show a cluster with a higher spending score than those younger customers.
+These data may be used to show shopping trends, but they do not provide data on what the customers are
+buying, so the marketing team will need to do some additional analysis on products to further refine their
+target audience.
+This example shows how data scientists can employ web analytics tools and techniques to access, transform,
+and analyze website data. They can use the tools to uncover meaningful patterns, correlations, and trends,
+providing valuable insights into website performance, user behavior, and marketing effectiveness. The analysis
+conducted by data scientists helps organizations optimize their online presence, make informed decisions, and
+drive business success in the digital landscape.
+Search Engine Optimization
+Optimizing website content and structure to increase visibility and ranking on search engine results pages is
+called search engine optimization (SEO). The process involves improving various elements of a website, such
+as optimizing content with relevant keywords, ensuring proper structure and navigation, acquiring high-
+quality backlinks, and providing a positive user experience. By following SEO principles, websites can attract
+more organic traffic and increase their online visibility. In web analytics, “organic” traffic refers to website
+visitors who arrive at a site through unpaid search engine results, excluding any visits generated from paid
+advertising or other referral sources.
+Identifying Areas for Improvement
+Data can be analyzed to uncover insights such as which pages have high bounce rates or low conversion rates
+or are underperforming. By examining user behavior, traffic sources, and engagement metrics, data scientists
+can pinpoint specific areas where improvements can be made. These improvements might involve, for
+example, optimizing landing pages, refining calls to action, or streamlining the checkout process. Web
+analytics tools provide visualizations, reports, and data segmentation capabilities to support this analysis.
+8.4 • Web Analytics
+323
+
+A/B Testing
+The method A/B testing, also referred to as split testing, is used to compare two versions (A and B) of a
+webpage, email, or advertisement to determine which one performs better in terms of user engagement or
+conversion rate. This process randomly splits website visitors into different groups and exposes them to
+different versions of a page that may have, for example, different headlines, layouts, or calls to action. A call to
+action is a prompt or directive placed within a website, an advertisement, or marketing material that
+encourages users to take a specific action, such as making a purchase, signing up for a newsletter, or
+requesting more information.
+A/B testing helps identify which elements have a positive impact on user engagement, conversion rates, or
+other key metrics, and this enables organizations to make data-driven decisions about how to optimize their
+websites and improve overall performance. This testing can be accomplished by dividing pages into control
+and variant groups, and the changes can be implemented on either the server side or client side.
+On the server side, SEO tests point toward the code itself. The advantage is a smoother and more stable
+experience for the user. The drawback is its higher complexity, which may require knowledgeable information
+technology staff to implement and monitor. Client-side testing is deployed with JavaScript coding. There’s a
+slight unsteadiness between the old and new versions of a page. The advantage here is that it is easier to
+implement. The process does not require hardwiring or specialized training.
+LINK TO LEARNING
+You can unlock the secrets of effective web design with A/B testing. Discover how to improve approaches to
+web design, fine-tune layouts, optimize content, and increase conversion rates. Read about how web
+analytics professionals unlock the potential of a website (https://openstax.org/r/109WebDesign) in this
+article.
+324
+8 • Data Analytics and Modeling
+Access for free at openstax.org
+
+Key Terms
+A/B testing
+(also, split testing) method used to compare two versions (A and B) of a webpage, email, or
+advertisement to determine which one performs better in terms of user engagement or conversion rate
+application programming interface (API)
+means by which software applications communicate and interact
+with each other for the purpose of exchanging data and functionality
+benchmarking
+comparison of an organization's performance against industry standards and competing
+businesses
+bounce rate
+percentage of visitors who navigate away from a website after viewing only one page,
+indicating a lack of engagement or interaction with additional content
+business intelligence (BI)
+process of collecting, analyzing, and interpreting data to inform business
+decision-making and improve organizational performance
+business intelligence reporting
+process of creating, designing, and delivering reports and visualizations
+that communicate insights derived from BI analysis to support decision-making within an organization
+call to action
+prompt or directive placed within a website, advertisement, or marketing material that
+encourages users to take a specific action, such as making a purchase, signing up for a newsletter, or
+requesting more information
+clustering
+unsupervised learning technique used to group similar data points together based on their
+intrinsic characteristics or attributes
+conversion rate
+percentage of website visitors who complete a desired action, such as making a purchase,
+filling out a form, or signing up for a newsletter, out of the total number of visitors
+cost-benefit analysis
+systematic approach to assessing the costs and benefits of a proposed project,
+investment, or decision to determine its feasibility and potential return on investment
+data analysis
+systematic process using statistical and logical techniques to review, sort, and condense data
+for the purpose of gaining insight on areas of interest
+data analytics
+process of examining datasets to draw conclusions and insights, typically using statistical and
+computational methods to inform decision-making or solve problems
+data marketplace
+online platform or ecosystem where data providers and consumers can buy, sell, or
+exchange datasets and related services
+data mining
+process of analyzing large datasets to discover patterns, trends, and insights using statistical
+and computational techniques
+decision tree
+decision-making tool that uses a tree structure diagram in which branches represent choices
+and their outcomes
+descriptive analytics
+analyzing historical data to understand past performance, trends, and patterns within
+an organization or specific business processes
+diagnostic analytics
+examining patterns in data to identify correlations and causes of certain events or
+outcomes
+extract-transform-load (ETL)
+process used to extract data from multiple sources, transform the data into a
+usable format, and load the data into a data warehouse for data analytics
+key performance indicator
+measurable value that demonstrates how effectively a company is achieving its
+key business objectives and goals
+linear regression
+method that presents the relationship between variables as a linear equation on a graph
+log file analysis
+analysis examining server log files to gather data on website traffic, user behavior, and
+server performance, providing insights into website usage patterns and potential issues
+metric
+quantifiable measure used to track and evaluate the performance, progress, or success of a particular
+aspect of a business, campaign, or activity
+operational decision
+decision focused on day-to-day activities that involves optimizing processes, allocating
+resources, and managing immediate operational challenges
+outlier
+observation that deviates significantly from the rest of the dataset, potentially indicating anomalies,
+errors, or unique patterns that require special attention during analysis
+8 • Key Terms
+325
+
+page tagging
+embedding a snippet of JavaScript code, known as a tracking tag or pixel, on each webpage to
+track user interactions, behaviors, and events
+predictive analytics
+use of statistical algorithms and machine learning techniques to analyze historical data
+and forecast future outcomes or trends
+prescriptive analytics
+using data analysis and modeling techniques to recommend specific actions or
+strategies to optimize business processes and outcomes
+recency, frequency, and monetary (RFM)
+task of customer segmentation or grouping based on their
+purchasing habits
+regression
+statistical analysis method used to quantify the relationship between variables and to make
+predictions
+search engine optimization (SEO)
+process of optimizing website content and structure to increase visibility
+and ranking on search engine results pages
+sensor data collection
+gathering data from sensors designed to detect and respond to physical or
+environmental conditions, such as temperature, pressure, or motion
+strategic decision
+long-term decision made by an organization to define their overall direction, goals, and
+competitive positioning in the market
+tactical decision
+medium-term decision made by an organization to achieve specific objectives or goals
+within a defined time frame
+training
+process that uses labeled or historical data to teach machine learning algorithms or models to
+recognize patterns, relationships, and trends, enabling them to make predictions or classifications on new
+data
+visualization
+graphical representation of data and information to facilitate understanding, analysis, and
+communication of insights and trends
+web analytics
+collection, measurement, analysis, and reporting of website data to understand and optimize
+user behavior, engagement, and overall performance
+web scraping
+automated extraction of data from websites, typically using software to simulate human
+browsing behavior and retrieve information from web pages
+Summary
+8.1 The Business Analytics Process
+•
+Analytics 1.0, 2.0, and 3.0 are three distinct eras in the evolution of big data. The current era is Analytics
+3.0, which uses traditional analytics to analyze big data. Big data allows organizations to gain a
+comprehensive understanding of their target market and customer base.
+•
+Challenges of working with big data include its volume, its quality, governance of the data, and the
+extraction of actionable insights.
+•
+The collection of big data occurs through web scraping, sensor data collection, social media, data
+marketplaces and APIs, and internal data sources.
+•
+The business analytics process involves defining the problem, preparing the data, running statistical
+analysis, interpreting the results, and implementing changes.
+8.2 Foundations of Business Intelligence and Analytics
+•
+With BI, organizations can identify trends, patterns, and correlations to understand customer behavior,
+market dynamics, and operational performance.
+•
+Organizations harness BI to gain an edge with tools to aid in marketing, predictive analytics, and financial
+analysis.
+•
+Business and data analysis tools include tools for visualization, data mining, and predictive analytics.
+•
+Business intelligence reporting focuses on transforming raw data into meaningful information and
+insights through interactive dashboards, reports, and visualizations.
+326
+8 • Summary
+Access for free at openstax.org
+
+•
+Organizations that collect and store data must adhere to legal and ethical guidelines to balance the
+protection of individuals’ privacy with the usefulness of the data.
+8.3 Analytics to Improve Decision-Making
+•
+Data analytics involves the systematic collection, interpretation, and analysis of vast amounts of data to
+uncover valuable insights and patterns.
+•
+Analytics tools such as regression, decision trees, and clustering models aid in deriving actionable data.
+•
+Regression is a statistical method used to analyze the relationship between one dependent variable and
+one or more independent variables.
+•
+Decision trees split the dataset into subsets based on the most significant attribute at each step.
+•
+Clustering models group similar data points into clusters based on certain features or characteristics.
+•
+Analysts need to consider ethical and social considerations and ensure compliance with privacy
+regulations and protect sensitive information.
+•
+Using these techniques in the decision-making process can lead to greater chances of success in business.
+8.4 Web Analytics
+•
+Web analytics is a powerful tool that provides valuable insights through the collection, measurement,
+analysis, and reporting of data related to website usage and user interactions.
+•
+Web analytics tools collect data through page tagging, log file analysis, JavaScript events, and cookies.
+•
+Businesses leverage various web analytics techniques to enhance site visibility and drive sales,
+highlighting the pivotal role of data-driven insights in optimizing online strategies and fostering customer
+engagement for improved performance.
+•
+Web analytics tools provide insight into customer behavior, opportunities for improvement, and bounce
+rates.
+•
+Incorporating SEO into an organization’s web analytics strategy enhances visibility and drives organic
+traffic by optimizing keywords, improving site rankings, and analyzing user engagement metrics for
+targeted content refinement.
+Review Questions
+1. What is an accurate definition of data analytics?
+a. the process of collecting and storing large volumes of data
+b. the practice of examining, cleaning, and transforming data to uncover insights
+c. the use of statistical methods to forecast future market trends
+d. the integration of structured and unstructured data into a centralized database
+2. What does the term “big data” refer to?
+a. a collection of data that is too large to be processed by traditional methods
+b. a dataset with high accuracy and reliability
+c. a dataset that contains only structured data
+d. the process of analyzing data to uncover hidden patterns and trends
+3. What is one of the significant challenges associated with big data collection and use?
+a. lack of available data sources
+b. slow processing speed
+c. insufficient storage capacity
+d. data volume, velocity, and variety
+4. What is the final stage of the business analytics process before the cycle begins again?
+a. results interpretation
+b. statistical analysis
+c. implementation
+8 • Review Questions
+327
+
+d. data preparation
+5. What are some benefits of implementing business intelligence in an organization?
+a. streamlined decision-making, improved efficiency, and enhanced data security
+b. increased satisfaction, reduced employee turnover, and improved supply chain management
+c. enhanced data visualization, improved data governance, and increased data storage capacity
+d. higher market share, improved brand awareness, and increased sales revenue
+6. How do organizations typically use business intelligence in marketing and decision-making?
+a. to remove outliers in customer data
+b. to automate sales processes and improve customer relationship management
+c. to monitor and analyze competitors’ pricing strategies and adjust pricing accordingly
+d. to forecast future market trends and make data-driven strategic decisions
+7. What is the primary purpose of data visualization in the context of business intelligence?
+a. to present data in an aesthetically pleasing manner
+b. to summarize complex data and highlight patterns or trends
+c. to ensure data security and protect sensitive information
+d. to store and organize large volumes of data for future analysis
+8. What is the primary goal of business intelligence?
+a. to gather and store large amounts of data offline
+b. to analyze data and generate insights for decision-making
+c. to identify and address data quality issues
+d. to classify data
+9. What key principle underlies predictive analytics?
+a. visualizing historical data patterns
+b. summarizing and visualizing data for decision-making
+c. identifying meaningful relationships and patterns within data
+d. simulating various scenarios to optimize future outcomes
+10. In decision tree analysis, what is the purpose of the nodes in the tree structure?
+a. to represent the outcome or target variable
+b. to split the data based on the predictor variables
+c. to display the probability of each outcome
+d. to calculate the information gain
+11. What is clustering in data analytics?
+a. a technique for predicting future outcomes based on historical data
+b. the process of identifying relationships between variables to determine cause and effect
+c. a method for categorizing data into groups based on similarities
+d. an approach for analyzing data to uncover patterns and trends
+12. What type of decision-making process focuses on long-term decisions that shape the overall direction and
+future of the organization and includes evaluating market trends and identifying growth opportunities?
+a. operational decision-making
+b. tactical decision-making
+c. strategic decision-making
+d. classification decision-making
+13. What step in the data-driven decision-making process involves using techniques such as classification,
+regression, clustering, and association analysis to uncover patterns and trends within the collected data?
+a. problem identification
+328
+8 • Review Questions
+Access for free at openstax.org
+
+b. data collection
+c. interpretation of analytics
+d. data analysis
+14. What description best describes the role of web analytics in organizations?
+a. identifying opportunities for improvement
+b. enhancing offline performance
+c. decreasing user experiences
+d. making subjective decisions
+15. What can organizations measure using web analytics?
+a. emotional responses of users
+b. physical sales in brick-and-mortar stores
+c. the impact of marketing campaigns
+d. the color scheme of their website
+16. What web analytics method involves placing a small piece of JavaScript code on each webpage to capture
+data such as page views, clicks, and user interactions?
+a. log file analysis
+b. cookies and user identification
+c. JavaScript events
+d. page tagging
+17. What is the primary purpose of A/B testing in website optimization?
+a. to optimize website content with relevant keywords
+b. to analyze user behavior and traffic sources
+c. to compare and determine which web page variation performs better
+d. to acquire high-quality backlinks for the website
+Check Your Understanding Questions
+1. What are some of the challenges associated with collecting and using big data, and how can organizations
+address these challenges to unlock the full potential of big data for strategic decision-making?
+2. In what ways can businesses use big data to gain a competitive advantage and improve their operations?
+Provide specific examples from the text to support your answer.
+3. Describe the key steps involved in the process of predictive analytics and forecasting, highlighting the
+main considerations and challenges that organizations face when implementing these techniques.
+4. How do organizations choose which analytics model to implement?
+5. Describe tools used in web analytics to collect data.
+6. How can search engine optimization help an organization differentiate itself from others?
+Application Questions
+1. Reflect on the role of big data. How has the use of data analysis tools and techniques improved market
+analysis dynamics? Discuss specific examples where interactions online produce data points of interest to
+marketing teams.
+2. Provide an example from your own experience or knowledge of how predictive analytics and simple linear
+regression could be applied in a real-world scenario to make informed decisions or predictions.
+3. Develop a presentation (three to five slides) describing ways in which organizations utilize forecasting to
+pursue their company’s goals. Describe the tools they would use and how to explain the results best
+8 • Check Your Understanding Questions
+329
+
+visually.
+4. Reflecting on your personal data and online interactions, what types of information about yourself would
+you feel comfortable sharing with organizations, and what boundaries or concerns do you have regarding
+the data you provide? Consider how your comfort levels may vary across different contexts, platforms, and
+purposes of data collection.
+5. Develop a short (around three minutes) YouTube-like video explaining the best practices for search engine
+optimization.
+330
+8 • Application Questions
+Access for free at openstax.org

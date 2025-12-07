@@ -1,0 +1,1954 @@
+Figure 12.1 People involved in planning, managing, and using information systems must carefully consider the ethical implications
+of balancing technological concerns with sustainability and social issues. (credit: modification of work “wocintech stock - 203” by
+WOCinTech Chat/Flickr, CC BY 2.0)
+Chapter Outline
+12.1 Ethics, Sustainability, and Use of Information Systems
+12.2 Intellectual Property
+12.3 Ethics of Artificial Intelligence Development and Machine Learning
+12.4 Ethics in Health Informatics
+Introduction
+Have you ever faced an ethical dilemma at your workplace or in your academic studies? Do you get excited
+about the potential positive outcomes of new technology but also worry about possible negative impacts on
+society? How important is it that companies implement low-waste and environmentally aware practices? These
+questions touch on some of the concerns about ethics, social responsibility, and sustainability in the field of
+information systems.
+At its core, information systems technology offers immense potential to transform society and enhance
+human welfare. But realizing this promise—in an ethical and socially responsible manner—requires
+establishing thoughtful governance and aligning innovations with core human and societal values. As
+information systems permeate our professional and personal spheres, ethical considerations around issues
+such as privacy, accountability, transparency, sustainability, equity, and human dignity become increasingly
+apparent. Proactive and holistic approaches to emerging technologies can steer this progress toward moral
+paths that uplift society both today and tomorrow.
+Ethics, Sustainability, and Social Issues in Information Systems
+12
+
+12.1 Ethics, Sustainability, and Use of Information Systems
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Understand ethical perspectives and how they apply to information systems
+•
+Define sustainability of information systems
+•
+Explain the ethical impact of information systems on society
+One of the most critical issues in the field of IS is determining how you will plan, use, and manage information
+systems and technological systems that you encounter. The values and principles that guide life decisions and
+experiences are known as ethics. Properly understood, almost nothing could be of greater importance. In
+terms of information systems, ethical considerations include both sustainability and the social impact of IS.
+Normative Ethical Perspectives
+Each day, individuals and organizations must make decisions. To determine the best action to take in a specific
+situation, decision-makers usually consider whether an action is an efficient and effective way to reach a
+desired outcome. They also think about the resources, such as time and money, needed to achieve a goal. And,
+whether conscious of it or not, most decision-makers consider whether an action is ethical. While ethics can be
+approached from many different viewpoints, humanity generally tends to rely on three perspectives to guide
+decisions and actions—utilitarianism, deontology, and virtue. All three perspectives are considered normative
+theories because their purpose is to provide guidance on how a person ought to act. This is contrasted with
+descriptive theories, which are based on explaining how individuals actually do act. These perspectives, which
+may also be referred to as theories and approaches to ethics, focus one’s attention on different components of
+the decision-making process; this is why they can sometimes arrive at different conclusions. A utilitarian
+approach focuses on the consequences of an action, deontology focuses on the action taken, and virtue ethics
+focuses on how an individual’s character influences the actions they take. Each of these approaches can help
+you to understand how people ought to behave in a given context.
+Utilitarianism
+The concept of utilitarianism describes a normative ethical theory holding that the morally correct course of
+action is the one that maximizes utility and happiness for the greatest number of people. The roots of
+utilitarianism are generally traced to the English philosopher Jeremy Bentham (1748–1832) and the name of
+this theory derives from the utility of the actions taken. What are the consequences, and how are those
+consequences valued? For example, if you take your friend’s apple without permission, you have gained an
+apple but likely lost your friend’s trust. Is it more useful to have your friend’s trust or their apple?
+The simplest conceptual understanding of this theory is that people should be guided in their ethics, their
+choice of action, by the following principle: Create the greatest good for the greatest number of people. Over
+time, utilitarianism has become connected with capitalism and Adam Smith (1723–1790), often referred to as
+the founder of modern capitalism. This makes sense since the goal of capitalism—maximizing economic
+production and benefits—can be regarded as a utilitarian goal. With utilitarianism focused on maximizing the
+greatest good, one can understand why this is the dominant ethical theory applied in business today.
+Consequentialism, the broader name given to this ethical approach under the utilitarianism theory, is a
+person’s determination of whether the actions they take are ethical or not based on the consequences of those
+actions.
+While utilitarianism is popular among business professionals, in practice, their actions do not always reflect its
+proper application. For example, imagine that you work for a company that manufactures a smart coffee
+maker, and the market share percentage of your company’s top competitor is twice as much as your
+company’s market share. Your supervisor asks you to reverse engineer the competitor’s smart coffee maker
+and use the information gained to improve your company’s product. A year later, your company’s market share
+442
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+doubles, while your competitor loses market share. Although this action may have maximized the greatest
+good for your company, it hurt your competitor.
+In the world of business, including areas focused on information systems and technology, it can be
+challenging to apply utilitarianism appropriately. First, imagine the difficulty in truly determining what the
+proper course of action would be in trying to figure out whether certain actions would create the greatest
+good for the greatest number of people. What is good? How do we know if the actions maximize the quantity
+of that good for the greatest number of human beings on the planet? What is the context within which we
+measure this good? Is it in the people in an organization, those in a community, the individuals in a particular
+society, or all human beings that inhabit the entire planet?
+These are the key difficulties involved in properly applying the principles of utilitarianism. Also, one can be
+sympathetic to the plight of people operating within the business context when they transform the difficult-to-
+measure variables of “good” and “people” into the much more measurable (and generally desirable) variables
+of “money” and “stakeholders.” There are many conflicts of interest that a business can face when trying to
+operate for the good and make a profit at the same time. As a result, in application, this can lead to unethical
+outcomes as measured by the original intent of this theory.
+Another difficulty in properly applying utilitarianism is the misunderstanding that the greatest good is
+associated with majority rule. For instance, suppose in a class of 100 students, the class took a vote, and
+ninety-nine students decided to make one student responsible for taking all the notes, translating them
+electronically, organizing them, and distributing them to the other ninety-nine students. As a result of this
+decision, the remaining ninety-nine students would do nothing but wait for the notes to arrive prior to the
+exam. The majority ruled in this instance, and this led to 99 percent of the class doing no work in preparation
+for an exam that was supposed to serve as a measure of everyone’s learning of the course material. Using the
+concept of majority rule, one could make the argument that this is an appropriate application of utilitarianism.
+But, in this case, is majority rule an ethical approach to utilitarianism? Did this decision result in the greatest
+good for the greatest number of people? Of course not. Is goodness simply measured as the least amount of
+overall class effort needed to obtain the highest average grade in a class? Is it good that 99 percent of the
+students did not engage with the course material throughout the semester, or that they were not able to take
+in the teachings from the course and put them into practical use? Is this good for each individual student? Is
+this good for the university from which the student graduates whose students enter society unable to
+effectively perform the abilities that class was supposed to teach? Is this good for the well-being of the society
+within which those individuals operate? Questions such as these reach toward the ideal nature of goodness at
+the heart of utilitarianism.
+Deontology
+The concept of deontology describes a normative ethical theory that focuses on the inherent rightness or
+wrongness of actions themselves, as opposed to the consequences of those actions, following the premise of
+treating others the way you would like to be treated. The school of deontology is usually attributed to
+philosopher Immanuel Kant (1724–1804). Its name comes from the Greek word for “duty,” and it is often
+referred to as the duty-based approach. Kant’s maxim is stated as such: Act only in accordance with that
+maxim through which you can at the same time wish that it becomes universal law.1 The simplest
+interpretation of this is to only take an action if everyone else should also be able to do it. You may recognize
+this idea as the Golden Rule: Treat others the way you would like to be treated, or act toward others the way
+you would want others to act toward you. Expressed this way, deontology becomes clear: the action one takes
+is the focal point for whether the decision being made is ethical. For a deontologist, the consequences of your
+actions are irrelevant because it is impossible for you to truly know what all the consequences of your actions
+would be. However, you could know if your action was in alignment with a universal maxim that reflects a
+natural law.
+12.1 • Ethics, Sustainability, and Use of Information Systems
+443
+
+Practical application of this theory often devolves into a discussion about what specific duties need to be
+followed (lying is wrong, physically injuring others is wrong) and the fact that exceptions lie on the fringes of
+the theory. To explore this, assume that you maintain the computer systems and personnel files for your
+company’s human resources division. You receive a request for information about a former employee who was
+terminated. The employee is being considered for a new position but will not get the position if you reveal that
+the employee was terminated. Since you have access to the employee’s personnel file, you know the details of
+the termination, and you are confident that the employee was terminated unfairly. Should you lie and say that
+the employee willingly left their position? Or should you tell the truth knowing that this will harm the employee
+because they will not get the job? The duty you intend to follow is not about particular types of actions; rather,
+it is about following the more general principle that applies to all actions. Namely, you should take only those
+actions that benefit yourself and your fellow human beings. The key is not to rationalize the type of rules to be
+followed but rather focus on the feeling it engenders when you take actions that are meant for the betterment
+of others as well as yourself.
+Virtue Ethics
+The approach of virtue ethics is based on the premise that there are virtues and ideals toward which each
+human being should strive to allow the full expression of their humanity to flourish. This approach can be
+traced back nearly 2,500 years to the people of ancient Greece, specifically to the philosopher Plato (427?–347
+BCE), his teacher Socrates (469?–399 BCE), and his student Aristotle (384–322 BCE). As such, virtue ethics is the
+original normative ethical theory and the primary influence on humanity until the later development of
+deontology and utilitarianism. For over a century, virtue ethics was relegated to the background in favor of
+deontology and utilitarianism. However, there has been a resurgence of interest in this approach thanks in part
+to G. E. M. Anscombe’s 1958 article, “Modern Moral Philosophy,” in which she has been noted as having:
+increasing dissatisfaction with the forms of deontology and utilitarianism then prevailing. Neither of
+them, at that time, paid attention to a number of topics that had always figured in the virtue ethics
+tradition—virtues and vices, motives and moral character, moral education, moral wisdom or
+discernment, friendship and family relationships, a deep concept of happiness, the role of the
+emotions in our moral life and the fundamentally important questions of what sorts of persons we
+should be and how we should live.2
+The earliest, most direct, and accessible source of virtue ethics is Plato. Plato taught that there were four
+virtues that one needed to embody to live an ideal life: Courage, wisdom, moderation, and justice. Courage
+can be understood as the ability to maintain the intent to do good in whatever actions you take. Wisdom is
+knowing the proper relationship among all things, so that one has developed the understanding to naturally
+take the action that generates the most good for self and others. Moderation, or temperance, is the control of
+one’s instinctual fears and desires, their pains and pleasures, to operate in a more rational manner of
+thoughtful consideration. Justice is the alignment of your action with the ideal; the closer you are to the ideal,
+the more just your actions become.
+Synthesis
+Consider a scenario in which your company has been profitable but needs to cut costs to maintain long-term
+sustainability. The executive team proposes paying out large bonuses to themselves, citing that it’s part of
+their compensation plan. However, the company also needs to lay off a substantial portion of its staff due to
+budget constraints. The executive team’s actions can be reviewed through the concept of virtual ethics. For
+example, do their actions demonstrate the virtues of fairness and empathy? Were they compassionate for the
+employees they laid off in making their decision? Are the leaders acting with integrity, balancing their personal
+1
+Immanuel Kant, Grounding for the Metaphysics of Morals: with, On a Supposed Right to Lie because of Philanthropic Concerns,
+3rd ed., trans. James W. Ellington (Hackett Publishing Company, 1993), 30.
+2
+Rosalind Hursthouse and Glen Pettigrove, "Virtue Ethics," The Stanford Encyclopedia of Philosophy, Winter 2022 Edition, eds.
+Edward N. Zalta and Uri Nodelman, (July 18, 2003, revised October 11, 2022), https://plato.stanford.edu/archives/win2022/entries/
+ethics-virtue
+444
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+interests with the well-being of the larger community, including those who depend on the company for their
+livelihoods? A virtue ethics–based decision would involve the executives reflecting on the kind of people they
+want to be and how their actions align with virtues like honesty, integrity, and justice. They might decide, for
+instance, to forgo or reduce their bonuses, showing empathy for those losing their jobs and prioritizing the
+welfare of the broader community over their individual interests.
+So how are these concepts—utilitarianism, deontology, and virtue ethics—applied in an information systems
+setting? To explore this, assume you work for a company that provides the technology to support Mobility as a
+Service (MaaS) for public transit systems. With MaaS, passengers access one interface and pay portal to plan
+and pay for a trip that includes multiple modes of transportation, such as bicycling, riding a bus, and riding a
+subway to reach their destination. You are part of a team brainstorming ways to market your company’s MaaS
+technology to cities across the United States. The needs and resources of these cities vary greatly, providing
+disparate opportunities for your company to earn a profit. As you and your team explore options, you likely
+will be influenced by utilitarianism as well as deontology and virtue ethics.
+From a utilitarianism perspective, your marketing plan should aim to increase access to MaaS in cities that will
+benefit the most, considering both immediate customer needs (such as more affordable transportation
+options) and long-term impacts (like reduced congestion and lower emissions). From a deontological
+perspective, how can you ensure that cities have an equal opportunity to purchase and take advantage of your
+company’s MaaS technology? Your marketing plan would aim to provide equitable access for all customer
+groups because it is the right way to do business. How will virtue ethics guide your personal contributions to
+the discussion to help promote equality and the greatest good in your company’s marketing plan, while also
+recognizing that your company wants to achieve a certain profit margin in sales of its MaaS technology?
+Balancing utilitarianism, deontology, and virtue ethics with goals such as profit maximization can be
+challenging. When people and organizations achieve that balance, they can attain positive results that help
+promote a fairer and more just society.
+Systems Thinking and the DIKW Pyramid
+A tool that aids in the development of balanced ethical decision-making processes is systems thinking, an
+approach that emphasizes the interconnectedness of components within a whole, suggesting that the overall
+behavior of a system results from these interactions. It promotes a holistic (synthetic) view rather than a
+fragmented (analytical) one, advocating that understanding the entire structure and its patterns is crucial.
+Systems thinking is based on general systems theory, which argues that all systems have components that are
+interrelated to create an organized whole. Systems thinking enhances ethical reasoning by emphasizing
+holistic analysis of the interconnected components and relationships within complex situations. This allows for
+a broader understanding of direct and indirect impacts.
+In contrast, the DIKW pyramid, which is a hierarchy often used in information management and knowledge
+creation, represents an approach that focuses on the distinction between disparate elements (refer to Figure
+12.2). Data, information, knowledge, and wisdom (DIKW) form the pyramid. Data at the pyramid’s base signify
+raw, unprocessed facts and figures without context. Moving up the pyramid, data transform into information,
+where data are given context and meaning. Further refinement and understanding lead to knowledge, which
+is the application of information. At the apex, wisdom represents a deep, intuitive understanding or insight
+derived from a comprehensive synthesis of knowledge.
+12.1 • Ethics, Sustainability, and Use of Information Systems
+445
+
+Figure 12.2 As the DIKW pyramid shows, data transform into information, which becomes knowledge, and ultimately wisdom.
+(attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+Application of the DIKW pyramid to systems thinking can provide guidance for decision-making. Data, in
+isolation, can be likened to individual components of a system. Without context or connection, these
+components (or data points) may seem unrelated or arbitrary. However, progressing up the DIKW pyramid,
+these isolated pieces start to form patterns (information), which when understood within a broader framework
+offer insights (knowledge). Finally, when these insights are synthesized in consideration of the whole system,
+holistic strategies (wisdom) emerge. Through systems thinking, the DIKW pyramid is not merely a linear
+progression from data to wisdom but a dynamic, interconnected web where each level informs and is
+informed by the others.
+Ethical considerations are more present as you progress up the pyramid toward the wisdom level. At these
+higher levels, application of knowledge in business situations becomes more important, and ethics is required
+to make good decisions. In other words, as you move from the data level to the wisdom level, there are more
+opportunities for unethical decision-making.
+In essence, systems thinking enhances the DIKW pyramid by emphasizing the importance of viewing each
+level as part of a larger, interconnected whole. It reminds us that wisdom is not just the culmination of
+accumulated knowledge but also the recognition of patterns, relationships, and feedback loops within the
+system. By understanding systems thinking, we can harness a deeper, more holistic understanding of complex
+issues and challenges, fostering more informed and effective ethical decision-making.
+Sustainability and Information Systems
+In the current technological era, information systems serve as the backbone of organizational operations. The
+integration of information systems into nearly every facet of business and daily life has created a modern
+world in which data flow is vital. Technology allows organizations the opportunity to move toward a more
+integrated and efficient future. But the evolution and expansion of these systems also have environmental,
+social, and economic impacts. Consequently, the sustainability of digital systems must be examined in the
+same way that society scrutinizes the sustainability of physical infrastructures. To manage this appropriately,
+ethical decision-making is vital.
+Information systems and sustainability can determine an organization’s long-term viability and its broader
+impact on society and the environment. How can systems be designed and utilized that uphold the principles
+of long-term ecological and social responsibility and ensure that the digital tools are developed and
+446
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+maintained with a conscientious commitment to the well-being of the planet and its inhabitants?
+Green, Lean, and Sustainable Information Systems
+Information systems have become foundational to almost all business operations, and they have
+environmental and societal implications. To address these concerns, future information system professionals
+must become familiar with and understand three information system models: Green, Lean, and Sustainable.
+These models can be implemented with consideration of utilitarianism, deontology, and virtue ethics.
+Representing a commitment to environmental stewardship, Green IS encompasses the strategies and
+practices designed to minimize the environmental footprint of digital operations. In this model, ethical choices
+are being made at all phases of the life cycle of information systems products. The practical implementation of
+the Green IS model’s ideals means that the design, usage, disposal, and even recycling of information systems
+are environmentally friendly. The purpose of such practices is to reduce energy consumption during system
+operations, minimize greenhouse gas emissions, and carry out recycling and ethical disposal of electronic
+components. Given the growing demand for data centers and information technology infrastructure, the
+critical need for such practices will only increase in the future. Adopting environmentally conscious practices
+can offset these facilities’ massive energy consumption and emissions.
+Lean IS originates from embodying ideals in the manufacturing field; Lean IS is a set of practices that is about
+doing more with less, focusing on eliminating waste, in terms of time, resources, or processes, and thus
+ensuring that every aspect of an information system delivers value. Given the holistic nature of Lean IS, it
+involves efficient practices across a wide range of the information system life cycle. For example, within the
+context of process optimization, workflows would be streamlined to eliminate waste in the form of
+redundancies, and in resource management, both hardware and software would be utilized in a more efficient
+manner.
+Continuous improvement can be accomplished by regularly assessing and refining system components for
+efficiency. One important task of Lean IS is to learn how a system works by analyzing its component parts and
+determining their relationships to one another. If done properly, such efforts will help managers better
+understand the underlying principles that lead to a better functioning system because they are better
+synthesized within the larger system. To accomplish this, leaders must understand the relationship between
+the information system and the organization. Then, they must expand that understanding to the local
+community where the organization is located. Beyond that lies the larger society within which that community
+is located and that society (be it at the state, federal, or international level) operates within the context of the
+planet Earth. All these systems are interrelated and impact each other in various ways. So, whatever
+information system you are working on, realizing the significance of your efforts does not end with performing
+your work-related task utilizing an information system. In keeping with Lean IS practices, the by-products of
+improving the efficiency of an information system include faster decision-making, reduced operational costs,
+and increased customer satisfaction.
+While Green IS and Lean IS address environmental concerns and efficiency, respectively, Sustainable IS
+provides a more holistic approach that considers the long-term impacts and viability of information systems,
+focusing on their environmental, economic, and social implications. In fact, these can be understood as the
+three pillars of sustainability. From an environmental perspective, this approach mirrors the goals of Green IS,
+emphasizing reduced resource consumption and an environmentally conscious approach. The economic
+perspective focuses on the system’s economic viability, ensuring that it delivers value. From the social
+perspective, the system should address social needs, foster inclusivity, and seek to reduce existing inequalities.
+Sustainable IS can help organizations align the goals of a business with the larger systems that the business is
+a part of, thus creating opportunities for greater societal and environmental well-being. By-products of this
+alignment include enhanced corporate reputations, improved stakeholder relations, and long-term business
+resilience. Increasingly, corporate stakeholders are pressuring companies to have more sustainable practices.
+12.1 • Ethics, Sustainability, and Use of Information Systems
+447
+
+As society grapples with rapid technological advancements, the integration of sustainability principles into
+information systems becomes paramount. Green, Lean, and Sustainable IS frameworks ensure that as
+technology progresses it is done responsibly. By embracing these principles, organizations can drive
+innovation as well as enhance the well-being of our planet and its inhabitants.
+CAREERS IN IS
+Sustainability Officer Roles
+Sustainability officers help their organizations become more efficient and effective in ways that practice
+economic, environmental, and social responsibility. Corporate sustainability officers oversee company
+practices across dimensions like energy, waste, supply chain ethics, and social impact. Leveraging skills
+from various fields like systems analysis, project management, data analytics, and communication is crucial
+for this role as it involves guiding responsible operations.
+Sustainable Consumption and Production
+With information systems increasingly dominating both business and personal contexts, the ripple effects of
+our digital choices are becoming increasingly evident. The ethical dimension of these choices is highlighted
+when we consider the sustainable consumption and production (SCP) of information system resources,
+which focuses on using and producing goods and services in a way that minimizes environmental impacts
+while ensuring that resources are used efficiently. When information system resources meet SCP standards,
+they can meet the basic needs of the present without compromising the ability of future generations to meet
+their own needs.
+The SCP approach not only addresses environmental and resource-related concerns but also delves into the
+moral responsibilities tied to technology creation and usage. The design, manufacture, use, and disposal of
+digital tools can either promote sustainability or exacerbate existing ecological and societal problems. Three
+areas where ethical issues emerge in this context are consumption, production, and policy regulation (Figure
+12.3).
+Figure 12.3 Sustainability requires organizations to make sure their information systems meet consumption, production, and policy
+standards that benefit ecological and societal goals. (attribution: Copyright Rice University, OpenStax, under CC BY 4.0 license)
+When considering the ethical consumption of information system resources, one key stakeholder is the
+consumer. It is essential to recognize that every digital device purchased or piece of software installed comes
+with an environmental and social cost. One’s ethical consumption means being aware of this impact and
+making choices that prioritize longevity, repairability, and efficiency. With rapid technological advancements,
+devices become obsolete quickly, leading to substantial e-waste. Ethical consumption involves choosing
+devices designed for longer life spans and ensuring proper recycling or disposal of obsolete technology.
+The production of information system products is also embedded with ethical considerations. Ethical
+448
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+production in information systems begins at the design phase. Embracing principles like modularity can make
+devices more repairable and upgradable, thereby extending their useful life and benefiting the larger system
+that comprises the information system and the planet as a whole. To benefit all stakeholders, the processes
+employed in producing digital tools should be energy efficient and minimize waste.
+Governmental and international bodies create the legal framework for any particular information system, so
+policy and regulation play a role. Information systems are contained within the organizations that house and
+utilize them. These systems are utilized to interact with customers and other stakeholders that reside on our
+planet. Governmental and international bodies have a role in establishing standards that guide the ethical and
+sustainable production and consumption of information system resources. Beyond establishing laws,
+governments at the local, state, and federal level can encourage sustainable practices. Examples include tax
+incentives for using greener materials, grants for businesses that are more energy efficient, and credits to
+companies that reduce carbon emissions. Alternatively, these same entities can issue penalties and sanctions
+if laws are violated, thereby deterring environmentally harmful operations.
+The nexus between ethics, sustainability, and information systems is evident in the realm of SCP, where all
+digital stakeholders—whether as consumers, developers, or policymakers—hold a collective responsibility.
+Adopting SCP principles within information systems ensures progress toward a digital future that is in
+harmony with the planet and its diverse inhabitants.
+Sustainable Supply Chain Management
+Supply chains are more than just logistic networks—they also represent a company’s ethical principles,
+reflecting how its employees act within its organizational structure as well as the organization’s natural
+obligation to practice societal and environmental responsibility in its actions. A sustainable supply chain
+management (SSCM) approach seeks to infuse sustainability principles into the supply chain process. The
+production of digital devices often involves complex global supply chains. Ensuring that materials are sourced
+responsibly and workers are treated fairly is vital. Ethical production prioritizes conflict-free minerals,
+promotes fair labor practices, and avoids environmental degradation. This is demonstrated, for example, in
+IKEA’s commitment to using only recycled and renewable materials in their products.3
+SSCM goes beyond optimizing traditional supply chain objectives, emphasizing instead the three Ps: people
+(social), planet (environmental), and profit (economic). This holistic approach ensures that businesses thrive for
+future generations. With their analytical and integrative capabilities, information systems are poised to play a
+pivotal role as the backbone of modern supply chains, providing real-time data, analytics, and communication
+tools. When utilized pursuant to SSCM principles, they can promote transparency, efficiency, and sustainability.
+Sustainable sourcing is one component of the sustainable supply chain system that can be improved. A
+supplier evaluation platform is an information systems tool that can help accomplish this goal. This platform
+can automate the process of assessing suppliers based on their environmental and social practices and ensure
+that businesses partner with like-minded entities. Another practice related to sustainable sourcing is material
+traceability systems. These systems provide data about the origins of materials, allowing for responsible
+sourcing and avoiding the utilization of resources linked to environmental harm or unethical practices.
+Another goal of SSCM is efficient and green logistics. One example of how information systems contribute to
+this practice can be seen through route optimization software. This software minimizes transportation costs
+and emissions by identifying the most efficient routes for the movement of goods. Similarly, inventory
+management systems can be utilized to optimize stock levels and reduce waste. The proper use of these
+systems ensures that resources are utilized judiciously, aligning with the tenets of SSCM.
+One way an organization can demonstrate transparency is by using blockchain as part of its supply chain.
+Blockchain technology, with its decentralized and tamperproof nature, can trace products throughout their life
+3
+“Materials Are Key for Becoming Circular,” IKEA, accessed December 23, 2024, https://www.ikea.com/global/en/our-business/
+sustainability/renewable-and-recycled-materials
+12.1 • Ethics, Sustainability, and Use of Information Systems
+449
+
+cycles (refer to Chapter 10 Emerging Technologies and Frontiers of Information Systems). This fosters
+transparency and assures stakeholders of product authenticity and ethical sourcing. Another practice to
+enhance transparency is to incorporate effective stakeholder communication. Information system–enabled
+platforms facilitate open dialogues with stakeholders, updating them on supply chain practices and receiving
+feedback to continuously refine SSCM strategies.
+The future for SSCM is continuous improvement and innovation. This will allow businesses to update their
+strategies and stay ahead of regulatory and market changes. Another SSCM development is collaborative
+ecosystems. Companies, suppliers, and tech providers, along with other pertinent stakeholders, should
+collaboratively explore innovative information system solutions that push the boundaries of current SSCM
+thinking to improve the supply chain process. Supported by robust information systems, SSCM offers
+businesses a pathway to reconcile operational efficiency with sustainability imperatives.
+Corporate Social Responsibility
+As businesses leverage technology at a rapid pace, the way they approach, integrate, and manage information
+systems can have lasting effects on societal welfare, environmental sustainability, and corporate integrity.
+Because the digital realm intersects with every facet of modern life, information systems plays an integral role
+in corporate social responsibility (CSR), is an inherent recognition of the ethical relationship between a
+corporation and the larger social and environmental system that it inhabits. Corporate social responsibility
+allows companies to take responsibility for the impact their activities have on the environment, society, and
+stakeholders impacted by the company’s actions. It goes beyond focusing on profitability to consider the
+ethical implications of business operations. Information systems—which include tools, networks, and
+infrastructures—serve as both an operational backbone and a strategic asset for companies. The way
+businesses choose to deploy and manage information systems can either enhance or hinder their CSR goals.
+When considering how to deploy and manage their information systems and technology, organizations need
+to take into account the three Ps of CSR:
+•
+People represent the practices that will be followed as part of information system and technology
+operations.
+•
+Planet represents consideration of the impact these operations will have on the environment.
+•
+Profit is the economic goal that has to be sustained by the business.
+Using the three Ps as a guide, organizations can minimize any negative effects of their information system and
+technology practices on the environment and society as a whole while still making a profit.
+Corporate social responsibility can also fit into the context of the ethical theories you’ve learned about. From a
+utilitarian perspective, CSR consider the consequences of a company's actions and prioritizes the actions that
+generate the most good for the most number of people on the planet. An organization focused on deontology
+would seek out the principles that inform a more ideal version of society and seek to act in accordance with
+those principles. From a virtue ethicist perspective, an organization would attempt to embody the virtues that
+would best lead to the experience of a beautiful, true, good, and flourishing life, then interact with society
+from that state of being.
+As with environmental practices, there are many opportunities for integrating CSR principles in information
+system development. From whatever philosophical perspective a company approaches it, integrating CSR into
+information systems means ensuring that the organization’s software and hardware development processes
+are in alignment with ethical guidelines. This includes ethical choices that will impact society, such as open-
+source software adoption, transparent data management, and safeguarding of user privacy. Design phase
+choice involves sustainable hardware. The selection of energy-efficient hardware, minimization of resource
+use, and the promotion of recyclable components further align the ideal aspects of CSR and information
+systems in tangible ways.
+450
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+Information systems can also be utilized to facilitate CSR initiatives. Information systems can provide powerful
+tools that companies use to track, monitor, and report their CSR activities. Advanced analytics can aid in
+assessing environmental impact, employee welfare, and community engagement, allowing for more informed
+decision-making. The critical part, obviously, is that these tools be used with the intention that corporations
+seek to create a more ideal form of responsibility to society.
+Another area in which information systems can benefit CSR efforts is stakeholder communication. Modern
+information systems enable transparent and continuous dialogue with stakeholders. Through digital
+platforms, companies can communicate their CSR initiatives, gather feedback, and foster a culture of
+accountability and inclusivity.
+The futures of CSR and information systems are continuously evolving. Businesses must be proactive,
+anticipating shifts and aligning information systems and business strategies accordingly. This will require
+collaborative approaches that form partnerships between businesses, governments, and society so the
+positive impacts of CSR-focused information system initiatives can be more ideally implemented. As systems
+thinking informs us, all things are interconnected. Given this, to practice and foster ethical conduct, you should
+consider how the singular information system that is the focus of your work fits into and impacts the overall
+system. By centering CSR in information system decisions and operations, companies can advance their
+business objectives and champion a more sustainable, equitable, and ethical digital future.
+Sustainable Development Goals
+In 2015, the United Nations established Sustainable Development Goals (SDGs), a set of seventeen
+interconnected objectives aimed at addressing global challenges and ensuring a more sustainable future for
+humanity (Figure 12.4). The SDGs provide a comprehensive framework, touching on areas like poverty, health,
+education, and climate change, with the aim of fostering prosperity while protecting the planet. As we strive to
+achieve these ambitious targets, the role of information systems becomes paramount because through
+digitization, automation, and analytics, information systems have the potential to accelerate our journey
+toward achieving these global ideals.
+Figure 12.4 Information systems play an integral part in the United Nations’ Sustainable Development Goals by connecting
+communities and resources. (credit: modification of work “The 17 Sustainable Development Goals of the UN” by United Nations: The
+Global Goals/Wikimedia Commons, CC0 1.0)
+The ethical use of information systems for the common good empowers the achievement of SDGs. Consider
+these examples of how information systems can contribute to specific UN goals:
+•
+Goal 3: Good Health and Well-Being: Advanced health information systems, telemedicine platforms, and
+health analytics tools can revolutionize health-care delivery, especially in remote and underserved regions
+of our planet.
+12.1 • Ethics, Sustainability, and Use of Information Systems
+451
+
+•
+Goal 4: Quality Education: E-learning platforms, virtual classrooms, and digital educational resources offer
+new ways to bridge educational gaps and reach learners worldwide.
+•
+Goal 9: Industry, Innovation, and Infrastructure: Information systems support industrial innovation by
+optimizing supply chains, enhancing manufacturing processes, and fostering global collaboration through
+digital platforms.
+•
+Goal 13: Climate Action: Environmental monitoring systems, climate modeling software, and data analytics
+can provide insights into climate change patterns and inform mitigation strategies.
+Achieving the SDGs requires public-private partnership and collaboration. Governments, private sectors, and
+nongovernmental organizations (NGOs) can create synergistic outcomes, far beyond what each of them can
+do individually. Information systems are the technology that can connect these organizations to drive
+impactful initiatives. Local knowledge and global expertise can be harnessed to cocreate information system
+solutions that are tailored to specific SDG challenges. Integrating technology with purpose, leveraging its
+capabilities, and navigating its challenges with foresight ensures that information systems can serve as a
+powerful tool in achieving the global promise of the SDGs.
+GLOBAL CONNECTIONS
+Sustainability Trends across Nations
+Information system sustainability initiatives that attempt to address economic conditions, social values, and
+environmental priorities vary across the globe. For instance, the European Union has encouraged more
+robust e-waste recycling programs.4 Samsung has introduced the Samsung Care for Clean India program
+to educate on e-waste disposal.5 And Sweden’s EcoDataCenter has switched from fossil fuel to
+hydrotreated vegetable oil to become a leader among Nordic countries in sustainable data centers.6
+Creating flexible frameworks that are adaptable across nations facilitates global progress on shared
+imperatives like climate change. International bodies, such as the United Nations, promote sustainability
+best practices that can be customized. Grassroots community engagement also aids localization.
+Understanding national and cultural contexts enables stakeholders to create tailored road maps toward a
+common shared vision of responsible innovation.
+Impact of Ethics and Sustainability on Information Systems and
+Information Technology
+The development and utilization of information systems and technology have wide-ranging impacts on society,
+the environment, and the ethics of human-computer interaction (HCI). It is crucial that as these systems
+evolve, we remain cognizant of these impacts and align technological progress with ethical and sustainable
+ideals. Information systems intersect with ethics, social welfare, and ecological responsibility in several key
+areas.
+Human-Computer Interaction
+Human-computer interaction examines the interface between human beings and computing technology. As
+information systems become more sophisticated, with abilities like natural language processing, computer
+vision, and predictive analytics, new ethical considerations emerge regarding how these technologies are
+designed and deployed.
+4
+“E-Waste in the EU: Facts and Figures (Infographic),” Directorate General for Communication, European Parliament, March 21,
+2024, https://www.europarl.europa.eu/pdfs/news/expert/2020/12/story/20201208STO93325/20201208STO93325_en.pdf
+5
+“About the Program,” Samsung Electronics, accessed December 23, 2024, https://www.samsung.com/in/microsite/care-for-clean-
+india/?srsltid=AfmBOooC2fRGHen_hcSlMFEDCW07X6kepUHEY5vks0g7AGGhloWGeB53
+6
+“Sustainable Data Protection: EcoDataCenter in Sweden Relies on mtu Backup Generators from Rolls-Royce That Run on HVO
+Fuel,” Rolls-Royce, November 14, 2024, https://www.rolls-royce.com/media/press-releases/2024/14-11-2024-sustainable-data-
+protection-ecodatacenter-in-sweden-relies-on-mtu-backup-generators.aspx
+452
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+The key ethical issues in HCI involve transparency, privacy, and accountability. Systems should be transparent
+regarding their capabilities and limitations. Privacy must be safeguarded, and user data must be utilized
+ethically. Engineers must be accountable for potential harm resulting from flawed system design. Guidelines
+such as value-sensitive design promote these ideals by integrating ethical considerations into the design
+process. Overall, responsible HCI requires aligning systems with human values like trust, dignity, and justice.
+ETHICS IN IS
+Five Principles of Data Ethics
+Collecting user data raises tensions between business interests and privacy rights. While mining data can
+optimize services, consent and transparency are essential. Harvard Business School identified five principles
+important for data ethics: ownership, transparency, privacy, intention, and outcomes.7
+The ownership principle dictates that organizations cannot take individuals’ data without their consent, and
+the transparency principle stresses the importance of informing individuals about how their data will be
+used. Privacy is important because even when individuals agree that their data can be used, their privacy
+must be respected. The intention principle cautions organizations to analyze why they need data to ensure
+that their intentions and reasons for collecting data are ethical. Finally, the outcomes principle notes that
+even with good intentions, data usage can lead to outcomes that harm individuals or groups, such as when
+data seem to show that certain groups are more likely to be associated with criminal activity.
+User Experience
+The user experience (UX) refers to how end users interact with information systems and their perceptions
+regarding accessibility, usability, and satisfaction. User experience design has ethical implications in terms of
+promoting inclusion and minimizing harm.
+Inclusive UX design, such as video captioning, provides accessibility to groups with different abilities in
+hearing, vision, language or digital literacy. User experience should also seek to avoid dark patterns,
+deceptive interfaces that bait and switch to nudge users toward harmful actions, such as buying overpriced
+products. Misinformation, addictive behaviors, and compulsive spending can result from such exploitative
+designs. Responsible UX upholds ideals of autonomy and well-being by empowering users with controls,
+protections, and transparency.
+Technology Adoption and Resistance
+The adoption or rejection of new technologies has wide-ranging ethical and societal impacts. Some key
+societal considerations include the displacement of workers whose skills become obsolete, worsening
+inequality between technology adopters and nonadopters, and the environmental sustainability of
+proliferating hardware and infrastructure. Responsible innovation requires foresight and mitigation of these
+consequences. For example, change management processes can provide support and training to workers
+transitioning to new roles. Inclusive policies work to close digital divides by making technology affordable and
+accessible. Sustainable design and manufacturing should be pursued to lower the environmental harms of
+constantly evolving technologies.
+7
+Catherine Cote, “5 Principles of Data Ethics for Business,” Business Insights (blog), Harvard Business School Online, March 16,
+2021, https://online.hbs.edu/blog/post/data-ethics
+12.1 • Ethics, Sustainability, and Use of Information Systems
+453
+
+Technology Addiction
+Problematic overuse of technology and information systems can result in behaviors that negatively impact
+mental health and relationships (Figure 12.5). Psychologists point to dopamine-driven feedback loops that
+make devices habit forming.8 For example, many apps have infinite scrolling that makes it hard for users to
+stop. Tech companies face ethical questions around deliberately engineering addictiveness into apps and
+platforms. Mitigating technology addiction requires design practices that promote healthy engagement
+aligned with user well-being. Examples include digital detox features, usage dashboards, and nudges toward
+positive habits. Families and schools also play a role in promoting tech-life balance and modeling healthy
+technology integration. Ongoing research and open dialogue around technology's addictive potential are
+warranted.
+Figure 12.5 As we become more reliant on technology, this can lead to technology addiction, which occurs when we overuse
+technology and become so addicted to our cell phones and other technology that it negatively impacts our lives, including
+relationships with others. (credit: “Focused Female Professional at the Office” by Aspen/nappy, Public Domain)
+Robotic and Artificial Intelligence Replacement of Humans
+Advances in robotics and AI raise concerns about human jobs being lost to automation. This has significant
+ethical and social implications in terms of employment and economic security. However, robots and AI also
+create new roles, such as AI research scientists who study and create new AI technologies. Responsible AI
+specialists ensure that AI technology is managed ethically and legally for the company and society at large.
+Also, since robots and AI do not have some human skills such as creativity and empathy, humans are still
+needed to oversee tasks completed by robots and AI.
+A balanced approach recognizes the benefits of emerging technologies while proactively addressing their
+disruptive effects. Policies like educational and training programs can help workforce transitions. Continual
+investment in human capabilities less prone to automation is needed, along with designing complementary
+roles between humans and AI. With foresight and intentionality, job displacement can ideally yield new
+potential.
+Societal Implications of Technology
+Some key societal implications stemming from the proliferation of information systems and technology
+include the following:
+•
+Digital divide: The uneven distribution of access to information systems and information technology has
+created a digital divide between those who have access to technology and those who do not, reinforcing
+broader social and economic disparities. This has profound implications for education, employment, and
+social mobility. Individuals without technology access face constraints in pursuing educational
+opportunities, applying for jobs, using government services, and connecting with social groups. This
+8
+Anna Lembke, "Digital Addictions Are Drowning Us in Dopamine," Wall Street Journal, August 13, 2021, https://www.wsj.com/
+articles/digital-addictions-are-drowning-us-in-dopamine-11628861572
+454
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+entrenches preexisting socioeconomic disadvantages. Policy steps like providing low-cost internet access,
+public technology centers, and digital literacy programs help bridge these divides. Inclusive design
+practices also ensure technologies accommodate users across age, ability, language, and socioeconomic
+status. Educational programs focused on digital literacy are also essential to ensure inclusivity. Pursuing
+digital inclusion promotes equity and social justice.
+•
+Job displacement: The increased automation and use of information systems and information technology
+have led to job displacement in many industries, particularly in manual and routine-based roles. This has
+implications for the workforce, income inequality, and social welfare. Workers displaced by technology
+require retraining programs to transition into new roles. Policymakers must develop robust social safety
+nets to support workers struggling with job losses due to automation. Fostering a culture of lifelong
+learning and flexibility will be imperative as job disruption becomes more commonplace in our
+increasingly digital future.
+•
+Cybercrime: The proliferation of information systems and information technology has also led to a rise in
+cybercrime, including identity theft, hacking, and online fraud. This has important implications for
+personal privacy, data protection, and security. Strict data privacy regulations and cybersecurity standards
+are required to safeguard users. Media literacy programs should educate the public on cyber risks. Cyber
+warfare also poses new national security threats that governments must address.
+•
+Social media: The rise of social media platforms has significant implications for social interaction,
+communication, and identity. It has enabled new forms of social and political activism, both positive and
+negative. The platforms have been used to spread misinformation, exacerbate political polarization, and
+allow election interference. Features like social validation can be addictive and harmful. This is especially
+true for youth whose minds are more easily influenced given their stage of development. On the other
+hand, social media allows marginalized groups to build community and amplify their voices. Ongoing
+oversight, moderation, and user protections are needed to ensure social media minimizes detrimental
+impacts and instead works to benefit society.
+•
+Health care: The use of information systems and information technology in health care has led to
+improved patient care, diagnosis, and treatment. However, it has also created new ethical and privacy
+concerns surrounding patient data and medical records. Strict data governance models, such as those
+found in HIPAA, must safeguard health-care data integrity and confidentiality. Careful oversight is required
+for emerging technologies, like AI diagnostics, to avoid harmful errors. Attention must also be paid to
+equitable access to health-care technologies.
+•
+Environmental sustainability: The use of information systems and information technology can impact the
+environment in both helpful and harmful ways. Proliferating hardware and infrastructure contribute to
+resource consumption and e-waste. However, systems can also enable remote collaboration, thereby
+reducing transportation and associated emissions. Green design, renewable energy, and proper e-waste
+disposal are imperative for environmentally sound systems.
+•
+Social and cultural impacts: Information systems and technology have influenced social norms, behaviors,
+and values both positively and negatively. For example, information systems and technology have been a
+positive force by helping people communicate over long distances to maintain close relationships,
+enabling people to learn about cultures worldwide without traveling. However, information systems and
+technology also provide resources to enable cyberbullying, allowing bullies to widen the circle of people
+they can harass. These examples indicate that ongoing research into how technology shapes social
+patterns is needed, along with thoughtful application of this knowledge to guide ethical and prosocial
+innovation.
+•
+Privacy and data protection: Information systems’ collection, use, and dissemination of personal data
+raises critical privacy issues. Data breaches, surveillance, and inadequate consent processes can violate
+user privacy. Strict data governance frameworks must safeguard personal data. Encryption, access
+controls, and principles like data minimization help protect privacy. Education on managing digital
+footprints is also essential.
+•
+Cybersecurity and information security: Connected systems enable new forms of criminal activity,
+12.1 • Ethics, Sustainability, and Use of Information Systems
+455
+
+including hacking, malware, and phishing. This can result in fraud, identity theft or disrupted critical
+infrastructure. To control cybercrime, implementing robust cybersecurity defenses via tools like firewalls
+and access controls is imperative. Workforce education on security best practices and law enforcement
+training to address cyber threats are needed. Information security must constantly evolve to stay ahead of
+criminal misuse of technology.
+•
+Intellectual property rights: Emerging technologies like AI and social media raise new issues surrounding
+copyright, fair use, trademarks, and patents. Clearer legal guidelines are required. Ethical considerations
+around equitable access to knowledge must also guide intellectual property policies. Education on issues
+like plagiarism and piracy helps foster respect for IP rights.
+•
+Ethical use of technology: The responsible use of information systems entails thoughtful practices
+regarding transparency, accuracy, bias mitigation, and fostering positive social outcomes. Corporate ethics
+policies guide issues like hacker ethics and responsible disclosure. Promoting public discourse on ethical
+technology, its management, and its use is key. The IEEE TechEthics is an extensive resource that
+addresses the ethical use of technology in business and society.9
+•
+Ethical AI and automation: AI and automated systems raise concerns like privacy, embedded biases, and
+accountability. Ensuring human oversight and rigorously testing systems for fairness and safety are
+essential. Transparent and ethical AI practices consider potential harm early in the design phases.
+Regulations may be required to align automated technology with human values and welfare.
+Responsible innovation considers the multifaceted societal impacts of information systems and technology. By
+upholding ethical principles and humanistic values, information systems can be shaped and governed to
+maximize society as a whole. Technology and society evolve together. Aligning the rapid pace of innovation
+with the public interest necessitates sustained dialogue between policymakers, technologists, and
+communities.
+12.2 Intellectual Property
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Identify U.S. intellectual property laws and regulations
+•
+Describe intellectual property in information systems and technology
+•
+Describe the global initiatives to protect intellectual property
+The culture and economy of the United States are becoming increasingly knowledge based, with a growing
+focus on technological innovations. In a 2022 report, the U.S. Patent and Trademark Office noted that
+intellectual property–intensive industries, such as computer technology and information systems, represent
+$7.8 trillion in economic value. This significant figure represents over 40 percent of the U.S. gross domestic
+product and accounts for forty-seven million jobs.10 From an economic perspective, IP-related technology is
+significantly increasing.
+Recall that intellectual property consists of creations of the mind like inventions, literary and artistic works,
+designs, symbols, names, and images used in commerce, protected by law from unauthorized use or
+replication. The area of law that concerns the realm of these creations—including technological creations—is
+known as intellectual property law and covers trademarks, trade secrets, patents, and copyrights. Such laws
+protect the creations of innovative labor, allowing the creators to benefit from their work. This incentivizes
+individuals and organizations to invest their time, energy, and resources into creating new technologies and
+systems. Intellectual property rights, when properly managed, have the potential to drive technological
+progress, fuel economic growth, and enhance societal welfare.
+9
+“Ethics Frameworks,” IEEE TechEthics, accessed December 23, 2024, https://techethics.ieee.org/ethics-frameworks
+10
+Andrew A. Toole, Richard D. Miller, and Nicholas Rada, Intellectual Property and the U.S. Economy, 3rd ed., (U.S. Patent and
+Trademark Office, March 2022), 3–5, https://www.uspto.gov/sites/default/files/documents/uspto-ip-us-economy-third-edition.pdf
+456
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+U.S. Intellectual Property Laws and Regulations
+Intellectual property laws in the United States consist of four different areas of law: copyright law, patents,
+trade secrets, and trademarks, which are compared and contrasted in Table 12.1. These four areas are
+designed to incentivize the creation of various types of information and protect the owner from infringement
+by others.
+Copyright
+Patent
+Trade Secret
+Trademark
+Definition
+An original work
+of authorship
+Any manufacture,
+machine, process,
+or composition of
+matter that is
+considered new
+and useful
+Information valued
+because not
+generally known,
+efforts to keep it
+secret
+Any symbol, name,
+word, or device that
+distinguishes a good
+or service from those
+offered by
+competitors
+Examples
+Books, movies,
+fine art,
+architecture,
+software
+Industrial
+machinery,
+biotechnology,
+manufacturing
+processes
+Formulas, source
+code, prototypes,
+customer lists
+Brand names, logos,
+trade dress
+Requirements
+New, useful,
+nonobvious
+Originality and
+fixation
+Information derives
+value from not
+being generally
+known, reasonable
+efforts to maintain
+secrecy
+Use in commerce
+Filing
+Required
+No
+Yes
+No
+No
+Rights
+To reproduce,
+distribute, or
+publicly perform/
+display the work,
+and/or make
+derivative works
+To make, use, sell,
+and import the
+patented invention
+Efforts to prevent
+others from
+misappropriating
+the trade secret
+Efforts to prevent
+uses of confusingly
+similar marks
+Duration
+Life of author plus
+seventy years
+Generally, twenty
+years from the
+date of filing
+Potentially
+indefinite
+Potentially indefinite
+Table 12.1 Intellectual Property Protection Summary Chart It is important for information systems professionals to understand
+intellectual property laws.
+12.2 • Intellectual Property
+457
+
+Copyright Law
+The foundation for copyright law is found in the U.S. Constitution, which grants, in Article 1, Section 8,
+“Authors and Inventors the exclusive Right to their respective Writings and Discoveries” to “promote the
+Progress of Science and the useful Arts.”11 The Copyright Act of 1976 is the congressional statute that governs
+this form of IP.
+The purpose of copyright law is to encourage the spread of knowledge by incentivizing authors to create new
+works. This is accomplished by granting the author of a work the exclusive right to reproduce, distribute,
+publicly perform or display the work, and also to make derivative works for a period of time that lasts for the
+life of the author plus seventy years. Examples of creations that can be copyrighted include books,
+architecture, musical works, movies, and—of particular interest to information systems
+professionals—software.
+There are two requirements for an author seeking to obtain the protection of copyright law. The first is that
+the creation must be original, meaning it must be independently created and have some minimal degree of
+creativity. For example, simply alphabetically arranging a list of names and phone numbers will not meet this
+originality requirement. However, organizing that list by geographic areas would be enough to meet this
+minimal threshold. The second requirement is that the creation be fixed in a tangible medium of expression.
+This is so that it can be perceived or communicated to others. An example of this would be writing something
+down on a piece of paper. In the context of information systems, however, the creation is usually fixed in a
+computer file located on a hard drive.
+Once an author creates a protected work and fixes it in a tangible medium of expression, it automatically gains
+copyright protection—meaning, no registration is required. However, registration of the work does provide
+certain benefits, including the ability to sue for copyright infringement in federal court.
+Note that you cannot copyright an idea; only the expression of an idea merits legal protection with this form of
+IP. For example, suppose you came up with the idea and process for powering cars by saltwater instead of
+gasoline and proceeded to write a book about it. It would be legal for someone else to read that book, extract
+the idea and process for how to make cars run on saltwater, and build such a car, all without infringing your
+copyright. In addition to excluding protection for ideas (and instead protecting their expression, as in a book),
+copyright law does not cover a “procedure, process, system, method of operation, concept, principle, or
+discovery.”12 The protection of these would require a different form of IP, a patent.
+The duration of a copyright is the author’s life plus seventy years. This, plus the fact that copyright protection
+attaches automatically, leads to a great deal of information being protected for a long period of time. With the
+rise of the internet, a new movement arose to counter this: the open-source model, which means that content
+is open to everyone rather than being locked down via copyright. The emergence of open-source software has
+led to a great deal of collaboration and innovation, resulting in creations like Linux and open educational
+materials.
+There is one significant aspect of copyright law that allows individuals to freely use copyrighted material: fair
+use, which is a principle that allows limited parts of works to be used for specific purposes like classroom
+activities, news reports, commentary, and criticism. To determine whether the use of copyrighted material falls
+within fair use, courts apply a four-factor test:13
+•
+Purpose and character of the use (educational or commercial)
+•
+Nature of the work (level of creative expression)
+•
+Scope and substantiality (how much and what parts)
+11
+“Constitution of the United States: Article I, Section 8,” Constitution Annotated, Congress.gov, https://constitution.congress.gov/
+constitution
+12
+“Ideas, Methods, or Systems,” Circular 31, U.S. Copyright Office, https://www.copyright.gov/circs/circ31.pdf
+13
+“U.S. Copyright Office Fair Use Index,” U.S. Copyright Office, last updated November 2023, https://www.copyright.gov/fair-use/
+index.html
+458
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+•
+Effect on the marketplace (negative impact on current market)
+Of these factors, the effect on the marketplace is the most important. For example, if a professor were to use a
+five-minute clip from the movie The Matrix to teach the class about fight choreography, a court would most
+likely find that this was within fair use. This is because (1) the purpose and character of the use were
+educational in nature; (2) the substantiality of what was copied is only five minutes from a movie that was over
+two hours long, and most importantly; (3) the effect on the marketplace was negligible. In other words, the
+movie would not lose sales due to this act. In fact, some students might be interested enough in what they
+saw to view the movie, thereby increasing the revenue for the copyright holder. It should be noted that courts
+often weigh these factors differently depending on the specific case.
+FUTURE TECHNOLOGY
+Artificial Intelligence and Copyright Law
+Advances in AI are generating new questions about how copyright law applies to content created or used
+by AI. This is especially true of generative AI computer programs such as ChatGPT, DALL·E 2, Stable
+Diffusion, and Midjourney. These programs can generate new output (images, text, and other content) after
+receiving input via a user’s textual prompts. This is possible because they are trained on large quantities of
+existing works, much of which is subject to copyright protection.
+Generative AI programs raise several novel legal issues under copyright law. For example, do the outputs of
+AI merit copyright protection? And if so, who is the owner of the copyrighted work? Does copyright
+infringement happen in an AI training process as it utilizes a large amount of copyrighted work to enable
+the AI to generate outputs? Do the outputs generated by AI infringe on existing copyrights? These
+questions and others are at the core of many legal battles and will continue to be addressed as AI
+technology evolves.
+Patent Law
+Also established by the U.S. Constitution, patent law protects any “new, useful, and nonobvious”14 process,
+machine, manufacture, or composition of nature. To obtain patent protection, the inventor must file with the
+U.S. Patent and Trademark Office (USPTO) (Figure 12.6). After filing, the inventor can prevent others from
+making, using, selling, and importing the patented invention. Theoretically, this enables the inventor to
+recover the costs associated with developing the invention and to profit from its sale. Some examples of
+famous patents granted by the USPTO include Alexander Graham Bell’s telephone patent, Thomas Edison’s
+patent for the incandescent light bulb, and more recently, Jaap Haartsen’s patent for Bluetooth
+communications.
+14
+U.S. Patent and Trademark Office, “General Information Concerning Patents,” U.S. Department of Commerce, 2014,
+https://www.uspto.gov/sites/default/files/inventors/edu-inf/BasicPatentGuide.pdf
+12.2 • Intellectual Property
+459
+
+Figure 12.6 This is a 1968 patent for a “data storage control apparatus for a multiprogrammed processing system” developed by
+colleagues at MIT/General Electric. This diagram is of a mainframe, showing how it is connected to a memory unit. The numbers
+represent the part or component of the product. (credit: modification of work “US Patent connected to Project MAC (Multics project)”
+by Couler, Glaser, U.S. Patent Office/Wikimedia Commons, Public Domain)
+Obtaining a patent is not a simple process as there are several requirements involved in gaining patent
+protection. First, a patent application is filed with the USPTO submitting a detailed description of the invention.
+The USPTO will then go through the intensive process of determining whether the submission merits patent
+protection. This process is complex and almost always requires the assistance of a patent attorney or agent.
+This cost combined with those associated with the research and development necessary to create a patentable
+invention result in the fact that most patents are quite expensive to obtain.
+Once obtained, patents provide one of the strongest forms of IP protection. Any entity that uses the invention
+in any way is subject to patent infringement. Generally, the only way to use the patented idea is to pay the
+owner a fee to obtain a license. Additionally, it is not legal for anyone else to independently discover and use
+the invention. Furthermore, no one can reverse engineer the patented invention to determine the nature of
+the idea. Due to these powerful protections, the primary way a competitor would seek to utilize a patented
+invention without the creator’s permission is by challenging the validity of the patent granted by the USPTO. As
+with obtaining a patent, the cost of litigation to challenge this form of IP is usually both very expensive and
+time-consuming.
+460
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+CAREERS IN IS
+Patent Agent and IP Lawyer Pathways
+Aspiring patent agents and IP lawyers should pursue STEM (science, technology, engineering, and
+mathematics) undergraduate degrees, followed by law school and the patent bar exam. Gaining IP
+experience via legal clinics, USPTO programs, or law firm internships is advisable. Understanding
+technology and law provides a foundation for this complex specialty.
+Trade Secret Law
+The source of trade secret law resides in the Uniform Trade Secrets Act, which defines a trade secret generally
+as information that derives economic value from not being generally known and that efforts to maintain its
+secrecy are reasonable.15 As you can imagine, various types of information can be protected, including
+business, financial, economic, technical, and engineering information. Specifically, formulas, patterns,
+compilations, programs, devices, methods, techniques, and processes can be subject to trade secret
+protection. The trade secret owner must ensure that the secrecy of the trade secret is maintained. Examples of
+such actions include nondisclosure agreements (NDAs), employee training, access controls, exit interviews,
+marking documents as confidential, IT security measures (such as firewalls and intrusion detection systems),
+and physical security measures (such as restricting access, security personnel, and CCTV monitoring). If the
+trade secret owner continuously maintains reasonable measures such as these, the duration of protection
+against misappropriation is potentially indefinite.
+Trade secret protection can, however, be lost in several ways. First, competitors can legally reverse engineer
+any information that an organization maintains as a trade secret. Second, a competitor could independently
+discover the information that is being maintained as a trade secret, and the owner would have no cause for
+action. Finally, a competitor can lawfully acquire the information being protected. This can occur if the trade
+secret owner fails to take reasonable measures to maintain its secrecy. For example, posting a trade secret on
+a publicly accessible website will allow the competitor to lawfully acquire the trade secret. While these
+concerns are significant, companies often choose this form of protection over a patent because trade secrets
+can have a potentially indefinite term if properly protected, while a patent terminates after twenty years.
+ETHICS IN IS
+IP Laws and Access to Knowledge
+While incentivizing innovation, IP laws can also restrict access to knowledge. Copyright terms that extend
+beyond an author’s life may impede public domain sharing. Due to stringent patent rules, patients can be
+denied access to affordable generic drugs. Creativity may be stifled if individuals are unable to access
+protected IP to develop ideas. To counter this and promote the free exchange of knowledge, IP regulations
+try balancing incentives and access but often favor proprietary interests.
+15
+“Trade Secret,” Legal Information Institute, Cornell Law School, last updated June 2024, https://www.law.cornell.edu/wex/
+trade_secret
+12.2 • Intellectual Property
+461
+
+Trademark Law
+The foundational source of trademark law is the commerce clause of the U.S. Constitution, which allows
+Congress to regulate interstate and foreign commerce. The Lanham Act of 1946 is the statute that governs this
+area of IP law. Trademark law protects a “word, name, symbol, or design” used to identify the source of a good
+and distinguish it from the products of another.16 Trademarks can be applied to product elements that make it
+uniquely identifiable in a market, such as specific shapes (like Coca-Cola’s bottle design), scent, colors, or
+packaging. Like copyright law, one does not need to register to receive trademark protection; however, doing
+so does provide certain benefits.
+Trademarks are an essential part of almost any business. They provide consumers with a simple way to identify
+the source of a good or service, and are thereby crucial in building customer trust, brand recognition, and
+consumer loyalty. The duration of a trademark is potentially indefinite, though it can be lost for several
+reasons. For example, abandonment of the mark, which occurs when a trademark owner does not use the
+trademark for at least three years, will result in the loss of protection.
+Ethical Issues in Intellectual Property Law
+Intellectual property protections provide numerous benefits to individuals and organizations, but there are
+also significant ethical considerations associated with IP law. Intellectual property laws, especially copyrights
+and patents, incentivize creators to generate new information by providing them protection of that
+information for a period of time. However, the ultimate purpose of IP laws is to benefit society at large by
+providing its members access to new creations. This results in a tension between the rights of the creator and
+the rights of society. While the promotion of creativity and innovation is a worthy goal, IP laws also have the
+potential to restrict access to information and technology. This can potentially lead to digital divide issues,
+whereby certain specific individuals or communities are disadvantaged due to their lack of access to the new
+technology. Thus, governments and legal systems must strike an appropriate balance between incentivizing
+innovation and ensuring equitable access to new technology on a global scale.
+Intellectual Property in Information Systems and Information
+Technology
+Intellectual property laws play a significant role in information systems and information technology. These
+laws foster innovation and economic growth within the technology sector, but they come with a host of ethical
+considerations that must be managed appropriately.
+Copyright Law in Information Systems and Information Technology
+Copyrights are critical in protecting software, databases, and website content. Adobe Systems (Adobe) uses
+copyright law to protect its suite of creative software tools, including Photoshop, Illustrator, and InDesign. This
+protection extends to both the source code and the object code. Adobe has taken significant steps to combat
+software piracy, including filing lawsuits against individuals and organizations accused of infringing on its
+copyright. The company has established the Adobe Trust Center to proactively deal with fraud prevention.
+Their software offers automatic licensing checks through the Adobe Genuine Software Integrity Service.
+Copyright infringement can involve distributing or using unlicensed copies of Adobe’s software or cracking the
+software to bypass licensing protections. These measures taken are particularly important as pirated software
+undermines the financial stability of companies, like Adobe, that rely on the sale of licenses for their products.
+Tech companies maintain websites to promote their business to clients. Amazon protects its product
+descriptions, promotional content, images, blog posts, and other Amazon-written material by copyright. This
+protection is aimed at preventing someone from legally copying the information contained therein and fixing
+it in another tangible medium of expression. It is also a violation of copyright law to scrape (that is, use
+automated tools, as you learned in Chapter 8 Data Analytics and Modeling, to extract data) Amazon’s site
+16
+U. S. Patent and Trademark Office, “U. S. Trademark Law: Federal Statutes,” November 25, 2013, 41, https://www.uspto.gov/sites/
+default/files/trademarks/law/Trademark_Statutes.pdf
+462
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+content without permission.
+Copyright law also applies to databases, a critical component of information systems. Microsoft, for example,
+uses copyright law to protect its SQL server, a relational database management system. Both the source and
+object code used to create this database are protected by copyright law. While Microsoft’s copyright covers the
+database, the copyright does not extend to data that users and organizations enter into the database: the data
+held within the database are the property of the user or organization that maintains it.
+Sometimes the relationship between copyrights and patents can confusing. For example, software code may
+be protected by a copyright, while a unique user interface or algorithm may be protected by a patent. By using
+patents and copyright laws to protect their IP, Adobe, Amazon, and Microsoft are motivating their customers
+and competitors to use their products in an ethical and legal manner. In general, copyright laws promote
+ethical behavior throughout society by discouraging various unethical and illegal activities. For example,
+because of copyright laws, moviegoers are unlikely to sit in a theater and record a movie, authors are
+discouraged from plagiarizing another writer’s work, and photographs are less likely to be used without
+permission.
+Patent Law in Information Systems and Information Technology
+As with copyrights, patents provide an incentive for organizations using information systems to invest in
+research and development. Patent law encourages innovation through this, and it also motivates ethical
+behavior regarding patents. One highly effective patent in the digital domain is Amazon’s “1-Click” patent.17
+This innovation allows consumers to make purchases with a single click, significantly streamlining the online
+shopping experience. Although this patent expired in 2017, it gave Amazon a significant advantage in the e-
+commerce domain for many years, increasing market share and playing an important role in the online
+retailer’s massive growth.
+Blockchain is another example of a technological innovation that utilizes patent law for protection. IBM, one of
+the leading patent holders in the United States, has obtained numerous patents related to blockchain.18 These
+patents give IBM twenty years of IP protection, enabling it to prevent others from utilizing its innovations. This
+helps guarantee more market share for IBM and can provide revenue streams if the company decides to
+license this technology to others.
+Qualcomm is another tech company that utilizes patent protection for its innovations as part of its business
+model. As a market leader in wireless communications technology, Qualcomm holds over 160,000 approved
+and pending patents related to 5G technology.19 These patents cover many components of 5G networks,
+including chips in devices and infrastructure equipment. Qualcomm has been able to leverage its research and
+development successes by entering into over 200 licensing agreements with other entities to use its protected
+technology. IP protection is a central component of the enterprise’s goals of sharing its innovations while
+receiving fair value compensation.
+Trade Secret Law in Information Systems and Information Technology
+Trade secrets are critical to a tech company’s business strategy. Complex algorithms are the most important
+asset in many tech company portfolios. Google’s search algorithm, PageRank, which determines the ranking of
+web pages in a search result, is maintained as a trade secret. It provides a competitive advantage to Google
+and determines the access and visibility of online information.
+Computer source code is another asset that many companies maintain as a trade secret. Oracle’s database
+17
+R. Polk Wagner and Thomas Jeitschko, “Why Amazon’s ‘1-Click’ Ordering Was a Game Changer,” Knowledge at Wharton podcast,
+September 14, 2017, 26 min. https://knowledge.wharton.upenn.edu/podcast/knowledge-at-wharton-podcast/amazons-1-click-goes-
+off-patent/
+18
+Kristopher B. Kastens and Timothy Layden, “Top Holders of Blockchain Patents,” Kramer Levin, July 21, 2022,
+https://www.kramerlevin.com/en/perspectives-search/top-holders-of-blockchain-patents.html
+19
+“Qualcomm Licensing Drives Our Intelligently Connected World Forward,” Qualcomm, accessed January 13, 2025,
+https://www.qualcomm.com/licensing
+12.2 • Intellectual Property
+463
+
+software is a major asset for the company. This proprietary information is protected as a trade secret, ensuring
+that the details of how the software works at the source code level are kept confidential. To keep this
+protection, the company takes numerous measures to maintain its secrecy.
+A company’s data collection, storage, and analysis methods involving big data are also considered trade
+secrets. Companies like Google use trade secrets to secure their customer data. These detailed data contain
+search histories, preferences, and passwords. Google uses this information to inform its search algorithm. In
+its YouTube platform, Google gives video recommendations, custom search results, and targeted ads based on
+users’ searches, videos they watch, and how they interact with the website.
+Trademark Law in Information Systems and Information Technology
+Trademarks help companies brand themselves in the marketplace and are very valuable in the tech sector.
+Trademarks are often recognized as part of a company’s intangible assets that give them a competitive
+advantage in the marketplace. One of the most iconic branding images is Apple’s bitten apple logo (Figure
+12.7). It is recognizable worldwide, identifies the source of the good, and distinguishes it from the products of
+another. Consumers who recognize this symbol on a product know they are purchasing from Apple.
+Figure 12.7 Apple’s bitten apple logo has been in use for 50 years. It identifies products created by Apple, such as (a) printers, (b)
+iPads, and (c) MacBooks, and assures consumers that they are purchasing genuine Apple products. (credit a: modification of work
+“Former Apple Logo” by “Cbmeeks”/Wikimedia Commons, Public Domain; credit b: modification of work “Apple tablet” by Carol
+Clarkson/Flickr, CC BY 4.0; credit c: modification of work “Apple Logo on MacBook” by Image Catalog, Unsplash/Flickr, CC0 1.0)
+Another form of trademark protection is trade dress, which refers to the visual appearance of a product or its
+packaging. Google’s minimalist search page design has this form of IP protection. Figure 12.8 shows the
+simple, clean design that ensures users they are indeed performing a web search on Google and not one of its
+competitors.
+Figure 12.8 Google’s minimalist search page design is an example of trade dress, and it is protected as intellectual property through
+trademark law. (credit: modification of work from Workplace Software and Skills. Google Search is a trademark of Google LLC.)
+464
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+LINK TO LEARNING
+The mission of the Center for Humane Technology is to align technology with the best interests of
+humanity—that is, the benefit of humanity and the planet as opposed to the financial interests of
+technology owners, especially in the design phase. To help meet that goal, the center has created a series
+of free interactive learning modules (https://openstax.org/r/109HumaneTech) for a Foundations of Humane
+Technology course. Check out the first module, called “Setting the Stage.”
+Global Initiatives to Protect Intellectual Property
+The IP laws of the United States only represent one legal system of nearly 200 countries in the world.
+Consequently, several global initiatives attempt to synthesize the various IP laws of many countries. Two
+significant initiatives include the World Intellectual Property Organization (WIPO) and the Comprehensive and
+Progressive Agreement for Trans-Pacific Partnership (CPTPP). Because local laws differ across the world,
+professionals working internationally should become familiar with the laws where the company does business,
+and international laws are valid in a majority of the countries around the world.
+World Intellectual Property Organization
+The World Intellectual Property Organization (WIPO) is an agency of the United Nations created in 1967,
+with the mission to “lead the development of a balanced and effective international IP system that enables
+innovation and creativity for the benefit of all.”20 The WIPO serves a vital role in the information systems
+context, assisting in the synthesis of global laws governing system design, algorithms, and brand identities.
+The WIPO seeks to harmonize international cooperation to create a legal framework that supports IP rights. To
+accomplish this, it administers dozens of international treaties that provide for the recognition and
+enforcement of IP rights. This assists those organizations that operate information systems on a global scale
+by providing protection in various jurisdictions for their creative output. The WIPO also provides services for
+trademark registration and an international patent system for patent applications.
+Beyond these legal protections, WIPO seeks to create a more balanced and accessible IP system that offers
+benefits accessible to all countries. It does so by providing resources, education, and support for
+understanding IP rights. Additional initiatives include policy advice, legal and technical assistance, and
+capacity-building programs for developing countries. These efforts help emerging markets build a foundation
+conducive to technological innovation and creativity, thereby addressing ethical issues related to the digital
+divide.
+Trans-Pacific Partnership
+The Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP) is an agreement
+among several Pacific Rim nations that, among other purposes, serves to set standards for intellectual
+property within trade agreements. It was created as an alternative to the Trans-Pacific Partnership Agreement
+(TPPA) after the U.S.’s withdrawal prevented its ratification. Countries participating in the agreement include
+Australia, Brunei, Canada, Chile, Japan, Malaysia, Mexico, New Zealand, Peru, Singapore, the United Kingdom,
+and Vietnam.
+The primary purpose of the CPTPP is to harmonize IP laws across the member nations. This involves setting
+common standards for copyright terms, patent protections, and trademark regulations. Having common
+standards allows businesses operating in a number of these countries to simplify their IP management. The
+agreement also extended the term of copyright protection to what is standard in the United States and
+Europe—that is, the life of the author plus seventy years. Trademark protection was also strengthened by
+20
+“WIPO,” JPO Service Center, United Nations Development Programme (UNDP), accessed January 13, 2025, https://www.undp.org/
+jposc/wipo
+12.2 • Intellectual Property
+465
+
+expanding the definition of what qualifies as a trademark. Importantly, the CPTPP also establishes a system for
+registration and protection of geographic marks, which are trademarks that include a geographic location.
+Finally, the agreement establishes a strong legal framework for enforcement of IP rights. This includes civil and
+criminal penalties for IP violations.
+Case Study: Intellectual Property
+Your cousin, Priya, is a fellow information systems student and has come up with a new tool for IS data
+analytics. She has read all of the literature on the subject, and her professor, who is an expert in the field, has
+never seen or heard of anything like the tool she is proposing. Priya has been working on the design of this
+new tool throughout her undergraduate career, and as graduation approaches, she is eager to acquire the
+legal protections needed to properly protect her creation and introduce it to the world. In addition to the new
+tool, she has also come up with a name for the tool, “Ideal IS,” and wants to use these words to market the
+product. Additionally, Priya has written a 300-page book titled, Ideal IS: The Future IS Now. Finally, she has
+collected a curated list of over 60 professors, professionals, and friends who have told her over the years that
+they are interested in purchasing the new tool. Priya would like your help determining what steps need to be
+taken to protect her idea before its launch. Using what you have learned, and referring to Table 12.1, advise
+your cousin on the following questions:
+•
+How should Priya protect her idea for a new IS data analytics tool? Should it be protected by a copyright,
+patent, trade secret, or trademark?
+•
+How should Priya protect her book, Ideal IS: The Future IS Now? Recall that the book is different from the
+tool itself and will require different protection.
+•
+How can Priya protect the potential customers list that she has curated over the years? Customer lists are
+not original works or designs that you created, but they still meet the criteria to be protected by IP laws.
+Explain how this can happen.
+•
+How should Priya protect the words she wants to use to name and market the product, Ideal IS? Why?
+Remember that the words that name your product distinguish it from your competitors’ products, and IP
+laws protect this name.
+12.3 Ethics of Artificial Intelligence Development and Machine Learning
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Describe the purpose of ethical governance and regulations for developing and using AI and
+machine learning products
+•
+Discuss the impact machines using AI have on fairness, bias, transparency, and explainability
+Artificial intelligence (AI) is a broad field that resembles human intelligence, including collecting information,
+understanding concepts, applying information, and making decisions. Machine learning is a subset of AI and
+refers to a specific technique that allows computers to learn from data. The ongoing development and growth
+of artificial intelligence and machine learning mean that leaders in the field must be guided by ethical
+principles and appropriate governance frameworks. Given the potentially significant impacts these
+technologies can have on society, individuals, and the environment, a comprehensive approach is needed to
+ensure they are harnessed responsibly. This includes multistakeholder collaboration that involves leaders of
+nations and organizations worldwide working together to address considerations around governance,
+fairness, bias, transparency, and explainability.
+LINK TO LEARNING
+Artificial intelligence offers exciting opportunities to improve our lives as it becomes interwoven into
+466
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+medical therapies, smart home devices, and strategic decision-making processes; however, AI presents
+challenges of balancing its capabilities with the need for good governance and ethical management. Learn
+more by exploring UNESCO’s Recommendation on the Ethics of Artificial Intelligence (https://openstax.org/
+r/109EthicsofAI) and how its core values are being implemented by member states.
+Ethical Governance and Regulations in Artificial Intelligence Systems
+and Products
+The development and use of AI systems must be guided by clear accountability and responsibility frameworks
+to be ethical. Developers, deployers, and users of AI should be accountable for any adverse impacts resulting
+from flawed system design, limitations, or misuse, such as phishing or identity theft. Responsibility should be
+allocated across the AI value chain, from initial data collection and algorithm design to ongoing monitoring
+and maintenance. Legal regulations and industry standards help clarify where liability lies if harm does occur.
+For high-risk applications like self-driving cars or AI diagnostics, insurance may be warranted.
+Another central ethical concern is protecting privacy and ensuring AI is secure from misuse or cyberattacks. As
+AI systems collect and analyze expansive datasets, robust data governance practices must safeguard personal
+information and prevent unauthorized access. Approaches to help mitigate private risks can include data
+minimization to limit data collection to information that is relevant and necessary, encryption to transform
+data into code, and access controls to regulate who has access to data. Ongoing security assessments of AI
+systems (review 5.1 The Importance of Network Security) will identify potential vulnerabilities to be addressed.
+Any data breaches or system compromises must be reported per breach notification laws.
+To achieve these goals, maintaining meaningful human control and oversight over AI is critical. Humans—not
+fully autonomous systems—must remain ultimately responsible for high-stakes decisions. Artificial intelligence
+transparency, the ability to show that the outputs make sense, and results validation support human
+oversight. Humans may need to remain “in the loop” and check results when AI systems operate in real-time
+for critical use cases. Predefined constraints can also curb unfettered AI autonomy if human supervision is
+absent. The goal should be complementing human capabilities with AI, rather than replacing human discretion
+and authority.
+In addition to oversight, AI systems must be transparent regarding their capabilities and limitations.
+Documentation, logging, and monitoring should provide visibility into system functionality. User interfaces
+should clearly convey when users are interacting with AI instead of a human being since this can be difficult to
+discern. Such transparency ensures appropriate trust in AI systems by aligning user expectations with actual
+performance. It also facilitates auditing algorithms for issues like bias or inaccuracies. Guidelines and
+frameworks have been introduced to provide standards for developing and managing autonomous systems.
+Examples are the IEEE Global Initiative for Ethical Considerations in AI and Autonomous Systems and the EU’s
+European Commission's standards presented in their Ethics Guidelines for Trustworthy AI.21
+ETHICS IN IS
+Ethical Use of Chatbots
+Chatbots interact with users in increasingly humanlike ways. This raises ethical concerns, especially if the
+chatbots are not designed transparently. For example, chatbots may be used to gather individuals’ personal
+information, possibly violating their privacy. Chatbots can be manipulative, persuading users to make
+21
+“The IEEE Global Initiative 2.0 on Ethics of Autonomous and Intelligent Systems,” IEEE Standards Association, accessed January
+13, 2025, https://standards.ieee.org/industry-connections/activities/ieee-global-initiative/; “Ethics Guidelines for Trustworthy AI,”
+European Commission, last updated January 31, 2024, https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-
+ai
+12.3 • Ethics of Artificial Intelligence Development and Machine Learning
+467
+
+unwise decisions or purchases. Chatbots can also be biased, which may negatively impact how they interact
+with humans.
+To help ensure that chatbots are used ethically, chatbots should identify themselves up front as AI, and not
+pretend to be human. They also should provide options to opt out, including the option of dealing with a
+human rather than a chatbot.
+Another key governance issue is ensuring that AI systems are free from biases. Training data and algorithms
+must be continually vetted to avoid encoding social biases and prejudices into systems. Diversity among AI
+development teams also helps reduce bias. Regular algorithm audits and bias testing identify problems that
+must be addressed.
+To understand how a lack of AI accountability can cause harm, consider predictive policing algorithms. These
+algorithms have included biases that disproportionately target minorities. One example is PredPol, a predictive
+policing software tool used by the Los Angeles Police Department. With inadequate human oversight of the
+data and methods used by its algorithms, the flawed logic of the tool took a while to uncover. Eventually, its
+built-in loops and inability to reduce crime led to the department terminating its use. Related criticism has led
+to rebranding by PredPol (now Geolitica) and similar policing tools to focus less on predicting criminal events
+and more on improving policing transparency and accountability.22
+Alongside algorithmic bias, safety is another ethical imperative for AI and machine learning. Even if
+unintended, errors or limitations in complex AI systems carry risks of harm. Rigorous testing protocols are
+essential, especially for physical systems like autonomous vehicles or medical robots. Simulation environments
+allow for safe evaluation of hazardous scenarios. Fail-safes and human oversight provide additional protection
+and backup. Organizations that adopt an open, proactive approach toward safety will engender greater public
+trust.
+Sustainability is another emerging area of focus in AI ethics. The exponential growth of AI workloads has
+significant environmental impacts from energy consumption to electronic waste. Approaches like energy-
+efficient model design, low-emission chipsets, and carbon offsetting help mitigate this.23 Artificial intelligence
+can also be explicitly leveraged for sustainability initiatives, such as mapping deforestation, making waste
+management more efficient, and predicting both weather events and climate disasters to help communities.
+24
+Effective governance requires translating ethical principles into action via organizational policies, legal
+regulations, and industry norms. Governments must develop laws and policies tailored to the ethical use of
+emerging technologies, balancing innovation and responsible oversight. Companies should enact internal
+controls aligning AI development and usage with ethics and human values. They must also comply with
+evolving regulations. Global coordination will become more critical to synthesize governance across
+jurisdictions.
+Finally, civil society plays a crucial role in advocating for ethical AI. Organizations focused on digital rights,
+consumer protection, and social justice can help manifest public concern. They can also advise institutions on
+how to translate idealistic AI principles into concrete daily practices. Ongoing stakeholder dialogue and public
+engagement will ensure governance keeps pace with technological change.
+Realizing the benefits of AI while mitigating risks necessitates holistic governance that integrates ethics
+22
+Johana Bhuiyan, “LAPD Ended Predictive Policing Programs Amid Public Outcry. A New Effort Shares Many of Their Flaws,” The
+Guardian, November 8, 2021, https://www.theguardian.com/us-news/2021/nov/07/lapd-predictive-policing-surveillance-reform
+23
+Paul Henderson, Jieru Hu, Joshua Romanoff, Emma Brunskill, Dan Jurafsky, Joelle Pineau, “Towards the Systematic Reporting of
+the Energy and Carbon Footprints of Machine Learning,” Journal of Machine Learning Research, 21, no. 248 (2020): 1–43,
+https://www.jmlr.org/papers/volume21/20-312/20-312.pdf
+24
+Victoria Masterson, “9 Ways AI Is Helping Tackle Climate Change,” World Economic Forum, February 12, 2024,
+www.weforum.org/stories/2024/02/ai-combat-climate-change/
+468
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+throughout the technology life cycle. This requires foresight, responsibility, and coordination between
+stakeholders. If done comprehensively and with proper intention, AI can flourish in step with the enduring
+values of privacy, justice, autonomy, and human dignity.
+Artificial Intelligence’s Impact on Fairness, Bias, Transparency, and
+Explainability
+As AI systems grow increasingly powerful and ubiquitous, ensuring they align with principles of fairness,
+accountability, and transparency becomes imperative. Without proactive efforts, AI risks perpetuating harm by
+amplifying historical prejudices, concealing decision logic, and displacing human oversight.
+One major area of concern is that AI systems may discriminate against certain groups of people based on
+gender, race, age, or other attributes. If the data used to train algorithms contain social biases, such as
+information that promotes gender or racial stereotypes, AI can further engrain discrimination. Ongoing
+testing using diverse datasets is essential to uncover hidden biases. A human-in-the-loop system, which
+involves human contributions and feedback, also allows monitoring outputs for evidence of unfairness. Other
+best practices include data anonymization, adversarial debiasing to ensure AI is not biased by training
+examples, and minority oversampling to ensure balanced classes and sample sizes help mitigate
+prejudice.25 Promoting diversity among AI development teams further helps uncover issues that need
+attention. Overall, reducing algorithmic bias is an ethical imperative for organizations deploying AI.
+The need for transparency in how AI systems operate and make decisions is closely related. “Black box” models
+like neural networks can render decision logic opaque. However, documentation, logging, monitoring, and
+auditing capabilities can shed light on system functionality. User interfaces should clearly indicate when users
+interact with AI rather than humans. Such transparency fosters trust in AI’s actual capabilities. Openly
+conveying system limitations also reduces the risk of overreliance or misuse. Across all contexts, transparency
+principles foster ethical use of AI.
+Similarly, explainability—being able to convey the rationale behind AI decisions clearly—is crucial. While
+certain techniques like linear models or decision trees have self-evident logic, complex neural networks can be
+inscrutable. To properly question, validate, and enhance AI, developers should incorporate explainability
+capabilities into the development process wherever feasible. This might involve using localized interpretation
+methods or approximating models with more easily understood ones. While full explainability may not always
+be possible, aiming for intelligibility in design still promotes accountability.
+LINK TO LEARNING
+Explainability and explainable artificial intelligence (XAI) development (https://openstax.org/r/109XAI) can
+be a valuable tool to help companies manage legal and ethical issues associated with AI. Explaining AI helps
+users understand the “why” and “how” aspects of AI, making them more likely to trust and accept AI
+systems.
+These concerns create the need for meaningful human oversight over AI systems, particularly of those
+systems making high-stakes decisions, such as medical diagnoses. As noted previously, there are concerns
+that AI could become uncontrollable if it is granted unchecked autonomy. As AI develops, human beings must
+therefore remain ultimately accountable by retaining the ability to audit decisions and override them as
+warranted. Human-in-the-loop systems are especially important for high-risk real-time applications. In
+addition, all AI systems should have clearly defined constraints aligned with ethics and legal compliance.
+Ongoing human evaluation, even if not real-time oversight, is necessary for responsibly developing and
+deploying AI.
+25
+Anoop Krishnan and Ajita Rattani, “A Novel Approach for Bias Mitigation of Gender Classification Algorithms Using Consistency
+Regularization,” Image and Vision Computing, 137 (September 2023): 104793, https://doi.org/10.1016/j.imavis.2023.104793
+12.3 • Ethics of Artificial Intelligence Development and Machine Learning
+469
+
+Advancing AI transparency, explainability, and oversight raises technical challenges. Practices such as
+counterfactual testing and adversarial attacks can uncover limitations and biases of the AI models being used.
+But these practices require specialized expertise and added complexity. Through the use of extensive testing
+and validation procedures, emerging techniques like “Trustworthy AI” and “AI Safety” aim to make such
+capabilities intrinsic to system design, not afterthoughts.
+Getting governance right also involves grappling with some of the gray areas where it can be trickier to
+determine the appropriate actions. Without adequate safeguards, transparency could potentially open
+systems to gaming or manipulation by giving access to hackers and others who misuse AI. Explainability
+methodologies have technical limitations and assumptions that may yield explanations that are not easily
+understood. Furthermore, human oversight risks incorrect rejection of valid AI decisions due to cognitive
+biases. Strategies accounting for such subtleties are critical; oversight should focus on human strengths like
+values alignment, which involves using a shared set of values and goals approved by stakeholders to guide
+policies and procedures, such as AI development. These types of holistic approaches foster accountable
+innovation.
+Meaningful oversight extends beyond internal testing to external regulation and standards. Governments
+must keep pace with technological change and provide appropriate legal guidance for AI development and
+use. This may necessitate new data protection, algorithmic accountability, and AI safety regulations. Global
+coordination to harmonize AI governance across borders is also important. The nonprofit International
+Association of Privacy Professionals maintains a Global AI Law and Policy Tracker to identify AI governance
+legislations all over the world.26 They also sponsor the annual Global Privacy Summit to bring leaders from AI
+governance and privacy areas together. Industry leaders should collectively establish technical and ethical
+norms that go beyond the minimum legal requirement to help create responsible AI systems.
+CAREERS IN IS
+AI Ethicist
+An AI ethicist analyzes technological impacts and advocates for policies that align innovations with human
+values. AI ethicists are concerned with the various ethical facets of AI development and product
+implementation, including ethical guidance and standards. They review AI policies and procedures to
+ensure compliance with ethical requirements. They also identify risks and recommend changes as needed
+to address advancements in AI.
+While still fairly new, AI ethicist positions can be found in any type of organization that uses AI in its
+operations, including businesses, governments, and nonprofit organizations. AI ethicists work with
+organizational and community leaders to advocate for responsible, ethical AI development and
+implementation. Aspiring AI ethicists need interdisciplinary skills in technology, ethics, law, and social
+sciences, which enable them to gain nuanced perspectives on challenges like algorithmic bias,
+transparency, and worker displacement. To prepare for these roles, interested students should pursue
+degrees in computer science, information technology, and related fields with an emphasis on ethics and
+social sciences.
+26
+“Global AI Law and Policy Tracker,” IAPP, last updated November 2024, https://iapp.org/resources/article/global-ai-legislation-
+tracker/
+470
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+12.4 Ethics in Health Informatics
+Learning Objectives
+By the end of this section, you will be able to:
+•
+Describe the ethical use, governance, and regulation of artificial intelligence and machine learning
+in health care
+•
+Identify concepts in data ownership and control of health data
+•
+Describe the importance of privacy and confidentiality of sensitive health information
+Integrating information systems and cutting-edge technologies like AI into health care presents immense
+opportunities and significant ethical challenges. As these digital tools reshape medicine and the patient
+experience, thoughtful governance and deliberation around emerging issues are critical. Key ethical
+considerations pertaining to health informatics include using AI responsibly, protecting sensitive data,
+upholding privacy and accessibility, and promoting equity.
+Advances in AI, predictive analytics, telehealth, and medical devices offer new horizons for improving both
+quality and availability of care. At the same time, these technologies introduce risks such as inadequate data
+security, algorithmic bias, dehumanization of care, and unequal access. Developing appropriate oversight
+frameworks, aligning innovations with patient rights, and considering social implications are vital. A holistic,
+humanistic approach can allow health-care technology to enhance clinical judgment and person-centered care
+rather than replace them.
+Additionally, as health care generates ever-increasing amounts of digital data, safeguarding patient privacy
+and confidentiality grows increasingly complex and vital. Providing adequate cybersecurity protections,
+complying with responsible data-sharing standards, and respecting individuals’ control over their health
+information are essential functions. At the intersection of technology and care, trust and dignity must be
+paramount. With patient well-being at the center, health informatics can strengthen the bonds of compassion
+and humanity that define quality health care.
+Ethical Governance and Regulation of Artificial Intelligence in Health
+Care
+Integrating AI and machine learning into health care opens new frontiers for improving patient outcomes,
+expanding access, and revolutionizing medical science. For example, AI can be applied to data used in medical
+tests to diagnose diseases more accurately and more quickly, helping patients receive earlier treatment that
+could save lives. Artificial intelligence can also be used in datasets that support drug research and
+development, helping scientists better understand the genetic and biological disparities that lead to diseases
+and the medicines needed to address these. Artificial intelligence can also help health-care facilities with
+inventory management, improving efficiencies to ensure that they have necessary medications and other
+resources on hand to provide timely treatment to patients.
+However, as AI provides exciting opportunities to improve health care, it also raises complex ethical
+considerations surrounding transparency, accountability, privacy, bias, and oversight. Responsible governance
+and regulations tailored for health AI will be imperative as these technologies continue permeating clinical
+settings and medical research.
+Foremost, health AI systems must uphold principles of accountability and responsibility. Liability frameworks
+should clearly delineate where the fault lies if AI decisions or recommendations result in patient harm.
+Thorough validation testing and clinician oversight can help ensure safety and prevent overreliance on AI.
+Developers and providers must document capabilities and limitations to establish appropriate trust in AI tools.
+Such transparency allows clinicians to assess when AI augmentation is appropriate.
+As health data processing becomes increasingly automated and vast in scope, it is important to protect
+12.4 • Ethics in Health Informatics
+471
+
+patient privacy, which provides an individual with freedom from unauthorized access and use of one’s
+personal health information. Robust de-identification to remove any personal information included in data,
+access controls, encryption, and compliance procedures can secure personal records from unauthorized use or
+disclosure. Consent protocols should clearly convey how data are shared and used. Data minimization
+principles should ensure that data collection is limited and gathers only the data necessary to provide care.
+Additionally, individuals should be able to access their records and correct inaccuracies. Such measures build
+patient trust and prevent misuse. However, privacy protections should be designed so that they do not
+obstruct beneficial data sharing to conduct public health analysis or pursue research breakthroughs enabled
+by big data. To this end, anonymization techniques can help prevent misuse while still allowing aggregation for
+the common good.
+Another key issue associated with health-care AI involves reducing algorithmic bias and ensuring equity in
+health AI design, development, and deployment. Algorithmic bias can impact the ability of the health-care
+industry and other institutions to provide equitable services. The following are causes for algorithmic bias:
+•
+underrepresentation in training samples
+•
+mislabeled outcomes
+•
+programmers and developers who are biased
+•
+inadequate feedback loops to identify bias
+Since the data used to train AI systems often reflect social inequities, AI risks exacerbating health-care
+disparities if these inequities are not proactively addressed. Testing systems on diverse patient populations
+and representative data helps reveal bias.27 Meanwhile, development teams from diverse backgrounds can
+help reveal weaknesses. Engagement with stakeholders also provides feedback on how AI impacts different
+groups. With concerted effort, AI can help reduce, not amplify, health-related inequality.
+Realizing the safe and ethically sound potential of health AI requires balanced policymaking. Governments
+must develop sector-specific regulations addressing risks like breached data privacy or biased algorithms in
+medical devices. International coordination can help harmonize legal standards across global markets.
+Meanwhile, industry collaboration can establish operational best practices and technical standards exceeding
+legal minimums. This multitiered governance approach allows appropriate oversight without stifling
+innovation. In addition to top-down regulations, bottom-up advocacy is crucial. Patient groups, digital rights
+organizations, and other civil society stakeholders can voice concerns, advise institutions, and promote ethical
+norms around emerging technologies. Their on-the-ground perspectives generate important insights for
+human-centric and inclusive governance that works to protect all patients, including those from
+underrepresented and marginalized groups. This ongoing multistakeholder dialogue ensures health-care AI
+evolves responsibly.
+CAREERS IN IS
+Clinical Informatics Nurse Specialists
+Clinical informatics nurse specialists analyze and implement technologies that improve health-care delivery
+and patient records management. For example, they assess technology and information system needs in
+health care, develop policies to guide the implementation and use of technology in health care, assist
+health-care managers with interpreting data and using them in patient care, and coordinate training
+sessions to teach colleagues how to use new technology. To become a clinical informatics nurse specialist,
+students need at least a bachelor’s degree in nursing, and many students opt to earn a master’s degree in
+nursing. They also must earn the Informatics Nursing Certification offered by the American Nurses
+Credentialing Center. Strong information technology, analytics, data literacy, and communication skills
+27
+Natalia Norori, Qiyang Hu, Florence Marcelle, Aellen, Francesca Dalia Faraci, Athina Tzovara, “Addressing Bias in Big Data and AI
+for Health Care: A Call for Open Science,” Patterns, 2, no. 10 (October 8, 2021): 100347, https://doi.org/10.1016/j.patter.2021.100347
+472
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+enable these health-care practitioners to be leaders as health-care facilities implement and use technology,
+including AI.
+Implementing AI in health care requires a holistic approach that balances the technical capabilities of this
+technology with social responsibilities. With patient well-being at the center, transparent and compassionate
+design can augment, not displace, humanistic care. If guided by wisdom and proper intention, health-care AI
+technologies can help heal on a societal scale.
+Data Ownership and Control of Health Data
+As health care embraces digitization, vast quantities of sensitive patient data are being generated and
+analyzed. In light of this, upholding data ownership rights and enabling individuals to control how their health
+information is utilized has become imperative. Beyond being an ethical obligation, building trust with patients
+and helping them be proactive participants in their health care are foundational to realizing the full potential
+of data-driven medicine.
+At the most basic level, the principle that patients—not providers or technology vendors—own their medical
+data must be respected. Custodians like hospitals and insurers possess health data, but they do not own the
+information. Furthermore, patients should be able to access their complete records, get copies, and move
+them between providers. Consent protocols must clearly convey how patients’ health data will be utilized, both
+for care and any secondary uses like research or analytics, and must allow patients to permit or deny access.
+Fundamental to an ethical approach, patient agency secures an individual’s right to access their health
+records, direct how their data are used, and be informed of data-sharing practices under clear consent
+protocols.
+In practice, however, sole emphasis on consent creates difficulties. Lengthy disclosures can confuse patients,
+and most will not voluntarily share data unless there is a personal need to do so. This limits benefits to the
+larger world. Alternative models like dynamic permission, where patients can modify access in centralized
+databases, help balance individual control with broader societal good. In any case, consent and permission
+require ongoing refinement to truly empower patients.
+Alongside consent, robust data protections are integral to maintaining trust. Breaches of medical records can
+inflict lasting harm by exposing sensitive diagnoses or genomic data. Strong cybersecurity defenses, access
+controls, and accountability procedures safeguard against misuse. De-identification and data minimization
+techniques also limit risks from unauthorized access, and transparency about security policies and data-
+sharing practices keeps patients informed.
+Enabling patient control over data extends beyond medical records. Individuals should also be able to
+voluntarily share additional data like wearable readings and lifestyle information with providers. Patient-facing
+apps allowing such integrations and other data donations enhance agency, but they require thoughtful design
+regarding consent and privacy protections to prevent misuse.
+Control is much less effective without health data literacy. Individuals cannot meaningfully authorize data
+usage when they do not understand the benefits and risks. Public outreach with educational materials and
+physician guidance must address such issues. Health systems should also offer patient data management
+portals with resources that enable them to exercise control based on preferences.
+Finally, governance frameworks must evolve to reinforce patient data rights. Explicitly encoding patient
+ownership and control can affirm these principles. Policies should also incentivize designing for consent,
+portability, and interoperability. Penalties for data misuse ensure that patient rights precede institutional or
+commercial interests. Putting people at the center of data governance propels ethical innovation.
+12.4 • Ethics in Health Informatics
+473
+
+Privacy and Confidentiality of Sensitive Health Information
+Safeguarding the privacy and confidentiality of patient health data is both an ethical obligation and a practical
+necessity for quality health care. As medical records become digital, ensuring information security and
+responsible data governance will only grow in importance. Core considerations around access controls, de-
+identification, bias prevention, and equity promotion form the foundation of trustworthy health-care
+information technology systems.
+At its core, preserving privacy means controlling access to sensitive personal information. Role-based access
+policies, robust authentication protocols, and auditing capabilities help prevent unauthorized viewing or use of
+records. Additional safeguards like encryption and network segregation provide layered security, and
+transparency regarding security programs and breaches helps maintain patient trust. De-identification
+techniques are also necessary when analyzing datasets for secondary purposes like research or public health
+initiatives. Anonymizing data by removing obvious identifiers protects subjects’ privacy without sacrificing
+analytic utility.
+Technical measures are only one facet of privacy. Equally important are responsible policies guiding health
+data usage. Data minimization principles limit collection and sharing to the minimum necessary for providing
+care, preventing needless exposure, and consent protocols give patients control over secondary uses.
+Furthermore, sound oversight governance ensures adherence to these ethical data practices.
+A distinct but related issue is preventing algorithmic bias and inequity resulting from flawed analytics. Since
+health data often reflects broader social biases, AI risks amplifying discrimination in areas like insurance
+eligibility if unchecked. Continual bias testing is thus essential, and human oversight of analytics is invaluable
+for the ethical interpretation of the data. Artificial intelligence should be an adjunct to human discernment, not
+a replacement.
+On a societal level, policies must also evolve to reinforce health data protections in the digital age. Regulations
+often focus on providers and payers, leaving individual rights unclear. Laws should encode patient ownership,
+control, and privacy at their core. Requirements like interoperability, the ability of computer systems and
+software to exchange and make use of information through standardized formats and communication
+protocols, strengthens autonomy for individuals.
+New approaches may be needed for ethically harnessing health data at scale while respecting rights. Options
+like data collaboration, which pools data from multiple sources, allow voluntary member data sharing for the
+common good under sound governance.28 Distributed analytics and federated learning models preserve data
+control and minimize access. Initiatives to rectify historical exclusions and mistrust are imperative for just
+datasets and equitable advancement.
+Understanding both the promise and principles of health-care information technology requires continuously
+aligning innovations with enduring human values. Patient privacy and dignity can remain inviolable with
+holistic policies and deliberative design. Harnessing the power of data for social good becomes possible when
+this process is grounded in ethics.
+GLOBAL CONNECTIONS
+Global Digital Health Networks
+The World Health Organization coordinates worldwide digital health strategies and standards through
+initiatives like the Global Digital Health Partnership. Such international collaboration allows sharing best
+practices to strengthen health information systems equitably across nations. It facilitates technology
+28
+“Health Data Collaborative,” Global Partnership for Sustainable Development Data, accessed January 13, 2025,
+https://www.data4sdgs.org/partner/health-data-collaborative
+474
+12 • Ethics, Sustainability, and Social Issues in Information Systems
+Access for free at openstax.org
+
+capacity building and regulation harmonization, aiming to spread benefits globally. For instance, common
+policy frameworks can help standardize electronic health record management across borders. Partnerships
+between countries enable the pooling of scarce expertise. With cooperation guiding progress, global health
+tech networks promote digital systems advancing care.
+12.4 • Ethics in Health Informatics
+475
+
+Key Terms
+adversarial debiasing
+process to ensure AI is not biased by training examples
+Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP)
+trade agreement
+setting intellectual property rights standards for member nations
+copyright law
+legal protection granted to authors of original creative works, giving them exclusive rights to
+reproduce, distribute, publicly display/perform, and make derivative works for a limited time
+corporate social responsibility (CSR)
+inherent recognition of the ethical relationship between a corporation
+and the larger social and environmental system that it inhabits
+dark patterns
+deceptive interfaces that nudge users toward harmful actions, such as buying overpriced
+products
+data collaboration
+process of pooling data from multiple sources
+de-identification
+technique for removing or obscuring personal identifiers in data to protect privacy while
+maintaining analytic utility
+deontology
+normative ethical theory that focuses on the inherent rightness or wrongness of actions
+themselves, as opposed to the consequences of those actions; follows the premise of the Golden Rule
+DIKW pyramid
+hierarchy used in information management and knowledge creation that represents an
+approach focused on the distinction between disparate elements; the base of the hierarchy is data, moving
+up through information and knowledge to its top point of wisdom
+ethical consumption
+being aware of the impact of consumption and making choices that prioritize
+longevity, repairability, and efficiency
+ethics
+values and principles that guide life decisions and experiences
+explainability
+ability to explain the rationale behind algorithmic predictions or automated decisions in
+intelligible ways to human users
+fair use
+legal doctrine that permits limited use of copyrighted material without the copyright owner’s
+permission for purposes such as education or news reporting
+Green IS
+information systems practices designed to minimize ecological impacts through energy efficiency,
+renewable resourcing, and responsible waste disposal
+human control
+maintaining meaningful human oversight and authority over AI systems rather than allowing
+fully autonomous operation; this is especially critical for high-stakes functions
+human-in-the-loop system
+system that involves human contributions and feedback when interacting with
+AI
+intellectual property law
+area of law concerned with ideas, including technological concepts; it covers
+trademarks, trade secrets, patents, and copyrights
+interoperability
+ability of computer systems and software to exchange and make use of information
+through standardized formats and communication protocols
+Lean IS
+information systems practices focused on eliminating redundancies and waste to optimize system
+efficiency and productivity
+minority oversampling
+ensures balanced classes and sample sizes for AI training
+multistakeholder collaboration
+process of varied stakeholders working together to achieve common goals
+open-source
+in computing, the source code of a program open to everyone rather than being restricted via
+copyright
+patent law
+legal protection granted for a limited time to inventors of new, useful, and nonobvious products
+or processes, giving them rights to prevent others from making, using, or selling the invention
+patient agency
+individual’s right to access their health records, direct how their data are used, and be
+informed of data-sharing practices under clear consent protocols
+patient privacy
+freedom from unauthorized access to and use of one’s personal health information; a right
+protected through data security and governance policies
+sustainability
+long-term viability of systems, considering their environmental, economic, and social impacts
+sustainable consumption and production (SCP)
+using and producing goods and services in a way that has
+476
+12 • Key Terms
+Access for free at openstax.org
+
+the least negative impact on the environment
+Sustainable Development Goals (SDGs)
+set of seventeen interconnected objectives established by the
+United Nations in 2015 to address global challenges and ensure a more sustainable future for humanity
+Sustainable IS
+holistic approach that considers the long-term impacts and viability of information systems,
+focusing on environmental, economic, and social implications
+sustainable supply chain management (SSCM)
+approach that seeks to infuse sustainability principles into
+the supply chain process
+systems thinking
+perspective emphasizing the interconnectedness of components within a whole,
+suggesting that the overall behavior of a system results from these interactions
+trade dress
+unique visual appearance of a product or its packaging
+trade secret law
+business information that derives value from being kept confidential, is subject to
+reasonable efforts to maintain secrecy, and gives a competitive advantage
+trademark law
+word, phrase, symbol, design, or combination thereof that identifies the source of a good or
+service and distinguishes it from others
+utilitarianism
+normative ethical theory holding that the morally correct course of action is the one that
+maximizes utility and happiness for the greatest number of people
+values alignment
+using a shared set of values and goals approved by stakeholders to guide policies and
+procedures, such as AI development
+virtue ethics
+normative ethical approach emphasizing the embodiment of virtues and ideals as the path
+toward an ethical, flourishing life
+World Intellectual Property Organization (WIPO)
+UN agency that promotes IP protection and cooperation
+between nations to foster innovation and creativity
+Summary
+12.1 Ethics, Sustainability, and Use of Information Systems
+•
+Three main normative theories provide frameworks for assessing the ethics of actions: utilitarianism,
+which focuses on consequences of actions; deontology, which evaluates the action itself; and virtue ethics,
+which concentrates on the character of the actor.
+•
+Systems thinking enhances ethical reasoning by emphasizing holistic analysis of complex situations’
+interconnected components and relationships. This allows for a broader understanding of direct and
+indirect impacts.
+•
+Sustainability considers the long-term viability of organizational systems in terms of environmental
+stewardship, economic viability, and social welfare. Information systems practices should align with these
+sustainability pillars to minimize waste and harsh effects on the environment, increase efficiencies in
+business, and promote a positive impact on society.
+•
+Green IS focuses on minimizing information systems’ ecological footprint through energy efficiency,
+renewable resourcing, responsible disposal, and similar practices.
+•
+Lean IS concentrates on eliminating information system waste and redundancies to optimize productivity,
+efficiency, and resource utilization.
+•
+Sustainable IS provides a more holistic approach, considering information systems’ long-term impacts and
+viability, focusing on environmental, economic, and social implications.
+•
+Sustainable supply chain management seeks to infuse sustainability principles into the supply chain
+process.
+•
+Corporate social responsibility is an inherent recognition of the ethical relationship between a corporation
+and the larger societal and environmental system that it inhabits. Companies can use the three Ps of CSR
+(people, planet, profit) as a guide to determine appropriate information system and technology practices
+to follow.
+•
+As information systems become more integrated into society, thoughtful application of ethical frameworks
+12 • Summary
+477
+
+and sustainable practices will be crucial for responsible innovation that benefits humanity.
+12.2 Intellectual Property
+•
+The United States recognizes four forms of IP, and each is protected by its own law: copyrights, patents,
+trade secrets, and trademarks. These forms of IP law provide legal protections for a period of time to
+incentivize the creation of new information.
+•
+Each form of IP has different requirements to initiate or apply for protection, as well as different
+protections provided, and varying durations.
+•
+Each of these forms of IP has the potential to provide monetary rewards for organizations that employ
+information systems and information technology.
+•
+Intellectual property laws raise ethical issues. For example, they have the potential to restrict access to
+information and technology, which can create a digital divide. Individuals and communities that lack
+access may experience disadvantages if they cannot use this information and technology for things such
+as decision-making.
+•
+There are several international initiatives that seek to protect IP. These generally seek to harmonize
+existing IP laws across national borders to make IP function more uniformly and efficiently for companies
+that operate in multiple nations.
+12.3 Ethics of Artificial Intelligence Development and Machine Learning
+•
+Responsible AI development includes ethical governance that addresses considerations such as
+transparency, accountability, bias prevention, human control, and oversight. Regulations and industry
+standards ensure that technology is aligned with human values and principles.
+•
+Multistakeholder collaboration between governments, companies, and civil society is critical to developing
+policies and norms that can effectively govern the growth of ethical AI innovation.
+•
+Algorithmic bias must be proactively addressed through testing that involves diverse datasets, audits,
+minority oversampling, and human monitoring. Transparency regarding AI development builds trust with
+users.
+•
+Explainability methodologies provide insight into AI decision logic. Continual human validation and
+oversight are essential, especially for high-stakes decisions.
+12.4 Ethics in Health Informatics
+•
+The use of AI and automation in health care requires thoughtful governance that addresses accountability,
+privacy, security, bias prevention, and human oversight to ensure responsible innovation. Regulations and
+policies must balance emerging technologies with patient rights.
+•
+Upholding individual control and consent regarding health data usage builds patient trust and prevents
+misuse, while still allowing ethical data sharing for the public good.
+•
+Safeguarding the privacy of sensitive patient information requires robust technical protections such as
+access controls, encryption, and de-identification, as well as responsible data governance policies.
+•
+Algorithmic bias and systemic discrimination must be proactively addressed to promote health equity.
+Inclusive design and community engagement foster the ethical use of technology.
+•
+With patient well-being at the core, innovations like AI can be harnessed to augment—not
+replace—humanistic health care. Ethical governance and compassionate design are imperative.
+Review Questions
+1. What ethical theory focuses on taking actions that could be universalized as moral laws that all individuals
+should follow?
+a. virtue ethics
+b. utilitarianism
+c. deontology
+d. consequentialism
+478
+12 • Review Questions
+Access for free at openstax.org
+
+2. What is the main principle of utilitarianism?
+a. create the greatest good for the greatest number
+b. only take actions that you would want others to take
+c. develop virtues to become an ideal human being
+d. focus on the consequences of actions
+3. Systems thinking emphasizes the importance of viewing components as part of a larger, interconnected
+________.
+a. process
+b. goal
+c. team
+d. whole
+4. What practice involves eliminating redundancies and waste to improve efficiency in information systems?
+a. Green IS
+b. Lean IS
+c. Secure IS
+d. Sustainable IS
+5. What type of intellectual property protection is best suited for a company logo?
+a. copyright
+b. patent
+c. trademark
+d. trade secret
+6. What does the World Intellectual Property Organization (WIPO) primarily do?
+a. protects individual copyrights globally
+b. prosecutes international patent infringements
+c. promotes the protection of IP rights worldwide
+d. assigns internet domain names
+7. In the context of IP law, what term best describes the protection of information that a company wishes to
+keep secret, such as a proprietary recipe or manufacturing process?
+a. copyright
+b. patent
+c. trademark
+d. trade secret
+8. What form of intellectual property law would prevent a competitor from reverse engineering a new
+process for integrating information systems into a corporate setting?
+a. copyright
+b. patent
+c. trademark
+d. trade secret
+9. What practice involves continually testing AI systems using diverse datasets to reveal inaccurate
+preconceptions?
+a. encryption
+b. transparency
+c. bias testing
+d. accountability
+10. What concept refers to the ability to describe an AI model’s logic and decisions in understandable ways?
+a. constraining
+12 • Review Questions
+479
+
+b. governance
+c. explainability
+d. anonymization
+11. Who should ultimately remain responsible for high-stakes decisions being informed by AI?
+a. the AI system
+b. government regulators
+c. company executives
+d. human overseers
+12. What term describes the openness and visibility into how an AI system functions?
+a. explainability
+b. transparency
+c. equity
+d. oversight
+13. What practice helps ensure AI systems complement humans rather than replace human discretion?
+a. automated decision-making
+b. accountability
+c. technological unemployment
+d. human control
+14. What concept refers to an individual’s right to access and control their health data?
+a. interoperability
+b. patient privacy
+c. consent
+d. patient agency
+15. What technique involves removing specific details from patient data to protect privacy?
+a. encryption
+b. immutability
+c. anonymization
+d. de-identification
+16. Who should remain ultimately responsible for high-risk clinical decisions informed by artificial
+intelligence?
+a. the AI system
+b. government regulators
+c. hospital administrators
+d. human health-care providers
+17. What practice helps ensure underserved communities can access health technologies?
+a. liability insurance
+b. discrimination testing
+c. digital literacy initiatives
+d. inclusive design
+Check Your Understanding Questions
+1. What is systems thinking and how can it be useful in ethical decision-making?
+2. What are the three pillars of sustainability in information systems?
+3. Explain the requirements a work needs to meet to gain copyright protection.
+4. Describe the role of the World Intellectual Property Organization.
+480
+12 • Check Your Understanding Questions
+Access for free at openstax.org
+
+5. Why are trademarks important in the information systems industry?
+6. How can algorithmic bias be mitigated when developing AI systems?
+7. Why is explainability important for ethical AI systems?
+8. What role does multistakeholder collaboration play in ethical AI governance?
+9. How does robust data governance help uphold patient privacy in health-care information systems?
+Application Questions
+1. How might your ethical perspective change when assessing a situation from an individual versus
+organizational versus societal perspective? What factors might you prioritize differently?
+2. Reflect on a recent technological innovation that you find interesting. Considering what you have learned
+about intellectual property law, how would you protect this innovation from being copied or stolen? What
+type of intellectual property protection (copyright, patent, trademark, trade secret) would be most suitable
+and why? Discuss any potential challenges or issues that could arise in protecting this innovation and how
+you might address them.
+3. Think of an AI or automated system you regularly use. What potential ethical risks or biases might it have
+that you could investigate further? How could you envision enhancing transparency or human oversight?
+4. Watch the video overview of IBM's AI FactSheets (https://openstax.org/r/109AIFactSheet) on its practices.
+How could Supplier Declaration of Conformity fact sheets help promote ethical AI governance? What
+limitations might exist?
+5. How would you want health-care technologies like artificial intelligence or big data analytics to be used in
+your own medical care? What concerns would you have?
+6. How might your perspective on health data privacy change if you or a loved one relied on connected
+technologies like pacemakers or glucose monitors? What concerns might emerge?
+12 • Application Questions
+481
+
+482
+12 • Application Questions
+Access for free at openstax.org

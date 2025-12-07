@@ -1,0 +1,183 @@
+Chapter 1 - Introduction
+1.1 Global Cement Production and Environmental Impact
+Cement-based materials are essential for urban development, with a rich history dating back to the 
+Egyptian pyramids (3000 BC) and Roman architecture (300 BC-476 AD). Joseph Aspdin's invention of 
+Portland cement in 1824 revolutionized construction and enabled landmark structures from the Alvord Lake 
+Bridge (1889) to the Hoover Dam (1936) and modern skyscrapers. However, this essential material comes 
+with significant environmental consequences.
+Growing awareness of the importance of mitigating climate change drives research efforts toward 
+developing economically viable technologies for reducing greenhouse gas emissions. The high energy 
+consumption and carbon-intensive nature of cement manufacturing make it worthwhile to examine the 
+environmental and economic characteristics of process improvements in cement production. Climate 
+change and further warming due to greenhouse gases in the atmosphere can significantly impact life. Its 
+effects include frequent and severe storms, wildfires, floods, heavy precipitation in some regions and severe 
+drought in others, rising sea levels, and impacts on health, food, and water supply.
+Cement production has more than doubled since 2000, with urbanization and infrastructure 
+development continuing to drive demand upward. Global cement production reached approximately 4.1 
+billion tons in 2022, with China accounting for more than half of the worldwide output [1-2]. Cement 
+production is estimated to be responsible for approximately 8% of the global carbon dioxide (CO₂) 
+emissions caused by humans [3]. From the statistics in Figure 1 and Figure 2, these emissions have shown 
+a troubling trend, increasing faster than the cement production rate, indicating a worsening carbon intensity 
+in some regions.
+2
+Figure 1: Cement production worldwide from 1995 to 2022 [4]
+Figure 2: Carbon dioxide emissions from the manufacture of cement worldwide [5]
+1.2 Carbon Footprint of Cement Manufacturing
+Cement production has three stages: raw material extraction and preparation, clinker production, and 
+cement grinding. First, limestone (CaCO₃) is ground with other minor constituents and heated at 900°C via 
+cyclones. The mixture is passed through the rotary kiln to produce a mixture of calcium silicates (cement 
+clinker) from reactions at 1450–1500°C. The clinker is cooled, ground to a fine powder, and mixed with 
+gypsum to produce cement [6]. Cement manufacturing is inherently carbon-intensive due to chemical and 
+energy-related emissions. Carbon dioxide is a by-product of the chemical conversion process that produces 
+3
+clinker from limestone and clay. This reaction represented as CaCO₃ + Heat → CaO + CO₂, accounts for 
+approximately 60% of emissions in cement production. The remaining emissions come from burning fossil 
+fuels to heat the kiln to the extreme temperatures (1450-1500°C) required for clinker formation and from 
+generating the electricity that powers various manufacturing processes.
+Reports from major Western cement manufacturers such as LafargeHolcim and Heidelberg Cement 
+indicate that more than 550 kg of CO₂ is emitted per ton of cement produced. However, due to the high 
+temperatures required for its production and the direct emissions from the calcination of limestone, 
+decarbonizing cement production is challenging and has been the subject of many research efforts [6-8].
+1.3 Current State of Energy Consumption in Cement Production
+The cement industry uses 12-15% of the global industrial sector's annual energy consumption, 
+highlighting its significant energy footprint [9]. This considerable energy use contributes to approximately 
+8% of global CO₂ emissions. Because of the cement industry's environmental impact, specific mitigation 
+strategies, such as using alternative fuel and clinker substitution, are required. There are opportunities to 
+mitigate CO₂ emissions from process modification and energy efficiency because both process- and fuelrelated emissions account for approximately 40% of total direct emissions. Some CO₂ mitigation methods 
+suggested in the literature include carbon sequestration or carbon capture, utilization and storage (CCUS), 
+use of alternative fuels in the kiln, energy recovery, waste heat recovery, and increasing the proportion of 
+semi-dry and dry processes [10].
+Energy consumption in cement manufacturing falls into two major categories: thermal and electrical 
+energy. Thermal energy, primarily used in pyro-processing for clinker production, accounts for 
+approximately 70-80% of total energy consumption. The International Energy Agency reported that, from 
+2010 to 2020, the thermal energy intensity of clinker decreased by 0.2% annually. However, it has since 
+plateaued at around 3.6 GJ/t. This decline brought about a rise in the sector's electricity intensity, estimated
+at 100 kWh/t cement since 2022 [11].
+4
+Electrical energy drives crushing, grinding, conveying, and machine operation throughout the 
+manufacturing process of cement. A typical modern cement plant is estimated to consume up to 110 kWh 
+of electricity for grinding a ton of cement [12]. About 95 million metric tons of cement was produced in the 
+United States in 2022, using up more than 8.9 billion kWh of electricity with resultant emissions of an 
+estimated 4.47 million tons of CO₂ by the power plants which typically use fossil fuel or natural gas to 
+generate the electric power used for manufacturing [13].
+1.4 Research Gap in Electrical Energy Consumption Optimization
+The strategies for carbon-reduction process improvements in energy use within cement manufacturing 
+have been largely focused on thermal energy despite the significant carbon emission contribution from 
+electrical energy consumption (EEC) during production [13]. Research findings indicate that adopting some 
+of the advancements in thermal energy efficiency in cement production increased EEC within the sector. 
+The cost of cement production rises directly with the price of electricity. EEC in raw meal grinding is a 
+critical aspect of cement production, where grinding operations can account for up to 27% of total plant 
+electricity demand [14]. The energy required for grinding operations represents one of the largest 
+operational costs in this industry, directly impacting production efficiency and sustainability metrics. This 
+emphasizes the value obtainable from optimizing EEC in the raw meal grinding process of cement 
+manufacturing.
+Despite its obvious importance, research on implementing electrical energy-saving measures at the 
+plant level has been surprisingly slow. The literature search indicates that studies on power consumption 
+optimization in cement manufacturing are limited in number and scope [13]. This presents a significant 
+research gap that this dissertation aims to address.
+1.4.1 Limitations of Conventional Optimization Approaches
+Implementing optimization within the complex system of raw meal grinding is quite challenging. The 
+challenges primarily revolve around the complexity of the grinding process and the requirements for 
+5
+accuracy in modeling. The nonlinear nature of grinding, coupled with variable working conditions, 
+complicates the establishment of effective mathematical models for optimization. Advanced modeling 
+techniques are being developed to optimize grinding parameters and improve throughput [15]. However, 
+many efforts are not focused on improving the energy efficiency of the raw meal grinding process.
+Traditional optimization approaches using a simple machine learning model of a cement plant have not 
+resulted in sustainability practices at the cement plant because they have struggled to fully address the 
+inherent complexity and nonlinearity of the raw meal grinding process. The outcomes of typical traditional 
+optimization have been difficult to translate to actual interventions at the cement plant.
+1.4.2 Need for a Different Approach
+Unlike simple ML models operating in optimization loops that treat process variables as independent 
+inputs without understanding causal relationships, cement manufacturing requires understanding why 
+parameter changes affect electrical energy consumption. Listed under are limitations with traditional 
+optimization approaches that make them sub-optimal for optimizing electrical energy consumption in the 
+raw meal grinding system of cement manufacturing:
+• Not distinguishing between correlation and causation in complex industrial systems.
+• Failing to account for confounding variables and material variations.
+• Difficulty in ascertaining that their interventions will not violate physical constraints or quality 
+requirements.
+• Difficulty in handling the significant disturbances (such as noise, environmental factors, 
+material variations, and human interactions) inherent in real-world manufacturing.
+1.5 Systems Engineering Approach to Sustainable Manufacturing
+Addressing the complex challenges of sustainable cement manufacturing requires a comprehensive 
+systems engineering approach. Systems engineering principles provide a framework for bringing systems 
+into being, encompassing system synthesis, analysis and evaluation, system life-cycle engineering, and 
+6
+implementation. This approach is particularly valuable for tackling the multifaceted problem of optimizing 
+electrical energy consumption in cement production while maintaining product quality and economic 
+viability.
+The cement production system can be decomposed into ten interconnected subsystems. Figure 3 shows 
+this decomposition and estimates the specific electrical energy consumption (SEEC) within each subsystem.
+Figure 3: Cement production as a system of systems
+A system of systems (SoS) engineering approach enables the integration of these subsystems into a 
+cohesive whole. SoS engineering is defined by distinguishing characteristics and views a system-of-systems 
+as a network whose engineering can benefit from network management best practices [16]. This perspective 
+is essential for understanding the interconnected nature of cement manufacturing processes and identifying 
+opportunities for optimization across subsystem boundaries.
+With the advent of Industry 4.0 and the industrial Internet of Things (IIoT), there are new opportunities 
+to apply advanced technologies to cement manufacturing. Digitalization and data-driven process 
+optimization of cement manufacturing will help the industry better manage energy consumption and reduce 
+7
+emissions and raw material inefficiencies [17]. There has been improvement in sensors, data management, 
+related Internet of Things (IoT) toolkits, and increased maturity levels of artificial intelligence. These and 
+the templatization of life cycle and techno-economic assessments all contribute to a deployment framework 
+for continuously assessing the economic and environmental impact of process improvements in cement 
+manufacturing [18].
+1.6 Goals, Research Questions, and Contributions
+The main objective of this research is to determine if operational data from a cement manufacturing 
+system can be used to engineer systems to reduce carbon emissions in the cement manufacturing process 
+while maintaining product quality and economic viability. The scope of the study includes how to leverage 
+advanced analytics, industrial Internet of Things (IIoT), and systems engineering principles to develop 
+methods for sustainable cement manufacturing process improvements.
+To accomplish the goal, research questions were identified as follows:
+• How can causal relationships between operational variables be systematically identified and leveraged 
+in cement raw meal grinding optimization, where traditional ML approaches fail due to confounding 
+variables and complex interdependencies?
+• What framework can effectively handle the significant real-world disturbances (material variations, 
+environmental factors, equipment degradation) that render conventional optimization approaches 
+inadequate in industrial cement manufacturing?
+• How can Causal Bayesian Optimization be adapted to complex, real-world industrial systems with 
+operational constraints, quality requirements, and safety considerations?
+The hypothesis is that proper analysis of the cement plant operational data by leveraging advanced 
+analytics and systems thinking can result in process improvement recommendations for the cement industry. 
+More specifically, this research represents a significant advancement in industrial optimization by:
+8
+• Introducing the first comprehensive causal framework for industrial energy optimization that goes 
+beyond correlation-based approaches to understand true cause-and-effect relationships in 
+manufacturing systems.
+• Creating a generalizable systems engineering framework that integrates environmental impact 
+assessment and economic viability analysis of process improvements to help cement manufacturers 
+make informed decisions that balance sustainability and profitability.
+• Address a critical gap in sustainable cement manufacturing by focusing on optimizing electrical energy 
+consumption, which has received less attention than thermal energy improvements despite its 
+significant environmental impact.
+• Pioneering the application of causal inference and Bayesian optimization techniques in heavy industrial 
+settings to reduce electrical energy consumption in the raw meal grinding subsystem of cement 
+manufacturing, extending CBO to complex manufacturing environments with multiple constraints and 
+disturbances.
+1.7 Dissertation Structure
+This dissertation addresses the critical challenge of optimizing electrical energy consumption in cement 
+manufacturing through the engineering of intelligent systems. It builds upon the author's published research 
+papers, which provide a foundation for understanding the environmental impact, economic viability, and 
+technical approaches to sustainable cement production.
+The dissertation is organized as follows:
+Chapter 2 reviews literatures and existing methods of decarbonization and optimization, establishing the 
+framework for exploring how intelligent systems can contribute to sustainable cement manufacturing.
+Chapter 3 presents a continuous assessment framework for environmental impact and economic viability 
+of sustainability improvements based on life cycle assessment (LCA) and techno-economic assessment 
+(TEA) methodologies. This chapter examines four scenarios from a combination of two cement types and 
+two energy sources for thermal heating, demonstrating the potential for significant emission reductions.
+9
+Chapter 4 explores artificial intelligence applications for electrical energy consumption optimization, 
+synthesizing existing scholarly works and industry reports on methods and approaches for EEC 
+optimization in cement production. It highlights the value of applying artificial intelligence to extract 
+operational insights from data collected at cement plants. Chapter 5 presents experimental validation and 
+results from implementing a novel approach. It focuses on applying a memory-efficient hybrid variant of
+Causal Bayesian Optimization to raw meal grinding, which demonstrates the potential for substantial 
+reductions in electrical energy consumption. Chapter 6 concludes the dissertation by summarizing the 
+research findings and contributions, discussing implications for sustainable manufacturing, acknowledging 
+limitations, and suggesting directions for future research.
+Through this structure, the dissertation aims to contribute to the ongoing efforts to decarbonize cement 
+manufacturing by addressing the significant but often overlooked opportunity of electrical energy 
+consumption optimization.

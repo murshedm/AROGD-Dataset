@@ -1,0 +1,668 @@
+Chapter 6
+Conclusion
+In this chapter, we will discuss the summary of the research presented in this thesis. Then
+we will discuss the future potential work scope that is required for further improvement of
+multi-hop question generation system.
+6.1
+Summary
+In this thesis, we have proposed a new approach for automatic multi-hop question gen-
+eration system to address the challenges of multi-hop question generation that requires mul-
+tiple reasoning over information. We utilize the HotpotQA dataset which is mostly popular
+and highly used in research community for multi-hop question generation and multi-hop
+question answering tasks. Our approach is based on Knowledge Graph generation from the
+input text where GAT is leveraged for graph embedding generation which is concatenated
+with input text embedding. BART and T5 both are used in this thesis as large language
+models where BART provides significant result over T5. The integration of GAT, SBERT,
+and BART has shown an important contribution in the field of multi-hop question gener-
+ation where the evaluation metrics have shown a great impact of results comparing to the
+existing models. In the appendix, we have shown the quality of generated questions of
+the model comparing to the reference questions where comparison are also given between
+predicted questions and reference questions.
+57
+
+6.2. FUTUTRE WORK
+6.2
+Fututre Work
+As multi-hop question generation is relatively a new area of research, there are still
+some directions to make improvements in future research.
+• Low Resource Multi-hop Question Generation:
+There are multiple languages which do not have proper datasets for doing effective
+research on multi-hop question generation system. Enriching cross lingual and mul-
+tilingual capacity can help to improve the ability of multi-hop question generation
+system for low resource languages.
+• Prompting Techniques:
+Utilizing different prompting techniques like Vanilla prompting, tree of thoughts
+prompting, graph of thoughts prompting may improve the performance of LLMs for
+multi-hop question generation.
+• Human in the loop (HTL):
+Leveraging human feedback during the time of training process can be effective to
+generate accurate multi-hop questions.
+• Domain Specific Multi-hop Question Generation:
+During fine-tuning, leveraging specific dataset based on domain can be helpful for
+specific domains like medicine, agriculture, economics, science etc.
+• Evaluation Metrics for Multi-hop Questions:
+Proposing new evaluation metrics which can measure multi-hop relevance, reason-
+ing, and answerability will be very impactful to measure the quality of predicted
+questions.
+• Mitigating Bias in Multi-hop Question Generation:
+Analyzing potential biases (like gender, demography, culture) in the generated ques-
+tions and developing mitigating techniques is a good idea of further research in this
+58
+
+6.2. FUTUTRE WORK
+field.
+• Multimodal Multi-hop Question Generation:
+Generating questions based on input text and image or table can be very impactful in
+different fields like medicine, education and others.
+59
+
+Bibliography
+Abien Fred Agarap. Deep Learning using Rectified Linear Units (ReLU), 2019. URL
+https://arxiv.org/abs/1803.08375.
+Amit Alfassy, Assaf Arbelle, Oshri Halimi, Sivan Harary, Roei Herzig, Eli Schwartz,
+Rameswar Panda, Michele Dolfi, Christoph Auer, Kate Saenko, PeterW. J. Staar, Rogerio
+Feris, and Leonid Karlinsky. FETA: Towards Specializing Foundation Models for Expert
+Task Applications, 2022.
+Felipe Almeida and Geraldo Xex´eo. Word Embeddings: A Survey, 2023. URL https:
+//arxiv.org/abs/1901.09069.
+Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. Neural Machine Translation by
+Jointly Learning to Align and Translate, 2016. URL https://arxiv.org/abs/1409.
+0473.
+Marco Baroni, Georgiana Dinu, and Germ´an Kruszewski. Don‘t count, predict! A sys-
+tematic comparison of context-counting vs. context-predicting semantic vectors.
+In
+Kristina Toutanova and Hua Wu, editors, Proceedings of the 52nd Annual Meeting of
+the Association for Computational Linguistics (Volume 1: Long Papers), pages 238–
+247, Baltimore, Maryland, June 2014. Association for Computational Linguistics. doi:
+10.3115/v1/P14-1023. URL https://aclanthology.org/P14-1023/.
+Anya Belz and Ehud Reiter. Comparing Automatic and Human Evaluation of NLG Sys-
+tems. 01 2006.
+Yoshua Bengio, R´ejean Ducharme, Pascal Vincent, and Christian Janvin. A Neural Proba-
+bilistic Language Model. J. Mach. Learn. Res., 3(null):1137–1155, March 2003. ISSN
+1532-4435.
+Lukas Biermann, Sebastian Walter, and Philipp Cimiano.
+A Guided Template-Based
+Question Answering System over Knowledge Graphs.
+In International Conference
+Knowledge Engineering and Knowledge Management, 2018.
+URL https://api.
+semanticscholar.org/CorpusID:53957812.
+Miroslav Blˇst´ak and Viera Rozinajov´a. Automatic question generation based on sentence
+structure analysis using machine learning approach. Natural Language Engineering, 28
+(4):487–517, June 2021. ISSN 1469-8110. doi: 10.1017/s1351324921000139. URL
+http://dx.doi.org/10.1017/S1351324921000139.
+Samuel R. Bowman, Gabor Angeli, Christopher Potts, and Christopher D. Manning. A
+large annotated corpus for learning natural language inference. In Llu´ıs M`arquez, Chris
+60
+
+BIBLIOGRAPHY
+Callison-Burch, and Jian Su, editors, Proceedings of the 2015 Conference on Empirical
+Methods in Natural Language Processing, pages 632–642, Lisbon, Portugal, September
+2015. Association for Computational Linguistics. doi: 10.18653/v1/D15-1075. URL
+https://aclanthology.org/D15-1075.
+Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla
+Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini
+Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya
+Ramesh, Daniel M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark
+Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher
+Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. Language
+Models are Few-Shot Learners. In Proceedings of the 34th International Conference on
+Neural Information Processing Systems, NIPS ’20, Red Hook, NY, USA, 2020. Curran
+Associates Inc. ISBN 9781713829546.
+Zhen Cao, Pengfei Li, Yong Zhong, and Shaobo Li. Multi-Hop Question Generation with
+Knowledge Graph-Enhanced Language Model. Applied Sciences, 13, 05 2023. doi:
+10.3390/app13095765.
+Akhil Chaudhary, Enayat Rajabi, Somayeh Kafaie, and Evangelos Milios. Fact retrieval
+from knowledge graphs through semantic and contextual attention.
+Expert Systems
+with Applications, 282:127612, 2025. ISSN 0957-4174. doi: https://doi.org/10.1016/
+j.eswa.2025.127612.
+URL https://www.sciencedirect.com/science/article/
+pii/S0957417425012345.
+Wei Chen and Gregory Aist. Generating Questions Automatically from Informational Text.
+2009. URL https://api.semanticscholar.org/CorpusID:15246592.
+Yi Cheng, Siyao Li, Bang Liu, Ruihui Zhao, Sujian Li, Chenghua Lin, and Yefeng
+Zheng.
+Guiding the Growth: Difficulty-Controllable Question Generation through
+Step-by-Step Rewriting. In Chengqing Zong, Fei Xia, Wenjie Li, and Roberto Nav-
+igli, editors, Proceedings of the 59th Annual Meeting of the Association for Compu-
+tational Linguistics and the 11th International Joint Conference on Natural Language
+Processing (Volume 1: Long Papers), pages 5968–5978, Online, August 2021. As-
+sociation for Computational Linguistics.
+doi: 10.18653/v1/2021.acl-long.465.
+URL
+https://aclanthology.org/2021.acl-long.465/.
+Kyunghyun Cho, Bart van Merrienboer, Caglar Gulcehre, Dzmitry Bahdanau, Fethi
+Bougares, Holger Schwenk, and Yoshua Bengio. Learning Phrase Representations us-
+ing RNN Encoder-Decoder for Statistical Machine Translation, 2014.
+URL https:
+//arxiv.org/abs/1406.1078.
+Aakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra,
+Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann,
+Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker
+Barnes, Yi Tay, Noam Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Ben
+Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari,
+61
+
+BIBLIOGRAPHY
+Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Hen-
+ryk Michalewski, Xavier Garcia, Vedant Misra, Kevin Robinson, Liam Fedus, Denny
+Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiri-
+donov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai,
+Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira,
+Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Bren-
+nan Saeta, Mark Diaz, Orhan Firat, Michele Catasta, Jason Wei, Kathy Meier-Hellstern,
+Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. PaLM: Scaling Language Mod-
+eling with Pathways, 2022. URL https://arxiv.org/abs/2204.02311.
+Alexander Clark, Chris Fox, and Shalom Lappin, editors. The Handbook of Computational
+Linguistics and Natural Language Processing.
+Blackwell Handbooks in Linguistics.
+Wiley-Blackwell, 2012. ISBN 9781118347188. URL https://books.google.ca/
+books?id=6BJOwNHD1osC.
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. BERT: Pre-training
+of Deep Bidirectional Transformers for Language Understanding, 2019. URL https:
+//arxiv.org/abs/1810.04805.
+Kaustubh D. Dhole and Christopher D. Manning. Syn-QG: Syntactic and Shallow Semantic
+Rules for Question Generation, 2022. URL https://arxiv.org/abs/2004.08694.
+Jesse Dodge, Maarten Sap, Ana Marasovi´c, William Agnew, Gabriel Ilharco, Dirk Groen-
+eveld, Margaret Mitchell, and Matt Gardner. Documenting Large Webtext Corpora: A
+Case Study on the Colossal Clean Crawled Corpus, 2021. URL https://arxiv.org/
+abs/2104.08758.
+Xinya Du, Junru Shao, and Claire Cardie. Learning to Ask: Neural Question Genera-
+tion for Reading Comprehension. In Regina Barzilay and Min-Yen Kan, editors, Pro-
+ceedings of the 55th Annual Meeting of the Association for Computational Linguis-
+tics (Volume 1: Long Papers), pages 1342–1352, Vancouver, Canada, July 2017. As-
+sociation for Computational Linguistics.
+doi: 10.18653/v1/P17-1123.
+URL https:
+//aclanthology.org/P17-1123.
+Nan Duan, Duyu Tang, Peng Chen, and Ming Zhou. Question Generation for Question
+Answering. In Martha Palmer, Rebecca Hwa, and Sebastian Riedel, editors, Proceedings
+of the 2017 Conference on Empirical Methods in Natural Language Processing, pages
+866–874, Copenhagen, Denmark, September 2017. Association for Computational Lin-
+guistics. doi: 10.18653/v1/D17-1090. URL https://aclanthology.org/D17-1090.
+John Emerson and Yllias Chali. Efficient Multi-hop Question Generation. Procedia Com-
+puter Science, 222:217–222, 2023a.
+ISSN 1877-0509.
+doi: https://doi.org/10.1016/
+j.procs.2023.08.159.
+URL https://www.sciencedirect.com/science/article/
+pii/S1877050923009249.
+John Emerson and Yllias Chali. Multi-hop Question Generation without Supporting Fact
+Information. In The International FLAIRS Conference Proceedings, volume 36, 2023b.
+62
+
+BIBLIOGRAPHY
+Zichu Fei, Qi Zhang, Tao Gui, Di Liang, Sirui Wang, Wei Wu, and Xuanjing Huang.
+CQG: A Simple and Effective Controlled Generation Framework for Multi-hop Ques-
+tion Generation. In Smaranda Muresan, Preslav Nakov, and Aline Villavicencio, ed-
+itors, Proceedings of the 60th Annual Meeting of the Association for Computational
+Linguistics (Volume 1: Long Papers), pages 6896–6906, Dublin, Ireland, May 2022.
+Association for Computational Linguistics. doi: 10.18653/v1/2022.acl-long.475. URL
+https://aclanthology.org/2022.acl-long.475/.
+Michael Flor and Brian Riordan. A Semantic Role-based Approach to Open-Domain Au-
+tomatic Question Generation. In Joel Tetreault, Jill Burstein, Ekaterina Kochmar, Clau-
+dia Leacock, and Helen Yannakoudakis, editors, Proceedings of the Thirteenth Work-
+shop on Innovative Use of NLP for Building Educational Applications, pages 254–263,
+New Orleans, Louisiana, June 2018. Association for Computational Linguistics. doi:
+10.18653/v1/W18-0530. URL https://aclanthology.org/W18-0530/.
+Bektemyssova Gulnara and Aidos Sabdenov.
+Building a Semantic Knowledge Graph
+Search Model for Finding a Causal Answer. Revue d’Intelligence Artificielle, 38:243–
+250, 02 2024. doi: 10.18280/ria.380125.
+Michael Heilman and Noah A. Smith. Good Question! Statistical Ranking for Question
+Generation. In Ron Kaplan, Jill Burstein, Mary Harper, and Gerald Penn, editors, Human
+Language Technologies: The 2010 Annual Conference of the North American Chapter of
+the Association for Computational Linguistics, pages 609–617, Los Angeles, California,
+June 2010. Association for Computational Linguistics. URL https://aclanthology.
+org/N10-1086/.
+Sepp Hochreiter and J¨urgen Schmidhuber. Long Short-Term Memory. Neural Comput., 9
+(8):1735–1780, November 1997. ISSN 0899-7667. doi: 10.1162/neco.1997.9.8.1735.
+URL https://doi.org/10.1162/neco.1997.9.8.1735.
+Samin Jamshidi and Yllias Chali.
+GNET-QG: Graph Network for Multi-hop Question
+Generation. In Proceedings of the Workshop on Generative AI and Knowledge Graphs
+(GenAIK), pages 20–26, Abu Dhabi, UAE, January 2025. International Committee on
+Computational Linguistics. URL https://aclanthology.org/2025.genaik-1.3/.
+Armand Joulin, Edouard Grave, Piotr Bojanowski, and Tomas Mikolov. Bag of Tricks for
+Efficient Text Classification, 2016. URL https://arxiv.org/abs/1607.01759.
+Payal Khullar, Konigari Rachna, Mukul Hase, and Manish Shrivastava. Automatic Ques-
+tion Generation using Relative Pronouns and Adverbs.
+In Vered Shwartz, Jeniya
+Tabassum, Rob Voigt, Wanxiang Che, Marie-Catherine de Marneffe, and Malvina Nis-
+sim, editors, Proceedings of ACL 2018, Student Research Workshop, pages 153–158,
+Melbourne, Australia, July 2018. Association for Computational Linguistics.
+doi:
+10.18653/v1/P18-3022. URL https://aclanthology.org/P18-3022/.
+Diederik P. Kingma and Jimmy Ba. Adam: A Method for Stochastic Optimization, 2017.
+URL https://arxiv.org/abs/1412.6980.
+63
+
+BIBLIOGRAPHY
+Philippe Laban, Chien-Sheng Wu, Lidiya Murakhovs’ka, Wenhao Liu, and Caiming Xiong.
+Quiz Design Task: Helping Teachers Create Quizzes with Automated Question Genera-
+tion, 05 2022.
+Alon Lavie and Abhaya Agarwal. METEOR: An Automatic Metric for MT Evaluation with
+High Levels of Correlation with Human Judgments. In Chris Callison-Burch, Philipp
+Koehn, Cameron Shaw Fordyce, and Christof Monz, editors, Proceedings of the Second
+Workshop on Statistical Machine Translation, pages 228–231, Prague, Czech Republic,
+June 2007. Association for Computational Linguistics. URL https://aclanthology.
+org/W07-0734/.
+Mike Lewis, Yinhan Liu, Naman Goyal, Marjan Ghazvininejad, Abdelrahman Mohamed,
+Omer Levy, Veselin Stoyanov, and Luke Zettlemoyer.
+BART: Denoising Sequence-
+to-Sequence Pre-training for Natural Language Generation, Translation, and Compre-
+hension.
+In Dan Jurafsky, Joyce Chai, Natalie Schluter, and Joel Tetreault, editors,
+Proceedings of the 58th Annual Meeting of the Association for Computational Lin-
+guistics, pages 7871–7880, Online, July 2020. Association for Computational Linguis-
+tics. doi: 10.18653/v1/2020.acl-main.703. URL https://aclanthology.org/2020.
+acl-main.703/.
+Chin-Yew Lin.
+ROUGE: A Package for Automatic Evaluation of Summaries.
+In Text
+Summarization Branches Out, pages 74–81, Barcelona, Spain, July 2004. Association
+for Computational Linguistics. URL https://aclanthology.org/W04-1013/.
+Chin-Yew Lin and Franz Josef Och. Automatic Evaluation of Machine Translation Quality
+Using Longest Common Subsequence and Skip-Bigram Statistics. In Proceedings of
+the 42nd Annual Meeting of the Association for Computational Linguistics (ACL-04),
+pages 605–612, Barcelona, Spain, July 2004. doi: 10.3115/1218955.1219032. URL
+https://aclanthology.org/P04-1077/.
+Zefeng Lin, Weidong Chen, Yan Song, and Yongdong Zhang. Prompting Few-shot Multi-
+hop Question Generation via Comprehending Type-aware Semantics. In Kevin Duh,
+Helena Gomez, and Steven Bethard, editors, Findings of the Association for Computa-
+tional Linguistics: NAACL 2024, pages 3730–3740, Mexico City, Mexico, June 2024.
+Association for Computational Linguistics. doi: 10.18653/v1/2024.findings-naacl.236.
+URL https://aclanthology.org/2024.findings-naacl.236/.
+Tianyu Liu, Bingzhen Wei, Baobao Chang, and Zhifang Sui. Large-Scale Simple Question
+Generation by Template-Based Seq2seq Learning, pages 75–87. 01 2018. ISBN 978-3-
+319-73617-4. doi: 10.1007/978-3-319-73618-1 7.
+Julie Beth Lovins. Development of a stemming algorithm. Mechanical Translation and
+Computational Linguistics, 11(1-2):22–31, 1968.
+Di Lu, Shihao Ran, Joel Tetreault, and Alejandro Jaimes. Event Extraction as Question
+Generation and Answering. In Proceedings of the 61st Annual Meeting of the Association
+for Computational Linguistics (Volume 2: Short Papers), pages 1666–1688, Toronto,
+64
+
+BIBLIOGRAPHY
+Canada, July 2023. Association for Computational Linguistics. doi: 10.18653/v1/2023.
+acl-short.143. URL https://aclanthology.org/2023.acl-short.143.
+Xiyao Ma, Qile Zhu, Yanlin Zhou, Xiaolin Li, and Dapeng Wu. Improving Question Gener-
+ation with Sentence-level Semantic Matching and Answer Position Inferring, 2020. URL
+https://arxiv.org/abs/1912.00879.
+Andrew L. Maas, Awni Y. Hannun, and Andrew Y. Ng. Rectifier Nonlinearities Improve
+Neural Network Acoustic Models. In Proceedings of the 30th International Conference
+on Machine Learning (ICML), volume 28, 2013. URL https://ai.stanford.edu/
+˜amaas/papers/relu_hybrid_icml2013_final.pdf.
+Himanshu Maheshwari, Sumit Shekhar, Apoorv Saxena, and Niyati Chhaya. Open-World
+Factually Consistent Question Generation. In Findings of the Association for Compu-
+tational Linguistics: ACL 2023, pages 2390–2404, Toronto, Canada, July 2023. Asso-
+ciation for Computational Linguistics. doi: 10.18653/v1/2023.findings-acl.151. URL
+https://aclanthology.org/2023.findings-acl.151.
+Anqi Mao, Mehryar Mohri, and Yutao Zhong. Cross-Entropy Loss Functions: Theoretical
+Analysis and Applications, 2023. URL https://arxiv.org/abs/2304.07288.
+Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean. Efficient Estimation of Word
+Representations in Vector Space, 2013a. URL https://arxiv.org/abs/1301.3781.
+Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeffrey Dean. Distributed
+Representations of Words and Phrases and their Compositionality, 2013b. URL https:
+//arxiv.org/abs/1310.4546.
+Sewon Min, Victor Zhong, Richard Socher, and Caiming Xiong.
+Efficient and Robust
+Question Answering from Minimal Context over Documents, 2018. URL https://
+arxiv.org/abs/1805.08092.
+Shervin Minaee, Tomas Mikolov, Narjes Nikzad, Meysam Chenaghlu, Richard Socher,
+Xavier Amatriain, and Jianfeng Gao. Large Language Models: A Survey, 2025. URL
+https://arxiv.org/abs/2402.06196.
+Alireza Mohammadshahi, Thomas Scialom, Majid Yazdani, Pouya Yanki, Angela Fan,
+James Henderson, and Marzieh Saeidi. RQUGE: Reference-Free Metric for Evaluating
+Question Generation by Answering the Question. In Findings of the Association for Com-
+putational Linguistics: ACL 2023, pages 6845–6867, Toronto, Canada, July 2023. As-
+sociation for Computational Linguistics. doi: 10.18653/v1/2023.findings-acl.428. URL
+https://aclanthology.org/2023.findings-acl.428.
+Llu´ıs M`arquez, Xavier Carreras, Kenneth Litkowski, and Suzanne Stevenson. Semantic
+Role Labeling: An Introduction to the Special Issue. Computational Linguistics, 34:
+145–159, 06 2008. doi: 10.1162/coli.2008.34.2.145.
+65
+
+BIBLIOGRAPHY
+Alireza Naeiji, Aijun An, Heidar Davoudi, Marjan Delpisheh, and Muath Alzghool. Ques-
+tion Generation Using Sequence-to-Sequence Model with Semantic Role Labels.
+In
+Andreas Vlachos and Isabelle Augenstein, editors, Proceedings of the 17th Confer-
+ence of the European Chapter of the Association for Computational Linguistics, pages
+2830–2842, Dubrovnik, Croatia, May 2023. Association for Computational Linguis-
+tics. doi: 10.18653/v1/2023.eacl-main.207. URL https://aclanthology.org/2023.
+eacl-main.207.
+Tri
+Nguyen,
+Mir
+Rosenberg,
+Xia
+Song,
+Jianfeng
+Gao,
+Saurabh
+Tiwary,
+Rangan
+Majumder,
+and
+Li
+Deng.
+MS
+MARCO:
+A
+Human
+Gen-
+erated
+MAchine
+Reading
+COmprehension
+Dataset.
+November
+2016.
+URL
+https://www.microsoft.com/en-us/research/publication/
+ms-marco-human-generated-machine-reading-comprehension-dataset/.
+Shinhyeok Oh, Hyojun Go, Hyeongdon Moon, Yunsung Lee, Myeongho Jeong, Hyun Se-
+ung Lee, and Seungtaek Choi. Evaluation of Question Generation Needs More Refer-
+ences. In Findings of the Association for Computational Linguistics: ACL 2023, pages
+6358–6367, Toronto, Canada, July 2023. Association for Computational Linguistics.
+doi: 10.18653/v1/2023.findings-acl.396.
+URL https://aclanthology.org/2023.
+findings-acl.396.
+Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu.
+Bleu: a Method for
+Automatic Evaluation of Machine Translation.
+In Pierre Isabelle, Eugene Charniak,
+and Dekang Lin, editors, Proceedings of the 40th Annual Meeting of the Association
+for Computational Linguistics, pages 311–318, Philadelphia, Pennsylvania, USA, July
+2002. Association for Computational Linguistics. doi: 10.3115/1073083.1073135. URL
+https://aclanthology.org/P02-1040/.
+Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory
+Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, Alban Des-
+maison, Andreas K¨opf, Edward Yang, Zach DeVito, Martin Raison, Alykhan Tejani,
+Sasank Chilamkurthy, Benoit Steiner, Lu Fang, Junjie Bai, and Soumith Chintala. Py-
+Torch: An Imperative Style, High-Performance Deep Learning Library, 2019.
+URL
+https://arxiv.org/abs/1912.01703.
+Jeffrey Pennington, Richard Socher, and Christopher Manning. GloVe: Global Vectors
+for Word Representation. In Alessandro Moschitti, Bo Pang, and Walter Daelemans,
+editors, Proceedings of the 2014 Conference on Empirical Methods in Natural Language
+Processing (EMNLP), pages 1532–1543, Doha, Qatar, October 2014. Association for
+Computational Linguistics. doi: 10.3115/v1/D14-1162. URL https://aclanthology.
+org/D14-1162/.
+Marcin Pietrasik, Marek Reformat, and Anna Wilbik. Hierarchical Blockmodelling for
+Knowledge Graphs, 2024. URL https://arxiv.org/abs/2408.15649.
+Judita Preiss. Ruslan Mitkov, Anaphora Resolution. Longman. 2002. ISBN 0-582-32505-6.
+Price £49.99 (hardback). xiii + 220 pages. Natural Language Engineering, 11:439 – 440,
+12 2005. doi: 10.1017/S1351324905214006.
+66
+
+BIBLIOGRAPHY
+Lin Qiu, Yunxuan Xiao, Yanru Qu, Hao Zhou, Lei Li, Weinan Zhang, and Yong Yu.
+Dynamically Fused Graph Network for Multi-hop Reasoning.
+In Anna Korhonen,
+David Traum, and Llu´ıs M`arquez, editors, Proceedings of the 57th Annual Meeting of
+the Association for Computational Linguistics, pages 6140–6150, Florence, Italy, July
+2019. Association for Computational Linguistics. doi: 10.18653/v1/P19-1617. URL
+https://aclanthology.org/P19-1617/.
+Roni Rabin, Alexandre Djerbetian, Roee Engelberg, Lidan Hackmon, Gal Elidan, Reut
+Tsarfaty, and Amir Globerson. Covering Uncommon Ground: Gap-Focused Question
+Generation for Answer Assessment. In Anna Rogers, Jordan Boyd-Graber, and Naoaki
+Okazaki, editors, Proceedings of the 61st Annual Meeting of the Association for Com-
+putational Linguistics (Volume 2: Short Papers), pages 215–227, Toronto, Canada, July
+2023. Association for Computational Linguistics. doi: 10.18653/v1/2023.acl-short.20.
+URL https://aclanthology.org/2023.acl-short.20.
+Alec Radford and Karthik Narasimhan.
+Improving Language Understanding by Gen-
+erative Pre-Training. 2018. URL https://api.semanticscholar.org/CorpusID:
+49313245.
+Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael
+Matena, Yanqi Zhou, Wei Li, and Peter J. Liu. Exploring the Limits of Transfer Learning
+with a Unified Text-to-Text Transformer, 2023. URL https://arxiv.org/abs/1910.
+10683.
+Pranav Rajpurkar, Jian Zhang, Konstantin Lopyrev, and Percy Liang. SQuAD: 100,000+
+Questions for Machine Comprehension of Text. arXiv e-prints, art. arXiv:1606.05250,
+2016.
+Pranav Rajpurkar, Jian Zhang, Konstantin Lopyrev, and Percy Liang. SQuAD: 100,000+
+Questions for Machine Comprehension of Text.
+In Jian Su, Kevin Duh, and Xavier
+Carreras, editors, Proceedings of the 2016 Conference on Empirical Methods in Nat-
+ural Language Processing, pages 2383–2392, Austin, Texas, November 2016. Asso-
+ciation for Computational Linguistics.
+doi: 10.18653/v1/D16-1264.
+URL https:
+//aclanthology.org/D16-1264/.
+Nils Reimers and Iryna Gurevych. Sentence-BERT: Sentence Embeddings using Siamese
+BERT-Networks, 2019. URL https://arxiv.org/abs/1908.10084.
+D. E. Rumelhart, G. E. Hinton, and R. J. Williams. Learning Internal Representations
+by Error Propagation, page 318–362. MIT Press, Cambridge, MA, USA, 1986. ISBN
+026268053X.
+Vasile Rus, Brendan Wyse, Paul Piwek, Mihai Lintean, Svetlana Stoyanchev, and Christian
+Moldovan. The First Question Generation Shared Task Evaluation Challenge. In John
+Kelleher, Brian Mac Namee, and Ielka van der Sluis, editors, Proceedings of the 6th
+International Natural Language Generation Conference. Association for Computational
+Linguistics, July 2010. URL https://aclanthology.org/W10-4234/.
+67
+
+BIBLIOGRAPHY
+G. Salton, A. Wong, and C. S. Yang. A vector space model for automatic indexing. Com-
+mun. ACM, 18(11):613–620, November 1975. ISSN 0001-0782. doi: 10.1145/361219.
+361220. URL https://doi.org/10.1145/361219.361220.
+Mohammadreza Samadi and Davood Rafiei. Performance Prediction for Multi-hop Ques-
+tions. arXiv preprint arXiv:2308.06431, 2023.
+Minjoon Seo, Aniruddha Kembhavi, Ali Farhadi, and Hannaneh Hajishirzi. Bidirectional
+Attention Flow for Machine Comprehension, 2018. URL https://arxiv.org/abs/
+1611.01603.
+Murray Shanahan. Talking About Large Language Models, 2023. URL https://arxiv.
+org/abs/2212.03551.
+Dan Su, Yan Xu, Wenliang Dai, Ziwei Ji, Tiezheng Yu, and Pascale Fung. Multi-hop Ques-
+tion Generation with Graph Convolutional Network. In Trevor Cohn, Yulan He, and
+Yang Liu, editors, Findings of the Association for Computational Linguistics: EMNLP
+2020, pages 4636–4647, Online, November 2020. Association for Computational Lin-
+guistics. doi: 10.18653/v1/2020.findings-emnlp.416. URL https://aclanthology.
+org/2020.findings-emnlp.416/.
+Kai Sun, Jiapu Wang, Huajie Jiang, Yongli Hu, and Baocai Yin. Query-Enhanced Adap-
+tive Semantic Path Reasoning for Inductive Knowledge Graph Completion, 2024. URL
+https://arxiv.org/abs/2406.02205.
+Xingwu Sun, Jing Liu, Yajuan Lyu, Wei He, Yanjun Ma, and Shi Wang.
+Answer-
+focused and Position-aware Neural Question Generation. In Ellen Riloff, David Chi-
+ang, Julia Hockenmaier, and Jun’ichi Tsujii, editors, Proceedings of the 2018 Confer-
+ence on Empirical Methods in Natural Language Processing, pages 3930–3939, Brus-
+sels, Belgium, October-November 2018. Association for Computational Linguistics. doi:
+10.18653/v1/D18-1427. URL https://aclanthology.org/D18-1427.
+Yanli Sun. Mining the Correlation between Human and Automatic Evaluation at Sentence
+Level. In Nicoletta Calzolari, Khalid Choukri, Bente Maegaard, Joseph Mariani, Jan
+Odijk, Stelios Piperidis, Mike Rosner, and Daniel Tapias, editors, Proceedings of the
+Seventh International Conference on Language Resources and Evaluation (LREC‘10),
+Valletta, Malta, May 2010. European Language Resources Association (ELRA). URL
+https://aclanthology.org/L10-1051/.
+Ilya Sutskever, Oriol Vinyals, and Quoc V. Le. Sequence to Sequence Learning with Neural
+Networks, 2014. URL https://arxiv.org/abs/1409.3215.
+Yachen Tang, Tingting Liu, Guangyi Liu, Jie Li, Renchang Dai, and Chen Yuan.
+En-
+hancement of Power Equipment Management Using Knowledge Graph. In 2019 IEEE
+Innovative Smart Grid Technologies-Asia (ISGT Asia), pages 905–910. IEEE, 2019.
+Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux,
+Timoth´ee Lacroix, Baptiste Rozi`ere, Naman Goyal, Eric Hambro, Faisal Azhar, Aurelien
+68
+
+BIBLIOGRAPHY
+Rodriguez, Armand Joulin, Edouard Grave, and Guillaume Lample. LLaMA: Open and
+Efficient Foundation Language Models, 2023. URL https://arxiv.org/abs/2302.
+13971.
+Adam Trischler, Tong Wang, Xingdi Yuan, Justin Harris, Alessandro Sordoni, Philip Bach-
+man, and Kaheer Suleman.
+NewsQA: A Machine Comprehension Dataset.
+In Phil
+Blunsom, Antoine Bordes, Kyunghyun Cho, Shay Cohen, Chris Dyer, Edward Grefen-
+stette, Karl Moritz Hermann, Laura Rimell, Jason Weston, and Scott Yih, editors, Pro-
+ceedings of the 2nd Workshop on Representation Learning for NLP, pages 191–200,
+Vancouver, Canada, August 2017. Association for Computational Linguistics.
+doi:
+10.18653/v1/W17-2623. URL https://aclanthology.org/W17-2623.
+P. D. Turney and P. Pantel. From Frequency to Meaning: Vector Space Models of Se-
+mantics. Journal of Artificial Intelligence Research, 37:141–188, February 2010. ISSN
+1076-9757. doi: 10.1613/jair.2934. URL http://dx.doi.org/10.1613/jair.2934.
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N.
+Gomez, Lukasz Kaiser, and Illia Polosukhin. Attention Is All You Need, 2023. URL
+https://arxiv.org/abs/1706.03762.
+Petar Veliˇckovi´c, Guillem Cucurull, Arantxa Casanova, Adriana Romero, Pietro Li`o, and
+Yoshua Bengio. Graph Attention Networks, 2018. URL https://arxiv.org/abs/
+1710.10903.
+Zehua Xia, Qi Gou, Bowen Yu, Haiyang Yu, Fei Huang, Yongbin Li, and Nguyen Cam-
+Tu.
+Improving Question Generation with Multi-level Content Planning.
+In Houda
+Bouamor, Juan Pino, and Kalika Bali, editors, Findings of the Association for Compu-
+tational Linguistics: EMNLP 2023, pages 800–814, Singapore, December 2023. Asso-
+ciation for Computational Linguistics. doi: 10.18653/v1/2023.findings-emnlp.57. URL
+https://aclanthology.org/2023.findings-emnlp.57/.
+Zhilin Yang, Peng Qi, Saizheng Zhang, Yoshua Bengio, William Cohen, Ruslan Salakhut-
+dinov, and Christopher D. Manning. HotpotQA: A Dataset for Diverse, Explainable
+Multi-hop Question Answering. In Ellen Riloff, David Chiang, Julia Hockenmaier, and
+Jun’ichi Tsujii, editors, Proceedings of the 2018 Conference on Empirical Methods in
+Natural Language Processing, pages 2369–2380, Brussels, Belgium, October-November
+2018. Association for Computational Linguistics. doi: 10.18653/v1/D18-1259. URL
+https://aclanthology.org/D18-1259/.
+Xuchen Yao. Question Generation with Minimal Recursion Semantics. 2010. URL https:
+//api.semanticscholar.org/CorpusID:18796690.
+Xuchen Yao, Gosse Bouma, Yi Zhang, Paul Piwek, and Kristy Boyer. Semantics-based
+Question Generation and Implementation. Dialogue Discourse, 3, 03 2012. doi: 10.
+5087/dad.2012.202.
+69
+
+BIBLIOGRAPHY
+Ke Ye, Heinrich Jiang, Afshin Rostamizadeh, Ayan Chakrabarti, Giulia DeSalvo, Jean-
+Franc¸ois Kagy, Lazaros Karydas, Gui Citovsky, and Sanjiv Kumar. SpacTor-T5: Pre-
+training T5 Models with Span Corruption and Replaced Token Detection, 2024. URL
+https://arxiv.org/abs/2401.13160.
+Ruqing Zhang, Jiafeng Guo, Lu Chen, Yixing Fan, and Xueqi Cheng. A Review on Ques-
+tion Generation from Natural Language Text. ACM Trans. Inf. Syst., 40(1), sep 2021.
+ISSN 1046-8188. doi: 10.1145/3468889. URL https://doi.org/10.1145/3468889.
+Tianyi Zhang, Varsha Kishore, Felix Wu, Kilian Q. Weinberger, and Yoav Artzi.
+BERTScore: Evaluating Text Generation with BERT, 2020.
+URL https://arxiv.
+org/abs/1904.09675.
+70
+
+Appendix A
+Evaluation of Model Prediction
+Example 1
+Predicted Question: The winners of the 2017 Canadian Olympic Curling Trials will com-
+pete in a sports event that will be held in what city?
+Reference Question: Where did the winners of the 2017 Canadian Olympic Curling Trials
+go on to represent Canada?
+Comparison: Both questions are looking for the same information. The predicted question
+is comparatively straighter asking ”will be held in what city?”.
+Example 2
+Predicted Question: What is the parent company of the company that created Mickey
+Mouse Club?
+Reference Question: What American company that oversees various websites and inter-
+active media owned by The Walt Disney Company also created Mickey Mouse Toddler,
+Preschool, and Kindergarten video Games?
+Comparison: The answer of the predicted question and reference question can be different
+as the predicted question is asking the parent company that created Mickey Mouse Club
+but the reference company is asking the company that oversees various websites and inter-
+active media, and also created those specific Mickey Mouse educational video games. The
+predicted question is more straightforward by asking ”the parent company of the company
+that created Mickey Mouse Club?” but the reference question is lengthy.
+Example 3
+Predicted Question: Who was born earlier, Jean-Jacques Favier or Reinhold Ewald?
+Reference Question: Who was born first, Reinhold Ewald or Jean-Jacques Favier?
+Comparison: Both questions are almost identical in content.
+Example 4
+Predicted Question:”Rings Around the World” is a song by a band that was formed in
+what year?
+Reference Question:”Rings Around the World” is a song by what band formed in 1993?
+Comparison: The predicted question and the reference question are asking different ques-
+tions. The predicted question and the reference question both are related to the given input
+contexts.
+71
+
+A. EVALUATION OF MODEL PREDICTION
+Example 5
+Predicted Question:To which group does the singer, who stars with Lee Sang-woo in the
+TV series All About My Mom belong?
+Reference Question: To which band does the actress belong, who starred with Lee Sang-
+woo in the film All About My Mum?
+Comparison: Though both of the questions are very similar in structure, they are not the
+same. The predicted question is based on the input contexts where the reference question is
+not based on the given context.
+Example 6
+Predicted Question: Helter Skelter chronicled the case of the murderer who was part of
+whose ”family”?
+Reference Question: Helter Skelter presented the firsthand account of the murder who was
+a part of whose ”family”?
+Comparison: The both questions are effectively asking for the same information. The pre-
+dicted question is using ”chroncicled” instead of ”presented the firsthand account”, but the
+meaning of both scenario are same.
+Example 7
+Predicted Question: The composer who wrote the music for the musical ”The Fantastics”
+was born in what year?
+Reference Question: The composer who wrote the music for The Secret Garden was born
+in which year?
+Comparison: The predicted question and the reference question are asking different ques-
+tions. The reference question is based on the input contexts, but the predicted question is
+not based on the input contexts.
+Example 8
+Predicted Question: Howdilly Doodilly is an album that features music themes based on
+a character from what television show?
+Reference Question: Howdilly Doodilly is an album that features music themes based on
+a character from what TV show?
+Comparison: Both questions are identically same.
+Example 9
+Predicted Question: Who was born first, Maurizio Cheli or Hans Schlegel?
+Reference Question: who is older Hans Schlegel or Maurizio Cheli?
+Comparison: The predicted question and the reference question both are asking essentially
+the same information. The predicted question ”who was born first” is equivalent to the ref-
+erence question ”who is older”.
+72
+
+A. EVALUATION OF MODEL PREDICTION
+Overall Assessment
+Clarity: In some cases, the predicted questions are clearer compared to the reference ques-
+tions.
+Completeness: The reference questions are more detailed.
+Relevance: In some cases, the predicted questions are more relevant to the input contexts.
+Multi-hop Reasoning: Predicted questions and reference questions both have ensured
+multi-hop reasoning that required multiple connections of information from different in-
+formation to generate the answers of the questions
+73
+
+ 
+ 
+ProQuest Number:  
+ 
+ 
+INFORMATION TO ALL USERS 
+The quality and completeness of this reproduction is dependent on the quality  
+and completeness of the copy made available to ProQuest. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Distributed by  
+ProQuest LLC a part of Clarivate (         ). 
+Copyright of the Dissertation is held by the Author unless otherwise noted. 
+ 
+ 
+This work is protected against unauthorized copying under Title 17,  
+United States Code and other applicable copyright laws. 
+ 
+ 
+This work may be used in accordance with the terms of the Creative Commons license  
+or other rights statement, as indicated in the copyright statement or in the metadata  
+associated with this work. Unless otherwise specified in the copyright statement  
+or the metadata, all rights are reserved by the copyright holder. 
+ 
+ 
+ProQuest LLC 
+789 East Eisenhower Parkway 
+Ann Arbor, MI 48108 USA 
+32287546
+2025

@@ -1,0 +1,490 @@
+8 
+CHAPTER 2:  RESEARCH DESIGN AND METHODOLOGY 
+ 
+ 
+ 
+Research Questions and Hypotheses 
+ 
+In the context of the global cyber and geopolitical environment, organizations at all 
+levels, from individuals and small businesses to national governments and international 
+institutions, have a pressing need to increase their cyber resilience. Compounding this challenge 
+is the ambiguity around the idea of organizational resilience and application of resilience 
+principles in a cybersecurity context [2]. This study seeks to understand if the organizations at all 
+levels have sufficient cybersecurity guidance, standards, or other frameworks to improve cyber 
+resilience. The following research questions and hypotheses, shown in Figure 1Error! 
+Reference source not found. below, provide a structured approach to understanding if society 
+has sufficient resources to achieve this goal; and if not, to understand where guidance can 
+improve based on identified gaps, definitions, and integrating interdisciplinary research.  
+
+9 
+ 
+Figure 1: Structure of the research questions, hypotheses, and falsification criteria 
+ 
+The first research question seeks to find if any of the myriad cyber security documents, 
+frameworks, or strategies available today encompass the attributes of resilient system as 
+identified by interdisciplinary research. It prompts two additional questions. First, how do the 
+existing documents address resilience? Second, how the existing guidance might be combined to 
+form a document that would enable organizations at multiple levels to grapple with improving 
+cyber resilience. The hypotheses and their falsification criteria follow. Given the complicated 
+structuring of the research questions and hypotheses, stating explicit falsification criteria will 
+better support the final evaluation of the hypotheses. 
+
+10 
+Research Question 1: Do existing documents provide scalable support for improving cyber 
+resilience? 
+ RQ1: Does a single strategy or guidance document exist to provide organizations at 
+multiple levels of society with support for improving cyber resilience?  
+ Hypothesis 1 (H1): If no single document exists that addresses most or all aspects of 
+resilience, then organizations will not have sufficient guidance to develop complete 
+strategies to improve cyber resilience. Put plainly, does a document exist today that 
+satisfies RQ1? The foundational assumption for this work is that this document does not 
+exist.  
+o Falsification 1 (F1): A document exists that addresses most or all aspects of 
+resilience as identified in the work to test Hypothesis 3 (H3).   
+ Hypothesis 2 (H2): If one or more documents exist that address some aspects of 
+resilience, then they can be leveraged and expanded to create a single document for 
+organizations to improve cyber resilience.    
+o Falsification 2 (F2): Hypothesis 1 (H1) is proven true.  
+Research Question 2: How do existing documents address resilience? 
+ RQ2: How do existing documents address resilience?  
+ Hypothesis 3 (H3): If the existing documents incorporate most or all aspects of resilience, 
+then there should be significant overlap with the interdisciplinary research and concepts 
+on resilience.    
+o Falsification 3 (F3): The analysis indicates gaps between the interdisciplinary 
+concepts on resilience and the existing documents.  
+
+11 
+ Hypothesis 4 (H4): If the existing documents focus primarily on the technical and 
+sociotechnical aspects of cybersecurity, then the documents will lack sufficient guidance 
+on most or all aspects of resilience.  
+o Falsification 4 (F4): The analysis indicates few to no gaps in one or more existing 
+documents.     
+This set of research questions, hypotheses, and falsification criteria presents a challenge 
+in understanding the differences between them, where they overlap, and other nuances. To help 
+provide an explicit understanding of each hypothesis in the context of the broader body of 
+literature on cybersecurity, resilience, sociotechnical ecosystems, and associated topics, the 
+corpus can be presented visually, as shown in Figure 2, below.   
+ 
+Figure 2: A Venn diagram showing the broad corpus of the research into cybersecurity and resilience frameworks, the subset of 
+resilience frameworks that support time- and scale-free resilience strategies, and their overlap. 
+  
+
+12 
+Research Design 
+ 
+The research design for this study employs an integrative, multi-phase approach that 
+combines both qualitative and quantitative methods to address the research questions concerning 
+the adequacy of existing cybersecurity frameworks in promoting cyber resilience [10]. The four-
+phase structure, as shown in Figure 3, is designed to systematically investigate the gaps and 
+overlaps within current frameworks, leveraging a combination of interdisciplinary literature 
+review, machine learning algorithms, and quantitative and qualitative analysis. This approach is 
+particularly well-suited to the study’s goals because it allows for a comprehensive examination 
+of both technical and sociotechnical aspects of resilience, drawing on insights from various 
+disciplines such as ecology, psychology, resilience engineering, complex adaptive systems, and 
+cybersecurity. 
+In the first phase, the interdisciplinary literature review provides the foundation for 
+identifying key resilience attributes, which will be codified into a matrix that serves as the 
+scaffold for the entire analysis. Subsequent phases focus on applying statistical modeling and 
+algorithmic techniques like term frequency-inverse document frequency (tf*idf) and 
+bidirectional encoder representations from transformers (BERT) to classify and analyze existing 
+cybersecurity frameworks against the matrix. These methods are chosen for their ability to 
+process large textual datasets and identify patterns in term usage and framework features. For 
+example, tf*idf allows for the identification of significant terms that may point to critical 
+resilience attributes, while BERT offers deeper insights into the semantic relationships between 
+terms across frameworks. This systematic, algorithm-driven approach ensures that both the 
+technical rigor and conceptual breadth of resilience are captured, addressing the hypotheses 
+related to the comprehensiveness and scalability of existing frameworks. 
+
+13 
+ 
+Figure 3: The four-phase research plan with hypothesis mapping to develop a broadly applicable cyber resilience framework 
+ 
+First, an interdisciplinary literature review to determine the key aspects of resilience and 
+how they relate to cybersecurity will be used to build a coding scheme and dictionary of terms to 
+support algorithmic approaches to assessing the existing body of cybersecurity or cyber 
+resilience frameworks. Second, the existing documents will be analyzed with the coding scheme 
+using algorithmic approaches, such as term frequency-inverse document frequency (tf*idf), 
+BERT, or other algorithms. This phase tests hypotheses three (H3) and four (H4) and partially 
+addresses the second research question (RQ2). The output of this phase will be a coded dataset 
+that can be used for statistical and analytical evaluation. Using that output, the third phase will 
+systematically evaluate the existing frameworks against the dictionary and coding scheme from 
+
+14 
+phase one to map the frameworks against the derived aspects of resilience. This phase completes 
+the assessed work needed to address the second research question (RQ2). Phase four will 
+conduct a detailed analysis of the results of phases one and three for gaps in the existing 
+frameworks against some or all aspects of resilience. This phase will produce a gap analysis that 
+directly answers the first hypothesis (H1). The remainder of this chapter provides a detailed 
+description of the approach to data curation common to much of the analysis and the five phases 
+of the research plan, their objectives, and their outputs.   
+The research design carefully integrates the hypotheses with the selected methods to 
+ensure that each research question is systematically addressed. For instance, Hypothesis 1 (H1), 
+which posits that no single document encompasses all aspects of resilience, is directly tested 
+through the gap analysis in Phases Four and Five. The coding scheme developed in Phase One, 
+based on the interdisciplinary literature review, provides a structured way to assess existing 
+frameworks against resilience attributes, allowing for the identification of gaps that would 
+support or refute this hypothesis. Hypothesis 2 (H2), which suggests that multiple frameworks 
+could be combined to address these gaps, is explored through the quantitative and qualitative 
+analysis of existing frameworks in Phase Three. By mapping key resilience features from various 
+documents into the classification matrix, the research can determine whether combining elements 
+from different sources could create a comprehensive resilience framework. 
+Hypotheses 3 and 4 (H3 and H4), which focus on how well existing frameworks address 
+both technical and broader resilience attributes, are evaluated using machine learning models 
+such as tf*idf and BERT in Phases Two and Three. These models allow for a detailed analysis of 
+the language and concepts used in the frameworks, allowing for a determination of whether 
+technical aspects are overemphasized at the expense of sociotechnical resilience principles. This 
+
+15 
+tight alignment between hypotheses and methods ensures that the research process remains 
+focused and that each phase of analysis is directly linked to testing specific hypotheses. 
+ 
+Data Curation 
+ 
+The data needed to conduct the research proposed comes from several sources and can be 
+divided broadly into two categories: 1) the interdisciplinary literature on resilience, which will be 
+needed to inform the work in Phases One and Two, and 2) the body of existing cybersecurity and 
+resilience frameworks to analyze in Phases Three and Four. This section will describe how the 
+data for category will be collected, processed, classified, and used since the methods for both 
+analyses are generally common.  
+ 
+Data Collection for Literature Review and Scaffold Development 
+ 
+Literature for the literature review and scaffold development was found through a 
+systematic search using the SCOPUS database, Google Scholar, internet searches, and materials 
+referenced by literature found from those means. Keywords for the searches included various 
+combinations of the following words: cyber, resilience, ecosystems, networks, cybersecurity, 
+cyberattacks, network science, resilience engineering, complex adaptive systems, adaptive 
+capacity, graceful extensibility, high reliability organizations, safety culture, network trust, 
+transitive trust, cyber supply chain, risk management, cyber policy, personal resilience, 
+organizational resilience, and others. Literature includes peer reviewed journal articles, published 
+reports from various organizations, government policies, books, and corporate websites. 144 
+articles, books, or other sources were identified. The search should not be considered exhaustive 
+
+16 
+since some potential articles were excluded on the basis of inaccessibility resulting from lack of 
+a publicly available document or subscription access to the source.  
+ 
+Data Collection for Existing Cybersecurity and Resilience Frameworks 
+ 
+The work of Phases Three and Four to address RQ2 requires the curation of existing 
+frameworks to assess against the existing interdisciplinary literature. The existing frameworks 
+were found primarily through internet searches and informal discussions with subject matter 
+experts in the cybersecurity field. Keywords for the searches included various combinations of 
+cyber resilience framework, index, cyber resilience assessment, cybersecurity framework, and 
+others. 37 documents were identified across a range of cybersecurity topics ranging from narrow 
+technical guidance to organizational cyber risk management to threat assessment to sector 
+specific and national cyber standards. As a novel test, the list of frameworks was evaluated for 
+completeness with a GPT model using the prompt: “Please list all of the cybersecurity and cyber 
+resilience frameworks” [11]. The test identified several frameworks that had not been previously 
+identified, primarily from foreign sources such as the German government and various products 
+from the United Kingdom.  
+ 
+Data Pre-Processing and Lemmatization 
+ 
+For both bodies of data, to enable efficient and accurate results from algorithmic analysis, 
+the text must be preprocessed. All processing was conducted using Python 3.11.7 deployed 
+through Anaconda Navigator with the packages as defined below. The general steps to this 
+process include: 
+
+17 
+ Importing documents into a machine-readable format using the pdf package and 
+extracting the text using the fitz package (also known as PyMuPDF) or converting 
+comma-separated variable files using the csv package [12], [13], [14].  
+ Preprocess the text to remove stop words, URLs, and proper names or organizations. Stop 
+words are common words in the English language that appear frequently, but do not add 
+any value in the context of the document—the, of, or, my, etc. This step supports the 
+subsequent lemmatization of the text by ensuring that the relevant words are retained and 
+superfluous words are excluded [15]. Stop word removal is performed using the Natural 
+Language Toolkit (NLTK) package [16]. URLs are removed with the Regular 
+Expressions re package, and proper names or organizations removed with the spaCy 
+package [17], [18].  
+ Next, the text is tokenized and lemmatized. This converts the document into a set of 
+tokens, which can represent words or sentences. Tokenization is a technique for feature 
+extraction within a file. Lemmatization reduces similar words into a single, meaningful, 
+base word for analysis. For example, if there were tokens containing “running,” “runs,” 
+and “ran,” lemmatization reduces those three words in the tokens to “run” as the base 
+word. The NLTK package carries out tokenization and lemmatization [16]. The 
+lemmatized files are saved as both text and pickle files using the os package [19], 
+[20]. 
+ The NLTK package provides a list of common or general words, but to be effective in 
+narrow applications, additional stop words should be added to the dictionary [16]. The 
+lemmatized text files are assessed with the collections package for the top 25 words 
+that appear in each file [21]. These words are evaluated for inclusion in the stop word 
+
+18 
+dictionary using heuristic methods to determine relevance. This analysis was repeated for 
+several iterations to identify any additional stop words. Through this process, 66 
+additional stop words were added to the dictionary. The additional stop words added to 
+the dictionary are provided in Appendix 1 for reference.  
+ 
+Phase One: Literature Review, Definitions, and Establishing a Coding Methodology 
+ 
+Objective: Through a systematic and interdisciplinary literature review, develop a coding 
+dictionary and methodology to assess existing cybersecurity and resilience frameworks in Phases 
+Two and Three.  
+ 
+Phase One begins with a broad literature review spanning multiple disciplines and uses 
+that information to develop a coding methodology, dictionary, and research-derived scaffolding 
+or categorization matrix for use in Phases Two and Three. Figure 4 provides a graphical view of 
+how Phase One will proceed from literature review to a final classification scheme.  
+
+19 
+ 
+Figure 4: Flowchart depicting the progression of Phase One from literature review through a final, classified set of definitions 
+into a research-derived scaffold. 
+The literature review contains three broad lines of effort. First, an interdisciplinary review 
+of the existing body of research into complex adaptive systems, resilience, ecosystems, and their 
+behaviors across time and scales. This review is intended to provide an integrative grounding in 
+how the concept of resilience has evolved from its origins in ecology with other, related fields of 
+study, such as research into high reliability organizations, safety culture, resilience engineering, 
+organizational studies, etc., and introduce the core concepts of resilience that span across 
+disciplines. This first line of effort will produce the necessary definitions and scaffolding for the 
+
+20 
+quantitative evaluation and assessment of the existing cybersecurity and resilience frameworks to 
+test the three hypotheses.  
+ 
+Second, this study will examine the holistic attributes of cybersecurity and resilience 
+policies from the organizational to national government and above levels. This section introduces 
+the frameworks that will be coded and evaluated and provides a modest description of the 
+documents juxtaposed against the derived resilience attributes. To address the aspect of 
+scalability or extensibility in resilience, in particular, this section will provide a high-level 
+assessment of the intended audience or target population of the policies. The frameworks will not 
+be included in the dictionary since the cyber-related terms will come from other sources, and the 
+frameworks would introduce bias into the analysis during model construction.  
+ 
+Third, the results from the prior two lines of effort will be combined with existing 
+literature on cybersecurity and cyber resilience definitions to produce a coding scheme and 
+dictionary. The dictionary will be coded into the scaffolding framework from the first line of 
+effort, such that the various definitions can be assigned to an element in the matrix. For example, 
+the definition of a firewall may be coded as both “technical,” since it is a specific technical 
+control, “organizational,” since firewalls are primarily applied at the organizational level, and 
+“machine speed” or the equivalent, to denote that this concept acts at machine, vice human, 
+speeds, to accomplish its functions. Based on the prior research discussed in Chapter 4, it is 
+anticipated that the scaffold will be three dimensional, with the spectrum of sociotechnical 
+systems on one axis (e.g., technical system to sociotechnical system to ecosystem), the temporal 
+flow of resilience (e.g., plan, absorb, recover, and adapt) on another, and the critical attributes of 
+resilient systems (e.g., adaptive management, cross-scale interactions, thresholds, etc.) on the 
+third.   
+
+21 
+Machine learning techniques will be applied to assist in definition aggregation and coding 
+and provide a quantitative assessment of key definitions. Definitions are taken primarily from 
+official sources, such as the National Institute of Standards and Technology and the Canadian 
+government, but also, especially in the case of cyber resilience, from peer reviewed literature and 
+from various websites from technology and cybersecurity companies discussing cyber resilience. 
+Using similar techniques for data curation as described in an earlier section, the set of definitions 
+will be analyzed using a BERT or Generative Pre-Trained Transformer (GPT)-based model to 
+provide an aggregate definition of each term that is the statistical combination of the most 
+relevant and prevalent words. These definitions will then be lemmatized for use as the baseline 
+during framework coding and classification. The lemmatized definitions will then be classified 
+into the scaffold using the coding scheme. The final dictionary of stop words, aggregate 
+definitions, and categorization matrix (scaffold) is provided in Appendix 1. 
+ 
+A Note on Human Judgement in Phase One 
+ 
+Human judgment plays a critical role in Phase One, particularly in the interdisciplinary 
+literature review and the development of the coding scheme and dictionary. While the study 
+employs algorithmic tools to process and analyze vast amounts of text, the initial identification 
+of key resilience concepts and the construction of a coding matrix requires human expertise. 
+Researchers must interpret the diverse definitions of resilience from multiple disciplines—
+ranging from ecology to cybersecurity—and synthesize these concepts into a coherent 
+framework. This involves subjective decisions about which resilience attributes are most relevant 
+and how they can be mapped to the cybersecurity context. For example, resilience concepts like 
+"adaptive capacity" or "cross-scale interactions," which originate in fields like environmental 
+
+22 
+science, must be interpreted and redefined in a way that makes sense for organizational or 
+technical resilience in cybersecurity. This manual interpretation ensures that the coding matrix 
+reflects a holistic understanding of resilience, grounded in expert judgment rather than solely 
+relying on algorithmic output. 
+Additionally, human judgment is essential when refining the coding dictionary and 
+adjusting the classification scheme. As definitions are aggregated and categorized using machine 
+learning techniques, such as BERT, researchers must manually assess the accuracy and relevance 
+of the outputs. Since algorithms can misinterpret context or conflate similar but distinct terms, 
+human oversight is necessary to ensure that resilience attributes are correctly classified and that 
+important nuances are not lost in the analysis. For instance, technical terms like "firewall" may 
+be categorized under "technical controls," but human judgment is required to ensure it is also 
+recognized as part of broader organizational resilience strategies. This iterative process of 
+validating algorithmic outputs through expert evaluation is crucial to the accuracy and integrity 
+of the coding matrix, ensuring that the final framework is both comprehensive and applicable to 
+the complexities of cyber resilience. 
+ 
+Phase Two: Application of the Coding Methodology to Existing Cybersecurity Frameworks 
+ 
+Objective: Apply the coding methodology on the existing cybersecurity frameworks to 
+allow for a structured evaluation of the frameworks against the scaffold or categorized matrix. 
+This will produce a mapping of the contents of the frameworks in the scaffold.  
+
+23 
+ 
+Phase Two uses machine learning techniques to train a simple classification model to 
+classify the existing cybersecurity frameworks. Figure 5 provides a graphic flowchart showing 
+the activities of Phase Two.  
+ 
+Figure 5: Flowchart of Phase Two activities, going from data curation activities to classification of frameworks into the 
+scaffolding from Phase One, and model evaluation 
+ 
+The objective for this classification scheme is twofold. First, to classify the features of 
+each framework into the scaffolding, showing which elements the framework covers, and how 
+strong that coverage is. Second, to gather and store frequency information for term usage for use 
+in Phase Three as part of the quantitative analysis. 
+ 
+This phase uses the (tf*idf) algorithm with the coding dictionary to classify features in 
+each of the frameworks. A representative subset of the frameworks used in the analysis will be 
+selected to train the classification model, which will then be tested against the remaining 
+frameworks to assist in feature extraction and classification. Results from the tf*idf algorithm 
+
+24 
+will be manually assessed at several points during the process and formally evaluated using 
+accepted techniques, described in the next section on model validation and reliability.  
+ 
+As a form of pseudo-control for the framework, non-cyber related resilience frameworks 
+will be evaluated and mapped into the scaffolding to help understand the overlaps, gaps, or 
+relationships between how the cybersecurity community interprets resilience with how other 
+communities, such as for climate change or disaster preparedness, interpret resilience. It is 
+anticipated that these frameworks will not map into the technically oriented categories in the 
+scaffold (as one would expect), but will map into other domains, such as those relating to cross-
+scale interactions, adaptation, or state changes and thresholds.  
+ 
+Model Validation and Reliability 
+ 
+Ensuring the validity and reliability of the models used in this study is critical to 
+producing accurate and actionable results. The machine learning models, including term 
+frequency-inverse document frequency (tf*idf) and BERT, play a central role in classifying and 
+analyzing the resilience attributes in cybersecurity frameworks. To validate these models, a 
+combination of iterative, cross-validation and manual checks will be employed. Thus, the study 
+can assess the robustness of the model and its ability to consistently classify resilience attributes 
+across different documents. 
+To enhance the reliability of the model, the coding scheme and classification results will 
+be manually reviewed at various stages. This iterative process, where the model's classifications 
+are compared against human judgment, serves as a reliability check to identify and correct any 
+errors or biases introduced by the algorithm. For example, during the preprocessing stage, 
+
+25 
+lemmatization and stop word removal could inadvertently eliminate important terms. By 
+manually reviewing the most frequent terms and their classifications, the research can ensure that 
+essential resilience-related terms are correctly captured and categorized. Any discrepancies 
+identified in this review process will inform adjustments to the model and the coding scheme, 
+ensuring that the classification results remain accurate and representative of the underlying data. 
+Finally, to ensure consistency and repeatability, the research methodology employs a 
+standardized pipeline for data preprocessing and model evaluation. By documenting each step—
+from document ingestion to text preprocessing, feature extraction, and classification—the study 
+creates a replicable framework that other researchers can follow to validate or extend the results. 
+Reliability is further supported by using widely recognized machine learning libraries such as the 
+Natural Language Toolkit (NLTK), BERT, and tf*idf, which have been validated in prior 
+academic studies [22-25]. This standardization minimizes the risk of model variability and 
+ensures that the results are not dependent on ad hoc processes or subjective decisions. Through 
+these validation and reliability measures, the study aims to produce a robust and trustworthy 
+analysis of cybersecurity frameworks, contributing meaningful insights into the development of a 
+comprehensive cyber resilience framework. 
+ 
+Phase Three: Systematic Quantitative Evaluation of Existing Cybersecurity Frameworks 
+and Resilience  
+ 
+Objective: Through statistical and other quantitative techniques, provide a systematic 
+evaluation of the existing cybersecurity frameworks to determine if any are applicable with 
+respect to resilience attributes (H3).  
+
+26 
+ 
+Phase three uses the results from the classification model and algorithm telemetry to 
+conduct a quantitative analysis of the frameworks in two parts. First, each framework will be 
+compared to the various categories that it has been assigned to, noting the strength of the 
+classification to that category and how many features were classified into that category. It is 
+anticipated that a technically oriented framework will not have features classified into one or 
+more elements of the conceptual scaffolding (H3), and the language used in the framework, from 
+a relative perspective, will be significantly more technical in nature (i.e., more use of terms like 
+firewall, data loss prevention, malware, etc.) than resilience in nature (i.e. adaptive capacity, 
+ecosystem, etc.) (H4). It is further anticipated that no frameworks exist that will meet most or all 
+the interdisciplinary attributes of resilience (H2).  
+ 
+Phase Four: Gaps Analysis of Cyber and Resilience Frameworks 
+ 
+Objective: Provide a mapping of existing frameworks into the scaffolding to highlight 
+where the existing literature may not address some or all attributes of resilience (H1).  
+ 
+Many cybersecurity and resilience frameworks emphasize qualitative guidelines or best 
+practices, but few offer quantitative metrics that organizations can use to systematically measure 
+their progress toward resilience. This integrative study will use the existing cybersecurity and 
+resilience literature, frameworks, and other guidance to map existing metrics and other 
+quantification systems into the scaffolding. Using heuristic methods for coding, each metric or 
+quantitative system will be coded into the scaffolding. Heuristic methods will be used based on 
+the smaller data set when compared to the definitional work needed for RQ1 and RQ2. Mapping 
+of the existing metrics onto the scaffolding will accomplish two purposes. First, it will provide 
+
+27 
+the necessary data to either prove or nullify H5 since the mapping will reveal elements in the 
+scaffold that lack any quantitative metrics. Second, it will provide the basis from which this 
+research will build a broader quantification framework to measure all aspects of cyber resilience 
+in the scaffold.   
+ 
+The gap analysis also leverages heuristic methods to code and categorize existing 
+frameworks, comparing their applicability across different resilience attributes. By identifying 
+gaps where resilience features are missing or insufficient, this phase will help clarify which 
+resilience aspects—such as cross-scale interactions or thresholds—remain insufficiently 
+addressed. This is crucial because organizations often struggle to operationalize resilience 
+without clear and actionable principles to guide their implementation and track improvements. 
+Then, future research can highlight areas where cybersecurity frameworks could benefit from 
+incorporating interdisciplinary insights, drawing on fields like disaster management or complex 
+systems theory, which may offer well-established measurement systems for resilience.  
+ 
+ 
+Limitations of the Research Plan 
+While this study seeks to provide a comprehensive framework for enhancing cyber 
+resilience, several inherent limitations must be acknowledged that may influence the 
+interpretation and generalizability of the findings. First, the study relies heavily on existing 
+literature, frameworks, and publicly available documents, which may introduce limitations in 
+scope. Since cyber resilience is a rapidly evolving field, new standards, policies, and frameworks 
+may emerge after the data collection period that could offer additional insights or challenge the 
+conclusions drawn from the current analysis. The selected documents represent the state of 
+
+28 
+knowledge at the time of study, and as such, the findings should be viewed as a snapshot of the 
+current landscape rather than an exhaustive or final representation of cyber resilience strategies. 
+Additionally, the reliance on document analysis through machine learning algorithms 
+such as tf*idf and BERT introduces methodological constraints. While these algorithms are 
+effective for processing large textual datasets and identifying patterns, they are also susceptible 
+to the quality and preprocessing of the data. In this study, text is preprocessed by removing stop 
+words, lemmatizing terms, and filtering out extraneous content. However, errors in these steps, 
+such as the misclassification of key terms or the removal of relevant contextual words, could lead 
+to inaccurate results or biases in the analysis. Although manual, heuristic evaluations and 
+iterative refinement of the coding scheme are incorporated to reduce these risks, algorithmic 
+limitations remain a key challenge in ensuring the accuracy of results. 
+Another significant limitation involves the interdisciplinary nature of resilience. While 
+this broad approach is advantageous in capturing various aspects of resilience across different 
+fields (e.g., complex adaptive systems, ecology, psychology), the definitions and principles from 
+these diverse domains may not perfectly align with the specific needs of cybersecurity 
+frameworks. This introduces the possibility of conceptual misalignment, where resilience 
+concepts from one discipline may not fully apply to another, or where the interpretation of 
+resilience varies—though an unstated objective of this research is to show that the is little to no 
+conceptual gap, just misapplication. This conceptual divergence could complicate the gap 
+analysis and framework development, leading to a final framework that might not perfectly fit all 
+organizational contexts or types of resilience challenges.  
+Furthermore, the study is limited by its focus on the English-language documents and 
+sources. Given that cyber resilience is a global issue, the exclusion of non-English frameworks 
+
+29 
+and literature may result in an incomplete view of how resilience is understood and applied in 
+different regions. Countries with distinct cybersecurity policies, especially those with emerging 
+technologies or national security policies shaped by different regulatory landscapes, may offer 
+unique perspectives that are not captured in this study. China and Russia, in particular, view 
+cyberspace very differently from Western nations [26]. The language and cultural bias in data 
+collection, therefore, represent a limitation that could affect the global applicability of the 
+findings. 
+Finally, the study’s approach to developing a cyber resilience framework is primarily top-
+down, using existing documents and frameworks to derive insights. This means the study may 
+lack the flexibility to account for rapidly changing threat environments or novel types of 
+cyberattacks that are not reflected in current frameworks. Although this research develops a 
+robust methodology to analyze and quantify resilience using existing standards, it is inherently 
+retrospective. As a result, the findings might struggle to keep pace with new and evolving 
+cybersecurity challenges, particularly those related to emerging technologies like artificial 
+intelligence, quantum computing, or next-generation networks. While future iterations of the 
+framework could address these developments, the current study's reliance on historical data and 
+existing frameworks constrains its ability to predict or mitigate novel cyber threats that affect an 
+organization’s capacity for resilience; although, the hope is that the principles of resilience will 
+be sufficiently universal to have greater persistence and continued applicability despite the 
+dynamism in the present and future cyber environment. 
+ 
+ 
+ 
